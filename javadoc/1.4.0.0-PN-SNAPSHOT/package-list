@@ -94,6 +94,7 @@ cn.nukkit.level.particle
 cn.nukkit.level.util
 cn.nukkit.math
 cn.nukkit.metadata
+cn.nukkit.metrics
 cn.nukkit.nbt
 cn.nukkit.nbt.stream
 cn.nukkit.nbt.tag
