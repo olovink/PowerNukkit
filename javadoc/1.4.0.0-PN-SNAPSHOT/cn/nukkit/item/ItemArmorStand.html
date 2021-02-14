@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>ItemArmorStand (PowerNukkit 1.4.0.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2021-02-13">
+<meta name="date" content="2021-02-14">
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
 </head>
@@ -197,14 +197,10 @@ extends <a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.it
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/item/ItemArmorStand.html#canBeActivated--">canBeActivated</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>float</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/item/ItemArmorStand.html#getDirection-float-">getDirection</a></span>(float&nbsp;yaw)</code>&nbsp;</td>
-</tr>
-<tr id="i2" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/item/ItemArmorStand.html#getMaxStackSize--">getMaxStackSize</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/item/ItemArmorStand.html#onActivate-cn.nukkit.level.Level-cn.nukkit.Player-cn.nukkit.block.Block-cn.nukkit.block.Block-cn.nukkit.math.BlockFace-double-double-double-">onActivate</a></span>(<a href="../../../cn/nukkit/level/Level.html" title="class in cn.nukkit.level">Level</a>&nbsp;level,
           <a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
@@ -214,6 +210,10 @@ extends <a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.it
           double&nbsp;fx,
           double&nbsp;fy,
           double&nbsp;fz)</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/item/ItemArmorStand.html#removeForPlacement-cn.nukkit.block.Block-">removeForPlacement</a></span>(<a href="../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -326,13 +326,21 @@ extends <a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.it
 </dl>
 </li>
 </ul>
-<a name="getDirection-float-">
+<a name="removeForPlacement-cn.nukkit.block.Block-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>getDirection</h4>
-<pre>public&nbsp;float&nbsp;getDirection(float&nbsp;yaw)</pre>
+<h4>removeForPlacement</h4>
+<pre><a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+protected&nbsp;boolean&nbsp;removeForPlacement(<a href="../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block)</pre>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>block</code> - The block which is in the same space as the armor stand.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><code>true</code> if the armor stand entity can be placed</dd>
+</dl>
 </li>
 </ul>
 </li>
