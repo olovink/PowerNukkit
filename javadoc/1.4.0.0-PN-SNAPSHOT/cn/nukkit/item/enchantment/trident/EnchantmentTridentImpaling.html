@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -177,14 +177,18 @@ extends <a href="../../../../../cn/nukkit/item/enchantment/trident/EnchantmentTr
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/item/enchantment/trident/EnchantmentTridentImpaling.html#getMaxEnchantAbility-int-">getMaxEnchantAbility</a></span>(int&nbsp;level)</code>&nbsp;</td>
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/item/enchantment/trident/EnchantmentTridentImpaling.html#getDamageBonus-cn.nukkit.entity.Entity-">getDamageBonus</a></span>(<a href="../../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity)</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/item/enchantment/trident/EnchantmentTridentImpaling.html#getMaxLevel--">getMaxLevel</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/item/enchantment/trident/EnchantmentTridentImpaling.html#getMaxEnchantAbility-int-">getMaxEnchantAbility</a></span>(int&nbsp;level)</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/item/enchantment/trident/EnchantmentTridentImpaling.html#getMaxLevel--">getMaxLevel</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/item/enchantment/trident/EnchantmentTridentImpaling.html#getMinEnchantAbility-int-">getMinEnchantAbility</a></span>(int&nbsp;level)</code>&nbsp;</td>
 </tr>
@@ -194,7 +198,7 @@ extends <a href="../../../../../cn/nukkit/item/enchantment/trident/EnchantmentTr
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;cn.nukkit.item.enchantment.<a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html" title="class in cn.nukkit.item.enchantment">Enchantment</a></h3>
-<code><a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#canEnchant-cn.nukkit.item.Item-">canEnchant</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#clone--">clone</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#doPostAttack-cn.nukkit.entity.Entity-cn.nukkit.entity.Entity-">doPostAttack</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#doPostHurt-cn.nukkit.entity.Entity-cn.nukkit.entity.Entity-">doPostHurt</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#get-int-">get</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#getDamageBonus-cn.nukkit.entity.Entity-">getDamageBonus</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#getEnchantment-int-">getEnchantment</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#getEnchantments--">getEnchantments</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#getId--">getId</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#getLevel--">getLevel</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#getMaxEnchantableLevel--">getMaxEnchantableLevel</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#getMinLevel--">getMinLevel</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#getName--">getName</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#getProtectionFactor-cn.nukkit.event.entity.EntityDamageEvent-">getProtectionFactor</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#getRandomName--">getRandomName</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#getWeight--">getWeight</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#init--">init</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#isCompatibleWith-cn.nukkit.item.enchantment.Enchantment-">isCompatibleWith</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#isItemAcceptable-cn.nukkit.item.Item-">isItemAcceptable</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#isMajor--">isMajor</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#setLevel-int-">setLevel</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#setLevel-int-boolean-">setLevel</a></code></li>
+<code><a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#canEnchant-cn.nukkit.item.Item-">canEnchant</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#clone--">clone</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#doPostAttack-cn.nukkit.entity.Entity-cn.nukkit.entity.Entity-">doPostAttack</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#doPostHurt-cn.nukkit.entity.Entity-cn.nukkit.entity.Entity-">doPostHurt</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#get-int-">get</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#getEnchantment-int-">getEnchantment</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#getEnchantments--">getEnchantments</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#getId--">getId</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#getLevel--">getLevel</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#getMaxEnchantableLevel--">getMaxEnchantableLevel</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#getMinLevel--">getMinLevel</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#getName--">getName</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#getProtectionFactor-cn.nukkit.event.entity.EntityDamageEvent-">getProtectionFactor</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#getRandomName--">getRandomName</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#getWeight--">getWeight</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#init--">init</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#isCompatibleWith-cn.nukkit.item.enchantment.Enchantment-">isCompatibleWith</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#isItemAcceptable-cn.nukkit.item.Item-">isItemAcceptable</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#isMajor--">isMajor</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#setLevel-int-">setLevel</a>, <a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#setLevel-int-boolean-">setLevel</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -263,13 +267,26 @@ extends <a href="../../../../../cn/nukkit/item/enchantment/trident/EnchantmentTr
 <a name="getMaxLevel--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getMaxLevel</h4>
 <pre>public&nbsp;int&nbsp;getMaxLevel()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#getMaxLevel--">getMaxLevel</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html" title="class in cn.nukkit.item.enchantment">Enchantment</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="getDamageBonus-cn.nukkit.entity.Entity-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getDamageBonus</h4>
+<pre>public&nbsp;double&nbsp;getDamageBonus(<a href="../../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html#getDamageBonus-cn.nukkit.entity.Entity-">getDamageBonus</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../cn/nukkit/item/enchantment/Enchantment.html" title="class in cn.nukkit.item.enchantment">Enchantment</a></code></dd>
 </dl>
 </li>
 </ul>
