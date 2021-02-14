@@ -144,7 +144,15 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#cn.nukkit.event.block">cn.nukkit.event.block</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="#cn.nukkit.event.blockstate">cn.nukkit.event.blockstate</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><a href="#cn.nukkit.event.entity">cn.nukkit.event.entity</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -363,6 +371,10 @@
 <td class="colFirst"><code>protected <a href="../../../../cn/nukkit/inventory/transaction/EnchantTransaction.html" title="class in cn.nukkit.inventory.transaction">EnchantTransaction</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Player.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/Player.html#enchantTransaction">enchantTransaction</a></span></code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Player.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/Player.html#spawnBlockPosition">spawnBlockPosition</a></span></code>&nbsp;</td>
+</tr>
 </tbody>
 </table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -395,30 +407,40 @@
 <td class="colLast"><span class="typeNameLabel">Server.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/Server.html#getPositionTrackingService--">getPositionTrackingService</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Player.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/Player.html#getSpawnBlock--">getSpawnBlock</a></span>()</code>
+<div class="block">The block that holds the player respawn position.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">Player.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/Player.html#getTimeSinceRest--">getTimeSinceRest</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Player.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/Player.html#giveItem-cn.nukkit.item.Item...-">giveItem</a></span>(<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>...&nbsp;items)</code>
 <div class="block">Adds the items to the main player inventory and drops on the floor any excess.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">Server.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/Server.html#isCheckMovement--">isCheckMovement</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">Server.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/Server.html#isForceSkinTrusted--">isForceSkinTrusted</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">Server.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/Server.html#isIgnoredPacket-java.lang.Class-">isIgnoredPacket</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&gt;&nbsp;clazz)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">Server.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/Server.html#isSafeSpawn--">isSafeSpawn</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><span class="typeNameLabel">Player.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/Player.html#isValidRespawnBlock-cn.nukkit.block.Block-">isValidRespawnBlock</a></span>(<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
@@ -462,13 +484,19 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">Player.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/Player.html#setTimeSinceRest-int-">setTimeSinceRest</a></span>(int&nbsp;timeSinceRest)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">Player.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/Player.html#setSpawnBlock-cn.nukkit.math.Vector3-">setSpawnBlock</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;spawnBlock)</code>
+<div class="block">Sets the position of the block that holds the player respawn position.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">Player.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/Player.html#updateTrackingPositions--">updateTrackingPositions</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">Player.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/Player.html#setTimeSinceRest-int-">setTimeSinceRest</a></span>(int&nbsp;timeSinceRest)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">Player.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/Player.html#updateTrackingPositions--">updateTrackingPositions</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Player.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/Player.html#updateTrackingPositions-boolean-">updateTrackingPositions</a></span>(boolean&nbsp;delayed)</code>&nbsp;</td>
 </tr>
@@ -668,87 +696,91 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockSlabBlackstone.html" title="class in cn.nukkit.block">BlockSlabBlackstone</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockRespawnAnchor.html" title="class in cn.nukkit.block">BlockRespawnAnchor</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockSlabBlackstone.html" title="class in cn.nukkit.block">BlockSlabBlackstone</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockSlabBlackstonePolished.html" title="class in cn.nukkit.block">BlockSlabBlackstonePolished</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockSlabBrickBlackstonePolished.html" title="class in cn.nukkit.block">BlockSlabBrickBlackstonePolished</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockStairsBlackstonePolished.html" title="class in cn.nukkit.block">BlockStairsBlackstonePolished</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockStairsBrickBlackstonePolished.html" title="class in cn.nukkit.block">BlockStairsBrickBlackstonePolished</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockStructure.html" title="class in cn.nukkit.block">BlockStructure</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockStructureVoid.html" title="class in cn.nukkit.block">BlockStructureVoid</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockTarget.html" title="class in cn.nukkit.block">BlockTarget</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockTorch.TorchAttachment.html" title="enum in cn.nukkit.block">BlockTorch.TorchAttachment</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockVinesNether.html" title="class in cn.nukkit.block">BlockVinesNether</a></span></code>
 <div class="block">Implements the main logic of all nether vines.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockVinesTwisting.html" title="class in cn.nukkit.block">BlockVinesTwisting</a></span></code>
 <div class="block">Properties and behaviour definitions of the <a href="../../../../cn/nukkit/block/BlockID.html#TWISTING_VINES"><code>BlockID.TWISTING_VINES</code></a> block.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockVinesWeeping.html" title="class in cn.nukkit.block">BlockVinesWeeping</a></span></code>
 <div class="block">Properties and behaviour definitions of the <a href="../../../../cn/nukkit/block/BlockID.html#WEEPING_VINES"><code>BlockID.WEEPING_VINES</code></a> block.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWall.WallConnectionType.html" title="enum in cn.nukkit.block">BlockWall.WallConnectionType</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWall.WallType.html" title="enum in cn.nukkit.block">BlockWall.WallType</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWallBase.html" title="class in cn.nukkit.block">BlockWallBase</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWallBlackstonePolished.html" title="class in cn.nukkit.block">BlockWallBlackstonePolished</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWallBrickBlackstonePolished.html" title="class in cn.nukkit.block">BlockWallBrickBlackstonePolished</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWarpedSignPost.html" title="class in cn.nukkit.block">BlockWarpedSignPost</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWarpedWallSign.html" title="class in cn.nukkit.block">BlockWarpedWallSign</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWarpedWartBlock.html" title="class in cn.nukkit.block">BlockWarpedWartBlock</a></span></code>&nbsp;</td>
 </tr>
@@ -917,89 +949,97 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BlockLantern.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockLantern.html#PROPERTIES">PROPERTIES</a></span></code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">BlockRespawnAnchor.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockRespawnAnchor.html#PROPERTIES">PROPERTIES</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BlockLantern.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockLantern.html#PROPERTIES">PROPERTIES</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockBedrock.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockBedrock.html#PROPERTIES">PROPERTIES</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockWall.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWall.html#PROPERTIES">PROPERTIES</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockWallSign.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWallSign.html#PROPERTIES">PROPERTIES</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockSapling.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockSapling.html#PROPERTIES">PROPERTIES</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockRail.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockRail.html#PROPERTIES">PROPERTIES</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockStructureVoid.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockStructureVoid.html#PROPERTIES">PROPERTIES</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockCrops.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockCrops.html#PROPERTIES">PROPERTIES</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockStructure.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockStructure.html#PROPERTIES">PROPERTIES</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockFire.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockFire.html#PROPERTIES">PROPERTIES</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockVinesWeeping.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockVinesWeeping.html#PROPERTIES">PROPERTIES</a></span></code>
 <div class="block">Holds the <code>weeping_vines</code> block property definitions.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockLiquid.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockLiquid.html#PROPERTIES">PROPERTIES</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockSignPost.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockSignPost.html#PROPERTIES">PROPERTIES</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockWallBase.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWallBase.html#PROPERTIES">PROPERTIES</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockBed.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockBed.html#PROPERTIES">PROPERTIES</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockCropsStem.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockCropsStem.html#PROPERTIES">PROPERTIES</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockFlowerPot.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockFlowerPot.html#PROPERTIES">PROPERTIES</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockFlower.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockFlower.html#PROPERTIES">PROPERTIES</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockHopper.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockHopper.html#PROPERTIES">PROPERTIES</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockKelp.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockKelp.html#PROPERTIES">PROPERTIES</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/blockproperty/BlockProperty.html" title="class in cn.nukkit.blockproperty">BlockProperty</a>&lt;<a href="../../../../cn/nukkit/blockproperty/value/SmallFlowerType.html" title="enum in cn.nukkit.blockproperty.value">SmallFlowerType</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockFlower.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockFlower.html#RED_FLOWER_TYPE">RED_FLOWER_TYPE</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../cn/nukkit/blockproperty/IntBlockProperty.html" title="class in cn.nukkit.blockproperty">IntBlockProperty</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BlockRespawnAnchor.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockRespawnAnchor.html#RESPAWN_ANCHOR_CHARGE">RESPAWN_ANCHOR_CHARGE</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/blockproperty/BlockProperty.html" title="class in cn.nukkit.blockproperty">BlockProperty</a>&lt;<a href="../../../../cn/nukkit/blockproperty/value/WoodType.html" title="enum in cn.nukkit.blockproperty.value">WoodType</a>&gt;</code></td>
@@ -1088,58 +1128,66 @@
             boolean&nbsp;update)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><span class="typeNameLabel">BlockRespawnAnchor.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockRespawnAnchor.html#attemptToSetSpawn-cn.nukkit.Player-">attemptToSetSpawn</a></span>(<a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockWallBase.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWallBase.html#autoConfigureState--">autoConfigureState</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockWallBase.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWallBase.html#autoUpdatePostFlag--">autoUpdatePostFlag</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockConnectable.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockConnectable.html#canConnect-cn.nukkit.block.Block-">canConnect</a></span>(<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">Block.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/Block.html#canHarvest-cn.nukkit.item.Item-">canHarvest</a></span>(<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;item)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">Block.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/Block.html#canRandomTick--">canRandomTick</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockWallBase.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWallBase.html#clearConnections--">clearConnections</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockWallBase.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWallBase.html#connect-cn.nukkit.math.BlockFace-">connect</a></span>(<a href="../../../../cn/nukkit/math/BlockFace.html" title="enum in cn.nukkit.math">BlockFace</a>&nbsp;blockFace)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockWallBase.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWallBase.html#connect-cn.nukkit.math.BlockFace-boolean-">connect</a></span>(<a href="../../../../cn/nukkit/math/BlockFace.html" title="enum in cn.nukkit.math">BlockFace</a>&nbsp;blockFace,
        boolean&nbsp;recheckPost)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>default <a href="../../../../cn/nukkit/block/BlockEntityHolder.html" title="type parameter in BlockEntityHolder">E</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockEntityHolder.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockEntityHolder.html#createBlockEntity--">createBlockEntity</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>default <a href="../../../../cn/nukkit/block/BlockEntityHolder.html" title="type parameter in BlockEntityHolder">E</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockEntityHolder.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockEntityHolder.html#createBlockEntity-cn.nukkit.nbt.tag.CompoundTag-java.lang.Object...-">createBlockEntity</a></span>(<a href="../../../../cn/nukkit/nbt/tag/CompoundTag.html" title="class in cn.nukkit.nbt.tag">CompoundTag</a>&nbsp;initialData,
                  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;args)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockEndPortalFrame.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockEndPortalFrame.html#createPortal--">createPortal</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockTarget.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockTarget.html#deactivatePower--">deactivatePower</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockWallBase.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWallBase.html#disconnect-cn.nukkit.math.BlockFace-">disconnect</a></span>(<a href="../../../../cn/nukkit/math/BlockFace.html" title="enum in cn.nukkit.math">BlockFace</a>&nbsp;blockFace)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">BlockRespawnAnchor.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockRespawnAnchor.html#explode--">explode</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../cn/nukkit/level/Position.html" title="class in cn.nukkit.level">Position</a>&gt;</code></td>
@@ -1507,88 +1555,96 @@
 <td class="colLast"><span class="typeNameLabel">BlockBedrock.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockBedrock.html#getBurnIndefinitely--">getBurnIndefinitely</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><span class="typeNameLabel">BlockRespawnAnchor.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockRespawnAnchor.html#getCharge--">getCharge</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/level/format/FullChunk.html" title="interface in cn.nukkit.level.format">FullChunk</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockEntityHolder.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockEntityHolder.html#getChunk--">getChunk</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/math/AxisAlignedBB.html" title="interface in cn.nukkit.math">AxisAlignedBB</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockEndPortal.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockEndPortal.html#getCollisionBoundingBox--">getCollisionBoundingBox</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/utils/BlockColor.html" title="class in cn.nukkit.utils">BlockColor</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockWall.WallType.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWall.WallType.html#getColor--">getColor</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>default <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../cn/nukkit/math/BlockFace.html" title="enum in cn.nukkit.math">BlockFace</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockConnectable.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockConnectable.html#getConnections--">getConnections</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/block/BlockWall.WallConnectionType.html" title="enum in cn.nukkit.block">BlockWall.WallConnectionType</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockWallBase.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWallBase.html#getConnectionType-cn.nukkit.math.BlockFace-">getConnectionType</a></span>(<a href="../../../../cn/nukkit/math/BlockFace.html" title="enum in cn.nukkit.math">BlockFace</a>&nbsp;blockFace)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/value/CrackState.html" title="enum in cn.nukkit.blockproperty.value">CrackState</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockTurtleEgg.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockTurtleEgg.html#getCracks--">getCracks</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Block.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/Block.html#getCurrentState--">getCurrentState</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html?is-external=true" title="class or interface in java.lang">Number</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Block.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/Block.html#getDataStorage--">getDataStorage</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockLiquid.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockLiquid.html#getDepthOnTop--">getDepthOnTop</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/math/CompassRoseDirection.html" title="enum in cn.nukkit.math">CompassRoseDirection</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockBanner.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockBanner.html#getDirection--">getDirection</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../cn/nukkit/blockproperty/value/DirtType.html" title="enum in cn.nukkit.blockproperty.value">DirtType</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockDirt.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockDirt.html#getDirtType--">getDirtType</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../cn/nukkit/blockproperty/value/DirtType.html" title="enum in cn.nukkit.blockproperty.value">DirtType</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockGrass.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockGrass.html#getDirtType--">getDirtType</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../cn/nukkit/blockproperty/value/DirtType.html" title="enum in cn.nukkit.blockproperty.value">DirtType</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockPodzol.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockPodzol.html#getDirtType--">getDirtType</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">Block.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/Block.html#getExactIntStorage--">getExactIntStorage</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockEntityHolder.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockEntityHolder.html#getFloorX--">getFloorX</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockEntityHolder.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockEntityHolder.html#getFloorY--">getFloorY</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockEntityHolder.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockEntityHolder.html#getFloorZ--">getFloorZ</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockFlowerPot.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockFlowerPot.html#getFlower--">getFlower</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/value/SmallFlowerType.html" title="enum in cn.nukkit.blockproperty.value">SmallFlowerType</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockDandelion.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockDandelion.html#getFlowerType--">getFlowerType</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/value/SmallFlowerType.html" title="enum in cn.nukkit.blockproperty.value">SmallFlowerType</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockWitherRose.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWitherRose.html#getFlowerType--">getFlowerType</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/value/SmallFlowerType.html" title="enum in cn.nukkit.blockproperty.value">SmallFlowerType</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockFlower.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockFlower.html#getFlowerType--">getFlowerType</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/block/BlockBed.html" title="class in cn.nukkit.block">BlockBed</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BlockBed.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockBed.html#getFootPart--">getFootPart</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
@@ -1626,238 +1682,246 @@
 <td class="colLast"><span class="typeNameLabel">BlockTurtleEgg.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockTurtleEgg.html#getHardness--">getHardness</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/block/BlockBed.html" title="class in cn.nukkit.block">BlockBed</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BlockBed.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockBed.html#getHeadPart--">getHeadPart</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html?is-external=true" title="class or interface in java.math">BigInteger</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Block.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/Block.html#getHugeDamage--">getHugeDamage</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">Block.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/Block.html#getIntValue-java.lang.String-">getIntValue</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">Block.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/Block.html#getItemMaxStackSize--">getItemMaxStackSize</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockUndyedShulkerBox.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockUndyedShulkerBox.html#getItemMaxStackSize--">getItemMaxStackSize</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">Block.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/Block.html#getLegacyDamage--">getLegacyDamage</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/level/Level.html" title="class in cn.nukkit.level">Level</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockEntityHolder.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockEntityHolder.html#getLevel--">getLevel</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/block/BlockLever.LeverOrientation.html" title="enum in cn.nukkit.block">BlockLever.LeverOrientation</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockLever.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockLever.html#getLeverOrientation--">getLeverOrientation</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockIce.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockIce.html#getLightFilter--">getLightFilter</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">Block.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/Block.html#getLightFilter--">getLightFilter</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockCauldron.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockCauldron.html#getLightFilter--">getLightFilter</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockLiquid.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockLiquid.html#getLightFilter--">getLightFilter</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockHoney.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockHoney.html#getLightFilter--">getLightFilter</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockIcePacked.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockIcePacked.html#getLightFilter--">getLightFilter</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockSlime.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockSlime.html#getLightFilter--">getLightFilter</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockLiquid.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockLiquid.html#getLiquidDepth--">getLiquidDepth</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockEntityHolder.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockEntityHolder.html#getLocation--">getLocation</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockFenceGate.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockFenceGate.html#getManualOverride--">getManualOverride</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockTrapdoor.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockTrapdoor.html#getManualOverride--">getManualOverride</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockDoor.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockDoor.html#getManualOverride--">getManualOverride</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockCrops.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockCrops.html#getMaxGrowth--">getMaxGrowth</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockVinesTwisting.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockVinesTwisting.html#getMaxVineAge--">getMaxVineAge</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>abstract int</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockVinesNether.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockVinesNether.html#getMaxVineAge--">getMaxVineAge</a></span>()</code>
 <div class="block">The maximum accepted age of this block.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockVinesWeeping.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockVinesWeeping.html#getMaxVineAge--">getMaxVineAge</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockCrops.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockCrops.html#getMinimumLightLevel--">getMinimumLightLevel</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../cn/nukkit/blockstate/MutableBlockState.html" title="class in cn.nukkit.blockstate">MutableBlockState</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Block.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/Block.html#getMutableState--">getMutableState</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>default <a href="../../../../cn/nukkit/block/BlockEntityHolder.html" title="type parameter in BlockEntityHolder">E</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockEntityHolder.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockEntityHolder.html#getOrCreateBlockEntity--">getOrCreateBlockEntity</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Block.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/Block.html#getPersistenceValue-java.lang.String-">getPersistenceValue</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/math/BlockFace.Axis.html" title="enum in cn.nukkit.math">BlockFace.Axis</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockChain.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockChain.html#getPillarAxis--">getPillarAxis</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockTurtleEgg.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockTurtleEgg.html#getProperties--">getProperties</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockStone.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockStone.html#getProperties--">getProperties</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>abstract <a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockLog.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockLog.html#getProperties--">getProperties</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockDirt.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockDirt.html#getProperties--">getProperties</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockFallableMeta.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockFallableMeta.html#getProperties--">getProperties</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockCampfire.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockCampfire.html#getProperties--">getProperties</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockSlabBlackstonePolished.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockSlabBlackstonePolished.html#getProperties--">getProperties</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockFence.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockFence.html#getProperties--">getProperties</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockRedstoneRepeater.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockRedstoneRepeater.html#getProperties--">getProperties</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockObserver.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockObserver.html#getProperties--">getProperties</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockRailDetector.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockRailDetector.html#getProperties--">getProperties</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockFenceGate.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockFenceGate.html#getProperties--">getProperties</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockStem.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockStem.html#getProperties--">getProperties</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockVinesTwisting.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockVinesTwisting.html#getProperties--">getProperties</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockSnowLayer.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockSnowLayer.html#getProperties--">getProperties</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockAnvil.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockAnvil.html#getProperties--">getProperties</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockLever.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockLever.html#getProperties--">getProperties</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockDoubleSlabBlackstone.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockDoubleSlabBlackstone.html#getProperties--">getProperties</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockComposter.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockComposter.html#getProperties--">getProperties</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockPressurePlateBase.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockPressurePlateBase.html#getProperties--">getProperties</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockGrass.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockGrass.html#getProperties--">getProperties</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockSlabWarped.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockSlabWarped.html#getProperties--">getProperties</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Block.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/Block.html#getProperties--">getProperties</a></span>()</code>
 <div class="block">The properties that fully describe all possible and valid states that this block can have.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockLeaves2.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockLeaves2.html#getProperties--">getProperties</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockBell.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockBell.html#getProperties--">getProperties</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockSlabStone.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockSlabStone.html#getProperties--">getProperties</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockGlassPaneStained.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockGlassPaneStained.html#getProperties--">getProperties</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockDoubleSlabRedSandstone.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockDoubleSlabRedSandstone.html#getProperties--">getProperties</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockSlabBlackstone.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockSlabBlackstone.html#getProperties--">getProperties</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BlockRespawnAnchor.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockRespawnAnchor.html#getProperties--">getProperties</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
@@ -2191,123 +2255,131 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
-<td class="colLast"><span class="typeNameLabel">BlockNetherReactor.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockNetherReactor.html#getToolTier--">getToolTier</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">BlockRespawnAnchor.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockRespawnAnchor.html#getToolTier--">getToolTier</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><span class="typeNameLabel">BlockNetherReactor.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockNetherReactor.html#getToolTier--">getToolTier</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockObsidianGlowing.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockObsidianGlowing.html#getToolTier--">getToolTier</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockChain.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockChain.html#getToolTier--">getToolTier</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockWallBlackstonePolished.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWallBlackstonePolished.html#getToolTier--">getToolTier</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockPurpur.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockPurpur.html#getToolTier--">getToolTier</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockTerracottaStained.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockTerracottaStained.html#getToolTier--">getToolTier</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockNetheriteBlock.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockNetheriteBlock.html#getToolTier--">getToolTier</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockAncientDebris.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockAncientDebris.html#getToolTier--">getToolTier</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/block/BlockTorch.TorchAttachment.html" title="enum in cn.nukkit.block">BlockTorch.TorchAttachment</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockTorch.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockTorch.html#getTorchAttachment--">getTorchAttachment</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/value/StructureVoidType.html" title="enum in cn.nukkit.blockproperty.value">StructureVoidType</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockStructureVoid.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockStructureVoid.html#getType--">getType</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/value/WoodType.html" title="enum in cn.nukkit.blockproperty.value">WoodType</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockLeaves.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockLeaves.html#getType--">getType</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockWall.WallType.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWall.WallType.html#getTypeName--">getTypeName</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockVinesTwisting.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockVinesTwisting.html#getVineAge--">getVineAge</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>abstract int</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockVinesNether.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockVinesNether.html#getVineAge--">getVineAge</a></span>()</code>
 <div class="block">The current age of this block.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockVinesWeeping.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockVinesWeeping.html#getVineAge--">getVineAge</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../cn/nukkit/math/BlockFace.html" title="enum in cn.nukkit.math">BlockFace</a>,<a href="../../../../cn/nukkit/block/BlockWall.WallConnectionType.html" title="enum in cn.nukkit.block">BlockWall.WallConnectionType</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockWallBase.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWallBase.html#getWallConnections--">getWallConnections</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/block/BlockWall.WallType.html" title="enum in cn.nukkit.block">BlockWall.WallType</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockWall.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWall.html#getWallType--">getWallType</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html?is-external=true" title="class or interface in java.util">Optional</a>&lt;<a href="../../../../cn/nukkit/blockproperty/value/WoodType.html" title="enum in cn.nukkit.blockproperty.value">WoodType</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockFence.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockFence.html#getWoodType--">getWoodType</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/value/WoodType.html" title="enum in cn.nukkit.blockproperty.value">WoodType</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockSapling.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockSapling.html#getWoodType--">getWoodType</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/value/WoodType.html" title="enum in cn.nukkit.blockproperty.value">WoodType</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockSlabWood.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockSlabWood.html#getWoodType--">getWoodType</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/value/WoodType.html" title="enum in cn.nukkit.blockproperty.value">WoodType</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockWood.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWood.html#getWoodType--">getWoodType</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/value/WoodType.html" title="enum in cn.nukkit.blockproperty.value">WoodType</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockPlanks.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockPlanks.html#getWoodType--">getWoodType</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockVinesNether.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockVinesNether.html#grow--">grow</a></span>()</code>
 <div class="block">Grow a single vine if possible.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockCropsStem.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockCropsStem.html#growFruit--">growFruit</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockVinesNether.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockVinesNether.html#growMultiple--">growMultiple</a></span>()</code>
 <div class="block">Grow a random amount of vines.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockWallBase.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWallBase.html#hasConnections--">hasConnections</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/utils/OptionalBoolean.html" title="enum in cn.nukkit.utils">OptionalBoolean</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockVinesNether.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockVinesNether.html#increaseRootAge--">increaseRootAge</a></span>()</code>
 <div class="block">Attempts to increase the age of the base of the nether vine.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockSapling.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockSapling.html#isAged--">isAged</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="typeNameLabel">BlockBed.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockBed.html#isBedValid--">isBedValid</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
@@ -2894,249 +2966,253 @@
 <td class="colLast"><span class="typeNameLabel">BlockBedrock.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockBedrock.html#setBurnIndefinitely-boolean-">setBurnIndefinitely</a></span>(boolean&nbsp;infiniburn)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">BlockRespawnAnchor.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockRespawnAnchor.html#setCharge-int-">setCharge</a></span>(int&nbsp;charge)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockWallBase.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWallBase.html#setConnection-cn.nukkit.math.BlockFace-cn.nukkit.block.BlockWall.WallConnectionType-">setConnection</a></span>(<a href="../../../../cn/nukkit/math/BlockFace.html" title="enum in cn.nukkit.math">BlockFace</a>&nbsp;blockFace,
              <a href="../../../../cn/nukkit/block/BlockWall.WallConnectionType.html" title="enum in cn.nukkit.block">BlockWall.WallConnectionType</a>&nbsp;type)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockSnowLayer.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockSnowLayer.html#setCovered-boolean-">setCovered</a></span>(boolean&nbsp;covered)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Block.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/Block.html#setDataStorage-java.lang.Number-">setDataStorage</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html?is-external=true" title="class or interface in java.lang">Number</a>&nbsp;storage)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">Block.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/Block.html#setDataStorage-java.lang.Number-boolean-java.util.function.Consumer-">setDataStorage</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html?is-external=true" title="class or interface in java.lang">Number</a>&nbsp;storage,
               boolean&nbsp;repair,
               <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function">Consumer</a>&lt;<a href="../../../../cn/nukkit/blockstate/BlockStateRepair.html" title="class in cn.nukkit.blockstate">BlockStateRepair</a>&gt;&nbsp;callback)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Block.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/Block.html#setDataStorageFromInt-int-">setDataStorageFromInt</a></span>(int&nbsp;storage)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">Block.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/Block.html#setDataStorageFromInt-int-boolean-java.util.function.Consumer-">setDataStorageFromInt</a></span>(int&nbsp;storage,
                      boolean&nbsp;repair,
                      <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function">Consumer</a>&lt;<a href="../../../../cn/nukkit/blockstate/BlockStateRepair.html" title="class in cn.nukkit.blockstate">BlockStateRepair</a>&gt;&nbsp;callback)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockBanner.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockBanner.html#setDirection-cn.nukkit.math.CompassRoseDirection-">setDirection</a></span>(<a href="../../../../cn/nukkit/math/CompassRoseDirection.html" title="enum in cn.nukkit.math">CompassRoseDirection</a>&nbsp;direction)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockDirt.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockDirt.html#setDirtType-cn.nukkit.blockproperty.value.DirtType-">setDirtType</a></span>(<a href="../../../../cn/nukkit/blockproperty/value/DirtType.html" title="enum in cn.nukkit.blockproperty.value">DirtType</a>&nbsp;dirtType)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockGrass.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockGrass.html#setDirtType-cn.nukkit.blockproperty.value.DirtType-">setDirtType</a></span>(<a href="../../../../cn/nukkit/blockproperty/value/DirtType.html" title="enum in cn.nukkit.blockproperty.value">DirtType</a>&nbsp;dirtType)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockPodzol.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockPodzol.html#setDirtType-cn.nukkit.blockproperty.value.DirtType-">setDirtType</a></span>(<a href="../../../../cn/nukkit/blockproperty/value/DirtType.html" title="enum in cn.nukkit.blockproperty.value">DirtType</a>&nbsp;dirtType)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockFlowerPot.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockFlowerPot.html#setFlower-cn.nukkit.item.Item-">setFlower</a></span>(<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;item)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockDandelion.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockDandelion.html#setFlowerType-cn.nukkit.blockproperty.value.SmallFlowerType-">setFlowerType</a></span>(<a href="../../../../cn/nukkit/blockproperty/value/SmallFlowerType.html" title="enum in cn.nukkit.blockproperty.value">SmallFlowerType</a>&nbsp;flowerType)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockWitherRose.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWitherRose.html#setFlowerType-cn.nukkit.blockproperty.value.SmallFlowerType-">setFlowerType</a></span>(<a href="../../../../cn/nukkit/blockproperty/value/SmallFlowerType.html" title="enum in cn.nukkit.blockproperty.value">SmallFlowerType</a>&nbsp;flowerType)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockFlower.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockFlower.html#setFlowerType-cn.nukkit.blockproperty.value.SmallFlowerType-">setFlowerType</a></span>(<a href="../../../../cn/nukkit/blockproperty/value/SmallFlowerType.html" title="enum in cn.nukkit.blockproperty.value">SmallFlowerType</a>&nbsp;flowerType)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockCrops.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockCrops.html#setGrowth-int-">setGrowth</a></span>(int&nbsp;growth)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockLantern.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockLantern.html#setHanging-boolean-">setHanging</a></span>(boolean&nbsp;hanging)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockBed.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockBed.html#setHeadPiece-boolean-">setHeadPiece</a></span>(boolean&nbsp;headPiece)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Block.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/Block.html#setIntValue-java.lang.String-int-">setIntValue</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName,
            int&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockFenceGate.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockFenceGate.html#setInWall-boolean-">setInWall</a></span>(boolean&nbsp;inWall)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockLever.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockLever.html#setLeverOrientation-cn.nukkit.block.BlockLever.LeverOrientation-">setLeverOrientation</a></span>(<a href="../../../../cn/nukkit/block/BlockLever.LeverOrientation.html" title="enum in cn.nukkit.block">BlockLever.LeverOrientation</a>&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockLiquid.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockLiquid.html#setLiquidDepth-int-">setLiquidDepth</a></span>(int&nbsp;liquidDepth)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockFenceGate.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockFenceGate.html#setManualOverride-boolean-">setManualOverride</a></span>(boolean&nbsp;val)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockTrapdoor.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockTrapdoor.html#setManualOverride-boolean-">setManualOverride</a></span>(boolean&nbsp;val)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockDoor.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockDoor.html#setManualOverride-boolean-">setManualOverride</a></span>(boolean&nbsp;val)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockBed.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockBed.html#setOccupied-boolean-">setOccupied</a></span>(boolean&nbsp;occupied)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockSlab.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockSlab.html#setOnTop-boolean-">setOnTop</a></span>(boolean&nbsp;top)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockFenceGate.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockFenceGate.html#setOpen-boolean-">setOpen</a></span>(boolean&nbsp;open)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockTrapdoor.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockTrapdoor.html#setOpen-boolean-">setOpen</a></span>(boolean&nbsp;open)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockDoor.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockDoor.html#setOpen-boolean-">setOpen</a></span>(boolean&nbsp;open)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockChain.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockChain.html#setPillarAxis-cn.nukkit.math.BlockFace.Axis-">setPillarAxis</a></span>(<a href="../../../../cn/nukkit/math/BlockFace.Axis.html" title="enum in cn.nukkit.math">BlockFace.Axis</a>&nbsp;axis)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockObserver.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockObserver.html#setPowered-boolean-">setPowered</a></span>(boolean&nbsp;powered)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockLever.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockLever.html#setPowerOn-boolean-">setPowerOn</a></span>(boolean&nbsp;powerOn)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Block.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/Block.html#setPropertyValue-java.lang.String-java.io.Serializable-">setPropertyValue</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName,
                 <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockRailDetector.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockRailDetector.html#setRailActive-boolean-">setRailActive</a></span>(boolean&nbsp;active)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockRail.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockRail.html#setRailActive-boolean-">setRailActive</a></span>(boolean&nbsp;active)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockRailPowered.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockRailPowered.html#setRailActive-boolean-">setRailActive</a></span>(boolean&nbsp;active)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockRailActivator.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockRailActivator.html#setRailActive-boolean-">setRailActive</a></span>(boolean&nbsp;active)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockRail.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockRail.html#setRailDirection-cn.nukkit.utils.Rail.Orientation-">setRailDirection</a></span>(<a href="../../../../cn/nukkit/utils/Rail.Orientation.html" title="enum in cn.nukkit.utils">Rail.Orientation</a>&nbsp;orientation)</code>
 <div class="block">Changes the rail direction without changing anything else.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockDoor.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockDoor.html#setRightHinged-boolean-">setRightHinged</a></span>(boolean&nbsp;rightHinged)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockSignPost.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockSignPost.html#setSignDirection-cn.nukkit.math.CompassRoseDirection-">setSignDirection</a></span>(<a href="../../../../cn/nukkit/math/CompassRoseDirection.html" title="enum in cn.nukkit.math">CompassRoseDirection</a>&nbsp;direction)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockSnowLayer.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockSnowLayer.html#setSnowHeight-int-">setSnowHeight</a></span>(int&nbsp;snowHeight)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Block.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/Block.html#setState-cn.nukkit.blockstate.IBlockState-">setState</a></span>(<a href="../../../../cn/nukkit/blockstate/IBlockState.html" title="interface in cn.nukkit.blockstate">IBlockState</a>&nbsp;state)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockStone.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockStone.html#setStoneType-cn.nukkit.blockproperty.value.StoneType-">setStoneType</a></span>(<a href="../../../../cn/nukkit/blockproperty/value/StoneType.html" title="enum in cn.nukkit.blockproperty.value">StoneType</a>&nbsp;stoneType)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockStructure.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockStructure.html#setStructureBlockType-cn.nukkit.blockproperty.value.StructureBlockType-">setStructureBlockType</a></span>(<a href="../../../../cn/nukkit/blockproperty/value/StructureBlockType.html" title="enum in cn.nukkit.blockproperty.value">StructureBlockType</a>&nbsp;type)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockTrapdoor.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockTrapdoor.html#setTop-boolean-">setTop</a></span>(boolean&nbsp;top)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockDoor.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockDoor.html#setTop-boolean-">setTop</a></span>(boolean&nbsp;top)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockTorch.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockTorch.html#setTorchAttachment-cn.nukkit.block.BlockTorch.TorchAttachment-">setTorchAttachment</a></span>(<a href="../../../../cn/nukkit/block/BlockTorch.TorchAttachment.html" title="enum in cn.nukkit.block">BlockTorch.TorchAttachment</a>&nbsp;face)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockStructureVoid.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockStructureVoid.html#setType-cn.nukkit.blockproperty.value.StructureVoidType-">setType</a></span>(<a href="../../../../cn/nukkit/blockproperty/value/StructureVoidType.html" title="enum in cn.nukkit.blockproperty.value">StructureVoidType</a>&nbsp;type)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockLeaves.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockLeaves.html#setType-cn.nukkit.blockproperty.value.WoodType-">setType</a></span>(<a href="../../../../cn/nukkit/blockproperty/value/WoodType.html" title="enum in cn.nukkit.blockproperty.value">WoodType</a>&nbsp;type)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockVinesTwisting.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockVinesTwisting.html#setVineAge-int-">setVineAge</a></span>(int&nbsp;vineAge)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>abstract void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockVinesNether.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockVinesNether.html#setVineAge-int-">setVineAge</a></span>(int&nbsp;vineAge)</code>
 <div class="block">Changes the age of this block.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockVinesWeeping.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockVinesWeeping.html#setVineAge-int-">setVineAge</a></span>(int&nbsp;vineAge)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockWallBase.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWallBase.html#setWallPost-boolean-">setWallPost</a></span>(boolean&nbsp;wallPost)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockWall.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWall.html#setWallType-cn.nukkit.block.BlockWall.WallType-">setWallType</a></span>(<a href="../../../../cn/nukkit/block/BlockWall.WallType.html" title="enum in cn.nukkit.block">BlockWall.WallType</a>&nbsp;type)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockFence.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockFence.html#setWoodType-cn.nukkit.blockproperty.value.WoodType-">setWoodType</a></span>(<a href="../../../../cn/nukkit/blockproperty/value/WoodType.html" title="enum in cn.nukkit.blockproperty.value">WoodType</a>&nbsp;woodType)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockSapling.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockSapling.html#setWoodType-cn.nukkit.blockproperty.value.WoodType-">setWoodType</a></span>(<a href="../../../../cn/nukkit/blockproperty/value/WoodType.html" title="enum in cn.nukkit.blockproperty.value">WoodType</a>&nbsp;woodType)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockSlabWood.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockSlabWood.html#setWoodType-cn.nukkit.blockproperty.value.WoodType-">setWoodType</a></span>(<a href="../../../../cn/nukkit/blockproperty/value/WoodType.html" title="enum in cn.nukkit.blockproperty.value">WoodType</a>&nbsp;type)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockWood.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWood.html#setWoodType-cn.nukkit.blockproperty.value.WoodType-">setWoodType</a></span>(<a href="../../../../cn/nukkit/blockproperty/value/WoodType.html" title="enum in cn.nukkit.blockproperty.value">WoodType</a>&nbsp;woodType)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockPlanks.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockPlanks.html#setWoodType-cn.nukkit.blockproperty.value.WoodType-">setWoodType</a></span>(<a href="../../../../cn/nukkit/blockproperty/value/WoodType.html" title="enum in cn.nukkit.blockproperty.value">WoodType</a>&nbsp;type)</code>&nbsp;</td>
 </tr>
@@ -5974,6 +6050,163 @@
 </tbody>
 </table>
 </li>
+<li class="blockList"><a name="cn.nukkit.event.block">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">Since</a> in <a href="../../../../cn/nukkit/event/block/package-summary.html">cn.nukkit.event.block</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing classes, and an explanation">
+<caption><span>Classes in <a href="../../../../cn/nukkit/event/block/package-summary.html">cn.nukkit.event.block</a> with annotations of type <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">Since</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/BlockExplodeEvent.html" title="class in cn.nukkit.event.block">BlockExplodeEvent</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/BlockExplosionPrimeEvent.html" title="class in cn.nukkit.event.block">BlockExplosionPrimeEvent</a></span></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
+<caption><span>Fields in <a href="../../../../cn/nukkit/event/block/package-summary.html">cn.nukkit.event.block</a> with annotations of type <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">Since</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">BlockExplodeEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/BlockExplodeEvent.html#blocks">blocks</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected double</code></td>
+<td class="colLast"><span class="typeNameLabel">BlockExplodeEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/BlockExplodeEvent.html#fireChance">fireChance</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">BlockExplodeEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/BlockExplodeEvent.html#ignitions">ignitions</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../../cn/nukkit/level/Position.html" title="class in cn.nukkit.level">Position</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BlockExplodeEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/BlockExplodeEvent.html#position">position</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected double</code></td>
+<td class="colLast"><span class="typeNameLabel">BlockExplodeEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/BlockExplodeEvent.html#yield">yield</a></span></code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../cn/nukkit/event/block/package-summary.html">cn.nukkit.event.block</a> with annotations of type <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">Since</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">BlockExplodeEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/BlockExplodeEvent.html#getAffectedBlocks--">getAffectedBlocks</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><span class="typeNameLabel">BlockExplosionPrimeEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/BlockExplosionPrimeEvent.html#getFireChance--">getFireChance</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><span class="typeNameLabel">BlockExplodeEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/BlockExplodeEvent.html#getFireChance--">getFireChance</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><span class="typeNameLabel">BlockExplosionPrimeEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/BlockExplosionPrimeEvent.html#getForce--">getForce</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../cn/nukkit/event/HandlerList.html" title="class in cn.nukkit.event">HandlerList</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BlockExplosionPrimeEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/BlockExplosionPrimeEvent.html#getHandlers--">getHandlers</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../cn/nukkit/event/HandlerList.html" title="class in cn.nukkit.event">HandlerList</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BlockExplodeEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/BlockExplodeEvent.html#getHandlers--">getHandlers</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">BlockExplodeEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/BlockExplodeEvent.html#getIgnitions--">getIgnitions</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/level/Position.html" title="class in cn.nukkit.level">Position</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BlockExplodeEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/BlockExplodeEvent.html#getPosition--">getPosition</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><span class="typeNameLabel">BlockExplodeEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/BlockExplodeEvent.html#getYield--">getYield</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="typeNameLabel">BlockExplosionPrimeEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/BlockExplosionPrimeEvent.html#isBlockBreaking--">isBlockBreaking</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="typeNameLabel">BlockExplosionPrimeEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/BlockExplosionPrimeEvent.html#isIncendiary--">isIncendiary</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">BlockExplodeEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/BlockExplodeEvent.html#setAffectedBlocks-java.util.Set-">setAffectedBlocks</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&gt;&nbsp;blocks)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">BlockExplosionPrimeEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/BlockExplosionPrimeEvent.html#setBlockBreaking-boolean-">setBlockBreaking</a></span>(boolean&nbsp;blockBreaking)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">BlockExplosionPrimeEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/BlockExplosionPrimeEvent.html#setFireChance-double-">setFireChance</a></span>(double&nbsp;fireChance)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">BlockExplosionPrimeEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/BlockExplosionPrimeEvent.html#setForce-double-">setForce</a></span>(double&nbsp;force)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">BlockExplodeEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/BlockExplodeEvent.html#setIgnitions-java.util.Set-">setIgnitions</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&gt;&nbsp;ignitions)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">BlockExplosionPrimeEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/BlockExplosionPrimeEvent.html#setIncendiary-boolean-">setIncendiary</a></span>(boolean&nbsp;incendiary)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">BlockExplodeEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/BlockExplodeEvent.html#setYield-double-">setYield</a></span>(double&nbsp;yield)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../cn/nukkit/event/block/package-summary.html">cn.nukkit.event.block</a> with annotations of type <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">Since</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/BlockExplodeEvent.html#BlockExplodeEvent-cn.nukkit.block.Block-cn.nukkit.level.Position-java.util.Set-java.util.Set-double-double-">BlockExplodeEvent</a></span>(<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block,
+                 <a href="../../../../cn/nukkit/level/Position.html" title="class in cn.nukkit.level">Position</a>&nbsp;position,
+                 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&gt;&nbsp;blocks,
+                 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&gt;&nbsp;ignitions,
+                 double&nbsp;yield,
+                 double&nbsp;fireChance)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/BlockExplosionPrimeEvent.html#BlockExplosionPrimeEvent-cn.nukkit.block.Block-double-">BlockExplosionPrimeEvent</a></span>(<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block,
+                        double&nbsp;force)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/BlockExplosionPrimeEvent.html#BlockExplosionPrimeEvent-cn.nukkit.block.Block-double-double-">BlockExplosionPrimeEvent</a></span>(<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block,
+                        double&nbsp;force,
+                        double&nbsp;fireChance)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
 <li class="blockList"><a name="cn.nukkit.event.blockstate">
 <!--   -->
 </a>
@@ -6025,6 +6258,44 @@
 <tr class="altColor">
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/blockstate/BlockStateRepairFinishEvent.html#BlockStateRepairFinishEvent-java.util.List-cn.nukkit.block.Block-">BlockStateRepairFinishEvent</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/blockstate/BlockStateRepair.html" title="class in cn.nukkit.blockstate">BlockStateRepair</a>&gt;&nbsp;allRepairs,
                            <a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;result)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="cn.nukkit.event.entity">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">Since</a> in <a href="../../../../cn/nukkit/event/entity/package-summary.html">cn.nukkit.event.entity</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../cn/nukkit/event/entity/package-summary.html">cn.nukkit.event.entity</a> with annotations of type <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">Since</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><span class="typeNameLabel">EntityExplosionPrimeEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityExplosionPrimeEvent.html#getFireChance--">getFireChance</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">EntityExplodeEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityExplodeEvent.html#getIgnitions--">getIgnitions</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="typeNameLabel">EntityExplosionPrimeEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityExplosionPrimeEvent.html#isIncendiary--">isIncendiary</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">EntityExplosionPrimeEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityExplosionPrimeEvent.html#setFireChance-double-">setFireChance</a></span>(double&nbsp;fireChance)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">EntityExplodeEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityExplodeEvent.html#setIgnitions-java.util.Set-">setIgnitions</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&gt;&nbsp;ignitions)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">EntityExplosionPrimeEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityExplosionPrimeEvent.html#setIncendiary-boolean-">setIncendiary</a></span>(boolean&nbsp;incendiary)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -6175,8 +6446,64 @@
 <td class="colLast"><span class="typeNameLabel">PlayerLocallyInitializedEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerLocallyInitializedEvent.html#getHandlers--">getHandlers</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/level/Position.html" title="class in cn.nukkit.level">Position</a></code></td>
+<td class="colLast"><span class="typeNameLabel">PlayerRespawnEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerRespawnEvent.html#getOriginalRespawnPosition--">getOriginalRespawnPosition</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/level/Position.html" title="class in cn.nukkit.level">Position</a></code></td>
+<td class="colLast"><span class="typeNameLabel">PlayerRespawnEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerRespawnEvent.html#getRespawnBlockPosition--">getRespawnBlockPosition</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><span class="typeNameLabel">PlayerAsyncPreLoginEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#getXuid--">getXuid</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="typeNameLabel">PlayerRespawnEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerRespawnEvent.html#isConsumeCharge--">isConsumeCharge</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="typeNameLabel">PlayerRespawnEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerRespawnEvent.html#isKeepRespawnBlockPosition--">isKeepRespawnBlockPosition</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="typeNameLabel">PlayerRespawnEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerRespawnEvent.html#isKeepRespawnPosition--">isKeepRespawnPosition</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="typeNameLabel">PlayerRespawnEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerRespawnEvent.html#isRespawnBlockAvailable--">isRespawnBlockAvailable</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="typeNameLabel">PlayerRespawnEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerRespawnEvent.html#isSendInvalidRespawnBlockMessage--">isSendInvalidRespawnBlockMessage</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">PlayerRespawnEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerRespawnEvent.html#setConsumeCharge-boolean-">setConsumeCharge</a></span>(boolean&nbsp;consumeCharge)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">PlayerRespawnEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerRespawnEvent.html#setKeepRespawnBlockPosition-boolean-">setKeepRespawnBlockPosition</a></span>(boolean&nbsp;keepRespawnBlockPosition)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">PlayerRespawnEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerRespawnEvent.html#setKeepRespawnPosition-boolean-">setKeepRespawnPosition</a></span>(boolean&nbsp;keepRespawnPosition)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">PlayerRespawnEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerRespawnEvent.html#setOriginalRespawnPosition-cn.nukkit.level.Position-">setOriginalRespawnPosition</a></span>(<a href="../../../../cn/nukkit/level/Position.html" title="class in cn.nukkit.level">Position</a>&nbsp;originalSpawnPosition)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">PlayerRespawnEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerRespawnEvent.html#setRespawnBlockAvailable-boolean-">setRespawnBlockAvailable</a></span>(boolean&nbsp;spawnBlockAvailable)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">PlayerRespawnEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerRespawnEvent.html#setRespawnBlockPosition-cn.nukkit.level.Position-">setRespawnBlockPosition</a></span>(<a href="../../../../cn/nukkit/level/Position.html" title="class in cn.nukkit.level">Position</a>&nbsp;spawnBlock)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">PlayerRespawnEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerRespawnEvent.html#setSendInvalidRespawnBlockMessage-boolean-">setSendInvalidRespawnBlockMessage</a></span>(boolean&nbsp;sendInvalidRespawnBlockMessage)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -7366,28 +7693,36 @@
 <td class="colLast"><span class="typeNameLabel">MovingObjectPosition.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/MovingObjectPosition.html#getFaceHit--">getFaceHit</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><span class="typeNameLabel">Explosion.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Explosion.html#getFireChance--">getFireChance</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockentity/BlockEntity.html" title="class in cn.nukkit.blockentity">BlockEntity</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Position.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Position.html#getLevelBlockEntity--">getLevelBlockEntity</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Position.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Position.html#getLevelBlockState--">getLevelBlockState</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Position.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Position.html#getLevelBlockState-int-">getLevelBlockState</a></span>(int&nbsp;layer)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Position.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Position.html#getLevelName--">getLevelName</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;T extends <a href="../../../../cn/nukkit/blockentity/BlockEntity.html" title="class in cn.nukkit.blockentity">BlockEntity</a>&gt;<br>T</code></td>
 <td class="colLast"><span class="typeNameLabel">Position.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Position.html#getTypedBlockEntity-java.lang.Class-">getTypedBlockEntity</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;type)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/level/Level.html" title="class in cn.nukkit.level">Level</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Position.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Position.html#getValidLevel--">getValidLevel</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="typeNameLabel">Explosion.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Explosion.html#isIncendiary--">isIncendiary</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></td>
@@ -7446,6 +7781,14 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">Explosion.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Explosion.html#setFireChance-double-">setFireChance</a></span>(double&nbsp;fireChance)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">Explosion.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Explosion.html#setIncendiary-boolean-">setIncendiary</a></span>(boolean&nbsp;incendiary)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#updateComparatorOutputLevelSelective-cn.nukkit.math.Vector3-boolean-">updateComparatorOutputLevelSelective</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;v,
                                     boolean&nbsp;observer)</code>&nbsp;</td>
 </tr>
@@ -7457,6 +7800,16 @@
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tbody>
+<tr class="altColor">
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Explosion.html#Explosion-cn.nukkit.level.Position-double-cn.nukkit.block.Block-">Explosion</a></span>(<a href="../../../../cn/nukkit/level/Position.html" title="class in cn.nukkit.level">Position</a>&nbsp;center,
+         double&nbsp;size,
+         <a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;what)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Explosion.html#Explosion-cn.nukkit.level.Position-double-java.lang.Object-">Explosion</a></span>(<a href="../../../../cn/nukkit/level/Position.html" title="class in cn.nukkit.level">Position</a>&nbsp;center,
+         double&nbsp;size,
+         <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;what)</code>&nbsp;</td>
+</tr>
 <tr class="altColor">
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/ListChunkManager.html#ListChunkManager-cn.nukkit.level.ChunkManager-">ListChunkManager</a></span>(<a href="../../../../cn/nukkit/level/ChunkManager.html" title="interface in cn.nukkit.level">ChunkManager</a>&nbsp;parent)</code>&nbsp;</td>
 </tr>
