@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -194,7 +194,7 @@ extends <a href="../../../cn/nukkit/block/BlockFlower.html" title="class in cn.n
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;cn.nukkit.block.<a href="../../../cn/nukkit/block/BlockFlower.html" title="class in cn.nukkit.block">BlockFlower</a></h3>
-<code><a href="../../../cn/nukkit/block/BlockFlower.html#TYPE_ALLIUM">TYPE_ALLIUM</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#TYPE_AZURE_BLUET">TYPE_AZURE_BLUET</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#TYPE_BLUE_ORCHID">TYPE_BLUE_ORCHID</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#TYPE_ORANGE_TULIP">TYPE_ORANGE_TULIP</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#TYPE_OXEYE_DAISY">TYPE_OXEYE_DAISY</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#TYPE_PINK_TULIP">TYPE_PINK_TULIP</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#TYPE_POPPY">TYPE_POPPY</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#TYPE_RED_TULIP">TYPE_RED_TULIP</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#TYPE_WHITE_TULIP">TYPE_WHITE_TULIP</a></code></li>
+<code><a href="../../../cn/nukkit/block/BlockFlower.html#PROPERTIES">PROPERTIES</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#RED_FLOWER_TYPE">RED_FLOWER_TYPE</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#TYPE_ALLIUM">TYPE_ALLIUM</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#TYPE_AZURE_BLUET">TYPE_AZURE_BLUET</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#TYPE_BLUE_ORCHID">TYPE_BLUE_ORCHID</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#TYPE_ORANGE_TULIP">TYPE_ORANGE_TULIP</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#TYPE_OXEYE_DAISY">TYPE_OXEYE_DAISY</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#TYPE_PINK_TULIP">TYPE_PINK_TULIP</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#TYPE_POPPY">TYPE_POPPY</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#TYPE_RED_TULIP">TYPE_RED_TULIP</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#TYPE_WHITE_TULIP">TYPE_WHITE_TULIP</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="fields.inherited.from.class.cn.nukkit.block.Block">
@@ -259,16 +259,27 @@ extends <a href="../../../cn/nukkit/block/BlockFlower.html" title="class in cn.n
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code><a href="../../../cn/nukkit/blockproperty/value/SmallFlowerType.html" title="enum in cn.nukkit.blockproperty.value">SmallFlowerType</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockDandelion.html#getFlowerType--">getFlowerType</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockDandelion.html#getId--">getId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockDandelion.html#getName--">getName</a></span>()</code>&nbsp;</td>
-</tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code><a href="../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockDandelion.html#getProperties--">getProperties</a></span>()</code>
+<div class="block">A backward-compatibility properties definition that accepts any values that can be stored in the amount of bits
+ specified by <a href="../../../cn/nukkit/block/Block.html#DATA_BITS"><code>Block.DATA_BITS</code></a>.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockDandelion.html#getUncommonFlower--">getUncommonFlower</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockDandelion.html#setFlowerType-cn.nukkit.blockproperty.value.SmallFlowerType-">setFlowerType</a></span>(<a href="../../../cn/nukkit/blockproperty/value/SmallFlowerType.html" title="enum in cn.nukkit.blockproperty.value">SmallFlowerType</a>&nbsp;flowerType)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -276,7 +287,7 @@ extends <a href="../../../cn/nukkit/block/BlockFlower.html" title="class in cn.n
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;cn.nukkit.block.<a href="../../../cn/nukkit/block/BlockFlower.html" title="class in cn.nukkit.block">BlockFlower</a></h3>
-<code><a href="../../../cn/nukkit/block/BlockFlower.html#canBeActivated--">canBeActivated</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#canPlantOn-cn.nukkit.block.Block-">canPlantOn</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#getColor--">getColor</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#isSupportValid-cn.nukkit.block.Block-">isSupportValid</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#onActivate-cn.nukkit.item.Item-cn.nukkit.Player-">onActivate</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#onUpdate-int-">onUpdate</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#place-cn.nukkit.item.Item-cn.nukkit.block.Block-cn.nukkit.block.Block-cn.nukkit.math.BlockFace-double-double-double-cn.nukkit.Player-">place</a></code></li>
+<code><a href="../../../cn/nukkit/block/BlockFlower.html#canBeActivated--">canBeActivated</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#canPlantOn-cn.nukkit.block.Block-">canPlantOn</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#getColor--">getColor</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#getName--">getName</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#isSupportValid-cn.nukkit.block.Block-">isSupportValid</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#onActivate-cn.nukkit.item.Item-cn.nukkit.Player-">onActivate</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#onUpdate-int-">onUpdate</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#place-cn.nukkit.item.Item-cn.nukkit.block.Block-cn.nukkit.block.Block-cn.nukkit.math.BlockFace-double-double-double-cn.nukkit.Player-">place</a>, <a href="../../../cn/nukkit/block/BlockFlower.html#setOnSingleFlowerType-cn.nukkit.blockproperty.value.SmallFlowerType-cn.nukkit.blockproperty.value.SmallFlowerType-">setOnSingleFlowerType</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.cn.nukkit.block.BlockFlowable">
@@ -291,13 +302,6 @@ extends <a href="../../../cn/nukkit/block/BlockFlower.html" title="class in cn.n
 </a>
 <h3>Methods inherited from class&nbsp;cn.nukkit.block.<a href="../../../cn/nukkit/block/BlockTransparentMeta.html" title="class in cn.nukkit.block">BlockTransparentMeta</a></h3>
 <code><a href="../../../cn/nukkit/block/BlockTransparentMeta.html#isTransparent--">isTransparent</a></code></li>
-</ul>
-<ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.cn.nukkit.block.BlockMeta">
-<!--   -->
-</a>
-<h3>Methods inherited from class&nbsp;cn.nukkit.block.<a href="../../../cn/nukkit/block/BlockMeta.html" title="class in cn.nukkit.block">BlockMeta</a></h3>
-<code><a href="../../../cn/nukkit/block/BlockMeta.html#getProperties--">getProperties</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.cn.nukkit.block.Block">
@@ -346,7 +350,7 @@ extends <a href="../../../cn/nukkit/block/BlockFlower.html" title="class in cn.n
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;cn.nukkit.blockstate.<a href="../../../cn/nukkit/blockstate/IMutableBlockState.html" title="interface in cn.nukkit.blockstate">IMutableBlockState</a></h3>
-<code><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#handleUnsupportedStorageType-int-java.lang.Number-java.lang.RuntimeException-">handleUnsupportedStorageType</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#repairStorage-int-java.math.BigInteger-cn.nukkit.blockproperty.BlockProperties-java.util.function.Consumer-">repairStorage</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setBooleanValue-cn.nukkit.blockproperty.BlockProperty-boolean-">setBooleanValue</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setDataStorage-java.lang.Number-boolean-">setDataStorage</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setDataStorageFromInt-int-boolean-">setDataStorageFromInt</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setIntValue-cn.nukkit.blockproperty.BlockProperty-int-">setIntValue</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setPropertyValue-cn.nukkit.blockproperty.BlockProperty-T-">setPropertyValue</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#toggleBooleanProperty-cn.nukkit.blockproperty.BlockProperty-">toggleBooleanProperty</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#toggleBooleanProperty-java.lang.String-">toggleBooleanProperty</a></code></li>
+<code><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#handleUnsupportedStorageType-int-java.lang.Number-java.lang.RuntimeException-">handleUnsupportedStorageType</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#repairStorage-int-java.math.BigInteger-cn.nukkit.blockproperty.BlockProperties-java.util.function.Consumer-">repairStorage</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setBooleanValue-cn.nukkit.blockproperty.BlockProperty-boolean-">setBooleanValue</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setDataStorage-java.lang.Number-boolean-">setDataStorage</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setDataStorageFromInt-int-boolean-">setDataStorageFromInt</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setDataStorageFromItemBlockMeta-int-">setDataStorageFromItemBlockMeta</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setIntValue-cn.nukkit.blockproperty.BlockProperty-int-">setIntValue</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setPropertyValue-cn.nukkit.blockproperty.BlockProperty-T-">setPropertyValue</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#toggleBooleanProperty-cn.nukkit.blockproperty.BlockProperty-">toggleBooleanProperty</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#toggleBooleanProperty-java.lang.String-">toggleBooleanProperty</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.cn.nukkit.blockstate.IBlockState">
@@ -395,16 +399,26 @@ extends <a href="../../../cn/nukkit/block/BlockFlower.html" title="class in cn.n
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="getName--">
+<a name="getProperties--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getName</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getName()</pre>
+<h4>getProperties</h4>
+<pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+ <a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
+public&nbsp;<a href="../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a>&nbsp;getProperties()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../cn/nukkit/block/BlockMeta.html#getProperties--">BlockMeta</a></code></span></div>
+<div class="block">A backward-compatibility properties definition that accepts any values that can be stored in the amount of bits
+ specified by <a href="../../../cn/nukkit/block/Block.html#DATA_BITS"><code>Block.DATA_BITS</code></a>.
+ <p>Implementations can change the returned properties to restrict only valid values and make complete use
+ of the block state system.</p></div>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../cn/nukkit/blockstate/IBlockState.html#getProperties--">getProperties</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/blockstate/IBlockState.html" title="interface in cn.nukkit.blockstate">IBlockState</a></code></dd>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="../../../cn/nukkit/block/BlockFlower.html#getName--">getName</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/block/BlockFlower.html" title="class in cn.nukkit.block">BlockFlower</a></code></dd>
+<dd><code><a href="../../../cn/nukkit/block/BlockFlower.html#getProperties--">getProperties</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/block/BlockFlower.html" title="class in cn.nukkit.block">BlockFlower</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -424,13 +438,43 @@ extends <a href="../../../cn/nukkit/block/BlockFlower.html" title="class in cn.n
 <a name="getUncommonFlower--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getUncommonFlower</h4>
 <pre>protected&nbsp;<a href="../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;getUncommonFlower()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../cn/nukkit/block/BlockFlower.html#getUncommonFlower--">getUncommonFlower</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/block/BlockFlower.html" title="class in cn.nukkit.block">BlockFlower</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="setFlowerType-cn.nukkit.blockproperty.value.SmallFlowerType-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setFlowerType</h4>
+<pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+ <a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+public&nbsp;void&nbsp;setFlowerType(<a href="../../../cn/nukkit/blockproperty/value/SmallFlowerType.html" title="enum in cn.nukkit.blockproperty.value">SmallFlowerType</a>&nbsp;flowerType)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../cn/nukkit/block/BlockFlower.html#setFlowerType-cn.nukkit.blockproperty.value.SmallFlowerType-">setFlowerType</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/block/BlockFlower.html" title="class in cn.nukkit.block">BlockFlower</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="getFlowerType--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getFlowerType</h4>
+<pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+ <a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+public&nbsp;<a href="../../../cn/nukkit/blockproperty/value/SmallFlowerType.html" title="enum in cn.nukkit.blockproperty.value">SmallFlowerType</a>&nbsp;getFlowerType()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../cn/nukkit/block/BlockFlower.html#getFlowerType--">getFlowerType</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/block/BlockFlower.html" title="class in cn.nukkit.block">BlockFlower</a></code></dd>
 </dl>
 </li>
 </ul>

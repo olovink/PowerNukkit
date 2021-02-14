@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":6,"i4":10,"i5":10,"i6":6,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":6,"i4":10,"i5":6,"i6":10,"i7":10,"i8":10,"i9":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -292,37 +292,29 @@ implements <a href="../../../cn/nukkit/utils/Faceable.html" title="interface in 
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockCropsStem.html#getFruitId--">getFruitId</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i4" class="altColor">
-<td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockCropsStem.html#getGrowth--">getGrowth</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockCropsStem.html#getProperties--">getProperties</a></span>()</code>
 <div class="block">A backward-compatibility properties definition that accepts any values that can be stored in the amount of bits
  specified by <a href="../../../cn/nukkit/block/Block.html#DATA_BITS"><code>Block.DATA_BITS</code></a>.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>abstract int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockCropsStem.html#getSeedsId--">getSeedsId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockCropsStem.html#growFruit--">growFruit</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockCropsStem.html#onUpdate-int-">onUpdate</a></span>(int&nbsp;type)</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockCropsStem.html#setBlockFace-cn.nukkit.math.BlockFace-">setBlockFace</a></span>(<a href="../../../cn/nukkit/math/BlockFace.html" title="enum in cn.nukkit.math">BlockFace</a>&nbsp;face)</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockCropsStem.html#setGrowth-int-">setGrowth</a></span>(int&nbsp;growth)</code>&nbsp;</td>
-</tr>
-<tr id="i11" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockCropsStem.html#toItem--">toItem</a></span>()</code>&nbsp;</td>
 </tr>
@@ -332,7 +324,7 @@ implements <a href="../../../cn/nukkit/utils/Faceable.html" title="interface in 
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;cn.nukkit.block.<a href="../../../cn/nukkit/block/BlockCrops.html" title="class in cn.nukkit.block">BlockCrops</a></h3>
-<code><a href="../../../cn/nukkit/block/BlockCrops.html#canBeActivated--">canBeActivated</a>, <a href="../../../cn/nukkit/block/BlockCrops.html#getColor--">getColor</a>, <a href="../../../cn/nukkit/block/BlockCrops.html#onActivate-cn.nukkit.item.Item-cn.nukkit.Player-">onActivate</a>, <a href="../../../cn/nukkit/block/BlockCrops.html#place-cn.nukkit.item.Item-cn.nukkit.block.Block-cn.nukkit.block.Block-cn.nukkit.math.BlockFace-double-double-double-cn.nukkit.Player-">place</a></code></li>
+<code><a href="../../../cn/nukkit/block/BlockCrops.html#canBeActivated--">canBeActivated</a>, <a href="../../../cn/nukkit/block/BlockCrops.html#getColor--">getColor</a>, <a href="../../../cn/nukkit/block/BlockCrops.html#getGrowth--">getGrowth</a>, <a href="../../../cn/nukkit/block/BlockCrops.html#getMaxGrowth--">getMaxGrowth</a>, <a href="../../../cn/nukkit/block/BlockCrops.html#getMinimumLightLevel--">getMinimumLightLevel</a>, <a href="../../../cn/nukkit/block/BlockCrops.html#isFullyGrown--">isFullyGrown</a>, <a href="../../../cn/nukkit/block/BlockCrops.html#onActivate-cn.nukkit.item.Item-cn.nukkit.Player-">onActivate</a>, <a href="../../../cn/nukkit/block/BlockCrops.html#place-cn.nukkit.item.Item-cn.nukkit.block.Block-cn.nukkit.block.Block-cn.nukkit.math.BlockFace-double-double-double-cn.nukkit.Player-">place</a>, <a href="../../../cn/nukkit/block/BlockCrops.html#setGrowth-int-">setGrowth</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.cn.nukkit.block.BlockFlowable">
@@ -395,7 +387,7 @@ implements <a href="../../../cn/nukkit/utils/Faceable.html" title="interface in 
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;cn.nukkit.blockstate.<a href="../../../cn/nukkit/blockstate/IMutableBlockState.html" title="interface in cn.nukkit.blockstate">IMutableBlockState</a></h3>
-<code><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#handleUnsupportedStorageType-int-java.lang.Number-java.lang.RuntimeException-">handleUnsupportedStorageType</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#repairStorage-int-java.math.BigInteger-cn.nukkit.blockproperty.BlockProperties-java.util.function.Consumer-">repairStorage</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setBooleanValue-cn.nukkit.blockproperty.BlockProperty-boolean-">setBooleanValue</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setDataStorage-java.lang.Number-boolean-">setDataStorage</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setDataStorageFromInt-int-boolean-">setDataStorageFromInt</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setIntValue-cn.nukkit.blockproperty.BlockProperty-int-">setIntValue</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setPropertyValue-cn.nukkit.blockproperty.BlockProperty-T-">setPropertyValue</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#toggleBooleanProperty-cn.nukkit.blockproperty.BlockProperty-">toggleBooleanProperty</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#toggleBooleanProperty-java.lang.String-">toggleBooleanProperty</a></code></li>
+<code><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#handleUnsupportedStorageType-int-java.lang.Number-java.lang.RuntimeException-">handleUnsupportedStorageType</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#repairStorage-int-java.math.BigInteger-cn.nukkit.blockproperty.BlockProperties-java.util.function.Consumer-">repairStorage</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setBooleanValue-cn.nukkit.blockproperty.BlockProperty-boolean-">setBooleanValue</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setDataStorage-java.lang.Number-boolean-">setDataStorage</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setDataStorageFromInt-int-boolean-">setDataStorageFromInt</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setDataStorageFromItemBlockMeta-int-">setDataStorageFromItemBlockMeta</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setIntValue-cn.nukkit.blockproperty.BlockProperty-int-">setIntValue</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setPropertyValue-cn.nukkit.blockproperty.BlockProperty-T-">setPropertyValue</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#toggleBooleanProperty-cn.nukkit.blockproperty.BlockProperty-">toggleBooleanProperty</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#toggleBooleanProperty-java.lang.String-">toggleBooleanProperty</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.cn.nukkit.blockstate.IBlockState">
@@ -475,7 +467,7 @@ public&nbsp;<a href="../../../cn/nukkit/blockproperty/BlockProperties.html" titl
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../cn/nukkit/blockstate/IBlockState.html#getProperties--">getProperties</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/blockstate/IBlockState.html" title="interface in cn.nukkit.blockstate">IBlockState</a></code></dd>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="../../../cn/nukkit/block/BlockMeta.html#getProperties--">getProperties</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/block/BlockMeta.html" title="class in cn.nukkit.block">BlockMeta</a></code></dd>
+<dd><code><a href="../../../cn/nukkit/block/BlockCrops.html#getProperties--">getProperties</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/block/BlockCrops.html" title="class in cn.nukkit.block">BlockCrops</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -527,28 +519,6 @@ public&nbsp;void&nbsp;setBlockFace(<a href="../../../cn/nukkit/math/BlockFace.ht
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../cn/nukkit/utils/Faceable.html#setBlockFace-cn.nukkit.math.BlockFace-">setBlockFace</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/utils/Faceable.html" title="interface in cn.nukkit.utils">Faceable</a></code></dd>
 </dl>
-</li>
-</ul>
-<a name="getGrowth--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getGrowth</h4>
-<pre><a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
- <a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-public&nbsp;int&nbsp;getGrowth()</pre>
-</li>
-</ul>
-<a name="setGrowth-int-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setGrowth</h4>
-<pre><a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
- <a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-public&nbsp;void&nbsp;setGrowth(int&nbsp;growth)</pre>
 </li>
 </ul>
 <a name="onUpdate-int-">

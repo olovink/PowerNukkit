@@ -429,7 +429,7 @@ implements <a href="../../../cn/nukkit/utils/Faceable.html" title="interface in 
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;cn.nukkit.blockstate.<a href="../../../cn/nukkit/blockstate/IMutableBlockState.html" title="interface in cn.nukkit.blockstate">IMutableBlockState</a></h3>
-<code><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#handleUnsupportedStorageType-int-java.lang.Number-java.lang.RuntimeException-">handleUnsupportedStorageType</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#repairStorage-int-java.math.BigInteger-cn.nukkit.blockproperty.BlockProperties-java.util.function.Consumer-">repairStorage</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setBooleanValue-cn.nukkit.blockproperty.BlockProperty-boolean-">setBooleanValue</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setDataStorage-java.lang.Number-boolean-">setDataStorage</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setDataStorageFromInt-int-boolean-">setDataStorageFromInt</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setIntValue-cn.nukkit.blockproperty.BlockProperty-int-">setIntValue</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setPropertyValue-cn.nukkit.blockproperty.BlockProperty-T-">setPropertyValue</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#toggleBooleanProperty-cn.nukkit.blockproperty.BlockProperty-">toggleBooleanProperty</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#toggleBooleanProperty-java.lang.String-">toggleBooleanProperty</a></code></li>
+<code><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#handleUnsupportedStorageType-int-java.lang.Number-java.lang.RuntimeException-">handleUnsupportedStorageType</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#repairStorage-int-java.math.BigInteger-cn.nukkit.blockproperty.BlockProperties-java.util.function.Consumer-">repairStorage</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setBooleanValue-cn.nukkit.blockproperty.BlockProperty-boolean-">setBooleanValue</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setDataStorage-java.lang.Number-boolean-">setDataStorage</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setDataStorageFromInt-int-boolean-">setDataStorageFromInt</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setDataStorageFromItemBlockMeta-int-">setDataStorageFromItemBlockMeta</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setIntValue-cn.nukkit.blockproperty.BlockProperty-int-">setIntValue</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setPropertyValue-cn.nukkit.blockproperty.BlockProperty-T-">setPropertyValue</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#toggleBooleanProperty-cn.nukkit.blockproperty.BlockProperty-">toggleBooleanProperty</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#toggleBooleanProperty-java.lang.String-">toggleBooleanProperty</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.cn.nukkit.blockstate.IBlockState">
@@ -458,7 +458,9 @@ implements <a href="../../../cn/nukkit/utils/Faceable.html" title="interface in 
 <ul class="blockList">
 <li class="blockList">
 <h4>GROUND_SIGN_DIRECTION</h4>
-<pre>public static final&nbsp;<a href="../../../cn/nukkit/blockproperty/BlockProperty.html" title="class in cn.nukkit.blockproperty">BlockProperty</a>&lt;<a href="../../../cn/nukkit/math/CompassRoseDirection.html" title="enum in cn.nukkit.math">CompassRoseDirection</a>&gt; GROUND_SIGN_DIRECTION</pre>
+<pre><a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+public static final&nbsp;<a href="../../../cn/nukkit/blockproperty/BlockProperty.html" title="class in cn.nukkit.blockproperty">BlockProperty</a>&lt;<a href="../../../cn/nukkit/math/CompassRoseDirection.html" title="enum in cn.nukkit.math">CompassRoseDirection</a>&gt; GROUND_SIGN_DIRECTION</pre>
 </li>
 </ul>
 <a name="PROPERTIES">
@@ -467,7 +469,9 @@ implements <a href="../../../cn/nukkit/utils/Faceable.html" title="interface in 
 <ul class="blockListLast">
 <li class="blockList">
 <h4>PROPERTIES</h4>
-<pre>public static final&nbsp;<a href="../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a> PROPERTIES</pre>
+<pre><a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+public static final&nbsp;<a href="../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a> PROPERTIES</pre>
 </li>
 </ul>
 </li>
@@ -703,6 +707,7 @@ public&nbsp;int&nbsp;getWaterloggingLevel()</pre>
                      double&nbsp;fx,
                      double&nbsp;fy,
                      double&nbsp;fz,
+                     <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
                      <a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../cn/nukkit/block/Block.html#place-cn.nukkit.item.Item-cn.nukkit.block.Block-cn.nukkit.block.Block-cn.nukkit.math.BlockFace-double-double-double-cn.nukkit.Player-">Block</a></code></span></div>
 <div class="block">Place and initialize a this block correctly in the world.
@@ -782,7 +787,9 @@ public&nbsp;int&nbsp;getWaterloggingLevel()</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getSignDirection</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/math/CompassRoseDirection.html" title="enum in cn.nukkit.math">CompassRoseDirection</a>&nbsp;getSignDirection()</pre>
+<pre><a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+public&nbsp;<a href="../../../cn/nukkit/math/CompassRoseDirection.html" title="enum in cn.nukkit.math">CompassRoseDirection</a>&nbsp;getSignDirection()</pre>
 </li>
 </ul>
 <a name="setSignDirection-cn.nukkit.math.CompassRoseDirection-">
@@ -791,7 +798,9 @@ public&nbsp;int&nbsp;getWaterloggingLevel()</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>setSignDirection</h4>
-<pre>public&nbsp;void&nbsp;setSignDirection(<a href="../../../cn/nukkit/math/CompassRoseDirection.html" title="enum in cn.nukkit.math">CompassRoseDirection</a>&nbsp;direction)</pre>
+<pre><a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+public&nbsp;void&nbsp;setSignDirection(<a href="../../../cn/nukkit/math/CompassRoseDirection.html" title="enum in cn.nukkit.math">CompassRoseDirection</a>&nbsp;direction)</pre>
 </li>
 </ul>
 <a name="getBlockFace--">

@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -247,16 +247,39 @@ extends <a href="../../../cn/nukkit/block/BlockBanner.html" title="class in cn.n
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockWallBanner.html#getId--">getId</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code><a href="../../../cn/nukkit/math/BlockFace.html" title="enum in cn.nukkit.math">BlockFace</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockWallBanner.html#getBlockFace--">getBlockFace</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockWallBanner.html#getName--">getName</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code><a href="../../../cn/nukkit/math/CompassRoseDirection.html" title="enum in cn.nukkit.math">CompassRoseDirection</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockWallBanner.html#getDirection--">getDirection</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockWallBanner.html#getId--">getId</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockWallBanner.html#getName--">getName</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockWallBanner.html#getProperties--">getProperties</a></span>()</code>
+<div class="block">A backward-compatibility properties definition that accepts any values that can be stored in the amount of bits
+ specified by <a href="../../../cn/nukkit/block/Block.html#DATA_BITS"><code>Block.DATA_BITS</code></a>.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockWallBanner.html#onUpdate-int-">onUpdate</a></span>(int&nbsp;type)</code>&nbsp;</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockWallBanner.html#setBlockFace-cn.nukkit.math.BlockFace-">setBlockFace</a></span>(<a href="../../../cn/nukkit/math/BlockFace.html" title="enum in cn.nukkit.math">BlockFace</a>&nbsp;face)</code>&nbsp;</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockWallBanner.html#setDirection-cn.nukkit.math.CompassRoseDirection-">setDirection</a></span>(<a href="../../../cn/nukkit/math/CompassRoseDirection.html" title="enum in cn.nukkit.math">CompassRoseDirection</a>&nbsp;direction)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -264,7 +287,7 @@ extends <a href="../../../cn/nukkit/block/BlockBanner.html" title="class in cn.n
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;cn.nukkit.block.<a href="../../../cn/nukkit/block/BlockBanner.html" title="class in cn.nukkit.block">BlockBanner</a></h3>
-<code><a href="../../../cn/nukkit/block/BlockBanner.html#breaksWhenMoved--">breaksWhenMoved</a>, <a href="../../../cn/nukkit/block/BlockBanner.html#canPassThrough--">canPassThrough</a>, <a href="../../../cn/nukkit/block/BlockBanner.html#getBlockEntityClass--">getBlockEntityClass</a>, <a href="../../../cn/nukkit/block/BlockBanner.html#getBlockEntityType--">getBlockEntityType</a>, <a href="../../../cn/nukkit/block/BlockBanner.html#getBlockFace--">getBlockFace</a>, <a href="../../../cn/nukkit/block/BlockBanner.html#getColor--">getColor</a>, <a href="../../../cn/nukkit/block/BlockBanner.html#getDyeColor--">getDyeColor</a>, <a href="../../../cn/nukkit/block/BlockBanner.html#getHardness--">getHardness</a>, <a href="../../../cn/nukkit/block/BlockBanner.html#getResistance--">getResistance</a>, <a href="../../../cn/nukkit/block/BlockBanner.html#getToolType--">getToolType</a>, <a href="../../../cn/nukkit/block/BlockBanner.html#getWaterloggingLevel--">getWaterloggingLevel</a>, <a href="../../../cn/nukkit/block/BlockBanner.html#place-cn.nukkit.item.Item-cn.nukkit.block.Block-cn.nukkit.block.Block-cn.nukkit.math.BlockFace-double-double-double-cn.nukkit.Player-">place</a>, <a href="../../../cn/nukkit/block/BlockBanner.html#recalculateBoundingBox--">recalculateBoundingBox</a>, <a href="../../../cn/nukkit/block/BlockBanner.html#toItem--">toItem</a></code></li>
+<code><a href="../../../cn/nukkit/block/BlockBanner.html#breaksWhenMoved--">breaksWhenMoved</a>, <a href="../../../cn/nukkit/block/BlockBanner.html#canPassThrough--">canPassThrough</a>, <a href="../../../cn/nukkit/block/BlockBanner.html#getBlockEntityClass--">getBlockEntityClass</a>, <a href="../../../cn/nukkit/block/BlockBanner.html#getBlockEntityType--">getBlockEntityType</a>, <a href="../../../cn/nukkit/block/BlockBanner.html#getColor--">getColor</a>, <a href="../../../cn/nukkit/block/BlockBanner.html#getDyeColor--">getDyeColor</a>, <a href="../../../cn/nukkit/block/BlockBanner.html#getHardness--">getHardness</a>, <a href="../../../cn/nukkit/block/BlockBanner.html#getResistance--">getResistance</a>, <a href="../../../cn/nukkit/block/BlockBanner.html#getToolType--">getToolType</a>, <a href="../../../cn/nukkit/block/BlockBanner.html#getWaterloggingLevel--">getWaterloggingLevel</a>, <a href="../../../cn/nukkit/block/BlockBanner.html#place-cn.nukkit.item.Item-cn.nukkit.block.Block-cn.nukkit.block.Block-cn.nukkit.math.BlockFace-double-double-double-cn.nukkit.Player-">place</a>, <a href="../../../cn/nukkit/block/BlockBanner.html#recalculateBoundingBox--">recalculateBoundingBox</a>, <a href="../../../cn/nukkit/block/BlockBanner.html#toItem--">toItem</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.cn.nukkit.block.BlockTransparentMeta">
@@ -272,13 +295,6 @@ extends <a href="../../../cn/nukkit/block/BlockBanner.html" title="class in cn.n
 </a>
 <h3>Methods inherited from class&nbsp;cn.nukkit.block.<a href="../../../cn/nukkit/block/BlockTransparentMeta.html" title="class in cn.nukkit.block">BlockTransparentMeta</a></h3>
 <code><a href="../../../cn/nukkit/block/BlockTransparentMeta.html#isTransparent--">isTransparent</a></code></li>
-</ul>
-<ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.cn.nukkit.block.BlockMeta">
-<!--   -->
-</a>
-<h3>Methods inherited from class&nbsp;cn.nukkit.block.<a href="../../../cn/nukkit/block/BlockMeta.html" title="class in cn.nukkit.block">BlockMeta</a></h3>
-<code><a href="../../../cn/nukkit/block/BlockMeta.html#getProperties--">getProperties</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.cn.nukkit.block.Block">
@@ -316,13 +332,6 @@ extends <a href="../../../cn/nukkit/block/BlockBanner.html" title="class in cn.n
 <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
 </ul>
 <ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.cn.nukkit.utils.Faceable">
-<!--   -->
-</a>
-<h3>Methods inherited from interface&nbsp;cn.nukkit.utils.<a href="../../../cn/nukkit/utils/Faceable.html" title="interface in cn.nukkit.utils">Faceable</a></h3>
-<code><a href="../../../cn/nukkit/utils/Faceable.html#setBlockFace-cn.nukkit.math.BlockFace-">setBlockFace</a></code></li>
-</ul>
-<ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.cn.nukkit.block.BlockEntityHolder">
 <!--   -->
 </a>
@@ -341,7 +350,7 @@ extends <a href="../../../cn/nukkit/block/BlockBanner.html" title="class in cn.n
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;cn.nukkit.blockstate.<a href="../../../cn/nukkit/blockstate/IMutableBlockState.html" title="interface in cn.nukkit.blockstate">IMutableBlockState</a></h3>
-<code><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#handleUnsupportedStorageType-int-java.lang.Number-java.lang.RuntimeException-">handleUnsupportedStorageType</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#repairStorage-int-java.math.BigInteger-cn.nukkit.blockproperty.BlockProperties-java.util.function.Consumer-">repairStorage</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setBooleanValue-cn.nukkit.blockproperty.BlockProperty-boolean-">setBooleanValue</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setDataStorage-java.lang.Number-boolean-">setDataStorage</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setDataStorageFromInt-int-boolean-">setDataStorageFromInt</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setIntValue-cn.nukkit.blockproperty.BlockProperty-int-">setIntValue</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setPropertyValue-cn.nukkit.blockproperty.BlockProperty-T-">setPropertyValue</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#toggleBooleanProperty-cn.nukkit.blockproperty.BlockProperty-">toggleBooleanProperty</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#toggleBooleanProperty-java.lang.String-">toggleBooleanProperty</a></code></li>
+<code><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#handleUnsupportedStorageType-int-java.lang.Number-java.lang.RuntimeException-">handleUnsupportedStorageType</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#repairStorage-int-java.math.BigInteger-cn.nukkit.blockproperty.BlockProperties-java.util.function.Consumer-">repairStorage</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setBooleanValue-cn.nukkit.blockproperty.BlockProperty-boolean-">setBooleanValue</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setDataStorage-java.lang.Number-boolean-">setDataStorage</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setDataStorageFromInt-int-boolean-">setDataStorageFromInt</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setDataStorageFromItemBlockMeta-int-">setDataStorageFromItemBlockMeta</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setIntValue-cn.nukkit.blockproperty.BlockProperty-int-">setIntValue</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setPropertyValue-cn.nukkit.blockproperty.BlockProperty-T-">setPropertyValue</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#toggleBooleanProperty-cn.nukkit.blockproperty.BlockProperty-">toggleBooleanProperty</a>, <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#toggleBooleanProperty-java.lang.String-">toggleBooleanProperty</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.cn.nukkit.blockstate.IBlockState">
@@ -403,6 +412,29 @@ extends <a href="../../../cn/nukkit/block/BlockBanner.html" title="class in cn.n
 </dl>
 </li>
 </ul>
+<a name="getProperties--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getProperties</h4>
+<pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+ <a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
+public&nbsp;<a href="../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a>&nbsp;getProperties()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../cn/nukkit/block/BlockMeta.html#getProperties--">BlockMeta</a></code></span></div>
+<div class="block">A backward-compatibility properties definition that accepts any values that can be stored in the amount of bits
+ specified by <a href="../../../cn/nukkit/block/Block.html#DATA_BITS"><code>Block.DATA_BITS</code></a>.
+ <p>Implementations can change the returned properties to restrict only valid values and make complete use
+ of the block state system.</p></div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../cn/nukkit/blockstate/IBlockState.html#getProperties--">getProperties</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/blockstate/IBlockState.html" title="interface in cn.nukkit.blockstate">IBlockState</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../cn/nukkit/block/BlockBanner.html#getProperties--">getProperties</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/block/BlockBanner.html" title="class in cn.nukkit.block">BlockBanner</a></code></dd>
+</dl>
+</li>
+</ul>
 <a name="getName--">
 <!--   -->
 </a>
@@ -419,13 +451,71 @@ extends <a href="../../../cn/nukkit/block/BlockBanner.html" title="class in cn.n
 <a name="onUpdate-int-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>onUpdate</h4>
 <pre>public&nbsp;int&nbsp;onUpdate(int&nbsp;type)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../cn/nukkit/block/BlockBanner.html#onUpdate-int-">onUpdate</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/block/BlockBanner.html" title="class in cn.nukkit.block">BlockBanner</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="setBlockFace-cn.nukkit.math.BlockFace-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setBlockFace</h4>
+<pre><a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.3.0.0-PN")
+public&nbsp;void&nbsp;setBlockFace(<a href="../../../cn/nukkit/math/BlockFace.html" title="enum in cn.nukkit.math">BlockFace</a>&nbsp;face)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../cn/nukkit/utils/Faceable.html#setBlockFace-cn.nukkit.math.BlockFace-">setBlockFace</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/utils/Faceable.html" title="interface in cn.nukkit.utils">Faceable</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../cn/nukkit/block/BlockBanner.html#setBlockFace-cn.nukkit.math.BlockFace-">setBlockFace</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/block/BlockBanner.html" title="class in cn.nukkit.block">BlockBanner</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="getBlockFace--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getBlockFace</h4>
+<pre>public&nbsp;<a href="../../../cn/nukkit/math/BlockFace.html" title="enum in cn.nukkit.math">BlockFace</a>&nbsp;getBlockFace()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../cn/nukkit/utils/Faceable.html#getBlockFace--">getBlockFace</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/utils/Faceable.html" title="interface in cn.nukkit.utils">Faceable</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../cn/nukkit/block/BlockBanner.html#getBlockFace--">getBlockFace</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/block/BlockBanner.html" title="class in cn.nukkit.block">BlockBanner</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="setDirection-cn.nukkit.math.CompassRoseDirection-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setDirection</h4>
+<pre>public&nbsp;void&nbsp;setDirection(<a href="../../../cn/nukkit/math/CompassRoseDirection.html" title="enum in cn.nukkit.math">CompassRoseDirection</a>&nbsp;direction)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../cn/nukkit/block/BlockBanner.html#setDirection-cn.nukkit.math.CompassRoseDirection-">setDirection</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/block/BlockBanner.html" title="class in cn.nukkit.block">BlockBanner</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="getDirection--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getDirection</h4>
+<pre>public&nbsp;<a href="../../../cn/nukkit/math/CompassRoseDirection.html" title="enum in cn.nukkit.math">CompassRoseDirection</a>&nbsp;getDirection()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../cn/nukkit/block/BlockBanner.html#getDirection--">getDirection</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/block/BlockBanner.html" title="class in cn.nukkit.block">BlockBanner</a></code></dd>
 </dl>
 </li>
 </ul>
