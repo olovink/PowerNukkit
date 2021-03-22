@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Entity (PowerNukkit 1.4.0.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2021-02-15">
+<meta name="date" content="2021-03-22">
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
 </head>
@@ -138,7 +138,9 @@ var activeTableTab = "activeTableTab";
 </dl>
 <hr>
 <br>
-<pre>public abstract class <span class="typeNameLabel">Entity</span>
+<pre><a href="../../../cn/nukkit/api/PowerNukkitDifference.html" title="annotation in cn.nukkit.api">@PowerNukkitDifference</a>(<a href="../../../cn/nukkit/api/PowerNukkitDifference.html#since--">since</a>="1.4.0.0-PN",
+                       <a href="../../../cn/nukkit/api/PowerNukkitDifference.html#info--">info</a>="All DATA constants were made dynamic because they have tendency to change on Minecraft updates, these dynamic calls will avoid the need of plugin recompilations after Minecraft updates that shifts the data values")
+public abstract class <span class="typeNameLabel">Entity</span>
 extends <a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>
 implements <a href="../../../cn/nukkit/metadata/Metadatable.html" title="interface in cn.nukkit.metadata">Metadatable</a></pre>
 <dl>
@@ -201,35 +203,23 @@ implements <a href="../../../cn/nukkit/metadata/Metadatable.html" title="interfa
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_AGENT_ID">DATA_AGENT_ID</a></span></code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_AIR">DATA_AIR</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_ALWAYS_SHOW_NAMETAG">DATA_ALWAYS_SHOW_NAMETAG</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_AMBIENT_SOUND_EVENT_NAME">DATA_AMBIENT_SOUND_EVENT_NAME</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_AMBIENT_SOUND_INTERVAL">DATA_AMBIENT_SOUND_INTERVAL</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_AMBIENT_SOUND_INTERVAL_RANGE">DATA_AMBIENT_SOUND_INTERVAL_RANGE</a></span></code>&nbsp;</td>
-</tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_AREA_EFFECT_CLOUD_DURATION">DATA_AREA_EFFECT_CLOUD_DURATION</a></span></code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_AMBIENT_SOUND_INTERVAL_RANGE">DATA_AMBIENT_SOUND_INTERVAL_RANGE</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
@@ -237,31 +227,7 @@ implements <a href="../../../cn/nukkit/metadata/Metadatable.html" title="interfa
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_AREA_EFFECT_CLOUD_PICKUP_COUNT">DATA_AREA_EFFECT_CLOUD_PICKUP_COUNT</a></span></code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_AREA_EFFECT_CLOUD_RADIUS">DATA_AREA_EFFECT_CLOUD_RADIUS</a></span></code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_AREA_EFFECT_CLOUD_RADIUS_CHANGE_ON_PICKUP">DATA_AREA_EFFECT_CLOUD_RADIUS_CHANGE_ON_PICKUP</a></span></code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_AREA_EFFECT_CLOUD_RADIUS_PER_TICK">DATA_AREA_EFFECT_CLOUD_RADIUS_PER_TICK</a></span></code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_AREA_EFFECT_CLOUD_SPAWN_TIME">DATA_AREA_EFFECT_CLOUD_SPAWN_TIME</a></span></code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
@@ -285,41 +251,39 @@ implements <a href="../../../cn/nukkit/metadata/Metadatable.html" title="interfa
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_BOAT_BUBBLE_TIME">DATA_BOAT_BUBBLE_TIME</a></span></code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_BOUNDING_BOX_HEIGHT">DATA_BOUNDING_BOX_HEIGHT</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_BOUNDING_BOX_WIDTH">DATA_BOUNDING_BOX_WIDTH</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_BUBBLE_TIME">DATA_BUBBLE_TIME</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_BUOYANCY_DATA">DATA_BUOYANCY_DATA</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_CAN_RIDE_TARGET">DATA_CAN_RIDE_TARGET</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_CHANGE_ON_PICKUP">DATA_CHANGE_ON_PICKUP</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_CHANGE_RATE">DATA_CHANGE_RATE</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_CHARGE_AMOUNT">DATA_CHARGE_AMOUNT</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_CLIENT_EVENT">DATA_CLIENT_EVENT</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
@@ -339,73 +303,63 @@ implements <a href="../../../cn/nukkit/metadata/Metadatable.html" title="interfa
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_COMMAND_BLOCK_ENABLED">DATA_COMMAND_BLOCK_ENABLED</a></span></code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_COMMAND_BLOCK_EXECUTE_ON_FIRST_TICK">DATA_COMMAND_BLOCK_EXECUTE_ON_FIRST_TICK</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_COMMAND_BLOCK_LAST_OUTPUT">DATA_COMMAND_BLOCK_LAST_OUTPUT</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_COMMAND_BLOCK_TICK_DELAY">DATA_COMMAND_BLOCK_TICK_DELAY</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_COMMAND_BLOCK_TRACK_OUTPUT">DATA_COMMAND_BLOCK_TRACK_OUTPUT</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_CONTAINER_BASE_SIZE">DATA_CONTAINER_BASE_SIZE</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_CONTAINER_EXTRA_SLOTS_PER_STRENGTH">DATA_CONTAINER_EXTRA_SLOTS_PER_STRENGTH</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_CONTAINER_TYPE">DATA_CONTAINER_TYPE</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_CONTROLLING_RIDER_SEAT_NUMBER">DATA_CONTROLLING_RIDER_SEAT_NUMBER</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_DISPLAY_ITEM">DATA_DISPLAY_ITEM</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_DISPLAY_OFFSET">DATA_DISPLAY_OFFSET</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_DURATION">DATA_DURATION</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_EATING_COUNTER">DATA_EATING_COUNTER</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_ENDER_CRYSTAL_TIME_OFFSET">DATA_ENDER_CRYSTAL_TIME_OFFSET</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_ENDERMAN_HELD_RUNTIME_ID">DATA_ENDERMAN_HELD_RUNTIME_ID</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_ENTITY_AGE">DATA_ENTITY_AGE</a></span></code>&nbsp;</td>
-</tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_EVOKER_SPELL_COLOR">DATA_EVOKER_SPELL_COLOR</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_ENTITY_AGE">DATA_ENTITY_AGE</a></span></code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </td>
 </tr>
@@ -543,159 +497,155 @@ implements <a href="../../../cn/nukkit/metadata/Metadatable.html" title="interfa
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_DISABLED_BLOCKING">DATA_FLAG_DISABLED_BLOCKING</a></span></code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
-<div class="block"><span class="deprecationComment">Use <a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_TRANSITION_BLOCKING"><code>DATA_FLAG_TRANSITION_BLOCKING</code></a> instead.</span></div>
-</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_DOOR_BREAKER">DATA_FLAG_DOOR_BREAKER</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_DOOR_OPENER">DATA_FLAG_DOOR_OPENER</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_EATING">DATA_FLAG_EATING</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_ELDER">DATA_FLAG_ELDER</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_EMOTING">DATA_FLAG_EMOTING</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_ENCHANTED">DATA_FLAG_ENCHANTED</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_EVOKER_SPELL">DATA_FLAG_EVOKER_SPELL</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_FACING_TARGET_TO_RANGE_ATTACK">DATA_FLAG_FACING_TARGET_TO_RANGE_ATTACK</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_FALL_THROUGH_SCAFFOLDING">DATA_FLAG_FALL_THROUGH_SCAFFOLDING</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_FIRE_IMMUNE">DATA_FLAG_FIRE_IMMUNE</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_GLIDING">DATA_FLAG_GLIDING</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_GRAVITY">DATA_FLAG_GRAVITY</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_HAS_COLLISION">DATA_FLAG_HAS_COLLISION</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_HIDDEN_WHEN_INVISIBLE">DATA_FLAG_HIDDEN_WHEN_INVISIBLE</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_IDLING">DATA_FLAG_IDLING</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_IGNITED">DATA_FLAG_IGNITED</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_IMMOBILE">DATA_FLAG_IMMOBILE</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_IN_SCAFFOLDING">DATA_FLAG_IN_SCAFFOLDING</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_INLOVE">DATA_FLAG_INLOVE</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_INTERESTED">DATA_FLAG_INTERESTED</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_INVISIBLE">DATA_FLAG_INVISIBLE</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_IS_AVOIDING_BLOCKS">DATA_FLAG_IS_AVOIDING_BLOCKS</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_IS_AVOIDING_MOBS">DATA_FLAG_IS_AVOIDING_MOBS</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_IS_ILLAGER_CAPTAIN">DATA_FLAG_IS_ILLAGER_CAPTAIN</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_IS_IN_UI">DATA_FLAG_IS_IN_UI</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_IS_TRANSFORMING">DATA_FLAG_IS_TRANSFORMING</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_LAYING_DOWN">DATA_FLAG_LAYING_DOWN</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_LAYING_EGG">DATA_FLAG_LAYING_EGG</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_LEASHED">DATA_FLAG_LEASHED</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_LINGER">DATA_FLAG_LINGER</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_MOVING">DATA_FLAG_MOVING</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_NO_AI">DATA_FLAG_NO_AI</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_ONFIRE">DATA_FLAG_ONFIRE</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_ORPHANED">DATA_FLAG_ORPHANED</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_OVER_SCAFFOLDING">DATA_FLAG_OVER_SCAFFOLDING</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_POWERED">DATA_FLAG_POWERED</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_PREGNANT">DATA_FLAG_PREGNANT</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_RAM_ATTACK">DATA_FLAG_RAM_ATTACK</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
@@ -711,107 +661,101 @@ implements <a href="../../../cn/nukkit/metadata/Metadatable.html" title="interfa
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_RIDER_CAN_PICKUP">DATA_FLAG_RIDER_CAN_PICKUP</a></span></code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_RIDING">DATA_FLAG_RIDING</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_ROARING">DATA_FLAG_ROARING</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_ROLLING">DATA_FLAG_ROLLING</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_SADDLED">DATA_FLAG_SADDLED</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_SCARED">DATA_FLAG_SCARED</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_SHEARED">DATA_FLAG_SHEARED</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_SHOW_TRIDENT_ROPE">DATA_FLAG_SHOW_TRIDENT_ROPE</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_SHOWBASE">DATA_FLAG_SHOWBASE</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_SILENT">DATA_FLAG_SILENT</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_SITTING">DATA_FLAG_SITTING</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_SLEEPING">DATA_FLAG_SLEEPING</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_SNEAKING">DATA_FLAG_SNEAKING</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_SNEEZING">DATA_FLAG_SNEEZING</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_SPIN_ATTACK">DATA_FLAG_SPIN_ATTACK</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_SPRINTING">DATA_FLAG_SPRINTING</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_STACKABLE">DATA_FLAG_STACKABLE</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_STALKING">DATA_FLAG_STALKING</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_STUNNED">DATA_FLAG_STUNNED</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_SWIMMER">DATA_FLAG_SWIMMER</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_SWIMMING">DATA_FLAG_SWIMMING</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_TAMED">DATA_FLAG_TAMED</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_TEMPTED">DATA_FLAG_TEMPTED</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_TRADE_INTEREST">DATA_FLAG_TRADE_INTEREST</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_TRANSITION_BLOCKING">DATA_FLAG_TRANSITION_BLOCKING</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_TRANSITION_SETTING">DATA_FLAG_TRANSITION_SETTING</a></span></code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
@@ -819,45 +763,45 @@ implements <a href="../../../cn/nukkit/metadata/Metadatable.html" title="interfa
 </div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_TRANSITION_SITTING">DATA_FLAG_TRANSITION_SITTING</a></span></code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
-<div class="block"><span class="deprecationComment">This is not available in NukkitX yet, use with care.</span></div>
-</div>
-</td>
-</tr>
 <tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_TRANSITION_SITTING">DATA_FLAG_TRANSITION_SITTING</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_TRUSTING">DATA_FLAG_TRUSTING</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_VIBRATING">DATA_FLAG_VIBRATING</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_WALKER">DATA_FLAG_WALKER</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_WALLCLIMBING">DATA_FLAG_WALLCLIMBING</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_WANTS_TO_WAKE">DATA_FLAG_WANTS_TO_WAKE</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_WASD_CONTROLLED">DATA_FLAG_WASD_CONTROLLED</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAGS">DATA_FLAGS</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAGS_EXTENDED">DATA_FLAGS_EXTENDED</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_FREEZING_EFFECT_STRENGTH">DATA_FREEZING_EFFECT_STRENGTH</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
@@ -865,173 +809,181 @@ implements <a href="../../../cn/nukkit/metadata/Metadatable.html" title="interfa
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_HAS_COMMAND_BLOCK">DATA_HAS_COMMAND_BLOCK</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_GOAT_HORN_COUNT">DATA_GOAT_HORN_COUNT</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_HAS_COMMAND_BLOCK">DATA_HAS_COMMAND_BLOCK</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_HAS_DISPLAY">DATA_HAS_DISPLAY</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_HAS_NPC_COMPONENT">DATA_HAS_NPC_COMPONENT</a></span></code>&nbsp;</td>
-</tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_HEALTH">DATA_HEALTH</a></span></code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_HIGH_TIER_CURED_DISCOUNT">DATA_HIGH_TIER_CURED_DISCOUNT</a></span></code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_HITBOX">DATA_HITBOX</a></span></code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_HURT_DIRECTION">DATA_HURT_DIRECTION</a></span></code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_HURT_TIME">DATA_HURT_TIME</a></span></code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_INTERACT_TEXT">DATA_INTERACT_TEXT</a></span></code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_INTERACTIVE_TAG">DATA_INTERACTIVE_TAG</a></span></code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_HAS_NPC_COMPONENT">DATA_HAS_NPC_COMPONENT</a></span></code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_IS_BUOYANT">DATA_IS_BUOYANT</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_HEALTH">DATA_HEALTH</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_HIGH_TIER_CURED_DISCOUNT">DATA_HIGH_TIER_CURED_DISCOUNT</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_HITBOX">DATA_HITBOX</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_HURT_DIRECTION">DATA_HURT_DIRECTION</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_HURT_TIME">DATA_HURT_TIME</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_INTERACT_TEXT">DATA_INTERACT_TEXT</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_INTERACTIVE_TAG">DATA_INTERACTIVE_TAG</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_IS_BUOYANT">DATA_IS_BUOYANT</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_JUMP_DURATION">DATA_JUMP_DURATION</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_LAYING_AMOUNT">DATA_LAYING_AMOUNT</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_LAYING_AMOUNT_PREVIOUS">DATA_LAYING_AMOUNT_PREVIOUS</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_LEAD_HOLDER_EID">DATA_LEAD_HOLDER_EID</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_LIMITED_LIFE">DATA_LIMITED_LIFE</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_LOW_TIER_CURED_DISCOUNT">DATA_LOW_TIER_CURED_DISCOUNT</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_MARK_VARIANT">DATA_MARK_VARIANT</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_MAX_AIR">DATA_MAX_AIR</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_MAX_STRENGTH">DATA_MAX_STRENGTH</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_MAX_TRADE_TIER">DATA_MAX_TRADE_TIER</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_NAME_AUTHOR">DATA_NAME_AUTHOR</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_NAME_RAW_TEXT">DATA_NAME_RAW_TEXT</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_NAMETAG">DATA_NAMETAG</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_NEARBY_CURED_DISCOUNT">DATA_NEARBY_CURED_DISCOUNT</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_NEARBY_CURED_DISCOUNT_TIMESTAMP">DATA_NEARBY_CURED_DISCOUNT_TIMESTAMP</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_NPC_SKIN_ID">DATA_NPC_SKIN_ID</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_OLD_SWELL">DATA_OLD_SWELL</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_OWNER_EID">DATA_OWNER_EID</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_PADDLE_TIME_LEFT">DATA_PADDLE_TIME_LEFT</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_PADDLE_TIME_RIGHT">DATA_PADDLE_TIME_RIGHT</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_PICKUP_COUNT">DATA_PICKUP_COUNT</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_PLAYER_BED_POSITION">DATA_PLAYER_BED_POSITION</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_PLAYER_FLAGS">DATA_PLAYER_FLAGS</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_PLAYER_INDEX">DATA_PLAYER_INDEX</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_POTION_AMBIENT">DATA_POTION_AMBIENT</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_POTION_AUX_VALUE">DATA_POTION_AUX_VALUE</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_POTION_COLOR">DATA_POTION_COLOR</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_PUFFERFISH_SIZE">DATA_PUFFERFISH_SIZE</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_RIDER_MAX_ROTATION">DATA_RIDER_MAX_ROTATION</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_RIDER_MIN_ROTATION">DATA_RIDER_MIN_ROTATION</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_RIDER_ROTATION_LOCKED">DATA_RIDER_ROTATION_LOCKED</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_RIDER_ROTATION_OFFSET">DATA_RIDER_ROTATION_OFFSET</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
@@ -1111,57 +1063,55 @@ implements <a href="../../../cn/nukkit/metadata/Metadatable.html" title="interfa
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_TRADE_XP">DATA_TRADE_XP</a></span></code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_TRADING_CAREER">DATA_TRADING_CAREER</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_TRADING_PLAYER_EID">DATA_TRADING_PLAYER_EID</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_TYPE_BYTE">DATA_TYPE_BYTE</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_TYPE_FLOAT">DATA_TYPE_FLOAT</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_TYPE_INT">DATA_TYPE_INT</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_TYPE_LONG">DATA_TYPE_LONG</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_TYPE_NBT">DATA_TYPE_NBT</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_TYPE_POS">DATA_TYPE_POS</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_TYPE_SHORT">DATA_TYPE_SHORT</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_TYPE_STRING">DATA_TYPE_STRING</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_TYPE_VECTOR3F">DATA_TYPE_VECTOR3F</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_URL_TAG">DATA_URL_TAG</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/entity/Entity.html#DATA_USING_ITEM">DATA_USING_ITEM</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
@@ -2547,10 +2497,6 @@ public static final&nbsp;<a href="../../../cn/nukkit/entity/Entity.html" title="
 <li class="blockList">
 <h4>DATA_FLAGS</h4>
 <pre>public static final&nbsp;int DATA_FLAGS</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAGS">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_HEALTH">
@@ -2560,10 +2506,6 @@ public static final&nbsp;<a href="../../../cn/nukkit/entity/Entity.html" title="
 <li class="blockList">
 <h4>DATA_HEALTH</h4>
 <pre>public static final&nbsp;int DATA_HEALTH</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_HEALTH">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_VARIANT">
@@ -2573,10 +2515,6 @@ public static final&nbsp;<a href="../../../cn/nukkit/entity/Entity.html" title="
 <li class="blockList">
 <h4>DATA_VARIANT</h4>
 <pre>public static final&nbsp;int DATA_VARIANT</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_VARIANT">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_COLOR">
@@ -2586,10 +2524,6 @@ public static final&nbsp;<a href="../../../cn/nukkit/entity/Entity.html" title="
 <li class="blockList">
 <h4>DATA_COLOR</h4>
 <pre>public static final&nbsp;int DATA_COLOR</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_COLOR">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_COLOUR">
@@ -2599,10 +2533,6 @@ public static final&nbsp;<a href="../../../cn/nukkit/entity/Entity.html" title="
 <li class="blockList">
 <h4>DATA_COLOUR</h4>
 <pre>public static final&nbsp;int DATA_COLOUR</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_COLOUR">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_NAMETAG">
@@ -2612,10 +2542,6 @@ public static final&nbsp;<a href="../../../cn/nukkit/entity/Entity.html" title="
 <li class="blockList">
 <h4>DATA_NAMETAG</h4>
 <pre>public static final&nbsp;int DATA_NAMETAG</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_NAMETAG">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_OWNER_EID">
@@ -2625,10 +2551,6 @@ public static final&nbsp;<a href="../../../cn/nukkit/entity/Entity.html" title="
 <li class="blockList">
 <h4>DATA_OWNER_EID</h4>
 <pre>public static final&nbsp;int DATA_OWNER_EID</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_OWNER_EID">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_TARGET_EID">
@@ -2638,10 +2560,6 @@ public static final&nbsp;<a href="../../../cn/nukkit/entity/Entity.html" title="
 <li class="blockList">
 <h4>DATA_TARGET_EID</h4>
 <pre>public static final&nbsp;int DATA_TARGET_EID</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_TARGET_EID">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_AIR">
@@ -2651,10 +2569,6 @@ public static final&nbsp;<a href="../../../cn/nukkit/entity/Entity.html" title="
 <li class="blockList">
 <h4>DATA_AIR</h4>
 <pre>public static final&nbsp;int DATA_AIR</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_AIR">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_POTION_COLOR">
@@ -2664,10 +2578,6 @@ public static final&nbsp;<a href="../../../cn/nukkit/entity/Entity.html" title="
 <li class="blockList">
 <h4>DATA_POTION_COLOR</h4>
 <pre>public static final&nbsp;int DATA_POTION_COLOR</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_POTION_COLOR">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_POTION_AMBIENT">
@@ -2677,10 +2587,6 @@ public static final&nbsp;<a href="../../../cn/nukkit/entity/Entity.html" title="
 <li class="blockList">
 <h4>DATA_POTION_AMBIENT</h4>
 <pre>public static final&nbsp;int DATA_POTION_AMBIENT</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_POTION_AMBIENT">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_JUMP_DURATION">
@@ -2690,10 +2596,6 @@ public static final&nbsp;<a href="../../../cn/nukkit/entity/Entity.html" title="
 <li class="blockList">
 <h4>DATA_JUMP_DURATION</h4>
 <pre>public static final&nbsp;int DATA_JUMP_DURATION</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_JUMP_DURATION">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_HURT_TIME">
@@ -2703,10 +2605,6 @@ public static final&nbsp;<a href="../../../cn/nukkit/entity/Entity.html" title="
 <li class="blockList">
 <h4>DATA_HURT_TIME</h4>
 <pre>public static final&nbsp;int DATA_HURT_TIME</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_HURT_TIME">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_HURT_DIRECTION">
@@ -2716,10 +2614,6 @@ public static final&nbsp;<a href="../../../cn/nukkit/entity/Entity.html" title="
 <li class="blockList">
 <h4>DATA_HURT_DIRECTION</h4>
 <pre>public static final&nbsp;int DATA_HURT_DIRECTION</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_HURT_DIRECTION">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_PADDLE_TIME_LEFT">
@@ -2729,10 +2623,6 @@ public static final&nbsp;<a href="../../../cn/nukkit/entity/Entity.html" title="
 <li class="blockList">
 <h4>DATA_PADDLE_TIME_LEFT</h4>
 <pre>public static final&nbsp;int DATA_PADDLE_TIME_LEFT</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_PADDLE_TIME_LEFT">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_PADDLE_TIME_RIGHT">
@@ -2742,10 +2632,6 @@ public static final&nbsp;<a href="../../../cn/nukkit/entity/Entity.html" title="
 <li class="blockList">
 <h4>DATA_PADDLE_TIME_RIGHT</h4>
 <pre>public static final&nbsp;int DATA_PADDLE_TIME_RIGHT</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_PADDLE_TIME_RIGHT">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_EXPERIENCE_VALUE">
@@ -2755,10 +2641,6 @@ public static final&nbsp;<a href="../../../cn/nukkit/entity/Entity.html" title="
 <li class="blockList">
 <h4>DATA_EXPERIENCE_VALUE</h4>
 <pre>public static final&nbsp;int DATA_EXPERIENCE_VALUE</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_EXPERIENCE_VALUE">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_DISPLAY_ITEM">
@@ -2768,10 +2650,6 @@ public static final&nbsp;<a href="../../../cn/nukkit/entity/Entity.html" title="
 <li class="blockList">
 <h4>DATA_DISPLAY_ITEM</h4>
 <pre>public static final&nbsp;int DATA_DISPLAY_ITEM</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_DISPLAY_ITEM">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_DISPLAY_OFFSET">
@@ -2781,10 +2659,6 @@ public static final&nbsp;<a href="../../../cn/nukkit/entity/Entity.html" title="
 <li class="blockList">
 <h4>DATA_DISPLAY_OFFSET</h4>
 <pre>public static final&nbsp;int DATA_DISPLAY_OFFSET</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_DISPLAY_OFFSET">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_HAS_DISPLAY">
@@ -2794,10 +2668,6 @@ public static final&nbsp;<a href="../../../cn/nukkit/entity/Entity.html" title="
 <li class="blockList">
 <h4>DATA_HAS_DISPLAY</h4>
 <pre>public static final&nbsp;int DATA_HAS_DISPLAY</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_HAS_DISPLAY">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_SWELL">
@@ -2808,10 +2678,6 @@ public static final&nbsp;<a href="../../../cn/nukkit/entity/Entity.html" title="
 <h4>DATA_SWELL</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_SWELL</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_SWELL">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_OLD_SWELL">
@@ -2822,10 +2688,6 @@ public static final&nbsp;int DATA_SWELL</pre>
 <h4>DATA_OLD_SWELL</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_OLD_SWELL</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_OLD_SWELL">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_SWELL_DIR">
@@ -2836,10 +2698,6 @@ public static final&nbsp;int DATA_OLD_SWELL</pre>
 <h4>DATA_SWELL_DIR</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_SWELL_DIR</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_SWELL_DIR">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_CHARGE_AMOUNT">
@@ -2850,10 +2708,6 @@ public static final&nbsp;int DATA_SWELL_DIR</pre>
 <h4>DATA_CHARGE_AMOUNT</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_CHARGE_AMOUNT</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_CHARGE_AMOUNT">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_ENDERMAN_HELD_RUNTIME_ID">
@@ -2863,10 +2717,17 @@ public static final&nbsp;int DATA_CHARGE_AMOUNT</pre>
 <li class="blockList">
 <h4>DATA_ENDERMAN_HELD_RUNTIME_ID</h4>
 <pre>public static final&nbsp;int DATA_ENDERMAN_HELD_RUNTIME_ID</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_ENDERMAN_HELD_RUNTIME_ID">Constant Field Values</a></dd>
-</dl>
+</li>
+</ul>
+<a name="DATA_CLIENT_EVENT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DATA_CLIENT_EVENT</h4>
+<pre><a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+public static final&nbsp;int DATA_CLIENT_EVENT</pre>
 </li>
 </ul>
 <a name="DATA_ENTITY_AGE">
@@ -2875,11 +2736,23 @@ public static final&nbsp;int DATA_CHARGE_AMOUNT</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>DATA_ENTITY_AGE</h4>
-<pre>public static final&nbsp;int DATA_ENTITY_AGE</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_ENTITY_AGE">Constant Field Values</a></dd>
-</dl>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+ <a href="../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.4.0.0-PN",
+                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#by--">by</a>="PowerNukkit",
+                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="Apparently this the ID 24 was reused to represent CLIENT_EVENT but Cloudburst Nukkit is still mapping it as age")
+public static final&nbsp;int DATA_ENTITY_AGE</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+</li>
+</ul>
+<a name="DATA_USING_ITEM">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DATA_USING_ITEM</h4>
+<pre><a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+public static final&nbsp;int DATA_USING_ITEM</pre>
 </li>
 </ul>
 <a name="DATA_PLAYER_FLAGS">
@@ -2889,10 +2762,6 @@ public static final&nbsp;int DATA_CHARGE_AMOUNT</pre>
 <li class="blockList">
 <h4>DATA_PLAYER_FLAGS</h4>
 <pre>public static final&nbsp;int DATA_PLAYER_FLAGS</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_PLAYER_FLAGS">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_PLAYER_INDEX">
@@ -2903,10 +2772,6 @@ public static final&nbsp;int DATA_CHARGE_AMOUNT</pre>
 <h4>DATA_PLAYER_INDEX</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_PLAYER_INDEX</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_PLAYER_INDEX">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_PLAYER_BED_POSITION">
@@ -2916,10 +2781,6 @@ public static final&nbsp;int DATA_PLAYER_INDEX</pre>
 <li class="blockList">
 <h4>DATA_PLAYER_BED_POSITION</h4>
 <pre>public static final&nbsp;int DATA_PLAYER_BED_POSITION</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_PLAYER_BED_POSITION">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FIREBALL_POWER_X">
@@ -2929,10 +2790,6 @@ public static final&nbsp;int DATA_PLAYER_INDEX</pre>
 <li class="blockList">
 <h4>DATA_FIREBALL_POWER_X</h4>
 <pre>public static final&nbsp;int DATA_FIREBALL_POWER_X</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FIREBALL_POWER_X">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FIREBALL_POWER_Y">
@@ -2942,10 +2799,6 @@ public static final&nbsp;int DATA_PLAYER_INDEX</pre>
 <li class="blockList">
 <h4>DATA_FIREBALL_POWER_Y</h4>
 <pre>public static final&nbsp;int DATA_FIREBALL_POWER_Y</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FIREBALL_POWER_Y">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FIREBALL_POWER_Z">
@@ -2955,10 +2808,6 @@ public static final&nbsp;int DATA_PLAYER_INDEX</pre>
 <li class="blockList">
 <h4>DATA_FIREBALL_POWER_Z</h4>
 <pre>public static final&nbsp;int DATA_FIREBALL_POWER_Z</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FIREBALL_POWER_Z">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_AUX_POWER">
@@ -2969,10 +2818,6 @@ public static final&nbsp;int DATA_PLAYER_INDEX</pre>
 <h4>DATA_AUX_POWER</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_AUX_POWER</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_AUX_POWER">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FISH_X">
@@ -2983,10 +2828,6 @@ public static final&nbsp;int DATA_AUX_POWER</pre>
 <h4>DATA_FISH_X</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_FISH_X</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FISH_X">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FISH_Z">
@@ -2997,10 +2838,6 @@ public static final&nbsp;int DATA_FISH_X</pre>
 <h4>DATA_FISH_Z</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_FISH_Z</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FISH_Z">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FISH_ANGLE">
@@ -3011,10 +2848,6 @@ public static final&nbsp;int DATA_FISH_Z</pre>
 <h4>DATA_FISH_ANGLE</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_FISH_ANGLE</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FISH_ANGLE">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_POTION_AUX_VALUE">
@@ -3024,10 +2857,6 @@ public static final&nbsp;int DATA_FISH_ANGLE</pre>
 <li class="blockList">
 <h4>DATA_POTION_AUX_VALUE</h4>
 <pre>public static final&nbsp;int DATA_POTION_AUX_VALUE</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_POTION_AUX_VALUE">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_LEAD_HOLDER_EID">
@@ -3037,10 +2866,6 @@ public static final&nbsp;int DATA_FISH_ANGLE</pre>
 <li class="blockList">
 <h4>DATA_LEAD_HOLDER_EID</h4>
 <pre>public static final&nbsp;int DATA_LEAD_HOLDER_EID</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_LEAD_HOLDER_EID">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_SCALE">
@@ -3050,10 +2875,16 @@ public static final&nbsp;int DATA_FISH_ANGLE</pre>
 <li class="blockList">
 <h4>DATA_SCALE</h4>
 <pre>public static final&nbsp;int DATA_SCALE</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_SCALE">Constant Field Values</a></dd>
-</dl>
+</li>
+</ul>
+<a name="DATA_INTERACTIVE_TAG">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DATA_INTERACTIVE_TAG</h4>
+<pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+public static final&nbsp;int DATA_INTERACTIVE_TAG</pre>
 </li>
 </ul>
 <a name="DATA_HAS_NPC_COMPONENT">
@@ -3064,11 +2895,13 @@ public static final&nbsp;int DATA_FISH_ANGLE</pre>
 <h4>DATA_HAS_NPC_COMPONENT</h4>
 <pre><a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+ <a href="../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../cn/nukkit/api/DeprecationDetails.html#by--">by</a>="PowerNukkit",
+                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.4.0.0-PN",
+                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="This is not only for NPC, it\'s used to display any interactive button text and Nukkit added this constant with a different name",
+                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="DATA_INTERACTIVE_TAG")
 public static final&nbsp;int DATA_HAS_NPC_COMPONENT</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_HAS_NPC_COMPONENT">Constant Field Values</a></dd>
-</dl>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </li>
 </ul>
 <a name="DATA_NPC_SKIN_ID">
@@ -3078,10 +2911,6 @@ public static final&nbsp;int DATA_HAS_NPC_COMPONENT</pre>
 <li class="blockList">
 <h4>DATA_NPC_SKIN_ID</h4>
 <pre>public static final&nbsp;int DATA_NPC_SKIN_ID</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_NPC_SKIN_ID">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_URL_TAG">
@@ -3091,10 +2920,6 @@ public static final&nbsp;int DATA_HAS_NPC_COMPONENT</pre>
 <li class="blockList">
 <h4>DATA_URL_TAG</h4>
 <pre>public static final&nbsp;int DATA_URL_TAG</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_URL_TAG">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_MAX_AIR">
@@ -3104,10 +2929,6 @@ public static final&nbsp;int DATA_HAS_NPC_COMPONENT</pre>
 <li class="blockList">
 <h4>DATA_MAX_AIR</h4>
 <pre>public static final&nbsp;int DATA_MAX_AIR</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_MAX_AIR">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_MARK_VARIANT">
@@ -3117,10 +2938,6 @@ public static final&nbsp;int DATA_HAS_NPC_COMPONENT</pre>
 <li class="blockList">
 <h4>DATA_MARK_VARIANT</h4>
 <pre>public static final&nbsp;int DATA_MARK_VARIANT</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_MARK_VARIANT">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_CONTAINER_TYPE">
@@ -3130,10 +2947,6 @@ public static final&nbsp;int DATA_HAS_NPC_COMPONENT</pre>
 <li class="blockList">
 <h4>DATA_CONTAINER_TYPE</h4>
 <pre>public static final&nbsp;int DATA_CONTAINER_TYPE</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_CONTAINER_TYPE">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_CONTAINER_BASE_SIZE">
@@ -3143,10 +2956,6 @@ public static final&nbsp;int DATA_HAS_NPC_COMPONENT</pre>
 <li class="blockList">
 <h4>DATA_CONTAINER_BASE_SIZE</h4>
 <pre>public static final&nbsp;int DATA_CONTAINER_BASE_SIZE</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_CONTAINER_BASE_SIZE">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_CONTAINER_EXTRA_SLOTS_PER_STRENGTH">
@@ -3156,10 +2965,6 @@ public static final&nbsp;int DATA_HAS_NPC_COMPONENT</pre>
 <li class="blockList">
 <h4>DATA_CONTAINER_EXTRA_SLOTS_PER_STRENGTH</h4>
 <pre>public static final&nbsp;int DATA_CONTAINER_EXTRA_SLOTS_PER_STRENGTH</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_CONTAINER_EXTRA_SLOTS_PER_STRENGTH">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_BLOCK_TARGET">
@@ -3169,10 +2974,6 @@ public static final&nbsp;int DATA_HAS_NPC_COMPONENT</pre>
 <li class="blockList">
 <h4>DATA_BLOCK_TARGET</h4>
 <pre>public static final&nbsp;int DATA_BLOCK_TARGET</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_BLOCK_TARGET">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_WITHER_INVULNERABLE_TICKS">
@@ -3182,10 +2983,6 @@ public static final&nbsp;int DATA_HAS_NPC_COMPONENT</pre>
 <li class="blockList">
 <h4>DATA_WITHER_INVULNERABLE_TICKS</h4>
 <pre>public static final&nbsp;int DATA_WITHER_INVULNERABLE_TICKS</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_WITHER_INVULNERABLE_TICKS">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_WITHER_TARGET_1">
@@ -3195,10 +2992,6 @@ public static final&nbsp;int DATA_HAS_NPC_COMPONENT</pre>
 <li class="blockList">
 <h4>DATA_WITHER_TARGET_1</h4>
 <pre>public static final&nbsp;int DATA_WITHER_TARGET_1</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_WITHER_TARGET_1">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_WITHER_TARGET_2">
@@ -3208,10 +3001,6 @@ public static final&nbsp;int DATA_HAS_NPC_COMPONENT</pre>
 <li class="blockList">
 <h4>DATA_WITHER_TARGET_2</h4>
 <pre>public static final&nbsp;int DATA_WITHER_TARGET_2</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_WITHER_TARGET_2">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_WITHER_TARGET_3">
@@ -3221,10 +3010,6 @@ public static final&nbsp;int DATA_HAS_NPC_COMPONENT</pre>
 <li class="blockList">
 <h4>DATA_WITHER_TARGET_3</h4>
 <pre>public static final&nbsp;int DATA_WITHER_TARGET_3</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_WITHER_TARGET_3">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_AERIAL_ATTACK">
@@ -3235,10 +3020,6 @@ public static final&nbsp;int DATA_HAS_NPC_COMPONENT</pre>
 <h4>DATA_AERIAL_ATTACK</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_AERIAL_ATTACK</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_AERIAL_ATTACK">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_BOUNDING_BOX_WIDTH">
@@ -3248,10 +3029,6 @@ public static final&nbsp;int DATA_AERIAL_ATTACK</pre>
 <li class="blockList">
 <h4>DATA_BOUNDING_BOX_WIDTH</h4>
 <pre>public static final&nbsp;int DATA_BOUNDING_BOX_WIDTH</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_BOUNDING_BOX_WIDTH">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_BOUNDING_BOX_HEIGHT">
@@ -3261,10 +3038,6 @@ public static final&nbsp;int DATA_AERIAL_ATTACK</pre>
 <li class="blockList">
 <h4>DATA_BOUNDING_BOX_HEIGHT</h4>
 <pre>public static final&nbsp;int DATA_BOUNDING_BOX_HEIGHT</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_BOUNDING_BOX_HEIGHT">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FUSE_LENGTH">
@@ -3274,10 +3047,6 @@ public static final&nbsp;int DATA_AERIAL_ATTACK</pre>
 <li class="blockList">
 <h4>DATA_FUSE_LENGTH</h4>
 <pre>public static final&nbsp;int DATA_FUSE_LENGTH</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FUSE_LENGTH">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_RIDER_SEAT_POSITION">
@@ -3287,10 +3056,6 @@ public static final&nbsp;int DATA_AERIAL_ATTACK</pre>
 <li class="blockList">
 <h4>DATA_RIDER_SEAT_POSITION</h4>
 <pre>public static final&nbsp;int DATA_RIDER_SEAT_POSITION</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_RIDER_SEAT_POSITION">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_RIDER_ROTATION_LOCKED">
@@ -3300,10 +3065,6 @@ public static final&nbsp;int DATA_AERIAL_ATTACK</pre>
 <li class="blockList">
 <h4>DATA_RIDER_ROTATION_LOCKED</h4>
 <pre>public static final&nbsp;int DATA_RIDER_ROTATION_LOCKED</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_RIDER_ROTATION_LOCKED">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_RIDER_MAX_ROTATION">
@@ -3313,10 +3074,6 @@ public static final&nbsp;int DATA_AERIAL_ATTACK</pre>
 <li class="blockList">
 <h4>DATA_RIDER_MAX_ROTATION</h4>
 <pre>public static final&nbsp;int DATA_RIDER_MAX_ROTATION</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_RIDER_MAX_ROTATION">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_RIDER_MIN_ROTATION">
@@ -3326,10 +3083,16 @@ public static final&nbsp;int DATA_AERIAL_ATTACK</pre>
 <li class="blockList">
 <h4>DATA_RIDER_MIN_ROTATION</h4>
 <pre>public static final&nbsp;int DATA_RIDER_MIN_ROTATION</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_RIDER_MIN_ROTATION">Constant Field Values</a></dd>
-</dl>
+</li>
+</ul>
+<a name="DATA_RIDER_ROTATION_OFFSET">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DATA_RIDER_ROTATION_OFFSET</h4>
+<pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+public static final&nbsp;int DATA_RIDER_ROTATION_OFFSET</pre>
 </li>
 </ul>
 <a name="DATA_AREA_EFFECT_CLOUD_RADIUS">
@@ -3339,10 +3102,6 @@ public static final&nbsp;int DATA_AERIAL_ATTACK</pre>
 <li class="blockList">
 <h4>DATA_AREA_EFFECT_CLOUD_RADIUS</h4>
 <pre>public static final&nbsp;int DATA_AREA_EFFECT_CLOUD_RADIUS</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_AREA_EFFECT_CLOUD_RADIUS">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_AREA_EFFECT_CLOUD_WAITING">
@@ -3352,10 +3111,6 @@ public static final&nbsp;int DATA_AERIAL_ATTACK</pre>
 <li class="blockList">
 <h4>DATA_AREA_EFFECT_CLOUD_WAITING</h4>
 <pre>public static final&nbsp;int DATA_AREA_EFFECT_CLOUD_WAITING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_AREA_EFFECT_CLOUD_WAITING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_AREA_EFFECT_CLOUD_PARTICLE_ID">
@@ -3365,10 +3120,6 @@ public static final&nbsp;int DATA_AERIAL_ATTACK</pre>
 <li class="blockList">
 <h4>DATA_AREA_EFFECT_CLOUD_PARTICLE_ID</h4>
 <pre>public static final&nbsp;int DATA_AREA_EFFECT_CLOUD_PARTICLE_ID</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_AREA_EFFECT_CLOUD_PARTICLE_ID">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_SHULKER_PEEK_ID">
@@ -3379,10 +3130,6 @@ public static final&nbsp;int DATA_AERIAL_ATTACK</pre>
 <h4>DATA_SHULKER_PEEK_ID</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_SHULKER_PEEK_ID</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_SHULKER_PEEK_ID">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_SHULKER_ATTACH_FACE">
@@ -3392,10 +3139,6 @@ public static final&nbsp;int DATA_SHULKER_PEEK_ID</pre>
 <li class="blockList">
 <h4>DATA_SHULKER_ATTACH_FACE</h4>
 <pre>public static final&nbsp;int DATA_SHULKER_ATTACH_FACE</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_SHULKER_ATTACH_FACE">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_SHULKER_ATTACHED">
@@ -3406,10 +3149,6 @@ public static final&nbsp;int DATA_SHULKER_PEEK_ID</pre>
 <h4>DATA_SHULKER_ATTACHED</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_SHULKER_ATTACHED</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_SHULKER_ATTACHED">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_SHULKER_ATTACH_POS">
@@ -3419,10 +3158,6 @@ public static final&nbsp;int DATA_SHULKER_ATTACHED</pre>
 <li class="blockList">
 <h4>DATA_SHULKER_ATTACH_POS</h4>
 <pre>public static final&nbsp;int DATA_SHULKER_ATTACH_POS</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_SHULKER_ATTACH_POS">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_TRADING_PLAYER_EID">
@@ -3432,10 +3167,6 @@ public static final&nbsp;int DATA_SHULKER_ATTACHED</pre>
 <li class="blockList">
 <h4>DATA_TRADING_PLAYER_EID</h4>
 <pre>public static final&nbsp;int DATA_TRADING_PLAYER_EID</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_TRADING_PLAYER_EID">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_TRADING_CAREER">
@@ -3446,10 +3177,6 @@ public static final&nbsp;int DATA_SHULKER_ATTACHED</pre>
 <h4>DATA_TRADING_CAREER</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_TRADING_CAREER</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_TRADING_CAREER">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_HAS_COMMAND_BLOCK">
@@ -3460,30 +3187,6 @@ public static final&nbsp;int DATA_TRADING_CAREER</pre>
 <h4>DATA_HAS_COMMAND_BLOCK</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_HAS_COMMAND_BLOCK</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_HAS_COMMAND_BLOCK">Constant Field Values</a></dd>
-</dl>
-</li>
-</ul>
-<a name="DATA_COMMAND_BLOCK_ENABLED">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>DATA_COMMAND_BLOCK_ENABLED</h4>
-<pre><a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
- <a href="../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="NukkitX added this constant with a different name",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="DATA_HAS_COMMAND_BLOCK",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.3.0.0-PN",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#toBeRemovedAt--">toBeRemovedAt</a>="1.4.0.0-PN")
-public static final&nbsp;int DATA_COMMAND_BLOCK_ENABLED</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_COMMAND_BLOCK_ENABLED">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_COMMAND_BLOCK_COMMAND">
@@ -3494,10 +3197,6 @@ public static final&nbsp;int DATA_COMMAND_BLOCK_ENABLED</pre>
 <h4>DATA_COMMAND_BLOCK_COMMAND</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_COMMAND_BLOCK_COMMAND</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_COMMAND_BLOCK_COMMAND">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_COMMAND_BLOCK_LAST_OUTPUT">
@@ -3507,10 +3206,6 @@ public static final&nbsp;int DATA_COMMAND_BLOCK_COMMAND</pre>
 <li class="blockList">
 <h4>DATA_COMMAND_BLOCK_LAST_OUTPUT</h4>
 <pre>public static final&nbsp;int DATA_COMMAND_BLOCK_LAST_OUTPUT</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_COMMAND_BLOCK_LAST_OUTPUT">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_COMMAND_BLOCK_TRACK_OUTPUT">
@@ -3520,10 +3215,6 @@ public static final&nbsp;int DATA_COMMAND_BLOCK_COMMAND</pre>
 <li class="blockList">
 <h4>DATA_COMMAND_BLOCK_TRACK_OUTPUT</h4>
 <pre>public static final&nbsp;int DATA_COMMAND_BLOCK_TRACK_OUTPUT</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_COMMAND_BLOCK_TRACK_OUTPUT">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_CONTROLLING_RIDER_SEAT_NUMBER">
@@ -3533,10 +3224,6 @@ public static final&nbsp;int DATA_COMMAND_BLOCK_COMMAND</pre>
 <li class="blockList">
 <h4>DATA_CONTROLLING_RIDER_SEAT_NUMBER</h4>
 <pre>public static final&nbsp;int DATA_CONTROLLING_RIDER_SEAT_NUMBER</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_CONTROLLING_RIDER_SEAT_NUMBER">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_STRENGTH">
@@ -3546,10 +3233,6 @@ public static final&nbsp;int DATA_COMMAND_BLOCK_COMMAND</pre>
 <li class="blockList">
 <h4>DATA_STRENGTH</h4>
 <pre>public static final&nbsp;int DATA_STRENGTH</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_STRENGTH">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_MAX_STRENGTH">
@@ -3559,10 +3242,6 @@ public static final&nbsp;int DATA_COMMAND_BLOCK_COMMAND</pre>
 <li class="blockList">
 <h4>DATA_MAX_STRENGTH</h4>
 <pre>public static final&nbsp;int DATA_MAX_STRENGTH</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_MAX_STRENGTH">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_SPELL_CASTING_COLOR">
@@ -3573,30 +3252,6 @@ public static final&nbsp;int DATA_COMMAND_BLOCK_COMMAND</pre>
 <h4>DATA_SPELL_CASTING_COLOR</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_SPELL_CASTING_COLOR</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_SPELL_CASTING_COLOR">Constant Field Values</a></dd>
-</dl>
-</li>
-</ul>
-<a name="DATA_EVOKER_SPELL_COLOR">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>DATA_EVOKER_SPELL_COLOR</h4>
-<pre><a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>(<a href="../../../cn/nukkit/api/PowerNukkitOnly.html#value--">value</a>="Backward compatibility")
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
- <a href="../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="NukkitX added this constant with a different name",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="DATA_SPELL_CASTING_COLOR",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.3.0.0-PN",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#toBeRemovedAt--">toBeRemovedAt</a>="1.4.0.0-PN")
-public static final&nbsp;int DATA_EVOKER_SPELL_COLOR</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_EVOKER_SPELL_COLOR">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_LIMITED_LIFE">
@@ -3606,10 +3261,6 @@ public static final&nbsp;int DATA_EVOKER_SPELL_COLOR</pre>
 <li class="blockList">
 <h4>DATA_LIMITED_LIFE</h4>
 <pre>public static final&nbsp;int DATA_LIMITED_LIFE</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_LIMITED_LIFE">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_ARMOR_STAND_POSE_INDEX">
@@ -3619,10 +3270,6 @@ public static final&nbsp;int DATA_EVOKER_SPELL_COLOR</pre>
 <li class="blockList">
 <h4>DATA_ARMOR_STAND_POSE_INDEX</h4>
 <pre>public static final&nbsp;int DATA_ARMOR_STAND_POSE_INDEX</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_ARMOR_STAND_POSE_INDEX">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_ENDER_CRYSTAL_TIME_OFFSET">
@@ -3632,10 +3279,6 @@ public static final&nbsp;int DATA_EVOKER_SPELL_COLOR</pre>
 <li class="blockList">
 <h4>DATA_ENDER_CRYSTAL_TIME_OFFSET</h4>
 <pre>public static final&nbsp;int DATA_ENDER_CRYSTAL_TIME_OFFSET</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_ENDER_CRYSTAL_TIME_OFFSET">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_ALWAYS_SHOW_NAMETAG">
@@ -3645,10 +3288,6 @@ public static final&nbsp;int DATA_EVOKER_SPELL_COLOR</pre>
 <li class="blockList">
 <h4>DATA_ALWAYS_SHOW_NAMETAG</h4>
 <pre>public static final&nbsp;int DATA_ALWAYS_SHOW_NAMETAG</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_ALWAYS_SHOW_NAMETAG">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_COLOR_2">
@@ -3658,10 +3297,6 @@ public static final&nbsp;int DATA_EVOKER_SPELL_COLOR</pre>
 <li class="blockList">
 <h4>DATA_COLOR_2</h4>
 <pre>public static final&nbsp;int DATA_COLOR_2</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_COLOR_2">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_NAME_AUTHOR">
@@ -3672,10 +3307,6 @@ public static final&nbsp;int DATA_EVOKER_SPELL_COLOR</pre>
 <h4>DATA_NAME_AUTHOR</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_NAME_AUTHOR</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_NAME_AUTHOR">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_SCORE_TAG">
@@ -3685,10 +3316,6 @@ public static final&nbsp;int DATA_NAME_AUTHOR</pre>
 <li class="blockList">
 <h4>DATA_SCORE_TAG</h4>
 <pre>public static final&nbsp;int DATA_SCORE_TAG</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_SCORE_TAG">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_BALLOON_ATTACHED_ENTITY">
@@ -3698,10 +3325,6 @@ public static final&nbsp;int DATA_NAME_AUTHOR</pre>
 <li class="blockList">
 <h4>DATA_BALLOON_ATTACHED_ENTITY</h4>
 <pre>public static final&nbsp;int DATA_BALLOON_ATTACHED_ENTITY</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_BALLOON_ATTACHED_ENTITY">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_PUFFERFISH_SIZE">
@@ -3711,10 +3334,6 @@ public static final&nbsp;int DATA_NAME_AUTHOR</pre>
 <li class="blockList">
 <h4>DATA_PUFFERFISH_SIZE</h4>
 <pre>public static final&nbsp;int DATA_PUFFERFISH_SIZE</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_PUFFERFISH_SIZE">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_BUBBLE_TIME">
@@ -3725,49 +3344,6 @@ public static final&nbsp;int DATA_NAME_AUTHOR</pre>
 <h4>DATA_BUBBLE_TIME</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_BUBBLE_TIME</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_BUBBLE_TIME">Constant Field Values</a></dd>
-</dl>
-</li>
-</ul>
-<a name="DATA_BOAT_BUBBLE_TIME">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>DATA_BOAT_BUBBLE_TIME</h4>
-<pre><a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
- <a href="../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="NukkitX maps this constant with a different name",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="DATA_BUBBLE_TIME",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.2.0.0-PN",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#toBeRemovedAt--">toBeRemovedAt</a>="1.4.0.0-PN")
-public static final&nbsp;int DATA_BOAT_BUBBLE_TIME</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_BOAT_BUBBLE_TIME">Constant Field Values</a></dd>
-</dl>
-</li>
-</ul>
-<a name="DATA_AGENT_ID">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>DATA_AGENT_ID</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
- <a href="../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="NukkitX maps this constant with a different name",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="DATA_AGENT",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.2.0.0-PN",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#toBeRemovedAt--">toBeRemovedAt</a>="1.4.0.0-PN")
-public static final&nbsp;int DATA_AGENT_ID</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_AGENT_ID">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_AGENT">
@@ -3778,10 +3354,6 @@ public static final&nbsp;int DATA_AGENT_ID</pre>
 <h4>DATA_AGENT</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_AGENT</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_AGENT">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_SITTING_AMOUNT">
@@ -3792,10 +3364,6 @@ public static final&nbsp;int DATA_AGENT</pre>
 <h4>DATA_SITTING_AMOUNT</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_SITTING_AMOUNT</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_SITTING_AMOUNT">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_SITTING_AMOUNT_PREVIOUS">
@@ -3806,10 +3374,6 @@ public static final&nbsp;int DATA_SITTING_AMOUNT</pre>
 <h4>DATA_SITTING_AMOUNT_PREVIOUS</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_SITTING_AMOUNT_PREVIOUS</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_SITTING_AMOUNT_PREVIOUS">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_EATING_COUNTER">
@@ -3820,10 +3384,6 @@ public static final&nbsp;int DATA_SITTING_AMOUNT_PREVIOUS</pre>
 <h4>DATA_EATING_COUNTER</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_EATING_COUNTER</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_EATING_COUNTER">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAGS_EXTENDED">
@@ -3833,10 +3393,6 @@ public static final&nbsp;int DATA_EATING_COUNTER</pre>
 <li class="blockList">
 <h4>DATA_FLAGS_EXTENDED</h4>
 <pre>public static final&nbsp;int DATA_FLAGS_EXTENDED</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAGS_EXTENDED">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_LAYING_AMOUNT">
@@ -3847,10 +3403,6 @@ public static final&nbsp;int DATA_EATING_COUNTER</pre>
 <h4>DATA_LAYING_AMOUNT</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_LAYING_AMOUNT</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_LAYING_AMOUNT">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_LAYING_AMOUNT_PREVIOUS">
@@ -3861,29 +3413,6 @@ public static final&nbsp;int DATA_LAYING_AMOUNT</pre>
 <h4>DATA_LAYING_AMOUNT_PREVIOUS</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_LAYING_AMOUNT_PREVIOUS</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_LAYING_AMOUNT_PREVIOUS">Constant Field Values</a></dd>
-</dl>
-</li>
-</ul>
-<a name="DATA_AREA_EFFECT_CLOUD_DURATION">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>DATA_AREA_EFFECT_CLOUD_DURATION</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
- <a href="../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="NukkitX maps this constant with a different name",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="DATA_DURATION",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.2.0.0-PN",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#toBeRemovedAt--">toBeRemovedAt</a>="1.4.0.0-PN")
-public static final&nbsp;int DATA_AREA_EFFECT_CLOUD_DURATION</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_AREA_EFFECT_CLOUD_DURATION">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_DURATION">
@@ -3894,29 +3423,6 @@ public static final&nbsp;int DATA_AREA_EFFECT_CLOUD_DURATION</pre>
 <h4>DATA_DURATION</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_DURATION</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_DURATION">Constant Field Values</a></dd>
-</dl>
-</li>
-</ul>
-<a name="DATA_AREA_EFFECT_CLOUD_SPAWN_TIME">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>DATA_AREA_EFFECT_CLOUD_SPAWN_TIME</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
- <a href="../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="NukkitX maps this constant with a different name",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="DATA_SPAWN_TIME",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.2.0.0-PN",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#toBeRemovedAt--">toBeRemovedAt</a>="1.4.0.0-PN")
-public static final&nbsp;int DATA_AREA_EFFECT_CLOUD_SPAWN_TIME</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_AREA_EFFECT_CLOUD_SPAWN_TIME">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_SPAWN_TIME">
@@ -3927,29 +3433,6 @@ public static final&nbsp;int DATA_AREA_EFFECT_CLOUD_SPAWN_TIME</pre>
 <h4>DATA_SPAWN_TIME</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_SPAWN_TIME</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_SPAWN_TIME">Constant Field Values</a></dd>
-</dl>
-</li>
-</ul>
-<a name="DATA_AREA_EFFECT_CLOUD_RADIUS_PER_TICK">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>DATA_AREA_EFFECT_CLOUD_RADIUS_PER_TICK</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
- <a href="../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="NukkitX maps this constant with a different name",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="DATA_CHANGE_RATE",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.2.0.0-PN",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#toBeRemovedAt--">toBeRemovedAt</a>="1.4.0.0-PN")
-public static final&nbsp;int DATA_AREA_EFFECT_CLOUD_RADIUS_PER_TICK</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_AREA_EFFECT_CLOUD_RADIUS_PER_TICK">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_CHANGE_RATE">
@@ -3960,29 +3443,6 @@ public static final&nbsp;int DATA_AREA_EFFECT_CLOUD_RADIUS_PER_TICK</pre>
 <h4>DATA_CHANGE_RATE</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_CHANGE_RATE</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_CHANGE_RATE">Constant Field Values</a></dd>
-</dl>
-</li>
-</ul>
-<a name="DATA_AREA_EFFECT_CLOUD_RADIUS_CHANGE_ON_PICKUP">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>DATA_AREA_EFFECT_CLOUD_RADIUS_CHANGE_ON_PICKUP</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
- <a href="../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="NukkitX maps this constant with a different name",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="DATA_CHANGE_ON_PICK",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.2.0.0-PN",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#toBeRemovedAt--">toBeRemovedAt</a>="1.4.0.0-PN")
-public static final&nbsp;int DATA_AREA_EFFECT_CLOUD_RADIUS_CHANGE_ON_PICKUP</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_AREA_EFFECT_CLOUD_RADIUS_CHANGE_ON_PICKUP">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_CHANGE_ON_PICKUP">
@@ -3993,29 +3453,6 @@ public static final&nbsp;int DATA_AREA_EFFECT_CLOUD_RADIUS_CHANGE_ON_PICKUP</pre
 <h4>DATA_CHANGE_ON_PICKUP</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_CHANGE_ON_PICKUP</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_CHANGE_ON_PICKUP">Constant Field Values</a></dd>
-</dl>
-</li>
-</ul>
-<a name="DATA_AREA_EFFECT_CLOUD_PICKUP_COUNT">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>DATA_AREA_EFFECT_CLOUD_PICKUP_COUNT</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
- <a href="../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="NukkitX maps this constant with a different name",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="DATA_PICKUP_COUNT",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.2.0.0-PN",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#toBeRemovedAt--">toBeRemovedAt</a>="1.4.0.0-PN")
-public static final&nbsp;int DATA_AREA_EFFECT_CLOUD_PICKUP_COUNT</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_AREA_EFFECT_CLOUD_PICKUP_COUNT">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_PICKUP_COUNT">
@@ -4026,29 +3463,6 @@ public static final&nbsp;int DATA_AREA_EFFECT_CLOUD_PICKUP_COUNT</pre>
 <h4>DATA_PICKUP_COUNT</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_PICKUP_COUNT</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_PICKUP_COUNT">Constant Field Values</a></dd>
-</dl>
-</li>
-</ul>
-<a name="DATA_INTERACTIVE_TAG">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>DATA_INTERACTIVE_TAG</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
- <a href="../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="NukkitX maps this constant with a different name",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="DATA_INTERACT_TEXT",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.2.0.0-PN",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#toBeRemovedAt--">toBeRemovedAt</a>="1.4.0.0-PN")
-public static final&nbsp;int DATA_INTERACTIVE_TAG</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_INTERACTIVE_TAG">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_INTERACT_TEXT">
@@ -4059,10 +3473,6 @@ public static final&nbsp;int DATA_INTERACTIVE_TAG</pre>
 <h4>DATA_INTERACT_TEXT</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_INTERACT_TEXT</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_INTERACT_TEXT">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_TRADE_TIER">
@@ -4072,10 +3482,6 @@ public static final&nbsp;int DATA_INTERACT_TEXT</pre>
 <li class="blockList">
 <h4>DATA_TRADE_TIER</h4>
 <pre>public static final&nbsp;int DATA_TRADE_TIER</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_TRADE_TIER">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_MAX_TRADE_TIER">
@@ -4085,29 +3491,6 @@ public static final&nbsp;int DATA_INTERACT_TEXT</pre>
 <li class="blockList">
 <h4>DATA_MAX_TRADE_TIER</h4>
 <pre>public static final&nbsp;int DATA_MAX_TRADE_TIER</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_MAX_TRADE_TIER">Constant Field Values</a></dd>
-</dl>
-</li>
-</ul>
-<a name="DATA_TRADE_XP">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>DATA_TRADE_XP</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
- <a href="../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="NukkitX maps this constant with a different name",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="DATA_TRADE_EXPERIENCE",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.2.0.0-PN",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#toBeRemovedAt--">toBeRemovedAt</a>="1.4.0.0-PN")
-public static final&nbsp;int DATA_TRADE_XP</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_TRADE_XP">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_TRADE_EXPERIENCE">
@@ -4118,10 +3501,6 @@ public static final&nbsp;int DATA_TRADE_XP</pre>
 <h4>DATA_TRADE_EXPERIENCE</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_TRADE_EXPERIENCE</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_TRADE_EXPERIENCE">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_SKIN_ID">
@@ -4132,10 +3511,6 @@ public static final&nbsp;int DATA_TRADE_EXPERIENCE</pre>
 <h4>DATA_SKIN_ID</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.1.1.0-PN")
 public static final&nbsp;int DATA_SKIN_ID</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_SKIN_ID">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_SPAWNING_FRAMES">
@@ -4146,10 +3521,6 @@ public static final&nbsp;int DATA_SKIN_ID</pre>
 <h4>DATA_SPAWNING_FRAMES</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_SPAWNING_FRAMES</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_SPAWNING_FRAMES">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_COMMAND_BLOCK_TICK_DELAY">
@@ -4160,10 +3531,6 @@ public static final&nbsp;int DATA_SPAWNING_FRAMES</pre>
 <h4>DATA_COMMAND_BLOCK_TICK_DELAY</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_COMMAND_BLOCK_TICK_DELAY</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_COMMAND_BLOCK_TICK_DELAY">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_COMMAND_BLOCK_EXECUTE_ON_FIRST_TICK">
@@ -4174,10 +3541,6 @@ public static final&nbsp;int DATA_COMMAND_BLOCK_TICK_DELAY</pre>
 <h4>DATA_COMMAND_BLOCK_EXECUTE_ON_FIRST_TICK</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_COMMAND_BLOCK_EXECUTE_ON_FIRST_TICK</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_COMMAND_BLOCK_EXECUTE_ON_FIRST_TICK">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_AMBIENT_SOUND_INTERVAL">
@@ -4188,10 +3551,6 @@ public static final&nbsp;int DATA_COMMAND_BLOCK_EXECUTE_ON_FIRST_TICK</pre>
 <h4>DATA_AMBIENT_SOUND_INTERVAL</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_AMBIENT_SOUND_INTERVAL</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_AMBIENT_SOUND_INTERVAL">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_AMBIENT_SOUND_INTERVAL_RANGE">
@@ -4202,10 +3561,6 @@ public static final&nbsp;int DATA_AMBIENT_SOUND_INTERVAL</pre>
 <h4>DATA_AMBIENT_SOUND_INTERVAL_RANGE</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.3.0.0-PN")
 public static final&nbsp;int DATA_AMBIENT_SOUND_INTERVAL_RANGE</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_AMBIENT_SOUND_INTERVAL_RANGE">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_AMBIENT_SOUND_EVENT_NAME">
@@ -4216,10 +3571,6 @@ public static final&nbsp;int DATA_AMBIENT_SOUND_INTERVAL_RANGE</pre>
 <h4>DATA_AMBIENT_SOUND_EVENT_NAME</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_AMBIENT_SOUND_EVENT_NAME</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_AMBIENT_SOUND_EVENT_NAME">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FALL_DAMAGE_MULTIPLIER">
@@ -4230,10 +3581,6 @@ public static final&nbsp;int DATA_AMBIENT_SOUND_EVENT_NAME</pre>
 <h4>DATA_FALL_DAMAGE_MULTIPLIER</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_FALL_DAMAGE_MULTIPLIER</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FALL_DAMAGE_MULTIPLIER">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_NAME_RAW_TEXT">
@@ -4244,10 +3591,6 @@ public static final&nbsp;int DATA_FALL_DAMAGE_MULTIPLIER</pre>
 <h4>DATA_NAME_RAW_TEXT</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_NAME_RAW_TEXT</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_NAME_RAW_TEXT">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_CAN_RIDE_TARGET">
@@ -4258,10 +3601,6 @@ public static final&nbsp;int DATA_NAME_RAW_TEXT</pre>
 <h4>DATA_CAN_RIDE_TARGET</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_CAN_RIDE_TARGET</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_CAN_RIDE_TARGET">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_LOW_TIER_CURED_DISCOUNT">
@@ -4272,10 +3611,6 @@ public static final&nbsp;int DATA_CAN_RIDE_TARGET</pre>
 <h4>DATA_LOW_TIER_CURED_DISCOUNT</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.3.0.0-PN")
 public static final&nbsp;int DATA_LOW_TIER_CURED_DISCOUNT</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_LOW_TIER_CURED_DISCOUNT">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_HIGH_TIER_CURED_DISCOUNT">
@@ -4286,10 +3621,6 @@ public static final&nbsp;int DATA_LOW_TIER_CURED_DISCOUNT</pre>
 <h4>DATA_HIGH_TIER_CURED_DISCOUNT</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.3.0.0-PN")
 public static final&nbsp;int DATA_HIGH_TIER_CURED_DISCOUNT</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_HIGH_TIER_CURED_DISCOUNT">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_NEARBY_CURED_DISCOUNT">
@@ -4300,10 +3631,6 @@ public static final&nbsp;int DATA_HIGH_TIER_CURED_DISCOUNT</pre>
 <h4>DATA_NEARBY_CURED_DISCOUNT</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.3.0.0-PN")
 public static final&nbsp;int DATA_NEARBY_CURED_DISCOUNT</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_NEARBY_CURED_DISCOUNT">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_NEARBY_CURED_DISCOUNT_TIMESTAMP">
@@ -4314,10 +3641,6 @@ public static final&nbsp;int DATA_NEARBY_CURED_DISCOUNT</pre>
 <h4>DATA_NEARBY_CURED_DISCOUNT_TIMESTAMP</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.3.0.0-PN")
 public static final&nbsp;int DATA_NEARBY_CURED_DISCOUNT_TIMESTAMP</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_NEARBY_CURED_DISCOUNT_TIMESTAMP">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_HITBOX">
@@ -4328,10 +3651,6 @@ public static final&nbsp;int DATA_NEARBY_CURED_DISCOUNT_TIMESTAMP</pre>
 <h4>DATA_HITBOX</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.3.0.0-PN")
 public static final&nbsp;int DATA_HITBOX</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_HITBOX">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_IS_BUOYANT">
@@ -4342,9 +3661,19 @@ public static final&nbsp;int DATA_HITBOX</pre>
 <h4>DATA_IS_BUOYANT</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.3.0.0-PN")
 public static final&nbsp;int DATA_IS_BUOYANT</pre>
+</li>
+</ul>
+<a name="DATA_FREEZING_EFFECT_STRENGTH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DATA_FREEZING_EFFECT_STRENGTH</h4>
+<pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+public static final&nbsp;int DATA_FREEZING_EFFECT_STRENGTH</pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_IS_BUOYANT">Constant Field Values</a></dd>
+<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FREEZING_EFFECT_STRENGTH">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
@@ -4356,9 +3685,19 @@ public static final&nbsp;int DATA_IS_BUOYANT</pre>
 <h4>DATA_BUOYANCY_DATA</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.3.0.0-PN")
 public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
+</li>
+</ul>
+<a name="DATA_GOAT_HORN_COUNT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DATA_GOAT_HORN_COUNT</h4>
+<pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+public static final&nbsp;int DATA_GOAT_HORN_COUNT</pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_BUOYANCY_DATA">Constant Field Values</a></dd>
+<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_GOAT_HORN_COUNT">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
@@ -4369,10 +3708,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_ONFIRE</h4>
 <pre>public static final&nbsp;int DATA_FLAG_ONFIRE</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_ONFIRE">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_SNEAKING">
@@ -4382,10 +3717,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_SNEAKING</h4>
 <pre>public static final&nbsp;int DATA_FLAG_SNEAKING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_SNEAKING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_RIDING">
@@ -4395,10 +3726,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_RIDING</h4>
 <pre>public static final&nbsp;int DATA_FLAG_RIDING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_RIDING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_SPRINTING">
@@ -4408,10 +3735,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_SPRINTING</h4>
 <pre>public static final&nbsp;int DATA_FLAG_SPRINTING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_SPRINTING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_ACTION">
@@ -4421,10 +3744,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_ACTION</h4>
 <pre>public static final&nbsp;int DATA_FLAG_ACTION</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_ACTION">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_INVISIBLE">
@@ -4434,10 +3753,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_INVISIBLE</h4>
 <pre>public static final&nbsp;int DATA_FLAG_INVISIBLE</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_INVISIBLE">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_TEMPTED">
@@ -4447,10 +3762,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_TEMPTED</h4>
 <pre>public static final&nbsp;int DATA_FLAG_TEMPTED</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_TEMPTED">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_INLOVE">
@@ -4460,10 +3771,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_INLOVE</h4>
 <pre>public static final&nbsp;int DATA_FLAG_INLOVE</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_INLOVE">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_SADDLED">
@@ -4473,10 +3780,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_SADDLED</h4>
 <pre>public static final&nbsp;int DATA_FLAG_SADDLED</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_SADDLED">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_POWERED">
@@ -4486,10 +3789,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_POWERED</h4>
 <pre>public static final&nbsp;int DATA_FLAG_POWERED</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_POWERED">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_IGNITED">
@@ -4499,10 +3798,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_IGNITED</h4>
 <pre>public static final&nbsp;int DATA_FLAG_IGNITED</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_IGNITED">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_BABY">
@@ -4512,10 +3807,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_BABY</h4>
 <pre>public static final&nbsp;int DATA_FLAG_BABY</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_BABY">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_CONVERTING">
@@ -4525,10 +3816,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_CONVERTING</h4>
 <pre>public static final&nbsp;int DATA_FLAG_CONVERTING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_CONVERTING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_CRITICAL">
@@ -4538,10 +3825,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_CRITICAL</h4>
 <pre>public static final&nbsp;int DATA_FLAG_CRITICAL</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_CRITICAL">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_CAN_SHOW_NAMETAG">
@@ -4551,10 +3834,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_CAN_SHOW_NAMETAG</h4>
 <pre>public static final&nbsp;int DATA_FLAG_CAN_SHOW_NAMETAG</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_CAN_SHOW_NAMETAG">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_ALWAYS_SHOW_NAMETAG">
@@ -4564,10 +3843,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_ALWAYS_SHOW_NAMETAG</h4>
 <pre>public static final&nbsp;int DATA_FLAG_ALWAYS_SHOW_NAMETAG</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_ALWAYS_SHOW_NAMETAG">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_IMMOBILE">
@@ -4577,10 +3852,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_IMMOBILE</h4>
 <pre>public static final&nbsp;int DATA_FLAG_IMMOBILE</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_IMMOBILE">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_NO_AI">
@@ -4590,10 +3861,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_NO_AI</h4>
 <pre>public static final&nbsp;int DATA_FLAG_NO_AI</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_NO_AI">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_SILENT">
@@ -4603,10 +3870,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_SILENT</h4>
 <pre>public static final&nbsp;int DATA_FLAG_SILENT</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_SILENT">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_WALLCLIMBING">
@@ -4616,10 +3879,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_WALLCLIMBING</h4>
 <pre>public static final&nbsp;int DATA_FLAG_WALLCLIMBING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_WALLCLIMBING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_CAN_CLIMB">
@@ -4629,10 +3888,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_CAN_CLIMB</h4>
 <pre>public static final&nbsp;int DATA_FLAG_CAN_CLIMB</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_CAN_CLIMB">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_SWIMMER">
@@ -4642,10 +3897,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_SWIMMER</h4>
 <pre>public static final&nbsp;int DATA_FLAG_SWIMMER</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_SWIMMER">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_CAN_FLY">
@@ -4655,10 +3906,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_CAN_FLY</h4>
 <pre>public static final&nbsp;int DATA_FLAG_CAN_FLY</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_CAN_FLY">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_WALKER">
@@ -4668,10 +3915,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_WALKER</h4>
 <pre>public static final&nbsp;int DATA_FLAG_WALKER</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_WALKER">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_RESTING">
@@ -4681,10 +3924,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_RESTING</h4>
 <pre>public static final&nbsp;int DATA_FLAG_RESTING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_RESTING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_SITTING">
@@ -4694,10 +3933,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_SITTING</h4>
 <pre>public static final&nbsp;int DATA_FLAG_SITTING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_SITTING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_ANGRY">
@@ -4707,10 +3942,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_ANGRY</h4>
 <pre>public static final&nbsp;int DATA_FLAG_ANGRY</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_ANGRY">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_INTERESTED">
@@ -4720,10 +3951,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_INTERESTED</h4>
 <pre>public static final&nbsp;int DATA_FLAG_INTERESTED</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_INTERESTED">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_CHARGED">
@@ -4733,10 +3960,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_CHARGED</h4>
 <pre>public static final&nbsp;int DATA_FLAG_CHARGED</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_CHARGED">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_TAMED">
@@ -4746,10 +3969,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_TAMED</h4>
 <pre>public static final&nbsp;int DATA_FLAG_TAMED</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_TAMED">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_ORPHANED">
@@ -4759,10 +3978,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_ORPHANED</h4>
 <pre>public static final&nbsp;int DATA_FLAG_ORPHANED</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_ORPHANED">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_LEASHED">
@@ -4772,10 +3987,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_LEASHED</h4>
 <pre>public static final&nbsp;int DATA_FLAG_LEASHED</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_LEASHED">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_SHEARED">
@@ -4785,10 +3996,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_SHEARED</h4>
 <pre>public static final&nbsp;int DATA_FLAG_SHEARED</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_SHEARED">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_GLIDING">
@@ -4798,10 +4005,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_GLIDING</h4>
 <pre>public static final&nbsp;int DATA_FLAG_GLIDING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_GLIDING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_ELDER">
@@ -4811,10 +4014,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_ELDER</h4>
 <pre>public static final&nbsp;int DATA_FLAG_ELDER</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_ELDER">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_MOVING">
@@ -4824,10 +4023,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_MOVING</h4>
 <pre>public static final&nbsp;int DATA_FLAG_MOVING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_MOVING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_BREATHING">
@@ -4837,10 +4032,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_BREATHING</h4>
 <pre>public static final&nbsp;int DATA_FLAG_BREATHING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_BREATHING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_CHESTED">
@@ -4850,10 +4041,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_CHESTED</h4>
 <pre>public static final&nbsp;int DATA_FLAG_CHESTED</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_CHESTED">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_STACKABLE">
@@ -4863,10 +4050,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_STACKABLE</h4>
 <pre>public static final&nbsp;int DATA_FLAG_STACKABLE</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_STACKABLE">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_SHOWBASE">
@@ -4876,10 +4059,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_SHOWBASE</h4>
 <pre>public static final&nbsp;int DATA_FLAG_SHOWBASE</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_SHOWBASE">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_REARING">
@@ -4889,10 +4068,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_REARING</h4>
 <pre>public static final&nbsp;int DATA_FLAG_REARING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_REARING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_VIBRATING">
@@ -4902,10 +4077,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_VIBRATING</h4>
 <pre>public static final&nbsp;int DATA_FLAG_VIBRATING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_VIBRATING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_IDLING">
@@ -4915,10 +4086,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_IDLING</h4>
 <pre>public static final&nbsp;int DATA_FLAG_IDLING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_IDLING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_EVOKER_SPELL">
@@ -4928,10 +4095,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_EVOKER_SPELL</h4>
 <pre>public static final&nbsp;int DATA_FLAG_EVOKER_SPELL</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_EVOKER_SPELL">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_CHARGE_ATTACK">
@@ -4941,10 +4104,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_CHARGE_ATTACK</h4>
 <pre>public static final&nbsp;int DATA_FLAG_CHARGE_ATTACK</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_CHARGE_ATTACK">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_WASD_CONTROLLED">
@@ -4954,10 +4113,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_WASD_CONTROLLED</h4>
 <pre>public static final&nbsp;int DATA_FLAG_WASD_CONTROLLED</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_WASD_CONTROLLED">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_CAN_POWER_JUMP">
@@ -4967,10 +4122,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_CAN_POWER_JUMP</h4>
 <pre>public static final&nbsp;int DATA_FLAG_CAN_POWER_JUMP</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_CAN_POWER_JUMP">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_LINGER">
@@ -4980,10 +4131,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_LINGER</h4>
 <pre>public static final&nbsp;int DATA_FLAG_LINGER</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_LINGER">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_HAS_COLLISION">
@@ -4993,10 +4140,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_HAS_COLLISION</h4>
 <pre>public static final&nbsp;int DATA_FLAG_HAS_COLLISION</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_HAS_COLLISION">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_GRAVITY">
@@ -5006,10 +4149,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_GRAVITY</h4>
 <pre>public static final&nbsp;int DATA_FLAG_GRAVITY</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_GRAVITY">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_FIRE_IMMUNE">
@@ -5019,10 +4158,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_FIRE_IMMUNE</h4>
 <pre>public static final&nbsp;int DATA_FLAG_FIRE_IMMUNE</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_FIRE_IMMUNE">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_DANCING">
@@ -5032,10 +4167,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_DANCING</h4>
 <pre>public static final&nbsp;int DATA_FLAG_DANCING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_DANCING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_ENCHANTED">
@@ -5045,10 +4176,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_ENCHANTED</h4>
 <pre>public static final&nbsp;int DATA_FLAG_ENCHANTED</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_ENCHANTED">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_SHOW_TRIDENT_ROPE">
@@ -5058,10 +4185,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_SHOW_TRIDENT_ROPE</h4>
 <pre>public static final&nbsp;int DATA_FLAG_SHOW_TRIDENT_ROPE</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_SHOW_TRIDENT_ROPE">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_CONTAINER_PRIVATE">
@@ -5071,10 +4194,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <li class="blockList">
 <h4>DATA_FLAG_CONTAINER_PRIVATE</h4>
 <pre>public static final&nbsp;int DATA_FLAG_CONTAINER_PRIVATE</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_CONTAINER_PRIVATE">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_IS_TRANSFORMING">
@@ -5085,10 +4204,6 @@ public static final&nbsp;int DATA_BUOYANCY_DATA</pre>
 <h4>DATA_FLAG_IS_TRANSFORMING</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_FLAG_IS_TRANSFORMING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_IS_TRANSFORMING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_SPIN_ATTACK">
@@ -5098,10 +4213,6 @@ public static final&nbsp;int DATA_FLAG_IS_TRANSFORMING</pre>
 <li class="blockList">
 <h4>DATA_FLAG_SPIN_ATTACK</h4>
 <pre>public static final&nbsp;int DATA_FLAG_SPIN_ATTACK</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_SPIN_ATTACK">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_SWIMMING">
@@ -5111,10 +4222,6 @@ public static final&nbsp;int DATA_FLAG_IS_TRANSFORMING</pre>
 <li class="blockList">
 <h4>DATA_FLAG_SWIMMING</h4>
 <pre>public static final&nbsp;int DATA_FLAG_SWIMMING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_SWIMMING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_BRIBED">
@@ -5124,10 +4231,6 @@ public static final&nbsp;int DATA_FLAG_IS_TRANSFORMING</pre>
 <li class="blockList">
 <h4>DATA_FLAG_BRIBED</h4>
 <pre>public static final&nbsp;int DATA_FLAG_BRIBED</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_BRIBED">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_PREGNANT">
@@ -5137,10 +4240,6 @@ public static final&nbsp;int DATA_FLAG_IS_TRANSFORMING</pre>
 <li class="blockList">
 <h4>DATA_FLAG_PREGNANT</h4>
 <pre>public static final&nbsp;int DATA_FLAG_PREGNANT</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_PREGNANT">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_LAYING_EGG">
@@ -5150,29 +4249,6 @@ public static final&nbsp;int DATA_FLAG_IS_TRANSFORMING</pre>
 <li class="blockList">
 <h4>DATA_FLAG_LAYING_EGG</h4>
 <pre>public static final&nbsp;int DATA_FLAG_LAYING_EGG</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_LAYING_EGG">Constant Field Values</a></dd>
-</dl>
-</li>
-</ul>
-<a name="DATA_FLAG_RIDER_CAN_PICKUP">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>DATA_FLAG_RIDER_CAN_PICKUP</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
- <a href="../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="NukkitX maps this constant with a different name",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="DATA_FLAG_RIDER_CAN_PICK",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.2.0.0-PN",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#toBeRemovedAt--">toBeRemovedAt</a>="1.4.0.0-PN")
-public static final&nbsp;int DATA_FLAG_RIDER_CAN_PICKUP</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_RIDER_CAN_PICKUP">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_RIDER_CAN_PICK">
@@ -5183,10 +4259,6 @@ public static final&nbsp;int DATA_FLAG_RIDER_CAN_PICKUP</pre>
 <h4>DATA_FLAG_RIDER_CAN_PICK</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_FLAG_RIDER_CAN_PICK</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_RIDER_CAN_PICK">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_TRANSITION_SITTING">
@@ -5196,18 +4268,8 @@ public static final&nbsp;int DATA_FLAG_RIDER_CAN_PICK</pre>
 <li class="blockList">
 <h4>DATA_FLAG_TRANSITION_SITTING</h4>
 <pre><a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
- <a href="../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="Unsure if it\'s a typo or not, use with care",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.2.0.0-PN",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="DATA_FLAG_TRANSITION_SETTING",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#toBeRemovedAt--">toBeRemovedAt</a>="1.4.0.0-PN")
+ <a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_FLAG_TRANSITION_SITTING</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">This is not available in NukkitX yet, use with care.</span></div>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_TRANSITION_SETTING"><code>DATA_FLAG_TRANSITION_SETTING</code></a>, 
-<a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_TRANSITION_SITTING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_TRANSITION_SETTING">
@@ -5217,17 +4279,15 @@ public static final&nbsp;int DATA_FLAG_TRANSITION_SITTING</pre>
 <li class="blockList">
 <h4>DATA_FLAG_TRANSITION_SETTING</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
- <a href="../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="Unsure if it\'s a typo or not, use with care",
+ <a href="../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="This is from NukkitX but it has a typo which we can\'t remove unless NukkitX removes from their side.",
                     <a href="../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.2.0.0-PN",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="DATA_FLAG_TRANSITION_SITTING",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#toBeRemovedAt--">toBeRemovedAt</a>="1.4.0.0-PN")
+                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="DATA_FLAG_TRANSITION_SITTING")
  <a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_FLAG_TRANSITION_SETTING</pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">This is from NukkitX but it has a typo which we can't remove unless NukkitX removes from their side.</span></div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_TRANSITION_SITTING"><code>DATA_FLAG_TRANSITION_SITTING</code></a>, 
-<a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_TRANSITION_SETTING">Constant Field Values</a></dd>
+<dd><a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_TRANSITION_SITTING"><code>DATA_FLAG_TRANSITION_SITTING</code></a></dd>
 </dl>
 </li>
 </ul>
@@ -5238,10 +4298,6 @@ public static final&nbsp;int DATA_FLAG_TRANSITION_SETTING</pre>
 <li class="blockList">
 <h4>DATA_FLAG_EATING</h4>
 <pre>public static final&nbsp;int DATA_FLAG_EATING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_EATING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_LAYING_DOWN">
@@ -5251,10 +4307,6 @@ public static final&nbsp;int DATA_FLAG_TRANSITION_SETTING</pre>
 <li class="blockList">
 <h4>DATA_FLAG_LAYING_DOWN</h4>
 <pre>public static final&nbsp;int DATA_FLAG_LAYING_DOWN</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_LAYING_DOWN">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_SNEEZING">
@@ -5264,10 +4316,6 @@ public static final&nbsp;int DATA_FLAG_TRANSITION_SETTING</pre>
 <li class="blockList">
 <h4>DATA_FLAG_SNEEZING</h4>
 <pre>public static final&nbsp;int DATA_FLAG_SNEEZING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_SNEEZING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_TRUSTING">
@@ -5277,10 +4325,6 @@ public static final&nbsp;int DATA_FLAG_TRANSITION_SETTING</pre>
 <li class="blockList">
 <h4>DATA_FLAG_TRUSTING</h4>
 <pre>public static final&nbsp;int DATA_FLAG_TRUSTING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_TRUSTING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_ROLLING">
@@ -5290,10 +4334,6 @@ public static final&nbsp;int DATA_FLAG_TRANSITION_SETTING</pre>
 <li class="blockList">
 <h4>DATA_FLAG_ROLLING</h4>
 <pre>public static final&nbsp;int DATA_FLAG_ROLLING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_ROLLING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_SCARED">
@@ -5303,10 +4343,6 @@ public static final&nbsp;int DATA_FLAG_TRANSITION_SETTING</pre>
 <li class="blockList">
 <h4>DATA_FLAG_SCARED</h4>
 <pre>public static final&nbsp;int DATA_FLAG_SCARED</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_SCARED">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_IN_SCAFFOLDING">
@@ -5316,10 +4352,6 @@ public static final&nbsp;int DATA_FLAG_TRANSITION_SETTING</pre>
 <li class="blockList">
 <h4>DATA_FLAG_IN_SCAFFOLDING</h4>
 <pre>public static final&nbsp;int DATA_FLAG_IN_SCAFFOLDING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_IN_SCAFFOLDING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_OVER_SCAFFOLDING">
@@ -5329,10 +4361,6 @@ public static final&nbsp;int DATA_FLAG_TRANSITION_SETTING</pre>
 <li class="blockList">
 <h4>DATA_FLAG_OVER_SCAFFOLDING</h4>
 <pre>public static final&nbsp;int DATA_FLAG_OVER_SCAFFOLDING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_OVER_SCAFFOLDING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_FALL_THROUGH_SCAFFOLDING">
@@ -5342,10 +4370,6 @@ public static final&nbsp;int DATA_FLAG_TRANSITION_SETTING</pre>
 <li class="blockList">
 <h4>DATA_FLAG_FALL_THROUGH_SCAFFOLDING</h4>
 <pre>public static final&nbsp;int DATA_FLAG_FALL_THROUGH_SCAFFOLDING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_FALL_THROUGH_SCAFFOLDING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_BLOCKING">
@@ -5355,29 +4379,6 @@ public static final&nbsp;int DATA_FLAG_TRANSITION_SETTING</pre>
 <li class="blockList">
 <h4>DATA_FLAG_BLOCKING</h4>
 <pre>public static final&nbsp;int DATA_FLAG_BLOCKING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_BLOCKING">Constant Field Values</a></dd>
-</dl>
-</li>
-</ul>
-<a name="DATA_FLAG_DISABLED_BLOCKING">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>DATA_FLAG_DISABLED_BLOCKING</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
- <a href="../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="NukkitX maps this constant with a different name",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="DATA_FLAG_TRANSITION_BLOCKING",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.2.0.0-PN",
-                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#toBeRemovedAt--">toBeRemovedAt</a>="1.4.0.0-PN")
-public static final&nbsp;int DATA_FLAG_DISABLED_BLOCKING</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">Use <a href="../../../cn/nukkit/entity/Entity.html#DATA_FLAG_TRANSITION_BLOCKING"><code>DATA_FLAG_TRANSITION_BLOCKING</code></a> instead.</span></div>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_DISABLED_BLOCKING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_TRANSITION_BLOCKING">
@@ -5388,10 +4389,6 @@ public static final&nbsp;int DATA_FLAG_DISABLED_BLOCKING</pre>
 <h4>DATA_FLAG_TRANSITION_BLOCKING</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_FLAG_TRANSITION_BLOCKING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_TRANSITION_BLOCKING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_BLOCKED_USING_SHIELD">
@@ -5402,10 +4399,6 @@ public static final&nbsp;int DATA_FLAG_TRANSITION_BLOCKING</pre>
 <h4>DATA_FLAG_BLOCKED_USING_SHIELD</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_FLAG_BLOCKED_USING_SHIELD</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_BLOCKED_USING_SHIELD">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_BLOCKED_USING_DAMAGED_SHIELD">
@@ -5416,10 +4409,6 @@ public static final&nbsp;int DATA_FLAG_BLOCKED_USING_SHIELD</pre>
 <h4>DATA_FLAG_BLOCKED_USING_DAMAGED_SHIELD</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_FLAG_BLOCKED_USING_DAMAGED_SHIELD</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_BLOCKED_USING_DAMAGED_SHIELD">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_SLEEPING">
@@ -5430,10 +4419,6 @@ public static final&nbsp;int DATA_FLAG_BLOCKED_USING_DAMAGED_SHIELD</pre>
 <h4>DATA_FLAG_SLEEPING</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_FLAG_SLEEPING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_SLEEPING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_WANTS_TO_WAKE">
@@ -5444,10 +4429,6 @@ public static final&nbsp;int DATA_FLAG_SLEEPING</pre>
 <h4>DATA_FLAG_WANTS_TO_WAKE</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_FLAG_WANTS_TO_WAKE</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_WANTS_TO_WAKE">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_TRADE_INTEREST">
@@ -5458,10 +4439,6 @@ public static final&nbsp;int DATA_FLAG_WANTS_TO_WAKE</pre>
 <h4>DATA_FLAG_TRADE_INTEREST</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_FLAG_TRADE_INTEREST</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_TRADE_INTEREST">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_DOOR_BREAKER">
@@ -5472,10 +4449,6 @@ public static final&nbsp;int DATA_FLAG_TRADE_INTEREST</pre>
 <h4>DATA_FLAG_DOOR_BREAKER</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_FLAG_DOOR_BREAKER</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_DOOR_BREAKER">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_BREAKING_OBSTRUCTION">
@@ -5486,10 +4459,6 @@ public static final&nbsp;int DATA_FLAG_DOOR_BREAKER</pre>
 <h4>DATA_FLAG_BREAKING_OBSTRUCTION</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_FLAG_BREAKING_OBSTRUCTION</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_BREAKING_OBSTRUCTION">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_DOOR_OPENER">
@@ -5500,10 +4469,6 @@ public static final&nbsp;int DATA_FLAG_BREAKING_OBSTRUCTION</pre>
 <h4>DATA_FLAG_DOOR_OPENER</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_FLAG_DOOR_OPENER</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_DOOR_OPENER">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_IS_ILLAGER_CAPTAIN">
@@ -5514,10 +4479,6 @@ public static final&nbsp;int DATA_FLAG_DOOR_OPENER</pre>
 <h4>DATA_FLAG_IS_ILLAGER_CAPTAIN</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_FLAG_IS_ILLAGER_CAPTAIN</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_IS_ILLAGER_CAPTAIN">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_STUNNED">
@@ -5528,10 +4489,6 @@ public static final&nbsp;int DATA_FLAG_IS_ILLAGER_CAPTAIN</pre>
 <h4>DATA_FLAG_STUNNED</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_FLAG_STUNNED</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_STUNNED">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_ROARING">
@@ -5542,10 +4499,6 @@ public static final&nbsp;int DATA_FLAG_STUNNED</pre>
 <h4>DATA_FLAG_ROARING</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_FLAG_ROARING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_ROARING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_DELAYED_ATTACK">
@@ -5556,10 +4509,6 @@ public static final&nbsp;int DATA_FLAG_ROARING</pre>
 <h4>DATA_FLAG_DELAYED_ATTACK</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_FLAG_DELAYED_ATTACK</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_DELAYED_ATTACK">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_IS_AVOIDING_MOBS">
@@ -5570,10 +4519,6 @@ public static final&nbsp;int DATA_FLAG_DELAYED_ATTACK</pre>
 <h4>DATA_FLAG_IS_AVOIDING_MOBS</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_FLAG_IS_AVOIDING_MOBS</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_IS_AVOIDING_MOBS">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_IS_AVOIDING_BLOCKS">
@@ -5584,10 +4529,6 @@ public static final&nbsp;int DATA_FLAG_IS_AVOIDING_MOBS</pre>
 <h4>DATA_FLAG_IS_AVOIDING_BLOCKS</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.3.0.0-PN")
 public static final&nbsp;int DATA_FLAG_IS_AVOIDING_BLOCKS</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_IS_AVOIDING_BLOCKS">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_FACING_TARGET_TO_RANGE_ATTACK">
@@ -5598,10 +4539,6 @@ public static final&nbsp;int DATA_FLAG_IS_AVOIDING_BLOCKS</pre>
 <h4>DATA_FLAG_FACING_TARGET_TO_RANGE_ATTACK</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_FLAG_FACING_TARGET_TO_RANGE_ATTACK</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_FACING_TARGET_TO_RANGE_ATTACK">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_HIDDEN_WHEN_INVISIBLE">
@@ -5612,10 +4549,6 @@ public static final&nbsp;int DATA_FLAG_FACING_TARGET_TO_RANGE_ATTACK</pre>
 <h4>DATA_FLAG_HIDDEN_WHEN_INVISIBLE</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_FLAG_HIDDEN_WHEN_INVISIBLE</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_HIDDEN_WHEN_INVISIBLE">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_IS_IN_UI">
@@ -5626,10 +4559,6 @@ public static final&nbsp;int DATA_FLAG_HIDDEN_WHEN_INVISIBLE</pre>
 <h4>DATA_FLAG_IS_IN_UI</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_FLAG_IS_IN_UI</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_IS_IN_UI">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_STALKING">
@@ -5640,10 +4569,6 @@ public static final&nbsp;int DATA_FLAG_IS_IN_UI</pre>
 <h4>DATA_FLAG_STALKING</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_FLAG_STALKING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_STALKING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_EMOTING">
@@ -5654,10 +4579,6 @@ public static final&nbsp;int DATA_FLAG_STALKING</pre>
 <h4>DATA_FLAG_EMOTING</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_FLAG_EMOTING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_EMOTING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_CELEBRATING">
@@ -5668,10 +4589,6 @@ public static final&nbsp;int DATA_FLAG_EMOTING</pre>
 <h4>DATA_FLAG_CELEBRATING</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.2.0.0-PN")
 public static final&nbsp;int DATA_FLAG_CELEBRATING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_CELEBRATING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_ADMIRING">
@@ -5682,10 +4599,6 @@ public static final&nbsp;int DATA_FLAG_CELEBRATING</pre>
 <h4>DATA_FLAG_ADMIRING</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.3.0.0-PN")
 public static final&nbsp;int DATA_FLAG_ADMIRING</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_ADMIRING">Constant Field Values</a></dd>
-</dl>
 </li>
 </ul>
 <a name="DATA_FLAG_CELEBRATING_SPECIAL">
@@ -5696,10 +4609,16 @@ public static final&nbsp;int DATA_FLAG_ADMIRING</pre>
 <h4>DATA_FLAG_CELEBRATING_SPECIAL</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.3.0.0-PN")
 public static final&nbsp;int DATA_FLAG_CELEBRATING_SPECIAL</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.entity.Entity.DATA_FLAG_CELEBRATING_SPECIAL">Constant Field Values</a></dd>
-</dl>
+</li>
+</ul>
+<a name="DATA_FLAG_RAM_ATTACK">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DATA_FLAG_RAM_ATTACK</h4>
+<pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+public static final&nbsp;int DATA_FLAG_RAM_ATTACK</pre>
 </li>
 </ul>
 <a name="entityCount">

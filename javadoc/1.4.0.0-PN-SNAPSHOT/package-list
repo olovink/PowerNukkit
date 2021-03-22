@@ -44,6 +44,7 @@ cn.nukkit.inventory.transaction.data
 cn.nukkit.item
 cn.nukkit.item.enchantment
 cn.nukkit.item.enchantment.bow
+cn.nukkit.item.enchantment.crossbow
 cn.nukkit.item.enchantment.damage
 cn.nukkit.item.enchantment.loot
 cn.nukkit.item.enchantment.protection
