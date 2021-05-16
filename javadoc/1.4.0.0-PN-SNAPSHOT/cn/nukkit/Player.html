@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Player (PowerNukkit 1.4.0.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2021-03-24">
+<meta name="date" content="2021-05-16">
 <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../script.js"></script>
 </head>
@@ -1538,7 +1538,7 @@ implements <a href="../../cn/nukkit/command/CommandSender.html" title="interface
 </tr>
 <tr id="i187" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../cn/nukkit/Player.html#sendMovementSpeed-float-">sendMovementSpeed</a></span>(float&nbsp;movementSpeed)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../cn/nukkit/Player.html#sendMovementSpeed-float-">sendMovementSpeed</a></span>(float&nbsp;speed)</code>&nbsp;</td>
 </tr>
 <tr id="i188" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
@@ -4441,15 +4441,6 @@ public&nbsp;void&nbsp;sendSettings()</pre>
 </dl>
 </li>
 </ul>
-<a name="sendMovementSpeed-float-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>sendMovementSpeed</h4>
-<pre>public&nbsp;void&nbsp;sendMovementSpeed(float&nbsp;movementSpeed)</pre>
-</li>
-</ul>
 <a name="sendAttributes--">
 <!--   -->
 </a>
@@ -5205,6 +5196,15 @@ protected&nbsp;boolean&nbsp;isValidRespawnBlock(<a href="../../cn/nukkit/block/B
 <h4>setMovementSpeed</h4>
 <pre>public&nbsp;void&nbsp;setMovementSpeed(float&nbsp;speed,
                              boolean&nbsp;send)</pre>
+</li>
+</ul>
+<a name="sendMovementSpeed-float-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sendMovementSpeed</h4>
+<pre>public&nbsp;void&nbsp;sendMovementSpeed(float&nbsp;speed)</pre>
 </li>
 </ul>
 <a name="getKiller--">
