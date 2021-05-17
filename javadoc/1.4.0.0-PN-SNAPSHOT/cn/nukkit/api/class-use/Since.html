@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Uses of Class cn.nukkit.api.Since (PowerNukkit 1.4.0.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2021-05-16">
+<meta name="date" content="2021-05-17">
 <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../../script.js"></script>
 </head>
@@ -406,6 +406,14 @@
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../cn/nukkit/inventory/transaction/RepairItemTransaction.html" title="class in cn.nukkit.inventory.transaction">RepairItemTransaction</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Player.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/Player.html#repairItemTransaction">repairItemTransaction</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><span class="typeNameLabel">Player.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/Player.html#SMITHING_WINDOW_ID">SMITHING_WINDOW_ID</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../../cn/nukkit/inventory/transaction/SmithingTransaction.html" title="class in cn.nukkit.inventory.transaction">SmithingTransaction</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Player.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/Player.html#smithingTransaction">smithingTransaction</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></code></td>
@@ -6598,6 +6606,10 @@
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/inventory/RepairItemEvent.html" title="class in cn.nukkit.event.inventory">RepairItemEvent</a></span></code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/inventory/SmithingTableEvent.html" title="class in cn.nukkit.event.inventory">SmithingTableEvent</a></span></code>&nbsp;</td>
+</tr>
 </tbody>
 </table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -6612,52 +6624,68 @@
 <td class="colLast"><span class="typeNameLabel">RepairItemEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/inventory/RepairItemEvent.html#getCost--">getCost</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SmithingTableEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/inventory/SmithingTableEvent.html#getEquipmentItem--">getEquipmentItem</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">GrindstoneEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/inventory/GrindstoneEvent.html#getExperienceDropped--">getExperienceDropped</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
 <td class="colLast"><span class="typeNameLabel">GrindstoneEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/inventory/GrindstoneEvent.html#getFirstItem--">getFirstItem</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/event/HandlerList.html" title="class in cn.nukkit.event">HandlerList</a></code></td>
 <td class="colLast"><span class="typeNameLabel">RepairItemEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/inventory/RepairItemEvent.html#getHandlers--">getHandlers</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/event/HandlerList.html" title="class in cn.nukkit.event">HandlerList</a></code></td>
 <td class="colLast"><span class="typeNameLabel">InventoryPickupTridentEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/inventory/InventoryPickupTridentEvent.html#getHandlers--">getHandlers</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/event/HandlerList.html" title="class in cn.nukkit.event">HandlerList</a></code></td>
 <td class="colLast"><span class="typeNameLabel">PlayerTypingAnvilInventoryEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/inventory/PlayerTypingAnvilInventoryEvent.html#getHandlers--">getHandlers</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/event/HandlerList.html" title="class in cn.nukkit.event">HandlerList</a></code></td>
 <td class="colLast"><span class="typeNameLabel">GrindstoneEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/inventory/GrindstoneEvent.html#getHandlers--">getHandlers</a></span>()</code>&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../cn/nukkit/event/HandlerList.html" title="class in cn.nukkit.event">HandlerList</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SmithingTableEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/inventory/SmithingTableEvent.html#getHandlers--">getHandlers</a></span>()</code>&nbsp;</td>
+</tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SmithingTableEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/inventory/SmithingTableEvent.html#getIngredientItem--">getIngredientItem</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
 <td class="colLast"><span class="typeNameLabel">RepairItemEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/inventory/RepairItemEvent.html#getMaterialItem--">getMaterialItem</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
 <td class="colLast"><span class="typeNameLabel">RepairItemEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/inventory/RepairItemEvent.html#getNewItem--">getNewItem</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
 <td class="colLast"><span class="typeNameLabel">RepairItemEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/inventory/RepairItemEvent.html#getOldItem--">getOldItem</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a></code></td>
 <td class="colLast"><span class="typeNameLabel">RepairItemEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/inventory/RepairItemEvent.html#getPlayer--">getPlayer</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a></code></td>
 <td class="colLast"><span class="typeNameLabel">PlayerTypingAnvilInventoryEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/inventory/PlayerTypingAnvilInventoryEvent.html#getPlayer--">getPlayer</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a></code></td>
 <td class="colLast"><span class="typeNameLabel">GrindstoneEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/inventory/GrindstoneEvent.html#getPlayer--">getPlayer</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SmithingTableEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/inventory/SmithingTableEvent.html#getPlayer--">getPlayer</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
@@ -6669,21 +6697,25 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
-<td class="colLast"><span class="typeNameLabel">GrindstoneEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/inventory/GrindstoneEvent.html#getSecondItem--">getSecondItem</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">SmithingTableEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/inventory/SmithingTableEvent.html#getResultItem--">getResultItem</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
+<td class="colLast"><span class="typeNameLabel">GrindstoneEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/inventory/GrindstoneEvent.html#getSecondItem--">getSecondItem</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/entity/projectile/EntityThrownTrident.html" title="class in cn.nukkit.entity.projectile">EntityThrownTrident</a></code></td>
 <td class="colLast"><span class="typeNameLabel">InventoryPickupTridentEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/inventory/InventoryPickupTridentEvent.html#getTrident--">getTrident</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><span class="typeNameLabel">PlayerTypingAnvilInventoryEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/inventory/PlayerTypingAnvilInventoryEvent.html#getTypedName--">getTypedName</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">RepairItemEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/inventory/RepairItemEvent.html#setCost-int-">setCost</a></span>(int&nbsp;cost)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">GrindstoneEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/inventory/GrindstoneEvent.html#setExperienceDropped-int-">setExperienceDropped</a></span>(int&nbsp;experienceDropped)</code>&nbsp;</td>
 </tr>
@@ -6727,6 +6759,13 @@
                <a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;materialItem,
                int&nbsp;cost,
                <a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/inventory/SmithingTableEvent.html#SmithingTableEvent-cn.nukkit.inventory.SmithingInventory-cn.nukkit.item.Item-cn.nukkit.item.Item-cn.nukkit.item.Item-cn.nukkit.Player-">SmithingTableEvent</a></span>(<a href="../../../../cn/nukkit/inventory/SmithingInventory.html" title="class in cn.nukkit.inventory">SmithingInventory</a>&nbsp;inventory,
+                  <a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;equipmentItem,
+                  <a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;resultItem,
+                  <a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;ingredientItem,
+                  <a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -6931,6 +6970,14 @@
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/MultiRecipe.html" title="class in cn.nukkit.inventory">MultiRecipe</a></span></code>&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/SmithingInventory.html" title="class in cn.nukkit.inventory">SmithingInventory</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/SmithingRecipe.html" title="class in cn.nukkit.inventory">SmithingRecipe</a></span></code>&nbsp;</td>
+</tr>
 </tbody>
 </table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing fields, and an explanation">
@@ -6992,6 +7039,14 @@
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><span class="typeNameLabel">EntityArmorInventory.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/EntityArmorInventory.html#SLOT_LEGS">SLOT_LEGS</a></span></code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><span class="typeNameLabel">SmithingInventory.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/SmithingInventory.html#SMITHING_EQUIPMENT_UI_SLOT">SMITHING_EQUIPMENT_UI_SLOT</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><span class="typeNameLabel">SmithingInventory.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/SmithingInventory.html#SMITHING_INGREDIENT_UI_SLOT">SMITHING_INGREDIENT_UI_SLOT</a></span></code>&nbsp;</td>
+</tr>
 </tbody>
 </table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -7027,15 +7082,39 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
-<td class="colLast"><span class="typeNameLabel">EntityArmorInventory.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/EntityArmorInventory.html#getHelmet--">getHelmet</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">SmithingInventory.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/SmithingInventory.html#getEquipment--">getEquipment</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SmithingRecipe.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/SmithingRecipe.html#getEquipment--">getEquipment</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SmithingRecipe.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/SmithingRecipe.html#getFinalResult-cn.nukkit.item.Item-">getFinalResult</a></span>(<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;equip)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
+<td class="colLast"><span class="typeNameLabel">EntityArmorInventory.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/EntityArmorInventory.html#getHelmet--">getHelmet</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a></code></td>
 <td class="colLast"><span class="typeNameLabel">MultiRecipe.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/MultiRecipe.html#getId--">getId</a></span>()</code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SmithingInventory.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/SmithingInventory.html#getIngredient--">getIngredient</a></span>()</code>&nbsp;</td>
+</tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SmithingRecipe.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/SmithingRecipe.html#getIngredient--">getIngredient</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">CraftingRecipe.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/CraftingRecipe.html#getIngredientsAggregate--">getIngredientsAggregate</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">SmithingRecipe.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/SmithingRecipe.html#getIngredientsAggregate--">getIngredientsAggregate</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
@@ -7074,8 +7153,26 @@
 <td class="colLast"><span class="typeNameLabel">EnchantInventory.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/EnchantInventory.html#getReagentSlot--">getReagentSlot</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SmithingInventory.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/SmithingInventory.html#getResult--">getResult</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">GrindstoneInventory.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/GrindstoneInventory.html#getResultExperience--">getResultExperience</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><span class="typeNameLabel">Recipe.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/Recipe.html#matchItemList-java.util.List-java.util.List-">matchItemList</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&gt;&nbsp;haveItems,
+             <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&gt;&nbsp;needItems)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="typeNameLabel">SmithingRecipe.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/SmithingRecipe.html#matchItems-java.util.List-">matchItems</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&gt;&nbsp;inputList)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="typeNameLabel">SmithingRecipe.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/SmithingRecipe.html#matchItems-java.util.List-int-">matchItems</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&gt;&nbsp;inputList,
+          int&nbsp;multiplier)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
@@ -7091,12 +7188,40 @@
           int&nbsp;multiplier)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">GrindstoneInventory.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/GrindstoneInventory.html#recalculateResultExperience--">recalculateResultExperience</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code><a href="../../../../cn/nukkit/inventory/SmithingRecipe.html" title="class in cn.nukkit.inventory">SmithingRecipe</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SmithingInventory.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/SmithingInventory.html#matchRecipe--">matchRecipe</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/inventory/SmithingRecipe.html" title="class in cn.nukkit.inventory">SmithingRecipe</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CraftingManager.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/CraftingManager.html#matchSmithingRecipe-cn.nukkit.item.Item-cn.nukkit.item.Item-">matchSmithingRecipe</a></span>(<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;equipment,
+                   <a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;ingredient)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/inventory/SmithingRecipe.html" title="class in cn.nukkit.inventory">SmithingRecipe</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CraftingManager.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/CraftingManager.html#matchSmithingRecipe-cn.nukkit.item.Item-cn.nukkit.item.Item-cn.nukkit.item.Item-">matchSmithingRecipe</a></span>(<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;equipment,
+                   <a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;ingredient,
+                   <a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;primaryOutput)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/inventory/SmithingRecipe.html" title="class in cn.nukkit.inventory">SmithingRecipe</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CraftingManager.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/CraftingManager.html#matchSmithingRecipe-java.util.List-">matchSmithingRecipe</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&gt;&nbsp;inputList)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/inventory/SmithingRecipe.html" title="class in cn.nukkit.inventory">SmithingRecipe</a></code></td>
+<td class="colLast"><span class="typeNameLabel">CraftingManager.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/CraftingManager.html#matchSmithingRecipe-java.util.List-cn.nukkit.item.Item-">matchSmithingRecipe</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&gt;&nbsp;inputList,
+                   <a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;primaryOutput)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">GrindstoneInventory.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/GrindstoneInventory.html#recalculateResultExperience--">recalculateResultExperience</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">CraftingManager.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/CraftingManager.html#registerMultiRecipe-cn.nukkit.inventory.MultiRecipe-">registerMultiRecipe</a></span>(<a href="../../../../cn/nukkit/inventory/MultiRecipe.html" title="class in cn.nukkit.inventory">MultiRecipe</a>&nbsp;recipe)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">CraftingManager.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/CraftingManager.html#registerSmithingRecipe-cn.nukkit.inventory.SmithingRecipe-">registerSmithingRecipe</a></span>(<a href="../../../../cn/nukkit/inventory/SmithingRecipe.html" title="class in cn.nukkit.inventory">SmithingRecipe</a>&nbsp;recipe)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
@@ -7112,7 +7237,15 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">SmithingInventory.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/SmithingInventory.html#setEquipment-cn.nukkit.item.Item-">setEquipment</a></span>(<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;equipment)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">EntityArmorInventory.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/EntityArmorInventory.html#setHelmet-cn.nukkit.item.Item-">setHelmet</a></span>(<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;item)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">SmithingInventory.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/SmithingInventory.html#setIngredient-cn.nukkit.item.Item-">setIngredient</a></span>(<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;ingredient)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
@@ -7131,6 +7264,10 @@
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">GrindstoneInventory.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/GrindstoneInventory.html#setResultExperience-int-">setResultExperience</a></span>(int&nbsp;returnLevels)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">SmithingInventory.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/SmithingInventory.html#updateResult--">updateResult</a></span>()</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -7152,6 +7289,15 @@
 </tr>
 <tr class="rowColor">
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/MultiRecipe.html#MultiRecipe-java.util.UUID-">MultiRecipe</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;id)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/SmithingInventory.html#SmithingInventory-cn.nukkit.inventory.PlayerUIInventory-cn.nukkit.level.Position-">SmithingInventory</a></span>(<a href="../../../../cn/nukkit/inventory/PlayerUIInventory.html" title="class in cn.nukkit.inventory">PlayerUIInventory</a>&nbsp;playerUI,
+                 <a href="../../../../cn/nukkit/level/Position.html" title="class in cn.nukkit.level">Position</a>&nbsp;position)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/SmithingRecipe.html#SmithingRecipe-cn.nukkit.item.Item-cn.nukkit.item.Item-cn.nukkit.item.Item-">SmithingRecipe</a></span>(<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;equipment,
+              <a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;ingredient,
+              <a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;result)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -7179,6 +7325,10 @@
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/RepairItemTransaction.html" title="class in cn.nukkit.inventory.transaction">RepairItemTransaction</a></span></code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/SmithingTransaction.html" title="class in cn.nukkit.inventory.transaction">SmithingTransaction</a></span></code>&nbsp;</td>
+</tr>
 </tbody>
 </table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -7198,19 +7348,27 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static boolean</code></td>
-<td class="colLast"><span class="typeNameLabel">GrindstoneTransaction.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/GrindstoneTransaction.html#checkForItemPart-java.util.List-">checkForItemPart</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/inventory/transaction/action/InventoryAction.html" title="class in cn.nukkit.inventory.transaction.action">InventoryAction</a>&gt;&nbsp;actions)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">SmithingTransaction.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/SmithingTransaction.html#checkForItemPart-java.util.List-">checkForItemPart</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/inventory/transaction/action/InventoryAction.html" title="class in cn.nukkit.inventory.transaction.action">InventoryAction</a>&gt;&nbsp;actions)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static boolean</code></td>
-<td class="colLast"><span class="typeNameLabel">RepairItemTransaction.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/RepairItemTransaction.html#checkForRepairItemPart-java.util.List-">checkForRepairItemPart</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/inventory/transaction/action/InventoryAction.html" title="class in cn.nukkit.inventory.transaction.action">InventoryAction</a>&gt;&nbsp;actions)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">GrindstoneTransaction.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/GrindstoneTransaction.html#checkForItemPart-java.util.List-">checkForItemPart</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/inventory/transaction/action/InventoryAction.html" title="class in cn.nukkit.inventory.transaction.action">InventoryAction</a>&gt;&nbsp;actions)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><span class="typeNameLabel">RepairItemTransaction.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/RepairItemTransaction.html#checkForRepairItemPart-java.util.List-">checkForRepairItemPart</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/inventory/transaction/action/InventoryAction.html" title="class in cn.nukkit.inventory.transaction.action">InventoryAction</a>&gt;&nbsp;actions)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/inventory/transaction/action/InventoryAction.html" title="class in cn.nukkit.inventory.transaction.action">InventoryAction</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">InventoryTransaction.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/InventoryTransaction.html#getActionList--">getActionList</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">RepairItemTransaction.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/RepairItemTransaction.html#getCost--">getCost</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SmithingTransaction.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/SmithingTransaction.html#getEquipmentItem--">getEquipmentItem</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
@@ -7218,15 +7376,23 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
-<td class="colLast"><span class="typeNameLabel">RepairItemTransaction.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/RepairItemTransaction.html#getInputItem--">getInputItem</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">SmithingTransaction.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/SmithingTransaction.html#getIngredientItem--">getIngredientItem</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
-<td class="colLast"><span class="typeNameLabel">RepairItemTransaction.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/RepairItemTransaction.html#getMaterialItem--">getMaterialItem</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">RepairItemTransaction.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/RepairItemTransaction.html#getInputItem--">getInputItem</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
+<td class="colLast"><span class="typeNameLabel">RepairItemTransaction.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/RepairItemTransaction.html#getMaterialItem--">getMaterialItem</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
 <td class="colLast"><span class="typeNameLabel">RepairItemTransaction.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/RepairItemTransaction.html#getOutputItem--">getOutputItem</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SmithingTransaction.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/SmithingTransaction.html#getOutputItem--">getOutputItem</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
@@ -7264,6 +7430,10 @@
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/RepairItemTransaction.html#RepairItemTransaction-cn.nukkit.Player-java.util.List-">RepairItemTransaction</a></span>(<a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;source,
                      <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/inventory/transaction/action/InventoryAction.html" title="class in cn.nukkit.inventory.transaction.action">InventoryAction</a>&gt;&nbsp;actions)</code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/SmithingTransaction.html#SmithingTransaction-cn.nukkit.Player-java.util.List-">SmithingTransaction</a></span>(<a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;source,
+                   <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/inventory/transaction/action/InventoryAction.html" title="class in cn.nukkit.inventory.transaction.action">InventoryAction</a>&gt;&nbsp;actions)</code>&nbsp;</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -7293,6 +7463,10 @@
 <tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/action/RepairItemAction.html" title="class in cn.nukkit.inventory.transaction.action">RepairItemAction</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/action/SmithingItemAction.html" title="class in cn.nukkit.inventory.transaction.action">SmithingItemAction</a></span></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -7326,9 +7500,13 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>int</code></td>
-<td class="colLast"><span class="typeNameLabel">GrindstoneItemAction.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/action/GrindstoneItemAction.html#getType--">getType</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">SmithingItemAction.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/action/SmithingItemAction.html#getType--">getType</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><span class="typeNameLabel">GrindstoneItemAction.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/action/GrindstoneItemAction.html#getType--">getType</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">RepairItemAction.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/action/RepairItemAction.html#getType--">getType</a></span>()</code>&nbsp;</td>
 </tr>
@@ -7360,6 +7538,11 @@
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/action/RepairItemAction.html#RepairItemAction-cn.nukkit.item.Item-cn.nukkit.item.Item-int-">RepairItemAction</a></span>(<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;sourceItem,
                 <a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;targetItem,
                 int&nbsp;type)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/action/SmithingItemAction.html#SmithingItemAction-cn.nukkit.item.Item-cn.nukkit.item.Item-int-">SmithingItemAction</a></span>(<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;sourceItem,
+                  <a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;targetItem,
+                  int&nbsp;type)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -7617,183 +7800,191 @@
 <td class="colLast"><span class="typeNameLabel">Item.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/Item.html#createFuzzyCraftingRecipe--">createFuzzyCraftingRecipe</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Item.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/Item.html#decrement-int-">decrement</a></span>(int&nbsp;amount)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Item.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/Item.html#fromJsonNetworkId-java.util.Map-">fromJsonNetworkId</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;data)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
 <td class="colLast"><span class="typeNameLabel">MinecraftItemID.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/MinecraftItemID.html#get-int-">get</a></span>(int&nbsp;amount)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
 <td class="colLast"><span class="typeNameLabel">MinecraftItemID.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/MinecraftItemID.html#get-int-byte:A-">get</a></span>(int&nbsp;amount,
    byte[]&nbsp;compoundTag)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
 <td class="colLast"><span class="typeNameLabel">MinecraftItemID.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/MinecraftItemID.html#getAliases--">getAliases</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/item/PNAlphaItemID.html" title="enum in cn.nukkit.item">PNAlphaItemID</a></code></td>
 <td class="colLast"><span class="typeNameLabel">PNAlphaItemID.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/PNAlphaItemID.html#getBadAlphaId-int-">getBadAlphaId</a></span>(int&nbsp;id)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 &nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ItemTool.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/ItemTool.html#getBestTool-int-">getBestTool</a></span>(int&nbsp;toolType)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">Item.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/Item.html#getBlockId--">getBlockId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Item.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/Item.html#getBlockUnsafe--">getBlockUnsafe</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/item/MinecraftItemID.html" title="enum in cn.nukkit.item">MinecraftItemID</a></code></td>
 <td class="colLast"><span class="typeNameLabel">MinecraftItemID.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/MinecraftItemID.html#getByNamespaceId-java.lang.String-">getByNamespaceId</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;namespacedId)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><span class="typeNameLabel">RuntimeItems.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/RuntimeItems.html#getData-int-">getData</a></span>(int&nbsp;fullId)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">Item.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/Item.html#getEnchantmentLevel-int-">getEnchantmentLevel</a></span>(int&nbsp;id)</code>
 <div class="block">Find the enchantment level by the enchantment id.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">ItemSpawnEgg.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/ItemSpawnEgg.html#getEntityNetworkId--">getEntityNetworkId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ItemBucket.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/ItemBucket.html#getFishEntityId--">getFishEntityId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><span class="typeNameLabel">RuntimeItems.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/RuntimeItems.html#getFullId-int-int-">getFullId</a></span>(int&nbsp;id,
          int&nbsp;data)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><span class="typeNameLabel">RuntimeItems.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/RuntimeItems.html#getId-int-">getId</a></span>(int&nbsp;fullId)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
 <td class="colLast"><span class="typeNameLabel">UnknownNetworkIdException.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/UnknownNetworkIdException.html#getItem--">getItem</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
 <td class="colLast"><span class="typeNameLabel">RuntimeItemMapping.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/RuntimeItemMapping.html#getItemByNamespaceId-java.lang.String-int-">getItemByNamespaceId</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;namespaceId,
                     int&nbsp;amount)</code>
 <div class="block">Creates a new instance of the respective <a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item"><code>Item</code></a> by the <b>namespaced id</b>.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><span class="typeNameLabel">RuntimeItemMapping.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/RuntimeItemMapping.html#getItemDataPalette--">getItemDataPalette</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><span class="typeNameLabel">MinecraftItemID.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/MinecraftItemID.html#getItemFormNamespaceId--">getItemFormNamespaceId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">Item.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/Item.html#getItemList--">getItemList</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/OptionalInt.html?is-external=true" title="class or interface in java.util">OptionalInt</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ItemBoat.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/ItemBoat.html#getLegacyBoatDamage--">getLegacyBoatDamage</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">RuntimeItemMapping.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/RuntimeItemMapping.html#getLegacyFullId-int-">getLegacyFullId</a></span>(int&nbsp;networkId)</code>
 <div class="block">Returns the <b>full id</b> of a given <b>network id</b>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ItemSpawnEgg.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/ItemSpawnEgg.html#getLegacySpawnEgg--">getLegacySpawnEgg</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><span class="typeNameLabel">MinecraftItemID.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/MinecraftItemID.html#getNamespacedId--">getNamespacedId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><span class="typeNameLabel">RuntimeItemMapping.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/RuntimeItemMapping.html#getNamespacedIdByNetworkId-int-">getNamespacedIdByNetworkId</a></span>(int&nbsp;networkId)</code>
 <div class="block">Returns the <b>namespaced id</b> of a given <b>network id</b>.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Item.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/Item.html#getNamespaceId--">getNamespaceId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">Item.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/Item.html#getNetworkFullId--">getNetworkFullId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">RuntimeItemMapping.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/RuntimeItemMapping.html#getNetworkFullId-cn.nukkit.item.Item-">getNetworkFullId</a></span>(<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;item)</code>
 <div class="block">Returns the <b>network id</b> based on the <b>full id</b> of the given item.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">Item.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/Item.html#getNetworkId--">getNetworkId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><span class="typeNameLabel">RuntimeItems.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/RuntimeItems.html#getNetworkId-int-">getNetworkId</a></span>(int&nbsp;networkFullId)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/OptionalInt.html?is-external=true" title="class or interface in java.util">OptionalInt</a></code></td>
 <td class="colLast"><span class="typeNameLabel">RuntimeItemMapping.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/RuntimeItemMapping.html#getNetworkIdByNamespaceId-java.lang.String-">getNetworkIdByNamespaceId</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;namespaceId)</code>
 <div class="block">Returns the <b>network id</b> of a given <b>namespaced id</b>.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/utils/BannerPattern.Type.html" title="enum in cn.nukkit.utils">BannerPattern.Type</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ItemBannerPattern.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/ItemBannerPattern.html#getPatternType--">getPatternType</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">Item.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/Item.html#getRepairCost--">getRepairCost</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/item/RuntimeItemMapping.html" title="class in cn.nukkit.item">RuntimeItemMapping</a></code></td>
 <td class="colLast"><span class="typeNameLabel">RuntimeItems.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/RuntimeItems.html#getRuntimeMapping--">getRuntimeMapping</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ItemBucket.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/ItemBucket.html#getTargetBlock--">getTargetBlock</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">ItemCompassLodestone.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/ItemCompassLodestone.html#getTrackingHandle--">getTrackingHandle</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/positiontracking/NamedPosition.html" title="class in cn.nukkit.positiontracking">NamedPosition</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ItemCompassLodestone.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/ItemCompassLodestone.html#getTrackingPosition--">getTrackingPosition</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">RuntimeItems.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/RuntimeItems.html#hasData-int-">hasData</a></span>(int&nbsp;id)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">Item.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/Item.html#hasEnchantment-int-">hasEnchantment</a></span>(int&nbsp;id)</code>
 <div class="block">Convenience method to check if the item stack has positive level on a specific enchantment by it's id.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">ItemBanner.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/ItemBanner.html#hasPattern--">hasPattern</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Item.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/Item.html#increment-int-">increment</a></span>(int&nbsp;amount)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
