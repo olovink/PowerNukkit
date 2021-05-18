@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -150,13 +150,16 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../cn/nukkit/entity/EntityDamageable.html" title="interface in cn.nukkit.entity">EntityDamageable</a>, <a href="../../../../cn/nukkit/entity/EntityNameable.html" title="interface in cn.nukkit.entity">EntityNameable</a>, <a href="../../../../cn/nukkit/metadata/Metadatable.html" title="interface in cn.nukkit.metadata">Metadatable</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.html?is-external=true" title="class or interface in java.lang">Cloneable</a></dd>
+<dd><a href="../../../../cn/nukkit/entity/EntityAgeable.html" title="interface in cn.nukkit.entity">EntityAgeable</a>, <a href="../../../../cn/nukkit/entity/EntityDamageable.html" title="interface in cn.nukkit.entity">EntityDamageable</a>, <a href="../../../../cn/nukkit/entity/EntityNameable.html" title="interface in cn.nukkit.entity">EntityNameable</a>, <a href="../../../../cn/nukkit/metadata/Metadatable.html" title="interface in cn.nukkit.metadata">Metadatable</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.html?is-external=true" title="class or interface in java.lang">Cloneable</a></dd>
 </dl>
 <hr>
 <br>
 <pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.3.1.0-PN")
+ <a href="../../../../cn/nukkit/api/PowerNukkitDifference.html" title="annotation in cn.nukkit.api">@PowerNukkitDifference</a>(<a href="../../../../cn/nukkit/api/PowerNukkitDifference.html#since--">since</a>="1.4.0.0-PN",
+                       <a href="../../../../cn/nukkit/api/PowerNukkitDifference.html#info--">info</a>="Implements EntityAgeable only in PowerNukkit!")
 public class <span class="typeNameLabel">EntityZoglin</span>
-extends <a href="../../../../cn/nukkit/entity/mob/EntityMob.html" title="class in cn.nukkit.entity.mob">EntityMob</a></pre>
+extends <a href="../../../../cn/nukkit/entity/mob/EntityMob.html" title="class in cn.nukkit.entity.mob">EntityMob</a>
+implements <a href="../../../../cn/nukkit/entity/EntityAgeable.html" title="interface in cn.nukkit.entity">EntityAgeable</a></pre>
 <dl>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd>Erik Miller | EinBexiii</dd>
@@ -273,11 +276,19 @@ extends <a href="../../../../cn/nukkit/entity/mob/EntityMob.html" title="class i
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/entity/mob/EntityZoglin.html#isPreventingSleep-cn.nukkit.Player-">isPreventingSleep</a></span>(<a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/entity/mob/EntityZoglin.html#isBaby--">isBaby</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/entity/mob/EntityZoglin.html#isPreventingSleep-cn.nukkit.Player-">isPreventingSleep</a></span>(<a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player)</code>&nbsp;</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/entity/mob/EntityZoglin.html#isUndead--">isUndead</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/entity/mob/EntityZoglin.html#setBaby-boolean-">setBaby</a></span>(boolean&nbsp;baby)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -477,7 +488,7 @@ extends <a href="../../../../cn/nukkit/entity/mob/EntityMob.html" title="class i
 <a name="isPreventingSleep-cn.nukkit.Player-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>isPreventingSleep</h4>
 <pre>public&nbsp;boolean&nbsp;isPreventingSleep(<a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player)</pre>
@@ -485,6 +496,30 @@ extends <a href="../../../../cn/nukkit/entity/mob/EntityMob.html" title="class i
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../cn/nukkit/entity/Entity.html#isPreventingSleep-cn.nukkit.Player-">isPreventingSleep</a></code>&nbsp;in class&nbsp;<code><a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a></code></dd>
 </dl>
+</li>
+</ul>
+<a name="isBaby--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isBaby</h4>
+<pre>public&nbsp;boolean&nbsp;isBaby()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../cn/nukkit/entity/EntityAgeable.html#isBaby--">isBaby</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../cn/nukkit/entity/EntityAgeable.html" title="interface in cn.nukkit.entity">EntityAgeable</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="setBaby-boolean-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>setBaby</h4>
+<pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+public&nbsp;void&nbsp;setBaby(boolean&nbsp;baby)</pre>
 </li>
 </ul>
 </li>
