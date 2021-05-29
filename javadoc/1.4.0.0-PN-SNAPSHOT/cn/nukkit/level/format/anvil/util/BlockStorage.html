@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>BlockStorage (PowerNukkit 1.4.0.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2021-05-28">
+<meta name="date" content="2021-05-29">
 <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../../../../script.js"></script>
 </head>
@@ -578,8 +578,10 @@ public&nbsp;int&nbsp;getAndSetFullBlock(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>setBlockState</h4>
-<pre>protected&nbsp;<a href="../../../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;setBlockState(int&nbsp;index,
-                                   <a href="../../../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;state)</pre>
+<pre><a href="../../../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+protected&nbsp;<a href="../../../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;setBlockState(int&nbsp;index,
+                                                                                <a href="../../../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;state)</pre>
 </li>
 </ul>
 <a name="delayPaletteUpdates--">
@@ -706,7 +708,8 @@ public&nbsp;boolean&nbsp;hasBlockDataHuge()</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>writeTo</h4>
-<pre>public&nbsp;void&nbsp;writeTo(<a href="../../../../../../cn/nukkit/utils/BinaryStream.html" title="class in cn.nukkit.utils">BinaryStream</a>&nbsp;stream)</pre>
+<pre><a href="../../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+public&nbsp;void&nbsp;writeTo(<a href="../../../../../../cn/nukkit/utils/BinaryStream.html" title="class in cn.nukkit.utils">BinaryStream</a>&nbsp;stream)</pre>
 </li>
 </ul>
 <a name="iterateStates-cn.nukkit.utils.functional.BlockPositionDataConsumer-">
@@ -715,7 +718,9 @@ public&nbsp;boolean&nbsp;hasBlockDataHuge()</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>iterateStates</h4>
-<pre>public&nbsp;void&nbsp;iterateStates(<a href="../../../../../../cn/nukkit/utils/functional/BlockPositionDataConsumer.html" title="interface in cn.nukkit.utils.functional">BlockPositionDataConsumer</a>&lt;<a href="../../../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&gt;&nbsp;consumer)</pre>
+<pre><a href="../../../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+public&nbsp;void&nbsp;iterateStates(<a href="../../../../../../cn/nukkit/utils/functional/BlockPositionDataConsumer.html" title="interface in cn.nukkit.utils.functional">BlockPositionDataConsumer</a>&lt;<a href="../../../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&gt;&nbsp;consumer)</pre>
 </li>
 </ul>
 <a name="getBlockChangeStateAbove-int-int-int-">
@@ -724,9 +729,11 @@ public&nbsp;boolean&nbsp;hasBlockDataHuge()</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getBlockChangeStateAbove</h4>
-<pre>public&nbsp;int&nbsp;getBlockChangeStateAbove(int&nbsp;x,
-                                    int&nbsp;y,
-                                    int&nbsp;z)</pre>
+<pre><a href="../../../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+public&nbsp;int&nbsp;getBlockChangeStateAbove(int&nbsp;x,
+                                                                                 int&nbsp;y,
+                                                                                 int&nbsp;z)</pre>
 </li>
 </ul>
 </li>

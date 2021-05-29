@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Player (PowerNukkit 1.4.0.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2021-05-28">
+<meta name="date" content="2021-05-29">
 <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../script.js"></script>
 </head>
@@ -2486,7 +2486,8 @@ public static final&nbsp;int SMITHING_WINDOW_ID</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>locallyInitialized</h4>
-<pre>public&nbsp;boolean locallyInitialized</pre>
+<pre><a href="../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+public&nbsp;boolean locallyInitialized</pre>
 </li>
 </ul>
 <a name="gamemode">
@@ -2549,7 +2550,7 @@ public static final&nbsp;int SMITHING_WINDOW_ID</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>closingWindowId</h4>
-<pre><a href="../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../cn/nukkit/api/Since.html#value--">value</a>="1.3.2.0-PN")
+<pre><a href="../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
 protected&nbsp;int closingWindowId</pre>
 </li>
 </ul>
@@ -2632,7 +2633,7 @@ protected&nbsp;<a href="../../cn/nukkit/inventory/transaction/EnchantTransaction
 <ul class="blockList">
 <li class="blockList">
 <h4>repairItemTransaction</h4>
-<pre><a href="../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../cn/nukkit/api/Since.html#value--">value</a>="1.3.2.0-PN")
+<pre><a href="../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
 protected&nbsp;<a href="../../cn/nukkit/inventory/transaction/RepairItemTransaction.html" title="class in cn.nukkit.inventory.transaction">RepairItemTransaction</a> repairItemTransaction</pre>
 </li>
 </ul>
@@ -3071,7 +3072,9 @@ protected&nbsp;<a href="../../cn/nukkit/math/Vector3.html" title="class in cn.nu
 <ul class="blockListLast">
 <li class="blockList">
 <h4>lastPlayerdLevelUpSoundTime</h4>
-<pre>protected&nbsp;int lastPlayerdLevelUpSoundTime</pre>
+<pre><a href="../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+protected&nbsp;int lastPlayerdLevelUpSoundTime</pre>
 </li>
 </ul>
 </li>
@@ -3120,7 +3123,9 @@ public&nbsp;Player(<a href="../../cn/nukkit/network/SourceInterface.html" title=
 <ul class="blockList">
 <li class="blockList">
 <h4>getSoulSpeedMultiplier</h4>
-<pre>public&nbsp;float&nbsp;getSoulSpeedMultiplier()</pre>
+<pre><a href="../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+public&nbsp;float&nbsp;getSoulSpeedMultiplier()</pre>
 </li>
 </ul>
 <a name="getStartActionTick--">
@@ -4153,7 +4158,7 @@ public&nbsp;void&nbsp;updateTrackingPositions(boolean&nbsp;delayed)</pre>
 <li class="blockList">
 <h4>batchDataPacket</h4>
 <pre><a href="../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../cn/nukkit/api/DeprecationDetails.html#by--">by</a>="Cloudburst Nukkit",
-                    <a href="../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.3.2.0-PN",
+                    <a href="../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.4.0.0-PN",
                     <a href="../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="dataPacket(DataPacket)",
                     <a href="../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="Batching packet is now handled near the RakNet layer")
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
@@ -4189,7 +4194,7 @@ public&nbsp;boolean&nbsp;batchDataPacket(<a href="../../cn/nukkit/network/protoc
                     <a href="../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="2019-05-08",
                     <a href="../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="dataPacket(DataPacket)",
                     <a href="../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="ACKs are handled by the RakNet layer only")
- <a href="../../cn/nukkit/api/PowerNukkitDifference.html" title="annotation in cn.nukkit.api">@PowerNukkitDifference</a>(<a href="../../cn/nukkit/api/PowerNukkitDifference.html#since--">since</a>="1.3.2.0-PN",
+ <a href="../../cn/nukkit/api/PowerNukkitDifference.html" title="annotation in cn.nukkit.api">@PowerNukkitDifference</a>(<a href="../../cn/nukkit/api/PowerNukkitDifference.html#since--">since</a>="1.4.0.0-PN",
                        <a href="../../cn/nukkit/api/PowerNukkitDifference.html#info--">info</a>="Cloudburst changed the return values from 0/-1 to 1/0, breaking backward compatibility for no reason, we reversed that.")
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
 public&nbsp;int&nbsp;dataPacket(<a href="../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet,
@@ -4205,7 +4210,7 @@ public&nbsp;int&nbsp;dataPacket(<a href="../../cn/nukkit/network/protocol/DataPa
 <h4>directDataPacket</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
  <a href="../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../cn/nukkit/api/DeprecationDetails.html#by--">by</a>="Cloudburst Nukkit",
-                    <a href="../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.3.2.0-PN",
+                    <a href="../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.4.0.0-PN",
                     <a href="../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="dataPacket(DataPacket)",
                     <a href="../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="Direct packets are no longer allowed")
 public&nbsp;boolean&nbsp;directDataPacket(<a href="../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</pre>
@@ -4231,7 +4236,7 @@ public&nbsp;boolean&nbsp;directDataPacket(<a href="../../cn/nukkit/network/proto
                     <a href="../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="2019-05-08",
                     <a href="../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="dataPacket(DataPacket)",
                     <a href="../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="ACK are handled by the RakNet layer and direct packets are no longer allowed")
- <a href="../../cn/nukkit/api/PowerNukkitDifference.html" title="annotation in cn.nukkit.api">@PowerNukkitDifference</a>(<a href="../../cn/nukkit/api/PowerNukkitDifference.html#since--">since</a>="1.3.2.0-PN",
+ <a href="../../cn/nukkit/api/PowerNukkitDifference.html" title="annotation in cn.nukkit.api">@PowerNukkitDifference</a>(<a href="../../cn/nukkit/api/PowerNukkitDifference.html#since--">since</a>="1.4.0.0-PN",
                        <a href="../../cn/nukkit/api/PowerNukkitDifference.html#info--">info</a>="Cloudburst changed the return values from 0/-1 to 1/0, breaking backward compatibility for no reason, we reversed that.")
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
 public&nbsp;int&nbsp;directDataPacket(<a href="../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet,
@@ -5253,7 +5258,8 @@ protected&nbsp;boolean&nbsp;isValidRespawnBlock(<a href="../../cn/nukkit/block/B
 <ul class="blockList">
 <li class="blockList">
 <h4>sendMovementSpeed</h4>
-<pre>public&nbsp;void&nbsp;sendMovementSpeed(float&nbsp;speed)</pre>
+<pre><a href="../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+public&nbsp;void&nbsp;sendMovementSpeed(float&nbsp;speed)</pre>
 </li>
 </ul>
 <a name="getKiller--">
@@ -5300,7 +5306,7 @@ protected&nbsp;boolean&nbsp;isValidRespawnBlock(<a href="../../cn/nukkit/block/B
 <ul class="blockList">
 <li class="blockList">
 <h4>dropAndGetItem</h4>
-<pre><a href="../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../cn/nukkit/api/Since.html#value--">value</a>="1.3.2.0-PN")
+<pre><a href="../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
  <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
 public&nbsp;<a href="../../cn/nukkit/entity/item/EntityItem.html" title="class in cn.nukkit.entity.item">EntityItem</a>&nbsp;dropAndGetItem(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
                                                                        <a href="../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;item)</pre>
@@ -5664,10 +5670,11 @@ public&nbsp;void&nbsp;updateBossBar(<a href="https://docs.oracle.com/javase/8/do
 <ul class="blockList">
 <li class="blockList">
 <h4>addWindow</h4>
-<pre>public&nbsp;int&nbsp;addWindow(<a href="../../cn/nukkit/inventory/Inventory.html" title="interface in cn.nukkit.inventory">Inventory</a>&nbsp;inventory,
-                     <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;forceId,
-                     boolean&nbsp;isPermanent,
-                     boolean&nbsp;alwaysOpen)</pre>
+<pre><a href="../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+public&nbsp;int&nbsp;addWindow(<a href="../../cn/nukkit/inventory/Inventory.html" title="interface in cn.nukkit.inventory">Inventory</a>&nbsp;inventory,
+                                                <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;forceId,
+                                                boolean&nbsp;isPermanent,
+                                                boolean&nbsp;alwaysOpen)</pre>
 </li>
 </ul>
 <a name="getTopWindow--">
@@ -5694,7 +5701,7 @@ public&nbsp;void&nbsp;updateBossBar(<a href="https://docs.oracle.com/javase/8/do
 <ul class="blockList">
 <li class="blockList">
 <h4>removeWindow</h4>
-<pre><a href="../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../cn/nukkit/api/Since.html#value--">value</a>="1.3.2.0-PN")
+<pre><a href="../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
 protected&nbsp;void&nbsp;removeWindow(<a href="../../cn/nukkit/inventory/Inventory.html" title="interface in cn.nukkit.inventory">Inventory</a>&nbsp;inventory,
                                                        boolean&nbsp;isResponse)</pre>
 </li>
@@ -5786,7 +5793,7 @@ protected&nbsp;void&nbsp;removeWindow(<a href="../../cn/nukkit/inventory/Invento
 <ul class="blockList">
 <li class="blockList">
 <h4>getClosingWindowId</h4>
-<pre><a href="../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../cn/nukkit/api/Since.html#value--">value</a>="1.3.2.0-PN")
+<pre><a href="../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
 public&nbsp;int&nbsp;getClosingWindowId()</pre>
 </li>
 </ul>
@@ -6232,7 +6239,7 @@ public&nbsp;void&nbsp;giveItem(<a href="../../cn/nukkit/item/Item.html" title="c
 <ul class="blockList">
 <li class="blockList">
 <h4>getTimeSinceRest</h4>
-<pre><a href="../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../cn/nukkit/api/Since.html#value--">value</a>="1.3.2.0-PN")
+<pre><a href="../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
 public&nbsp;int&nbsp;getTimeSinceRest()</pre>
 </li>
 </ul>
@@ -6242,7 +6249,7 @@ public&nbsp;int&nbsp;getTimeSinceRest()</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>setTimeSinceRest</h4>
-<pre><a href="../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../cn/nukkit/api/Since.html#value--">value</a>="1.3.2.0-PN")
+<pre><a href="../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
 public&nbsp;void&nbsp;setTimeSinceRest(int&nbsp;timeSinceRest)</pre>
 </li>
 </ul>
