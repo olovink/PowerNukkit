@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":17,"i1":17,"i2":18,"i3":6,"i4":6,"i5":18,"i6":18,"i7":6,"i8":18,"i9":18,"i10":18,"i11":18,"i12":6,"i13":18,"i14":6,"i15":18,"i16":18,"i17":18};
+var methods = {"i0":18,"i1":17,"i2":17,"i3":18,"i4":6,"i5":6,"i6":18,"i7":18,"i8":6,"i9":18,"i10":18,"i11":18,"i12":18,"i13":6,"i14":18,"i15":6,"i16":18,"i17":18,"i18":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -134,93 +134,99 @@ extends <a href="../../../cn/nukkit/blockstate/IBlockState.html" title="interfac
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>default <a href="../../../cn/nukkit/blockstate/IMutableBlockState.html" title="interface in cn.nukkit.blockstate">IMutableBlockState</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#forState-cn.nukkit.blockstate.IBlockState-">forState</a></span>(<a href="../../../cn/nukkit/blockstate/IBlockState.html" title="interface in cn.nukkit.blockstate">IBlockState</a>&nbsp;state)</code>
+<div class="block">Replace all matching states of this block state with the same states of the given block state.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang">RuntimeException</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#handleUnsupportedStorageType-int-java.lang.Number-java.lang.RuntimeException-">handleUnsupportedStorageType</a></span>(int&nbsp;blockId,
                             <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html?is-external=true" title="class or interface in java.lang">Number</a>&nbsp;storage,
                             <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/RuntimeException.html?is-external=true" title="class or interface in java.lang">RuntimeException</a>&nbsp;e)</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html?is-external=true" title="class or interface in java.math">BigInteger</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#repairStorage-int-java.math.BigInteger-cn.nukkit.blockproperty.BlockProperties-java.util.function.Consumer-">repairStorage</a></span>(int&nbsp;blockId,
              <a href="https://docs.oracle.com/javase/8/docs/api/java/math/BigInteger.html?is-external=true" title="class or interface in java.math">BigInteger</a>&nbsp;storage,
              <a href="../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a>&nbsp;properties,
              <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function">Consumer</a>&lt;<a href="../../../cn/nukkit/blockstate/BlockStateRepair.html" title="class in cn.nukkit.blockstate">BlockStateRepair</a>&gt;&nbsp;callback)</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>default void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setBooleanValue-cn.nukkit.blockproperty.BlockProperty-boolean-">setBooleanValue</a></span>(<a href="../../../cn/nukkit/blockproperty/BlockProperty.html" title="class in cn.nukkit.blockproperty">BlockProperty</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;property,
                boolean&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setBooleanValue-java.lang.String-boolean-">setBooleanValue</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName,
                boolean&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setDataStorage-java.lang.Number-">setDataStorage</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html?is-external=true" title="class or interface in java.lang">Number</a>&nbsp;storage)</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>default boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setDataStorage-java.lang.Number-boolean-">setDataStorage</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html?is-external=true" title="class or interface in java.lang">Number</a>&nbsp;storage,
               boolean&nbsp;repair)</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>default boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setDataStorage-java.lang.Number-boolean-java.util.function.Consumer-">setDataStorage</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html?is-external=true" title="class or interface in java.lang">Number</a>&nbsp;storage,
               boolean&nbsp;repair,
               <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function">Consumer</a>&lt;<a href="../../../cn/nukkit/blockstate/BlockStateRepair.html" title="class in cn.nukkit.blockstate">BlockStateRepair</a>&gt;&nbsp;callback)</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setDataStorageFromInt-int-">setDataStorageFromInt</a></span>(int&nbsp;storage)</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>default boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setDataStorageFromInt-int-boolean-">setDataStorageFromInt</a></span>(int&nbsp;storage,
                      boolean&nbsp;repair)</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>default boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setDataStorageFromInt-int-boolean-java.util.function.Consumer-">setDataStorageFromInt</a></span>(int&nbsp;storage,
                      boolean&nbsp;repair,
                      <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function">Consumer</a>&lt;<a href="../../../cn/nukkit/blockstate/BlockStateRepair.html" title="class in cn.nukkit.blockstate">BlockStateRepair</a>&gt;&nbsp;callback)</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>default void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setDataStorageFromItemBlockMeta-int-">setDataStorageFromItemBlockMeta</a></span>(int&nbsp;itemBlockMeta)</code>&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>default void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setIntValue-cn.nukkit.blockproperty.BlockProperty-int-">setIntValue</a></span>(<a href="../../../cn/nukkit/blockproperty/BlockProperty.html" title="class in cn.nukkit.blockproperty">BlockProperty</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;&nbsp;property,
            int&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setIntValue-java.lang.String-int-">setIntValue</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName,
            int&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>default &lt;T extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>&gt;<br>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setPropertyValue-cn.nukkit.blockproperty.BlockProperty-T-">setPropertyValue</a></span>(<a href="../../../cn/nukkit/blockproperty/BlockProperty.html" title="class in cn.nukkit.blockproperty">BlockProperty</a>&lt;T&gt;&nbsp;property,
                 T&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setPropertyValue-java.lang.String-java.io.Serializable-">setPropertyValue</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName,
                 <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>default void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#setState-cn.nukkit.blockstate.IBlockState-">setState</a></span>(<a href="../../../cn/nukkit/blockstate/IBlockState.html" title="interface in cn.nukkit.blockstate">IBlockState</a>&nbsp;state)</code>
 <div class="block">Replace all matching states of this block state with the same states of the given block state.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>default boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#toggleBooleanProperty-cn.nukkit.blockproperty.BlockProperty-">toggleBooleanProperty</a></span>(<a href="../../../cn/nukkit/blockproperty/BlockProperty.html" title="class in cn.nukkit.blockproperty">BlockProperty</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;property)</code>&nbsp;</td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>default boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#toggleBooleanProperty-java.lang.String-">toggleBooleanProperty</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName)</code>&nbsp;</td>
 </tr>
@@ -260,6 +266,36 @@ default&nbsp;void&nbsp;setState(<a href="../../../cn/nukkit/blockstate/IBlockSta
  <p>States that doesn't exists in the other state are ignored.
  <p>Only properties that matches each other will be copied, for example, if this state have an age property
  going from 0 to 7 and the other have an age from 0 to 15, the age property won't change.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>state</code> - The states that will have the properties copied.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang">UnsupportedOperationException</a></code> - If the state is from a different block id and property copying isn't supported by the implementation</dd>
+<dd><code><a href="../../../cn/nukkit/blockstate/exception/InvalidBlockStateException.html" title="class in cn.nukkit.blockstate.exception">InvalidBlockStateException</a></code> - If the given storage has invalid data properties</dd>
+</dl>
+</li>
+</ul>
+<a name="forState-cn.nukkit.blockstate.IBlockState-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>forState</h4>
+<pre><a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+ <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
+default&nbsp;<a href="../../../cn/nukkit/blockstate/IMutableBlockState.html" title="interface in cn.nukkit.blockstate">IMutableBlockState</a>&nbsp;forState(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
+                                                                                       <a href="../../../cn/nukkit/blockstate/IBlockState.html" title="interface in cn.nukkit.blockstate">IBlockState</a>&nbsp;state)
+                                                                                throws <a href="../../../cn/nukkit/blockstate/exception/InvalidBlockStateException.html" title="class in cn.nukkit.blockstate.exception">InvalidBlockStateException</a></pre>
+<div class="block">Replace all matching states of this block state with the same states of the given block state.
+ But giving opportunity to return a new instance of this mutable state if needed.
+
+ <p>States that doesn't exists in the other state are ignored.
+ <p>Only properties that matches each other will be copied, for example, if this state have an age property
+ going from 0 to 7 and the other have an age from 0 to 15, the age property won't change.
+ <p>If the implementation recognizes that the given state does not match the current set of properties
+ and needs an update, it may update and return a new state with a different block id and different set
+ of properties that represent the expected visual state. The this change can be detected with an <code>==</code> operation.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>state</code> - The states that will have the properties copied.</dd>

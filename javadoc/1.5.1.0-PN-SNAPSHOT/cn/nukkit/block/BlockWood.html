@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -289,48 +289,54 @@ extends <a href="../../../cn/nukkit/block/BlockLog.html" title="class in cn.nukk
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockWood.html#getBurnAbility--">getBurnAbility</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code><a href="../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockWood.html#forState-cn.nukkit.blockstate.IBlockState-">forState</a></span>(<a href="../../../cn/nukkit/blockstate/IBlockState.html" title="interface in cn.nukkit.blockstate">IBlockState</a>&nbsp;state)</code>
+<div class="block">Replace all matching states of this block state with the same states of the given block state.</div>
+</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockWood.html#getBurnChance--">getBurnChance</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockWood.html#getBurnAbility--">getBurnAbility</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockWood.html#getBurnChance--">getBurnChance</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/utils/BlockColor.html" title="class in cn.nukkit.utils">BlockColor</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockWood.html#getColor--">getColor</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockWood.html#getHardness--">getHardness</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockWood.html#getId--">getId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockWood.html#getName--">getName</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockWood.html#getProperties--">getProperties</a></span>()</code>
 <div class="block">The properties that fully describe all possible and valid states that this block can have.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockWood.html#getResistance--">getResistance</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockWood.html#getStrippedState--">getStrippedState</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/blockproperty/value/WoodType.html" title="enum in cn.nukkit.blockproperty.value">WoodType</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockWood.html#getWoodType--">getWoodType</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/block/BlockWood.html#setWoodType-cn.nukkit.blockproperty.value.WoodType-">setWoodType</a></span>(<a href="../../../cn/nukkit/blockproperty/value/WoodType.html" title="enum in cn.nukkit.blockproperty.value">WoodType</a>&nbsp;woodType)</code>&nbsp;</td>
 </tr>
@@ -618,6 +624,40 @@ public&nbsp;void&nbsp;setWoodType(<a href="../../../cn/nukkit/blockproperty/valu
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../cn/nukkit/block/Block.html#getName--">getName</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="forState-cn.nukkit.blockstate.IBlockState-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>forState</h4>
+<pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+ <a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
+public&nbsp;<a href="../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;forState(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
+                                                                         <a href="../../../cn/nukkit/blockstate/IBlockState.html" title="interface in cn.nukkit.blockstate">IBlockState</a>&nbsp;state)
+                                                                  throws <a href="../../../cn/nukkit/blockstate/exception/InvalidBlockStateException.html" title="class in cn.nukkit.blockstate.exception">InvalidBlockStateException</a></pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#forState-cn.nukkit.blockstate.IBlockState-">IMutableBlockState</a></code></span></div>
+<div class="block">Replace all matching states of this block state with the same states of the given block state.
+ But giving opportunity to return a new instance of this mutable state if needed.
+
+ <p>States that doesn't exists in the other state are ignored.
+ <p>Only properties that matches each other will be copied, for example, if this state have an age property
+ going from 0 to 7 and the other have an age from 0 to 15, the age property won't change.
+ <p>If the implementation recognizes that the given state does not match the current set of properties
+ and needs an update, it may update and return a new state with a different block id and different set
+ of properties that represent the expected visual state. The this change can be detected with an <code>==</code> operation.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html#forState-cn.nukkit.blockstate.IBlockState-">forState</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/blockstate/IMutableBlockState.html" title="interface in cn.nukkit.blockstate">IMutableBlockState</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../cn/nukkit/block/Block.html#forState-cn.nukkit.blockstate.IBlockState-">forState</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>state</code> - The states that will have the properties copied.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="../../../cn/nukkit/blockstate/exception/InvalidBlockStateException.html" title="class in cn.nukkit.blockstate.exception">InvalidBlockStateException</a></code> - If the given storage has invalid data properties</dd>
 </dl>
 </li>
 </ul>
