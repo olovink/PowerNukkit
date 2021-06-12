@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -198,18 +198,23 @@ extends <a href="../../../../cn/nukkit/item/enchantment/Enchantment.html" title=
             <a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity)</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/item/enchantment/sideeffect/SideEffect.html" title="interface in cn.nukkit.item.enchantment.sideeffect">SideEffect</a>[]</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/EnchantmentFireAspect.html#getAttackSideEffects-cn.nukkit.entity.Entity-cn.nukkit.entity.Entity-">getAttackSideEffects</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;attacker,
+                    <a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/EnchantmentFireAspect.html#getMaxEnchantAbility-int-">getMaxEnchantAbility</a></span>(int&nbsp;level)</code>
 <div class="block">The maximum enchantability for the given level as described in https://minecraft.gamepedia.com/Enchanting/Levels</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/EnchantmentFireAspect.html#getMaxLevel--">getMaxLevel</a></span>()</code>
 <div class="block">The maximum safe level which is possible with this enchantment.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/EnchantmentFireAspect.html#getMinEnchantAbility-int-">getMinEnchantAbility</a></span>(int&nbsp;level)</code>
 <div class="block">The minimum enchantability for the given level as described in https://minecraft.gamepedia.com/Enchanting/Levels</div>
@@ -317,14 +322,35 @@ extends <a href="../../../../cn/nukkit/item/enchantment/Enchantment.html" title=
 <a name="doPostAttack-cn.nukkit.entity.Entity-cn.nukkit.entity.Entity-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>doPostAttack</h4>
-<pre>public&nbsp;void&nbsp;doPostAttack(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;attacker,
-                         <a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity)</pre>
+<pre><a href="../../../../cn/nukkit/api/PowerNukkitDifference.html" title="annotation in cn.nukkit.api">@PowerNukkitDifference</a>(<a href="../../../../cn/nukkit/api/PowerNukkitDifference.html#since--">since</a>="FUTURE",
+                       <a href="../../../../cn/nukkit/api/PowerNukkitDifference.html#info--">info</a>="The entity combustion code was moved to SideEffectCombust, obtained by getAttackSideEffects(Entity, Entity)")
+public&nbsp;void&nbsp;doPostAttack(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;attacker,
+                                                                                                                                                                                                           <a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#doPostAttack-cn.nukkit.entity.Entity-cn.nukkit.entity.Entity-">doPostAttack</a></code>&nbsp;in class&nbsp;<code><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html" title="class in cn.nukkit.item.enchantment">Enchantment</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="getAttackSideEffects-cn.nukkit.entity.Entity-cn.nukkit.entity.Entity-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getAttackSideEffects</h4>
+<pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+ <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
+public&nbsp;<a href="../../../../cn/nukkit/item/enchantment/sideeffect/SideEffect.html" title="interface in cn.nukkit.item.enchantment.sideeffect">SideEffect</a>[]&nbsp;getAttackSideEffects(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
+                                                                                            <a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;attacker,
+                                                                                            <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
+                                                                                            <a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#getAttackSideEffects-cn.nukkit.entity.Entity-cn.nukkit.entity.Entity-">getAttackSideEffects</a></code>&nbsp;in class&nbsp;<code><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html" title="class in cn.nukkit.item.enchantment">Enchantment</a></code></dd>
 </dl>
 </li>
 </ul>

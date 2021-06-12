@@ -48,6 +48,7 @@ cn.nukkit.item.enchantment.crossbow
 cn.nukkit.item.enchantment.damage
 cn.nukkit.item.enchantment.loot
 cn.nukkit.item.enchantment.protection
+cn.nukkit.item.enchantment.sideeffect
 cn.nukkit.item.enchantment.trident
 cn.nukkit.item.food
 cn.nukkit.item.randomitem
