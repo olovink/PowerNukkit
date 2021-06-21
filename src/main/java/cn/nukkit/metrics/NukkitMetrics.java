@@ -200,6 +200,12 @@ public class NukkitMetrics {
             }
         }
     }
+    
+    @PowerNukkitOnly
+    @Since("FUTURE")
+    public String getServerUUID() {
+        return serverUUID;
+    }
 
     private String mapDeviceOSToString(int os) {
         switch (os) {

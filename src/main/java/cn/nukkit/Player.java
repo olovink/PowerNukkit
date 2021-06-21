@@ -77,6 +77,9 @@ import com.google.common.base.Strings;
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
 import io.netty.util.internal.EmptyArrays;
+import io.sentry.Breadcrumb;
+import io.sentry.Sentry;
+import io.sentry.SentryLevel;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import it.unimi.dsi.fastutil.ints.IntOpenHashSet;
 import it.unimi.dsi.fastutil.longs.Long2ObjectLinkedOpenHashMap;
@@ -1163,6 +1166,13 @@ public class Player extends EntityHuman implements CommandSender, InventoryHolde
                 return false;
             }
 
+            Breadcrumb breadcrumb = new Breadcrumb();
+            breadcrumb.setLevel(SentryLevel.DEBUG);
+            breadcrumb.setCategory("Packets");
+            breadcrumb.setData("Packet", packet);
+            breadcrumb.setData("Direction", "Outbound");
+            Sentry.addBreadcrumb(breadcrumb);
+            
             if (log.isTraceEnabled() && !server.isIgnoredPacket(packet.getClass())) {
                 log.trace("Outbound {}: {}", this.getName(), packet);
             }
@@ -2317,6 +2327,13 @@ public class Player extends EntityHuman implements CommandSender, InventoryHolde
                 return;
             }
 
+            Breadcrumb breadcrumb = new Breadcrumb();
+            breadcrumb.setLevel(SentryLevel.DEBUG);
+            breadcrumb.setCategory("Packets");
+            breadcrumb.setData("Packet", packet);
+            breadcrumb.setData("Direction", "Inbound");
+            Sentry.addBreadcrumb(breadcrumb);
+            
             if (log.isTraceEnabled() && !server.isIgnoredPacket(packet.getClass())) {
                 log.trace("Inbound {}: {}", this.getName(), packet);
             }
@@ -6066,6 +6083,13 @@ public class Player extends EntityHuman implements CommandSender, InventoryHolde
                 return false;
             }
 
+            Breadcrumb breadcrumb = new Breadcrumb();
+            breadcrumb.setLevel(SentryLevel.DEBUG);
+            breadcrumb.setCategory("Packets");
+            breadcrumb.setData("Packet", packet);
+            breadcrumb.setData("Direction", "Immediate Outbound");
+            Sentry.addBreadcrumb(breadcrumb);
+            
             if (log.isTraceEnabled() && !server.isIgnoredPacket(packet.getClass())) {
                 log.trace("Immediate Outbound {}: {}", this.getName(), packet);
             }

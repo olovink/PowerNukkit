@@ -87,6 +87,8 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.io.Files;
 import io.netty.buffer.ByteBuf;
 import io.netty.util.internal.EmptyArrays;
+import io.sentry.Sentry;
+import io.sentry.protocol.User;
 import lombok.extern.log4j.Log4j2;
 import org.iq80.leveldb.CompressionType;
 import org.iq80.leveldb.DB;
@@ -587,7 +589,7 @@ public class Server {
             try {
                 this.rcon = new RCON(this, this.getPropertyString("rcon.password", ""), (!this.getIp().equals("")) ? this.getIp() : "0.0.0.0", this.getPropertyInt("rcon.port", this.getPort()));
             } catch (IllegalArgumentException e) {
-                log.error(getLanguage().translateString(e.getMessage(), e.getCause().getMessage()));
+                log.catching(e);
             }
         }
 
@@ -635,6 +637,15 @@ public class Server {
 
         // Initialize metrics
         NukkitMetrics.startNow(this);
+        File metricsConfigFile = new File(pluginPath, "bStats/config.yml");
+        if (metricsConfigFile.isFile()) {
+            Config metricsConfig = new Config(metricsConfigFile);
+            if (metricsConfig.exists("serverUuid")) {
+                User user = new User();
+                user.setId(metricsConfig.getString("serverUuid"));
+                Sentry.setUser(user);
+            }
+        }
 
         this.registerEntities();
         this.registerBlockEntities();
@@ -1315,8 +1326,7 @@ public class Server {
                     }
                 }
             } catch (Exception e) {
-                log.error(this.getLanguage().translateString("nukkit.level.tickError",
-                        level.getFolderName(), Utils.getExceptionMessage(e)), e);
+                log.error("Could not tick level \"{}\"", level.getFolderName(), e);
             }
         }
     }

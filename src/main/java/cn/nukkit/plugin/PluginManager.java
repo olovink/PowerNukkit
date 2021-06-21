@@ -14,6 +14,9 @@ import cn.nukkit.utils.Utils;
 import co.aikar.timings.Timing;
 import co.aikar.timings.Timings;
 import io.netty.util.internal.EmptyArrays;
+import io.sentry.Breadcrumb;
+import io.sentry.Sentry;
+import io.sentry.SentryLevel;
 import lombok.extern.log4j.Log4j2;
 
 import java.io.File;
@@ -566,13 +569,52 @@ public class PluginManager {
                     continue;
                 }
 
+                Breadcrumb breadcrumb = new Breadcrumb();
+                breadcrumb.setLevel(SentryLevel.DEBUG);
+                breadcrumb.setCategory("Events");
+                breadcrumb.setData("Event", event);
+                breadcrumb.setData("Listener", registration.getListener().getClass().getName());
+                breadcrumb.setData("Plugin", registration.getPlugin().getDescription().getFullName());
+                breadcrumb.setData("Status", "Pre-Call");
+                Sentry.addBreadcrumb(breadcrumb);
+
                 try {
                     registration.callEvent(event);
                 } catch (Exception e) {
-                    log.error(this.server.getLanguage().translateString("nukkit.plugin.eventError", event.getEventName(), registration.getPlugin().getDescription().getFullName(), e.getMessage(), registration.getListener().getClass().getName()), e);
+                    breadcrumb = new Breadcrumb();
+                    breadcrumb.setLevel(SentryLevel.DEBUG);
+                    breadcrumb.setCategory("Events");
+                    breadcrumb.setData("Event", event);
+                    breadcrumb.setData("Listener", registration.getListener().getClass().getName());
+                    breadcrumb.setData("Plugin", registration.getPlugin().getDescription().getFullName());
+                    breadcrumb.setData("Status", "Failed");
+                    Sentry.addBreadcrumb(breadcrumb);
+                    log.error("Could not pass event \"{}\" to \"{}\": {} on {}", 
+                            event.getEventName(), 
+                            registration.getPlugin().getDescription().getFullName(), 
+                            e.getMessage(), 
+                            registration.getListener().getClass().getName(), 
+                            e
+                    );
+                    continue;
                 }
+
+                breadcrumb = new Breadcrumb();
+                breadcrumb.setLevel(SentryLevel.DEBUG);
+                breadcrumb.setCategory("Events");
+                breadcrumb.setData("Event", event);
+                breadcrumb.setData("Listener", registration.getListener().getClass().getName());
+                breadcrumb.setData("Plugin", registration.getPlugin().getDescription().getFullName());
+                breadcrumb.setData("Status", "OK");
+                Sentry.addBreadcrumb(breadcrumb);
             }
         } catch (IllegalAccessException e) {
+            Breadcrumb breadcrumb = new Breadcrumb();
+            breadcrumb.setLevel(SentryLevel.ERROR);
+            breadcrumb.setCategory("Events");
+            breadcrumb.setData("Event", event);
+            breadcrumb.setData("Status", "Failed");
+            Sentry.addBreadcrumb(breadcrumb);
             log.error("An error has occurred while calling the event {}", event, e);
         }
     }
