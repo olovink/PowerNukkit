@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Uses of Class cn.nukkit.blockstate.BlockState (PowerNukkit 1.5.1.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2021-06-30">
+<meta name="date" content="2021-07-01">
 <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../../script.js"></script>
 </head>
@@ -156,12 +156,20 @@
 <td class="colLast"><span class="typeNameLabel">Block.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/Block.html#getCurrentState--">getCurrentState</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BlockWood.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWood.html#getStrippedState--">getStrippedState</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code>protected abstract <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BlockLog.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockLog.html#getStrippedState--">getStrippedState</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BlockStemWarped.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockStemWarped.html#getStrippedState--">getStrippedState</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockStemStripped.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockStemStripped.html#getStrippedState--">getStrippedState</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BlockWoodStripped.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWoodStripped.html#getStrippedState--">getStrippedState</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
@@ -169,19 +177,11 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BlockStemWarped.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockStemWarped.html#getStrippedState--">getStrippedState</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">BlockWood.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWood.html#getStrippedState--">getStrippedState</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected abstract <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BlockLog.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockLog.html#getStrippedState--">getStrippedState</a></span>()</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockHyphaeCrimson.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockHyphaeCrimson.html#getStrippedState--">getStrippedState</a></span>()</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>protected <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BlockWoodStripped.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/block/BlockWoodStripped.html#getStrippedState--">getStrippedState</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
@@ -224,7 +224,23 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IBlockState.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/blockstate/IBlockState.html#getCurrentState--">getCurrentState</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ByteMutableBlockState.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/blockstate/ByteMutableBlockState.html#getCurrentState--">getCurrentState</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
+<td class="colLast"><span class="typeNameLabel">BlockState.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/blockstate/BlockState.html#getCurrentState--">getCurrentState</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
+<td class="colLast"><span class="typeNameLabel">IntMutableBlockState.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/blockstate/IntMutableBlockState.html#getCurrentState--">getCurrentState</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
+<td class="colLast"><span class="typeNameLabel">LongMutableBlockState.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/blockstate/LongMutableBlockState.html#getCurrentState--">getCurrentState</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
@@ -232,23 +248,7 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IBlockState.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/blockstate/IBlockState.html#getCurrentState--">getCurrentState</a></span>()</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
 <td class="colLast"><span class="typeNameLabel">ZeroMutableBlockState.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/blockstate/ZeroMutableBlockState.html#getCurrentState--">getCurrentState</a></span>()</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
-<td class="colLast"><span class="typeNameLabel">IntMutableBlockState.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/blockstate/IntMutableBlockState.html#getCurrentState--">getCurrentState</a></span>()</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BlockState.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/blockstate/BlockState.html#getCurrentState--">getCurrentState</a></span>()</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
-<td class="colLast"><span class="typeNameLabel">LongMutableBlockState.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/blockstate/LongMutableBlockState.html#getCurrentState--">getCurrentState</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
@@ -421,7 +421,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ListChunkManager.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/ListChunkManager.html#getBlockStateAt-int-int-int-int-">getBlockStateAt</a></span>(int&nbsp;x,
+<td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#getBlockStateAt-int-int-int-int-">getBlockStateAt</a></span>(int&nbsp;x,
                int&nbsp;y,
                int&nbsp;z,
                int&nbsp;layer)</code>&nbsp;</td>
@@ -435,7 +435,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#getBlockStateAt-int-int-int-int-">getBlockStateAt</a></span>(int&nbsp;x,
+<td class="colLast"><span class="typeNameLabel">ListChunkManager.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/ListChunkManager.html#getBlockStateAt-int-int-int-int-">getBlockStateAt</a></span>(int&nbsp;x,
                int&nbsp;y,
                int&nbsp;z,
                int&nbsp;layer)</code>&nbsp;</td>
@@ -466,7 +466,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><span class="typeNameLabel">ListChunkManager.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/ListChunkManager.html#setBlockStateAt-int-int-int-int-cn.nukkit.blockstate.BlockState-">setBlockStateAt</a></span>(int&nbsp;x,
+<td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#setBlockStateAt-int-int-int-int-cn.nukkit.blockstate.BlockState-">setBlockStateAt</a></span>(int&nbsp;x,
                int&nbsp;y,
                int&nbsp;z,
                int&nbsp;layer,
@@ -482,7 +482,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#setBlockStateAt-int-int-int-int-cn.nukkit.blockstate.BlockState-">setBlockStateAt</a></span>(int&nbsp;x,
+<td class="colLast"><span class="typeNameLabel">ListChunkManager.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/ListChunkManager.html#setBlockStateAt-int-int-int-int-cn.nukkit.blockstate.BlockState-">setBlockStateAt</a></span>(int&nbsp;x,
                int&nbsp;y,
                int&nbsp;z,
                int&nbsp;layer,
@@ -597,27 +597,19 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>default <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ChunkSection.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/ChunkSection.html#getAndSetBlockState-int-int-int-cn.nukkit.blockstate.BlockState-">getAndSetBlockState</a></span>(int&nbsp;x,
+<td class="colLast"><span class="typeNameLabel">FullChunk.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/FullChunk.html#getAndSetBlockState-int-int-int-cn.nukkit.blockstate.BlockState-">getAndSetBlockState</a></span>(int&nbsp;x,
                    int&nbsp;y,
                    int&nbsp;z,
                    <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;state)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>default <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FullChunk.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/FullChunk.html#getAndSetBlockState-int-int-int-cn.nukkit.blockstate.BlockState-">getAndSetBlockState</a></span>(int&nbsp;x,
+<td class="colLast"><span class="typeNameLabel">ChunkSection.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/ChunkSection.html#getAndSetBlockState-int-int-int-cn.nukkit.blockstate.BlockState-">getAndSetBlockState</a></span>(int&nbsp;x,
                    int&nbsp;y,
                    int&nbsp;z,
                    <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;state)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ChunkSection.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/ChunkSection.html#getAndSetBlockState-int-int-int-int-cn.nukkit.blockstate.BlockState-">getAndSetBlockState</a></span>(int&nbsp;x,
-                   int&nbsp;y,
-                   int&nbsp;z,
-                   int&nbsp;layer,
-                   <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;state)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
 <td class="colLast"><span class="typeNameLabel">FullChunk.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/FullChunk.html#getAndSetBlockState-int-int-int-int-cn.nukkit.blockstate.BlockState-">getAndSetBlockState</a></span>(int&nbsp;x,
                    int&nbsp;y,
@@ -625,28 +617,36 @@
                    int&nbsp;layer,
                    <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;state)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code>default <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ChunkSection.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/ChunkSection.html#getBlockState-int-int-int-">getBlockState</a></span>(int&nbsp;x,
-             int&nbsp;y,
-             int&nbsp;z)</code>&nbsp;</td>
-</tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ChunkSection.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/ChunkSection.html#getAndSetBlockState-int-int-int-int-cn.nukkit.blockstate.BlockState-">getAndSetBlockState</a></span>(int&nbsp;x,
+                   int&nbsp;y,
+                   int&nbsp;z,
+                   int&nbsp;layer,
+                   <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;state)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>default <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
 <td class="colLast"><span class="typeNameLabel">FullChunk.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/FullChunk.html#getBlockState-int-int-int-">getBlockState</a></span>(int&nbsp;x,
              int&nbsp;y,
              int&nbsp;z)</code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>default <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ChunkSection.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/ChunkSection.html#getBlockState-int-int-int-">getBlockState</a></span>(int&nbsp;x,
+             int&nbsp;y,
+             int&nbsp;z)</code>&nbsp;</td>
+</tr>
 <tr class="altColor">
 <td class="colFirst"><code>default <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ChunkSection.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/ChunkSection.html#getBlockState-int-int-int-int-">getBlockState</a></span>(int&nbsp;x,
+<td class="colLast"><span class="typeNameLabel">FullChunk.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/FullChunk.html#getBlockState-int-int-int-int-">getBlockState</a></span>(int&nbsp;x,
              int&nbsp;y,
              int&nbsp;z,
              int&nbsp;layer)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>default <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FullChunk.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/FullChunk.html#getBlockState-int-int-int-int-">getBlockState</a></span>(int&nbsp;x,
+<td class="colLast"><span class="typeNameLabel">ChunkSection.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/ChunkSection.html#getBlockState-int-int-int-int-">getBlockState</a></span>(int&nbsp;x,
              int&nbsp;y,
              int&nbsp;z,
              int&nbsp;layer)</code>&nbsp;</td>
@@ -662,27 +662,19 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>default <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ChunkSection.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/ChunkSection.html#getAndSetBlockState-int-int-int-cn.nukkit.blockstate.BlockState-">getAndSetBlockState</a></span>(int&nbsp;x,
+<td class="colLast"><span class="typeNameLabel">FullChunk.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/FullChunk.html#getAndSetBlockState-int-int-int-cn.nukkit.blockstate.BlockState-">getAndSetBlockState</a></span>(int&nbsp;x,
                    int&nbsp;y,
                    int&nbsp;z,
                    <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;state)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>default <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
-<td class="colLast"><span class="typeNameLabel">FullChunk.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/FullChunk.html#getAndSetBlockState-int-int-int-cn.nukkit.blockstate.BlockState-">getAndSetBlockState</a></span>(int&nbsp;x,
+<td class="colLast"><span class="typeNameLabel">ChunkSection.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/ChunkSection.html#getAndSetBlockState-int-int-int-cn.nukkit.blockstate.BlockState-">getAndSetBlockState</a></span>(int&nbsp;x,
                    int&nbsp;y,
                    int&nbsp;z,
                    <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;state)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
-<td class="colLast"><span class="typeNameLabel">ChunkSection.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/ChunkSection.html#getAndSetBlockState-int-int-int-int-cn.nukkit.blockstate.BlockState-">getAndSetBlockState</a></span>(int&nbsp;x,
-                   int&nbsp;y,
-                   int&nbsp;z,
-                   int&nbsp;layer,
-                   <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;state)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
 <td class="colLast"><span class="typeNameLabel">FullChunk.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/FullChunk.html#getAndSetBlockState-int-int-int-int-cn.nukkit.blockstate.BlockState-">getAndSetBlockState</a></span>(int&nbsp;x,
                    int&nbsp;y,
@@ -690,23 +682,31 @@
                    int&nbsp;layer,
                    <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;state)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code>default boolean</code></td>
-<td class="colLast"><span class="typeNameLabel">ChunkSection.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/ChunkSection.html#setBlockState-int-int-int-cn.nukkit.blockstate.BlockState-">setBlockState</a></span>(int&nbsp;x,
-             int&nbsp;y,
-             int&nbsp;z,
-             <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;state)</code>&nbsp;</td>
-</tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
+<td class="colLast"><span class="typeNameLabel">ChunkSection.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/ChunkSection.html#getAndSetBlockState-int-int-int-int-cn.nukkit.blockstate.BlockState-">getAndSetBlockState</a></span>(int&nbsp;x,
+                   int&nbsp;y,
+                   int&nbsp;z,
+                   int&nbsp;layer,
+                   <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;state)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>default boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">FullChunk.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/FullChunk.html#setBlockState-int-int-int-cn.nukkit.blockstate.BlockState-">setBlockState</a></span>(int&nbsp;x,
              int&nbsp;y,
              int&nbsp;z,
              <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;state)</code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>default boolean</code></td>
+<td class="colLast"><span class="typeNameLabel">ChunkSection.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/ChunkSection.html#setBlockState-int-int-int-cn.nukkit.blockstate.BlockState-">setBlockState</a></span>(int&nbsp;x,
+             int&nbsp;y,
+             int&nbsp;z,
+             <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;state)</code>&nbsp;</td>
+</tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><span class="typeNameLabel">ChunkSection.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/ChunkSection.html#setBlockStateAtLayer-int-int-int-int-cn.nukkit.blockstate.BlockState-">setBlockStateAtLayer</a></span>(int&nbsp;x,
+<td class="colLast"><span class="typeNameLabel">FullChunk.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/FullChunk.html#setBlockStateAtLayer-int-int-int-int-cn.nukkit.blockstate.BlockState-">setBlockStateAtLayer</a></span>(int&nbsp;x,
                     int&nbsp;y,
                     int&nbsp;z,
                     int&nbsp;layer,
@@ -714,7 +714,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><span class="typeNameLabel">FullChunk.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/FullChunk.html#setBlockStateAtLayer-int-int-int-int-cn.nukkit.blockstate.BlockState-">setBlockStateAtLayer</a></span>(int&nbsp;x,
+<td class="colLast"><span class="typeNameLabel">ChunkSection.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/ChunkSection.html#setBlockStateAtLayer-int-int-int-int-cn.nukkit.blockstate.BlockState-">setBlockStateAtLayer</a></span>(int&nbsp;x,
                     int&nbsp;y,
                     int&nbsp;z,
                     int&nbsp;layer,
@@ -917,7 +917,7 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
-<td class="colLast"><span class="typeNameLabel">EmptyChunkSection.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/generic/EmptyChunkSection.html#getAndSetBlockState-int-int-int-int-cn.nukkit.blockstate.BlockState-">getAndSetBlockState</a></span>(int&nbsp;x,
+<td class="colLast"><span class="typeNameLabel">BaseChunk.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/generic/BaseChunk.html#getAndSetBlockState-int-int-int-int-cn.nukkit.blockstate.BlockState-">getAndSetBlockState</a></span>(int&nbsp;x,
                    int&nbsp;y,
                    int&nbsp;z,
                    int&nbsp;layer,
@@ -925,7 +925,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BaseChunk.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/generic/BaseChunk.html#getAndSetBlockState-int-int-int-int-cn.nukkit.blockstate.BlockState-">getAndSetBlockState</a></span>(int&nbsp;x,
+<td class="colLast"><span class="typeNameLabel">EmptyChunkSection.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/generic/EmptyChunkSection.html#getAndSetBlockState-int-int-int-int-cn.nukkit.blockstate.BlockState-">getAndSetBlockState</a></span>(int&nbsp;x,
                    int&nbsp;y,
                    int&nbsp;z,
                    int&nbsp;layer,
@@ -933,14 +933,14 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
-<td class="colLast"><span class="typeNameLabel">EmptyChunkSection.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/generic/EmptyChunkSection.html#getBlockState-int-int-int-int-">getBlockState</a></span>(int&nbsp;x,
+<td class="colLast"><span class="typeNameLabel">BaseChunk.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/generic/BaseChunk.html#getBlockState-int-int-int-int-">getBlockState</a></span>(int&nbsp;x,
              int&nbsp;y,
              int&nbsp;z,
              int&nbsp;layer)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BaseChunk.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/generic/BaseChunk.html#getBlockState-int-int-int-int-">getBlockState</a></span>(int&nbsp;x,
+<td class="colLast"><span class="typeNameLabel">EmptyChunkSection.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/generic/EmptyChunkSection.html#getBlockState-int-int-int-int-">getBlockState</a></span>(int&nbsp;x,
              int&nbsp;y,
              int&nbsp;z,
              int&nbsp;layer)</code>&nbsp;</td>
@@ -963,7 +963,7 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
-<td class="colLast"><span class="typeNameLabel">EmptyChunkSection.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/generic/EmptyChunkSection.html#getAndSetBlockState-int-int-int-int-cn.nukkit.blockstate.BlockState-">getAndSetBlockState</a></span>(int&nbsp;x,
+<td class="colLast"><span class="typeNameLabel">BaseChunk.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/generic/BaseChunk.html#getAndSetBlockState-int-int-int-int-cn.nukkit.blockstate.BlockState-">getAndSetBlockState</a></span>(int&nbsp;x,
                    int&nbsp;y,
                    int&nbsp;z,
                    int&nbsp;layer,
@@ -971,7 +971,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
-<td class="colLast"><span class="typeNameLabel">BaseChunk.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/generic/BaseChunk.html#getAndSetBlockState-int-int-int-int-cn.nukkit.blockstate.BlockState-">getAndSetBlockState</a></span>(int&nbsp;x,
+<td class="colLast"><span class="typeNameLabel">EmptyChunkSection.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/generic/EmptyChunkSection.html#getAndSetBlockState-int-int-int-int-cn.nukkit.blockstate.BlockState-">getAndSetBlockState</a></span>(int&nbsp;x,
                    int&nbsp;y,
                    int&nbsp;z,
                    int&nbsp;layer,
@@ -987,7 +987,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><span class="typeNameLabel">EmptyChunkSection.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/generic/EmptyChunkSection.html#setBlockStateAtLayer-int-int-int-int-cn.nukkit.blockstate.BlockState-">setBlockStateAtLayer</a></span>(int&nbsp;x,
+<td class="colLast"><span class="typeNameLabel">BaseChunk.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/generic/BaseChunk.html#setBlockStateAtLayer-int-int-int-int-cn.nukkit.blockstate.BlockState-">setBlockStateAtLayer</a></span>(int&nbsp;x,
                     int&nbsp;y,
                     int&nbsp;z,
                     int&nbsp;layer,
@@ -995,7 +995,7 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><span class="typeNameLabel">BaseChunk.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/generic/BaseChunk.html#setBlockStateAtLayer-int-int-int-int-cn.nukkit.blockstate.BlockState-">setBlockStateAtLayer</a></span>(int&nbsp;x,
+<td class="colLast"><span class="typeNameLabel">EmptyChunkSection.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/generic/EmptyChunkSection.html#setBlockStateAtLayer-int-int-int-int-cn.nukkit.blockstate.BlockState-">setBlockStateAtLayer</a></span>(int&nbsp;x,
                     int&nbsp;y,
                     int&nbsp;z,
                     int&nbsp;layer,
@@ -1047,27 +1047,7 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><span class="typeNameLabel">DoorUpdater.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/updater/DoorUpdater.html#update-int-int-int-int-int-int-cn.nukkit.blockstate.BlockState-">update</a></span>(int&nbsp;offsetX,
-      int&nbsp;offsetY,
-      int&nbsp;offsetZ,
-      int&nbsp;x,
-      int&nbsp;y,
-      int&nbsp;z,
-      <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;state)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><span class="typeNameLabel">BeehiveUpdater.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/updater/BeehiveUpdater.html#update-int-int-int-int-int-int-cn.nukkit.blockstate.BlockState-">update</a></span>(int&nbsp;offsetX,
-      int&nbsp;offsetY,
-      int&nbsp;offsetZ,
-      int&nbsp;x,
-      int&nbsp;y,
-      int&nbsp;z,
-      <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;state)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><span class="typeNameLabel">NewLeafUpdater.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/updater/NewLeafUpdater.html#update-int-int-int-int-int-int-cn.nukkit.blockstate.BlockState-">update</a></span>(int&nbsp;offsetX,
+<td class="colLast"><span class="typeNameLabel">MesaBiomeUpdater.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/updater/MesaBiomeUpdater.html#update-int-int-int-int-int-int-cn.nukkit.blockstate.BlockState-">update</a></span>(int&nbsp;offsetX,
       int&nbsp;offsetY,
       int&nbsp;offsetZ,
       int&nbsp;x,
@@ -1087,7 +1067,7 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><span class="typeNameLabel">MesaBiomeUpdater.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/updater/MesaBiomeUpdater.html#update-int-int-int-int-int-int-cn.nukkit.blockstate.BlockState-">update</a></span>(int&nbsp;offsetX,
+<td class="colLast"><span class="typeNameLabel">StemStrippedUpdater.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/updater/StemStrippedUpdater.html#update-int-int-int-int-int-int-cn.nukkit.blockstate.BlockState-">update</a></span>(int&nbsp;offsetX,
       int&nbsp;offsetY,
       int&nbsp;offsetZ,
       int&nbsp;x,
@@ -1097,7 +1077,27 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><span class="typeNameLabel">StemStrippedUpdater.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/updater/StemStrippedUpdater.html#update-int-int-int-int-int-int-cn.nukkit.blockstate.BlockState-">update</a></span>(int&nbsp;offsetX,
+<td class="colLast"><span class="typeNameLabel">BeehiveUpdater.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/updater/BeehiveUpdater.html#update-int-int-int-int-int-int-cn.nukkit.blockstate.BlockState-">update</a></span>(int&nbsp;offsetX,
+      int&nbsp;offsetY,
+      int&nbsp;offsetZ,
+      int&nbsp;x,
+      int&nbsp;y,
+      int&nbsp;z,
+      <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;state)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="typeNameLabel">DoorUpdater.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/updater/DoorUpdater.html#update-int-int-int-int-int-int-cn.nukkit.blockstate.BlockState-">update</a></span>(int&nbsp;offsetX,
+      int&nbsp;offsetY,
+      int&nbsp;offsetZ,
+      int&nbsp;x,
+      int&nbsp;y,
+      int&nbsp;z,
+      <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;state)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="typeNameLabel">NewLeafUpdater.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/format/updater/NewLeafUpdater.html#update-int-int-int-int-int-int-cn.nukkit.blockstate.BlockState-">update</a></span>(int&nbsp;offsetX,
       int&nbsp;offsetY,
       int&nbsp;offsetZ,
       int&nbsp;x,
