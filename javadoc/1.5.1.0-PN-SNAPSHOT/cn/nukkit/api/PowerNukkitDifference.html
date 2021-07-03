@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>PowerNukkitDifference (PowerNukkit 1.5.1.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2021-07-01">
+<meta name="date" content="2021-07-03">
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
 </head>
@@ -70,7 +70,7 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li><a href="#annotation.type.required.element.summary">Required</a>&nbsp;|&nbsp;</li>
+<li>Required&nbsp;|&nbsp;</li>
 <li><a href="#annotation.type.optional.element.summary">Optional</a></li>
 </ul>
 <ul class="subNavList">
@@ -111,25 +111,6 @@ public @interface <span class="memberNameLabel">PowerNukkitDifference</span></pr
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
-<!-- =========== ANNOTATION TYPE REQUIRED MEMBER SUMMARY =========== -->
-<ul class="blockList">
-<li class="blockList"><a name="annotation.type.required.element.summary">
-<!--   -->
-</a>
-<h3>Required Element Summary</h3>
-<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Required Element Summary table, listing required elements, and an explanation">
-<caption><span>Required Elements</span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Required Element and Description</th>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/api/PowerNukkitDifference.html#info--">info</a></span></code>&nbsp;</td>
-</tr>
-</table>
-</li>
-</ul>
 <!-- =========== ANNOTATION TYPE OPTIONAL MEMBER SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="annotation.type.optional.element.summary">
@@ -143,6 +124,18 @@ public @interface <span class="memberNameLabel">PowerNukkitDifference</span></pr
 <th class="colLast" scope="col">Optional Element and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/api/PowerNukkitDifference.html#extendsOnlyInPowerNukkit--">extendsOnlyInPowerNukkit</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/api/PowerNukkitDifference.html#info--">info</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/api/PowerNukkitDifference.html#insteadOf--">insteadOf</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/api/PowerNukkitDifference.html#since--">since</a></span></code>&nbsp;</td>
 </tr>
@@ -164,26 +157,61 @@ public @interface <span class="memberNameLabel">PowerNukkitDifference</span></pr
 <a name="info--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>info</h4>
 <pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;info</pre>
+<dl>
+<dt>Default:</dt>
+<dd>""</dd>
+</dl>
 </li>
 </ul>
 </li>
 </ul>
-<!-- ============ ANNOTATION TYPE MEMBER DETAIL =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="since--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>since</h4>
 <pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;since</pre>
 <dl>
 <dt>Default:</dt>
 <dd>""</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="extendsOnlyInPowerNukkit--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>extendsOnlyInPowerNukkit</h4>
+<pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;extendsOnlyInPowerNukkit</pre>
+<dl>
+<dt>Default:</dt>
+<dd>java.lang.Void.class</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="insteadOf--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>insteadOf</h4>
+<pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;insteadOf</pre>
+<dl>
+<dt>Default:</dt>
+<dd>java.lang.Void.class</dd>
 </dl>
 </li>
 </ul>
@@ -241,7 +269,7 @@ public @interface <span class="memberNameLabel">PowerNukkitDifference</span></pr
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li><a href="#annotation.type.required.element.summary">Required</a>&nbsp;|&nbsp;</li>
+<li>Required&nbsp;|&nbsp;</li>
 <li><a href="#annotation.type.optional.element.summary">Optional</a></li>
 </ul>
 <ul class="subNavList">
