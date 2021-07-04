@@ -4,7 +4,7 @@ import cn.nukkit.command.Command;
 import cn.nukkit.command.CommandSender;
 import cn.nukkit.command.data.CommandParamType;
 import cn.nukkit.command.data.CommandParameter;
-import cn.nukkit.lang.TranslationContainer;
+import cn.nukkit.lang.TranslationKey;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -32,7 +32,7 @@ public class PardonIpCommand extends VanillaCommand {
         }
 
         if (args.length != 1) {
-            sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));
+            sendUsage(sender);
 
             return false;
         }
@@ -45,14 +45,14 @@ public class PardonIpCommand extends VanillaCommand {
             try {
                 sender.getServer().getNetwork().unblockAddress(InetAddress.getByName(value));
             } catch (UnknownHostException e) {
-                sender.sendMessage(new TranslationContainer("commands.unbanip.invalid"));
+                sender.sendMessage(TranslationKey.COMMANDS_UNBANIP_INVALID.container());
                 return true;
             }
 
-            Command.broadcastCommandMessage(sender, new TranslationContainer("commands.unbanip.success", value));
+            Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_UNBANIP_SUCCESS.with(value));
         } else {
 
-            sender.sendMessage(new TranslationContainer("commands.unbanip.invalid"));
+            sender.sendMessage(TranslationKey.COMMANDS_UNBANIP_INVALID.container());
         }
 
         return true;

@@ -1,7 +1,7 @@
 package cn.nukkit.command;
 
 import cn.nukkit.Server;
-import cn.nukkit.lang.TranslationContainer;
+import cn.nukkit.lang.TranslationKey;
 import cn.nukkit.utils.TextFormat;
 import io.netty.util.internal.EmptyArrays;
 import lombok.extern.log4j.Log4j2;
@@ -34,13 +34,12 @@ public class FormattedCommandAlias extends Command {
         for (String formatString : formatStrings) {
             try {
                 commands.add(buildCommand(formatString, args));
+            } catch (IllegalArgumentException e) {
+                sender.sendMessage(TextFormat.RED + e.getMessage());
+                return false;
             } catch (Exception e) {
-                if (e instanceof IllegalArgumentException) {
-                    sender.sendMessage(TextFormat.RED + e.getMessage());
-                } else {
-                    sender.sendMessage(new TranslationContainer(TextFormat.RED + "%commands.generic.exception"));
-                    log.warn("An error has occurred while executing the formatted command alias {} by the sender {}", commandLabel, sender.getName(), e);
-                }
+                sender.sendMessage(TranslationKey.COMMANDS_GENERIC_EXCEPTION.with(TextFormat.RED));
+                log.warn("An error has occurred while executing the formatted command alias {} by the sender {}", commandLabel, sender.getName(), e);
                 return false;
             }
         }
@@ -73,7 +72,7 @@ public class FormattedCommandAlias extends Command {
             // Move index past the $
             index++;
             int argStart = index;
-            while (index < formatString.length() && inRange(((int) formatString.charAt(index)) - 48, 0, 9)) {
+            while (index < formatString.length() && inRange(formatString.charAt(index) - 48, 0, 9)) {
                 // Move index past current digit
                 index++;
             }
@@ -118,7 +117,7 @@ public class FormattedCommandAlias extends Command {
                 replacement.append(args[position]);
             }
 
-            formatString = formatString.substring(0, start) + replacement.toString() + formatString.substring(end);
+            formatString = formatString.substring(0, start) + replacement + formatString.substring(end);
             // Move index past the replaced data so we don't process it again
             index = start + replacement.length();
 

@@ -4,7 +4,7 @@ import cn.nukkit.Player;
 import cn.nukkit.command.CommandSender;
 import cn.nukkit.command.data.CommandParamType;
 import cn.nukkit.command.data.CommandParameter;
-import cn.nukkit.lang.TranslationContainer;
+import cn.nukkit.lang.TranslationKey;
 import cn.nukkit.utils.TextFormat;
 
 import java.util.Objects;
@@ -32,7 +32,7 @@ public class TellCommand extends VanillaCommand {
         }
 
         if (args.length < 2) {
-            sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));
+            sendUsage(sender);
 
             return false;
         }
@@ -41,12 +41,12 @@ public class TellCommand extends VanillaCommand {
 
         Player player = sender.getServer().getPlayer(name);
         if (player == null) {
-            sender.sendMessage(new TranslationContainer("commands.generic.player.notFound"));
+            sender.sendMessage(TranslationKey.COMMANDS_GENERIC_PLAYER_NOTFOUND.container());
             return true;
         }
 
         if (Objects.equals(player, sender)) {
-            sender.sendMessage(new TranslationContainer(TextFormat.RED + "%commands.message.sameTarget"));
+            sender.sendMessage(TranslationKey.COMMANDS_MESSAGE_SAMETARGET.with(TextFormat.RED));
             return true;
         }
 

@@ -6,7 +6,7 @@ import cn.nukkit.command.CommandSender;
 import cn.nukkit.command.data.CommandParamType;
 import cn.nukkit.command.data.CommandParameter;
 import cn.nukkit.event.player.PlayerKickEvent;
-import cn.nukkit.lang.TranslationContainer;
+import cn.nukkit.lang.TranslationKey;
 
 /**
  * @author MagicDroidX (Nukkit Project)
@@ -26,13 +26,7 @@ public class BanCommand extends VanillaCommand {
 
     @Override
     public boolean execute(CommandSender sender, String commandLabel, String[] args) {
-        if (!this.testPermission(sender)) {
-            return true;
-        }
-
-        if (args.length == 0) {
-            sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));
-
+        if (missingPermissionOrArgs(sender, args, 1)) {
             return false;
         }
 
@@ -53,7 +47,7 @@ public class BanCommand extends VanillaCommand {
             player.kick(PlayerKickEvent.Reason.NAME_BANNED, (reason.length() > 0) ? "Banned by admin. Reason: " + reason : "Banned by admin");
         }
 
-        Command.broadcastCommandMessage(sender, new TranslationContainer("%commands.ban.success", player != null ? player.getName() : name));
+        Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_BAN_SUCCESS.with(player != null ? player.getName() : name));
 
         return true;
     }

@@ -7,7 +7,7 @@ import cn.nukkit.command.CommandSender;
 import cn.nukkit.command.data.CommandParamType;
 import cn.nukkit.command.data.CommandParameter;
 import cn.nukkit.item.Item;
-import cn.nukkit.lang.TranslationContainer;
+import cn.nukkit.lang.TranslationKey;
 import cn.nukkit.level.Level;
 import cn.nukkit.level.Position;
 import cn.nukkit.math.BlockFace;
@@ -34,13 +34,13 @@ public class SetBlockCommand extends VanillaCommand {
         }
 
         if (args.length < 4) {
-            sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));
+            sendUsage(sender);
 
             return true;
         }
 
         if (!(sender instanceof Player)) {
-            sender.sendMessage(new TranslationContainer("commands.setblock.outOfWorld"));
+            sender.sendMessage(TranslationKey.COMMANDS_SETBLOCK_OUTOFWORLD.container());
             return true;
         }
         Player player = (Player) sender;
@@ -58,7 +58,7 @@ public class SetBlockCommand extends VanillaCommand {
                 data = Integer.parseInt(args[4]);
             }
         } catch (NumberFormatException|IndexOutOfBoundsException ignored) {
-            sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));
+            sendUsage(sender);
             return true;
         }
 
@@ -71,7 +71,7 @@ public class SetBlockCommand extends VanillaCommand {
                 case "replace":
                     break;
                 default:
-                    sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));
+                    sendUsage(sender);
                     return true;
             }
         }
@@ -85,13 +85,13 @@ public class SetBlockCommand extends VanillaCommand {
                 int blockId = BlockID.class.getField(args[3].toUpperCase()).getInt(null);
                 block = Block.get(blockId, data);
             } catch (NullPointerException|IndexOutOfBoundsException|ReflectiveOperationException ignored2) {
-                sender.sendMessage(new TranslationContainer("commands.setblock.notFound", args[3]));
+                sender.sendMessage(TranslationKey.COMMANDS_SETBLOCK_NOTFOUND.with(args[3]));
                 return true;
             }
         }
 
         if (y < 0 || y > 255) {
-            sender.sendMessage(new TranslationContainer("commands.setblock.outOfWorld"));
+            sender.sendMessage(TranslationKey.COMMANDS_SETBLOCK_OUTOFWORLD.container());
             return true;
         }
 
@@ -106,13 +106,13 @@ public class SetBlockCommand extends VanillaCommand {
                     current = level.getBlock(position);
                     break;
                 case "keep":
-                    sender.sendMessage(new TranslationContainer("commands.setblock.noChange"));
+                    sender.sendMessage(TranslationKey.COMMANDS_SETBLOCK_NOCHANGE.container());
                     return true;
             }
         }
 
         if (current.getId() == block.getId() && current.getDamage() == block.getDamage()) {
-            sender.sendMessage(new TranslationContainer("commands.setblock.noChange"));
+            sender.sendMessage(TranslationKey.COMMANDS_SETBLOCK_NOCHANGE.container());
             return true;
         }
 
@@ -123,9 +123,9 @@ public class SetBlockCommand extends VanillaCommand {
                 level.setBlockDataAt((int) x, (int) y, (int) z, data);
             }
         //if (level.setBlock(position, block, true, true)) {
-            sender.sendMessage(new TranslationContainer("commands.setblock.success"));
+            sender.sendMessage(TranslationKey.COMMANDS_SETBLOCK_SUCCESS.container());
         } else {
-            sender.sendMessage(new TranslationContainer("commands.setblock.failed"));
+            sender.sendMessage(TranslationKey.COMMANDS_SETBLOCK_FAILED.container());
         }
         return true;
     }

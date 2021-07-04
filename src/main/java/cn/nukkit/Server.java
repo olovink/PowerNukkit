@@ -30,7 +30,7 @@ import cn.nukkit.item.Item;
 import cn.nukkit.item.enchantment.Enchantment;
 import cn.nukkit.lang.BaseLang;
 import cn.nukkit.lang.TextContainer;
-import cn.nukkit.lang.TranslationContainer;
+import cn.nukkit.lang.TranslationKey;
 import cn.nukkit.level.EnumLevel;
 import cn.nukkit.level.GlobalBlockPalette;
 import cn.nukkit.level.Level;
@@ -962,7 +962,7 @@ public class Server {
             return true;
         }
 
-        sender.sendMessage(new TranslationContainer(TextFormat.RED + "%commands.generic.unknown", commandLine));
+        sender.sendMessage(TranslationKey.COMMANDS_GENERIC_UNKNOWN.with(TextFormat.RED, commandLine));
 
         return false;
     }
@@ -1807,6 +1807,9 @@ public class Server {
         nameLookup.put(nameBytes, buffer.array());
     }
 
+    @DeprecationDetails(by = "NukkitX", since = "2019-03-03",
+            replaceWith = "getOfflinePlayer(UUID)",
+            reason = "Use UUIDs for Player Data Storage Cloudburst#603")
     @Deprecated
     public IPlayer getOfflinePlayer(final String name) {
         IPlayer result = this.getPlayerExact(name.toLowerCase());

@@ -3,7 +3,7 @@ package cn.nukkit.command.defaults;
 import cn.nukkit.command.CommandSender;
 import cn.nukkit.command.data.CommandEnum;
 import cn.nukkit.command.data.CommandParameter;
-import cn.nukkit.lang.TranslationContainer;
+import cn.nukkit.lang.TranslationKey;
 import cn.nukkit.permission.BanEntry;
 import cn.nukkit.permission.BanList;
 
@@ -26,7 +26,7 @@ public class BanListCommand extends VanillaCommand {
     @Override
     public boolean execute(CommandSender sender, String commandLabel, String[] args) {
         if (!this.testPermission(sender)) {
-            return true;
+            return false;
         }
 
         BanList list;
@@ -41,7 +41,7 @@ public class BanListCommand extends VanillaCommand {
                     list = sender.getServer().getNameBans();
                     break;
                 default:
-                    sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));
+                    sender.sendMessage(TranslationKey.COMMANDS_GENERIC_USAGE.with(this.usageMessage));
                     return false;
             }
         } else {
@@ -58,9 +58,9 @@ public class BanListCommand extends VanillaCommand {
         }
 
         if (ips) {
-            sender.sendMessage(new TranslationContainer("commands.banlist.ips", String.valueOf(list.getEntires().size())));
+            sender.sendMessage(TranslationKey.COMMANDS_BANLIST_IPS.with(Integer.toString(list.getEntires().size())));
         } else {
-            sender.sendMessage(new TranslationContainer("commands.banlist.players", String.valueOf(list.getEntires().size())));
+            sender.sendMessage(TranslationKey.COMMANDS_BANLIST_PLAYERS.with(Integer.toString(list.getEntires().size())));
         }
         sender.sendMessage(builder.toString());
         return true;

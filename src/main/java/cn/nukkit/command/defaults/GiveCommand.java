@@ -9,7 +9,7 @@ import cn.nukkit.command.data.CommandParamType;
 import cn.nukkit.command.data.CommandParameter;
 import cn.nukkit.item.Item;
 import cn.nukkit.item.ItemBlock;
-import cn.nukkit.lang.TranslationContainer;
+import cn.nukkit.lang.TranslationKey;
 import cn.nukkit.utils.TextFormat;
 
 import java.util.ArrayList;
@@ -51,7 +51,7 @@ public class GiveCommand extends VanillaCommand {
         }
 
         if (args.length < 2) {
-            sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));
+            sendUsage(sender);
 
             return true;
         }
@@ -62,17 +62,17 @@ public class GiveCommand extends VanillaCommand {
         try {
             item = Item.fromString(args[1]);
         } catch (Exception e) {
-            sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));
+            sendUsage(sender);
             return true;
         }
         
         if (item.getDamage() < 0) {
-            sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));
+            sendUsage(sender);
             return true;
         }
         
         if (item instanceof ItemBlock && item.getBlock() instanceof BlockUnknown) {
-            sender.sendMessage(new TranslationContainer("commands.give.block.notFound", args[1]));
+            sender.sendMessage(TranslationKey.COMMANDS_GIVE_BLOCK_NOTFOUND.with(args[1]));
             return true;
         }
 
@@ -87,18 +87,18 @@ public class GiveCommand extends VanillaCommand {
             count = 1;
         }
         if (count <= 0) {
-            sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));
+            sendUsage(sender);
             return true;
         }
         item.setCount(count);
 
         if (player == null) {
-            sender.sendMessage(new TranslationContainer(TextFormat.RED + "%commands.generic.player.notFound"));
+            sender.sendMessage(TranslationKey.COMMANDS_GENERIC_PLAYER_NOTFOUND.with(TextFormat.RED));
             return true;
         }
         
         if (item.isNull()) {
-            sender.sendMessage(new TranslationContainer(TextFormat.RED + "%commands.give.item.notFound", args[1]));
+            sender.sendMessage(TranslationKey.COMMANDS_GIVE_ITEM_NOTFOUND.with(TextFormat.RED, args[1]));
             return true;
         }
         
@@ -126,8 +126,7 @@ public class GiveCommand extends VanillaCommand {
             player.dropItem(drop);
         }
         
-        Command.broadcastCommandMessage(sender, new TranslationContainer(
-                "%commands.give.success",
+        Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_GIVE_SUCCESS.with(
                 item.getName() + " (" + item.getId() + ":" + item.getDamage() + ")",
                 String.valueOf(item.getCount()),
                 player.getName()));

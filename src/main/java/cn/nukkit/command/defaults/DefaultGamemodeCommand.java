@@ -5,7 +5,7 @@ import cn.nukkit.command.CommandSender;
 import cn.nukkit.command.data.CommandEnum;
 import cn.nukkit.command.data.CommandParamType;
 import cn.nukkit.command.data.CommandParameter;
-import cn.nukkit.lang.TranslationContainer;
+import cn.nukkit.lang.TranslationKey;
 
 /**
  * @author xtypr
@@ -27,19 +27,15 @@ public class DefaultGamemodeCommand extends VanillaCommand {
 
     @Override
     public boolean execute(CommandSender sender, String commandLabel, String[] args) {
-        if (!this.testPermission(sender)) {
-            return true;
-        }
-        if (args.length == 0) {
-            sender.sendMessage(new TranslationContainer("commands.generic.usage", new String[]{this.usageMessage}));
+        if (missingPermissionOrArgs(sender, args, 1)) {
             return false;
         }
         int gameMode = Server.getGamemodeFromString(args[0]);
         if (gameMode != -1) {
             sender.getServer().setPropertyInt("gamemode", gameMode);
-            sender.sendMessage(new TranslationContainer("commands.defaultgamemode.success", new String[]{Server.getGamemodeString(gameMode)}));
+            sender.sendMessage(TranslationKey.COMMANDS_DEFAULTGAMEMODE_SUCCESS.with(Server.getGamemodeString(gameMode)));
         } else {
-            sender.sendMessage("Unknown game mode"); //
+            sender.sendMessage(TranslationKey.COMMANDS_GAMEMODE_FAIL_INVALID.with(args[0])); //
         }
         return true;
     }

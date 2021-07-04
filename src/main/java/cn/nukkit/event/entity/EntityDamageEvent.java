@@ -9,6 +9,7 @@ import cn.nukkit.item.enchantment.sideeffect.SideEffect;
 import cn.nukkit.potion.Effect;
 import cn.nukkit.utils.EventException;
 import com.google.common.collect.ImmutableMap;
+import lombok.val;
 import lombok.var;
 
 import javax.annotation.Nonnull;
@@ -32,13 +33,16 @@ public class EntityDamageEvent extends EntityEvent implements Cancellable {
     private final Map<DamageModifier, Float> originals;
 
     private SideEffect[] sideEffects = SideEffect.EMPTY_ARRAY;
-
+    
+    @Nonnull
+    private static Map<DamageModifier, Float> createModifierMap(float baseDamage) {
+        val damageModifiers = new EnumMap<DamageModifier, Float>(DamageModifier.class);
+        damageModifiers.put(DamageModifier.BASE, baseDamage);
+        return damageModifiers;
+    }
+    
     public EntityDamageEvent(Entity entity, DamageCause cause, float damage) {
-        this(entity, cause, new EnumMap<DamageModifier, Float>(DamageModifier.class) {
-            {
-                put(DamageModifier.BASE, damage);
-            }
-        });
+        this(entity, cause, createModifierMap(damage));
     }
 
     public EntityDamageEvent(Entity entity, DamageCause cause, Map<DamageModifier, Float> modifiers) {
@@ -52,8 +56,8 @@ public class EntityDamageEvent extends EntityEvent implements Cancellable {
             throw new EventException("BASE Damage modifier missing");
         }
 
-        if (entity.hasEffect(Effect.DAMAGE_RESISTANCE)) {
-            this.setDamage((float) -(this.getDamage(DamageModifier.BASE) * 0.20 * (entity.getEffect(Effect.DAMAGE_RESISTANCE).getAmplifier() + 1)), DamageModifier.RESISTANCE);
+        if (entity.hasEffect(Effect.RESISTANCE)) {
+            this.setDamage((float) -(this.getDamage(DamageModifier.BASE) * 0.20 * (entity.getEffect(Effect.RESISTANCE).getAmplifier() + 1)), DamageModifier.RESISTANCE);
         }
     }
 
@@ -120,11 +124,11 @@ public class EntityDamageEvent extends EntityEvent implements Cancellable {
     @Since("FUTURE")
     @Nonnull
     public SideEffect[] getSideEffects() {
-        SideEffect[] sideEffects = this.sideEffects;
-        if (sideEffects.length == 0) {
-            return sideEffects;
+        SideEffect[] currentSideEffects = this.sideEffects;
+        if (currentSideEffects.length == 0) {
+            return currentSideEffects;
         }
-        return Arrays.stream(sideEffects)
+        return Arrays.stream(currentSideEffects)
                 .map(SideEffect::clone)
                 .toArray(SideEffect[]::new)
         ;
@@ -173,8 +177,9 @@ public class EntityDamageEvent extends EntityEvent implements Cancellable {
             case MAGIC:
             case SUICIDE:
                 return false;
+            default:
+                return true;
         }
-        return true;
     }
 
     public enum DamageModifier {

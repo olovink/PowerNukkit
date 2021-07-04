@@ -1,5 +1,7 @@
 package cn.nukkit.lang;
 
+import io.netty.util.internal.EmptyArrays;
+
 /**
  * @author MagicDroidX (Nukkit Project)
  */
@@ -8,7 +10,7 @@ public class TranslationContainer extends TextContainer implements Cloneable {
     protected String[] params;
 
     public TranslationContainer(String text) {
-        this(text, new String[]{});
+        this(text, EmptyArrays.EMPTY_STRINGS);
     }
 
     public TranslationContainer(String text, String params) {
@@ -19,6 +21,18 @@ public class TranslationContainer extends TextContainer implements Cloneable {
     public TranslationContainer(String text, String... params) {
         super(text);
         this.setParameters(params);
+    }
+
+    public TranslationContainer(TranslationKey message) {
+        this(message.getCode());
+    }
+
+    public TranslationContainer(TranslationKey message, String params) {
+        this(message.getCode(), params);
+    }
+
+    public TranslationContainer(TranslationKey message, String... params) {
+        this(message.getCode(), params);
     }
 
     public String[] getParameters() {
@@ -41,6 +55,8 @@ public class TranslationContainer extends TextContainer implements Cloneable {
 
     @Override
     public TranslationContainer clone() {
-        return new TranslationContainer(this.text, this.params.clone());
+        TranslationContainer container = (TranslationContainer) super.clone();
+        container.params = this.params.clone();
+        return container;
     }
 }

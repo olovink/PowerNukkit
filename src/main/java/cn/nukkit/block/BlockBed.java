@@ -12,7 +12,7 @@ import cn.nukkit.entity.Entity;
 import cn.nukkit.event.block.BlockExplosionPrimeEvent;
 import cn.nukkit.item.Item;
 import cn.nukkit.item.ItemBed;
-import cn.nukkit.lang.TranslationContainer;
+import cn.nukkit.lang.TranslationKey;
 import cn.nukkit.level.Explosion;
 import cn.nukkit.level.GameRule;
 import cn.nukkit.level.Level;
@@ -140,7 +140,7 @@ public class BlockBed extends BlockTransparentMeta implements Faceable, BlockEnt
             head = getSide(dir);
             if (head.getId() != getId() || !((BlockBed) head).isHeadPiece() || !((BlockBed) head).getBlockFace().equals(dir)) {
                 if (player != null && !willExplode) {
-                    player.sendMessage(new TranslationContainer(TextFormat.GRAY + "%tile.bed.notValid"));
+                    player.sendMessage(TranslationKey.TILE_BED_NOTVALID.with(TextFormat.GRAY));
                 }
                 
                 if (!shouldExplode) {
@@ -183,7 +183,7 @@ public class BlockBed extends BlockTransparentMeta implements Faceable, BlockEnt
                 .addCoord(footPart.getXOffset(), 0, footPart.getZOffset());
 
         if (!accessArea.isVectorInside(player)) {
-            player.sendMessage(new TranslationContainer(TextFormat.GRAY + "%tile.bed.tooFar"));
+            player.sendMessage(TranslationKey.TILE_BED_TOOFAR.with(TextFormat.GRAY));
             return true;
         }
 
@@ -191,14 +191,14 @@ public class BlockBed extends BlockTransparentMeta implements Faceable, BlockEnt
         if (!player.getSpawn().equals(spawn)) {
             player.setSpawn(spawn);
         }
-        player.sendMessage(new TranslationContainer(TextFormat.GRAY + "%tile.bed.respawnSet"));
+        player.sendMessage(TranslationKey.TILE_BED_RESPAWNSET.with(TextFormat.GRAY));
 
         int time = this.getLevel().getTime() % Level.TIME_FULL;
 
         boolean isNight = (time >= Level.TIME_NIGHT && time < Level.TIME_SUNRISE);
 
         if (!isNight) {
-            player.sendMessage(new TranslationContainer(TextFormat.GRAY + "%tile.bed.noSleep"));
+            player.sendMessage(TranslationKey.TILE_BED_NOSLEEP.with(TextFormat.GRAY));
             return true;
         }
 
@@ -216,7 +216,7 @@ public class BlockBed extends BlockTransparentMeta implements Faceable, BlockEnt
         }
 
         if (!player.sleepOn(head)) {
-            player.sendMessage(new TranslationContainer(TextFormat.GRAY + "%tile.bed.occupied"));
+            player.sendMessage(TranslationKey.TILE_BED_OCCUPIED.with(TextFormat.GRAY));
         }
 
         return true;

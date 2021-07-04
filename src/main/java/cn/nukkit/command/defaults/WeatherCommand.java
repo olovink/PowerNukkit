@@ -6,7 +6,7 @@ import cn.nukkit.command.CommandSender;
 import cn.nukkit.command.data.CommandEnum;
 import cn.nukkit.command.data.CommandParamType;
 import cn.nukkit.command.data.CommandParameter;
-import cn.nukkit.lang.TranslationContainer;
+import cn.nukkit.lang.TranslationKey;
 import cn.nukkit.level.Level;
 
 /**
@@ -30,7 +30,7 @@ public class WeatherCommand extends VanillaCommand {
             return true;
         }
         if (args.length == 0 || args.length > 2) {
-            sender.sendMessage(new TranslationContainer("commands.weather.usage", this.usageMessage));
+            sendUsage(sender);
             return false;
         }
 
@@ -41,7 +41,7 @@ public class WeatherCommand extends VanillaCommand {
             try {
                 seconds = Integer.parseInt(args[1]);
             } catch (Exception e) {
-                sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));
+                sendUsage(sender);
                 return true;
             }
         } else {
@@ -61,23 +61,23 @@ public class WeatherCommand extends VanillaCommand {
                 level.setRainTime(seconds * 20);
                 level.setThunderTime(seconds * 20);
                 Command.broadcastCommandMessage(sender,
-                        new TranslationContainer("commands.weather.clear"));
+                        TranslationKey.COMMANDS_WEATHER_CLEAR.container());
                 return true;
             case "rain":
                 level.setRaining(true);
                 level.setRainTime(seconds * 20);
                 Command.broadcastCommandMessage(sender,
-                        new TranslationContainer("commands.weather.rain"));
+                        TranslationKey.COMMANDS_WEATHER_RAIN.container());
                 return true;
             case "thunder":
                 level.setThundering(true);
                 level.setRainTime(seconds * 20);
                 level.setThunderTime(seconds * 20);
                 Command.broadcastCommandMessage(sender,
-                        new TranslationContainer("commands.weather.thunder"));
+                        TranslationKey.COMMANDS_WEATHER_THUNDER.container());
                 return true;
             default:
-                sender.sendMessage(new TranslationContainer("commands.weather.usage", this.usageMessage));
+                sendUsage(sender);
                 return false;
         }
 

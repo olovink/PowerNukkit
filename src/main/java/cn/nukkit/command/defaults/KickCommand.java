@@ -6,7 +6,7 @@ import cn.nukkit.command.CommandSender;
 import cn.nukkit.command.data.CommandParamType;
 import cn.nukkit.command.data.CommandParameter;
 import cn.nukkit.event.player.PlayerKickEvent;
-import cn.nukkit.lang.TranslationContainer;
+import cn.nukkit.lang.TranslationKey;
 import cn.nukkit.utils.TextFormat;
 
 /**
@@ -31,7 +31,7 @@ public class KickCommand extends VanillaCommand {
             return true;
         }
         if (args.length == 0) {
-            sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));
+            sendUsage(sender);
             return false;
         }
 
@@ -50,13 +50,13 @@ public class KickCommand extends VanillaCommand {
         if (player != null) {
             player.kick(PlayerKickEvent.Reason.KICKED_BY_ADMIN, reason.toString());
             if (reason.length() >= 1) {
-                Command.broadcastCommandMessage(sender, new TranslationContainer("commands.kick.success.reason", player.getName(), reason.toString())
+                Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_KICK_SUCCESS_REASON.with(player.getName(), reason.toString())
                 );
             } else {
-                Command.broadcastCommandMessage(sender, new TranslationContainer("commands.kick.success", player.getName()));
+                Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_KICK_SUCCESS.with("commands.kick.success", player.getName()));
             }
         } else {
-            sender.sendMessage(new TranslationContainer(TextFormat.RED + "%commands.generic.player.notFound"));
+            sender.sendMessage(TranslationKey.COMMANDS_GENERIC_PLAYER_NOTFOUND.with(TextFormat.RED));
         }
 
         return true;

@@ -25,12 +25,12 @@ public class TimingsCommand extends VanillaCommand {
     @Override
     public boolean execute(CommandSender sender, String commandLabel, String[] args) {
         if (!this.testPermission(sender)) {
-            return true;
+            return false;
         }
 
         if (args.length != 1) {
-            sender.sendMessage(new TranslationContainer("commands.generic.usage", usageMessage));
-            return true;
+            sendUsage(sender);
+            return false;
         }
 
         String mode = args[0].toLowerCase();
@@ -55,20 +55,22 @@ public class TimingsCommand extends VanillaCommand {
             case "verbon":
                 sender.sendMessage(new TranslationContainer("nukkit.command.timings.verboseEnable"));
                 Timings.setVerboseEnabled(true);
-                break;
+                return true;
             case "verboff":
                 sender.sendMessage(new TranslationContainer("nukkit.command.timings.verboseDisable"));
                 Timings.setVerboseEnabled(true);
-                break;
+                return true;
             case "reset":
                 Timings.reset();
                 sender.sendMessage(new TranslationContainer("nukkit.command.timings.reset"));
-                break;
+                return true;
             case "report":
             case "paste":
                 TimingsExport.reportTimings(sender);
-                break;
+                return true;
+            default:
+                sendUsage(sender);
+                return false;
         }
-        return true;
     }
 }

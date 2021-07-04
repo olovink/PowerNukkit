@@ -2,7 +2,7 @@ package cn.nukkit.command.defaults;
 
 import cn.nukkit.command.Command;
 import cn.nukkit.command.CommandSender;
-import cn.nukkit.lang.TranslationContainer;
+import cn.nukkit.lang.TranslationKey;
 
 /**
  * @author xtypr
@@ -22,7 +22,7 @@ public class SaveOnCommand extends VanillaCommand {
             return true;
         }
         sender.getServer().setAutoSave(true);
-        Command.broadcastCommandMessage(sender, new TranslationContainer("commands.save.enabled"));
+        Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_SAVE_ENABLED.container());
         return true;
     }
 }

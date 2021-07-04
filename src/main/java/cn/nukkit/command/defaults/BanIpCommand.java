@@ -7,7 +7,7 @@ import cn.nukkit.command.CommandSender;
 import cn.nukkit.command.data.CommandParamType;
 import cn.nukkit.command.data.CommandParameter;
 import cn.nukkit.event.player.PlayerKickEvent;
-import cn.nukkit.lang.TranslationContainer;
+import cn.nukkit.lang.TranslationKey;
 import cn.nukkit.nbt.NBTIO;
 import cn.nukkit.nbt.tag.CompoundTag;
 
@@ -43,13 +43,7 @@ public class BanIpCommand extends VanillaCommand {
     @PowerNukkitDifference(since = "1.4.0.0-PN", info = "Fixed resource leak")
     @Override
     public boolean execute(CommandSender sender, String commandLabel, String[] args) {
-        if (!this.testPermission(sender)) {
-            return true;
-        }
-
-        if (args.length == 0) {
-            sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));
-
+        if (missingPermissionOrArgs(sender, args, 1)) {
             return false;
         }
 
@@ -66,13 +60,13 @@ public class BanIpCommand extends VanillaCommand {
         if (Pattern.matches("^(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9])\\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[0-9])$", value)) {
             this.processIPBan(value, sender, reason.toString());
 
-            Command.broadcastCommandMessage(sender, new TranslationContainer("commands.banip.success", value));
+            Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_BANIP_SUCCESS.with(value));
         } else {
             Player player = sender.getServer().getPlayer(value);
             if (player != null) {
                 this.processIPBan(player.getAddress(), sender, reason.toString());
 
-                Command.broadcastCommandMessage(sender, new TranslationContainer("commands.banip.success.players", player.getAddress(), player.getName()));
+                Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_BANIP_SUCCESS_PLAYERS.with(player.getAddress(), player.getName()));
             } else {
                 String name = value.toLowerCase();
                 String path = sender.getServer().getDataPath() + "players/";
@@ -89,9 +83,9 @@ public class BanIpCommand extends VanillaCommand {
                 if (nbt != null && nbt.contains("lastIP") && Pattern.matches("^(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9])\\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[0-9])$", (value = nbt.getString("lastIP")))) {
                     this.processIPBan(value, sender, reason.toString());
 
-                    Command.broadcastCommandMessage(sender, new TranslationContainer("commands.banip.success", value));
+                    Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_BANIP_SUCCESS.with(value));
                 } else {
-                    sender.sendMessage(new TranslationContainer("commands.banip.invalid"));
+                    sender.sendMessage(TranslationKey.COMMANDS_BANIP_INVALID.container());
                     return false;
                 }
             }

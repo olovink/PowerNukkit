@@ -5,7 +5,7 @@ import cn.nukkit.command.CommandSender;
 import cn.nukkit.command.ConsoleCommandSender;
 import cn.nukkit.command.data.CommandParamType;
 import cn.nukkit.command.data.CommandParameter;
-import cn.nukkit.lang.TranslationContainer;
+import cn.nukkit.lang.TranslationKey;
 import cn.nukkit.utils.TextFormat;
 
 /**
@@ -30,7 +30,7 @@ public class SayCommand extends VanillaCommand {
         }
 
         if (args.length == 0) {
-            sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));
+            sendUsage(sender);
             return false;
         }
 
@@ -52,8 +52,8 @@ public class SayCommand extends VanillaCommand {
         }
 
 
-        sender.getServer().broadcastMessage(new TranslationContainer(
-                TextFormat.LIGHT_PURPLE + "%chat.type.announcement",
+        sender.getServer().broadcastMessage(TranslationKey.CHAT_TYPE_ANNOUNCEMENT.with(
+                TextFormat.LIGHT_PURPLE,
                 senderString, TextFormat.LIGHT_PURPLE + msg.toString()));
         return true;
     }

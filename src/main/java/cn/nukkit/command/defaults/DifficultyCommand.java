@@ -6,7 +6,7 @@ import cn.nukkit.command.CommandSender;
 import cn.nukkit.command.data.CommandEnum;
 import cn.nukkit.command.data.CommandParamType;
 import cn.nukkit.command.data.CommandParameter;
-import cn.nukkit.lang.TranslationContainer;
+import cn.nukkit.lang.TranslationKey;
 import cn.nukkit.network.protocol.SetDifficultyPacket;
 
 import java.util.ArrayList;
@@ -31,15 +31,10 @@ public class DifficultyCommand extends VanillaCommand {
 
     @Override
     public boolean execute(CommandSender sender, String commandLabel, String[] args) {
-        if (!this.testPermission(sender)) {
-            return true;
-        }
-
-        if (args.length != 1) {
-            sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));
+        if (missingPermissionOrArgs(sender, args, 1)) {
             return false;
         }
-
+        
         int difficulty = Server.getDifficultyFromString(args[0]);
 
         if (sender.getServer().isHardcore()) {
@@ -53,9 +48,9 @@ public class DifficultyCommand extends VanillaCommand {
             pk.difficulty = sender.getServer().getDifficulty();
             Server.broadcastPacket(new ArrayList<>(sender.getServer().getOnlinePlayers().values()), pk);
 
-            Command.broadcastCommandMessage(sender, new TranslationContainer("commands.difficulty.success", String.valueOf(difficulty)));
+            Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_DIFFICULTY_SUCCESS.with(Integer.toString(difficulty)));
         } else {
-            sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));
+            sender.sendMessage(TranslationKey.COMMANDS_GENERIC_USAGE.with(this.usageMessage));
 
             return false;
         }

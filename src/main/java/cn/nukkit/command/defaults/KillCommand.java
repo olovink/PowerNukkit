@@ -10,6 +10,7 @@ import cn.nukkit.entity.Entity;
 import cn.nukkit.event.entity.EntityDamageEvent;
 import cn.nukkit.event.entity.EntityDamageEvent.DamageCause;
 import cn.nukkit.lang.TranslationContainer;
+import cn.nukkit.lang.TranslationKey;
 import cn.nukkit.level.Level;
 import cn.nukkit.utils.TextFormat;
 
@@ -37,12 +38,12 @@ public class KillCommand extends VanillaCommand {
             return true;
         }
         if (args.length >= 2) {
-            sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));
+            sendUsage(sender);
             return false;
         }
         if (args.length == 1) {
             if (!sender.hasPermission("nukkit.command.kill.other")) {
-                sender.sendMessage(new TranslationContainer(TextFormat.RED + "%commands.generic.permission"));
+                sendNoPermissionMessage(sender);
                 return true;
             }
             Player player = sender.getServer().getPlayer(args[0]);
@@ -54,7 +55,7 @@ public class KillCommand extends VanillaCommand {
                 }
                 player.setLastDamageCause(ev);
                 player.setHealth(0);
-                Command.broadcastCommandMessage(sender, new TranslationContainer("commands.kill.successful", player.getName()));
+                Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_KILL_SUCCESSFUL.with(player.getName()));
             } else if (args[0].equals("@e")) {
                 StringJoiner joiner = new StringJoiner(", ");
                 for (Level level : Server.getInstance().getLevels().values()) {
@@ -66,10 +67,10 @@ public class KillCommand extends VanillaCommand {
                     }
                 }
                 String entities = joiner.toString();
-                sender.sendMessage(new TranslationContainer("commands.kill.successful", entities.isEmpty() ? "0" : entities));
+                sender.sendMessage(TranslationKey.COMMANDS_KILL_SUCCESSFUL.with(entities.isEmpty() ? "0" : entities));
             } else if (args[0].equals("@s")) {
                 if (!sender.hasPermission("nukkit.command.kill.self")) {
-                    sender.sendMessage(new TranslationContainer(TextFormat.RED + "%commands.generic.permission"));
+                    sendNoPermissionMessage(sender);
                     return true;
                 }
                 EntityDamageEvent ev = new EntityDamageEvent((Player) sender, DamageCause.SUICIDE, 1000);
@@ -79,10 +80,10 @@ public class KillCommand extends VanillaCommand {
                 }
                 ((Player) sender).setLastDamageCause(ev);
                 ((Player) sender).setHealth(0);
-                sender.sendMessage(new TranslationContainer("commands.kill.successful", sender.getName()));
+                sender.sendMessage(TranslationKey.COMMANDS_KILL_SUCCESSFUL.with(sender.getName()));
             } else if (args[0].equals("@a")) {
                 if (!sender.hasPermission("nukkit.command.kill.other")) {
-                    sender.sendMessage(new TranslationContainer(TextFormat.RED + "%commands.generic.permission"));
+                    sendNoPermissionMessage(sender);
                     return true;
                 }
                 for (Level level : Server.getInstance().getLevels().values()) {
@@ -100,7 +101,7 @@ public class KillCommand extends VanillaCommand {
         }
         if (sender instanceof Player) {
             if (!sender.hasPermission("nukkit.command.kill.self")) {
-                sender.sendMessage(new TranslationContainer(TextFormat.RED + "%commands.generic.permission"));
+                sendNoPermissionMessage(sender);
                 return true;
             }
             EntityDamageEvent ev = new EntityDamageEvent((Player) sender, DamageCause.SUICIDE, 1000);
@@ -110,9 +111,9 @@ public class KillCommand extends VanillaCommand {
             }
             ((Player) sender).setLastDamageCause(ev);
             ((Player) sender).setHealth(0);
-            sender.sendMessage(new TranslationContainer("commands.kill.successful", sender.getName()));
+            sender.sendMessage(TranslationKey.COMMANDS_KILL_SUCCESSFUL.with(sender.getName()));
         } else {
-            sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));
+            sendUsage(sender);
             return false;
         }
         return true;

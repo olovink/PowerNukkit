@@ -3,7 +3,7 @@ package cn.nukkit.command.defaults;
 import cn.nukkit.Player;
 import cn.nukkit.command.Command;
 import cn.nukkit.command.CommandSender;
-import cn.nukkit.lang.TranslationContainer;
+import cn.nukkit.lang.TranslationKey;
 import cn.nukkit.level.Level;
 
 /**
@@ -24,7 +24,7 @@ public class SaveCommand extends VanillaCommand {
             return true;
         }
 
-        Command.broadcastCommandMessage(sender, new TranslationContainer("commands.save.start"));
+        Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_SAVE_START.container());
 
         for (Player player : sender.getServer().getOnlinePlayers().values()) {
             player.save();
@@ -34,7 +34,7 @@ public class SaveCommand extends VanillaCommand {
             level.save(true);
         }
 
-        Command.broadcastCommandMessage(sender, new TranslationContainer("commands.save.success"));
+        Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_SAVE_SUCCESS.container());
         return true;
     }
 }

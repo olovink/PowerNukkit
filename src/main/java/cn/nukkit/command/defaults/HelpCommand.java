@@ -5,7 +5,7 @@ import cn.nukkit.command.CommandSender;
 import cn.nukkit.command.ConsoleCommandSender;
 import cn.nukkit.command.data.CommandParamType;
 import cn.nukkit.command.data.CommandParameter;
-import cn.nukkit.lang.TranslationContainer;
+import cn.nukkit.lang.TranslationKey;
 import cn.nukkit.utils.TextFormat;
 
 import java.util.Map;
@@ -82,7 +82,7 @@ public class HelpCommand extends VanillaCommand {
                 pageNumber = 1;
             }
 
-            sender.sendMessage(new TranslationContainer("commands.help.header", String.valueOf(pageNumber), String.valueOf(totalPage)));
+            sender.sendMessage(TranslationKey.COMMANDS_HELP_HEADER.with(Integer.toString(pageNumber), Integer.toString(totalPage)));
             int i = 1;
             for (Command command1 : commands.values()) {
                 if (i >= (pageNumber - 1) * pageHeight + 1 && i <= Math.min(commands.size(), pageNumber * pageHeight)) {

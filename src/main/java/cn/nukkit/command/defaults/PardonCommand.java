@@ -4,7 +4,7 @@ import cn.nukkit.command.Command;
 import cn.nukkit.command.CommandSender;
 import cn.nukkit.command.data.CommandParamType;
 import cn.nukkit.command.data.CommandParameter;
-import cn.nukkit.lang.TranslationContainer;
+import cn.nukkit.lang.TranslationKey;
 
 /**
  * @author MagicDroidX (Nukkit Project)
@@ -28,14 +28,14 @@ public class PardonCommand extends VanillaCommand {
         }
 
         if (args.length != 1) {
-            sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));
+            sendUsage(sender);
 
             return false;
         }
 
         sender.getServer().getNameBans().remove(args[0]);
 
-        Command.broadcastCommandMessage(sender, new TranslationContainer("%commands.unban.success", args[0]));
+        Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_UNBAN_SUCCESS.with(args[0]));
 
         return true;
     }

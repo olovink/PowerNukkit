@@ -30,6 +30,7 @@ import cn.nukkit.math.Vector3;
 import cn.nukkit.nbt.tag.CompoundTag;
 import cn.nukkit.nbt.tag.Tag;
 import cn.nukkit.potion.Effect;
+import cn.nukkit.potion.Potion;
 import cn.nukkit.utils.BlockColor;
 import cn.nukkit.utils.Faceable;
 import lombok.extern.log4j.Log4j2;
@@ -272,12 +273,11 @@ public class BlockCampfire extends BlockTransparentMeta implements Faceable, Blo
             setExtinguished(false);
             level.setBlock(this, this, true);
             return true;
-        } else if (projectile instanceof EntityPotion && !isExtinguished()) {
-            if (((EntityPotion) projectile).potionId == 0) {
-                setExtinguished(true);
-                level.setBlock(this, this, true);
-                return true;
-            }
+        } else if (projectile instanceof EntityPotion && ((EntityPotion) projectile).potionId == Potion.WATER 
+                && !isExtinguished()) {
+            setExtinguished(true);
+            level.setBlock(this, this, true);
+            return true;
         }
         return false;
     }

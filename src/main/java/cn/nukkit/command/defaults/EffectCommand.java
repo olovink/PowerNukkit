@@ -6,7 +6,7 @@ import cn.nukkit.command.CommandSender;
 import cn.nukkit.command.data.CommandEnum;
 import cn.nukkit.command.data.CommandParamType;
 import cn.nukkit.command.data.CommandParameter;
-import cn.nukkit.lang.TranslationContainer;
+import cn.nukkit.lang.TranslationKey;
 import cn.nukkit.potion.Effect;
 import cn.nukkit.potion.InstantEffect;
 import cn.nukkit.utils.ServerException;
@@ -49,24 +49,20 @@ public class EffectCommand extends Command {
 
     @Override
     public boolean execute(CommandSender sender, String commandLabel, String[] args) {
-        if (!this.testPermission(sender)) {
-            return true;
-        }
-        if (args.length < 2) {
-            sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));
-            return true;
+        if (missingPermissionOrArgs(sender, args, 2)) {
+            return false;
         }
         Player player = sender.getServer().getPlayer(args[0]);
         if (player == null) {
-            sender.sendMessage(new TranslationContainer(TextFormat.RED + "%commands.generic.player.notFound"));
-            return true;
+            sender.sendMessage(TranslationKey.COMMANDS_GENERIC_PLAYER_NOTFOUND.with(TextFormat.RED));
+            return false;
         }
         if (args[1].equalsIgnoreCase("clear")) {
             for (Effect effect : player.getEffects().values()) {
                 player.removeEffect(effect.getId());
             }
-            sender.sendMessage(new TranslationContainer("commands.effect.success.removed.all", player.getDisplayName()));
-            return true;
+            sender.sendMessage(TranslationKey.COMMANDS_EFFECT_SUCCESS_REMOVED_ALL.with(player.getDisplayName()));
+            return false;
         }
         Effect effect;
         try {
@@ -75,8 +71,8 @@ public class EffectCommand extends Command {
             try {
                 effect = Effect.getEffectByName(args[1]);
             } catch (Exception e) {
-                sender.sendMessage(new TranslationContainer("commands.effect.notFound", args[1]));
-                return true;
+                sender.sendMessage(TranslationKey.COMMANDS_EFFECT_NOTFOUND.with(args[1]));
+                return false;
             }
         }
         int duration = 300;
@@ -85,8 +81,8 @@ public class EffectCommand extends Command {
             try {
                 duration = Integer.parseInt(args[2]);
             } catch (NumberFormatException a) {
-                sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));
-                return true;
+                sender.sendMessage(TranslationKey.COMMANDS_GENERIC_USAGE.with(this.usageMessage));
+                return false;
             }
             if (!(effect instanceof InstantEffect)) {
                 duration *= 20;
@@ -98,8 +94,8 @@ public class EffectCommand extends Command {
             try {
                 amplification = Integer.parseInt(args[3]);
             } catch (NumberFormatException a) {
-                sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));
-                return true;
+                sendUsage(sender);
+                return false;
             }
         }
         if (args.length >= 5) {
@@ -111,18 +107,18 @@ public class EffectCommand extends Command {
         if (duration == 0) {
             if (!player.hasEffect(effect.getId())) {
                 if (player.getEffects().size() == 0) {
-                    sender.sendMessage(new TranslationContainer("commands.effect.failure.notActive.all", player.getDisplayName()));
+                    sender.sendMessage(TranslationKey.COMMANDS_EFFECT_FAILURE_NOTACTIVE_ALL.with(player.getDisplayName()));
                 } else {
-                    sender.sendMessage(new TranslationContainer("commands.effect.failure.notActive", effect.getName(), player.getDisplayName()));
+                    sender.sendMessage(TranslationKey.COMMANDS_EFFECT_FAILURE_NOTACTIVE.with(effect.getName(), player.getDisplayName()));
                 }
-                return true;
+                return false;
             }
             player.removeEffect(effect.getId());
-            sender.sendMessage(new TranslationContainer("commands.effect.success.removed", effect.getName(), player.getDisplayName()));
+            sender.sendMessage(TranslationKey.COMMANDS_EFFECT_SUCCESS_REMOVED.with(effect.getName(), player.getDisplayName()));
         } else {
             effect.setDuration(duration).setAmplifier(amplification);
             player.addEffect(effect);
-            Command.broadcastCommandMessage(sender, new TranslationContainer("%commands.effect.success", effect.getName(), String.valueOf(effect.getAmplifier()), player.getDisplayName(), String.valueOf(effect.getDuration() / 20)));
+            Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_EFFECT_SUCCESS.with(effect.getName(), Integer.toString(effect.getAmplifier()), player.getDisplayName(), Integer.toString(effect.getDuration() / 20)));
         }
         return true;
     }

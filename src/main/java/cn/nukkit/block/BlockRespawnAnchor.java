@@ -26,7 +26,7 @@ import cn.nukkit.blockproperty.IntBlockProperty;
 import cn.nukkit.event.block.BlockExplosionPrimeEvent;
 import cn.nukkit.item.Item;
 import cn.nukkit.item.ItemTool;
-import cn.nukkit.lang.TranslationContainer;
+import cn.nukkit.lang.TranslationKey;
 import cn.nukkit.level.Explosion;
 import cn.nukkit.level.GameRule;
 import cn.nukkit.level.Level;
@@ -113,7 +113,7 @@ public class BlockRespawnAnchor extends BlockMeta {
         player.setSpawnBlock(this);
         player.setSpawn(player);
         getLevel().addSound(this, Sound.RESPAWN_ANCHOR_SET_SPAWN);
-        player.sendMessage(new TranslationContainer(TextFormat.GRAY + "%tile.respawn_anchor.respawnSet"));
+        player.sendMessage(TranslationKey.TILE_RESPAWN_ANCHOR_RESPAWNSET.with(TextFormat.GRAY));
         return true;
     }
 

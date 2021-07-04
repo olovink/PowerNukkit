@@ -7,7 +7,7 @@ import cn.nukkit.command.data.CommandEnum;
 import cn.nukkit.command.data.CommandParamType;
 import cn.nukkit.command.data.CommandParameter;
 import cn.nukkit.item.Item;
-import cn.nukkit.lang.TranslationContainer;
+import cn.nukkit.lang.TranslationKey;
 import cn.nukkit.level.Position;
 import cn.nukkit.level.particle.*;
 import cn.nukkit.math.Vector3;
@@ -43,7 +43,7 @@ public class ParticleCommand extends VanillaCommand {
         }
 
         if (args.length < 4) {
-            sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));
+            sendUsage(sender);
 
             return true;
         }
@@ -98,7 +98,7 @@ public class ParticleCommand extends VanillaCommand {
             return true;
         }
 
-        sender.sendMessage(new TranslationContainer("commands.particle.success", name, String.valueOf(count)));
+        sender.sendMessage(TranslationKey.COMMANDS_PARTICLE_SUCCESS.with(name, Integer.toString(count)));
 
         Random random = ThreadLocalRandom.current();
 

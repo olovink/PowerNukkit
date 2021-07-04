@@ -1,12 +1,12 @@
 package cn.nukkit.command.defaults;
 
+import cn.nukkit.IPlayer;
 import cn.nukkit.command.Command;
 import cn.nukkit.command.CommandSender;
 import cn.nukkit.command.data.CommandEnum;
 import cn.nukkit.command.data.CommandParamType;
 import cn.nukkit.command.data.CommandParameter;
-import cn.nukkit.lang.TranslationContainer;
-import cn.nukkit.utils.TextFormat;
+import cn.nukkit.lang.TranslationKey;
 
 /**
  * @author xtypr
@@ -41,7 +41,7 @@ public class WhitelistCommand extends VanillaCommand {
         }
 
         if (args.length == 0 || args.length > 2) {
-            sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));
+            sendUsage(sender);
             return true;
         }
 
@@ -52,17 +52,17 @@ public class WhitelistCommand extends VanillaCommand {
             switch (args[0].toLowerCase()) {
                 case "reload":
                     sender.getServer().reloadWhitelist();
-                    Command.broadcastCommandMessage(sender, new TranslationContainer("commands.whitelist.reloaded"));
+                    Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_WHITELIST_RELOADED.container());
 
                     return true;
                 case "on":
                     sender.getServer().setPropertyBoolean("white-list", true);
-                    Command.broadcastCommandMessage(sender, new TranslationContainer("commands.whitelist.enabled"));
+                    Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_WHITELIST_ENABLED.container());
 
                     return true;
                 case "off":
                     sender.getServer().setPropertyBoolean("white-list", false);
-                    Command.broadcastCommandMessage(sender, new TranslationContainer("commands.whitelist.disabled"));
+                    Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_WHITELIST_DISABLED.container());
 
                     return true;
                 case "list":
@@ -72,17 +72,17 @@ public class WhitelistCommand extends VanillaCommand {
                         result.append(player).append(", ");
                         ++count;
                     }
-                    sender.sendMessage(new TranslationContainer("commands.whitelist.list", String.valueOf(count), String.valueOf(count)));
+                    sender.sendMessage(TranslationKey.COMMANDS_WHITELIST_LIST.with(Integer.toString(count), Integer.toString(count)));
                     sender.sendMessage(result.length() > 0 ? result.substring(0, result.length() - 2) : "");
 
                     return true;
 
                 case "add":
-                    sender.sendMessage(new TranslationContainer("commands.generic.usage", "%commands.whitelist.add.usage"));
+                    sender.sendMessage(TranslationKey.COMMANDS_GENERIC_USAGE.with("%commands.whitelist.add.usage"));
                     return true;
 
                 case "remove":
-                    sender.sendMessage(new TranslationContainer("commands.generic.usage", "%commands.whitelist.remove.usage"));
+                    sender.sendMessage(TranslationKey.COMMANDS_GENERIC_USAGE.with("%commands.whitelist.remove.usage"));
                     return true;
             }
         } else if (args.length == 2) {
@@ -90,16 +90,22 @@ public class WhitelistCommand extends VanillaCommand {
                 return false;
             }
             switch (args[0].toLowerCase()) {
-                case "add":
-                    sender.getServer().getOfflinePlayer(args[1]).setWhitelisted(true);
-                    Command.broadcastCommandMessage(sender, new TranslationContainer("commands.whitelist.add.success", args[1]));
+                case "add": {
+                    @SuppressWarnings("deprecation")
+                    final IPlayer offlinePlayer = sender.getServer().getOfflinePlayer(args[1]);
+                    offlinePlayer.setWhitelisted(true);
+                    Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_WHITELIST_ADD_SUCCESS.with(args[1]));
 
                     return true;
-                case "remove":
-                    sender.getServer().getOfflinePlayer(args[1]).setWhitelisted(false);
-                    Command.broadcastCommandMessage(sender, new TranslationContainer("commands.whitelist.remove.success", args[1]));
+                }
+                case "remove": {
+                    @SuppressWarnings("deprecation")
+                    final IPlayer offlinePlayer = sender.getServer().getOfflinePlayer(args[1]);
+                    offlinePlayer.setWhitelisted(false);
+                    Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_WHITELIST_REMOVE_SUCCESS.with(args[1]));
 
                     return true;
+                }
             }
         }
 
@@ -108,7 +114,7 @@ public class WhitelistCommand extends VanillaCommand {
 
     private boolean badPerm(CommandSender sender, String perm) {
         if (!sender.hasPermission("nukkit.command.whitelist." + perm)) {
-            sender.sendMessage(new TranslationContainer(TextFormat.RED + "%commands.generic.permission"));
+            sendNoPermissionMessage(sender);
 
             return true;
         }

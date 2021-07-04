@@ -6,7 +6,7 @@ import cn.nukkit.command.Command;
 import cn.nukkit.command.CommandSender;
 import cn.nukkit.command.data.CommandParamType;
 import cn.nukkit.command.data.CommandParameter;
-import cn.nukkit.lang.TranslationContainer;
+import cn.nukkit.lang.TranslationKey;
 import cn.nukkit.utils.TextFormat;
 
 /**
@@ -24,25 +24,19 @@ public class DeopCommand extends VanillaCommand {
 
     @Override
     public boolean execute(CommandSender sender, String commandLabel, String[] args) {
-        if (!this.testPermission(sender)) {
-            return true;
-        }
-
-        if (args.length == 0) {
-            sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));
-
+        if (missingPermissionOrArgs(sender, args, 1)) {
             return false;
         }
 
         String playerName = args[0];
-        IPlayer player = sender.getServer().getOfflinePlayer(playerName);
+        @SuppressWarnings("deprecation") IPlayer player = sender.getServer().getOfflinePlayer(playerName);
         player.setOp(false);
 
         if (player instanceof Player) {
-            ((Player) player).sendMessage(new TranslationContainer(TextFormat.GRAY + "%commands.deop.message"));
+            ((Player) player).sendMessage(TranslationKey.COMMANDS_DEOP_MESSAGE.with(TextFormat.GRAY));
         }
 
-        Command.broadcastCommandMessage(sender, new TranslationContainer("commands.deop.success", new String[]{player.getName()}));
+        Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_DEOP_SUCCESS.with(player.getName()));
 
         return true;
     }

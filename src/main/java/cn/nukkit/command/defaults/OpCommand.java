@@ -6,7 +6,7 @@ import cn.nukkit.command.Command;
 import cn.nukkit.command.CommandSender;
 import cn.nukkit.command.data.CommandParamType;
 import cn.nukkit.command.data.CommandParameter;
-import cn.nukkit.lang.TranslationContainer;
+import cn.nukkit.lang.TranslationKey;
 import cn.nukkit.utils.TextFormat;
 
 /**
@@ -26,20 +26,15 @@ public class OpCommand extends VanillaCommand {
 
     @Override
     public boolean execute(CommandSender sender, String commandLabel, String[] args) {
-        if (!this.testPermission(sender)) {
-            return true;
-        }
-        if (args.length == 0) {
-            sender.sendMessage(new TranslationContainer("commands.op.usage", this.usageMessage));
+        if (missingPermissionOrArgs(sender, args, 1)) {
             return false;
         }
-
         String name = args[0];
-        IPlayer player = sender.getServer().getOfflinePlayer(name);
+        @SuppressWarnings("deprecation") IPlayer player = sender.getServer().getOfflinePlayer(name);
 
-        Command.broadcastCommandMessage(sender, new TranslationContainer("commands.op.success", player.getName()));
+        Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_OP_SUCCESS.with(player.getName()));
         if (player instanceof Player) {
-            ((Player) player).sendMessage(new TranslationContainer(TextFormat.GRAY + "%commands.op.message"));
+            ((Player) player).sendMessage(TranslationKey.COMMANDS_OP_MESSAGE.with(TextFormat.GRAY));
         }
 
         player.setOp(true);

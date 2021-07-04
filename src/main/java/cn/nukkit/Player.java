@@ -46,6 +46,7 @@ import cn.nukkit.item.enchantment.Enchantment;
 import cn.nukkit.item.enchantment.sideeffect.SideEffect;
 import cn.nukkit.lang.TextContainer;
 import cn.nukkit.lang.TranslationContainer;
+import cn.nukkit.lang.TranslationKey;
 import cn.nukkit.level.*;
 import cn.nukkit.level.format.FullChunk;
 import cn.nukkit.level.format.generic.BaseFullChunk;
@@ -345,7 +346,7 @@ public class Player extends EntityHuman implements CommandSender, InventoryHolde
     }
 
     public TranslationContainer getLeaveMessage() {
-        return new TranslationContainer(TextFormat.YELLOW + "%multiplayer.player.left", this.getDisplayName());
+        return TranslationKey.MULTIPLAYER_PLAYER_LEFT.with(TextFormat.YELLOW, this.getDisplayName());
     }
 
     public String getClientSecret() {
@@ -969,9 +970,7 @@ public class Player extends EntityHuman implements CommandSender, InventoryHolde
         this.sendPlayStatus(PlayStatusPacket.PLAYER_SPAWN);
 
         PlayerJoinEvent playerJoinEvent = new PlayerJoinEvent(this,
-                new TranslationContainer(TextFormat.YELLOW + "%multiplayer.player.joined", new String[]{
-                        this.getDisplayName()
-                })
+                TranslationKey.MULTIPLAYER_PLAYER_JOINED.with(TextFormat.YELLOW, this.getDisplayName())
         );
 
         this.server.getPluginManager().callEvent(playerJoinEvent);
@@ -3253,7 +3252,7 @@ public class Player extends EntityHuman implements CommandSender, InventoryHolde
                             break;
                         }
                         this.setGamemode(setPlayerGameTypePacket.gamemode, true);
-                        Command.broadcastCommandMessage(this, new TranslationContainer("commands.gamemode.success.self", Server.getGamemodeString(this.gamemode)));
+                        Command.broadcastCommandMessage(this, TranslationKey.COMMANDS_GAMEMODE_SUCCESS_SELF.with(Server.getGamemodeString(this.gamemode)));
                     }
                     break;
 
@@ -4486,7 +4485,7 @@ public class Player extends EntityHuman implements CommandSender, InventoryHolde
         }
 
         boolean showMessages = this.level.getGameRules().getBoolean(GameRule.SHOW_DEATH_MESSAGES);
-        String message = "";
+        TranslationKey message = TranslationKey.DEATH_ATTACK_GENERIC;
         List<String> params = new ArrayList<>();
         EntityDamageEvent cause = this.getLastDamageCause();
 
@@ -4499,11 +4498,11 @@ public class Player extends EntityHuman implements CommandSender, InventoryHolde
                         Entity e = ((EntityDamageByEntityEvent) cause).getDamager();
                         killer = e;
                         if (e instanceof Player) {
-                            message = "death.attack.player";
+                            message = TranslationKey.DEATH_ATTACK_PLAYER;
                             params.add(((Player) e).getDisplayName());
                             break;
                         } else if (e instanceof EntityLiving) {
-                            message = "death.attack.mob";
+                            message = TranslationKey.DEATH_ATTACK_MOB;
                             params.add(!Objects.equals(e.getNameTag(), "") ? e.getNameTag() : e.getName());
                             break;
                         } else {
@@ -4516,10 +4515,10 @@ public class Player extends EntityHuman implements CommandSender, InventoryHolde
                         Entity e = ((EntityDamageByEntityEvent) cause).getDamager();
                         killer = e;
                         if (e instanceof Player) {
-                            message = "death.attack.arrow";
+                            message = TranslationKey.DEATH_ATTACK_ARROW;
                             params.add(((Player) e).getDisplayName());
                         } else if (e instanceof EntityLiving) {
-                            message = "death.attack.arrow";
+                            message = TranslationKey.DEATH_ATTACK_ARROW;
                             params.add(!Objects.equals(e.getNameTag(), "") ? e.getNameTag() : e.getName());
                             break;
                         } else {
@@ -4528,26 +4527,26 @@ public class Player extends EntityHuman implements CommandSender, InventoryHolde
                     }
                     break;
                 case VOID:
-                    message = "death.attack.outOfWorld";
+                    message = TranslationKey.DEATH_ATTACK_OUTOFWORLD;
                     break;
                 case FALL:
                     if (cause.getFinalDamage() > 2) {
-                        message = "death.fell.accident.generic";
+                        message = TranslationKey.DEATH_FELL_ACCIDENT_GENERIC;
                         break;
                     }
-                    message = "death.attack.fall";
+                    message = TranslationKey.DEATH_ATTACK_FALL;
                     break;
 
                 case SUFFOCATION:
-                    message = "death.attack.inWall";
+                    message = TranslationKey.DEATH_ATTACK_INWALL;
                     break;
 
                 case LAVA:
                     Block block = this.level.getBlock(new Vector3(this.x, this.y - 1, this.z));
-                    if (block.getId() == Block.MAGMA) {
-                        message = "death.attack.magma";
+                    if (block.getId() == BlockID.MAGMA) {
+                        message = TranslationKey.DEATH_ATTACK_MAGMA;
                     } else {
-                        message = "death.attack.lava";
+                        message = TranslationKey.DEATH_ATTACK_LAVA;
                     }
                     if (killer instanceof EntityProjectile) {
                         Entity shooter = ((EntityProjectile) killer).shootingEntity;
@@ -4555,29 +4554,28 @@ public class Player extends EntityHuman implements CommandSender, InventoryHolde
                             killer = shooter;
                         }
                         if (killer instanceof EntityHuman) {
-                            message += ".player";
+                            message = TranslationKey.valueOf(message.name()+"_PLAYER");
                             params.add(!Objects.equals(shooter.getNameTag(), "") ? shooter.getNameTag() : shooter.getName());
                         }
                     }
                     break;
 
                 case FIRE:
-                    message = "death.attack.onFire";
+                    message = TranslationKey.DEATH_ATTACK_ONFIRE;
                     break;
 
                 case FIRE_TICK:
-                    message = "death.attack.inFire";
+                    message = TranslationKey.DEATH_ATTACK_INFIRE;
                     break;
 
                 case DROWNING:
-                    message = "death.attack.drown";
+                    message = TranslationKey.DEATH_ATTACK_DROWN;
                     break;
 
                 case CONTACT:
-                    if (cause instanceof EntityDamageByBlockEvent) {
-                        if (((EntityDamageByBlockEvent) cause).getDamager().getId() == Block.CACTUS) {
-                            message = "death.attack.cactus";
-                        }
+                    if (cause instanceof EntityDamageByBlockEvent 
+                            && ((EntityDamageByBlockEvent) cause).getDamager().getId() == BlockID.CACTUS) {
+                        message = TranslationKey.DEATH_ATTACK_CACTUS;
                     }
                     break;
 
@@ -4587,35 +4585,35 @@ public class Player extends EntityHuman implements CommandSender, InventoryHolde
                         Entity e = ((EntityDamageByEntityEvent) cause).getDamager();
                         killer = e;
                         if (e instanceof Player) {
-                            message = "death.attack.explosion.player";
+                            message = TranslationKey.DEATH_ATTACK_EXPLOSION_PLAYER;;
                             params.add(((Player) e).getDisplayName());
                         } else if (e instanceof EntityLiving) {
-                            message = "death.attack.explosion.player";
+                            message = TranslationKey.DEATH_ATTACK_EXPLOSION_PLAYER;
                             params.add(!Objects.equals(e.getNameTag(), "") ? e.getNameTag() : e.getName());
                             break;
                         } else {
-                            message = "death.attack.explosion";
+                            message = TranslationKey.DEATH_ATTACK_EXPLOSION;
                         }
                     } else {
-                        message = "death.attack.explosion";
+                        message = TranslationKey.DEATH_ATTACK_EXPLOSION;
                     }
                     break;
                 case MAGIC:
-                    message = "death.attack.magic";
+                    message = TranslationKey.DEATH_ATTACK_MAGIC;
                     break;
                 case LIGHTNING:
-                    message = "death.attack.lightningBolt";
+                    message = TranslationKey.DEATH_ATTACK_LIGHTNINGBOLT;
                     break;
                 case HUNGER:
-                    message = "death.attack.starve";
+                    message = TranslationKey.DEATH_ATTACK_STARVE;
                     break;
                 default:
-                    message = "death.attack.generic";
+                    message = TranslationKey.DEATH_ATTACK_GENERIC;
                     break;
             }
         }
 
-        PlayerDeathEvent ev = new PlayerDeathEvent(this, this.getDrops(), new TranslationContainer(message, params.toArray(EmptyArrays.EMPTY_STRINGS)), this.expLevel);
+        PlayerDeathEvent ev = new PlayerDeathEvent(this, this.getDrops(), message.with(params.toArray(EmptyArrays.EMPTY_STRINGS)), this.expLevel);
         ev.setKeepExperience(this.level.gameRules.getBoolean(GameRule.KEEP_INVENTORY));
         ev.setKeepInventory(ev.getKeepExperience());
 
@@ -4728,8 +4726,10 @@ public class Player extends EntityHuman implements CommandSender, InventoryHolde
             if (!playerRespawnEvent.isKeepRespawnPosition()) {
                 this.spawnPosition = null;
                 if (playerRespawnEvent.isSendInvalidRespawnBlockMessage()) {
-                    sendMessage(new TranslationContainer(TextFormat.GRAY +
-                            "%tile."+(respawnBlockDim==Level.DIMENSION_OVERWORLD?"bed":"respawn_anchor")+".notValid"));
+                    TranslationKey message = respawnBlockDim == Level.DIMENSION_OVERWORLD?
+                            TranslationKey.TILE_BED_NOTVALID : 
+                            TranslationKey.TILE_RESPAWN_ANCHOR_NOTVALID;
+                    sendMessage(message.withFormat(TextFormat.GRAY));
                 }
             }
         }

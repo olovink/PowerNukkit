@@ -1,11 +1,12 @@
 package cn.nukkit.command.simple;
 
+import cn.nukkit.api.PowerNukkitDifference;
 import cn.nukkit.command.Command;
 import cn.nukkit.command.CommandSender;
 import cn.nukkit.command.ConsoleCommandSender;
-import cn.nukkit.lang.TranslationContainer;
 import lombok.extern.log4j.Log4j2;
 
+import javax.annotation.Nullable;
 import java.lang.reflect.Method;
 
 /**
@@ -39,12 +40,14 @@ public class SimpleCommand extends Command {
 
     public void sendUsageMessage(CommandSender sender) {
         if (!this.usageMessage.equals("")) {
-            sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));
+            sendUsage(sender);
         }
     }
 
-    public void sendInGameMessage(CommandSender sender) {
-        sender.sendMessage(new TranslationContainer("commands.generic.ingame"));
+    @PowerNukkitDifference(since = "FUTURE", info = "Overrides from Command only in PowerNukkit. Available in Nukkit.")
+    @Override
+    public void sendInGameMessage(@Nullable CommandSender sender) {
+        super.sendInGameMessage(sender);
     }
 
     @Override
