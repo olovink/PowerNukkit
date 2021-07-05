@@ -34,6 +34,7 @@ import java.util.stream.Collectors;
  * @author joserobjr
  * @since 2021-07-03
  */
+@FunctionalInterface
 public interface TranslationKey {
     //<editor-fold desc="enum entries" defaultstate="collapsed">
     @PowerNukkitOnly @Since("FUTURE")
