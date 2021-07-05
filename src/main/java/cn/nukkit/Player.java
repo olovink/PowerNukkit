@@ -4485,7 +4485,7 @@ public class Player extends EntityHuman implements CommandSender, InventoryHolde
             return;
         }
         boolean showMessages = this.level.getGameRules().getBoolean(GameRule.SHOW_DEATH_MESSAGES);
-        TranslationKey message = TranslationKey.Death.ATTACK_GENERIC;
+        TranslationKey.Death message = TranslationKey.Death.ATTACK_GENERIC;
         List<String> params = new ArrayList<>();
         EntityDamageEvent cause = this.getLastDamageCause();
 

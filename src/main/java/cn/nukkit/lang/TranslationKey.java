@@ -10492,11 +10492,6 @@ public interface TranslationKey {
     @PowerNukkitOnly
     @Since("FUTURE")
     @Nonnull
-    String name();
-
-    @PowerNukkitOnly
-    @Since("FUTURE")
-    @Nonnull
     default String withPrefix(@Nonnull String prefix) {
         return prefix + "%" + getCode();
     }
