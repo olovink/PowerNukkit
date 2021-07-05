@@ -61,7 +61,7 @@ public class XpCommand extends Command {
         }
 
         if (player == null) {
-            sender.sendMessage(TranslationKey.COMMANDS_GENERIC_PLAYER_NOTFOUND.with(TextFormat.RED));
+            sender.sendMessage(TranslationKey.Commands.GENERIC_PLAYER_NOTFOUND.with(TextFormat.RED));
             return true;
         }
 
@@ -89,9 +89,9 @@ public class XpCommand extends Command {
                 player.setExperience(player.getExperience(), newLevel, true);
             }
             if (amount > 0) {
-                sender.sendMessage(TranslationKey.COMMANDS_XP_SUCCESS_LEVELS.with(Integer.toString(amount), player.getName()));
+                sender.sendMessage(TranslationKey.Commands.XP_SUCCESS_LEVELS.with(Integer.toString(amount), player.getName()));
             } else {
-                sender.sendMessage(TranslationKey.COMMANDS_XP_SUCCESS_NEGATIVE_LEVELS.with(Integer.toString(-amount), player.getName()));
+                sender.sendMessage(TranslationKey.Commands.XP_SUCCESS_NEGATIVE_LEVELS.with(Integer.toString(-amount), player.getName()));
             }
             return true;
         } else {
@@ -100,7 +100,7 @@ public class XpCommand extends Command {
                 return true;
             }
             player.addExperience(amount);
-            sender.sendMessage(TranslationKey.COMMANDS_XP_SUCCESS.with(Integer.toString(amount), player.getName()));
+            sender.sendMessage(TranslationKey.Commands.XP_SUCCESS.with(Integer.toString(amount), player.getName()));
             return true;
         }
     }

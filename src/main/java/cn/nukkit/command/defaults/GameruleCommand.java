@@ -97,7 +97,7 @@ public class GameruleCommand extends VanillaCommand {
             case 1:
                 Optional<GameRule> gameRule = GameRule.parseString(args[0]);
                 if (!gameRule.isPresent() || !rules.hasRule(gameRule.get())) {
-                    sender.sendMessage(TranslationKey.COMMANDS_GENERIC_SYNTAX.with("/gamerule", args[0]));
+                    sender.sendMessage(TranslationKey.Commands.GENERIC_SYNTAX.with("/gamerule", args[0]));
                     return false;
                 }
 
@@ -107,17 +107,17 @@ public class GameruleCommand extends VanillaCommand {
                 Optional<GameRule> optionalRule = GameRule.parseString(args[0]);
 
                 if (!optionalRule.isPresent()) {
-                    sender.sendMessage(TranslationKey.COMMANDS_GENERIC_SYNTAX.with(
+                    sender.sendMessage(TranslationKey.Commands.GENERIC_SYNTAX.with(
                             "/gamerule ", args[0], " " + String.join(" ", Arrays.copyOfRange(args, 1, args.length))));
                     return false;
                 }
 
                 try {
                     rules.setGameRules(optionalRule.get(), args[1]);
-                    sender.sendMessage(TranslationKey.COMMANDS_GAMERULE_SUCCESS.with(optionalRule.get().getName().toLowerCase(), args[1]));
+                    sender.sendMessage(TranslationKey.Commands.GAMERULE_SUCCESS.with(optionalRule.get().getName().toLowerCase(), args[1]));
                     return true;
                 } catch (IllegalArgumentException e) {
-                    sender.sendMessage(TranslationKey.COMMANDS_GENERIC_SYNTAX.with("/gamerule "  + args[0] + " ", args[1], " " + String.join(" ", Arrays.copyOfRange(args, 2, args.length))));
+                    sender.sendMessage(TranslationKey.Commands.GENERIC_SYNTAX.with("/gamerule "  + args[0] + " ", args[1], " " + String.join(" ", Arrays.copyOfRange(args, 2, args.length))));
                     return false;
                 }
         }

@@ -47,7 +47,7 @@ public class BanCommand extends VanillaCommand {
             player.kick(PlayerKickEvent.Reason.NAME_BANNED, (reason.length() > 0) ? "Banned by admin. Reason: " + reason : "Banned by admin");
         }
 
-        Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_BAN_SUCCESS.with(player != null ? player.getName() : name));
+        Command.broadcastCommandMessage(sender, TranslationKey.Commands.BAN_SUCCESS.with(player != null ? player.getName() : name));
 
         return true;
     }

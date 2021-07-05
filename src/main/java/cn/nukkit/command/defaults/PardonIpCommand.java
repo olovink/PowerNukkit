@@ -45,14 +45,14 @@ public class PardonIpCommand extends VanillaCommand {
             try {
                 sender.getServer().getNetwork().unblockAddress(InetAddress.getByName(value));
             } catch (UnknownHostException e) {
-                sender.sendMessage(TranslationKey.COMMANDS_UNBANIP_INVALID.container());
+                sender.sendMessage(TranslationKey.Commands.UNBANIP_INVALID.container());
                 return true;
             }
 
-            Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_UNBANIP_SUCCESS.with(value));
+            Command.broadcastCommandMessage(sender, TranslationKey.Commands.UNBANIP_SUCCESS.with(value));
         } else {
 
-            sender.sendMessage(TranslationKey.COMMANDS_UNBANIP_INVALID.container());
+            sender.sendMessage(TranslationKey.Commands.UNBANIP_INVALID.container());
         }
 
         return true;

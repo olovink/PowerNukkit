@@ -28,7 +28,7 @@ public class SeedCommand extends VanillaCommand {
             seed = sender.getServer().getDefaultLevel().getSeed();
         }
 
-        sender.sendMessage(TranslationKey.COMMANDS_SEED_SUCCESS.with(Long.toString(seed)));
+        sender.sendMessage(TranslationKey.Commands.SEED_SUCCESS.with(Long.toString(seed)));
 
         return true;
     }

@@ -180,7 +180,7 @@ public abstract class Command {
         }
 
         if (this.permissionMessage == null) {
-            target.sendMessage(TranslationKey.COMMANDS_GENERIC_UNKNOWN.with(TextFormat.RED, this.name));
+            target.sendMessage(TranslationKey.Commands.GENERIC_UNKNOWN.with(TextFormat.RED, this.name));
         } else if (!this.permissionMessage.equals("")) {
             target.sendMessage(this.permissionMessage.replace("<permission>", this.permission));
         }
@@ -292,9 +292,9 @@ public abstract class Command {
     public static void broadcastCommandMessage(CommandSender source, String message, boolean sendToSource) {
         Set<Permissible> users = source.getServer().getPluginManager().getPermissionSubscriptions(Server.BROADCAST_CHANNEL_ADMINISTRATIVE);
 
-        TranslationContainer result = TranslationKey.CHAT_TYPE_ADMIN.with(source.getName(), message);
+        TranslationContainer result = TranslationKey.Chat.TYPE_ADMIN.with(source.getName(), message);
 
-        TranslationContainer colored = TranslationKey.CHAT_TYPE_ADMIN.with(TextFormat.GRAY, TextFormat.ITALIC, source.getName(), message);
+        TranslationContainer colored = TranslationKey.Chat.TYPE_ADMIN.with(TextFormat.GRAY, TextFormat.ITALIC, source.getName(), message);
 
         if (sendToSource && !(source instanceof ConsoleCommandSender)) {
             source.sendMessage(message);
@@ -347,7 +347,7 @@ public abstract class Command {
     @Since("FUTURE")
     public void sendUsage(@Nullable CommandSender sender) {
         if (sender != null) {
-            sender.sendMessage(TranslationKey.COMMANDS_GENERIC_USAGE.with(this.getUsage()));
+            sender.sendMessage(TranslationKey.Commands.GENERIC_USAGE.with(this.getUsage()));
         }
     }
 
@@ -363,7 +363,7 @@ public abstract class Command {
         } else {
             // It's a message from the /tp command but can be reused easily because the actual message is:
             // You do not have permission to use this slash command.
-            sender.sendMessage(TranslationKey.COMMANDS_TP_PERMISSION.with(TextFormat.RED));
+            sender.sendMessage(TranslationKey.Commands.TP_PERMISSION.with(TextFormat.RED));
         }
     }
 

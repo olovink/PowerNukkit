@@ -50,13 +50,13 @@ public class KickCommand extends VanillaCommand {
         if (player != null) {
             player.kick(PlayerKickEvent.Reason.KICKED_BY_ADMIN, reason.toString());
             if (reason.length() >= 1) {
-                Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_KICK_SUCCESS_REASON.with(player.getName(), reason.toString())
+                Command.broadcastCommandMessage(sender, TranslationKey.Commands.KICK_SUCCESS_REASON.with(player.getName(), reason.toString())
                 );
             } else {
-                Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_KICK_SUCCESS.with("commands.kick.success", player.getName()));
+                Command.broadcastCommandMessage(sender, TranslationKey.Commands.KICK_SUCCESS.with("commands.kick.success", player.getName()));
             }
         } else {
-            sender.sendMessage(TranslationKey.COMMANDS_GENERIC_PLAYER_NOTFOUND.with(TextFormat.RED));
+            sender.sendMessage(TranslationKey.Commands.GENERIC_PLAYER_NOTFOUND.with(TextFormat.RED));
         }
 
         return true;

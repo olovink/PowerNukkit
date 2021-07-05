@@ -98,7 +98,7 @@ public class ParticleCommand extends VanillaCommand {
             return true;
         }
 
-        sender.sendMessage(TranslationKey.COMMANDS_PARTICLE_SUCCESS.with(name, Integer.toString(count)));
+        sender.sendMessage(TranslationKey.Commands.PARTICLE_SUCCESS.with(name, Integer.toString(count)));
 
         Random random = ThreadLocalRandom.current();
 

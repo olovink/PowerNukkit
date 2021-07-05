@@ -33,10 +33,10 @@ public class DeopCommand extends VanillaCommand {
         player.setOp(false);
 
         if (player instanceof Player) {
-            ((Player) player).sendMessage(TranslationKey.COMMANDS_DEOP_MESSAGE.with(TextFormat.GRAY));
+            ((Player) player).sendMessage(TranslationKey.Commands.DEOP_MESSAGE.with(TextFormat.GRAY));
         }
 
-        Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_DEOP_SUCCESS.with(player.getName()));
+        Command.broadcastCommandMessage(sender, TranslationKey.Commands.DEOP_SUCCESS.with(player.getName()));
 
         return true;
     }

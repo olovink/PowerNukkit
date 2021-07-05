@@ -54,14 +54,14 @@ public class EffectCommand extends Command {
         }
         Player player = sender.getServer().getPlayer(args[0]);
         if (player == null) {
-            sender.sendMessage(TranslationKey.COMMANDS_GENERIC_PLAYER_NOTFOUND.with(TextFormat.RED));
+            sender.sendMessage(TranslationKey.Commands.GENERIC_PLAYER_NOTFOUND.with(TextFormat.RED));
             return false;
         }
         if (args[1].equalsIgnoreCase("clear")) {
             for (Effect effect : player.getEffects().values()) {
                 player.removeEffect(effect.getId());
             }
-            sender.sendMessage(TranslationKey.COMMANDS_EFFECT_SUCCESS_REMOVED_ALL.with(player.getDisplayName()));
+            sender.sendMessage(TranslationKey.Commands.EFFECT_SUCCESS_REMOVED_ALL.with(player.getDisplayName()));
             return false;
         }
         Effect effect;
@@ -71,7 +71,7 @@ public class EffectCommand extends Command {
             try {
                 effect = Effect.getEffectByName(args[1]);
             } catch (Exception e) {
-                sender.sendMessage(TranslationKey.COMMANDS_EFFECT_NOTFOUND.with(args[1]));
+                sender.sendMessage(TranslationKey.Commands.EFFECT_NOTFOUND.with(args[1]));
                 return false;
             }
         }
@@ -81,7 +81,7 @@ public class EffectCommand extends Command {
             try {
                 duration = Integer.parseInt(args[2]);
             } catch (NumberFormatException a) {
-                sender.sendMessage(TranslationKey.COMMANDS_GENERIC_USAGE.with(this.usageMessage));
+                sender.sendMessage(TranslationKey.Commands.GENERIC_USAGE.with(this.usageMessage));
                 return false;
             }
             if (!(effect instanceof InstantEffect)) {
@@ -107,18 +107,18 @@ public class EffectCommand extends Command {
         if (duration == 0) {
             if (!player.hasEffect(effect.getId())) {
                 if (player.getEffects().size() == 0) {
-                    sender.sendMessage(TranslationKey.COMMANDS_EFFECT_FAILURE_NOTACTIVE_ALL.with(player.getDisplayName()));
+                    sender.sendMessage(TranslationKey.Commands.EFFECT_FAILURE_NOTACTIVE_ALL.with(player.getDisplayName()));
                 } else {
-                    sender.sendMessage(TranslationKey.COMMANDS_EFFECT_FAILURE_NOTACTIVE.with(effect.getName(), player.getDisplayName()));
+                    sender.sendMessage(TranslationKey.Commands.EFFECT_FAILURE_NOTACTIVE.with(effect.getName(), player.getDisplayName()));
                 }
                 return false;
             }
             player.removeEffect(effect.getId());
-            sender.sendMessage(TranslationKey.COMMANDS_EFFECT_SUCCESS_REMOVED.with(effect.getName(), player.getDisplayName()));
+            sender.sendMessage(TranslationKey.Commands.EFFECT_SUCCESS_REMOVED.with(effect.getName(), player.getDisplayName()));
         } else {
             effect.setDuration(duration).setAmplifier(amplification);
             player.addEffect(effect);
-            Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_EFFECT_SUCCESS.with(effect.getName(), Integer.toString(effect.getAmplifier()), player.getDisplayName(), Integer.toString(effect.getDuration() / 20)));
+            Command.broadcastCommandMessage(sender, TranslationKey.Commands.EFFECT_SUCCESS.with(effect.getName(), Integer.toString(effect.getAmplifier()), player.getDisplayName(), Integer.toString(effect.getDuration() / 20)));
         }
         return true;
     }

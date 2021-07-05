@@ -41,7 +41,7 @@ public class BanListCommand extends VanillaCommand {
                     list = sender.getServer().getNameBans();
                     break;
                 default:
-                    sender.sendMessage(TranslationKey.COMMANDS_GENERIC_USAGE.with(this.usageMessage));
+                    sender.sendMessage(TranslationKey.Commands.GENERIC_USAGE.with(this.usageMessage));
                     return false;
             }
         } else {
@@ -58,9 +58,9 @@ public class BanListCommand extends VanillaCommand {
         }
 
         if (ips) {
-            sender.sendMessage(TranslationKey.COMMANDS_BANLIST_IPS.with(Integer.toString(list.getEntires().size())));
+            sender.sendMessage(TranslationKey.Commands.BANLIST_IPS.with(Integer.toString(list.getEntires().size())));
         } else {
-            sender.sendMessage(TranslationKey.COMMANDS_BANLIST_PLAYERS.with(Integer.toString(list.getEntires().size())));
+            sender.sendMessage(TranslationKey.Commands.BANLIST_PLAYERS.with(Integer.toString(list.getEntires().size())));
         }
         sender.sendMessage(builder.toString());
         return true;

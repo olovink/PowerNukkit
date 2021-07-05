@@ -962,7 +962,7 @@ public class Server {
             return true;
         }
 
-        sender.sendMessage(TranslationKey.COMMANDS_GENERIC_UNKNOWN.with(TextFormat.RED, commandLine));
+        sender.sendMessage(TranslationKey.Commands.GENERIC_UNKNOWN.with(TextFormat.RED, commandLine));
 
         return false;
     }

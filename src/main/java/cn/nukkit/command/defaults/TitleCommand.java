@@ -53,7 +53,7 @@ public class TitleCommand extends VanillaCommand {
 
         Player player = Server.getInstance().getPlayerExact(args[0]);
         if (player == null) {
-            sender.sendMessage(TranslationKey.COMMANDS_GENERIC_PLAYER_NOTFOUND.with(TextFormat.RED));
+            sender.sendMessage(TranslationKey.Commands.GENERIC_PLAYER_NOTFOUND.with(TextFormat.RED));
             return true;
         }
 

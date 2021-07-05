@@ -61,20 +61,20 @@ public class WeatherCommand extends VanillaCommand {
                 level.setRainTime(seconds * 20);
                 level.setThunderTime(seconds * 20);
                 Command.broadcastCommandMessage(sender,
-                        TranslationKey.COMMANDS_WEATHER_CLEAR.container());
+                        TranslationKey.Commands.WEATHER_CLEAR.container());
                 return true;
             case "rain":
                 level.setRaining(true);
                 level.setRainTime(seconds * 20);
                 Command.broadcastCommandMessage(sender,
-                        TranslationKey.COMMANDS_WEATHER_RAIN.container());
+                        TranslationKey.Commands.WEATHER_RAIN.container());
                 return true;
             case "thunder":
                 level.setThundering(true);
                 level.setRainTime(seconds * 20);
                 level.setThunderTime(seconds * 20);
                 Command.broadcastCommandMessage(sender,
-                        TranslationKey.COMMANDS_WEATHER_THUNDER.container());
+                        TranslationKey.Commands.WEATHER_THUNDER.container());
                 return true;
             default:
                 sendUsage(sender);

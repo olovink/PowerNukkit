@@ -41,12 +41,12 @@ public class TellCommand extends VanillaCommand {
 
         Player player = sender.getServer().getPlayer(name);
         if (player == null) {
-            sender.sendMessage(TranslationKey.COMMANDS_GENERIC_PLAYER_NOTFOUND.container());
+            sender.sendMessage(TranslationKey.Commands.GENERIC_PLAYER_NOTFOUND.container());
             return true;
         }
 
         if (Objects.equals(player, sender)) {
-            sender.sendMessage(TranslationKey.COMMANDS_MESSAGE_SAMETARGET.with(TextFormat.RED));
+            sender.sendMessage(TranslationKey.Commands.MESSAGE_SAMETARGET.with(TextFormat.RED));
             return true;
         }
 

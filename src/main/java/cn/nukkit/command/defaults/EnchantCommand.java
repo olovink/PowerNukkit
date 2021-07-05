@@ -47,7 +47,7 @@ public class EnchantCommand extends VanillaCommand {
         }
         Player player = sender.getServer().getPlayer(args[0]);
         if (player == null) {
-            sender.sendMessage(TranslationKey.COMMANDS_GENERIC_PLAYER_NOTFOUND.with(TextFormat.RED));
+            sender.sendMessage(TranslationKey.Commands.GENERIC_PLAYER_NOTFOUND.with(TextFormat.RED));
             return false;
         }
         int enchantId;
@@ -56,18 +56,18 @@ public class EnchantCommand extends VanillaCommand {
             enchantId = getIdByName(args[1]);
             enchantLevel = args.length == 3 ? Integer.parseInt(args[2]) : 1;
         } catch (NumberFormatException e) {
-            sender.sendMessage(TranslationKey.COMMANDS_GENERIC_USAGE.with(this.usageMessage));
+            sender.sendMessage(TranslationKey.Commands.GENERIC_USAGE.with(this.usageMessage));
             return false;
         }
         Enchantment enchantment = Enchantment.getEnchantment(enchantId);
         if (enchantment == null) {
-            sender.sendMessage(TranslationKey.COMMANDS_ENCHANT_NOTFOUND.with(Integer.toString(enchantId)));
+            sender.sendMessage(TranslationKey.Commands.ENCHANT_NOTFOUND.with(Integer.toString(enchantId)));
             return false;
         }
         enchantment.setLevel(enchantLevel);
         Item item = player.getInventory().getItemInHand();
         if (item.isNull()) {
-            sender.sendMessage(TranslationKey.COMMANDS_ENCHANT_NOITEM.container());
+            sender.sendMessage(TranslationKey.Commands.ENCHANT_NOITEM.container());
             return false;
         }
         if (item.getId() != ItemID.BOOK) {
@@ -82,7 +82,7 @@ public class EnchantCommand extends VanillaCommand {
             inventory.setItemInHand(clone);
             player.giveItem(enchanted);
         }
-        Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_ENCHANT_SUCCESS.with(args[1]));
+        Command.broadcastCommandMessage(sender, TranslationKey.Commands.ENCHANT_SUCCESS.with(args[1]));
         return true;
     }
 

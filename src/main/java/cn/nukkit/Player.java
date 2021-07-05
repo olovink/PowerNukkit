@@ -346,7 +346,8 @@ public class Player extends EntityHuman implements CommandSender, InventoryHolde
     }
 
     public TranslationContainer getLeaveMessage() {
-        return TranslationKey.MULTIPLAYER_PLAYER_LEFT.with(TextFormat.YELLOW, this.getDisplayName());
+        //return TranslationKey.MULTIPLAYER_PLAYER_LEFT.with(TextFormat.YELLOW, this.getDisplayName());
+        throw new UnsupportedOperationException();
     }
 
     public String getClientSecret() {
@@ -970,7 +971,7 @@ public class Player extends EntityHuman implements CommandSender, InventoryHolde
         this.sendPlayStatus(PlayStatusPacket.PLAYER_SPAWN);
 
         PlayerJoinEvent playerJoinEvent = new PlayerJoinEvent(this,
-                TranslationKey.MULTIPLAYER_PLAYER_JOINED.with(TextFormat.YELLOW, this.getDisplayName())
+                TranslationKey.Multiplayer.PLAYER_JOINED.with(TextFormat.YELLOW, this.getDisplayName())
         );
 
         this.server.getPluginManager().callEvent(playerJoinEvent);
@@ -3252,7 +3253,7 @@ public class Player extends EntityHuman implements CommandSender, InventoryHolde
                             break;
                         }
                         this.setGamemode(setPlayerGameTypePacket.gamemode, true);
-                        Command.broadcastCommandMessage(this, TranslationKey.COMMANDS_GAMEMODE_SUCCESS_SELF.with(Server.getGamemodeString(this.gamemode)));
+                        Command.broadcastCommandMessage(this, TranslationKey.Commands.GAMEMODE_SUCCESS_SELF.with(Server.getGamemodeString(this.gamemode)));
                     }
                     break;
 
@@ -4483,9 +4484,8 @@ public class Player extends EntityHuman implements CommandSender, InventoryHolde
         if (!this.spawned) {
             return;
         }
-
         boolean showMessages = this.level.getGameRules().getBoolean(GameRule.SHOW_DEATH_MESSAGES);
-        TranslationKey message = TranslationKey.DEATH_ATTACK_GENERIC;
+        TranslationKey message = TranslationKey.Death.ATTACK_GENERIC;
         List<String> params = new ArrayList<>();
         EntityDamageEvent cause = this.getLastDamageCause();
 
@@ -4498,11 +4498,11 @@ public class Player extends EntityHuman implements CommandSender, InventoryHolde
                         Entity e = ((EntityDamageByEntityEvent) cause).getDamager();
                         killer = e;
                         if (e instanceof Player) {
-                            message = TranslationKey.DEATH_ATTACK_PLAYER;
+                            message = TranslationKey.Death.ATTACK_PLAYER;
                             params.add(((Player) e).getDisplayName());
                             break;
                         } else if (e instanceof EntityLiving) {
-                            message = TranslationKey.DEATH_ATTACK_MOB;
+                            message = TranslationKey.Death.ATTACK_MOB;
                             params.add(!Objects.equals(e.getNameTag(), "") ? e.getNameTag() : e.getName());
                             break;
                         } else {
@@ -4515,10 +4515,10 @@ public class Player extends EntityHuman implements CommandSender, InventoryHolde
                         Entity e = ((EntityDamageByEntityEvent) cause).getDamager();
                         killer = e;
                         if (e instanceof Player) {
-                            message = TranslationKey.DEATH_ATTACK_ARROW;
+                            message = TranslationKey.Death.ATTACK_ARROW;
                             params.add(((Player) e).getDisplayName());
                         } else if (e instanceof EntityLiving) {
-                            message = TranslationKey.DEATH_ATTACK_ARROW;
+                            message = TranslationKey.Death.ATTACK_ARROW;
                             params.add(!Objects.equals(e.getNameTag(), "") ? e.getNameTag() : e.getName());
                             break;
                         } else {
@@ -4527,26 +4527,26 @@ public class Player extends EntityHuman implements CommandSender, InventoryHolde
                     }
                     break;
                 case VOID:
-                    message = TranslationKey.DEATH_ATTACK_OUTOFWORLD;
+                    message = TranslationKey.Death.ATTACK_OUTOFWORLD;
                     break;
                 case FALL:
                     if (cause.getFinalDamage() > 2) {
-                        message = TranslationKey.DEATH_FELL_ACCIDENT_GENERIC;
+                        message = TranslationKey.Death.FELL_ACCIDENT_GENERIC;
                         break;
                     }
-                    message = TranslationKey.DEATH_ATTACK_FALL;
+                    message = TranslationKey.Death.ATTACK_FALL;
                     break;
 
                 case SUFFOCATION:
-                    message = TranslationKey.DEATH_ATTACK_INWALL;
+                    message = TranslationKey.Death.ATTACK_INWALL;
                     break;
 
                 case LAVA:
                     Block block = this.level.getBlock(new Vector3(this.x, this.y - 1, this.z));
                     if (block.getId() == BlockID.MAGMA) {
-                        message = TranslationKey.DEATH_ATTACK_MAGMA;
+                        message = TranslationKey.Death.ATTACK_MAGMA;
                     } else {
-                        message = TranslationKey.DEATH_ATTACK_LAVA;
+                        message = TranslationKey.Death.ATTACK_LAVA;
                     }
                     if (killer instanceof EntityProjectile) {
                         Entity shooter = ((EntityProjectile) killer).shootingEntity;
@@ -4554,28 +4554,28 @@ public class Player extends EntityHuman implements CommandSender, InventoryHolde
                             killer = shooter;
                         }
                         if (killer instanceof EntityHuman) {
-                            message = TranslationKey.valueOf(message.name()+"_PLAYER");
+                            message = TranslationKey.Death.valueOf(message.name()+"_PLAYER");
                             params.add(!Objects.equals(shooter.getNameTag(), "") ? shooter.getNameTag() : shooter.getName());
                         }
                     }
                     break;
 
                 case FIRE:
-                    message = TranslationKey.DEATH_ATTACK_ONFIRE;
+                    message = TranslationKey.Death.ATTACK_ONFIRE;
                     break;
 
                 case FIRE_TICK:
-                    message = TranslationKey.DEATH_ATTACK_INFIRE;
+                    message = TranslationKey.Death.ATTACK_INFIRE;
                     break;
 
                 case DROWNING:
-                    message = TranslationKey.DEATH_ATTACK_DROWN;
+                    message = TranslationKey.Death.ATTACK_DROWN;
                     break;
 
                 case CONTACT:
                     if (cause instanceof EntityDamageByBlockEvent 
                             && ((EntityDamageByBlockEvent) cause).getDamager().getId() == BlockID.CACTUS) {
-                        message = TranslationKey.DEATH_ATTACK_CACTUS;
+                        message = TranslationKey.Death.ATTACK_CACTUS;
                     }
                     break;
 
@@ -4585,30 +4585,30 @@ public class Player extends EntityHuman implements CommandSender, InventoryHolde
                         Entity e = ((EntityDamageByEntityEvent) cause).getDamager();
                         killer = e;
                         if (e instanceof Player) {
-                            message = TranslationKey.DEATH_ATTACK_EXPLOSION_PLAYER;;
+                            message = TranslationKey.Death.ATTACK_EXPLOSION_PLAYER;;
                             params.add(((Player) e).getDisplayName());
                         } else if (e instanceof EntityLiving) {
-                            message = TranslationKey.DEATH_ATTACK_EXPLOSION_PLAYER;
+                            message = TranslationKey.Death.ATTACK_EXPLOSION_PLAYER;
                             params.add(!Objects.equals(e.getNameTag(), "") ? e.getNameTag() : e.getName());
                             break;
                         } else {
-                            message = TranslationKey.DEATH_ATTACK_EXPLOSION;
+                            message = TranslationKey.Death.ATTACK_EXPLOSION;
                         }
                     } else {
-                        message = TranslationKey.DEATH_ATTACK_EXPLOSION;
+                        message = TranslationKey.Death.ATTACK_EXPLOSION;
                     }
                     break;
                 case MAGIC:
-                    message = TranslationKey.DEATH_ATTACK_MAGIC;
+                    message = TranslationKey.Death.ATTACK_MAGIC;
                     break;
                 case LIGHTNING:
-                    message = TranslationKey.DEATH_ATTACK_LIGHTNINGBOLT;
+                    message = TranslationKey.Death.ATTACK_LIGHTNINGBOLT;
                     break;
                 case HUNGER:
-                    message = TranslationKey.DEATH_ATTACK_STARVE;
+                    message = TranslationKey.Death.ATTACK_STARVE;
                     break;
                 default:
-                    message = TranslationKey.DEATH_ATTACK_GENERIC;
+                    message = TranslationKey.Death.ATTACK_GENERIC;
                     break;
             }
         }
@@ -4727,8 +4727,8 @@ public class Player extends EntityHuman implements CommandSender, InventoryHolde
                 this.spawnPosition = null;
                 if (playerRespawnEvent.isSendInvalidRespawnBlockMessage()) {
                     TranslationKey message = respawnBlockDim == Level.DIMENSION_OVERWORLD?
-                            TranslationKey.TILE_BED_NOTVALID : 
-                            TranslationKey.TILE_RESPAWN_ANCHOR_NOTVALID;
+                            TranslationKey.Tile.BED_NOTVALID : 
+                            TranslationKey.Tile.RESPAWN_ANCHOR_NOTVALID;
                     sendMessage(message.withFormat(TextFormat.GRAY));
                 }
             }

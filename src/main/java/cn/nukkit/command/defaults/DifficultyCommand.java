@@ -48,9 +48,9 @@ public class DifficultyCommand extends VanillaCommand {
             pk.difficulty = sender.getServer().getDifficulty();
             Server.broadcastPacket(new ArrayList<>(sender.getServer().getOnlinePlayers().values()), pk);
 
-            Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_DIFFICULTY_SUCCESS.with(Integer.toString(difficulty)));
+            Command.broadcastCommandMessage(sender, TranslationKey.Commands.DIFFICULTY_SUCCESS.with(Integer.toString(difficulty)));
         } else {
-            sender.sendMessage(TranslationKey.COMMANDS_GENERIC_USAGE.with(this.usageMessage));
+            sender.sendMessage(TranslationKey.Commands.GENERIC_USAGE.with(this.usageMessage));
 
             return false;
         }

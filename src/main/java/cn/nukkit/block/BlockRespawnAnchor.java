@@ -113,7 +113,7 @@ public class BlockRespawnAnchor extends BlockMeta {
         player.setSpawnBlock(this);
         player.setSpawn(player);
         getLevel().addSound(this, Sound.RESPAWN_ANCHOR_SET_SPAWN);
-        player.sendMessage(TranslationKey.TILE_RESPAWN_ANCHOR_RESPAWNSET.with(TextFormat.GRAY));
+        player.sendMessage(TranslationKey.Tile.RESPAWN_ANCHOR_RESPAWNSET.with(TextFormat.GRAY));
         return true;
     }
 

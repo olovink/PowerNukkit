@@ -82,7 +82,7 @@ public class HelpCommand extends VanillaCommand {
                 pageNumber = 1;
             }
 
-            sender.sendMessage(TranslationKey.COMMANDS_HELP_HEADER.with(Integer.toString(pageNumber), Integer.toString(totalPage)));
+            sender.sendMessage(TranslationKey.Commands.HELP_HEADER.with(Integer.toString(pageNumber), Integer.toString(totalPage)));
             int i = 1;
             for (Command command1 : commands.values()) {
                 if (i >= (pageNumber - 1) * pageHeight + 1 && i <= Math.min(commands.size(), pageNumber * pageHeight)) {

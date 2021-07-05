@@ -44,7 +44,7 @@ public class GamemodeCommand extends VanillaCommand {
 
         int gameMode = Server.getGamemodeFromString(args[0]);
         if (gameMode == -1) {
-            sender.sendMessage(TranslationKey.COMMANDS_GAMEMODE_FAIL_INVALID.with(args[0]));
+            sender.sendMessage(TranslationKey.Commands.GAMEMODE_FAIL_INVALID.with(args[0]));
             return false;
         }
 
@@ -53,7 +53,7 @@ public class GamemodeCommand extends VanillaCommand {
             if (sender.hasPermission("nukkit.command.gamemode.other")) {
                 target = sender.getServer().getPlayer(args[1]);
                 if (target == null) {
-                    sender.sendMessage(TranslationKey.COMMANDS_GENERIC_PLAYER_NOTFOUND.with(TextFormat.RED));
+                    sender.sendMessage(TranslationKey.Commands.GENERIC_PLAYER_NOTFOUND.with(TextFormat.RED));
                     return false;
                 }
             } else {
@@ -77,10 +77,10 @@ public class GamemodeCommand extends VanillaCommand {
             sender.sendMessage("Game mode update for " + target.getName() + " failed");
         } else {
             if (target.equals(sender)) {
-                Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_GAMEMODE_SUCCESS_SELF.with(Server.getGamemodeString(gameMode)));
+                Command.broadcastCommandMessage(sender, TranslationKey.Commands.GAMEMODE_SUCCESS_SELF.with(Server.getGamemodeString(gameMode)));
             } else {
-                target.sendMessage(TranslationKey.GAMEMODE_CHANGED.with(Server.getGamemodeString(gameMode)));
-                Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_GAMEMODE_SUCCESS_OTHER.with(target.getName(), Server.getGamemodeString(gameMode)));
+                //TODO joserobjr target.sendMessage(TranslationKey.GAMEMODE_CHANGED.with(Server.getGamemodeString(gameMode)));
+                //TODO joserobjr Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_GAMEMODE_SUCCESS_OTHER.with(target.getName(), Server.getGamemodeString(gameMode)));
             }
         }
 

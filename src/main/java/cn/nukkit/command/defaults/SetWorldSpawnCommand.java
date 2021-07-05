@@ -55,7 +55,7 @@ public class SetWorldSpawnCommand extends VanillaCommand {
         }
         level.setSpawnLocation(pos);
         DecimalFormat round2 = new DecimalFormat("##0.00");
-        Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_SETWORLDSPAWN_SUCCESS.with(round2.format(pos.x),
+        Command.broadcastCommandMessage(sender, TranslationKey.Commands.SETWORLDSPAWN_SUCCESS.with(round2.format(pos.x),
                 round2.format(pos.y),
                 round2.format(pos.z)));
         return true;

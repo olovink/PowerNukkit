@@ -72,7 +72,7 @@ public class GiveCommand extends VanillaCommand {
         }
         
         if (item instanceof ItemBlock && item.getBlock() instanceof BlockUnknown) {
-            sender.sendMessage(TranslationKey.COMMANDS_GIVE_BLOCK_NOTFOUND.with(args[1]));
+            sender.sendMessage(TranslationKey.Commands.GIVE_BLOCK_NOTFOUND.with(args[1]));
             return true;
         }
 
@@ -93,12 +93,12 @@ public class GiveCommand extends VanillaCommand {
         item.setCount(count);
 
         if (player == null) {
-            sender.sendMessage(TranslationKey.COMMANDS_GENERIC_PLAYER_NOTFOUND.with(TextFormat.RED));
+            sender.sendMessage(TranslationKey.Commands.GENERIC_PLAYER_NOTFOUND.with(TextFormat.RED));
             return true;
         }
         
         if (item.isNull()) {
-            sender.sendMessage(TranslationKey.COMMANDS_GIVE_ITEM_NOTFOUND.with(TextFormat.RED, args[1]));
+            sender.sendMessage(TranslationKey.Commands.GIVE_ITEM_NOTFOUND.with(TextFormat.RED, args[1]));
             return true;
         }
         
@@ -126,7 +126,7 @@ public class GiveCommand extends VanillaCommand {
             player.dropItem(drop);
         }
         
-        Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_GIVE_SUCCESS.with(
+        Command.broadcastCommandMessage(sender, TranslationKey.Commands.GIVE_SUCCESS.with(
                 item.getName() + " (" + item.getId() + ":" + item.getDamage() + ")",
                 String.valueOf(item.getCount()),
                 player.getName()));

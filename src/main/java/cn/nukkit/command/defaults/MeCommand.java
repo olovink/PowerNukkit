@@ -50,7 +50,7 @@ public class MeCommand extends VanillaCommand {
             msg = new StringBuilder(msg.substring(0, msg.length() - 1));
         }
 
-        sender.getServer().broadcastMessage(TranslationKey.CHAT_TYPE_EMOTE.with(name, TextFormat.WHITE + msg.toString()));
+        sender.getServer().broadcastMessage(TranslationKey.Chat.TYPE_EMOTE.with(name, TextFormat.WHITE + msg.toString()));
 
         return true;
     }

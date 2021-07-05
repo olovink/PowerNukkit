@@ -33,9 +33,9 @@ public class DefaultGamemodeCommand extends VanillaCommand {
         int gameMode = Server.getGamemodeFromString(args[0]);
         if (gameMode != -1) {
             sender.getServer().setPropertyInt("gamemode", gameMode);
-            sender.sendMessage(TranslationKey.COMMANDS_DEFAULTGAMEMODE_SUCCESS.with(Server.getGamemodeString(gameMode)));
+            sender.sendMessage(TranslationKey.Commands.DEFAULTGAMEMODE_SUCCESS.with(Server.getGamemodeString(gameMode)));
         } else {
-            sender.sendMessage(TranslationKey.COMMANDS_GAMEMODE_FAIL_INVALID.with(args[0])); //
+            sender.sendMessage(TranslationKey.Commands.GAMEMODE_FAIL_INVALID.with(args[0])); //
         }
         return true;
     }

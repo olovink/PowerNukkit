@@ -258,7 +258,7 @@ public class SimpleCommandMap implements CommandMap {
         try {
             target.execute(sender, sentCommandLabel, args);
         } catch (Exception e) {
-            sender.sendMessage(TranslationKey.COMMANDS_GENERIC_EXCEPTION.with(TextFormat.RED));
+            sender.sendMessage(TranslationKey.Commands.GENERIC_EXCEPTION.with(TextFormat.RED));
             log.fatal(this.server.getLanguage().translateString("nukkit.command.exception", cmdLine, target.toString(), Utils.getExceptionMessage(e)), e);
         }
         target.timing.stopTiming();

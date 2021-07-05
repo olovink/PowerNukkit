@@ -85,7 +85,7 @@ public class TimeCommand extends VanillaCommand {
             } else {
                 level = sender.getServer().getDefaultLevel();
             }
-            sender.sendMessage(TranslationKey.COMMANDS_TIME_QUERY_GAMETIME.with(Integer.toString(level.getTime())));
+            sender.sendMessage(TranslationKey.Commands.TIME_QUERY_GAMETIME.with(Integer.toString(level.getTime())));
             return true;
         }
 
@@ -130,7 +130,7 @@ public class TimeCommand extends VanillaCommand {
                 level.setTime(value);
                 level.checkTime();
             }
-            Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_TIME_SET.with(Integer.toString(value)));
+            Command.broadcastCommandMessage(sender, TranslationKey.Commands.TIME_SET.with(Integer.toString(value)));
         } else if ("add".equals(args[0])) {
             if (!sender.hasPermission("nukkit.command.time.add")) {
                 sendNoPermissionMessage(sender);
@@ -151,7 +151,7 @@ public class TimeCommand extends VanillaCommand {
                 level.setTime(level.getTime() + value);
                 level.checkTime();
             }
-            Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_TIME_ADDED.with(Integer.toString(value)));
+            Command.broadcastCommandMessage(sender, TranslationKey.Commands.TIME_ADDED.with(Integer.toString(value)));
         } else {
             sendUsage(sender);
         }

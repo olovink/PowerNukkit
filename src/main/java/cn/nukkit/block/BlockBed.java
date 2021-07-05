@@ -140,7 +140,7 @@ public class BlockBed extends BlockTransparentMeta implements Faceable, BlockEnt
             head = getSide(dir);
             if (head.getId() != getId() || !((BlockBed) head).isHeadPiece() || !((BlockBed) head).getBlockFace().equals(dir)) {
                 if (player != null && !willExplode) {
-                    player.sendMessage(TranslationKey.TILE_BED_NOTVALID.with(TextFormat.GRAY));
+                    player.sendMessage(TranslationKey.Tile.BED_NOTVALID.with(TextFormat.GRAY));
                 }
                 
                 if (!shouldExplode) {
@@ -183,7 +183,7 @@ public class BlockBed extends BlockTransparentMeta implements Faceable, BlockEnt
                 .addCoord(footPart.getXOffset(), 0, footPart.getZOffset());
 
         if (!accessArea.isVectorInside(player)) {
-            player.sendMessage(TranslationKey.TILE_BED_TOOFAR.with(TextFormat.GRAY));
+            player.sendMessage(TranslationKey.Tile.BED_TOOFAR.with(TextFormat.GRAY));
             return true;
         }
 
@@ -191,14 +191,14 @@ public class BlockBed extends BlockTransparentMeta implements Faceable, BlockEnt
         if (!player.getSpawn().equals(spawn)) {
             player.setSpawn(spawn);
         }
-        player.sendMessage(TranslationKey.TILE_BED_RESPAWNSET.with(TextFormat.GRAY));
+        player.sendMessage(TranslationKey.Tile.BED_RESPAWNSET.with(TextFormat.GRAY));
 
         int time = this.getLevel().getTime() % Level.TIME_FULL;
 
         boolean isNight = (time >= Level.TIME_NIGHT && time < Level.TIME_SUNRISE);
 
         if (!isNight) {
-            player.sendMessage(TranslationKey.TILE_BED_NOSLEEP.with(TextFormat.GRAY));
+            player.sendMessage(TranslationKey.Tile.BED_NOSLEEP.with(TextFormat.GRAY));
             return true;
         }
 
@@ -216,7 +216,7 @@ public class BlockBed extends BlockTransparentMeta implements Faceable, BlockEnt
         }
 
         if (!player.sleepOn(head)) {
-            player.sendMessage(TranslationKey.TILE_BED_OCCUPIED.with(TextFormat.GRAY));
+            player.sendMessage(TranslationKey.Tile.BED_OCCUPIED.with(TextFormat.GRAY));
         }
 
         return true;

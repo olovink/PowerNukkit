@@ -32,9 +32,9 @@ public class OpCommand extends VanillaCommand {
         String name = args[0];
         @SuppressWarnings("deprecation") IPlayer player = sender.getServer().getOfflinePlayer(name);
 
-        Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_OP_SUCCESS.with(player.getName()));
+        Command.broadcastCommandMessage(sender, TranslationKey.Commands.OP_SUCCESS.with(player.getName()));
         if (player instanceof Player) {
-            ((Player) player).sendMessage(TranslationKey.COMMANDS_OP_MESSAGE.with(TextFormat.GRAY));
+            ((Player) player).sendMessage(TranslationKey.Commands.OP_MESSAGE.with(TextFormat.GRAY));
         }
 
         player.setOp(true);

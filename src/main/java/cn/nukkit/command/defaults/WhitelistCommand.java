@@ -52,17 +52,17 @@ public class WhitelistCommand extends VanillaCommand {
             switch (args[0].toLowerCase()) {
                 case "reload":
                     sender.getServer().reloadWhitelist();
-                    Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_WHITELIST_RELOADED.container());
+                    Command.broadcastCommandMessage(sender, TranslationKey.Commands.WHITELIST_RELOADED.container());
 
                     return true;
                 case "on":
                     sender.getServer().setPropertyBoolean("white-list", true);
-                    Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_WHITELIST_ENABLED.container());
+                    Command.broadcastCommandMessage(sender, TranslationKey.Commands.WHITELIST_ENABLED.container());
 
                     return true;
                 case "off":
                     sender.getServer().setPropertyBoolean("white-list", false);
-                    Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_WHITELIST_DISABLED.container());
+                    Command.broadcastCommandMessage(sender, TranslationKey.Commands.WHITELIST_DISABLED.container());
 
                     return true;
                 case "list":
@@ -72,17 +72,17 @@ public class WhitelistCommand extends VanillaCommand {
                         result.append(player).append(", ");
                         ++count;
                     }
-                    sender.sendMessage(TranslationKey.COMMANDS_WHITELIST_LIST.with(Integer.toString(count), Integer.toString(count)));
+                    sender.sendMessage(TranslationKey.Commands.WHITELIST_LIST.with(Integer.toString(count), Integer.toString(count)));
                     sender.sendMessage(result.length() > 0 ? result.substring(0, result.length() - 2) : "");
 
                     return true;
 
                 case "add":
-                    sender.sendMessage(TranslationKey.COMMANDS_GENERIC_USAGE.with("%commands.whitelist.add.usage"));
+                    sender.sendMessage(TranslationKey.Commands.GENERIC_USAGE.with("%commands.whitelist.add.usage"));
                     return true;
 
                 case "remove":
-                    sender.sendMessage(TranslationKey.COMMANDS_GENERIC_USAGE.with("%commands.whitelist.remove.usage"));
+                    sender.sendMessage(TranslationKey.Commands.GENERIC_USAGE.with("%commands.whitelist.remove.usage"));
                     return true;
             }
         } else if (args.length == 2) {
@@ -94,7 +94,7 @@ public class WhitelistCommand extends VanillaCommand {
                     @SuppressWarnings("deprecation")
                     final IPlayer offlinePlayer = sender.getServer().getOfflinePlayer(args[1]);
                     offlinePlayer.setWhitelisted(true);
-                    Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_WHITELIST_ADD_SUCCESS.with(args[1]));
+                    Command.broadcastCommandMessage(sender, TranslationKey.Commands.WHITELIST_ADD_SUCCESS.with(args[1]));
 
                     return true;
                 }
@@ -102,7 +102,7 @@ public class WhitelistCommand extends VanillaCommand {
                     @SuppressWarnings("deprecation")
                     final IPlayer offlinePlayer = sender.getServer().getOfflinePlayer(args[1]);
                     offlinePlayer.setWhitelisted(false);
-                    Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_WHITELIST_REMOVE_SUCCESS.with(args[1]));
+                    Command.broadcastCommandMessage(sender, TranslationKey.Commands.WHITELIST_REMOVE_SUCCESS.with(args[1]));
 
                     return true;
                 }

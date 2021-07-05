@@ -35,7 +35,7 @@ public class PardonCommand extends VanillaCommand {
 
         sender.getServer().getNameBans().remove(args[0]);
 
-        Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_UNBAN_SUCCESS.with(args[0]));
+        Command.broadcastCommandMessage(sender, TranslationKey.Commands.UNBAN_SUCCESS.with(args[0]));
 
         return true;
     }

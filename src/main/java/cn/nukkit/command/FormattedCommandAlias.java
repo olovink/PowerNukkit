@@ -38,7 +38,7 @@ public class FormattedCommandAlias extends Command {
                 sender.sendMessage(TextFormat.RED + e.getMessage());
                 return false;
             } catch (Exception e) {
-                sender.sendMessage(TranslationKey.COMMANDS_GENERIC_EXCEPTION.with(TextFormat.RED));
+                sender.sendMessage(TranslationKey.Commands.GENERIC_EXCEPTION.with(TextFormat.RED));
                 log.warn("An error has occurred while executing the formatted command alias {} by the sender {}", commandLabel, sender.getName(), e);
                 return false;
             }

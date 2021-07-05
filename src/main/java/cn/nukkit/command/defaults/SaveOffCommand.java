@@ -22,7 +22,7 @@ public class SaveOffCommand extends VanillaCommand {
             return true;
         }
         sender.getServer().setAutoSave(false);
-        Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_SAVE_DISABLED.container());
+        Command.broadcastCommandMessage(sender, TranslationKey.Commands.SAVE_DISABLED.container());
         return true;
     }
 }

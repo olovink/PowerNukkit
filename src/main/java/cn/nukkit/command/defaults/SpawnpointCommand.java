@@ -43,7 +43,7 @@ public class SpawnpointCommand extends VanillaCommand {
         } else {
             target = sender.getServer().getPlayer(args[0]);
             if (target == null) {
-                sender.sendMessage(TranslationKey.COMMANDS_GENERIC_PLAYER_NOTFOUND.with(TextFormat.RED));
+                sender.sendMessage(TranslationKey.Commands.GENERIC_PLAYER_NOTFOUND.with(TextFormat.RED));
                 return true;
             }
         }
@@ -65,7 +65,7 @@ public class SpawnpointCommand extends VanillaCommand {
                 if (y < 0) y = 0;
                 if (y > 256) y = 256;
                 target.setSpawn(new Position(x, y, z, level));
-                Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_SPAWNPOINT_SUCCESS_SINGLE.with(
+                Command.broadcastCommandMessage(sender, TranslationKey.Commands.SPAWNPOINT_SUCCESS_SINGLE.with(
                         target.getName(),
                         round2.format(x),
                         round2.format(y),
@@ -76,7 +76,7 @@ public class SpawnpointCommand extends VanillaCommand {
             if (sender instanceof Player) {
                 Position pos = (Position) sender;
                 target.setSpawn(pos);
-                Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_SPAWNPOINT_SUCCESS_SINGLE.with(
+                Command.broadcastCommandMessage(sender, TranslationKey.Commands.SPAWNPOINT_SUCCESS_SINGLE.with(
                         target.getName(),
                         round2.format(pos.x),
                         round2.format(pos.y),

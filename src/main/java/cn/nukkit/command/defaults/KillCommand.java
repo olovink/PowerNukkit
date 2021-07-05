@@ -55,7 +55,7 @@ public class KillCommand extends VanillaCommand {
                 }
                 player.setLastDamageCause(ev);
                 player.setHealth(0);
-                Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_KILL_SUCCESSFUL.with(player.getName()));
+                Command.broadcastCommandMessage(sender, TranslationKey.Commands.KILL_SUCCESSFUL.with(player.getName()));
             } else if (args[0].equals("@e")) {
                 StringJoiner joiner = new StringJoiner(", ");
                 for (Level level : Server.getInstance().getLevels().values()) {
@@ -67,7 +67,7 @@ public class KillCommand extends VanillaCommand {
                     }
                 }
                 String entities = joiner.toString();
-                sender.sendMessage(TranslationKey.COMMANDS_KILL_SUCCESSFUL.with(entities.isEmpty() ? "0" : entities));
+                sender.sendMessage(TranslationKey.Commands.KILL_SUCCESSFUL.with(entities.isEmpty() ? "0" : entities));
             } else if (args[0].equals("@s")) {
                 if (!sender.hasPermission("nukkit.command.kill.self")) {
                     sendNoPermissionMessage(sender);
@@ -80,7 +80,7 @@ public class KillCommand extends VanillaCommand {
                 }
                 ((Player) sender).setLastDamageCause(ev);
                 ((Player) sender).setHealth(0);
-                sender.sendMessage(TranslationKey.COMMANDS_KILL_SUCCESSFUL.with(sender.getName()));
+                sender.sendMessage(TranslationKey.Commands.KILL_SUCCESSFUL.with(sender.getName()));
             } else if (args[0].equals("@a")) {
                 if (!sender.hasPermission("nukkit.command.kill.other")) {
                     sendNoPermissionMessage(sender);
@@ -111,7 +111,7 @@ public class KillCommand extends VanillaCommand {
             }
             ((Player) sender).setLastDamageCause(ev);
             ((Player) sender).setHealth(0);
-            sender.sendMessage(TranslationKey.COMMANDS_KILL_SUCCESSFUL.with(sender.getName()));
+            sender.sendMessage(TranslationKey.Commands.KILL_SUCCESSFUL.with(sender.getName()));
         } else {
             sendUsage(sender);
             return false;

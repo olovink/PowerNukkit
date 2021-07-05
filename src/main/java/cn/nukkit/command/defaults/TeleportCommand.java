@@ -6,7 +6,6 @@ import cn.nukkit.command.CommandSender;
 import cn.nukkit.command.data.CommandParamType;
 import cn.nukkit.command.data.CommandParameter;
 import cn.nukkit.event.player.PlayerTeleportEvent;
-import cn.nukkit.lang.TranslationContainer;
 import cn.nukkit.lang.TranslationKey;
 import cn.nukkit.level.Location;
 import cn.nukkit.math.NukkitMath;
@@ -83,7 +82,7 @@ public class TeleportCommand extends VanillaCommand {
         }
         if (args.length < 3) {
             ((Player) origin).teleport((Player) target, PlayerTeleportEvent.TeleportCause.COMMAND);
-            Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_TP_SUCCESS.with(origin.getName(), target.getName()));
+            Command.broadcastCommandMessage(sender, TranslationKey.Commands.TP_SUCCESS.with(origin.getName(), target.getName()));
             return true;
         } else if (((Player) target).getLevel() != null) {
             int pos;
@@ -113,7 +112,7 @@ public class TeleportCommand extends VanillaCommand {
                 return true;
             }
             ((Player) target).teleport(new Location(x, y, z, yaw, pitch, ((Player) target).getLevel()), PlayerTeleportEvent.TeleportCause.COMMAND);
-            Command.broadcastCommandMessage(sender, TranslationKey.COMMANDS_TP_SUCCESS_COORDINATES.with(target.getName(), String.valueOf(NukkitMath.round(x, 2)), String.valueOf(NukkitMath.round(y, 2)), String.valueOf(NukkitMath.round(z, 2))));
+            Command.broadcastCommandMessage(sender, TranslationKey.Commands.TP_SUCCESS_COORDINATES.with(target.getName(), String.valueOf(NukkitMath.round(x, 2)), String.valueOf(NukkitMath.round(y, 2)), String.valueOf(NukkitMath.round(z, 2))));
             return true;
         }
         sendUsage(sender);
