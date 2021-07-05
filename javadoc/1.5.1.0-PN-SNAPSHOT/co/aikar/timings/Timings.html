@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Timings (PowerNukkit 1.5.1.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2021-07-03">
+<meta name="date" content="2021-07-05">
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
 </head>
@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9,"i6":9,"i7":9,"i8":9,"i9":9,"i10":9,"i11":9,"i12":9,"i13":9,"i14":9,"i15":9,"i16":9,"i17":9,"i18":9};
+var methods = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9,"i6":9,"i7":9,"i8":9,"i9":9,"i10":9,"i11":9,"i12":9,"i13":9,"i14":9,"i15":9,"i16":9,"i17":9,"i18":9,"i19":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -307,38 +307,44 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
              long&nbsp;period)</code>&nbsp;</td>
 </tr>
 <tr id="i10" class="altColor">
-<td class="colFirst"><code>static boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../co/aikar/timings/Timings.html#isPrivacy--">isPrivacy</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../co/aikar/timings/Timings.html#init--">init</a></span>()</code>
+<div class="block">Initialize the static fields.</div>
+</td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>static boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../co/aikar/timings/Timings.html#isTimingsEnabled--">isTimingsEnabled</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../co/aikar/timings/Timings.html#isPrivacy--">isPrivacy</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><code>static boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../co/aikar/timings/Timings.html#isVerboseEnabled--">isVerboseEnabled</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../co/aikar/timings/Timings.html#isTimingsEnabled--">isTimingsEnabled</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i13" class="rowColor">
-<td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../co/aikar/timings/Timings.html#reset--">reset</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../co/aikar/timings/Timings.html#isVerboseEnabled--">isVerboseEnabled</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i14" class="altColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../co/aikar/timings/Timings.html#setHistoryInterval-int-">setHistoryInterval</a></span>(int&nbsp;interval)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../co/aikar/timings/Timings.html#reset--">reset</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i15" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../co/aikar/timings/Timings.html#setHistoryLength-int-">setHistoryLength</a></span>(int&nbsp;length)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../co/aikar/timings/Timings.html#setHistoryInterval-int-">setHistoryInterval</a></span>(int&nbsp;interval)</code>&nbsp;</td>
 </tr>
 <tr id="i16" class="altColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../co/aikar/timings/Timings.html#setTimingsEnabled-boolean-">setTimingsEnabled</a></span>(boolean&nbsp;enabled)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../co/aikar/timings/Timings.html#setHistoryLength-int-">setHistoryLength</a></span>(int&nbsp;length)</code>&nbsp;</td>
 </tr>
 <tr id="i17" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../co/aikar/timings/Timings.html#setVerboseEnabled-boolean-">setVerboseEnabled</a></span>(boolean&nbsp;enabled)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../co/aikar/timings/Timings.html#setTimingsEnabled-boolean-">setTimingsEnabled</a></span>(boolean&nbsp;enabled)</code>&nbsp;</td>
 </tr>
 <tr id="i18" class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../co/aikar/timings/Timings.html#setVerboseEnabled-boolean-">setVerboseEnabled</a></span>(boolean&nbsp;enabled)</code>&nbsp;</td>
+</tr>
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../co/aikar/timings/Timings.html#stopServer--">stopServer</a></span>()</code>&nbsp;</td>
 </tr>
@@ -614,6 +620,18 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="init--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>init</h4>
+<pre><a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+public static&nbsp;void&nbsp;init()</pre>
+<div class="block">Initialize the static fields.</div>
+</li>
+</ul>
 <a name="isTimingsEnabled--">
 <!--   -->
 </a>
