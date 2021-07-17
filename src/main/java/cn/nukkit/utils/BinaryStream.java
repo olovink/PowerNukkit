@@ -5,10 +5,7 @@ import cn.nukkit.api.Since;
 import cn.nukkit.block.Block;
 import cn.nukkit.entity.Attribute;
 import cn.nukkit.entity.data.Skin;
-import cn.nukkit.item.Item;
-import cn.nukkit.item.ItemDurable;
-import cn.nukkit.item.ItemID;
-import cn.nukkit.item.RuntimeItems;
+import cn.nukkit.item.*;
 import cn.nukkit.level.GameRule;
 import cn.nukkit.level.GameRules;
 import cn.nukkit.math.BlockFace;
@@ -26,6 +23,7 @@ import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufAllocator;
 import io.netty.util.internal.EmptyArrays;
 import lombok.SneakyThrows;
+import lombok.extern.log4j.Log4j2;
 import lombok.val;
 
 import java.io.ByteArrayInputStream;
@@ -39,6 +37,7 @@ import java.util.function.Function;
 /**
  * @author MagicDroidX (Nukkit Project)
  */
+@Log4j2
 public class BinaryStream {
 
     public int offset;
@@ -389,21 +388,12 @@ public class BinaryStream {
         int count = getLShort();
         int damage = (int) getUnsignedVarInt();
 
-        Integer id = null;
-        String stringId = null;
-        try {
-            int fullId = RuntimeItems.getRuntimeMapping().getLegacyFullId(networkId);
-            id = RuntimeItems.getId(fullId);
+        int fullId = RuntimeItems.getRuntimeMapping().getLegacyFullId(networkId);
+        int id = RuntimeItems.getId(fullId);
 
-            boolean hasData = RuntimeItems.hasData(fullId);
-            if (hasData) {
-                damage = RuntimeItems.getData(fullId);
-            }
-        } catch (IllegalArgumentException unknownMapping) {
-            stringId = RuntimeItems.getRuntimeMapping().getNamespacedIdByNetworkId(networkId);
-            if (stringId == null) {
-                throw unknownMapping;
-            }
+        boolean hasData = RuntimeItems.hasData(fullId);
+        if (hasData) {
+            damage = RuntimeItems.getData(fullId);
         }
 
         if (getBoolean()) { // hasNetId
@@ -455,7 +445,7 @@ public class BinaryStream {
                 canBreak[i] = stream.readUTF();
             }
 
-            if (id != null && id == ItemID.SHIELD) {
+            if (id == ItemID.SHIELD) {
                 stream.readLong();
             }
         } catch (IOException e) {
@@ -464,15 +454,7 @@ public class BinaryStream {
             buf.release();
         }
 
-        Item item;
-        if (id != null) {
-            item = Item.get(id, damage, count, nbt);
-        } else {
-            item = Item.fromString(stringId);
-            item.setDamage(damage);
-            item.setCount(count);
-            item.setCompoundTag(nbt);
-        }
+        Item item = readUnknownItem(Item.get(id, damage, count, nbt));
 
         if (canBreak.length > 0 || canPlace.length > 0) {
             CompoundTag namedTag = item.getNamedTag();
@@ -501,6 +483,68 @@ public class BinaryStream {
 
         return item;
     }
+    
+    private Item readUnknownItem(Item item) {
+        if (item.getId() != 248 || !item.hasCompoundTag()) {
+            return item;
+        }
+        
+        CompoundTag tag = item.getNamedTag();
+        if (!tag.containsCompound("PowerNukkitUnknown")) {
+            return item;
+        }
+
+        CompoundTag pnTag = tag.getCompound("PowerNukkitUnknown");
+        int itemId = pnTag.getInt("OriginalItemId");
+        int meta = pnTag.getInt("OriginalMeta");
+        boolean hasCustomName = pnTag.getBoolean("HasCustomName");
+        boolean hasCompound = pnTag.getBoolean("HasCompound");
+        boolean hasDisplayTag = pnTag.getBoolean("HasDisplayTag");
+        String customName = pnTag.getString("OriginalCustomName");
+        
+        item = Item.get(itemId, meta, item.getCount());
+        if (hasCompound) {
+            tag.remove("PowerNukkitUnknown");
+            if (!hasDisplayTag) {
+                tag.remove("display");
+            } else if (tag.containsCompound("display")) {
+                if (!hasCustomName) {
+                    tag.getCompound("display").remove("Name");
+                } else {
+                    tag.getCompound("display").putString("Name", customName);
+                }
+            }
+            item.setNamedTag(tag);
+        }
+        
+        return item;
+    }
+    
+    private Item createFakeUnknownItem(Item item) {
+        boolean hasCompound = item.hasCompoundTag();
+        Item fallback = Item.getBlock(248, 0, item.getCount());
+        CompoundTag tag = item.getNamedTag();
+        if (tag == null) {
+            tag = new CompoundTag();
+        }
+        tag.putCompound("PowerNukkitUnknown", new CompoundTag()
+                .putInt("OriginalItemId", item.getId())
+                .putInt("OriginalMeta", item.getDamage())
+                .putBoolean("HasCustomName", item.hasCustomName())
+                .putBoolean("HasDisplayTag", tag.contains("display"))
+                .putBoolean("HasCompound", hasCompound)
+                .putString("OriginalCustomName", item.getCustomName()));
+
+        fallback.setNamedTag(tag);
+        String suffix = "" + TextFormat.RESET + TextFormat.GRAY + TextFormat.ITALIC +
+                " (" + item.getId() + ":" + item.getDamage() + ")";
+        if (fallback.hasCustomName()) {
+            fallback.setCustomName(fallback.getCustomName() + suffix);
+        } else {
+            fallback.setCustomName(TextFormat.RESET + "" + TextFormat.BOLD + TextFormat.RED + "Unknown" + suffix);
+        }
+        return fallback;
+    }
 
     public void putSlot(Item item) {
         this.putSlot(item, false);
@@ -513,7 +557,14 @@ public class BinaryStream {
             return;
         }
 
-        int networkFullId = RuntimeItems.getRuntimeMapping().getNetworkFullId(item);
+        int networkFullId;
+        try {
+            networkFullId = RuntimeItems.getRuntimeMapping().getNetworkFullId(item);
+        } catch (IllegalArgumentException e) {
+            log.trace(e);
+            item = createFakeUnknownItem(item);
+            networkFullId = RuntimeItems.getRuntimeMapping().getNetworkFullId(item);
+        }
         int networkId = RuntimeItems.getNetworkId(networkFullId);
 
         putVarInt(networkId);
@@ -544,7 +595,7 @@ public class BinaryStream {
         ByteBuf userDataBuf = ByteBufAllocator.DEFAULT.ioBuffer();
         try (LittleEndianByteBufOutputStream stream = new LittleEndianByteBufOutputStream(userDataBuf)) {
             if (data != 0) {
-                byte[] nbt = item.getCustomCompoundTag();
+                byte[] nbt = item.getCompoundTag();
                 CompoundTag tag;
                 if (nbt == null || nbt.length == 0) {
                     tag = new CompoundTag();
@@ -558,10 +609,10 @@ public class BinaryStream {
                 stream.writeShort(-1);
                 stream.writeByte(1); // Hardcoded in current version
                 stream.write(NBTIO.write(tag, ByteOrder.LITTLE_ENDIAN));
-            } else if (item.hasCustomCompoundTag()) {
+            } else if (item.hasCompoundTag()) {
                 stream.writeShort(-1);
                 stream.writeByte(1); // Hardcoded in current version
-                stream.write(item.getCustomCompoundTag());
+                stream.write(item.getCompoundTag());
             } else {
                 userDataBuf.writeShortLE(0);
             }
