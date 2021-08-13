@@ -415,6 +415,91 @@
     "oldId": -338
   },
   {
+    "name": "minecraft:candle",
+    "id": -412,
+    "oldId": -412
+  },
+  {
+    "name": "minecraft:white_candle",
+    "id": -413,
+    "oldId": -413
+  },
+  {
+    "name": "minecraft:orange_candle",
+    "id": -414,
+    "oldId": -414
+  },
+  {
+    "name": "minecraft:magenta_candle",
+    "id": -415,
+    "oldId": -415
+  },
+  {
+    "name": "minecraft:light_blue_candle",
+    "id": -416,
+    "oldId": -416
+  },
+  {
+    "name": "minecraft:yellow_candle",
+    "id": -417,
+    "oldId": -417
+  },
+  {
+    "name": "minecraft:lime_candle",
+    "id": -418,
+    "oldId": -418
+  },
+  {
+    "name": "minecraft:pink_candle",
+    "id": -419,
+    "oldId": -419
+  },
+  {
+    "name": "minecraft:gray_candle",
+    "id": -420,
+    "oldId": -420
+  },
+  {
+    "name": "minecraft:light_gray_candle",
+    "id": -421,
+    "oldId": -421
+  },
+  {
+    "name": "minecraft:cyan_candle",
+    "id": -422,
+    "oldId": -422
+  },
+  {
+    "name": "minecraft:purple_candle",
+    "id": -423,
+    "oldId": -423
+  },
+  {
+    "name": "minecraft:blue_candle",
+    "id": -424,
+    "oldId": -424
+  },
+  {
+    "name": "minecraft:brown_candle",
+    "id": -425,
+    "oldId": -425
+  },
+  {
+    "name": "minecraft:green_candle",
+    "id": -426,
+    "oldId": -426
+  },
+  {
+    "name": "minecraft:red_candle",
+    "id": -427,
+    "oldId": -427
+  },
+  {
+    "name": "minecraft:black_candle",
+    "id": -428,
+    "oldId": -428
+  },
+  {
     "name": "minecraft:azalea",
     "id": -337,
     "oldId": -337
