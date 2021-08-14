@@ -51,7 +51,7 @@ public class BlockEntityItemFrame extends BlockEntitySpawnable {
 
     @Override
     public boolean isBlockEntityValid() {
-        return this.getBlock().getId() == Block.ITEM_FRAME_BLOCK;
+        return this.getBlock().getId() == Block.ITEM_FRAME_BLOCK || this.getBlock().getId() == Block.GLOW_FRAME;
     }
 
     public int getItemRotation() {
