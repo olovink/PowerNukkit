@@ -21,6 +21,20 @@ public class BlockEntityCustomDataStorage extends BlockEntity {
 
     @Override
     public boolean isBlockEntityValid() {
-        return !namedTag.getCompound(BlockEntity.CUSTOM_STORAGE).getCompound(BlockEntity.CUSTOM_STORAGE).isEmpty();
+        CompoundTag root = namedTag.getCompound(BlockEntity.CUSTOM_STORAGE);
+        if (root.getBoolean("AlwaysValid")) {
+            return true;
+        }
+        if (root.getCompound(BlockEntity.CUSTOM_STORAGE).isEmpty()) {
+            return false;
+        }
+        int[] allowedIds = root.getIntArray("ValidBlockIds");
+        int currentId = getLevelBlockState().getBlockId();
+        for (int allowedId: allowedIds) {
+            if (allowedId == currentId) {
+                return true;
+            }
+        }
+        return false;
     }
 }

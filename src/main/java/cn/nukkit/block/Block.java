@@ -19,7 +19,10 @@ import cn.nukkit.level.Level;
 import cn.nukkit.level.MovingObjectPosition;
 import cn.nukkit.level.Position;
 import cn.nukkit.level.format.FullChunk;
-import cn.nukkit.math.*;
+import cn.nukkit.math.AxisAlignedBB;
+import cn.nukkit.math.BlockFace;
+import cn.nukkit.math.NukkitMath;
+import cn.nukkit.math.Vector3;
 import cn.nukkit.metadata.MetadataValue;
 import cn.nukkit.metadata.Metadatable;
 import cn.nukkit.nbt.tag.CompoundTag;
@@ -29,6 +32,8 @@ import cn.nukkit.utils.BlockColor;
 import cn.nukkit.utils.InvalidBlockDamageException;
 import cn.nukkit.utils.LevelException;
 import com.google.common.base.Preconditions;
+import it.unimi.dsi.fastutil.ints.IntArrayList;
+import it.unimi.dsi.fastutil.ints.IntList;
 import lombok.extern.log4j.Log4j2;
 
 import javax.annotation.Nonnegative;
@@ -2206,7 +2211,7 @@ public abstract class Block extends Position implements Metadatable, Cloneable, 
         return this.level.isBlockPowered(this.getLocation());
     }
 
-    private BlockEntity getBlockEntity() {
+    private BlockEntity getCurrentBlockEntity() {
         Level level = getLevel();
         if (level == null) {
             throw new LevelException("Undefined Level reference");
@@ -2216,11 +2221,12 @@ public abstract class Block extends Position implements Metadatable, Cloneable, 
     }
 
     @Nonnull
-    private BlockEntity getOrCreateStorageBlockEntity() {
-        if (this instanceof BlockEntityHolder<?>) {
-            return ((BlockEntityHolder<?>) this).getOrCreateBlockEntity();
+    private BlockEntity getOrCreateCustomStorageBlockEntity() {
+        Block levelBlock = getLevelBlock();
+        if (levelBlock instanceof BlockEntityHolder<?>) {
+            return ((BlockEntityHolder<?>) levelBlock).getOrCreateBlockEntity();
         }
-        BlockEntity blockEntity = getBlockEntity();
+        BlockEntity blockEntity = getCurrentBlockEntity();
         if (blockEntity != null) {
             return blockEntity;
         }
@@ -2232,7 +2238,7 @@ public abstract class Block extends Position implements Metadatable, Cloneable, 
         CompoundTag initialData = new CompoundTag();
         BlockEntity created = BlockEntity.createBlockEntity(typeName, chunk,
                 initialData
-                        .putCompound(BlockEntity.CUSTOM_STORAGE, new CompoundTag())
+                        .putCompound(BlockEntity.CUSTOM_STORAGE, new CompoundTag().putIntArray("ValidBlockIds", new int[]{getId()}))
                         .putString("id", typeName)
                         .putInt("x", getFloorX())
                         .putInt("y", getFloorY())
@@ -2254,13 +2260,72 @@ public abstract class Block extends Position implements Metadatable, Cloneable, 
     @Nonnull
     @Override
     public CompoundTag getRootCustomDataStorageTag() {
-        return getOrCreateStorageBlockEntity().namedTag.getCompound(BlockEntity.CUSTOM_STORAGE).copy();
+        return getOrCreateCustomStorageBlockEntity().namedTag.getCompound(BlockEntity.CUSTOM_STORAGE).copy();
     }
 
     @Since("FUTURE")
     @PowerNukkitOnly
     @Override
     public void setRootCustomDataStorageTag(@Nonnull CompoundTag root) {
-        getOrCreateStorageBlockEntity().namedTag.putCompound(BlockEntity.CUSTOM_STORAGE, root.copy());
+        getOrCreateCustomStorageBlockEntity().namedTag.putCompound(BlockEntity.CUSTOM_STORAGE, root.copy());
+    }
+
+    @Since("FUTURE")
+    @PowerNukkitOnly
+    public void setCustomDataAlwaysValid(boolean alwaysValid) {
+        CompoundTag root = getOrCreateCustomStorageBlockEntity().namedTag.getCompound(BlockEntity.CUSTOM_STORAGE);
+        if (!alwaysValid) {
+            root.remove("AlwaysValid");
+        } else {
+            root.putBoolean("AlwaysValid", true);
+        }
+        getOrCreateCustomStorageBlockEntity().namedTag.put(BlockEntity.CUSTOM_STORAGE, root);
+    }
+
+    @Since("FUTURE")
+    @PowerNukkitOnly
+    public boolean isCustomDataAlwaysValid() {
+        return getOrCreateCustomStorageBlockEntity().namedTag.getCompound(BlockEntity.CUSTOM_STORAGE).getBoolean("AlwaysValid");
+    }
+
+    @Since("FUTURE")
+    @PowerNukkitOnly
+    @Nonnull
+    public int[] getCustomDataValidBlockIds() {
+        return getOrCreateCustomStorageBlockEntity().namedTag.getCompound(BlockEntity.CUSTOM_STORAGE).getIntArray("ValidBlockIds");
+    }
+
+    @Since("FUTURE")
+    @PowerNukkitOnly
+    public void setCustomDataValidBlockIds(@Nullable int... validBlockIds) {
+        CompoundTag root = getOrCreateCustomStorageBlockEntity().namedTag.getCompound(BlockEntity.CUSTOM_STORAGE);
+        if (validBlockIds == null || validBlockIds.length == 0) {
+            root.remove("ValidBlockIds");
+        } else {
+            root.putIntArray("ValidBlockIds", validBlockIds);
+        }
+        getOrCreateCustomStorageBlockEntity().namedTag.put(BlockEntity.CUSTOM_STORAGE, root);
+    }
+
+    @Since("FUTURE")
+    @PowerNukkitOnly
+    public void addToValidCustomDataHolder(int... validIds) {
+        IntList list = new IntArrayList(getCustomDataValidBlockIds());
+        boolean modified = false;
+        for (int validId : validIds) {
+            if (!list.contains(validId)) {
+                modified = true;
+                list.add(validId);
+            }
+        }
+        if (modified) {
+            setCustomDataValidBlockIds(list.toIntArray());
+        }
+    }
+
+    @Since("FUTURE")
+    @PowerNukkitOnly
+    public void addCurrentBlockAsValidCustomDataHolder() {
+        addToValidCustomDataHolder(getId());
     }
 }

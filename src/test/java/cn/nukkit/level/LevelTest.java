@@ -24,8 +24,7 @@ import java.io.File;
 import java.io.IOException;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -85,6 +84,32 @@ class LevelTest {
         assertEquals(BlockID.STONE, block.getId());
         assertEquals(3, block.getCustomData(plugin).getInt("MyData"));
         assertEquals(4, airBlock.getCustomData(plugin).getInt("TheAir"));
+
+        assertTrue(level.setBlock(3, 3, 3, Block.get(BlockID.GRASS), true, false));
+        Block grass = level.getBlock(airBlock);
+        assertFalse(grass.hasCustomData(plugin));
+        assertFalse(airBlock.hasCustomData(plugin));
+
+        grass.setCustomDataAlwaysValid(true);
+        assertTrue(grass.isCustomDataAlwaysValid());
+        grass.setCustomData(plugin, "valid", 8);
+        assertEquals(8, grass.getCustomData(plugin).getInt("valid"));
+        level.setBlock(grass, Block.get(BlockID.FURNACE), true, false);
+        Block furnace = level.getBlock(grass);
+        assertEquals(8, grass.getCustomData(plugin).getInt("valid"));
+        assertTrue(grass.hasCustomData(plugin));
+        assertTrue(furnace.hasCustomData(plugin));
+        level.setBlock(furnace, Block.get(BlockID.TERRACOTTA), true, false);
+        Block terracotta = level.getBlock(furnace);
+        assertTrue(terracotta.hasCustomData(plugin));
+        assertEquals(8, grass.getCustomData(plugin).getInt("valid"));
+        assertEquals(8, furnace.getCustomData(plugin).getInt("valid"));
+        assertEquals(8, terracotta.getCustomData(plugin).getInt("valid"));
+        terracotta.addCurrentBlockAsValidCustomDataHolder();
+        terracotta.addCurrentBlockAsValidCustomDataHolder();
+        terracotta.setCustomDataAlwaysValid(false);
+        level.setBlock(furnace, Block.get(BlockID.FURNACE), true, false);
+        assertEquals(0, terracotta.getCustomData(plugin).getInt("valid"));
     }
 
     @BeforeEach
