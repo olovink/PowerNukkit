@@ -2244,6 +2244,13 @@ public abstract class Block extends Position implements Metadatable, Cloneable, 
     @Nonnull
     @Override
     public CompoundTag getRootCustomDataStorageTag() {
-        return getOrCreateStorageBlockEntity().namedTag;
+        return getOrCreateStorageBlockEntity().namedTag.getCompound(BlockEntity.CUSTOM_STORAGE).copy();
+    }
+
+    @Since("FUTURE")
+    @PowerNukkitOnly
+    @Override
+    public void setRootCustomDataStorageTag(@Nonnull CompoundTag root) {
+        getOrCreateStorageBlockEntity().namedTag.putCompound(BlockEntity.CUSTOM_STORAGE, root.copy());
     }
 }

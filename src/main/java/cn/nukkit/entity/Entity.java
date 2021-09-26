@@ -8,6 +8,7 @@ import cn.nukkit.api.PowerNukkitDifference;
 import cn.nukkit.api.PowerNukkitOnly;
 import cn.nukkit.api.Since;
 import cn.nukkit.block.*;
+import cn.nukkit.blockentity.BlockEntity;
 import cn.nukkit.blockentity.BlockEntityPistonArm;
 import cn.nukkit.blockstate.BlockState;
 import cn.nukkit.customdata.CustomDataHolder;
@@ -2900,6 +2901,13 @@ public abstract class Entity extends Location implements Metadatable, CustomData
     @Nonnull
     @Override
     public CompoundTag getRootCustomDataStorageTag() {
-        return namedTag;
+        return namedTag.getCompound(BlockEntity.CUSTOM_STORAGE);
+    }
+
+    @Since("FUTURE")
+    @PowerNukkitOnly
+    @Override
+    public void setRootCustomDataStorageTag(@Nonnull CompoundTag root) {
+        namedTag.putCompound(BlockEntity.CUSTOM_STORAGE, root).copy();
     }
 }

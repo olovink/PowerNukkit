@@ -32,6 +32,13 @@ public interface CustomDataHolder {
     CompoundTag getRootCustomDataStorageTag();
 
     /**
+     * Changes the content of all custom data.
+     */
+    @PowerNukkitOnly
+    @Since("FUTURE")
+    void setRootCustomDataStorageTag(@Nonnull CompoundTag root);
+
+    /**
      * Defines a value to root/customdata/plugin-name/key.
      */
     @PowerNukkitOnly
@@ -175,9 +182,11 @@ public interface CustomDataHolder {
     @PowerNukkitOnly
     @Since("FUTURE")
     default boolean clearCustomData(@Nonnull Plugin plugin) {
-        CompoundTag previous =  (CompoundTag) getRootCustomDataStorageTag()
-                .getCompound(BlockEntity.CUSTOM_STORAGE)
-                .removeAndGet(plugin.getName());
+        CompoundTag root = getRootCustomDataStorageTag();
+        CompoundTag compound = root.getCompound(BlockEntity.CUSTOM_STORAGE);
+        CompoundTag previous = compound.removeAndGet(plugin.getName());
+        root.putCompound(BlockEntity.CUSTOM_STORAGE, compound);
+        setRootCustomDataStorageTag(root);
         return previous != null && !previous.isEmpty();
     }
 
@@ -191,9 +200,10 @@ public interface CustomDataHolder {
             clearCustomData(plugin);
             return;
         }
-        CompoundTag storage =getRootCustomDataStorageTag()
-                .getCompound(BlockEntity.CUSTOM_STORAGE);
-        storage.putCompound(plugin.getName(), data.copy());
+        CompoundTag root = getRootCustomDataStorageTag();
+        CompoundTag storage = root.getCompound(BlockEntity.CUSTOM_STORAGE).putCompound(plugin.getName(), data.copy());
+        root.putCompound(BlockEntity.CUSTOM_STORAGE, storage);
+        setRootCustomDataStorageTag(root);
     }
 
     /**

@@ -1590,30 +1590,18 @@ public class Item implements Cloneable, BlockID, ItemID, CustomDataHolder {
     @Override
     public CompoundTag getRootCustomDataStorageTag() {
         CompoundTag namedTag = getNamedTag();
-        return namedTag == null? new CompoundTag() : namedTag;
+        return namedTag == null? new CompoundTag() : namedTag.getCompound(BlockEntity.CUSTOM_STORAGE).copy();
     }
 
-    @PowerNukkitOnly
     @Since("FUTURE")
-    @Override
-    public boolean clearCustomData(@Nonnull Plugin plugin) {
-        CompoundTag root = getRootCustomDataStorageTag();
-        Tag removed = root.getCompound(BlockEntity.CUSTOM_STORAGE).removeAndGet(plugin.getName());
-        setCompoundTag(root);
-        return removed != null;
-    }
-
     @PowerNukkitOnly
-    @Since("FUTURE")
     @Override
-    public void setCustomData(@Nonnull Plugin plugin, @Nullable CompoundTag data) {
-        if (data == null) {
-            clearCustomData(plugin);
-            return;
+    public void setRootCustomDataStorageTag(@Nonnull CompoundTag root) {
+        CompoundTag namedTag = getNamedTag();
+        if (namedTag == null) {
+            namedTag = new CompoundTag();
         }
-        CompoundTag root = getRootCustomDataStorageTag();
-        CompoundTag storage = root.getCompound(BlockEntity.CUSTOM_STORAGE);
-        storage.putCompound(plugin.getName(), data.copy());
-        setCompoundTag(root);
+        namedTag.put(BlockEntity.CUSTOM_STORAGE, root.copy());
+        setCompoundTag(namedTag);
     }
 }
