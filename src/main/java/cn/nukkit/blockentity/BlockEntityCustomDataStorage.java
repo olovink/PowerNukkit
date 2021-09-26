@@ -21,6 +21,6 @@ public class BlockEntityCustomDataStorage extends BlockEntity {
 
     @Override
     public boolean isBlockEntityValid() {
-        return !namedTag.getCompound(BlockEntity.CUSTOM_STORAGE).isEmpty();
+        return !namedTag.getCompound(BlockEntity.CUSTOM_STORAGE).getCompound(BlockEntity.CUSTOM_STORAGE).isEmpty();
     }
 }

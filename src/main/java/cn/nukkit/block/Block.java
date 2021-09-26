@@ -19,10 +19,7 @@ import cn.nukkit.level.Level;
 import cn.nukkit.level.MovingObjectPosition;
 import cn.nukkit.level.Position;
 import cn.nukkit.level.format.FullChunk;
-import cn.nukkit.math.AxisAlignedBB;
-import cn.nukkit.math.BlockFace;
-import cn.nukkit.math.NukkitMath;
-import cn.nukkit.math.Vector3;
+import cn.nukkit.math.*;
 import cn.nukkit.metadata.MetadataValue;
 import cn.nukkit.metadata.Metadatable;
 import cn.nukkit.nbt.tag.CompoundTag;
@@ -2209,10 +2206,23 @@ public abstract class Block extends Position implements Metadatable, Cloneable, 
         return this.level.isBlockPowered(this.getLocation());
     }
 
+    private BlockEntity getBlockEntity() {
+        Level level = getLevel();
+        if (level == null) {
+            throw new LevelException("Undefined Level reference");
+        }
+
+        return level.getBlockEntity(this);
+    }
+
     @Nonnull
     private BlockEntity getOrCreateStorageBlockEntity() {
         if (this instanceof BlockEntityHolder<?>) {
             return ((BlockEntityHolder<?>) this).getOrCreateBlockEntity();
+        }
+        BlockEntity blockEntity = getBlockEntity();
+        if (blockEntity != null) {
+            return blockEntity;
         }
         String typeName = BlockEntity.CUSTOM_STORAGE;
         FullChunk chunk = getChunk();

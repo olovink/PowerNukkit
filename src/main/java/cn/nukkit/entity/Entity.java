@@ -2908,6 +2908,6 @@ public abstract class Entity extends Location implements Metadatable, CustomData
     @PowerNukkitOnly
     @Override
     public void setRootCustomDataStorageTag(@Nonnull CompoundTag root) {
-        namedTag.putCompound(BlockEntity.CUSTOM_STORAGE, root).copy();
+        namedTag.putCompound(BlockEntity.CUSTOM_STORAGE, root.copy());
     }
 }
