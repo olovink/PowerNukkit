@@ -10,6 +10,7 @@ import cn.nukkit.api.Since;
 import cn.nukkit.block.*;
 import cn.nukkit.blockentity.BlockEntityPistonArm;
 import cn.nukkit.blockstate.BlockState;
+import cn.nukkit.customdata.CustomDataHolder;
 import cn.nukkit.entity.data.*;
 import cn.nukkit.event.Event;
 import cn.nukkit.event.entity.*;
@@ -65,7 +66,7 @@ import static cn.nukkit.utils.Utils.dynamic;
         info = "All DATA constants were made dynamic because they have tendency to change on Minecraft updates, " +
                 "these dynamic calls will avoid the need of plugin recompilations after Minecraft updates that " +
                 "shifts the data values")
-public abstract class Entity extends Location implements Metadatable {
+public abstract class Entity extends Location implements Metadatable, CustomDataHolder {
     @PowerNukkitOnly
     @Since("1.4.0.0-PN")
     public static final Entity[] EMPTY_ARRAY = new Entity[0];
@@ -2892,5 +2893,13 @@ public abstract class Entity extends Location implements Metadatable {
     public void setNoClip(boolean noClip) {
         this.noClip = noClip;
         this.setDataFlag(DATA_FLAGS, DATA_FLAG_HAS_COLLISION, noClip);
+    }
+
+    @PowerNukkitOnly
+    @Since("FUTURE")
+    @Nonnull
+    @Override
+    public CompoundTag getRootCustomDataStorageTag() {
+        return namedTag;
     }
 }

@@ -2,10 +2,13 @@ package cn.nukkit.block;
 
 import cn.nukkit.Player;
 import cn.nukkit.api.*;
+import cn.nukkit.blockentity.BlockEntity;
+import cn.nukkit.blockentity.BlockEntityCustomDataStorage;
 import cn.nukkit.blockproperty.BlockProperties;
 import cn.nukkit.blockproperty.CommonBlockProperties;
 import cn.nukkit.blockstate.*;
 import cn.nukkit.blockstate.exception.InvalidBlockStateException;
+import cn.nukkit.customdata.CustomDataHolder;
 import cn.nukkit.entity.Entity;
 import cn.nukkit.event.player.PlayerInteractEvent;
 import cn.nukkit.item.Item;
@@ -15,16 +18,19 @@ import cn.nukkit.item.enchantment.Enchantment;
 import cn.nukkit.level.Level;
 import cn.nukkit.level.MovingObjectPosition;
 import cn.nukkit.level.Position;
+import cn.nukkit.level.format.FullChunk;
 import cn.nukkit.math.AxisAlignedBB;
 import cn.nukkit.math.BlockFace;
 import cn.nukkit.math.NukkitMath;
 import cn.nukkit.math.Vector3;
 import cn.nukkit.metadata.MetadataValue;
 import cn.nukkit.metadata.Metadatable;
+import cn.nukkit.nbt.tag.CompoundTag;
 import cn.nukkit.plugin.Plugin;
 import cn.nukkit.potion.Effect;
 import cn.nukkit.utils.BlockColor;
 import cn.nukkit.utils.InvalidBlockDamageException;
+import cn.nukkit.utils.LevelException;
 import com.google.common.base.Preconditions;
 import lombok.extern.log4j.Log4j2;
 
@@ -49,7 +55,7 @@ import static cn.nukkit.utils.Utils.dynamic;
 @PowerNukkitDifference(info = "Implements IMutableBlockState only on PowerNukkit", since = "1.4.0.0-PN")
 @SuppressWarnings({"java:S2160", "java:S3400"})
 @Log4j2
-public abstract class Block extends Position implements Metadatable, Cloneable, AxisAlignedBB, BlockID, IMutableBlockState {
+public abstract class Block extends Position implements Metadatable, Cloneable, AxisAlignedBB, BlockID, IMutableBlockState, CustomDataHolder {
     
     @PowerNukkitOnly
     @Since("1.4.0.0-PN")
@@ -2201,5 +2207,43 @@ public abstract class Block extends Position implements Metadatable, Cloneable, 
             }
         }
         return this.level.isBlockPowered(this.getLocation());
+    }
+
+    @Nonnull
+    private BlockEntity getOrCreateStorageBlockEntity() {
+        if (this instanceof BlockEntityHolder<?>) {
+            return ((BlockEntityHolder<?>) this).getOrCreateBlockEntity();
+        }
+        String typeName = BlockEntity.CUSTOM_STORAGE;
+        FullChunk chunk = getChunk();
+        if (chunk == null) {
+            throw new LevelException("Undefined Level or chunk reference");
+        }
+        CompoundTag initialData = new CompoundTag();
+        BlockEntity created = BlockEntity.createBlockEntity(typeName, chunk,
+                initialData
+                        .putCompound(BlockEntity.CUSTOM_STORAGE, new CompoundTag())
+                        .putString("id", typeName)
+                        .putInt("x", getFloorX())
+                        .putInt("y", getFloorY())
+                        .putInt("z", getFloorZ()));
+
+        if (!(created instanceof BlockEntityCustomDataStorage)) {
+            String error = "Failed to create the block entity " + typeName + " of class BlockEntityCustomDataStorage at " + getLocation() + ", " +
+                    "the created type is not an instance of the requested class. Created: " + created;
+            if (created != null) {
+                created.close();
+            }
+            throw new IllegalStateException(error);
+        }
+        return created;
+    }
+
+    @PowerNukkitOnly
+    @Since("FUTURE")
+    @Nonnull
+    @Override
+    public CompoundTag getRootCustomDataStorageTag() {
+        return getOrCreateStorageBlockEntity().namedTag;
     }
 }

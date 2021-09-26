@@ -6,11 +6,13 @@ import cn.nukkit.api.*;
 import cn.nukkit.api.Since;
 import cn.nukkit.block.Block;
 import cn.nukkit.block.BlockID;
+import cn.nukkit.blockentity.BlockEntity;
 import cn.nukkit.blockproperty.UnknownRuntimeIdException;
 import cn.nukkit.blockproperty.exception.InvalidBlockPropertyMetaException;
 import cn.nukkit.blockstate.BlockState;
 import cn.nukkit.blockstate.BlockStateRegistry;
 import cn.nukkit.blockstate.exception.InvalidBlockStateException;
+import cn.nukkit.customdata.CustomDataHolder;
 import cn.nukkit.entity.Entity;
 import cn.nukkit.inventory.Fuel;
 import cn.nukkit.item.enchantment.Enchantment;
@@ -20,6 +22,7 @@ import cn.nukkit.math.BlockFace;
 import cn.nukkit.math.Vector3;
 import cn.nukkit.nbt.NBTIO;
 import cn.nukkit.nbt.tag.*;
+import cn.nukkit.plugin.Plugin;
 import cn.nukkit.utils.Binary;
 import cn.nukkit.utils.Config;
 import cn.nukkit.utils.Utils;
@@ -30,6 +33,7 @@ import lombok.SneakyThrows;
 import lombok.extern.log4j.Log4j2;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UncheckedIOException;
@@ -46,7 +50,7 @@ import java.util.stream.Stream;
  * @author MagicDroidX (Nukkit Project)
  */
 @Log4j2
-public class Item implements Cloneable, BlockID, ItemID {
+public class Item implements Cloneable, BlockID, ItemID, CustomDataHolder {
     @PowerNukkitOnly
     @Since("1.4.0.0-PN")
     public static final Item[] EMPTY_ARRAY = new Item[0];
@@ -1578,5 +1582,38 @@ public class Item implements Cloneable, BlockID, ItemID {
         } catch (CloneNotSupportedException e) {
             return null;
         }
+    }
+
+    @PowerNukkitOnly
+    @Since("FUTURE")
+    @Nonnull
+    @Override
+    public CompoundTag getRootCustomDataStorageTag() {
+        CompoundTag namedTag = getNamedTag();
+        return namedTag == null? new CompoundTag() : namedTag;
+    }
+
+    @PowerNukkitOnly
+    @Since("FUTURE")
+    @Override
+    public boolean clearCustomData(@Nonnull Plugin plugin) {
+        CompoundTag root = getRootCustomDataStorageTag();
+        Tag removed = root.getCompound(BlockEntity.CUSTOM_STORAGE).removeAndGet(plugin.getName());
+        setCompoundTag(root);
+        return removed != null;
+    }
+
+    @PowerNukkitOnly
+    @Since("FUTURE")
+    @Override
+    public void setCustomData(@Nonnull Plugin plugin, @Nullable CompoundTag data) {
+        if (data == null) {
+            clearCustomData(plugin);
+            return;
+        }
+        CompoundTag root = getRootCustomDataStorageTag();
+        CompoundTag storage = root.getCompound(BlockEntity.CUSTOM_STORAGE);
+        storage.putCompound(plugin.getName(), data.copy());
+        setCompoundTag(root);
     }
 }
