@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -222,23 +222,28 @@ implements com.nukkitx.network.raknet.RakNetServerListener, <a href="../../../cn
          boolean&nbsp;immediate)</code>&nbsp;</td>
 </tr>
 <tr id="i14" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#putResourcePacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-">putResourcePacket</a></span>(<a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
+                 <a href="../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</code>&nbsp;</td>
+</tr>
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#sendRawPacket-java.net.InetSocketAddress-io.netty.buffer.ByteBuf-">sendRawPacket</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/InetSocketAddress.html?is-external=true" title="class or interface in java.net">InetSocketAddress</a>&nbsp;socketAddress,
              io.netty.buffer.ByteBuf&nbsp;payload)</code>&nbsp;</td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#setName-java.lang.String-">setName</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#setNetwork-cn.nukkit.network.Network-">setNetwork</a></span>(<a href="../../../cn/nukkit/network/Network.html" title="class in cn.nukkit.network">Network</a>&nbsp;network)</code>&nbsp;</td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#shutdown--">shutdown</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#unblockAddress-java.net.InetAddress-">unblockAddress</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/InetAddress.html?is-external=true" title="class or interface in java.net">InetAddress</a>&nbsp;address)</code>&nbsp;</td>
 </tr>
@@ -527,7 +532,7 @@ implements com.nukkitx.network.raknet.RakNetServerListener, <a href="../../../cn
 <a name="onUnhandledDatagram-io.netty.channel.ChannelHandlerContext-io.netty.channel.socket.DatagramPacket-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>onUnhandledDatagram</h4>
 <pre>public&nbsp;void&nbsp;onUnhandledDatagram(io.netty.channel.ChannelHandlerContext&nbsp;ctx,
@@ -535,6 +540,22 @@ implements com.nukkitx.network.raknet.RakNetServerListener, <a href="../../../cn
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code>onUnhandledDatagram</code>&nbsp;in interface&nbsp;<code>com.nukkitx.network.raknet.RakNetServerListener</code></dd>
+</dl>
+</li>
+</ul>
+<a name="putResourcePacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>putResourcePacket</h4>
+<pre><a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&nbsp;putResourcePacket(<a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
+                                                                          <a href="../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../cn/nukkit/network/SourceInterface.html#putResourcePacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-">putResourcePacket</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/network/SourceInterface.html" title="interface in cn.nukkit.network">SourceInterface</a></code></dd>
 </dl>
 </li>
 </ul>
