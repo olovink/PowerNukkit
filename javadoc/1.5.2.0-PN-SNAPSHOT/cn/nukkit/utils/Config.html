@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Config (PowerNukkit 1.5.2.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2021-09-26">
+<meta name="date" content="2021-10-26">
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
 </head>
@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":42,"i27":42,"i28":42,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10,"i36":10,"i37":10,"i38":10,"i39":10,"i40":10,"i41":10,"i42":10,"i43":10,"i44":10,"i45":10,"i46":10,"i47":10,"i48":10,"i49":10,"i50":10,"i51":42,"i52":10,"i53":10,"i54":10,"i55":10,"i56":10,"i57":10,"i58":10,"i59":10,"i60":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":42,"i27":42,"i28":42,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10,"i36":10,"i37":10,"i38":10,"i39":10,"i40":10,"i41":10,"i42":10,"i43":10,"i44":10,"i45":10,"i46":10,"i47":10,"i48":10,"i49":10,"i50":10,"i51":10,"i52":42,"i53":10,"i54":10,"i55":10,"i56":10,"i57":10,"i58":10,"i59":10,"i60":10,"i61":10,"i62":10,"i63":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -467,14 +467,19 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
     <a href="../../../cn/nukkit/utils/ConfigSection.html" title="class in cn.nukkit.utils">ConfigSection</a>&nbsp;defaultMap)</code>&nbsp;</td>
 </tr>
 <tr id="i49" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/Config.html#reload--">reload</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/Config.html#loadAsJson-java.io.InputStream-com.google.gson.Gson-">loadAsJson</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;inputStream,
+          com.google.gson.Gson&nbsp;gson)</code>&nbsp;</td>
 </tr>
 <tr id="i50" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/Config.html#remove-java.lang.String-">remove</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/Config.html#reload--">reload</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i51" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/Config.html#remove-java.lang.String-">remove</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key)</code>&nbsp;</td>
+</tr>
+<tr id="i52" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/Config.html#removeNested-java.lang.String-">removeNested</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
@@ -482,43 +487,54 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </div>
 </td>
 </tr>
-<tr id="i52" class="altColor">
+<tr id="i53" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/Config.html#save--">save</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i53" class="rowColor">
+<tr id="i54" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/Config.html#save-java.lang.Boolean-">save</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;async)</code>&nbsp;</td>
 </tr>
-<tr id="i54" class="altColor">
+<tr id="i55" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/Config.html#save-java.io.File-">save</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</code>&nbsp;</td>
 </tr>
-<tr id="i55" class="rowColor">
+<tr id="i56" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/Config.html#save-java.io.File-boolean-">save</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
     boolean&nbsp;async)</code>
 <div class="block">Save configuration into provided file.</div>
 </td>
 </tr>
-<tr id="i56" class="altColor">
+<tr id="i57" class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/Config.html#saveAsJson-boolean-com.google.gson.Gson-">saveAsJson</a></span>(boolean&nbsp;async,
+          com.google.gson.Gson&nbsp;gson)</code>&nbsp;</td>
+</tr>
+<tr id="i58" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/Config.html#saveAsJson-java.io.File-boolean-com.google.gson.Gson-">saveAsJson</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
+          boolean&nbsp;async,
+          com.google.gson.Gson&nbsp;gson)</code>&nbsp;</td>
+</tr>
+<tr id="i59" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/Config.html#set-java.lang.String-java.lang.Object-">set</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
    <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr id="i57" class="rowColor">
+<tr id="i60" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/Config.html#setAll-cn.nukkit.utils.ConfigSection-">setAll</a></span>(<a href="../../../cn/nukkit/utils/ConfigSection.html" title="class in cn.nukkit.utils">ConfigSection</a>&nbsp;section)</code>&nbsp;</td>
 </tr>
-<tr id="i58" class="altColor">
+<tr id="i61" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/Config.html#setAll-java.util.LinkedHashMap-">setAll</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;map)</code>&nbsp;</td>
 </tr>
-<tr id="i59" class="rowColor">
+<tr id="i62" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/Config.html#setDefault-cn.nukkit.utils.ConfigSection-">setDefault</a></span>(<a href="../../../cn/nukkit/utils/ConfigSection.html" title="class in cn.nukkit.utils">ConfigSection</a>&nbsp;map)</code>&nbsp;</td>
 </tr>
-<tr id="i60" class="altColor">
+<tr id="i63" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/Config.html#setDefault-java.util.LinkedHashMap-">setDefault</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html?is-external=true" title="class or interface in java.util">LinkedHashMap</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;map)</code>&nbsp;</td>
 </tr>
@@ -818,6 +834,20 @@ public&nbsp;Config(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Fi
 <pre>public&nbsp;boolean&nbsp;load(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;inputStream)</pre>
 </li>
 </ul>
+<a name="loadAsJson-java.io.InputStream-com.google.gson.Gson-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>loadAsJson</h4>
+<pre><a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+public&nbsp;boolean&nbsp;loadAsJson(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
+                                                                   <a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;inputStream,
+                                                                   <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
+                                                                   com.google.gson.Gson&nbsp;gson)</pre>
+</li>
+</ul>
 <a name="check--">
 <!--   -->
 </a>
@@ -862,6 +892,21 @@ public&nbsp;Config(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Fi
 <pre>public&nbsp;boolean&nbsp;save(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</pre>
 </li>
 </ul>
+<a name="saveAsJson-java.io.File-boolean-com.google.gson.Gson-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>saveAsJson</h4>
+<pre><a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+public&nbsp;boolean&nbsp;saveAsJson(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
+                                                                   <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
+                                                                   boolean&nbsp;async,
+                                                                   <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
+                                                                   com.google.gson.Gson&nbsp;gson)</pre>
+</li>
+</ul>
 <a name="save--">
 <!--   -->
 </a>
@@ -869,6 +914,19 @@ public&nbsp;Config(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Fi
 <li class="blockList">
 <h4>save</h4>
 <pre>public&nbsp;boolean&nbsp;save()</pre>
+</li>
+</ul>
+<a name="saveAsJson-boolean-com.google.gson.Gson-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>saveAsJson</h4>
+<pre><a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+public&nbsp;boolean&nbsp;saveAsJson(boolean&nbsp;async,
+                                                                   <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
+                                                                   com.google.gson.Gson&nbsp;gson)</pre>
 </li>
 </ul>
 <a name="save-java.lang.Boolean-">
