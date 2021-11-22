@@ -24,6 +24,7 @@ import io.netty.util.internal.EmptyArrays;
 import it.unimi.dsi.fastutil.ints.Int2IntMap;
 import it.unimi.dsi.fastutil.ints.Int2IntOpenHashMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
+import lombok.SneakyThrows;
 import lombok.extern.log4j.Log4j2;
 
 import javax.annotation.Nonnull;
@@ -31,7 +32,6 @@ import javax.annotation.Nullable;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.UncheckedIOException;
 import java.util.*;
 import java.util.stream.Stream;
 import java.util.zip.Deflater;
@@ -85,18 +85,14 @@ public class CraftingManager {
         return packet;
     }
 
+    @SneakyThrows(IOException.class)
     public CraftingManager() {
         registerSmithingRecipes();
 
         Config recipesConfig = new Config(Config.JSON);
-        try(InputStream recipesStream = Server.class.getClassLoader().getResourceAsStream("recipes.json")) {
-            if (recipesStream == null) {
-                throw new AssertionError("Unable to find recipes.json");
-            }
-
+        try(InputStream recipesStream = Objects.requireNonNull(Server.class.getClassLoader().getResourceAsStream("recipes.json"),
+                "Unable to find recipes.json")) {
             recipesConfig.load(recipesStream);
-        } catch (IOException e) {
-            throw new UncheckedIOException(e);
         }
 
         this.loadRecipes(recipesConfig);

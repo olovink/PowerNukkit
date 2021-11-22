@@ -176,16 +176,109 @@ public interface FullChunk extends Cloneable {
 
     void populateSkyLight();
 
+    @PowerNukkitOnly
+    @Since("FUTURE")
+    default int getMinY() {
+        return 0;
+    }
+
+    @PowerNukkitOnly
+    @Since("FUTURE")
+    default int getMaxY() {
+        return 255;
+    }
+
+    /**
+     * Gets the biome at Y=64 and the given X, Z axes inside this chunk.
+     * @param x Must be between 0 and 15 (inclusive)
+     * @param z Must be between 0 and 15 (inclusive)
+     * @return The biome id
+     */
+    @Deprecated
+    @DeprecationDetails(by = "PowerNukkit", since = "FUTURE",
+            reason = "Biomes now have Y coordinates, this will get the biome at Y 64")
     int getBiomeId(int x, int z);
 
+    /**
+     * Gets the biome at the coordinates inside this chunk.
+     * @param x Must be between 0 and 15 (inclusive)
+     * @param y Must be between {@link #getMinY()} and {@link #getMaxY()} (inclusive)
+     * @param z Must be between 0 and 15 (inclusive)
+     * @return The biome id
+     */
+    @PowerNukkitOnly
+    @Since("FUTURE")
+    default int getBiomeId(int x, int y, int z) {
+        // For backward compatibility, discard the y by default
+        return getBiomeId(x, z);
+    }
+
+    /**
+     * Changes the biome at all Y coordinates in the given X, Z axes.
+     * @param x Must be between 0 and 15 (inclusive)
+     * @param z Must be between 0 and 15 (inclusive)
+     * @param biomeId The biome id to set. The byte is unsigned.
+     */
     void setBiomeId(int x, int z, byte biomeId);
 
+    /**
+     * Changes the biome at all Y coordinates in the given X, Z axes.
+     * @param x Must be between 0 and 15 (inclusive)
+     * @param y Must be between {@link #getMinY()} and {@link #getMaxY()} (inclusive)
+     * @param z Must be between 0 and 15 (inclusive)
+     * @param biomeId The biome id to set. The byte is unsigned.
+     */
+    @PowerNukkitOnly
+    @Since("FUTURE")
+    default void setBiomeId(int x, int y, int z, byte biomeId) {
+        // For backward compatibility, discard the y by default
+        setBiomeId(x, z, biomeId);
+    }
+
+    /**
+     * Changes the biome at all Y coordinates in the given X, Z axes.
+     * @param x Must be between 0 and 15 (inclusive)
+     * @param z Must be between 0 and 15 (inclusive)
+     * @param biomeId The biome id to set.
+     */
     default void setBiomeId(int x, int z, int biomeId)  {
         setBiomeId(x, z, (byte) biomeId);
     }
 
+    /**
+     * Changes the biome at all Y coordinates in the given X, Z axes.
+     * @param x Must be between 0 and 15 (inclusive)
+     * @param y Must be between {@link #getMinY()} and {@link #getMaxY()} (inclusive)
+     * @param z Must be between 0 and 15 (inclusive)
+     * @param biomeId The biome id to set.
+     */
+    @PowerNukkitOnly
+    @Since("FUTURE")
+    default void setBiomeId(int x, int y, int z, int biomeId) {
+        setBiomeId(x, y, z, (byte) biomeId);
+    }
+
+    /**
+     * Changes the biome at all Y coordinates in the given X, Z axes.
+     * @param x Must be between 0 and 15 (inclusive)
+     * @param z Must be between 0 and 15 (inclusive)
+     * @param biome The biome to set.
+     */
     default void setBiome(int x, int z, Biome biome) {
         setBiomeId(x, z, (byte) biome.getId());
+    }
+
+    /**
+     * Changes the biome at all Y coordinates in the given X, Z axes.
+     * @param x Must be between 0 and 15 (inclusive)
+     * @param y Must be between {@link #getMinY()} and {@link #getMaxY()} (inclusive)
+     * @param z Must be between 0 and 15 (inclusive)
+     * @param biome The biome to set.
+     */
+    @PowerNukkitOnly
+    @Since("FUTURE")
+    default void setBiome(int x, int y, int z, Biome biome) {
+        setBiomeId(x, y, z, (byte) biome.getId());
     }
 
     boolean isLightPopulated();
@@ -234,6 +327,11 @@ public interface FullChunk extends Cloneable {
 
     void initChunk();
 
+    @Deprecated
+    @DeprecationDetails(by = "PowerNukkit",
+            reason = "Direct access to internal biome array is discouraged, can break at anytime.",
+            replaceWith = "getBiomeId(...) setBiomeId(...) getBiome(...) setBiome(...)",
+            since = "FUTURE")
     byte[] getBiomeIdArray();
 
     byte[] getHeightMapArray();

@@ -1,6 +1,8 @@
 package cn.nukkit.level.format.anvil;
 
 import cn.nukkit.Player;
+import cn.nukkit.api.PowerNukkitOnly;
+import cn.nukkit.api.Since;
 import cn.nukkit.block.Block;
 import cn.nukkit.blockentity.BlockEntity;
 import cn.nukkit.entity.Entity;
@@ -15,6 +17,10 @@ import cn.nukkit.utils.BinaryStream;
 import cn.nukkit.utils.BlockUpdateEntry;
 import cn.nukkit.utils.ChunkException;
 import cn.nukkit.utils.Zlib;
+import it.unimi.dsi.fastutil.ints.Int2IntArrayMap;
+import it.unimi.dsi.fastutil.ints.Int2IntMap;
+import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
+import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import lombok.extern.log4j.Log4j2;
 
 import java.io.ByteArrayInputStream;
@@ -63,7 +69,7 @@ public class Chunk extends BaseChunk {
         this.sections = new cn.nukkit.level.format.ChunkSection[16];
         System.arraycopy(EmptyChunkSection.EMPTY, 0, this.sections, 0, 16);
         if (nbt == null) {
-            this.biomes = new byte[16 * 16];
+            this.biomes = new byte[1024];
             this.heightMap = new byte[256];
             this.NBTentities = new ArrayList<>(0);
             this.NBTtiles = new ArrayList<>(0);
@@ -112,7 +118,43 @@ public class Chunk extends BaseChunk {
                 }
             }
         } else {
-            this.biomes = Arrays.copyOf(nbt.getByteArray("Biomes"), 256);
+            this.biomes = nbt.getByteArray("Biomes");
+        }
+
+        if (this.biomes.length < 256) {
+            this.biomes = Arrays.copyOf(this.biomes, 256);
+        }
+
+        if (this.biomes.length == 256) {
+            byte[] upgraded = new byte[1024];
+            Int2ObjectMap<Int2IntMap> count = new Int2ObjectOpenHashMap<>(16);
+            for (int i = 0; i < 256; i++) {
+                int biomeId = this.biomes[i];
+                int rawX = i & 0xF;
+                int rawZ = (i >>> 4) & 0xF;
+                int groupedX = rawX/4;
+                int groupedZ = rawZ/4;
+                int newI = (groupedX & 0x3) | ((groupedZ & 0x3) << 2);
+                Int2IntMap groupedCount = count.computeIfAbsentPartial(newI, it -> new Int2IntArrayMap(2));
+                int current = groupedCount.getOrDefault(biomeId, 0);
+                groupedCount.put(biomeId, current + 1);
+            }
+            int[] biomeIds = new int[16];
+            for (Int2ObjectMap.Entry<Int2IntMap> entry : count.int2ObjectEntrySet()) {
+                Int2IntMap.Entry maxEntry = null;
+                for (Int2IntMap.Entry countEntry : entry.getValue().int2IntEntrySet()) {
+                    if (maxEntry == null || countEntry.getIntValue() > maxEntry.getIntValue()) {
+                        maxEntry = countEntry;
+                    }
+                }
+                Objects.requireNonNull(maxEntry);
+                biomeIds[entry.getIntKey()] = maxEntry.getIntValue();
+            }
+            for (int i = 0; i < 1024; i++) {
+                int oldIndex = i % 16;
+                upgraded[i] = (byte) biomeIds[oldIndex];
+            }
+            this.biomes = upgraded;
         }
 
         int[] heightMap = nbt.getIntArray("HeightMap");
@@ -170,6 +212,35 @@ public class Chunk extends BaseChunk {
         this.inhabitedTime = nbt.getLong("InhabitedTime");
         this.terrainPopulated = nbt.getBoolean("TerrainPopulated");
         this.terrainGenerated = nbt.getBoolean("TerrainGenerated");
+    }
+
+    @Override
+    public int getBiomeId(int x, int z) {
+        return getBiomeId(x, 64, z);
+    }
+
+    @Since("FUTURE")
+    @PowerNukkitOnly
+    @Override
+    public int getBiomeId(int x, int y, int z) {
+        return this.biomes[((y/4) << 4) | ((z/4) << 2) | (x/4)] & 0xFF;
+    }
+
+    @Override
+    public void setBiomeId(int x, int z, byte biomeId) {
+        int maxI = (getMaxY() - getMinY()) / 4;
+        for (int groupY = 0; groupY < maxI; groupY++) {
+            this.biomes[(groupY << 4) | ((z/4) << 2) | (x/4)] = biomeId;
+        }
+        this.setChanged();
+    }
+
+    @Since("FUTURE")
+    @PowerNukkitOnly
+    @Override
+    public void setBiomeId(int x, int y, int z, byte biomeId) {
+        this.biomes[((y/4) << 4) | ((z/4) << 2) | (x/4)] = biomeId;
+        this.setChanged();
     }
 
     @Override

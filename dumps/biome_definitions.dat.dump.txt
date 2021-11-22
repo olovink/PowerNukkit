@@ -1,0 +1,2864 @@
+CompoundTag '' (75 entries) {
+	'roofed_forest_mutated' : CompoundTag 'roofed_forest_mutated' (8 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 4.1723293E-8),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -4.28443616E8),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 4.1723293E-8),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -4.28443616E8)
+		},
+		'tags' : ListTag 'tags' (6 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: forest),
+			StringTag  (data: monster),
+			StringTag  (data: mutated),
+			StringTag  (data: overworld_generation),
+			StringTag  (data: roofed)
+		}
+	},
+	'warm_ocean' : CompoundTag 'warm_ocean' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (3 entries) {
+			'river_transformation' : ListTag 'river_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: warm_ocean),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'shore_transformation' : ListTag 'shore_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: warm_ocean),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'generate_for_climates' : ListTag 'generate_for_climates' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'temperature' : IntTag temperature(data: 1),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 8.8E-44),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 8.8E-44),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 8.8E-44),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 8.8E-44)
+		},
+		'tags' : ListTag 'tags' (4 entries of type TAG_String) {
+			StringTag  (data: monster),
+			StringTag  (data: ocean),
+			StringTag  (data: overworld),
+			StringTag  (data: warm)
+		}
+	},
+	'sunflower_plains' : CompoundTag 'sunflower_plains' (8 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: -4.28443616E8),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -4.2949216E8),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: -4.28443616E8),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -4.2949216E8)
+		},
+		'tags' : ListTag 'tags' (6 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: bee_habitat),
+			StringTag  (data: monster),
+			StringTag  (data: mutated),
+			StringTag  (data: overworld),
+			StringTag  (data: plains)
+		}
+	},
+	'mushroom_island_shore' : CompoundTag 'mushroom_island_shore' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (1 entries) {
+			'river_transformation' : ListTag 'river_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: mushroom_island_shore),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 2.720076E23),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 4.6006E-41),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 2.720076E23),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 4.6006E-41)
+		},
+		'tags' : ListTag 'tags' (3 entries of type TAG_String) {
+			StringTag  (data: mooshroom_island),
+			StringTag  (data: overworld),
+			StringTag  (data: shore)
+		}
+	},
+	'ice_plains' : CompoundTag 'ice_plains' (10 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (5 entries) {
+			'river_transformation' : ListTag 'river_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: frozen_river),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'shore_transformation' : ListTag 'shore_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: cold_beach),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'generate_for_climates' : ListTag 'generate_for_climates' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'temperature' : IntTag temperature(data: 4),
+					'weight' : IntTag weight(data: 3)
+				}
+			},
+			'hills_transformation' : ListTag 'hills_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: ice_mountains),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'mutate_transformation' : ListTag 'mutate_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: ice_plains_spikes),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 0.0),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 8.8E-44),
+		'minecraft:multinoise_generation_rules' : CompoundTag 'minecraft:multinoise_generation_rules' (5 entries) {
+			'target_altitude' : FloatTag target_altitude (data: -4.28443584E8),
+			'target_weirdness' : FloatTag target_weirdness (data: 4.6006E-41),
+			'target_humidity' : FloatTag target_humidity (data: 4.6006E-41),
+			'weight' : FloatTag weight (data: 0.0),
+			'target_temperature' : FloatTag target_temperature (data: 4.6185E-41)
+		},
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 0.0),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 8.8E-44)
+		},
+		'tags' : ListTag 'tags' (4 entries of type TAG_String) {
+			StringTag  (data: frozen),
+			StringTag  (data: ice),
+			StringTag  (data: ice_plains),
+			StringTag  (data: overworld)
+		}
+	},
+	'jungle_mutated' : CompoundTag 'jungle_mutated' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (1 entries) {
+			'extended_edge_transformation' : ListTag 'extended_edge_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (3 entries) {
+					'condition' : StringTag condition (data: {"all_of":[{"operator":1,"subject":0,"test":"has_biome_tag","value":"jungle"},{"operator":1,"subject":0,"test":"has_biome_tag","value":"ocean"},{"any_of":[{"operator":1,"subject":0,"test":"has_biome_tag","value":"forest"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"cold"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"hills"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"mega"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"mutated"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"birch"}]}]}
+					),
+					'min_passing_neighbors' : IntTag min_passing_neighbors(data: 1),
+					'transforms_into' : ListTag 'transforms_into' (1 entries of type TAG_Compound) {
+						CompoundTag '' (2 entries) {
+							'biome' : StringTag biome (data: jungle_edge),
+							'weight' : IntTag weight(data: 1)
+						}
+					}
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 4.17815E-8),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 2.720076E23),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 4.17815E-8),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 2.720076E23)
+		},
+		'tags' : ListTag 'tags' (5 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: jungle),
+			StringTag  (data: monster),
+			StringTag  (data: mutated),
+			StringTag  (data: overworld_generation)
+		}
+	},
+	'flower_forest' : CompoundTag 'flower_forest' (8 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 4.1723293E-8),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -4.28443616E8),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 4.1723293E-8),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -4.28443616E8)
+		},
+		'tags' : ListTag 'tags' (5 entries of type TAG_String) {
+			StringTag  (data: bee_habitat),
+			StringTag  (data: flower_forest),
+			StringTag  (data: monster),
+			StringTag  (data: mutated),
+			StringTag  (data: overworld)
+		}
+	},
+	'cold_ocean' : CompoundTag 'cold_ocean' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (3 entries) {
+			'river_transformation' : ListTag 'river_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: cold_ocean),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'shore_transformation' : ListTag 'shore_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: cold_ocean),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'generate_for_climates' : ListTag 'generate_for_climates' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'temperature' : IntTag temperature(data: 3),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 8.8E-44),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 8.8E-44),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 8.8E-44),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 8.8E-44)
+		},
+		'tags' : ListTag 'tags' (4 entries of type TAG_String) {
+			StringTag  (data: cold),
+			StringTag  (data: monster),
+			StringTag  (data: ocean),
+			StringTag  (data: overworld)
+		}
+	},
+	'the_end' : CompoundTag 'the_end' (8 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 8.8E-44),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 8.8E-44),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 8.8E-44),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 8.8E-44)
+		},
+		'tags' : ListTag 'tags' (1 entries of type TAG_String) {
+			StringTag  (data: the_end)
+		}
+	},
+	'hell' : CompoundTag 'hell' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 9.0E-44),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 0.0),
+		'minecraft:multinoise_generation_rules' : CompoundTag 'minecraft:multinoise_generation_rules' (5 entries) {
+			'target_altitude' : FloatTag target_altitude (data: 0.0),
+			'target_weirdness' : FloatTag target_weirdness (data: 0.0),
+			'target_humidity' : FloatTag target_humidity (data: 0.0),
+			'weight' : FloatTag weight (data: 0.0),
+			'target_temperature' : FloatTag target_temperature (data: 0.0)
+		},
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 9.0E-44),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 0.0)
+		},
+		'tags' : ListTag 'tags' (7 entries of type TAG_String) {
+			StringTag  (data: nether),
+			StringTag  (data: nether_wastes),
+			StringTag  (data: spawn_endermen),
+			StringTag  (data: spawn_few_piglins),
+			StringTag  (data: spawn_ghast),
+			StringTag  (data: spawn_magma_cubes),
+			StringTag  (data: spawn_zombified_piglin)
+		}
+	},
+	'desert_hills' : CompoundTag 'desert_hills' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 9.0E-44),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 0.0),
+		'minecraft:multinoise_generation_rules' : CompoundTag 'minecraft:multinoise_generation_rules' (5 entries) {
+			'target_altitude' : FloatTag target_altitude (data: -4.28443584E8),
+			'target_weirdness' : FloatTag target_weirdness (data: 0.0),
+			'target_humidity' : FloatTag target_humidity (data: -4.29496256E8),
+			'weight' : FloatTag weight (data: -4.29492128E8),
+			'target_temperature' : FloatTag target_temperature (data: -4.2949216E8)
+		},
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 9.0E-44),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 0.0)
+		},
+		'tags' : ListTag 'tags' (4 entries of type TAG_String) {
+			StringTag  (data: desert),
+			StringTag  (data: hills),
+			StringTag  (data: monster),
+			StringTag  (data: overworld)
+		}
+	},
+	'extreme_hills_edge' : CompoundTag 'extreme_hills_edge' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (1 entries) {
+			'shore_transformation' : ListTag 'shore_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: stone_beach),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: -4.28443584E8),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -6.352689E-23),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: -4.28443584E8),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -6.352689E-23)
+		},
+		'tags' : ListTag 'tags' (6 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: edge),
+			StringTag  (data: extreme_hills),
+			StringTag  (data: monster),
+			StringTag  (data: mountain),
+			StringTag  (data: overworld)
+		}
+	},
+	'lukewarm_ocean' : CompoundTag 'lukewarm_ocean' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (3 entries) {
+			'river_transformation' : ListTag 'river_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: lukewarm_ocean),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'shore_transformation' : ListTag 'shore_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: lukewarm_ocean),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'generate_for_climates' : ListTag 'generate_for_climates' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'temperature' : IntTag temperature(data: 2),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 8.8E-44),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 8.8E-44),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 8.8E-44),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 8.8E-44)
+		},
+		'tags' : ListTag 'tags' (4 entries of type TAG_String) {
+			StringTag  (data: lukewarm),
+			StringTag  (data: monster),
+			StringTag  (data: ocean),
+			StringTag  (data: overworld)
+		}
+	},
+	'forest_hills' : CompoundTag 'forest_hills' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 4.1723293E-8),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -4.28443616E8),
+		'minecraft:multinoise_generation_rules' : CompoundTag 'minecraft:multinoise_generation_rules' (5 entries) {
+			'target_altitude' : FloatTag target_altitude (data: -4.28443584E8),
+			'target_weirdness' : FloatTag target_weirdness (data: 0.0),
+			'target_humidity' : FloatTag target_humidity (data: 8.8E-44),
+			'weight' : FloatTag weight (data: 6.8964E-41),
+			'target_temperature' : FloatTag target_temperature (data: 0.0)
+		},
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 4.1723293E-8),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -4.28443616E8)
+		},
+		'tags' : ListTag 'tags' (6 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: bee_habitat),
+			StringTag  (data: forest),
+			StringTag  (data: hills),
+			StringTag  (data: monster),
+			StringTag  (data: overworld)
+		}
+	},
+	'savanna' : CompoundTag 'savanna' (10 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (3 entries) {
+			'generate_for_climates' : ListTag 'generate_for_climates' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'temperature' : IntTag temperature(data: 1),
+					'weight' : IntTag weight(data: 2)
+				}
+			},
+			'hills_transformation' : ListTag 'hills_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: savanna_plateau),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'mutate_transformation' : ListTag 'mutate_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: savanna_mutated),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: -6.35269E-23),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 0.0),
+		'minecraft:multinoise_generation_rules' : CompoundTag 'minecraft:multinoise_generation_rules' (5 entries) {
+			'target_altitude' : FloatTag target_altitude (data: 0.0),
+			'target_weirdness' : FloatTag target_weirdness (data: -4.29492128E8),
+			'target_humidity' : FloatTag target_humidity (data: -4.29496224E8),
+			'weight' : FloatTag weight (data: -4.28443584E8),
+			'target_temperature' : FloatTag target_temperature (data: -4.29492128E8)
+		},
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: -6.35269E-23),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 0.0)
+		},
+		'tags' : ListTag 'tags' (4 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: monster),
+			StringTag  (data: overworld),
+			StringTag  (data: savanna)
+		}
+	},
+	'ice_plains_spikes' : CompoundTag 'ice_plains_spikes' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (1 entries) {
+			'shore_transformation' : ListTag 'shore_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: cold_beach),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 0.0),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 4.6006E-41),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 0.0),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 4.6006E-41)
+		},
+		'tags' : ListTag 'tags' (5 entries of type TAG_String) {
+			StringTag  (data: frozen),
+			StringTag  (data: ice_plains),
+			StringTag  (data: monster),
+			StringTag  (data: mutated),
+			StringTag  (data: overworld)
+		}
+	},
+	'cold_taiga_mutated' : CompoundTag 'cold_taiga_mutated' (8 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 2.68E-43),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -4.2949216E8),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 2.68E-43),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -4.2949216E8)
+		},
+		'tags' : ListTag 'tags' (7 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: cold),
+			StringTag  (data: forest),
+			StringTag  (data: monster),
+			StringTag  (data: mutated),
+			StringTag  (data: overworld_generation),
+			StringTag  (data: taiga)
+		}
+	},
+	'mesa_plateau' : CompoundTag 'mesa_plateau' (10 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (4 entries) {
+			'generate_for_climates' : ListTag 'generate_for_climates' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'temperature' : IntTag temperature(data: 1),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'pre_hills_edge_transformation' : ListTag 'pre_hills_edge_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (3 entries) {
+					'condition' : StringTag condition (data: {"all_of":[{"any_of":[{"operator":1,"subject":0,"test":"has_biome_tag","value":"plateau"},{"operator":1,"subject":0,"test":"has_biome_tag","value":"mesa"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"mutated"}]}]}
+					),
+					'min_passing_neighbors' : IntTag min_passing_neighbors(data: 1),
+					'transforms_into' : ListTag 'transforms_into' (1 entries of type TAG_Compound) {
+						CompoundTag '' (2 entries) {
+							'biome' : StringTag biome (data: mesa),
+							'weight' : IntTag weight(data: 1)
+						}
+					}
+				}
+			},
+			'hills_transformation' : ListTag 'hills_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: mesa),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'mutate_transformation' : ListTag 'mutate_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: mesa_plateau_mutated),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'minecraft:legacy_world_generation_rules' : CompoundTag 'minecraft:legacy_world_generation_rules' (1 entries) {
+			'legacy_pre_hills_edge_transformation' : ListTag 'legacy_pre_hills_edge_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (3 entries) {
+					'condition' : StringTag condition (data: {"all_of":[{"any_of":[{"operator":1,"subject":0,"test":"has_biome_tag","value":"plateau"},{"operator":1,"subject":0,"test":"has_biome_tag","value":"mesa"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"mutated"}]}]}
+					),
+					'min_passing_neighbors' : IntTag min_passing_neighbors(data: 1),
+					'transforms_into' : ListTag 'transforms_into' (1 entries of type TAG_Compound) {
+						CompoundTag '' (2 entries) {
+							'biome' : StringTag biome (data: mesa),
+							'weight' : IntTag weight(data: 1)
+						}
+					}
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 9.0E-44),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 0.0),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 9.0E-44),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 0.0)
+		},
+		'tags' : ListTag 'tags' (5 entries of type TAG_String) {
+			StringTag  (data: mesa),
+			StringTag  (data: monster),
+			StringTag  (data: overworld),
+			StringTag  (data: plateau),
+			StringTag  (data: rare)
+		}
+	},
+	'frozen_ocean' : CompoundTag 'frozen_ocean' (10 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (3 entries) {
+			'river_transformation' : ListTag 'river_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: frozen_ocean),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'shore_transformation' : ListTag 'shore_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: frozen_ocean),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'generate_for_climates' : ListTag 'generate_for_climates' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'temperature' : IntTag temperature(data: 4),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 0.0),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 8.8E-44),
+		'minecraft:multinoise_generation_rules' : CompoundTag 'minecraft:multinoise_generation_rules' (5 entries) {
+			'target_altitude' : FloatTag target_altitude (data: -4.2844768E8),
+			'target_weirdness' : FloatTag target_weirdness (data: 4.6006E-41),
+			'target_humidity' : FloatTag target_humidity (data: 4.6006E-41),
+			'weight' : FloatTag weight (data: 0.0),
+			'target_temperature' : FloatTag target_temperature (data: 6.9144E-41)
+		},
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 0.0),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 8.8E-44)
+		},
+		'tags' : ListTag 'tags' (4 entries of type TAG_String) {
+			StringTag  (data: frozen),
+			StringTag  (data: monster),
+			StringTag  (data: ocean),
+			StringTag  (data: overworld)
+		}
+	},
+	'mega_taiga_hills' : CompoundTag 'mega_taiga_hills' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (1 entries) {
+			'mutate_transformation' : ListTag 'mutate_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: redwood_taiga_hills_mutated),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: -6.352689E-23),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -4.28443616E8),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: -6.352689E-23),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -4.28443616E8)
+		},
+		'tags' : ListTag 'tags' (7 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: forest),
+			StringTag  (data: hills),
+			StringTag  (data: mega),
+			StringTag  (data: monster),
+			StringTag  (data: overworld),
+			StringTag  (data: taiga)
+		}
+	},
+	'savanna_plateau' : CompoundTag 'savanna_plateau' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (1 entries) {
+			'mutate_transformation' : ListTag 'mutate_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: savanna_plateau_mutated),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 4.6006E-41),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 0.0),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 4.6006E-41),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 0.0)
+		},
+		'tags' : ListTag 'tags' (5 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: monster),
+			StringTag  (data: overworld),
+			StringTag  (data: plateau),
+			StringTag  (data: savanna)
+		}
+	},
+	'bamboo_jungle_hills' : CompoundTag 'bamboo_jungle_hills' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (1 entries) {
+			'extended_edge_transformation' : ListTag 'extended_edge_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (3 entries) {
+					'condition' : StringTag condition (data: {"all_of":[{"operator":1,"subject":0,"test":"has_biome_tag","value":"jungle"},{"operator":1,"subject":0,"test":"has_biome_tag","value":"ocean"},{"any_of":[{"operator":1,"subject":0,"test":"has_biome_tag","value":"forest"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"cold"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"hills"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"mega"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"mutated"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"birch"}]}]}
+					),
+					'min_passing_neighbors' : IntTag min_passing_neighbors(data: 1),
+					'transforms_into' : ListTag 'transforms_into' (1 entries of type TAG_Compound) {
+						CompoundTag '' (2 entries) {
+							'biome' : StringTag biome (data: jungle_edge),
+							'weight' : IntTag weight(data: 1)
+						}
+					}
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 4.17815E-8),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 2.720076E23),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 4.17815E-8),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 2.720076E23)
+		},
+		'tags' : ListTag 'tags' (6 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: bamboo),
+			StringTag  (data: hills),
+			StringTag  (data: jungle),
+			StringTag  (data: monster),
+			StringTag  (data: overworld)
+		}
+	},
+	'taiga_hills' : CompoundTag 'taiga_hills' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 4.6005E-41),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -4.28443616E8),
+		'minecraft:multinoise_generation_rules' : CompoundTag 'minecraft:multinoise_generation_rules' (5 entries) {
+			'target_altitude' : FloatTag target_altitude (data: -4.28443584E8),
+			'target_weirdness' : FloatTag target_weirdness (data: 0.0),
+			'target_humidity' : FloatTag target_humidity (data: 2.68E-43),
+			'weight' : FloatTag weight (data: 0.0),
+			'target_temperature' : FloatTag target_temperature (data: 0.0)
+		},
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 4.6005E-41),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -4.28443616E8)
+		},
+		'tags' : ListTag 'tags' (6 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: forest),
+			StringTag  (data: hills),
+			StringTag  (data: monster),
+			StringTag  (data: overworld),
+			StringTag  (data: taiga)
+		}
+	},
+	'extreme_hills_plus_trees' : CompoundTag 'extreme_hills_plus_trees' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (2 entries) {
+			'shore_transformation' : ListTag 'shore_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: stone_beach),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'mutate_transformation' : ListTag 'mutate_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: extreme_hills_plus_trees_mutated),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: -4.28443584E8),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -6.352689E-23),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: -4.28443584E8),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -6.352689E-23)
+		},
+		'tags' : ListTag 'tags' (6 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: extreme_hills),
+			StringTag  (data: forest),
+			StringTag  (data: monster),
+			StringTag  (data: mountain),
+			StringTag  (data: overworld)
+		}
+	},
+	'mega_taiga' : CompoundTag 'mega_taiga' (10 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (4 entries) {
+			'generate_for_climates' : ListTag 'generate_for_climates' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'temperature' : IntTag temperature(data: 3),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'pre_hills_edge_transformation' : ListTag 'pre_hills_edge_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (3 entries) {
+					'condition' : StringTag condition (data: {"all_of":[{"operator":1,"subject":0,"test":"has_biome_tag","value":"taiga"}]}
+					),
+					'min_passing_neighbors' : IntTag min_passing_neighbors(data: 1),
+					'transforms_into' : ListTag 'transforms_into' (1 entries of type TAG_Compound) {
+						CompoundTag '' (2 entries) {
+							'biome' : StringTag biome (data: taiga),
+							'weight' : IntTag weight(data: 1)
+						}
+					}
+				}
+			},
+			'hills_transformation' : ListTag 'hills_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: mega_taiga_hills),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'mutate_transformation' : ListTag 'mutate_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: redwood_taiga_mutated),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'minecraft:legacy_world_generation_rules' : CompoundTag 'minecraft:legacy_world_generation_rules' (1 entries) {
+			'legacy_pre_hills_edge_transformation' : ListTag 'legacy_pre_hills_edge_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (3 entries) {
+					'condition' : StringTag condition (data: {"all_of":[{"operator":1,"subject":0,"test":"has_biome_tag","value":"taiga"}]}
+					),
+					'min_passing_neighbors' : IntTag min_passing_neighbors(data: 1),
+					'transforms_into' : ListTag 'transforms_into' (1 entries of type TAG_Compound) {
+						CompoundTag '' (2 entries) {
+							'biome' : StringTag biome (data: taiga),
+							'weight' : IntTag weight(data: 1)
+						}
+					}
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: -6.352689E-23),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -4.28443616E8),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: -6.352689E-23),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -4.28443616E8)
+		},
+		'tags' : ListTag 'tags' (7 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: forest),
+			StringTag  (data: mega),
+			StringTag  (data: monster),
+			StringTag  (data: overworld),
+			StringTag  (data: rare),
+			StringTag  (data: taiga)
+		}
+	},
+	'savanna_plateau_mutated' : CompoundTag 'savanna_plateau_mutated' (8 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 4.6006E-41),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 8.8E-44),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 4.6006E-41),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 8.8E-44)
+		},
+		'tags' : ListTag 'tags' (6 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: monster),
+			StringTag  (data: mutated),
+			StringTag  (data: overworld),
+			StringTag  (data: plateau),
+			StringTag  (data: savanna)
+		}
+	},
+	'deep_warm_ocean' : CompoundTag 'deep_warm_ocean' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (2 entries) {
+			'river_transformation' : ListTag 'river_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: deep_warm_ocean),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'shore_transformation' : ListTag 'shore_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: deep_warm_ocean),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 8.8E-44),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 8.8E-44),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 8.8E-44),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 8.8E-44)
+		},
+		'tags' : ListTag 'tags' (5 entries of type TAG_String) {
+			StringTag  (data: deep),
+			StringTag  (data: monster),
+			StringTag  (data: ocean),
+			StringTag  (data: overworld),
+			StringTag  (data: warm)
+		}
+	},
+	'ocean' : CompoundTag 'ocean' (10 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (4 entries) {
+			'river_transformation' : ListTag 'river_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: ocean),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'shore_transformation' : ListTag 'shore_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: ocean),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'generate_for_climates' : ListTag 'generate_for_climates' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'temperature' : IntTag temperature(data: 0),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'hills_transformation' : ListTag 'hills_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: deep_ocean),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 8.8E-44),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 8.8E-44),
+		'minecraft:multinoise_generation_rules' : CompoundTag 'minecraft:multinoise_generation_rules' (5 entries) {
+			'target_altitude' : FloatTag target_altitude (data: -4.29496224E8),
+			'target_weirdness' : FloatTag target_weirdness (data: 0.0),
+			'target_humidity' : FloatTag target_humidity (data: -4.29492128E8),
+			'weight' : FloatTag weight (data: -6.352689E-23),
+			'target_temperature' : FloatTag target_temperature (data: 0.0)
+		},
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 8.8E-44),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 8.8E-44)
+		},
+		'tags' : ListTag 'tags' (3 entries of type TAG_String) {
+			StringTag  (data: monster),
+			StringTag  (data: ocean),
+			StringTag  (data: overworld)
+		}
+	},
+	'extreme_hills_plus_trees_mutated' : CompoundTag 'extreme_hills_plus_trees_mutated' (8 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: -4.28443584E8),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -6.352689E-23),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: -4.28443584E8),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -6.352689E-23)
+		},
+		'tags' : ListTag 'tags' (6 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: extreme_hills),
+			StringTag  (data: forest),
+			StringTag  (data: monster),
+			StringTag  (data: mutated),
+			StringTag  (data: overworld)
+		}
+	},
+	'jungle' : CompoundTag 'jungle' (10 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (4 entries) {
+			'extended_edge_transformation' : ListTag 'extended_edge_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (3 entries) {
+					'condition' : StringTag condition (data: {"all_of":[{"operator":1,"subject":0,"test":"has_biome_tag","value":"jungle"},{"operator":1,"subject":0,"test":"has_biome_tag","value":"ocean"},{"any_of":[{"operator":1,"subject":0,"test":"has_biome_tag","value":"forest"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"cold"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"hills"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"mega"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"mutated"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"birch"}]}]}
+					),
+					'min_passing_neighbors' : IntTag min_passing_neighbors(data: 1),
+					'transforms_into' : ListTag 'transforms_into' (1 entries of type TAG_Compound) {
+						CompoundTag '' (2 entries) {
+							'biome' : StringTag biome (data: jungle_edge),
+							'weight' : IntTag weight(data: 1)
+						}
+					}
+				}
+			},
+			'generate_for_climates' : ListTag 'generate_for_climates' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'temperature' : IntTag temperature(data: 0),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'hills_transformation' : ListTag 'hills_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: jungle_hills),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'mutate_transformation' : ListTag 'mutate_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: jungle_mutated),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 4.17815E-8),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 2.720076E23),
+		'minecraft:multinoise_generation_rules' : CompoundTag 'minecraft:multinoise_generation_rules' (5 entries) {
+			'target_altitude' : FloatTag target_altitude (data: 0.0),
+			'target_weirdness' : FloatTag target_weirdness (data: 0.0),
+			'target_humidity' : FloatTag target_humidity (data: 0.0),
+			'weight' : FloatTag weight (data: 0.0),
+			'target_temperature' : FloatTag target_temperature (data: -4.2949216E8)
+		},
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 4.17815E-8),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 2.720076E23)
+		},
+		'tags' : ListTag 'tags' (5 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: jungle),
+			StringTag  (data: monster),
+			StringTag  (data: overworld),
+			StringTag  (data: rare)
+		}
+	},
+	'jungle_edge_mutated' : CompoundTag 'jungle_edge_mutated' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (1 entries) {
+			'extended_edge_transformation' : ListTag 'extended_edge_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (3 entries) {
+					'condition' : StringTag condition (data: {"all_of":[{"operator":1,"subject":0,"test":"has_biome_tag","value":"jungle"},{"operator":1,"subject":0,"test":"has_biome_tag","value":"ocean"},{"any_of":[{"operator":1,"subject":0,"test":"has_biome_tag","value":"forest"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"cold"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"hills"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"mega"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"mutated"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"birch"}]}]}
+					),
+					'min_passing_neighbors' : IntTag min_passing_neighbors(data: 1),
+					'transforms_into' : ListTag 'transforms_into' (1 entries of type TAG_Compound) {
+						CompoundTag '' (2 entries) {
+							'biome' : StringTag biome (data: jungle_edge),
+							'weight' : IntTag weight(data: 1)
+						}
+					}
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 4.17815E-8),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -4.28443616E8),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 4.17815E-8),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -4.28443616E8)
+		},
+		'tags' : ListTag 'tags' (6 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: edge),
+			StringTag  (data: jungle),
+			StringTag  (data: monster),
+			StringTag  (data: mutated),
+			StringTag  (data: overworld_generation)
+		}
+	},
+	'warped_forest' : CompoundTag 'warped_forest' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 4.6005E-41),
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 9.0E-44),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 0.0),
+		'minecraft:multinoise_generation_rules' : CompoundTag 'minecraft:multinoise_generation_rules' (5 entries) {
+			'target_altitude' : FloatTag target_altitude (data: 0.0),
+			'target_weirdness' : FloatTag target_weirdness (data: 0.0),
+			'target_humidity' : FloatTag target_humidity (data: 8.8E-44),
+			'weight' : FloatTag weight (data: 6.8964E-41),
+			'target_temperature' : FloatTag target_temperature (data: 0.0)
+		},
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 4.6005E-41),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 9.0E-44),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 0.0)
+		},
+		'tags' : ListTag 'tags' (4 entries of type TAG_String) {
+			StringTag  (data: nether),
+			StringTag  (data: netherwart_forest),
+			StringTag  (data: spawn_endermen),
+			StringTag  (data: warped_forest)
+		}
+	},
+	'frozen_river' : CompoundTag 'frozen_river' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (1 entries) {
+			'shore_transformation' : ListTag 'shore_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: cold_beach),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 0.0),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 8.8E-44),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 0.0),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 8.8E-44)
+		},
+		'tags' : ListTag 'tags' (3 entries of type TAG_String) {
+			StringTag  (data: frozen),
+			StringTag  (data: overworld),
+			StringTag  (data: river)
+		}
+	},
+	'forest' : CompoundTag 'forest' (10 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (3 entries) {
+			'generate_for_climates' : ListTag 'generate_for_climates' (2 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'temperature' : IntTag temperature(data: 0),
+					'weight' : IntTag weight(data: 1)
+				},
+				CompoundTag '' (2 entries) {
+					'temperature' : IntTag temperature(data: 3),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'hills_transformation' : ListTag 'hills_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: forest_hills),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'mutate_transformation' : ListTag 'mutate_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: flower_forest),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 4.1723293E-8),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -4.28443616E8),
+		'minecraft:multinoise_generation_rules' : CompoundTag 'minecraft:multinoise_generation_rules' (5 entries) {
+			'target_altitude' : FloatTag target_altitude (data: 0.0),
+			'target_weirdness' : FloatTag target_weirdness (data: 0.0),
+			'target_humidity' : FloatTag target_humidity (data: 8.8E-44),
+			'weight' : FloatTag weight (data: 6.8964E-41),
+			'target_temperature' : FloatTag target_temperature (data: 0.0)
+		},
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 4.1723293E-8),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -4.28443616E8)
+		},
+		'tags' : ListTag 'tags' (5 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: bee_habitat),
+			StringTag  (data: forest),
+			StringTag  (data: monster),
+			StringTag  (data: overworld)
+		}
+	},
+	'birch_forest' : CompoundTag 'birch_forest' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (3 entries) {
+			'generate_for_climates' : ListTag 'generate_for_climates' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'temperature' : IntTag temperature(data: 0),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'hills_transformation' : ListTag 'hills_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: birch_forest_hills),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'mutate_transformation' : ListTag 'mutate_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: birch_forest_mutated),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: -6.3320104E-23),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -6.3320104E-23),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: -6.3320104E-23),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -6.3320104E-23)
+		},
+		'tags' : ListTag 'tags' (6 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: bee_habitat),
+			StringTag  (data: birch),
+			StringTag  (data: forest),
+			StringTag  (data: monster),
+			StringTag  (data: overworld)
+		}
+	},
+	'deep_lukewarm_ocean' : CompoundTag 'deep_lukewarm_ocean' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (3 entries) {
+			'river_transformation' : ListTag 'river_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: deep_lukewarm_ocean),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'shore_transformation' : ListTag 'shore_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: deep_lukewarm_ocean),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'generate_for_climates' : ListTag 'generate_for_climates' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'temperature' : IntTag temperature(data: 2),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 8.8E-44),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 8.8E-44),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 8.8E-44),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 8.8E-44)
+		},
+		'tags' : ListTag 'tags' (5 entries of type TAG_String) {
+			StringTag  (data: deep),
+			StringTag  (data: lukewarm),
+			StringTag  (data: monster),
+			StringTag  (data: ocean),
+			StringTag  (data: overworld)
+		}
+	},
+	'swampland' : CompoundTag 'swampland' (10 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (4 entries) {
+			'shore_transformation' : ListTag 'shore_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: swampland),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'generate_for_climates' : ListTag 'generate_for_climates' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'temperature' : IntTag temperature(data: 0),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'pre_hills_edge_transformation' : ListTag 'pre_hills_edge_transformation' (2 entries of type TAG_Compound) {
+				CompoundTag '' (3 entries) {
+					'condition' : StringTag condition (data: {"all_of":[{"any_of":[{"all_of":[{"operator":0,"subject":0,"test":"has_biome_tag","value":"desert"},{"operator":1,"subject":0,"test":"has_biome_tag","value":"mutated"},{"operator":1,"subject":0,"test":"has_biome_tag","value":"hills"}]},{"all_of":[{"operator":0,"subject":0,"test":"has_biome_tag","value":"taiga"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"cold"},{"operator":1,"subject":0,"test":"has_biome_tag","value":"mutated"},{"operator":1,"subject":0,"test":"has_biome_tag","value":"hills"}]},{"all_of":[{"operator":0,"subject":0,"test":"has_biome_tag","value":"ice_plains"},{"operator":1,"subject":0,"test":"has_biome_tag","value":"mutated"}]}]}]}
+					),
+					'min_passing_neighbors' : IntTag min_passing_neighbors(data: 1),
+					'transforms_into' : ListTag 'transforms_into' (1 entries of type TAG_Compound) {
+						CompoundTag '' (2 entries) {
+							'biome' : StringTag biome (data: plains),
+							'weight' : IntTag weight(data: 1)
+						}
+					}
+				},
+				CompoundTag '' (3 entries) {
+					'condition' : StringTag condition (data: {"all_of":[{"operator":0,"subject":0,"test":"has_biome_tag","value":"jungle"},{"operator":1,"subject":0,"test":"has_biome_tag","value":"mutated"},{"operator":1,"subject":0,"test":"has_biome_tag","value":"edge"},{"operator":1,"subject":0,"test":"has_biome_tag","value":"hills"}]}
+					),
+					'min_passing_neighbors' : IntTag min_passing_neighbors(data: 1),
+					'transforms_into' : ListTag 'transforms_into' (1 entries of type TAG_Compound) {
+						CompoundTag '' (2 entries) {
+							'biome' : StringTag biome (data: jungle_edge),
+							'weight' : IntTag weight(data: 1)
+						}
+					}
+				}
+			},
+			'mutate_transformation' : ListTag 'mutate_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: swampland_mutated),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'minecraft:legacy_world_generation_rules' : CompoundTag 'minecraft:legacy_world_generation_rules' (1 entries) {
+			'legacy_pre_hills_edge_transformation' : ListTag 'legacy_pre_hills_edge_transformation' (0 entries of type TAG_End) {
+				
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: -4.28443616E8),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 8.8E-44),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: -4.28443616E8),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 8.8E-44)
+		},
+		'tags' : ListTag 'tags' (4 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: monster),
+			StringTag  (data: overworld),
+			StringTag  (data: swamp)
+		}
+	},
+	'deep_ocean' : CompoundTag 'deep_ocean' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (4 entries) {
+			'river_transformation' : ListTag 'river_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: deep_ocean),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'shore_transformation' : ListTag 'shore_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: deep_ocean),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'generate_for_climates' : ListTag 'generate_for_climates' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'temperature' : IntTag temperature(data: 0),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'hills_transformation' : ListTag 'hills_transformation' (2 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: plains),
+					'weight' : IntTag weight(data: 1)
+				},
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: forest),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 8.8E-44),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 8.8E-44),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 8.8E-44),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 8.8E-44)
+		},
+		'tags' : ListTag 'tags' (4 entries of type TAG_String) {
+			StringTag  (data: deep),
+			StringTag  (data: monster),
+			StringTag  (data: ocean),
+			StringTag  (data: overworld)
+		}
+	},
+	'deep_frozen_ocean' : CompoundTag 'deep_frozen_ocean' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (3 entries) {
+			'river_transformation' : ListTag 'river_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: deep_frozen_ocean),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'shore_transformation' : ListTag 'shore_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: deep_frozen_ocean),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'generate_for_climates' : ListTag 'generate_for_climates' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'temperature' : IntTag temperature(data: 4),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 0.0),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 8.8E-44),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 0.0),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 8.8E-44)
+		},
+		'tags' : ListTag 'tags' (5 entries of type TAG_String) {
+			StringTag  (data: deep),
+			StringTag  (data: frozen),
+			StringTag  (data: monster),
+			StringTag  (data: ocean),
+			StringTag  (data: overworld)
+		}
+	},
+	'legacy_frozen_ocean' : CompoundTag 'legacy_frozen_ocean' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (2 entries) {
+			'river_transformation' : ListTag 'river_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: legacy_frozen_ocean),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'shore_transformation' : ListTag 'shore_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: legacy_frozen_ocean),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 0.0),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 8.8E-44),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 0.0),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 8.8E-44)
+		},
+		'tags' : ListTag 'tags' (3 entries of type TAG_String) {
+			StringTag  (data: frozen),
+			StringTag  (data: ocean),
+			StringTag  (data: overworld)
+		}
+	},
+	'taiga_mutated' : CompoundTag 'taiga_mutated' (8 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 4.6005E-41),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -4.28443616E8),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 4.6005E-41),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -4.28443616E8)
+		},
+		'tags' : ListTag 'tags' (6 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: forest),
+			StringTag  (data: monster),
+			StringTag  (data: mutated),
+			StringTag  (data: overworld_generation),
+			StringTag  (data: taiga)
+		}
+	},
+	'bamboo_jungle' : CompoundTag 'bamboo_jungle' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (2 entries) {
+			'extended_edge_transformation' : ListTag 'extended_edge_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (3 entries) {
+					'condition' : StringTag condition (data: {"all_of":[{"operator":1,"subject":0,"test":"has_biome_tag","value":"jungle"},{"operator":1,"subject":0,"test":"has_biome_tag","value":"ocean"},{"any_of":[{"operator":1,"subject":0,"test":"has_biome_tag","value":"forest"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"cold"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"hills"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"mega"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"mutated"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"birch"}]}]}
+					),
+					'min_passing_neighbors' : IntTag min_passing_neighbors(data: 1),
+					'transforms_into' : ListTag 'transforms_into' (1 entries of type TAG_Compound) {
+						CompoundTag '' (2 entries) {
+							'biome' : StringTag biome (data: jungle_edge),
+							'weight' : IntTag weight(data: 1)
+						}
+					}
+				}
+			},
+			'hills_transformation' : ListTag 'hills_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: bamboo_jungle_hills),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 4.17815E-8),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 2.720076E23),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 4.17815E-8),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 2.720076E23)
+		},
+		'tags' : ListTag 'tags' (5 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: bamboo),
+			StringTag  (data: jungle),
+			StringTag  (data: monster),
+			StringTag  (data: overworld)
+		}
+	},
+	'birch_forest_hills_mutated' : CompoundTag 'birch_forest_hills_mutated' (8 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 4.1723293E-8),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -4.28443616E8),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 4.1723293E-8),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -4.28443616E8)
+		},
+		'tags' : ListTag 'tags' (7 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: birch),
+			StringTag  (data: forest),
+			StringTag  (data: hills),
+			StringTag  (data: monster),
+			StringTag  (data: mutated),
+			StringTag  (data: overworld_generation)
+		}
+	},
+	'birch_forest_mutated' : CompoundTag 'birch_forest_mutated' (8 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 4.1723293E-8),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -4.28443616E8),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 4.1723293E-8),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -4.28443616E8)
+		},
+		'tags' : ListTag 'tags' (7 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: bee_habitat),
+			StringTag  (data: birch),
+			StringTag  (data: forest),
+			StringTag  (data: monster),
+			StringTag  (data: mutated),
+			StringTag  (data: overworld_generation)
+		}
+	},
+	'desert_mutated' : CompoundTag 'desert_mutated' (8 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 9.0E-44),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 0.0),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 9.0E-44),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 0.0)
+		},
+		'tags' : ListTag 'tags' (4 entries of type TAG_String) {
+			StringTag  (data: desert),
+			StringTag  (data: monster),
+			StringTag  (data: mutated),
+			StringTag  (data: overworld_generation)
+		}
+	},
+	'mesa' : CompoundTag 'mesa' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (3 entries) {
+			'extended_edge_transformation' : ListTag 'extended_edge_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (3 entries) {
+					'condition' : StringTag condition (data: {"all_of":[{"operator":1,"subject":0,"test":"has_biome_tag","value":"mesa"},{"operator":1,"subject":0,"test":"has_biome_tag","value":"ocean"}]}
+					),
+					'min_passing_neighbors' : IntTag min_passing_neighbors(data: 1),
+					'transforms_into' : ListTag 'transforms_into' (1 entries of type TAG_Compound) {
+						CompoundTag '' (2 entries) {
+							'biome' : StringTag biome (data: desert),
+							'weight' : IntTag weight(data: 1)
+						}
+					}
+				}
+			},
+			'shore_transformation' : ListTag 'shore_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: mesa),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'mutate_transformation' : ListTag 'mutate_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: mesa_bryce),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 9.0E-44),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 0.0),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 9.0E-44),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 0.0)
+		},
+		'tags' : ListTag 'tags' (3 entries of type TAG_String) {
+			StringTag  (data: mesa),
+			StringTag  (data: monster),
+			StringTag  (data: overworld)
+		}
+	},
+	'jungle_edge' : CompoundTag 'jungle_edge' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (2 entries) {
+			'extended_edge_transformation' : ListTag 'extended_edge_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (3 entries) {
+					'condition' : StringTag condition (data: {"all_of":[{"operator":1,"subject":0,"test":"has_biome_tag","value":"jungle"},{"operator":1,"subject":0,"test":"has_biome_tag","value":"ocean"},{"any_of":[{"operator":1,"subject":0,"test":"has_biome_tag","value":"forest"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"cold"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"hills"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"mega"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"mutated"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"birch"}]}]}
+					),
+					'min_passing_neighbors' : IntTag min_passing_neighbors(data: 1),
+					'transforms_into' : ListTag 'transforms_into' (1 entries of type TAG_Compound) {
+						CompoundTag '' (2 entries) {
+							'biome' : StringTag biome (data: jungle_edge),
+							'weight' : IntTag weight(data: 1)
+						}
+					}
+				}
+			},
+			'mutate_transformation' : ListTag 'mutate_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: jungle_edge_mutated),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 4.17815E-8),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -4.28443616E8),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 4.17815E-8),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -4.28443616E8)
+		},
+		'tags' : ListTag 'tags' (5 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: edge),
+			StringTag  (data: jungle),
+			StringTag  (data: monster),
+			StringTag  (data: overworld)
+		}
+	},
+	'jungle_hills' : CompoundTag 'jungle_hills' (10 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (1 entries) {
+			'extended_edge_transformation' : ListTag 'extended_edge_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (3 entries) {
+					'condition' : StringTag condition (data: {"all_of":[{"operator":1,"subject":0,"test":"has_biome_tag","value":"jungle"},{"operator":1,"subject":0,"test":"has_biome_tag","value":"ocean"},{"any_of":[{"operator":1,"subject":0,"test":"has_biome_tag","value":"forest"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"cold"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"hills"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"mega"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"mutated"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"birch"}]}]}
+					),
+					'min_passing_neighbors' : IntTag min_passing_neighbors(data: 1),
+					'transforms_into' : ListTag 'transforms_into' (1 entries of type TAG_Compound) {
+						CompoundTag '' (2 entries) {
+							'biome' : StringTag biome (data: jungle_edge),
+							'weight' : IntTag weight(data: 1)
+						}
+					}
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 4.17815E-8),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 2.720076E23),
+		'minecraft:multinoise_generation_rules' : CompoundTag 'minecraft:multinoise_generation_rules' (5 entries) {
+			'target_altitude' : FloatTag target_altitude (data: -4.28443584E8),
+			'target_weirdness' : FloatTag target_weirdness (data: 0.0),
+			'target_humidity' : FloatTag target_humidity (data: 0.0),
+			'weight' : FloatTag weight (data: 0.0),
+			'target_temperature' : FloatTag target_temperature (data: -4.2949216E8)
+		},
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 4.17815E-8),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 2.720076E23)
+		},
+		'tags' : ListTag 'tags' (5 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: hills),
+			StringTag  (data: jungle),
+			StringTag  (data: monster),
+			StringTag  (data: overworld)
+		}
+	},
+	'plains' : CompoundTag 'plains' (10 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (3 entries) {
+			'generate_for_climates' : ListTag 'generate_for_climates' (3 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'temperature' : IntTag temperature(data: 0),
+					'weight' : IntTag weight(data: 3)
+				},
+				CompoundTag '' (2 entries) {
+					'temperature' : IntTag temperature(data: 1),
+					'weight' : IntTag weight(data: 1)
+				},
+				CompoundTag '' (2 entries) {
+					'temperature' : IntTag temperature(data: 3),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'hills_transformation' : ListTag 'hills_transformation' (2 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: forest_hills),
+					'weight' : IntTag weight(data: 1)
+				},
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: forest),
+					'weight' : IntTag weight(data: 2)
+				}
+			},
+			'mutate_transformation' : ListTag 'mutate_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: sunflower_plains),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: -4.28443616E8),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -4.2949216E8),
+		'minecraft:multinoise_generation_rules' : CompoundTag 'minecraft:multinoise_generation_rules' (5 entries) {
+			'target_altitude' : FloatTag target_altitude (data: 0.0),
+			'target_weirdness' : FloatTag target_weirdness (data: 0.0),
+			'target_humidity' : FloatTag target_humidity (data: 0.0),
+			'weight' : FloatTag weight (data: -4.2949216E8),
+			'target_temperature' : FloatTag target_temperature (data: 0.0)
+		},
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: -4.28443616E8),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -4.2949216E8)
+		},
+		'tags' : ListTag 'tags' (5 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: bee_habitat),
+			StringTag  (data: monster),
+			StringTag  (data: overworld),
+			StringTag  (data: plains)
+		}
+	},
+	'redwood_taiga_mutated' : CompoundTag 'redwood_taiga_mutated' (8 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 4.6005E-41),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -4.28443616E8),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 4.6005E-41),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -4.28443616E8)
+		},
+		'tags' : ListTag 'tags' (7 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: forest),
+			StringTag  (data: mega),
+			StringTag  (data: monster),
+			StringTag  (data: mutated),
+			StringTag  (data: overworld),
+			StringTag  (data: taiga)
+		}
+	},
+	'swampland_mutated' : CompoundTag 'swampland_mutated' (8 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: -4.28443616E8),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 8.8E-44),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: -4.28443616E8),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 8.8E-44)
+		},
+		'tags' : ListTag 'tags' (5 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: monster),
+			StringTag  (data: mutated),
+			StringTag  (data: overworld_generation),
+			StringTag  (data: swamp)
+		}
+	},
+	'ice_mountains' : CompoundTag 'ice_mountains' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (1 entries) {
+			'shore_transformation' : ListTag 'shore_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: cold_beach),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 0.0),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 8.8E-44),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 0.0),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 8.8E-44)
+		},
+		'tags' : ListTag 'tags' (4 entries of type TAG_String) {
+			StringTag  (data: frozen),
+			StringTag  (data: ice),
+			StringTag  (data: mountain),
+			StringTag  (data: overworld)
+		}
+	},
+	'basalt_deltas' : CompoundTag 'basalt_deltas' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'white_ash' : FloatTag white_ash (data: 9.0E-44),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 9.0E-44),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 0.0),
+		'minecraft:multinoise_generation_rules' : CompoundTag 'minecraft:multinoise_generation_rules' (5 entries) {
+			'target_altitude' : FloatTag target_altitude (data: 0.0),
+			'target_weirdness' : FloatTag target_weirdness (data: 0.0),
+			'target_humidity' : FloatTag target_humidity (data: 0.0),
+			'weight' : FloatTag weight (data: 4.172329E-8),
+			'target_temperature' : FloatTag target_temperature (data: 2.68E-43)
+		},
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 9.0E-44),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 9.0E-44),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 0.0)
+		},
+		'tags' : ListTag 'tags' (4 entries of type TAG_String) {
+			StringTag  (data: basalt_deltas),
+			StringTag  (data: nether),
+			StringTag  (data: spawn_ghast),
+			StringTag  (data: spawn_many_magma_cubes)
+		}
+	},
+	'mesa_plateau_stone_mutated' : CompoundTag 'mesa_plateau_stone_mutated' (8 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 9.0E-44),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 0.0),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 9.0E-44),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 0.0)
+		},
+		'tags' : ListTag 'tags' (5 entries of type TAG_String) {
+			StringTag  (data: mesa),
+			StringTag  (data: monster),
+			StringTag  (data: mutated),
+			StringTag  (data: overworld),
+			StringTag  (data: plateau)
+		}
+	},
+	'taiga' : CompoundTag 'taiga' (10 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (3 entries) {
+			'generate_for_climates' : ListTag 'generate_for_climates' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'temperature' : IntTag temperature(data: 3),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'hills_transformation' : ListTag 'hills_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: taiga_hills),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'mutate_transformation' : ListTag 'mutate_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: taiga_mutated),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 4.6005E-41),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -4.28443616E8),
+		'minecraft:multinoise_generation_rules' : CompoundTag 'minecraft:multinoise_generation_rules' (5 entries) {
+			'target_altitude' : FloatTag target_altitude (data: 0.0),
+			'target_weirdness' : FloatTag target_weirdness (data: 0.0),
+			'target_humidity' : FloatTag target_humidity (data: -4.29496256E8),
+			'weight' : FloatTag weight (data: -4.29492128E8),
+			'target_temperature' : FloatTag target_temperature (data: 0.0)
+		},
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 4.6005E-41),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -4.28443616E8)
+		},
+		'tags' : ListTag 'tags' (5 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: forest),
+			StringTag  (data: monster),
+			StringTag  (data: overworld),
+			StringTag  (data: taiga)
+		}
+	},
+	'extreme_hills_mutated' : CompoundTag 'extreme_hills_mutated' (8 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: -4.28443584E8),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -6.352689E-23),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: -4.28443584E8),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -6.352689E-23)
+		},
+		'tags' : ListTag 'tags' (5 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: extreme_hills),
+			StringTag  (data: monster),
+			StringTag  (data: mutated),
+			StringTag  (data: overworld)
+		}
+	},
+	'crimson_forest' : CompoundTag 'crimson_forest' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 9.0E-44),
+		'red_spores' : FloatTag red_spores (data: 4.6005E-41),
+		'downfall' : FloatTag downfall (data: 0.0),
+		'minecraft:multinoise_generation_rules' : CompoundTag 'minecraft:multinoise_generation_rules' (5 entries) {
+			'target_altitude' : FloatTag target_altitude (data: 0.0),
+			'target_weirdness' : FloatTag target_weirdness (data: 0.0),
+			'target_humidity' : FloatTag target_humidity (data: 0.0),
+			'weight' : FloatTag weight (data: 0.0),
+			'target_temperature' : FloatTag target_temperature (data: -4.2949216E8)
+		},
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 9.0E-44),
+			'red_spores' : FloatTag red_spores (data: 4.6005E-41),
+			'downfall' : FloatTag downfall (data: 0.0)
+		},
+		'tags' : ListTag 'tags' (5 entries of type TAG_String) {
+			StringTag  (data: crimson_forest),
+			StringTag  (data: nether),
+			StringTag  (data: netherwart_forest),
+			StringTag  (data: spawn_few_zombified_piglins),
+			StringTag  (data: spawn_piglin)
+		}
+	},
+	'mesa_plateau_stone' : CompoundTag 'mesa_plateau_stone' (10 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (6 entries) {
+			'extended_edge_transformation' : ListTag 'extended_edge_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (3 entries) {
+					'condition' : StringTag condition (data: {"all_of":[{"operator":1,"subject":0,"test":"has_biome_tag","value":"mesa"},{"operator":1,"subject":0,"test":"has_biome_tag","value":"ocean"}]}
+					),
+					'min_passing_neighbors' : IntTag min_passing_neighbors(data: 1),
+					'transforms_into' : ListTag 'transforms_into' (1 entries of type TAG_Compound) {
+						CompoundTag '' (2 entries) {
+							'biome' : StringTag biome (data: desert),
+							'weight' : IntTag weight(data: 1)
+						}
+					}
+				}
+			},
+			'shore_transformation' : ListTag 'shore_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: mesa_plateau_stone),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'generate_for_climates' : ListTag 'generate_for_climates' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'temperature' : IntTag temperature(data: 1),
+					'weight' : IntTag weight(data: 2)
+				}
+			},
+			'pre_hills_edge_transformation' : ListTag 'pre_hills_edge_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (3 entries) {
+					'condition' : StringTag condition (data: {"all_of":[{"any_of":[{"operator":1,"subject":0,"test":"has_biome_tag","value":"plateau"},{"operator":1,"subject":0,"test":"has_biome_tag","value":"mesa"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"mutated"}]}]}
+					),
+					'min_passing_neighbors' : IntTag min_passing_neighbors(data: 1),
+					'transforms_into' : ListTag 'transforms_into' (1 entries of type TAG_Compound) {
+						CompoundTag '' (2 entries) {
+							'biome' : StringTag biome (data: mesa),
+							'weight' : IntTag weight(data: 1)
+						}
+					}
+				}
+			},
+			'hills_transformation' : ListTag 'hills_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: mesa),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'mutate_transformation' : ListTag 'mutate_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: mesa_plateau_stone_mutated),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'minecraft:legacy_world_generation_rules' : CompoundTag 'minecraft:legacy_world_generation_rules' (1 entries) {
+			'legacy_pre_hills_edge_transformation' : ListTag 'legacy_pre_hills_edge_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (3 entries) {
+					'condition' : StringTag condition (data: {"all_of":[{"any_of":[{"operator":1,"subject":0,"test":"has_biome_tag","value":"plateau"},{"operator":1,"subject":0,"test":"has_biome_tag","value":"mesa"},{"operator":0,"subject":0,"test":"has_biome_tag","value":"mutated"}]}]}
+					),
+					'min_passing_neighbors' : IntTag min_passing_neighbors(data: 1),
+					'transforms_into' : ListTag 'transforms_into' (1 entries of type TAG_Compound) {
+						CompoundTag '' (2 entries) {
+							'biome' : StringTag biome (data: mesa),
+							'weight' : IntTag weight(data: 1)
+						}
+					}
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 9.0E-44),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 0.0),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 9.0E-44),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 0.0)
+		},
+		'tags' : ListTag 'tags' (6 entries of type TAG_String) {
+			StringTag  (data: mesa),
+			StringTag  (data: monster),
+			StringTag  (data: overworld),
+			StringTag  (data: plateau),
+			StringTag  (data: rare),
+			StringTag  (data: stone)
+		}
+	},
+	'birch_forest_hills' : CompoundTag 'birch_forest_hills' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (1 entries) {
+			'mutate_transformation' : ListTag 'mutate_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: birch_forest_hills_mutated),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: -6.3320104E-23),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -6.3320104E-23),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: -6.3320104E-23),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -6.3320104E-23)
+		},
+		'tags' : ListTag 'tags' (7 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: bee_habitat),
+			StringTag  (data: birch),
+			StringTag  (data: forest),
+			StringTag  (data: hills),
+			StringTag  (data: monster),
+			StringTag  (data: overworld)
+		}
+	},
+	'mushroom_island' : CompoundTag 'mushroom_island' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (2 entries) {
+			'river_transformation' : ListTag 'river_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: mushroom_island_shore),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'shore_transformation' : ListTag 'shore_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: mushroom_island_shore),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 2.720076E23),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 4.6006E-41),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 2.720076E23),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 4.6006E-41)
+		},
+		'tags' : ListTag 'tags' (2 entries of type TAG_String) {
+			StringTag  (data: mooshroom_island),
+			StringTag  (data: overworld)
+		}
+	},
+	'mesa_bryce' : CompoundTag 'mesa_bryce' (8 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 9.0E-44),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 0.0),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 9.0E-44),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 0.0)
+		},
+		'tags' : ListTag 'tags' (5 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: mesa),
+			StringTag  (data: monster),
+			StringTag  (data: mutated),
+			StringTag  (data: overworld)
+		}
+	},
+	'mesa_plateau_mutated' : CompoundTag 'mesa_plateau_mutated' (8 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 9.0E-44),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 0.0),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 9.0E-44),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 0.0)
+		},
+		'tags' : ListTag 'tags' (6 entries of type TAG_String) {
+			StringTag  (data: mesa),
+			StringTag  (data: monster),
+			StringTag  (data: mutated),
+			StringTag  (data: overworld),
+			StringTag  (data: plateau),
+			StringTag  (data: stone)
+		}
+	},
+	'deep_cold_ocean' : CompoundTag 'deep_cold_ocean' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (3 entries) {
+			'river_transformation' : ListTag 'river_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: deep_cold_ocean),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'shore_transformation' : ListTag 'shore_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: deep_cold_ocean),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'generate_for_climates' : ListTag 'generate_for_climates' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'temperature' : IntTag temperature(data: 3),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 8.8E-44),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 8.8E-44),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 8.8E-44),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 8.8E-44)
+		},
+		'tags' : ListTag 'tags' (5 entries of type TAG_String) {
+			StringTag  (data: cold),
+			StringTag  (data: deep),
+			StringTag  (data: monster),
+			StringTag  (data: ocean),
+			StringTag  (data: overworld)
+		}
+	},
+	'cold_taiga_hills' : CompoundTag 'cold_taiga_hills' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (1 entries) {
+			'shore_transformation' : ListTag 'shore_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: cold_beach),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 2.68E-43),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -4.2949216E8),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 2.68E-43),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -4.2949216E8)
+		},
+		'tags' : ListTag 'tags' (7 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: cold),
+			StringTag  (data: forest),
+			StringTag  (data: hills),
+			StringTag  (data: monster),
+			StringTag  (data: overworld),
+			StringTag  (data: taiga)
+		}
+	},
+	'cold_taiga' : CompoundTag 'cold_taiga' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (4 entries) {
+			'shore_transformation' : ListTag 'shore_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: cold_beach),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'generate_for_climates' : ListTag 'generate_for_climates' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'temperature' : IntTag temperature(data: 4),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'hills_transformation' : ListTag 'hills_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: cold_taiga_hills),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'mutate_transformation' : ListTag 'mutate_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: cold_taiga_mutated),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 2.68E-43),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -4.2949216E8),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 2.68E-43),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -4.2949216E8)
+		},
+		'tags' : ListTag 'tags' (6 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: cold),
+			StringTag  (data: forest),
+			StringTag  (data: monster),
+			StringTag  (data: overworld),
+			StringTag  (data: taiga)
+		}
+	},
+	'extreme_hills' : CompoundTag 'extreme_hills' (10 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (5 entries) {
+			'shore_transformation' : ListTag 'shore_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: stone_beach),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'generate_for_climates' : ListTag 'generate_for_climates' (2 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'temperature' : IntTag temperature(data: 0),
+					'weight' : IntTag weight(data: 1)
+				},
+				CompoundTag '' (2 entries) {
+					'temperature' : IntTag temperature(data: 3),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'pre_hills_edge_transformation' : ListTag 'pre_hills_edge_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (3 entries) {
+					'condition' : StringTag condition (data: {"all_of":[{"any_of":[{"operator":3,"subject":0,"test":"is_temperature_value","value":0.2000000029802322},{"operator":4,"subject":0,"test":"is_temperature_value","value":1.0}]}]}
+					),
+					'min_passing_neighbors' : IntTag min_passing_neighbors(data: 1),
+					'transforms_into' : ListTag 'transforms_into' (1 entries of type TAG_Compound) {
+						CompoundTag '' (2 entries) {
+							'biome' : StringTag biome (data: extreme_hills_edge),
+							'weight' : IntTag weight(data: 1)
+						}
+					}
+				}
+			},
+			'hills_transformation' : ListTag 'hills_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: extreme_hills_plus_trees),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'mutate_transformation' : ListTag 'mutate_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: extreme_hills_mutated),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'minecraft:legacy_world_generation_rules' : CompoundTag 'minecraft:legacy_world_generation_rules' (1 entries) {
+			'legacy_pre_hills_edge_transformation' : ListTag 'legacy_pre_hills_edge_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (3 entries) {
+					'condition' : StringTag condition (data: {"all_of":[{"any_of":[{"operator":3,"subject":0,"test":"is_temperature_value","value":0.2000000029802322},{"operator":4,"subject":0,"test":"is_temperature_value","value":1.0}]}]}
+					),
+					'min_passing_neighbors' : IntTag min_passing_neighbors(data: 1),
+					'transforms_into' : ListTag 'transforms_into' (1 entries of type TAG_Compound) {
+						CompoundTag '' (2 entries) {
+							'biome' : StringTag biome (data: extreme_hills_edge),
+							'weight' : IntTag weight(data: 1)
+						}
+					}
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: -4.28443584E8),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -6.352689E-23),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: -4.28443584E8),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -6.352689E-23)
+		},
+		'tags' : ListTag 'tags' (4 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: extreme_hills),
+			StringTag  (data: monster),
+			StringTag  (data: overworld)
+		}
+	},
+	'soulsand_valley' : CompoundTag 'soulsand_valley' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: -4.28443552E8),
+		'temperature' : FloatTag temperature (data: 9.0E-44),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 0.0),
+		'minecraft:multinoise_generation_rules' : CompoundTag 'minecraft:multinoise_generation_rules' (5 entries) {
+			'target_altitude' : FloatTag target_altitude (data: 0.0),
+			'target_weirdness' : FloatTag target_weirdness (data: 0.0),
+			'target_humidity' : FloatTag target_humidity (data: 2.68E-43),
+			'weight' : FloatTag weight (data: 0.0),
+			'target_temperature' : FloatTag target_temperature (data: 0.0)
+		},
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: -4.28443552E8),
+			'temperature' : FloatTag temperature (data: 9.0E-44),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 0.0)
+		},
+		'tags' : ListTag 'tags' (4 entries of type TAG_String) {
+			StringTag  (data: nether),
+			StringTag  (data: soulsand_valley),
+			StringTag  (data: spawn_endermen),
+			StringTag  (data: spawn_ghast)
+		}
+	},
+	'beach' : CompoundTag 'beach' (8 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: -4.28443616E8),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -4.2949216E8),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: -4.28443616E8),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -4.2949216E8)
+		},
+		'tags' : ListTag 'tags' (4 entries of type TAG_String) {
+			StringTag  (data: beach),
+			StringTag  (data: monster),
+			StringTag  (data: overworld),
+			StringTag  (data: warm)
+		}
+	},
+	'roofed_forest' : CompoundTag 'roofed_forest' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (3 entries) {
+			'generate_for_climates' : ListTag 'generate_for_climates' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'temperature' : IntTag temperature(data: 0),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'hills_transformation' : ListTag 'hills_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: plains),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'mutate_transformation' : ListTag 'mutate_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: roofed_forest_mutated),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 4.1723293E-8),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -4.28443616E8),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 4.1723293E-8),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -4.28443616E8)
+		},
+		'tags' : ListTag 'tags' (6 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: forest),
+			StringTag  (data: monster),
+			StringTag  (data: no_legacy_worldgen),
+			StringTag  (data: overworld),
+			StringTag  (data: roofed)
+		}
+	},
+	'cold_beach' : CompoundTag 'cold_beach' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (1 entries) {
+			'shore_transformation' : ListTag 'shore_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: cold_beach),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: -4.28443552E8),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -6.352689E-23),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: -4.28443552E8),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -6.352689E-23)
+		},
+		'tags' : ListTag 'tags' (4 entries of type TAG_String) {
+			StringTag  (data: beach),
+			StringTag  (data: cold),
+			StringTag  (data: monster),
+			StringTag  (data: overworld)
+		}
+	},
+	'savanna_mutated' : CompoundTag 'savanna_mutated' (8 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: -4.28967904E8),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 8.8E-44),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: -4.28967904E8),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 8.8E-44)
+		},
+		'tags' : ListTag 'tags' (5 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: monster),
+			StringTag  (data: mutated),
+			StringTag  (data: overworld),
+			StringTag  (data: savanna)
+		}
+	},
+	'redwood_taiga_hills_mutated' : CompoundTag 'redwood_taiga_hills_mutated' (8 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: -6.352689E-23),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -4.28443616E8),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: -6.352689E-23),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -4.28443616E8)
+		},
+		'tags' : ListTag 'tags' (8 entries of type TAG_String) {
+			StringTag  (data: animal),
+			StringTag  (data: forest),
+			StringTag  (data: hills),
+			StringTag  (data: mega),
+			StringTag  (data: monster),
+			StringTag  (data: mutated),
+			StringTag  (data: overworld_generation),
+			StringTag  (data: taiga)
+		}
+	},
+	'river' : CompoundTag 'river' (9 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (1 entries) {
+			'shore_transformation' : ListTag 'shore_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: river),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 8.8E-44),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 8.8E-44),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 8.8E-44),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 8.8E-44)
+		},
+		'tags' : ListTag 'tags' (2 entries of type TAG_String) {
+			StringTag  (data: overworld),
+			StringTag  (data: river)
+		}
+	},
+	'desert' : CompoundTag 'desert' (11 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'minecraft:overworld_generation_rules' : CompoundTag 'minecraft:overworld_generation_rules' (4 entries) {
+			'generate_for_climates' : ListTag 'generate_for_climates' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'temperature' : IntTag temperature(data: 1),
+					'weight' : IntTag weight(data: 3)
+				}
+			},
+			'pre_hills_edge_transformation' : ListTag 'pre_hills_edge_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (3 entries) {
+					'condition' : StringTag condition (data: {"all_of":[{"operator":0,"subject":0,"test":"has_biome_tag","value":"ice_plains"},{"operator":1,"subject":0,"test":"has_biome_tag","value":"mutated"}]}
+					),
+					'min_passing_neighbors' : IntTag min_passing_neighbors(data: 1),
+					'transforms_into' : ListTag 'transforms_into' (1 entries of type TAG_Compound) {
+						CompoundTag '' (2 entries) {
+							'biome' : StringTag biome (data: extreme_hills_plus_trees),
+							'weight' : IntTag weight(data: 1)
+						}
+					}
+				}
+			},
+			'hills_transformation' : ListTag 'hills_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: desert_hills),
+					'weight' : IntTag weight(data: 1)
+				}
+			},
+			'mutate_transformation' : ListTag 'mutate_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (2 entries) {
+					'biome' : StringTag biome (data: desert_mutated),
+					'weight' : IntTag weight(data: 1)
+				}
+			}
+		},
+		'minecraft:legacy_world_generation_rules' : CompoundTag 'minecraft:legacy_world_generation_rules' (1 entries) {
+			'legacy_pre_hills_edge_transformation' : ListTag 'legacy_pre_hills_edge_transformation' (1 entries of type TAG_Compound) {
+				CompoundTag '' (3 entries) {
+					'condition' : StringTag condition (data: {"all_of":[{"operator":0,"subject":0,"test":"has_biome_tag","value":"ice_plains"},{"operator":1,"subject":0,"test":"has_biome_tag","value":"mutated"}]}
+					),
+					'min_passing_neighbors' : IntTag min_passing_neighbors(data: 1),
+					'transforms_into' : ListTag 'transforms_into' (1 entries of type TAG_Compound) {
+						CompoundTag '' (2 entries) {
+							'biome' : StringTag biome (data: extreme_hills_plus_trees),
+							'weight' : IntTag weight(data: 1)
+						}
+					}
+				}
+			}
+		},
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: 9.0E-44),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: 0.0),
+		'minecraft:multinoise_generation_rules' : CompoundTag 'minecraft:multinoise_generation_rules' (5 entries) {
+			'target_altitude' : FloatTag target_altitude (data: 0.0),
+			'target_weirdness' : FloatTag target_weirdness (data: 0.0),
+			'target_humidity' : FloatTag target_humidity (data: -4.29496256E8),
+			'weight' : FloatTag weight (data: -4.29492128E8),
+			'target_temperature' : FloatTag target_temperature (data: -4.2949216E8)
+		},
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: 9.0E-44),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: 0.0)
+		},
+		'tags' : ListTag 'tags' (3 entries of type TAG_String) {
+			StringTag  (data: desert),
+			StringTag  (data: monster),
+			StringTag  (data: overworld)
+		}
+	},
+	'stone_beach' : CompoundTag 'stone_beach' (8 entries) {
+		'blue_spores' : FloatTag blue_spores (data: 0.0),
+		'white_ash' : FloatTag white_ash (data: 0.0),
+		'ash' : FloatTag ash (data: 0.0),
+		'temperature' : FloatTag temperature (data: -4.28443584E8),
+		'red_spores' : FloatTag red_spores (data: 0.0),
+		'downfall' : FloatTag downfall (data: -6.352689E-23),
+		'minecraft:climate' : CompoundTag 'minecraft:climate' (6 entries) {
+			'blue_spores' : FloatTag blue_spores (data: 0.0),
+			'white_ash' : FloatTag white_ash (data: 0.0),
+			'ash' : FloatTag ash (data: 0.0),
+			'temperature' : FloatTag temperature (data: -4.28443584E8),
+			'red_spores' : FloatTag red_spores (data: 0.0),
+			'downfall' : FloatTag downfall (data: -6.352689E-23)
+		},
+		'tags' : ListTag 'tags' (4 entries of type TAG_String) {
+			StringTag  (data: beach),
+			StringTag  (data: monster),
+			StringTag  (data: overworld),
+			StringTag  (data: stone)
+		}
+	}
+}
