@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -107,7 +107,12 @@ var activeTableTab = "activeTableTab";
 <li><a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">cn.nukkit.network.protocol.DataPacket</a></li>
 <li>
 <ul class="inheritance">
+<li><a href="../../../../cn/nukkit/network/protocol/AbstractResourcePackDataPacket.html" title="class in cn.nukkit.network.protocol">cn.nukkit.network.protocol.AbstractResourcePackDataPacket</a></li>
+<li>
+<ul class="inheritance">
 <li>cn.nukkit.network.protocol.ResourcePackDataInfoPacket</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -124,8 +129,11 @@ var activeTableTab = "activeTableTab";
 </dl>
 <hr>
 <br>
-<pre>public class <span class="typeNameLabel">ResourcePackDataInfoPacket</span>
-extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a></pre>
+<pre><a href="../../../../cn/nukkit/api/PowerNukkitDifference.html" title="annotation in cn.nukkit.api">@PowerNukkitDifference</a>(<a href="../../../../cn/nukkit/api/PowerNukkitDifference.html#extendsOnlyInPowerNukkit--">extendsOnlyInPowerNukkit</a>=<a href="../../../../cn/nukkit/network/protocol/AbstractResourcePackDataPacket.html" title="class in cn.nukkit.network.protocol">AbstractResourcePackDataPacket.class</a>,
+                       <a href="../../../../cn/nukkit/api/PowerNukkitDifference.html#insteadOf--">insteadOf</a>=<a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket.class</a>,
+                       <a href="../../../../cn/nukkit/api/PowerNukkitDifference.html#since--">since</a>="FUTURE")
+public class <span class="typeNameLabel">ResourcePackDataInfoPacket</span>
+extends <a href="../../../../cn/nukkit/network/protocol/AbstractResourcePackDataPacket.html" title="class in cn.nukkit.network.protocol">AbstractResourcePackDataPacket</a></pre>
 </li>
 </ul>
 </div>
@@ -271,18 +279,33 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/ResourcePackDataInfoPacket.html#encode--">encode</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/ResourcePackDataInfoPacket.html#getPackId--">getPackId</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>org.powernukkit.version.Version</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/ResourcePackDataInfoPacket.html#getPackVersion--">getPackVersion</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>byte</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/ResourcePackDataInfoPacket.html#pid--">pid</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/ResourcePackDataInfoPacket.html#setPackId-java.util.UUID-">setPackId</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;packId)</code>&nbsp;</td>
+</tr>
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/ResourcePackDataInfoPacket.html#setPackVersion-org.powernukkit.version.Version-">setPackVersion</a></span>(org.powernukkit.version.Version&nbsp;packVersion)</code>&nbsp;</td>
 </tr>
 </table>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.cn.nukkit.network.protocol.AbstractResourcePackDataPacket">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;cn.nukkit.network.protocol.<a href="../../../../cn/nukkit/network/protocol/AbstractResourcePackDataPacket.html" title="class in cn.nukkit.network.protocol">AbstractResourcePackDataPacket</a></h3>
+<code><a href="../../../../cn/nukkit/network/protocol/AbstractResourcePackDataPacket.html#decodePackInfo--">decodePackInfo</a>, <a href="../../../../cn/nukkit/network/protocol/AbstractResourcePackDataPacket.html#encodePackInfo--">encodePackInfo</a></code></li>
+</ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.cn.nukkit.network.protocol.DataPacket">
 <!--   -->
@@ -597,17 +620,55 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
 public&nbsp;org.powernukkit.version.Version&nbsp;getPackVersion()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../cn/nukkit/network/protocol/AbstractResourcePackDataPacket.html#getPackVersion--">getPackVersion</a></code>&nbsp;in class&nbsp;<code><a href="../../../../cn/nukkit/network/protocol/AbstractResourcePackDataPacket.html" title="class in cn.nukkit.network.protocol">AbstractResourcePackDataPacket</a></code></dd>
+</dl>
 </li>
 </ul>
 <a name="setPackVersion-org.powernukkit.version.Version-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>setPackVersion</h4>
 <pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
 public&nbsp;void&nbsp;setPackVersion(org.powernukkit.version.Version&nbsp;packVersion)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../cn/nukkit/network/protocol/AbstractResourcePackDataPacket.html#setPackVersion-org.powernukkit.version.Version-">setPackVersion</a></code>&nbsp;in class&nbsp;<code><a href="../../../../cn/nukkit/network/protocol/AbstractResourcePackDataPacket.html" title="class in cn.nukkit.network.protocol">AbstractResourcePackDataPacket</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="getPackId--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPackId</h4>
+<pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+ <a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;getPackId()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../cn/nukkit/network/protocol/AbstractResourcePackDataPacket.html#getPackId--">getPackId</a></code>&nbsp;in class&nbsp;<code><a href="../../../../cn/nukkit/network/protocol/AbstractResourcePackDataPacket.html" title="class in cn.nukkit.network.protocol">AbstractResourcePackDataPacket</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="setPackId-java.util.UUID-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>setPackId</h4>
+<pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+ <a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+public&nbsp;void&nbsp;setPackId(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;packId)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../cn/nukkit/network/protocol/AbstractResourcePackDataPacket.html#setPackId-java.util.UUID-">setPackId</a></code>&nbsp;in class&nbsp;<code><a href="../../../../cn/nukkit/network/protocol/AbstractResourcePackDataPacket.html" title="class in cn.nukkit.network.protocol">AbstractResourcePackDataPacket</a></code></dd>
+</dl>
 </li>
 </ul>
 </li>
