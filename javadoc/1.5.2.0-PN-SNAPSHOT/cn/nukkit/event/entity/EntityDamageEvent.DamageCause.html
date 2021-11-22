@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>EntityDamageEvent.DamageCause (PowerNukkit 1.5.2.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2021-10-27">
+<meta name="date" content="2021-11-22">
 <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../../script.js"></script>
 </head>
@@ -143,113 +143,93 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?i
 <th class="colOne" scope="col">Enum Constant and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html#ALL">ALL</a></span></code>
-<div class="block">Damage caused by all</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html#ANVIL">ANVIL</a></span></code>
-<div class="block">Damage caused by anvil</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html#BLOCK_EXPLOSION">BLOCK_EXPLOSION</a></span></code>
 <div class="block">Block explosion damage</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html#CHARGING">CHARGING</a></span></code>
-<div class="block">Damage caused by charging</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html#CONTACT">CONTACT</a></span></code>
 <div class="block">Damage caused by contact with a block such as a Cactus</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html#CUSTOM">CUSTOM</a></span></code>
 <div class="block">Plugins</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html#DROWNING">DROWNING</a></span></code>
 <div class="block">Damage caused by running out of air underwater</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html#ENTITY_ATTACK">ENTITY_ATTACK</a></span></code>
 <div class="block">Damage caused by being attacked by another entity</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html#ENTITY_EXPLOSION">ENTITY_EXPLOSION</a></span></code>
 <div class="block">Entity explosion damage</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html#FALL">FALL</a></span></code>
 <div class="block">Fall damage</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html#FALLING_BLOCK">FALLING_BLOCK</a></span></code>
 <div class="block">Damage caused by falling block</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html#FIRE">FIRE</a></span></code>
 <div class="block">Damage caused by standing in fire</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html#FIRE_TICK">FIRE_TICK</a></span></code>
 <div class="block">Burn damage</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html#FIREWORKS">FIREWORKS</a></span></code>
 <div class="block">Damage caused by fireworks</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html#FLYING_INTO_WALL">FLYING_INTO_WALL</a></span></code>
 <div class="block">Damage caused by flying into wall</div>
 </td>
 </tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html#FREEZING">FREEZING</a></span></code>
+<div class="block">Damage caused by temperature</div>
+</td>
+</tr>
 <tr class="rowColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html#HOT_FLOOR">HOT_FLOOR</a></span></code>
+<div class="block">Damage caused when an entity steps on a hot block, like <a href="../../../../cn/nukkit/block/BlockID.html#MAGMA"><code>BlockID.MAGMA</code></a></div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html#HUNGER">HUNGER</a></span></code>
 <div class="block">Damage caused by hunger</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html#LAVA">LAVA</a></span></code>
 <div class="block">Damage caused by standing in lava</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html#LIGHTNING">LIGHTNING</a></span></code>
 <div class="block">Damage caused by being struck by lightning</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html#MAGIC">MAGIC</a></span></code>
 <div class="block">Potion or spell damage</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html#MAGMA">MAGMA</a></span></code>
-<div class="block">Damage caused by magma</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html#OVERRIDE">OVERRIDE</a></span></code>
-<div class="block">Damage caused by /kill command</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html#PISTON">PISTON</a></span></code>
-<div class="block">Damage caused by piston</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -268,21 +248,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?i
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html#TEMPERATURE">TEMPERATURE</a></span></code>
-<div class="block">Damage caused by temperature</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html#THORNS">THORNS</a></span></code>
 <div class="block">Damage caused by thorns</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html#VOID">VOID</a></span></code>
 <div class="block">Damage caused by falling into the void</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html#WITHER">WITHER</a></span></code>
 <div class="block">Damage caused by Wither</div>
 </td>
@@ -344,28 +319,6 @@ the order they are declared.</div>
 <!--   -->
 </a>
 <h3>Enum Constant Detail</h3>
-<a name="CUSTOM">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>CUSTOM</h4>
-<pre>public static final&nbsp;<a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageCause</a> CUSTOM</pre>
-<div class="block">Plugins</div>
-</li>
-</ul>
-<a name="OVERRIDE">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>OVERRIDE</h4>
-<pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
- <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
-public static final&nbsp;<a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageCause</a> OVERRIDE</pre>
-<div class="block">Damage caused by /kill command</div>
-</li>
-</ul>
 <a name="CONTACT">
 <!--   -->
 </a>
@@ -506,16 +459,24 @@ public static final&nbsp;<a href="../../../../cn/nukkit/event/entity/EntityDamag
 <div class="block">Potion or spell damage</div>
 </li>
 </ul>
-<a name="WITHER">
+<a name="CUSTOM">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>WITHER</h4>
-<pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
- <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
-public static final&nbsp;<a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageCause</a> WITHER</pre>
-<div class="block">Damage caused by Wither</div>
+<h4>CUSTOM</h4>
+<pre>public static final&nbsp;<a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageCause</a> CUSTOM</pre>
+<div class="block">Plugins</div>
+</li>
+</ul>
+<a name="LIGHTNING">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>LIGHTNING</h4>
+<pre>public static final&nbsp;<a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageCause</a> LIGHTNING</pre>
+<div class="block">Damage caused by being struck by lightning</div>
 </li>
 </ul>
 <a name="HUNGER">
@@ -528,16 +489,16 @@ public static final&nbsp;<a href="../../../../cn/nukkit/event/entity/EntityDamag
 <div class="block">Damage caused by hunger</div>
 </li>
 </ul>
-<a name="ANVIL">
+<a name="WITHER">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>ANVIL</h4>
+<h4>WITHER</h4>
 <pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
-public static final&nbsp;<a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageCause</a> ANVIL</pre>
-<div class="block">Damage caused by anvil</div>
+public static final&nbsp;<a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageCause</a> WITHER</pre>
+<div class="block">Damage caused by Wither</div>
 </li>
 </ul>
 <a name="THORNS">
@@ -564,18 +525,6 @@ public static final&nbsp;<a href="../../../../cn/nukkit/event/entity/EntityDamag
 <div class="block">Damage caused by falling block</div>
 </li>
 </ul>
-<a name="PISTON">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>PISTON</h4>
-<pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
- <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
-public static final&nbsp;<a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageCause</a> PISTON</pre>
-<div class="block">Damage caused by piston</div>
-</li>
-</ul>
 <a name="FLYING_INTO_WALL">
 <!--   -->
 </a>
@@ -588,16 +537,16 @@ public static final&nbsp;<a href="../../../../cn/nukkit/event/entity/EntityDamag
 <div class="block">Damage caused by flying into wall</div>
 </li>
 </ul>
-<a name="MAGMA">
+<a name="HOT_FLOOR">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>MAGMA</h4>
+<h4>HOT_FLOOR</h4>
 <pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
-public static final&nbsp;<a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageCause</a> MAGMA</pre>
-<div class="block">Damage caused by magma</div>
+public static final&nbsp;<a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageCause</a> HOT_FLOOR</pre>
+<div class="block">Damage caused when an entity steps on a hot block, like <a href="../../../../cn/nukkit/block/BlockID.html#MAGMA"><code>BlockID.MAGMA</code></a></div>
 </li>
 </ul>
 <a name="FIREWORKS">
@@ -612,50 +561,16 @@ public static final&nbsp;<a href="../../../../cn/nukkit/event/entity/EntityDamag
 <div class="block">Damage caused by fireworks</div>
 </li>
 </ul>
-<a name="LIGHTNING">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>LIGHTNING</h4>
-<pre>public static final&nbsp;<a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageCause</a> LIGHTNING</pre>
-<div class="block">Damage caused by being struck by lightning</div>
-</li>
-</ul>
-<a name="CHARGING">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>CHARGING</h4>
-<pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
- <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
-public static final&nbsp;<a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageCause</a> CHARGING</pre>
-<div class="block">Damage caused by charging</div>
-</li>
-</ul>
-<a name="TEMPERATURE">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>TEMPERATURE</h4>
-<pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
- <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
-public static final&nbsp;<a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageCause</a> TEMPERATURE</pre>
-<div class="block">Damage caused by temperature</div>
-</li>
-</ul>
-<a name="ALL">
+<a name="FREEZING">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>ALL</h4>
+<h4>FREEZING</h4>
 <pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
-public static final&nbsp;<a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageCause</a> ALL</pre>
-<div class="block">Damage caused by all</div>
+public static final&nbsp;<a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageCause</a> FREEZING</pre>
+<div class="block">Damage caused by temperature</div>
 </li>
 </ul>
 </li>
