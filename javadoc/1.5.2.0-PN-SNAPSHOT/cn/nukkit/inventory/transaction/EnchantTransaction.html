@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>EnchantTransaction (PowerNukkit 1.5.2.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2021-11-22">
+<meta name="date" content="2021-11-24">
 <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../../script.js"></script>
 </head>
@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -185,6 +185,30 @@ extends <a href="../../../../cn/nukkit/inventory/transaction/InventoryTransactio
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/EnchantTransaction.html#execute--">execute</a></span>()</code>&nbsp;</td>
 </tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/EnchantTransaction.html#getCost--">getCost</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/EnchantTransaction.html#getInputItem--">getInputItem</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/EnchantTransaction.html#getOutputItem--">getOutputItem</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/EnchantTransaction.html#setCost-int-">setCost</a></span>(int&nbsp;cost)</code>&nbsp;</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/EnchantTransaction.html#setInputItem-cn.nukkit.item.Item-">setInputItem</a></span>(<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;inputItem)</code>&nbsp;</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/EnchantTransaction.html#setOutputItem-cn.nukkit.item.Item-">setOutputItem</a></span>(<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;outputItem)</code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.cn.nukkit.inventory.transaction.InventoryTransaction">
@@ -275,11 +299,65 @@ public&nbsp;EnchantTransaction(<a href="../../../../cn/nukkit/Player.html" title
 <a name="checkForEnchantPart-java.util.List-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>checkForEnchantPart</h4>
 <pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.3.1.0-PN")
 public&nbsp;boolean&nbsp;checkForEnchantPart(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/inventory/transaction/action/InventoryAction.html" title="class in cn.nukkit.inventory.transaction.action">InventoryAction</a>&gt;&nbsp;actions)</pre>
+</li>
+</ul>
+<a name="getInputItem--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getInputItem</h4>
+<pre>public&nbsp;<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;getInputItem()</pre>
+</li>
+</ul>
+<a name="getOutputItem--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOutputItem</h4>
+<pre>public&nbsp;<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;getOutputItem()</pre>
+</li>
+</ul>
+<a name="getCost--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCost</h4>
+<pre>public&nbsp;int&nbsp;getCost()</pre>
+</li>
+</ul>
+<a name="setInputItem-cn.nukkit.item.Item-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setInputItem</h4>
+<pre>public&nbsp;void&nbsp;setInputItem(<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;inputItem)</pre>
+</li>
+</ul>
+<a name="setOutputItem-cn.nukkit.item.Item-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setOutputItem</h4>
+<pre>public&nbsp;void&nbsp;setOutputItem(<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;outputItem)</pre>
+</li>
+</ul>
+<a name="setCost-int-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>setCost</h4>
+<pre>public&nbsp;void&nbsp;setCost(int&nbsp;cost)</pre>
 </li>
 </ul>
 </li>
