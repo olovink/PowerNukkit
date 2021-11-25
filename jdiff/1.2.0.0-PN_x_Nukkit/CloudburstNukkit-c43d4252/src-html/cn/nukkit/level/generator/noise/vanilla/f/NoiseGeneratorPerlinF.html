@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package cn.nukkit.level.generator.noise.vanilla.f;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>import cn.nukkit.math.NukkitRandom;<a name="line.3"></a>
+<span class="sourceLineNo">004</span><a name="line.4"></a>
+<span class="sourceLineNo">005</span>public class NoiseGeneratorPerlinF {<a name="line.5"></a>
+<span class="sourceLineNo">006</span>    private final NoiseGeneratorSimplexF[] noiseLevels;<a name="line.6"></a>
+<span class="sourceLineNo">007</span>    private final int levels;<a name="line.7"></a>
+<span class="sourceLineNo">008</span><a name="line.8"></a>
+<span class="sourceLineNo">009</span>    public NoiseGeneratorPerlinF(NukkitRandom p_i45470_1_, int p_i45470_2_) {<a name="line.9"></a>
+<span class="sourceLineNo">010</span>        this.levels = p_i45470_2_;<a name="line.10"></a>
+<span class="sourceLineNo">011</span>        this.noiseLevels = new NoiseGeneratorSimplexF[p_i45470_2_];<a name="line.11"></a>
+<span class="sourceLineNo">012</span><a name="line.12"></a>
+<span class="sourceLineNo">013</span>        for (int i = 0; i &lt; p_i45470_2_; ++i) {<a name="line.13"></a>
+<span class="sourceLineNo">014</span>            this.noiseLevels[i] = new NoiseGeneratorSimplexF(p_i45470_1_);<a name="line.14"></a>
+<span class="sourceLineNo">015</span>        }<a name="line.15"></a>
+<span class="sourceLineNo">016</span>    }<a name="line.16"></a>
+<span class="sourceLineNo">017</span><a name="line.17"></a>
+<span class="sourceLineNo">018</span>    public float getValue(float p_151601_1_, float p_151601_3_) {<a name="line.18"></a>
+<span class="sourceLineNo">019</span>        float d0 = 0.0f;<a name="line.19"></a>
+<span class="sourceLineNo">020</span>        float d1 = 1.0f;<a name="line.20"></a>
+<span class="sourceLineNo">021</span><a name="line.21"></a>
+<span class="sourceLineNo">022</span>        for (int i = 0; i &lt; this.levels; ++i) {<a name="line.22"></a>
+<span class="sourceLineNo">023</span>            d0 += this.noiseLevels[i].getValue(p_151601_1_ * d1, p_151601_3_ * d1) / d1;<a name="line.23"></a>
+<span class="sourceLineNo">024</span>            d1 /= 2.0f;<a name="line.24"></a>
+<span class="sourceLineNo">025</span>        }<a name="line.25"></a>
+<span class="sourceLineNo">026</span><a name="line.26"></a>
+<span class="sourceLineNo">027</span>        return d0;<a name="line.27"></a>
+<span class="sourceLineNo">028</span>    }<a name="line.28"></a>
+<span class="sourceLineNo">029</span><a name="line.29"></a>
+<span class="sourceLineNo">030</span>    public float[] getRegion(float[] p_151599_1_, float p_151599_2_, float p_151599_4_, int p_151599_6_, int p_151599_7_, float p_151599_8_, float p_151599_10_, float p_151599_12_) {<a name="line.30"></a>
+<span class="sourceLineNo">031</span>        return this.getRegion(p_151599_1_, p_151599_2_, p_151599_4_, p_151599_6_, p_151599_7_, p_151599_8_, p_151599_10_, p_151599_12_, 0.5f);<a name="line.31"></a>
+<span class="sourceLineNo">032</span>    }<a name="line.32"></a>
+<span class="sourceLineNo">033</span><a name="line.33"></a>
+<span class="sourceLineNo">034</span>    public float[] getRegion(float[] p_151600_1_, float p_151600_2_, float p_151600_4_, int p_151600_6_, int p_151600_7_, float p_151600_8_, float p_151600_10_, float p_151600_12_, float p_151600_14_) {<a name="line.34"></a>
+<span class="sourceLineNo">035</span>        if (p_151600_1_ != null &amp;&amp; p_151600_1_.length &gt;= p_151600_6_ * p_151600_7_) {<a name="line.35"></a>
+<span class="sourceLineNo">036</span>            for (int i = 0; i &lt; p_151600_1_.length; ++i) {<a name="line.36"></a>
+<span class="sourceLineNo">037</span>                p_151600_1_[i] = 0.0f;<a name="line.37"></a>
+<span class="sourceLineNo">038</span>            }<a name="line.38"></a>
+<span class="sourceLineNo">039</span>        } else {<a name="line.39"></a>
+<span class="sourceLineNo">040</span>            p_151600_1_ = new float[p_151600_6_ * p_151600_7_];<a name="line.40"></a>
+<span class="sourceLineNo">041</span>        }<a name="line.41"></a>
+<span class="sourceLineNo">042</span><a name="line.42"></a>
+<span class="sourceLineNo">043</span>        float d1 = 1.0f;<a name="line.43"></a>
+<span class="sourceLineNo">044</span>        float d0 = 1.0f;<a name="line.44"></a>
+<span class="sourceLineNo">045</span><a name="line.45"></a>
+<span class="sourceLineNo">046</span>        for (int j = 0; j &lt; this.levels; ++j) {<a name="line.46"></a>
+<span class="sourceLineNo">047</span>            this.noiseLevels[j].add(p_151600_1_, p_151600_2_, p_151600_4_, p_151600_6_, p_151600_7_, p_151600_8_ * d0 * d1, p_151600_10_ * d0 * d1, 0.55f / d1);<a name="line.47"></a>
+<span class="sourceLineNo">048</span>            d0 *= p_151600_12_;<a name="line.48"></a>
+<span class="sourceLineNo">049</span>            d1 *= p_151600_14_;<a name="line.49"></a>
+<span class="sourceLineNo">050</span>        }<a name="line.50"></a>
+<span class="sourceLineNo">051</span><a name="line.51"></a>
+<span class="sourceLineNo">052</span>        return p_151600_1_;<a name="line.52"></a>
+<span class="sourceLineNo">053</span>    }<a name="line.53"></a>
+<span class="sourceLineNo">054</span>}<a name="line.54"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>

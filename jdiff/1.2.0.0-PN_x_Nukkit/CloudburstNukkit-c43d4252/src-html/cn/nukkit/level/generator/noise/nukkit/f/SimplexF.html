@@ -1,0 +1,345 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package cn.nukkit.level.generator.noise.nukkit.f;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>import cn.nukkit.math.NukkitRandom;<a name="line.3"></a>
+<span class="sourceLineNo">004</span><a name="line.4"></a>
+<span class="sourceLineNo">005</span>/**<a name="line.5"></a>
+<span class="sourceLineNo">006</span> * author: DaPorkchop_<a name="line.6"></a>
+<span class="sourceLineNo">007</span> * Nukkit Project<a name="line.7"></a>
+<span class="sourceLineNo">008</span> */<a name="line.8"></a>
+<span class="sourceLineNo">009</span>public class SimplexF extends PerlinF {<a name="line.9"></a>
+<span class="sourceLineNo">010</span>    protected static float SQRT_3;<a name="line.10"></a>
+<span class="sourceLineNo">011</span>    protected static float SQRT_5;<a name="line.11"></a>
+<span class="sourceLineNo">012</span>    protected static float F2;<a name="line.12"></a>
+<span class="sourceLineNo">013</span>    protected static float G2;<a name="line.13"></a>
+<span class="sourceLineNo">014</span>    protected static float G22;<a name="line.14"></a>
+<span class="sourceLineNo">015</span>    protected static float F3;<a name="line.15"></a>
+<span class="sourceLineNo">016</span>    protected static float G3;<a name="line.16"></a>
+<span class="sourceLineNo">017</span>    protected static float F4;<a name="line.17"></a>
+<span class="sourceLineNo">018</span>    protected static float G4;<a name="line.18"></a>
+<span class="sourceLineNo">019</span>    protected static float G42;<a name="line.19"></a>
+<span class="sourceLineNo">020</span>    protected static float G43;<a name="line.20"></a>
+<span class="sourceLineNo">021</span>    protected static float G44;<a name="line.21"></a>
+<span class="sourceLineNo">022</span>    public static final int[][] grad3 = {<a name="line.22"></a>
+<span class="sourceLineNo">023</span>            {1, 1, 0}, {-1, 1, 0}, {1, -1, 0}, {-1, -1, 0},<a name="line.23"></a>
+<span class="sourceLineNo">024</span>            {1, 0, 1}, {-1, 0, 1}, {1, 0, -1}, {-1, 0, -1},<a name="line.24"></a>
+<span class="sourceLineNo">025</span>            {0, 1, 1}, {0, -1, 1}, {0, 1, -1}, {0, -1, -1}<a name="line.25"></a>
+<span class="sourceLineNo">026</span>    };<a name="line.26"></a>
+<span class="sourceLineNo">027</span>    protected final float offsetW;<a name="line.27"></a>
+<span class="sourceLineNo">028</span><a name="line.28"></a>
+<span class="sourceLineNo">029</span>    public SimplexF(NukkitRandom random, float octaves, float persistence) {<a name="line.29"></a>
+<span class="sourceLineNo">030</span>        super(random, octaves, persistence);<a name="line.30"></a>
+<span class="sourceLineNo">031</span>        this.offsetW = random.nextFloat() * 256;<a name="line.31"></a>
+<span class="sourceLineNo">032</span>        SQRT_3 = (float) Math.sqrt(3);<a name="line.32"></a>
+<span class="sourceLineNo">033</span>        SQRT_5 = (float) Math.sqrt(5);<a name="line.33"></a>
+<span class="sourceLineNo">034</span>        F2 = 0.5f * (SQRT_3 - 1f);<a name="line.34"></a>
+<span class="sourceLineNo">035</span>        G2 = (3f - SQRT_3) / 6f;<a name="line.35"></a>
+<span class="sourceLineNo">036</span>        G22 = G2 * 2.0f - 1f;<a name="line.36"></a>
+<span class="sourceLineNo">037</span>        F3 = 1.0f / 3.0f;<a name="line.37"></a>
+<span class="sourceLineNo">038</span>        G3 = 1.0f / 6.0f;<a name="line.38"></a>
+<span class="sourceLineNo">039</span>        F4 = (SQRT_5 - 1.0f) / 4.0f;<a name="line.39"></a>
+<span class="sourceLineNo">040</span>        G4 = (5.0f - SQRT_5) / 20.0f;<a name="line.40"></a>
+<span class="sourceLineNo">041</span>        G42 = G4 * 2.0f;<a name="line.41"></a>
+<span class="sourceLineNo">042</span>        G43 = G4 * 3.0f;<a name="line.42"></a>
+<span class="sourceLineNo">043</span>        G44 = G4 * 4.0f - 1.0f;<a name="line.43"></a>
+<span class="sourceLineNo">044</span>    }<a name="line.44"></a>
+<span class="sourceLineNo">045</span><a name="line.45"></a>
+<span class="sourceLineNo">046</span>    public SimplexF(NukkitRandom random, float octaves, float persistence, float expansion) {<a name="line.46"></a>
+<span class="sourceLineNo">047</span>        super(random, octaves, persistence, expansion);<a name="line.47"></a>
+<span class="sourceLineNo">048</span>        this.offsetW = random.nextFloat() * 256;<a name="line.48"></a>
+<span class="sourceLineNo">049</span>        SQRT_3 = (float) Math.sqrt(3);<a name="line.49"></a>
+<span class="sourceLineNo">050</span>        SQRT_5 = (float) Math.sqrt(5);<a name="line.50"></a>
+<span class="sourceLineNo">051</span>        F2 = 0.5f * (SQRT_3 - 1f);<a name="line.51"></a>
+<span class="sourceLineNo">052</span>        G2 = (3f - SQRT_3) / 6f;<a name="line.52"></a>
+<span class="sourceLineNo">053</span>        G22 = G2 * 2.0f - 1f;<a name="line.53"></a>
+<span class="sourceLineNo">054</span>        F3 = 1.0f / 3.0f;<a name="line.54"></a>
+<span class="sourceLineNo">055</span>        G3 = 1.0f / 6.0f;<a name="line.55"></a>
+<span class="sourceLineNo">056</span>        F4 = (SQRT_5 - 1.0f) / 4.0f;<a name="line.56"></a>
+<span class="sourceLineNo">057</span>        G4 = (5.0f - SQRT_5) / 20.0f;<a name="line.57"></a>
+<span class="sourceLineNo">058</span>        G42 = G4 * 2.0f;<a name="line.58"></a>
+<span class="sourceLineNo">059</span>        G43 = G4 * 3.0f;<a name="line.59"></a>
+<span class="sourceLineNo">060</span>        G44 = G4 * 4.0f - 1.0f;<a name="line.60"></a>
+<span class="sourceLineNo">061</span>    }<a name="line.61"></a>
+<span class="sourceLineNo">062</span><a name="line.62"></a>
+<span class="sourceLineNo">063</span><a name="line.63"></a>
+<span class="sourceLineNo">064</span>    protected static float dot2D(int[] g, float x, float y) {<a name="line.64"></a>
+<span class="sourceLineNo">065</span>        return g[0] * x + g[1] * y;<a name="line.65"></a>
+<span class="sourceLineNo">066</span>    }<a name="line.66"></a>
+<span class="sourceLineNo">067</span><a name="line.67"></a>
+<span class="sourceLineNo">068</span>    protected static float dot3D(int[] g, float x, float y, float z) {<a name="line.68"></a>
+<span class="sourceLineNo">069</span>        return g[0] * x + g[1] * y + g[2] * z;<a name="line.69"></a>
+<span class="sourceLineNo">070</span>    }<a name="line.70"></a>
+<span class="sourceLineNo">071</span><a name="line.71"></a>
+<span class="sourceLineNo">072</span>    protected static float dot4D(int[] g, float x, float y, float z, float w) {<a name="line.72"></a>
+<span class="sourceLineNo">073</span>        return g[0] * x + g[1] * y + g[2] * z + g[3] * w;<a name="line.73"></a>
+<span class="sourceLineNo">074</span>    }<a name="line.74"></a>
+<span class="sourceLineNo">075</span><a name="line.75"></a>
+<span class="sourceLineNo">076</span>    @Override<a name="line.76"></a>
+<span class="sourceLineNo">077</span>    public float getNoise3D(float x, float y, float z) {<a name="line.77"></a>
+<span class="sourceLineNo">078</span>        x += this.offsetX;<a name="line.78"></a>
+<span class="sourceLineNo">079</span>        y += this.offsetY;<a name="line.79"></a>
+<span class="sourceLineNo">080</span>        z += this.offsetZ;<a name="line.80"></a>
+<span class="sourceLineNo">081</span><a name="line.81"></a>
+<span class="sourceLineNo">082</span>        // Skew the input space to determine which simplex cell we're in<a name="line.82"></a>
+<span class="sourceLineNo">083</span>        float s = (x + y + z) * F3; // Very nice and simple skew factor for 3D<a name="line.83"></a>
+<span class="sourceLineNo">084</span>        int i = (int) (x + s);<a name="line.84"></a>
+<span class="sourceLineNo">085</span>        int j = (int) (y + s);<a name="line.85"></a>
+<span class="sourceLineNo">086</span>        int k = (int) (z + s);<a name="line.86"></a>
+<span class="sourceLineNo">087</span>        float t = (i + j + k) * G3;<a name="line.87"></a>
+<span class="sourceLineNo">088</span>        // Unskew the cell origin back to (x,y,z) space<a name="line.88"></a>
+<span class="sourceLineNo">089</span>        float x0 = x - (i - t); // The x,y,z distances from the cell origin<a name="line.89"></a>
+<span class="sourceLineNo">090</span>        float y0 = y - (j - t);<a name="line.90"></a>
+<span class="sourceLineNo">091</span>        float z0 = z - (k - t);<a name="line.91"></a>
+<span class="sourceLineNo">092</span><a name="line.92"></a>
+<span class="sourceLineNo">093</span>        // For the 3D case, the simplex shape is a slightly irregular tetrahedron.<a name="line.93"></a>
+<span class="sourceLineNo">094</span>        int i1 = 0;<a name="line.94"></a>
+<span class="sourceLineNo">095</span>        int j1 = 0;<a name="line.95"></a>
+<span class="sourceLineNo">096</span>        int k1 = 0;<a name="line.96"></a>
+<span class="sourceLineNo">097</span>        int i2 = 0;<a name="line.97"></a>
+<span class="sourceLineNo">098</span>        int j2 = 0;<a name="line.98"></a>
+<span class="sourceLineNo">099</span>        int k2 = 0;<a name="line.99"></a>
+<span class="sourceLineNo">100</span><a name="line.100"></a>
+<span class="sourceLineNo">101</span>        // Determine which simplex we are in.<a name="line.101"></a>
+<span class="sourceLineNo">102</span>        if (x0 &gt;= y0) {<a name="line.102"></a>
+<span class="sourceLineNo">103</span>            if (y0 &gt;= z0) {<a name="line.103"></a>
+<span class="sourceLineNo">104</span>                i1 = 1;<a name="line.104"></a>
+<span class="sourceLineNo">105</span>                j1 = 0;<a name="line.105"></a>
+<span class="sourceLineNo">106</span>                k1 = 0;<a name="line.106"></a>
+<span class="sourceLineNo">107</span>                i2 = 1;<a name="line.107"></a>
+<span class="sourceLineNo">108</span>                j2 = 1;<a name="line.108"></a>
+<span class="sourceLineNo">109</span>                k2 = 0;<a name="line.109"></a>
+<span class="sourceLineNo">110</span>            } // X Y Z order<a name="line.110"></a>
+<span class="sourceLineNo">111</span>            else if (x0 &gt;= z0) {<a name="line.111"></a>
+<span class="sourceLineNo">112</span>                i1 = 1;<a name="line.112"></a>
+<span class="sourceLineNo">113</span>                j1 = 0;<a name="line.113"></a>
+<span class="sourceLineNo">114</span>                k1 = 0;<a name="line.114"></a>
+<span class="sourceLineNo">115</span>                i2 = 1;<a name="line.115"></a>
+<span class="sourceLineNo">116</span>                j2 = 0;<a name="line.116"></a>
+<span class="sourceLineNo">117</span>                k2 = 1;<a name="line.117"></a>
+<span class="sourceLineNo">118</span>            } // X Z Y order<a name="line.118"></a>
+<span class="sourceLineNo">119</span>            else {<a name="line.119"></a>
+<span class="sourceLineNo">120</span>                i1 = 0;<a name="line.120"></a>
+<span class="sourceLineNo">121</span>                j1 = 0;<a name="line.121"></a>
+<span class="sourceLineNo">122</span>                k1 = 1;<a name="line.122"></a>
+<span class="sourceLineNo">123</span>                i2 = 1;<a name="line.123"></a>
+<span class="sourceLineNo">124</span>                j2 = 0;<a name="line.124"></a>
+<span class="sourceLineNo">125</span>                k2 = 1;<a name="line.125"></a>
+<span class="sourceLineNo">126</span>            }<a name="line.126"></a>
+<span class="sourceLineNo">127</span>            // Z X Y order<a name="line.127"></a>
+<span class="sourceLineNo">128</span>        } else { // x0&lt;y0<a name="line.128"></a>
+<span class="sourceLineNo">129</span>            if (y0 &lt; z0) {<a name="line.129"></a>
+<span class="sourceLineNo">130</span>                i1 = 0;<a name="line.130"></a>
+<span class="sourceLineNo">131</span>                j1 = 0;<a name="line.131"></a>
+<span class="sourceLineNo">132</span>                k1 = 1;<a name="line.132"></a>
+<span class="sourceLineNo">133</span>                i2 = 0;<a name="line.133"></a>
+<span class="sourceLineNo">134</span>                j2 = 1;<a name="line.134"></a>
+<span class="sourceLineNo">135</span>                k2 = 1;<a name="line.135"></a>
+<span class="sourceLineNo">136</span>            } // Z Y X order<a name="line.136"></a>
+<span class="sourceLineNo">137</span>            else if (x0 &lt; z0) {<a name="line.137"></a>
+<span class="sourceLineNo">138</span>                i1 = 0;<a name="line.138"></a>
+<span class="sourceLineNo">139</span>                j1 = 1;<a name="line.139"></a>
+<span class="sourceLineNo">140</span>                k1 = 0;<a name="line.140"></a>
+<span class="sourceLineNo">141</span>                i2 = 0;<a name="line.141"></a>
+<span class="sourceLineNo">142</span>                j2 = 1;<a name="line.142"></a>
+<span class="sourceLineNo">143</span>                k2 = 1;<a name="line.143"></a>
+<span class="sourceLineNo">144</span>            } // Y Z X order<a name="line.144"></a>
+<span class="sourceLineNo">145</span>            else {<a name="line.145"></a>
+<span class="sourceLineNo">146</span>                i1 = 0;<a name="line.146"></a>
+<span class="sourceLineNo">147</span>                j1 = 1;<a name="line.147"></a>
+<span class="sourceLineNo">148</span>                k1 = 0;<a name="line.148"></a>
+<span class="sourceLineNo">149</span>                i2 = 1;<a name="line.149"></a>
+<span class="sourceLineNo">150</span>                j2 = 1;<a name="line.150"></a>
+<span class="sourceLineNo">151</span>                k2 = 0;<a name="line.151"></a>
+<span class="sourceLineNo">152</span>            }<a name="line.152"></a>
+<span class="sourceLineNo">153</span>            // Y X Z order<a name="line.153"></a>
+<span class="sourceLineNo">154</span>        }<a name="line.154"></a>
+<span class="sourceLineNo">155</span><a name="line.155"></a>
+<span class="sourceLineNo">156</span>        // A step of (1,0,0) in (i,j,k) means a step of (1-c,-c,-c) in (x,y,z),<a name="line.156"></a>
+<span class="sourceLineNo">157</span>        // a step of (0,1,0) in (i,j,k) means a step of (-c,1-c,-c) in (x,y,z), and<a name="line.157"></a>
+<span class="sourceLineNo">158</span>        // a step of (0,0,1) in (i,j,k) means a step of (-c,-c,1-c) in (x,y,z), where<a name="line.158"></a>
+<span class="sourceLineNo">159</span>        // c = 1/6.<a name="line.159"></a>
+<span class="sourceLineNo">160</span>        float x1 = x0 - i1 + G3; // Offsets for second corner in (x,y,z) coords<a name="line.160"></a>
+<span class="sourceLineNo">161</span>        float y1 = y0 - j1 + G3;<a name="line.161"></a>
+<span class="sourceLineNo">162</span>        float z1 = z0 - k1 + G3;<a name="line.162"></a>
+<span class="sourceLineNo">163</span>        float x2 = x0 - i2 + 2.0f * G3; // Offsets for third corner in (x,y,z) coords<a name="line.163"></a>
+<span class="sourceLineNo">164</span>        float y2 = y0 - j2 + 2.0f * G3;<a name="line.164"></a>
+<span class="sourceLineNo">165</span>        float z2 = z0 - k2 + 2.0f * G3;<a name="line.165"></a>
+<span class="sourceLineNo">166</span>        float x3 = x0 - 1.0f + 3.0f * G3; // Offsets for last corner in (x,y,z) coords<a name="line.166"></a>
+<span class="sourceLineNo">167</span>        float y3 = y0 - 1.0f + 3.0f * G3;<a name="line.167"></a>
+<span class="sourceLineNo">168</span>        float z3 = z0 - 1.0f + 3.0f * G3;<a name="line.168"></a>
+<span class="sourceLineNo">169</span><a name="line.169"></a>
+<span class="sourceLineNo">170</span>        // Work out the hashed gradient indices of the four simplex corners<a name="line.170"></a>
+<span class="sourceLineNo">171</span>        int ii = i &amp; 255;<a name="line.171"></a>
+<span class="sourceLineNo">172</span>        int jj = j &amp; 255;<a name="line.172"></a>
+<span class="sourceLineNo">173</span>        int kk = k &amp; 255;<a name="line.173"></a>
+<span class="sourceLineNo">174</span><a name="line.174"></a>
+<span class="sourceLineNo">175</span>        float n = 0;<a name="line.175"></a>
+<span class="sourceLineNo">176</span><a name="line.176"></a>
+<span class="sourceLineNo">177</span>        // Calculate the contribution from the four corners<a name="line.177"></a>
+<span class="sourceLineNo">178</span>        float t0 = 0.6f - x0 * x0 - y0 * y0 - z0 * z0;<a name="line.178"></a>
+<span class="sourceLineNo">179</span>        if (t0 &gt; 0) {<a name="line.179"></a>
+<span class="sourceLineNo">180</span>            int[] gi0 = grad3[this.perm[ii + this.perm[jj + this.perm[kk]]] % 12];<a name="line.180"></a>
+<span class="sourceLineNo">181</span>            n += t0 * t0 * t0 * t0 * (gi0[0] * x0 + gi0[1] * y0 + gi0[2] * z0);<a name="line.181"></a>
+<span class="sourceLineNo">182</span>        }<a name="line.182"></a>
+<span class="sourceLineNo">183</span><a name="line.183"></a>
+<span class="sourceLineNo">184</span>        float t1 = 0.6f - x1 * x1 - y1 * y1 - z1 * z1;<a name="line.184"></a>
+<span class="sourceLineNo">185</span>        if (t1 &gt; 0) {<a name="line.185"></a>
+<span class="sourceLineNo">186</span>            int[] gi1 = grad3[this.perm[ii + i1 + this.perm[jj + j1 + this.perm[kk + k1]]] % 12];<a name="line.186"></a>
+<span class="sourceLineNo">187</span>            n += t1 * t1 * t1 * t1 * (gi1[0] * x1 + gi1[1] * y1 + gi1[2] * z1);<a name="line.187"></a>
+<span class="sourceLineNo">188</span>        }<a name="line.188"></a>
+<span class="sourceLineNo">189</span><a name="line.189"></a>
+<span class="sourceLineNo">190</span>        float t2 = 0.6f - x2 * x2 - y2 * y2 - z2 * z2;<a name="line.190"></a>
+<span class="sourceLineNo">191</span>        if (t2 &gt; 0) {<a name="line.191"></a>
+<span class="sourceLineNo">192</span>            int[] gi2 = grad3[this.perm[ii + i2 + this.perm[jj + j2 + this.perm[kk + k2]]] % 12];<a name="line.192"></a>
+<span class="sourceLineNo">193</span>            n += t2 * t2 * t2 * t2 * (gi2[0] * x2 + gi2[1] * y2 + gi2[2] * z2);<a name="line.193"></a>
+<span class="sourceLineNo">194</span>        }<a name="line.194"></a>
+<span class="sourceLineNo">195</span><a name="line.195"></a>
+<span class="sourceLineNo">196</span>        float t3 = 0.6f - x3 * x3 - y3 * y3 - z3 * z3;<a name="line.196"></a>
+<span class="sourceLineNo">197</span>        if (t3 &gt; 0) {<a name="line.197"></a>
+<span class="sourceLineNo">198</span>            int[] gi3 = grad3[this.perm[ii + 1 + this.perm[jj + 1 + this.perm[kk + 1]]] % 12];<a name="line.198"></a>
+<span class="sourceLineNo">199</span>            n += t3 * t3 * t3 * t3 * (gi3[0] * x3 + gi3[1] * y3 + gi3[2] * z3);<a name="line.199"></a>
+<span class="sourceLineNo">200</span>        }<a name="line.200"></a>
+<span class="sourceLineNo">201</span><a name="line.201"></a>
+<span class="sourceLineNo">202</span>        // Add contributions from each corner to get the noise value.<a name="line.202"></a>
+<span class="sourceLineNo">203</span>        // The result is scaled to stay just inside [-1,1]<a name="line.203"></a>
+<span class="sourceLineNo">204</span>        return 32.0f * n;<a name="line.204"></a>
+<span class="sourceLineNo">205</span>    }<a name="line.205"></a>
+<span class="sourceLineNo">206</span><a name="line.206"></a>
+<span class="sourceLineNo">207</span>    @Override<a name="line.207"></a>
+<span class="sourceLineNo">208</span>    public float getNoise2D(float x, float y) {<a name="line.208"></a>
+<span class="sourceLineNo">209</span>        x += this.offsetX;<a name="line.209"></a>
+<span class="sourceLineNo">210</span>        y += this.offsetY;<a name="line.210"></a>
+<span class="sourceLineNo">211</span><a name="line.211"></a>
+<span class="sourceLineNo">212</span>        // Skew the input space to determine which simplex cell we're in<a name="line.212"></a>
+<span class="sourceLineNo">213</span>        float s = (x + y) * F2; // Hairy factor for 2D<a name="line.213"></a>
+<span class="sourceLineNo">214</span>        int i = (int) (x + s);<a name="line.214"></a>
+<span class="sourceLineNo">215</span>        int j = (int) (y + s);<a name="line.215"></a>
+<span class="sourceLineNo">216</span>        float t = (i + j) * G2;<a name="line.216"></a>
+<span class="sourceLineNo">217</span>        // Unskew the cell origin back to (x,y) space<a name="line.217"></a>
+<span class="sourceLineNo">218</span>        float x0 = x - (i - t); // The x,y distances from the cell origin<a name="line.218"></a>
+<span class="sourceLineNo">219</span>        float y0 = y - (j - t);<a name="line.219"></a>
+<span class="sourceLineNo">220</span><a name="line.220"></a>
+<span class="sourceLineNo">221</span>        // For the 2D case, the simplex shape is an equilateral triangle.<a name="line.221"></a>
+<span class="sourceLineNo">222</span>        int i1 = 0;<a name="line.222"></a>
+<span class="sourceLineNo">223</span>        int j1 = 0;<a name="line.223"></a>
+<span class="sourceLineNo">224</span>        // Determine which simplex we are in.<a name="line.224"></a>
+<span class="sourceLineNo">225</span>        if (x0 &gt; y0) {<a name="line.225"></a>
+<span class="sourceLineNo">226</span>            i1 = 1;<a name="line.226"></a>
+<span class="sourceLineNo">227</span>            j1 = 0;<a name="line.227"></a>
+<span class="sourceLineNo">228</span>        } // lower triangle, XY order: (0,0).(1,0).(1,1)<a name="line.228"></a>
+<span class="sourceLineNo">229</span>        else {<a name="line.229"></a>
+<span class="sourceLineNo">230</span>            i1 = 0;<a name="line.230"></a>
+<span class="sourceLineNo">231</span>            j1 = 1;<a name="line.231"></a>
+<span class="sourceLineNo">232</span>        }<a name="line.232"></a>
+<span class="sourceLineNo">233</span>        // upper triangle, YX order: (0,0).(0,1).(1,1)<a name="line.233"></a>
+<span class="sourceLineNo">234</span><a name="line.234"></a>
+<span class="sourceLineNo">235</span>        // A step of (1,0) in (i,j) means a step of (1-c,-c) in (x,y), and<a name="line.235"></a>
+<span class="sourceLineNo">236</span>        // a step of (0,1) in (i,j) means a step of (-c,1-c) in (x,y), where<a name="line.236"></a>
+<span class="sourceLineNo">237</span>        // c = (3-sqrt(3))/6<a name="line.237"></a>
+<span class="sourceLineNo">238</span><a name="line.238"></a>
+<span class="sourceLineNo">239</span>        float x1 = x0 - i1 + G2; // Offsets for middle corner in (x,y) unskewed coords<a name="line.239"></a>
+<span class="sourceLineNo">240</span>        float y1 = y0 - j1 + G2;<a name="line.240"></a>
+<span class="sourceLineNo">241</span>        float x2 = x0 + G22; // Offsets for last corner in (x,y) unskewed coords<a name="line.241"></a>
+<span class="sourceLineNo">242</span>        float y2 = y0 + G22;<a name="line.242"></a>
+<span class="sourceLineNo">243</span><a name="line.243"></a>
+<span class="sourceLineNo">244</span>        // Work out the hashed gradient indices of the three simplex corners<a name="line.244"></a>
+<span class="sourceLineNo">245</span>        int ii = i &amp; 255;<a name="line.245"></a>
+<span class="sourceLineNo">246</span>        int jj = j &amp; 255;<a name="line.246"></a>
+<span class="sourceLineNo">247</span><a name="line.247"></a>
+<span class="sourceLineNo">248</span>        float n = 0;<a name="line.248"></a>
+<span class="sourceLineNo">249</span><a name="line.249"></a>
+<span class="sourceLineNo">250</span>        // Calculate the contribution from the three corners<a name="line.250"></a>
+<span class="sourceLineNo">251</span>        float t0 = 0.5f - x0 * x0 - y0 * y0;<a name="line.251"></a>
+<span class="sourceLineNo">252</span>        if (t0 &gt; 0) {<a name="line.252"></a>
+<span class="sourceLineNo">253</span>            int[] gi0 = grad3[this.perm[ii + this.perm[jj]] % 12];<a name="line.253"></a>
+<span class="sourceLineNo">254</span>            n += t0 * t0 * t0 * t0 * (gi0[0] * x0 + gi0[1] * y0); // (x,y) of grad3 used for 2D gradient<a name="line.254"></a>
+<span class="sourceLineNo">255</span>        }<a name="line.255"></a>
+<span class="sourceLineNo">256</span><a name="line.256"></a>
+<span class="sourceLineNo">257</span>        float t1 = 0.5f - x1 * x1 - y1 * y1;<a name="line.257"></a>
+<span class="sourceLineNo">258</span>        if (t1 &gt; 0) {<a name="line.258"></a>
+<span class="sourceLineNo">259</span>            int[] gi1 = grad3[this.perm[ii + i1 + this.perm[jj + j1]] % 12];<a name="line.259"></a>
+<span class="sourceLineNo">260</span>            n += t1 * t1 * t1 * t1 * (gi1[0] * x1 + gi1[1] * y1);<a name="line.260"></a>
+<span class="sourceLineNo">261</span>        }<a name="line.261"></a>
+<span class="sourceLineNo">262</span><a name="line.262"></a>
+<span class="sourceLineNo">263</span>        float t2 = 0.5f - x2 * x2 - y2 * y2;<a name="line.263"></a>
+<span class="sourceLineNo">264</span>        if (t2 &gt; 0) {<a name="line.264"></a>
+<span class="sourceLineNo">265</span>            int[] gi2 = grad3[this.perm[ii + 1 + this.perm[jj + 1]] % 12];<a name="line.265"></a>
+<span class="sourceLineNo">266</span>            n += t2 * t2 * t2 * t2 * (gi2[0] * x2 + gi2[1] * y2);<a name="line.266"></a>
+<span class="sourceLineNo">267</span>        }<a name="line.267"></a>
+<span class="sourceLineNo">268</span><a name="line.268"></a>
+<span class="sourceLineNo">269</span>        // Add contributions from each corner to get the noise value.<a name="line.269"></a>
+<span class="sourceLineNo">270</span>        // The result is scaled to return values in the interval [-1,1].<a name="line.270"></a>
+<span class="sourceLineNo">271</span>        return 70.0f * n;<a name="line.271"></a>
+<span class="sourceLineNo">272</span>    }<a name="line.272"></a>
+<span class="sourceLineNo">273</span>}<a name="line.273"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+NO DOC BLOCK: cn.nukkit.block.BlockBambooSapling Class
+NO DOC BLOCK: cn.nukkit.event.block.BlockFallEvent Class
+NO DOC BLOCK: cn.nukkit.network.protocol.BookEditPacket.Action Class
+NO DOC BLOCK: cn.nukkit.level.particle.CloudParticle Class
+NO DOC BLOCK: cn.nukkit.event.entity.EntityMoveByPistonEvent Class
+MISSING @SINCE TAG: cn.nukkit.entity.EntityNameable Interface
+NO DOC BLOCK: cn.nukkit.item.ItemBookAndQuill Class
+NO DOC BLOCK: cn.nukkit.item.ItemBookWritable Class
+NO DOC BLOCK: cn.nukkit.utils.PersonaPiece Class
+NO DOC BLOCK: cn.nukkit.utils.PersonaPieceTint Class
+NO DOC BLOCK: cn.nukkit.event.player.PlayerEditBookEvent Class
+NO DOC BLOCK: cn.nukkit.item.ItemBookWritten Constructor (java.lang.Integer)
+NO DOC BLOCK: cn.nukkit.level.Level Method addPlayerMovement(cn.nukkit.entity.Entity, double, double, double, double, double, double)
+NO DOC BLOCK: cn.nukkit.level.biome.Biome Method canRain()
+NO DOC BLOCK: cn.nukkit.level.biome.impl.HellBiome Method canRain()
+NO DOC BLOCK: cn.nukkit.level.biome.impl.beach.ColdBeachBiome Method canRain()
+NO DOC BLOCK: cn.nukkit.level.biome.impl.desert.DesertBiome Method canRain()
+NO DOC BLOCK: cn.nukkit.level.biome.impl.mesa.MesaBiome Method canRain()
+NO DOC BLOCK: cn.nukkit.level.biome.impl.ocean.FrozenOceanBiome Method canRain()
+NO DOC BLOCK: cn.nukkit.level.biome.impl.river.FrozenRiverBiome Method canRain()
+NO DOC BLOCK: cn.nukkit.level.biome.impl.savanna.SavannaBiome Method canRain()
+NO DOC BLOCK: cn.nukkit.level.biome.impl.taiga.ColdTaigaBiome Method canRain()
+NO DOC BLOCK: cn.nukkit.level.biome.type.SnowyBiome Method canRain()
+NO DOC BLOCK: cn.nukkit.entity.data.Skin Method getArmSize()
+NO DOC BLOCK: cn.nukkit.utils.BinaryStream Method getArray(java.lang.Class<T>, java.util.function.Function<cn.nukkit.utils.BinaryStream, T>)
+NO DOC BLOCK: cn.nukkit.block.BlockLectern Method getBlockFace()
+NO DOC BLOCK: cn.nukkit.level.Level Method getCollisionBlocks(cn.nukkit.math.AxisAlignedBB, boolean, boolean, java.util.function.Predicate<cn.nukkit.block.Block>)
+NO DOC BLOCK: cn.nukkit.event.block.BlockFromToEvent Method getFrom()
+MISSING @SINCE TAG: cn.nukkit.item.ItemBookWritten Method getGeneration()
+NO DOC BLOCK: cn.nukkit.entity.data.Skin Method getPersonaPieces()
+NO DOC BLOCK: cn.nukkit.entity.data.Skin Method getSkinColor()
+NO DOC BLOCK: cn.nukkit.network.protocol.LoginPacket Method getTint(com.google.gson.JsonObject)
+NO DOC BLOCK: cn.nukkit.entity.data.Skin Method getTintColors()
+MISSING @SINCE TAG: cn.nukkit.item.ItemBookWritten Method getXUID()
+NO DOC BLOCK: cn.nukkit.entity.data.Skin Method isTrusted()
+NO DOC BLOCK: cn.nukkit.entity.Entity Method isUndead()
+NO DOC BLOCK: cn.nukkit.entity.mob.EntityDrowned Method isUndead()
+NO DOC BLOCK: cn.nukkit.entity.mob.EntityHusk Method isUndead()
+NO DOC BLOCK: cn.nukkit.entity.mob.EntityPhantom Method isUndead()
+NO DOC BLOCK: cn.nukkit.entity.mob.EntitySkeleton Method isUndead()
+NO DOC BLOCK: cn.nukkit.entity.mob.EntityStray Method isUndead()
+NO DOC BLOCK: cn.nukkit.entity.mob.EntityWither Method isUndead()
+NO DOC BLOCK: cn.nukkit.entity.mob.EntityWitherSkeleton Method isUndead()
+NO DOC BLOCK: cn.nukkit.entity.mob.EntityZombie Method isUndead()
+NO DOC BLOCK: cn.nukkit.entity.mob.EntityZombiePigman Method isUndead()
+NO DOC BLOCK: cn.nukkit.entity.mob.EntityZombieVillager Method isUndead()
+NO DOC BLOCK: cn.nukkit.entity.mob.EntityZombieVillagerV1 Method isUndead()
+NO DOC BLOCK: cn.nukkit.entity.passive.EntitySkeletonHorse Method isUndead()
+NO DOC BLOCK: cn.nukkit.entity.passive.EntityZombieHorse Method isUndead()
+NO DOC BLOCK: cn.nukkit.entity.data.Skin Method setArmSize(java.lang.String)
+MISSING @SINCE TAG: cn.nukkit.item.ItemBookWritten Method setAuthor(java.lang.String)
+NO DOC BLOCK: cn.nukkit.block.BlockLectern Method setBlockFace(cn.nukkit.math.BlockFace)
+MISSING @SINCE TAG: cn.nukkit.item.ItemBookWritten Method setGeneration(int)
+NO DOC BLOCK: cn.nukkit.entity.data.Skin Method setSkinColor(java.lang.String)
+MISSING @SINCE TAG: cn.nukkit.item.ItemBookWritten Method setTitle(java.lang.String)
+NO DOC BLOCK: cn.nukkit.event.block.BlockFromToEvent Method setTo(cn.nukkit.block.Block)
+NO DOC BLOCK: cn.nukkit.entity.data.Skin Method setTrusted(boolean)
+MISSING @SINCE TAG: cn.nukkit.item.ItemBookWritten Method setXUID(java.lang.String)
+NO DOC BLOCK: cn.nukkit.item.ItemBookWritten Method signBook(java.lang.String, java.lang.String, java.lang.String, int)
+NO DOC BLOCK: cn.nukkit.utils.Utils Method toABGR(int)
+NO DOC BLOCK: cn.nukkit.network.protocol.BookEditPacket Field action
+NO DOC BLOCK: cn.nukkit.network.protocol.AvailableCommandsPacket Field ARG_TYPE_BLOCK_POSITION
+NO DOC BLOCK: cn.nukkit.network.protocol.BookEditPacket Field author
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_AERIAL_ATTACK
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_AGENT
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_AMBIENT_SOUND_EVENT_NAME
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_AMBIENT_SOUND_INTERVAL
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_AUX_POWER
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_BUBBLE_TIME
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_CAN_RIDE_TARGET
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_CHANGE_ON_PICKUP
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_CHANGE_RATE
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_CHARGE_AMOUNT
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_COMMAND_BLOCK_EXECUTE_ON_FIRST_TICK
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_COMMAND_BLOCK_TICK_DELAY
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_DURATION
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_EATING_COUNTER
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FALL_DAMAGE_MULTIPLIER
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FISH_ANGLE
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FISH_X
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FISH_Z
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FLAG_BLOCKED_USING_DAMAGED_SHIELD
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FLAG_BLOCKED_USING_SHIELD
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FLAG_BREAKING_OBSTRUCTION
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FLAG_CELEBRATING
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FLAG_DELAYED_ATTACK
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FLAG_DOOR_BREAKER
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FLAG_DOOR_OPENER
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FLAG_EMOTING
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FLAG_FACING_TARGET_TO_RANGE_ATTACK
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FLAG_HIDDEN_WHEN_INVISIBLE
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FLAG_IS_AVOIDING_MOBS
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FLAG_IS_ILLAGER_CAPTAIN
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FLAG_IS_IN_UI
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FLAG_IS_TRANSFORMING
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FLAG_RIDER_CAN_PICK
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FLAG_ROARING
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FLAG_SLEEPING
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FLAG_STALKING
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FLAG_STUNNED
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FLAG_TRADE_INTEREST
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FLAG_TRANSITION_BLOCKING
+MISSING @SINCE TAG: cn.nukkit.entity.Entity Field DATA_FLAG_TRANSITION_SETTING
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FLAG_WANTS_TO_WAKE
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_HAS_COMMAND_BLOCK
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_INTERACT_TEXT
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_LAYING_AMOUNT
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_LAYING_AMOUNT_PREVIOUS
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_NAME_AUTHOR
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_NAME_RAW_TEXT
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_OLD_SWELL
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_PICKUP_COUNT
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_PLAYER_INDEX
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_SHULKER_ATTACHED
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_SHULKER_PEEK_ID
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_SITTING_AMOUNT
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_SITTING_AMOUNT_PREVIOUS
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_SPAWN_TIME
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_SPAWNING_FRAMES
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_SPELL_CASTING_COLOR
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_SWELL
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_SWELL_DIR
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_TRADE_EXPERIENCE
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_TRADING_CAREER
+NO DOC BLOCK: cn.nukkit.item.ItemBookWritten Field GENERATION_COPY
+NO DOC BLOCK: cn.nukkit.item.ItemBookWritten Field GENERATION_COPY_OF_COPY
+NO DOC BLOCK: cn.nukkit.item.ItemBookWritten Field GENERATION_ORIGINAL
+NO DOC BLOCK: cn.nukkit.item.ItemBookWritten Field GENERATION_TATTERED
+NO DOC BLOCK: cn.nukkit.network.protocol.BookEditPacket Field inventorySlot
+NO DOC BLOCK: cn.nukkit.network.protocol.BookEditPacket Field NETWORK_ID
+NO DOC BLOCK: cn.nukkit.network.protocol.BookEditPacket Field pageNumber
+NO DOC BLOCK: cn.nukkit.network.protocol.BookEditPacket Field photoName
+NO DOC BLOCK: cn.nukkit.network.protocol.BookEditPacket Field secondaryPageNumber
+NO DOC BLOCK: cn.nukkit.network.protocol.BookEditPacket Field text
+NO DOC BLOCK: cn.nukkit.network.protocol.BookEditPacket Field title
+NO DOC BLOCK: cn.nukkit.network.protocol.BookEditPacket Field xuid

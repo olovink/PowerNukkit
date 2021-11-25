@@ -1,0 +1,336 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package cn.nukkit.inventory.transaction;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>import cn.nukkit.Player;<a name="line.3"></a>
+<span class="sourceLineNo">004</span>import cn.nukkit.event.inventory.CraftItemEvent;<a name="line.4"></a>
+<span class="sourceLineNo">005</span>import cn.nukkit.inventory.*;<a name="line.5"></a>
+<span class="sourceLineNo">006</span>import cn.nukkit.inventory.transaction.action.DamageAnvilAction;<a name="line.6"></a>
+<span class="sourceLineNo">007</span>import cn.nukkit.inventory.transaction.action.InventoryAction;<a name="line.7"></a>
+<span class="sourceLineNo">008</span>import cn.nukkit.inventory.transaction.action.SlotChangeAction;<a name="line.8"></a>
+<span class="sourceLineNo">009</span>import cn.nukkit.inventory.transaction.action.TakeLevelAction;<a name="line.9"></a>
+<span class="sourceLineNo">010</span>import cn.nukkit.item.Item;<a name="line.10"></a>
+<span class="sourceLineNo">011</span>import cn.nukkit.network.protocol.ContainerClosePacket;<a name="line.11"></a>
+<span class="sourceLineNo">012</span>import cn.nukkit.network.protocol.types.ContainerIds;<a name="line.12"></a>
+<span class="sourceLineNo">013</span>import cn.nukkit.scheduler.Task;<a name="line.13"></a>
+<span class="sourceLineNo">014</span><a name="line.14"></a>
+<span class="sourceLineNo">015</span>import java.util.Arrays;<a name="line.15"></a>
+<span class="sourceLineNo">016</span>import java.util.List;<a name="line.16"></a>
+<span class="sourceLineNo">017</span>import java.util.concurrent.ThreadLocalRandom;<a name="line.17"></a>
+<span class="sourceLineNo">018</span><a name="line.18"></a>
+<span class="sourceLineNo">019</span>/**<a name="line.19"></a>
+<span class="sourceLineNo">020</span> * @author CreeperFace<a name="line.20"></a>
+<span class="sourceLineNo">021</span> */<a name="line.21"></a>
+<span class="sourceLineNo">022</span>public class CraftingTransaction extends InventoryTransaction {<a name="line.22"></a>
+<span class="sourceLineNo">023</span><a name="line.23"></a>
+<span class="sourceLineNo">024</span>    protected int gridSize;<a name="line.24"></a>
+<span class="sourceLineNo">025</span><a name="line.25"></a>
+<span class="sourceLineNo">026</span>    protected Item[][] inputs;<a name="line.26"></a>
+<span class="sourceLineNo">027</span><a name="line.27"></a>
+<span class="sourceLineNo">028</span>    protected Item[][] secondaryOutputs;<a name="line.28"></a>
+<span class="sourceLineNo">029</span><a name="line.29"></a>
+<span class="sourceLineNo">030</span>    protected Item primaryOutput;<a name="line.30"></a>
+<span class="sourceLineNo">031</span><a name="line.31"></a>
+<span class="sourceLineNo">032</span>    protected Recipe recipe;<a name="line.32"></a>
+<span class="sourceLineNo">033</span><a name="line.33"></a>
+<span class="sourceLineNo">034</span>    protected int craftingType;<a name="line.34"></a>
+<span class="sourceLineNo">035</span><a name="line.35"></a>
+<span class="sourceLineNo">036</span>    public CraftingTransaction(Player source, List&lt;InventoryAction&gt; actions) {<a name="line.36"></a>
+<span class="sourceLineNo">037</span>        super(source, actions, false);<a name="line.37"></a>
+<span class="sourceLineNo">038</span><a name="line.38"></a>
+<span class="sourceLineNo">039</span>        Item air = Item.get(Item.AIR, 0, 1);<a name="line.39"></a>
+<span class="sourceLineNo">040</span>        this.craftingType = source.craftingType;<a name="line.40"></a>
+<span class="sourceLineNo">041</span>        if (source.craftingType == Player.CRAFTING_STONECUTTER) {<a name="line.41"></a>
+<span class="sourceLineNo">042</span>            this.gridSize = 1;<a name="line.42"></a>
+<span class="sourceLineNo">043</span>            this.inputs = new Item[1][1];<a name="line.43"></a>
+<span class="sourceLineNo">044</span>            this.inputs[0][0] = air;<a name="line.44"></a>
+<span class="sourceLineNo">045</span>            this.secondaryOutputs = new Item[1][1];<a name="line.45"></a>
+<span class="sourceLineNo">046</span>            this.secondaryOutputs[0][0] = air;<a name="line.46"></a>
+<span class="sourceLineNo">047</span>        } else {<a name="line.47"></a>
+<span class="sourceLineNo">048</span>            this.gridSize = (source.getCraftingGrid() instanceof BigCraftingGrid) ? 3 : 2;<a name="line.48"></a>
+<span class="sourceLineNo">049</span>            this.inputs = new Item[gridSize][gridSize];<a name="line.49"></a>
+<span class="sourceLineNo">050</span>            for (Item[] a : this.inputs) {<a name="line.50"></a>
+<span class="sourceLineNo">051</span>                Arrays.fill(a, air);<a name="line.51"></a>
+<span class="sourceLineNo">052</span>            }<a name="line.52"></a>
+<span class="sourceLineNo">053</span><a name="line.53"></a>
+<span class="sourceLineNo">054</span>            this.secondaryOutputs = new Item[gridSize][gridSize];<a name="line.54"></a>
+<span class="sourceLineNo">055</span>            for (Item[] a : this.secondaryOutputs) {<a name="line.55"></a>
+<span class="sourceLineNo">056</span>                Arrays.fill(a, air);<a name="line.56"></a>
+<span class="sourceLineNo">057</span>            }<a name="line.57"></a>
+<span class="sourceLineNo">058</span>        }<a name="line.58"></a>
+<span class="sourceLineNo">059</span><a name="line.59"></a>
+<span class="sourceLineNo">060</span>        init(source, actions);<a name="line.60"></a>
+<span class="sourceLineNo">061</span>    }<a name="line.61"></a>
+<span class="sourceLineNo">062</span><a name="line.62"></a>
+<span class="sourceLineNo">063</span>    public void setInput(int index, Item item) {<a name="line.63"></a>
+<span class="sourceLineNo">064</span>        int y = index / this.gridSize;<a name="line.64"></a>
+<span class="sourceLineNo">065</span>        int x = index % this.gridSize;<a name="line.65"></a>
+<span class="sourceLineNo">066</span><a name="line.66"></a>
+<span class="sourceLineNo">067</span>        if (this.inputs[y][x].isNull()) {<a name="line.67"></a>
+<span class="sourceLineNo">068</span>            inputs[y][x] = item.clone();<a name="line.68"></a>
+<span class="sourceLineNo">069</span>        } else if (!inputs[y][x].equals(item)) {<a name="line.69"></a>
+<span class="sourceLineNo">070</span>            throw new RuntimeException("Input " + index + " has already been set and does not match the current item (expected " + inputs[y][x] + ", got " + item + ")");<a name="line.70"></a>
+<span class="sourceLineNo">071</span>        }<a name="line.71"></a>
+<span class="sourceLineNo">072</span>    }<a name="line.72"></a>
+<span class="sourceLineNo">073</span><a name="line.73"></a>
+<span class="sourceLineNo">074</span>    public Item[][] getInputMap() {<a name="line.74"></a>
+<span class="sourceLineNo">075</span>        return inputs;<a name="line.75"></a>
+<span class="sourceLineNo">076</span>    }<a name="line.76"></a>
+<span class="sourceLineNo">077</span><a name="line.77"></a>
+<span class="sourceLineNo">078</span>    public void setExtraOutput(int index, Item item) {<a name="line.78"></a>
+<span class="sourceLineNo">079</span>        int y = (index / this.gridSize);<a name="line.79"></a>
+<span class="sourceLineNo">080</span>        int x = index % gridSize;<a name="line.80"></a>
+<span class="sourceLineNo">081</span><a name="line.81"></a>
+<span class="sourceLineNo">082</span>        if (secondaryOutputs[y][x].isNull()) {<a name="line.82"></a>
+<span class="sourceLineNo">083</span>            secondaryOutputs[y][x] = item.clone();<a name="line.83"></a>
+<span class="sourceLineNo">084</span>        } else if (!secondaryOutputs[y][x].equals(item)) {<a name="line.84"></a>
+<span class="sourceLineNo">085</span>            throw new RuntimeException("Output " + index + " has already been set and does not match the current item (expected " + secondaryOutputs[y][x] + ", got " + item + ")");<a name="line.85"></a>
+<span class="sourceLineNo">086</span>        }<a name="line.86"></a>
+<span class="sourceLineNo">087</span>    }<a name="line.87"></a>
+<span class="sourceLineNo">088</span><a name="line.88"></a>
+<span class="sourceLineNo">089</span>    public Item getPrimaryOutput() {<a name="line.89"></a>
+<span class="sourceLineNo">090</span>        return primaryOutput;<a name="line.90"></a>
+<span class="sourceLineNo">091</span>    }<a name="line.91"></a>
+<span class="sourceLineNo">092</span><a name="line.92"></a>
+<span class="sourceLineNo">093</span>    public void setPrimaryOutput(Item item) {<a name="line.93"></a>
+<span class="sourceLineNo">094</span>        if (primaryOutput == null) {<a name="line.94"></a>
+<span class="sourceLineNo">095</span>            primaryOutput = item.clone();<a name="line.95"></a>
+<span class="sourceLineNo">096</span>        } else if (!primaryOutput.equals(item)) {<a name="line.96"></a>
+<span class="sourceLineNo">097</span>            throw new RuntimeException("Primary result item has already been set and does not match the current item (expected " + primaryOutput + ", got " + item + ")");<a name="line.97"></a>
+<span class="sourceLineNo">098</span>        }<a name="line.98"></a>
+<span class="sourceLineNo">099</span>    }<a name="line.99"></a>
+<span class="sourceLineNo">100</span><a name="line.100"></a>
+<span class="sourceLineNo">101</span>    public Recipe getRecipe() {<a name="line.101"></a>
+<span class="sourceLineNo">102</span>        return recipe;<a name="line.102"></a>
+<span class="sourceLineNo">103</span>    }<a name="line.103"></a>
+<span class="sourceLineNo">104</span><a name="line.104"></a>
+<span class="sourceLineNo">105</span>    private Item[][] reindexInputs() {<a name="line.105"></a>
+<span class="sourceLineNo">106</span>        int xMin = gridSize - 1;<a name="line.106"></a>
+<span class="sourceLineNo">107</span>        int yMin = gridSize - 1;<a name="line.107"></a>
+<span class="sourceLineNo">108</span><a name="line.108"></a>
+<span class="sourceLineNo">109</span>        int xMax = 0;<a name="line.109"></a>
+<span class="sourceLineNo">110</span>        int yMax = 0;<a name="line.110"></a>
+<span class="sourceLineNo">111</span><a name="line.111"></a>
+<span class="sourceLineNo">112</span>        for (int y = 0; y &lt; this.inputs.length; y++) {<a name="line.112"></a>
+<span class="sourceLineNo">113</span>            Item[] row = this.inputs[y];<a name="line.113"></a>
+<span class="sourceLineNo">114</span><a name="line.114"></a>
+<span class="sourceLineNo">115</span>            for (int x = 0; x &lt; row.length; x++) {<a name="line.115"></a>
+<span class="sourceLineNo">116</span>                Item item = row[x];<a name="line.116"></a>
+<span class="sourceLineNo">117</span><a name="line.117"></a>
+<span class="sourceLineNo">118</span>                if (!item.isNull()) {<a name="line.118"></a>
+<span class="sourceLineNo">119</span>                    xMin = Math.min(x, xMin);<a name="line.119"></a>
+<span class="sourceLineNo">120</span>                    yMin = Math.min(y, yMin);<a name="line.120"></a>
+<span class="sourceLineNo">121</span><a name="line.121"></a>
+<span class="sourceLineNo">122</span>                    xMax = Math.max(x, xMax);<a name="line.122"></a>
+<span class="sourceLineNo">123</span>                    yMax = Math.max(y, yMax);<a name="line.123"></a>
+<span class="sourceLineNo">124</span>                }<a name="line.124"></a>
+<span class="sourceLineNo">125</span>            }<a name="line.125"></a>
+<span class="sourceLineNo">126</span>        }<a name="line.126"></a>
+<span class="sourceLineNo">127</span><a name="line.127"></a>
+<span class="sourceLineNo">128</span>        final int height = yMax - yMin + 1;<a name="line.128"></a>
+<span class="sourceLineNo">129</span>        final int width = xMax - xMin + 1;<a name="line.129"></a>
+<span class="sourceLineNo">130</span><a name="line.130"></a>
+<span class="sourceLineNo">131</span>        if (height &lt; 1 || width &lt; 1) {<a name="line.131"></a>
+<span class="sourceLineNo">132</span>            return new Item[0][];<a name="line.132"></a>
+<span class="sourceLineNo">133</span>        }<a name="line.133"></a>
+<span class="sourceLineNo">134</span><a name="line.134"></a>
+<span class="sourceLineNo">135</span>        Item[][] reindexed = new Item[height][width];<a name="line.135"></a>
+<span class="sourceLineNo">136</span><a name="line.136"></a>
+<span class="sourceLineNo">137</span>        for (int y = yMin, i = 0; y &lt;= yMax; y++, i++) {<a name="line.137"></a>
+<span class="sourceLineNo">138</span>            System.arraycopy(inputs[y], xMin, reindexed[i], 0, width);<a name="line.138"></a>
+<span class="sourceLineNo">139</span>        }<a name="line.139"></a>
+<span class="sourceLineNo">140</span><a name="line.140"></a>
+<span class="sourceLineNo">141</span>        return reindexed;<a name="line.141"></a>
+<span class="sourceLineNo">142</span>    }<a name="line.142"></a>
+<span class="sourceLineNo">143</span><a name="line.143"></a>
+<span class="sourceLineNo">144</span>    public boolean canExecute() {<a name="line.144"></a>
+<span class="sourceLineNo">145</span>        Item[][] inputs = reindexInputs();<a name="line.145"></a>
+<span class="sourceLineNo">146</span><a name="line.146"></a>
+<span class="sourceLineNo">147</span>        CraftingManager craftingManager = source.getServer().getCraftingManager();<a name="line.147"></a>
+<span class="sourceLineNo">148</span>        if (craftingType == Player.CRAFTING_STONECUTTER) {<a name="line.148"></a>
+<span class="sourceLineNo">149</span>            recipe = craftingManager.matchStonecutterRecipe(this.primaryOutput);<a name="line.149"></a>
+<span class="sourceLineNo">150</span>        } else if (craftingType == Player.CRAFTING_CARTOGRAPHY) {<a name="line.150"></a>
+<span class="sourceLineNo">151</span>            recipe = craftingManager.matchCartographyRecipe(inputs, this.primaryOutput, this.secondaryOutputs);<a name="line.151"></a>
+<span class="sourceLineNo">152</span>        } else if (craftingType == Player.CRAFTING_ANVIL) {<a name="line.152"></a>
+<span class="sourceLineNo">153</span>            Inventory inventory = source.getWindowById(Player.ANVIL_WINDOW_ID);<a name="line.153"></a>
+<span class="sourceLineNo">154</span>            if (inventory instanceof AnvilInventory) {<a name="line.154"></a>
+<span class="sourceLineNo">155</span>                AnvilInventory anvil = (AnvilInventory) inventory;<a name="line.155"></a>
+<span class="sourceLineNo">156</span>                addInventory(anvil);<a name="line.156"></a>
+<span class="sourceLineNo">157</span>                if (this.primaryOutput.equals(anvil.getResult(), true, true)) {<a name="line.157"></a>
+<span class="sourceLineNo">158</span>                    TakeLevelAction takeLevel = new TakeLevelAction(anvil.getLevelCost());<a name="line.158"></a>
+<span class="sourceLineNo">159</span>                    addAction(takeLevel);<a name="line.159"></a>
+<span class="sourceLineNo">160</span>                    if (takeLevel.isValid(source)) {<a name="line.160"></a>
+<span class="sourceLineNo">161</span>                        recipe = new RepairRecipe(InventoryType.ANVIL, this.primaryOutput, Arrays.asList(inputs[0]));<a name="line.161"></a>
+<span class="sourceLineNo">162</span>                        PlayerUIInventory uiInventory = source.getUIInventory();<a name="line.162"></a>
+<span class="sourceLineNo">163</span>                        actions.add(new DamageAnvilAction(anvil, !source.isCreative() &amp;&amp; ThreadLocalRandom.current().nextFloat() &lt; 0.12F, this));<a name="line.163"></a>
+<span class="sourceLineNo">164</span>                        actions.stream()<a name="line.164"></a>
+<span class="sourceLineNo">165</span>                                .filter(a -&gt; a instanceof SlotChangeAction)<a name="line.165"></a>
+<span class="sourceLineNo">166</span>                                .map(a-&gt; (SlotChangeAction) a)<a name="line.166"></a>
+<span class="sourceLineNo">167</span>                                .filter(a -&gt; a.getInventory() == uiInventory)<a name="line.167"></a>
+<span class="sourceLineNo">168</span>                                .filter(a -&gt; a.getSlot() == 50)<a name="line.168"></a>
+<span class="sourceLineNo">169</span>                                .findFirst()<a name="line.169"></a>
+<span class="sourceLineNo">170</span>                                .ifPresent(a -&gt; {<a name="line.170"></a>
+<span class="sourceLineNo">171</span>                                    // Move the set result action to the end, otherwise the result would be cleared too early<a name="line.171"></a>
+<span class="sourceLineNo">172</span>                                    actions.remove(a);<a name="line.172"></a>
+<span class="sourceLineNo">173</span>                                    actions.add(a);<a name="line.173"></a>
+<span class="sourceLineNo">174</span>                                });<a name="line.174"></a>
+<span class="sourceLineNo">175</span>                        anvil.setResult(Item.get(0), false);<a name="line.175"></a>
+<span class="sourceLineNo">176</span>                    }<a name="line.176"></a>
+<span class="sourceLineNo">177</span>                }<a name="line.177"></a>
+<span class="sourceLineNo">178</span>            }<a name="line.178"></a>
+<span class="sourceLineNo">179</span>        } else if (craftingType == Player.CRAFTING_GRINDSTONE) {<a name="line.179"></a>
+<span class="sourceLineNo">180</span>            Inventory inventory = source.getWindowById(Player.GRINDSTONE_WINDOW_ID);<a name="line.180"></a>
+<span class="sourceLineNo">181</span>            if (inventory instanceof GrindstoneInventory) {<a name="line.181"></a>
+<span class="sourceLineNo">182</span>                GrindstoneInventory grindstone = (GrindstoneInventory) inventory;<a name="line.182"></a>
+<span class="sourceLineNo">183</span>                addInventory(grindstone);<a name="line.183"></a>
+<span class="sourceLineNo">184</span>                if (this.primaryOutput.equals(grindstone.getResult(), true, true)) {<a name="line.184"></a>
+<span class="sourceLineNo">185</span>                    recipe = new RepairRecipe(InventoryType.GRINDSTONE, this.primaryOutput, Arrays.asList(inputs[0]));<a name="line.185"></a>
+<span class="sourceLineNo">186</span>                    grindstone.setResult(Item.get(0), false);<a name="line.186"></a>
+<span class="sourceLineNo">187</span>                }<a name="line.187"></a>
+<span class="sourceLineNo">188</span>            }<a name="line.188"></a>
+<span class="sourceLineNo">189</span>        } else {<a name="line.189"></a>
+<span class="sourceLineNo">190</span>            recipe = craftingManager.matchRecipe(inputs, this.primaryOutput, this.secondaryOutputs);<a name="line.190"></a>
+<span class="sourceLineNo">191</span>        }<a name="line.191"></a>
+<span class="sourceLineNo">192</span><a name="line.192"></a>
+<span class="sourceLineNo">193</span>        return this.recipe != null &amp;&amp; super.canExecute();<a name="line.193"></a>
+<span class="sourceLineNo">194</span>    }<a name="line.194"></a>
+<span class="sourceLineNo">195</span><a name="line.195"></a>
+<span class="sourceLineNo">196</span>    protected boolean callExecuteEvent() {<a name="line.196"></a>
+<span class="sourceLineNo">197</span>        CraftItemEvent ev;<a name="line.197"></a>
+<span class="sourceLineNo">198</span><a name="line.198"></a>
+<span class="sourceLineNo">199</span>        this.source.getServer().getPluginManager().callEvent(ev = new CraftItemEvent(this));<a name="line.199"></a>
+<span class="sourceLineNo">200</span>        return !ev.isCancelled();<a name="line.200"></a>
+<span class="sourceLineNo">201</span>    }<a name="line.201"></a>
+<span class="sourceLineNo">202</span><a name="line.202"></a>
+<span class="sourceLineNo">203</span>    protected void sendInventories() {<a name="line.203"></a>
+<span class="sourceLineNo">204</span>        super.sendInventories();<a name="line.204"></a>
+<span class="sourceLineNo">205</span><a name="line.205"></a>
+<span class="sourceLineNo">206</span>                /*<a name="line.206"></a>
+<span class="sourceLineNo">207</span>         * TODO: HACK!<a name="line.207"></a>
+<span class="sourceLineNo">208</span>                 * we can't resend the contents of the crafting window, so we force the client to close it instead.<a name="line.208"></a>
+<span class="sourceLineNo">209</span>                 * So people don't whine about messy desync issues when someone cancels CraftItemEvent, or when a crafting<a name="line.209"></a>
+<span class="sourceLineNo">210</span>                 * transaction goes wrong.<a name="line.210"></a>
+<span class="sourceLineNo">211</span>                 */<a name="line.211"></a>
+<span class="sourceLineNo">212</span>        ContainerClosePacket pk = new ContainerClosePacket();<a name="line.212"></a>
+<span class="sourceLineNo">213</span>        pk.windowId = ContainerIds.NONE;<a name="line.213"></a>
+<span class="sourceLineNo">214</span>        source.getServer().getScheduler().scheduleDelayedTask(new Task() {<a name="line.214"></a>
+<span class="sourceLineNo">215</span>            @Override<a name="line.215"></a>
+<span class="sourceLineNo">216</span>            public void onRun(int currentTick) {<a name="line.216"></a>
+<span class="sourceLineNo">217</span>                source.dataPacket(pk);<a name="line.217"></a>
+<span class="sourceLineNo">218</span>            }<a name="line.218"></a>
+<span class="sourceLineNo">219</span>        }, 20);<a name="line.219"></a>
+<span class="sourceLineNo">220</span><a name="line.220"></a>
+<span class="sourceLineNo">221</span>        this.source.resetCraftingGridType();<a name="line.221"></a>
+<span class="sourceLineNo">222</span>    }<a name="line.222"></a>
+<span class="sourceLineNo">223</span><a name="line.223"></a>
+<span class="sourceLineNo">224</span>    public boolean execute() {<a name="line.224"></a>
+<span class="sourceLineNo">225</span>        if (super.execute()) {<a name="line.225"></a>
+<span class="sourceLineNo">226</span>            switch (this.primaryOutput.getId()) {<a name="line.226"></a>
+<span class="sourceLineNo">227</span>                case Item.CRAFTING_TABLE:<a name="line.227"></a>
+<span class="sourceLineNo">228</span>                    source.awardAchievement("buildWorkBench");<a name="line.228"></a>
+<span class="sourceLineNo">229</span>                    break;<a name="line.229"></a>
+<span class="sourceLineNo">230</span>                case Item.WOODEN_PICKAXE:<a name="line.230"></a>
+<span class="sourceLineNo">231</span>                    source.awardAchievement("buildPickaxe");<a name="line.231"></a>
+<span class="sourceLineNo">232</span>                    break;<a name="line.232"></a>
+<span class="sourceLineNo">233</span>                case Item.FURNACE:<a name="line.233"></a>
+<span class="sourceLineNo">234</span>                    source.awardAchievement("buildFurnace");<a name="line.234"></a>
+<span class="sourceLineNo">235</span>                    break;<a name="line.235"></a>
+<span class="sourceLineNo">236</span>                case Item.WOODEN_HOE:<a name="line.236"></a>
+<span class="sourceLineNo">237</span>                    source.awardAchievement("buildHoe");<a name="line.237"></a>
+<span class="sourceLineNo">238</span>                    break;<a name="line.238"></a>
+<span class="sourceLineNo">239</span>                case Item.BREAD:<a name="line.239"></a>
+<span class="sourceLineNo">240</span>                    source.awardAchievement("makeBread");<a name="line.240"></a>
+<span class="sourceLineNo">241</span>                    break;<a name="line.241"></a>
+<span class="sourceLineNo">242</span>                case Item.CAKE:<a name="line.242"></a>
+<span class="sourceLineNo">243</span>                    source.awardAchievement("bakeCake");<a name="line.243"></a>
+<span class="sourceLineNo">244</span>                    break;<a name="line.244"></a>
+<span class="sourceLineNo">245</span>                case Item.STONE_PICKAXE:<a name="line.245"></a>
+<span class="sourceLineNo">246</span>                case Item.GOLDEN_PICKAXE:<a name="line.246"></a>
+<span class="sourceLineNo">247</span>                case Item.IRON_PICKAXE:<a name="line.247"></a>
+<span class="sourceLineNo">248</span>                case Item.DIAMOND_PICKAXE:<a name="line.248"></a>
+<span class="sourceLineNo">249</span>                    source.awardAchievement("buildBetterPickaxe");<a name="line.249"></a>
+<span class="sourceLineNo">250</span>                    break;<a name="line.250"></a>
+<span class="sourceLineNo">251</span>                case Item.WOODEN_SWORD:<a name="line.251"></a>
+<span class="sourceLineNo">252</span>                    source.awardAchievement("buildSword");<a name="line.252"></a>
+<span class="sourceLineNo">253</span>                    break;<a name="line.253"></a>
+<span class="sourceLineNo">254</span>                case Item.DIAMOND:<a name="line.254"></a>
+<span class="sourceLineNo">255</span>                    source.awardAchievement("diamond");<a name="line.255"></a>
+<span class="sourceLineNo">256</span>                    break;<a name="line.256"></a>
+<span class="sourceLineNo">257</span>            }<a name="line.257"></a>
+<span class="sourceLineNo">258</span><a name="line.258"></a>
+<span class="sourceLineNo">259</span>            return true;<a name="line.259"></a>
+<span class="sourceLineNo">260</span>        }<a name="line.260"></a>
+<span class="sourceLineNo">261</span><a name="line.261"></a>
+<span class="sourceLineNo">262</span>        return false;<a name="line.262"></a>
+<span class="sourceLineNo">263</span>    }<a name="line.263"></a>
+<span class="sourceLineNo">264</span>}<a name="line.264"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>

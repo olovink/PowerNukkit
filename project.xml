@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="jdiff" default="jdiff_report" basedir=".">
-  <property name="powernukkit.version.old" value="1.1.1.0-PN" />
-  <property name="powernukkit.version.new" value="1.1.1.1-PN" />
-  <property name="nukkit.commit" value="Nukkit-29c2a366" />
+  <property name="powernukkit.version.old" value="1.1.1.1-PN" />
+  <property name="powernukkit.version.new" value="1.2.0.0-PN" />
+  <property name="nukkit.commit" value="Nukkit-c43d4252" />
 
   <property name="powernukkit.src.old" value="../PowerNukkit-old" />
   <property name="powernukkit.src.new" value="../PowerNukkit" />
