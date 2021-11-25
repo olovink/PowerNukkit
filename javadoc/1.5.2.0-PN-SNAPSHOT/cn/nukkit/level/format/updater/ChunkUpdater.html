@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>ChunkUpdater (PowerNukkit 1.5.2.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2021-11-22">
+<meta name="date" content="2021-11-24">
 <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../../../script.js"></script>
 </head>
@@ -19,8 +19,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+var methods = {"i0":9,"i1":9};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -77,13 +77,13 @@ var activeTableTab = "activeTableTab";
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
@@ -112,7 +112,7 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre><a href="../../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-public class <span class="typeNameLabel">ChunkUpdater</span>
+public final class <span class="typeNameLabel">ChunkUpdater</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 </li>
 </ul>
@@ -120,23 +120,6 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
-<!-- ======== CONSTRUCTOR SUMMARY ======== -->
-<ul class="blockList">
-<li class="blockList"><a name="constructor.summary">
-<!--   -->
-</a>
-<h3>Constructor Summary</h3>
-<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
-<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colOne" scope="col">Constructor and Description</th>
-</tr>
-<tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/level/format/updater/ChunkUpdater.html#ChunkUpdater--">ChunkUpdater</a></span>()</code>&nbsp;</td>
-</tr>
-</table>
-</li>
-</ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.summary">
@@ -144,18 +127,18 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>void</code></td>
+<td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/level/format/updater/ChunkUpdater.html#backwardCompatibilityUpdate-cn.nukkit.level.Level-cn.nukkit.level.format.generic.BaseChunk-">backwardCompatibilityUpdate</a></span>(<a href="../../../../../cn/nukkit/level/Level.html" title="class in cn.nukkit.level">Level</a>&nbsp;level,
                            <a href="../../../../../cn/nukkit/level/format/generic/BaseChunk.html" title="class in cn.nukkit.level.format.generic">BaseChunk</a>&nbsp;chunk)</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>int</code></td>
+<td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/level/format/updater/ChunkUpdater.html#getCurrentContentVersion--">getCurrentContentVersion</a></span>()</code>
 <div class="block">Version history:
  
@@ -188,23 +171,6 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
-<!-- ========= CONSTRUCTOR DETAIL ======== -->
-<ul class="blockList">
-<li class="blockList"><a name="constructor.detail">
-<!--   -->
-</a>
-<h3>Constructor Detail</h3>
-<a name="ChunkUpdater--">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>ChunkUpdater</h4>
-<pre>public&nbsp;ChunkUpdater()</pre>
-</li>
-</ul>
-</li>
-</ul>
 <!-- ============ METHOD DETAIL ========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.detail">
@@ -219,7 +185,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getCurrentContentVersion</h4>
 <pre><a href="../../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-public&nbsp;int&nbsp;getCurrentContentVersion()</pre>
+public static&nbsp;int&nbsp;getCurrentContentVersion()</pre>
 <div class="block">Version history:
  <dl>
      <dt>0</dt><dd>Before 1.3.0.0-PN or from Cloudburst Nukkit</dd>
@@ -243,8 +209,8 @@ public&nbsp;int&nbsp;getCurrentContentVersion()</pre>
 <h4>backwardCompatibilityUpdate</h4>
 <pre><a href="../../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-public&nbsp;void&nbsp;backwardCompatibilityUpdate(<a href="../../../../../cn/nukkit/level/Level.html" title="class in cn.nukkit.level">Level</a>&nbsp;level,
-                                                                                     <a href="../../../../../cn/nukkit/level/format/generic/BaseChunk.html" title="class in cn.nukkit.level.format.generic">BaseChunk</a>&nbsp;chunk)</pre>
+public static&nbsp;void&nbsp;backwardCompatibilityUpdate(<a href="../../../../../cn/nukkit/level/Level.html" title="class in cn.nukkit.level">Level</a>&nbsp;level,
+                                                                                            <a href="../../../../../cn/nukkit/level/format/generic/BaseChunk.html" title="class in cn.nukkit.level.format.generic">BaseChunk</a>&nbsp;chunk)</pre>
 </li>
 </ul>
 </li>
@@ -302,13 +268,13 @@ public&nbsp;void&nbsp;backwardCompatibilityUpdate(<a href="../../../../../cn/nuk
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
