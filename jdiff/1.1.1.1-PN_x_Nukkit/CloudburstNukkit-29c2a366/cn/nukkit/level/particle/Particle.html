@@ -19,8 +19,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
+var methods = {"i0":6,"i1":9,"i2":9};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -118,11 +118,11 @@ var activeTableTab = "activeTableTab";
 </dl>
 <dl>
 <dt>Direct Known Subclasses:</dt>
-<dd><a href="../../../../cn/nukkit/level/particle/BoneMealParticle.html" title="class in cn.nukkit.level.particle">BoneMealParticle</a>, <a href="../../../../cn/nukkit/level/particle/DestroyBlockParticle.html" title="class in cn.nukkit.level.particle">DestroyBlockParticle</a>, <a href="../../../../cn/nukkit/level/particle/FloatingTextParticle.html" title="class in cn.nukkit.level.particle">FloatingTextParticle</a>, <a href="../../../../cn/nukkit/level/particle/GenericParticle.html" title="class in cn.nukkit.level.particle">GenericParticle</a>, <a href="../../../../cn/nukkit/level/particle/MobSpawnParticle.html" title="class in cn.nukkit.level.particle">MobSpawnParticle</a>, <a href="../../../../cn/nukkit/level/particle/PunchBlockParticle.html" title="class in cn.nukkit.level.particle">PunchBlockParticle</a>, <a href="../../../../cn/nukkit/level/particle/SpellParticle.html" title="class in cn.nukkit.level.particle">SpellParticle</a></dd>
+<dd><a href="../../../../cn/nukkit/level/particle/BoneMealParticle.html" title="class in cn.nukkit.level.particle">BoneMealParticle</a>, <a href="../../../../cn/nukkit/level/particle/DestroyBlockParticle.html" title="class in cn.nukkit.level.particle">DestroyBlockParticle</a>, <a href="../../../../cn/nukkit/level/particle/FloatingTextParticle.html" title="class in cn.nukkit.level.particle">FloatingTextParticle</a>, <a href="../../../../cn/nukkit/level/particle/GenericParticle.html" title="class in cn.nukkit.level.particle">GenericParticle</a>, <a href="../../../../cn/nukkit/level/particle/ItemBreakParticle.html" title="class in cn.nukkit.level.particle">ItemBreakParticle</a>, <a href="../../../../cn/nukkit/level/particle/MobSpawnParticle.html" title="class in cn.nukkit.level.particle">MobSpawnParticle</a>, <a href="../../../../cn/nukkit/level/particle/PunchBlockParticle.html" title="class in cn.nukkit.level.particle">PunchBlockParticle</a>, <a href="../../../../cn/nukkit/level/particle/SpellParticle.html" title="class in cn.nukkit.level.particle">SpellParticle</a></dd>
 </dl>
 <hr>
 <br>
-<pre>public abstract class <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.10">Particle</a>
+<pre>public abstract class <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.12">Particle</a>
 extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></pre>
 <div class="block">author: MagicDroidX
  Nukkit Project</div>
@@ -150,7 +150,15 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_BLEACH">TYPE_BLEACH</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_BLOCK_FORCE_FIELD">TYPE_BLOCK_FORCE_FIELD</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_BLUE_FLAME">TYPE_BLUE_FLAME</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
@@ -166,7 +174,15 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_BUBBLE_MANUAL">TYPE_BUBBLE_MANUAL</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_CAMPFIRE_SMOKE">TYPE_CAMPFIRE_SMOKE</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_CANDLE_FLAME">TYPE_CANDLE_FLAME</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
@@ -206,83 +222,91 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_ENCHANTMENT_TABLE">TYPE_ENCHANTMENT_TABLE</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_ELECTRIC_SPARK">TYPE_ELECTRIC_SPARK</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_ENCHANTMENT_TABLE">TYPE_ENCHANTMENT_TABLE</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_END_ROD">TYPE_END_ROD</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_EVAPORATION">TYPE_EVAPORATION</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_EXPLODE">TYPE_EXPLODE</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_FALLING_DRAGONS_BREATH">TYPE_FALLING_DRAGONS_BREATH</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_FALLING_DUST">TYPE_FALLING_DUST</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_FALLING_RED_DUST">TYPE_FALLING_RED_DUST</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_FIREWORKS_OVERLAY">TYPE_FIREWORKS_OVERLAY</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_FIREWORKS_SPARK">TYPE_FIREWORKS_SPARK</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_FIREWORKS_STARTER">TYPE_FIREWORKS_STARTER</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_FLAME">TYPE_FLAME</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_FOOD">TYPE_FOOD</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_HEART">TYPE_HEART</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_HUGE_EXPLODE">TYPE_HUGE_EXPLODE</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_HUGE_EXPLODE_SEED">TYPE_HUGE_EXPLODE_SEED</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_INK">TYPE_INK</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_ITEM_BREAK">TYPE_ITEM_BREAK</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_LARGE_EXPLOSION">TYPE_LARGE_EXPLOSION</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_LARGE_SMOKE">TYPE_LARGE_SMOKE</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_LAVA">TYPE_LAVA</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_MOB_APPEARANCE">TYPE_MOB_APPEARANCE</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
@@ -302,15 +326,23 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_NOTE">TYPE_NOTE</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_MYCELIUM_DUST">TYPE_MYCELIUM_DUST</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_NOTE_AND_DUST">TYPE_NOTE_AND_DUST</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_NOTE">TYPE_NOTE</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_OBSIDIAN_TEAR">TYPE_OBSIDIAN_TEAR</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_PORTAL">TYPE_PORTAL</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_PORTAL_REVERSE">TYPE_PORTAL_REVERSE</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
@@ -330,6 +362,14 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_SCULK_SENSOR_REDSTONE">TYPE_SCULK_SENSOR_REDSTONE</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_SHULKER_BULLET">TYPE_SHULKER_BULLET</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_SLIME">TYPE_SLIME</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -346,6 +386,14 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_SNOWFLAKE">TYPE_SNOWFLAKE</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_SOUL">TYPE_SOUL</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_SPARKLER">TYPE_SPARKLER</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -358,23 +406,47 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_SPORE_BLOSSOM_AMBIENT">TYPE_SPORE_BLOSSOM_AMBIENT</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_SPORE_BLOSSOM_SHOWER">TYPE_SPORE_BLOSSOM_SHOWER</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_STALACTITE_DRIP_LAVA">TYPE_STALACTITE_DRIP_LAVA</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_STALACTITE_DRIP_WATER">TYPE_STALACTITE_DRIP_WATER</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_SUSPENDED_TOWN">TYPE_SUSPENDED_TOWN</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_TERRAIN">TYPE_TERRAIN</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_TALL_CAMPFIRE_SMOKE">TYPE_TALL_CAMPFIRE_SMOKE</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_TOTEM">TYPE_TOTEM</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_TERRAIN">TYPE_TERRAIN</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_TOWN_AURA">TYPE_TOWN_AURA</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_TOTEM">TYPE_TOTEM</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_TOWN_AURA">TYPE_TOWN_AURA</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_TRACKING_EMITTER">TYPE_TRACKING_EMITTER</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_VIBRATION_SIGNAL">TYPE_VIBRATION_SIGNAL</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
@@ -390,7 +462,15 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_WATER_SPLASH_MANUAL">TYPE_WATER_SPLASH_MANUAL</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_WATER_WAKE">TYPE_WATER_WAKE</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_WAX">TYPE_WAX</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
@@ -442,7 +522,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
@@ -451,13 +531,21 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <td class="colFirst"><code>abstract <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#encode--">encode</a></span>()</code>&nbsp;</td>
 </tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>static java.lang.Integer</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#getParticleIdByName-java.lang.String-">getParticleIdByName</a></span>(java.lang.String&nbsp;name)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#particleExists-java.lang.String-">particleExists</a></span>(java.lang.String&nbsp;name)</code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.cn.nukkit.math.Vector3">
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;cn.nukkit.math.<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></h3>
-<code><a href="../../../../cn/nukkit/math/Vector3.html#abs--">abs</a>, <a href="../../../../cn/nukkit/math/Vector3.html#add-double-">add</a>, <a href="../../../../cn/nukkit/math/Vector3.html#add-double-double-">add</a>, <a href="../../../../cn/nukkit/math/Vector3.html#add-double-double-double-">add</a>, <a href="../../../../cn/nukkit/math/Vector3.html#add-cn.nukkit.math.Vector3-">add</a>, <a href="../../../../cn/nukkit/math/Vector3.html#asBlockVector3--">asBlockVector3</a>, <a href="../../../../cn/nukkit/math/Vector3.html#asVector3f--">asVector3f</a>, <a href="../../../../cn/nukkit/math/Vector3.html#ceil--">ceil</a>, <a href="../../../../cn/nukkit/math/Vector3.html#clone--">clone</a>, <a href="../../../../cn/nukkit/math/Vector3.html#cross-cn.nukkit.math.Vector3-">cross</a>, <a href="../../../../cn/nukkit/math/Vector3.html#distance-cn.nukkit.math.Vector3-">distance</a>, <a href="../../../../cn/nukkit/math/Vector3.html#distanceSquared-cn.nukkit.math.Vector3-">distanceSquared</a>, <a href="../../../../cn/nukkit/math/Vector3.html#divide-double-">divide</a>, <a href="../../../../cn/nukkit/math/Vector3.html#dot-cn.nukkit.math.Vector3-">dot</a>, <a href="../../../../cn/nukkit/math/Vector3.html#down--">down</a>, <a href="../../../../cn/nukkit/math/Vector3.html#down-int-">down</a>, <a href="../../../../cn/nukkit/math/Vector3.html#east--">east</a>, <a href="../../../../cn/nukkit/math/Vector3.html#east-int-">east</a>, <a href="../../../../cn/nukkit/math/Vector3.html#equals-java.lang.Object-">equals</a>, <a href="../../../../cn/nukkit/math/Vector3.html#floor--">floor</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getChunkX--">getChunkX</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getChunkZ--">getChunkZ</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getFloorX--">getFloorX</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getFloorY--">getFloorY</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getFloorZ--">getFloorZ</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getForward--">getForward</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getIntermediateWithXValue-cn.nukkit.math.Vector3-double-">getIntermediateWithXValue</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getIntermediateWithYValue-cn.nukkit.math.Vector3-double-">getIntermediateWithYValue</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getIntermediateWithZValue-cn.nukkit.math.Vector3-double-">getIntermediateWithZValue</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getRight--">getRight</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getSide-cn.nukkit.math.BlockFace-">getSide</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getSide-cn.nukkit.math.BlockFace-int-">getSide</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getSouth--">getSouth</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getUp--">getUp</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getWest--">getWest</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getX--">getX</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getY--">getY</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getZ--">getZ</a>, <a href="../../../../cn/nukkit/math/Vector3.html#hashCode--">hashCode</a>, <a href="../../../../cn/nukkit/math/Vector3.html#length--">length</a>, <a href="../../../../cn/nukkit/math/Vector3.html#lengthSquared--">lengthSquared</a>, <a href="../../../../cn/nukkit/math/Vector3.html#maxPlainDistance--">maxPlainDistance</a>, <a href="../../../../cn/nukkit/math/Vector3.html#maxPlainDistance-double-">maxPlainDistance</a>, <a href="../../../../cn/nukkit/math/Vector3.html#maxPlainDistance-double-double-">maxPlainDistance</a>, <a href="../../../../cn/nukkit/math/Vector3.html#maxPlainDistance-cn.nukkit.math.Vector2-">maxPlainDistance</a>, <a href="../../../../cn/nukkit/math/Vector3.html#maxPlainDistance-cn.nukkit.math.Vector3-">maxPlainDistance</a>, <a href="../../../../cn/nukkit/math/Vector3.html#multiply-double-">multiply</a>, <a href="../../../../cn/nukkit/math/Vector3.html#normalize--">normalize</a>, <a href="../../../../cn/nukkit/math/Vector3.html#north--">north</a>, <a href="../../../../cn/nukkit/math/Vector3.html#north-int-">north</a>, <a href="../../../../cn/nukkit/math/Vector3.html#rawHashCode--">rawHashCode</a>, <a href="../../../../cn/nukkit/math/Vector3.html#round--">round</a>, <a href="../../../../cn/nukkit/math/Vector3.html#setComponents-double-double-double-">setComponents</a>, <a href="../../../../cn/nukkit/math/Vector3.html#south--">south</a>, <a href="../../../../cn/nukkit/math/Vector3.html#south-int-">south</a>, <a href="../../../../cn/nukkit/math/Vector3.html#subtract--">subtract</a>, <a href="../../../../cn/nukkit/math/Vector3.html#subtract-double-">subtract</a>, <a href="../../../../cn/nukkit/math/Vector3.html#subtract-double-double-">subtract</a>, <a href="../../../../cn/nukkit/math/Vector3.html#subtract-double-double-double-">subtract</a>, <a href="../../../../cn/nukkit/math/Vector3.html#subtract-cn.nukkit.math.Vector3-">subtract</a>, <a href="../../../../cn/nukkit/math/Vector3.html#toString--">toString</a>, <a href="../../../../cn/nukkit/math/Vector3.html#up--">up</a>, <a href="../../../../cn/nukkit/math/Vector3.html#up-int-">up</a>, <a href="../../../../cn/nukkit/math/Vector3.html#west--">west</a>, <a href="../../../../cn/nukkit/math/Vector3.html#west-int-">west</a></code></li>
+<code><a href="../../../../cn/nukkit/math/Vector3.html#abs--">abs</a>, <a href="../../../../cn/nukkit/math/Vector3.html#add-double-">add</a>, <a href="../../../../cn/nukkit/math/Vector3.html#add-double-double-">add</a>, <a href="../../../../cn/nukkit/math/Vector3.html#add-double-double-double-">add</a>, <a href="../../../../cn/nukkit/math/Vector3.html#add-cn.nukkit.math.Vector3-">add</a>, <a href="../../../../cn/nukkit/math/Vector3.html#angleBetween-cn.nukkit.math.Vector3-">angleBetween</a>, <a href="../../../../cn/nukkit/math/Vector3.html#asBlockVector3--">asBlockVector3</a>, <a href="../../../../cn/nukkit/math/Vector3.html#asVector3f--">asVector3f</a>, <a href="../../../../cn/nukkit/math/Vector3.html#ceil--">ceil</a>, <a href="../../../../cn/nukkit/math/Vector3.html#clone--">clone</a>, <a href="../../../../cn/nukkit/math/Vector3.html#cross-cn.nukkit.math.Vector3-">cross</a>, <a href="../../../../cn/nukkit/math/Vector3.html#distance-cn.nukkit.math.Vector3-">distance</a>, <a href="../../../../cn/nukkit/math/Vector3.html#distanceSquared-cn.nukkit.math.Vector3-">distanceSquared</a>, <a href="../../../../cn/nukkit/math/Vector3.html#divide-double-">divide</a>, <a href="../../../../cn/nukkit/math/Vector3.html#dot-cn.nukkit.math.Vector3-">dot</a>, <a href="../../../../cn/nukkit/math/Vector3.html#down--">down</a>, <a href="../../../../cn/nukkit/math/Vector3.html#down-int-">down</a>, <a href="../../../../cn/nukkit/math/Vector3.html#east--">east</a>, <a href="../../../../cn/nukkit/math/Vector3.html#east-int-">east</a>, <a href="../../../../cn/nukkit/math/Vector3.html#equals-java.lang.Object-">equals</a>, <a href="../../../../cn/nukkit/math/Vector3.html#floor--">floor</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getChunkX--">getChunkX</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getChunkZ--">getChunkZ</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getFloorX--">getFloorX</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getFloorY--">getFloorY</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getFloorZ--">getFloorZ</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getForward--">getForward</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getIntermediateWithXValue-cn.nukkit.math.Vector3-double-">getIntermediateWithXValue</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getIntermediateWithYValue-cn.nukkit.math.Vector3-double-">getIntermediateWithYValue</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getIntermediateWithZValue-cn.nukkit.math.Vector3-double-">getIntermediateWithZValue</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getRight--">getRight</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getSide-cn.nukkit.math.BlockFace-">getSide</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getSide-cn.nukkit.math.BlockFace-int-">getSide</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getSouth--">getSouth</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getUp--">getUp</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getWest--">getWest</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getX--">getX</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getY--">getY</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getZ--">getZ</a>, <a href="../../../../cn/nukkit/math/Vector3.html#hashCode--">hashCode</a>, <a href="../../../../cn/nukkit/math/Vector3.html#length--">length</a>, <a href="../../../../cn/nukkit/math/Vector3.html#lengthSquared--">lengthSquared</a>, <a href="../../../../cn/nukkit/math/Vector3.html#maxPlainDistance--">maxPlainDistance</a>, <a href="../../../../cn/nukkit/math/Vector3.html#maxPlainDistance-double-">maxPlainDistance</a>, <a href="../../../../cn/nukkit/math/Vector3.html#maxPlainDistance-double-double-">maxPlainDistance</a>, <a href="../../../../cn/nukkit/math/Vector3.html#maxPlainDistance-cn.nukkit.math.Vector2-">maxPlainDistance</a>, <a href="../../../../cn/nukkit/math/Vector3.html#maxPlainDistance-cn.nukkit.math.Vector3-">maxPlainDistance</a>, <a href="../../../../cn/nukkit/math/Vector3.html#multiply-double-">multiply</a>, <a href="../../../../cn/nukkit/math/Vector3.html#normalize--">normalize</a>, <a href="../../../../cn/nukkit/math/Vector3.html#north--">north</a>, <a href="../../../../cn/nukkit/math/Vector3.html#north-int-">north</a>, <a href="../../../../cn/nukkit/math/Vector3.html#rawHashCode--">rawHashCode</a>, <a href="../../../../cn/nukkit/math/Vector3.html#round--">round</a>, <a href="../../../../cn/nukkit/math/Vector3.html#setComponents-double-double-double-">setComponents</a>, <a href="../../../../cn/nukkit/math/Vector3.html#setX-double-">setX</a>, <a href="../../../../cn/nukkit/math/Vector3.html#setY-double-">setY</a>, <a href="../../../../cn/nukkit/math/Vector3.html#setZ-double-">setZ</a>, <a href="../../../../cn/nukkit/math/Vector3.html#south--">south</a>, <a href="../../../../cn/nukkit/math/Vector3.html#south-int-">south</a>, <a href="../../../../cn/nukkit/math/Vector3.html#subtract--">subtract</a>, <a href="../../../../cn/nukkit/math/Vector3.html#subtract-double-">subtract</a>, <a href="../../../../cn/nukkit/math/Vector3.html#subtract-double-double-">subtract</a>, <a href="../../../../cn/nukkit/math/Vector3.html#subtract-double-double-double-">subtract</a>, <a href="../../../../cn/nukkit/math/Vector3.html#subtract-cn.nukkit.math.Vector3-">subtract</a>, <a href="../../../../cn/nukkit/math/Vector3.html#toString--">toString</a>, <a href="../../../../cn/nukkit/math/Vector3.html#up--">up</a>, <a href="../../../../cn/nukkit/math/Vector3.html#up-int-">up</a>, <a href="../../../../cn/nukkit/math/Vector3.html#west--">west</a>, <a href="../../../../cn/nukkit/math/Vector3.html#west-int-">west</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -486,10 +574,23 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_BUBBLE</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.12">TYPE_BUBBLE</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.14">TYPE_BUBBLE</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_BUBBLE">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_BUBBLE_MANUAL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_BUBBLE_MANUAL</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.15">TYPE_BUBBLE_MANUAL</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_BUBBLE_MANUAL">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
@@ -499,7 +600,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_CRITICAL</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.14">TYPE_CRITICAL</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.16">TYPE_CRITICAL</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_CRITICAL">Constant Field Values</a></dd>
@@ -512,7 +613,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_BLOCK_FORCE_FIELD</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.15">TYPE_BLOCK_FORCE_FIELD</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.17">TYPE_BLOCK_FORCE_FIELD</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_BLOCK_FORCE_FIELD">Constant Field Values</a></dd>
@@ -525,7 +626,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_SMOKE</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.16">TYPE_SMOKE</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.18">TYPE_SMOKE</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_SMOKE">Constant Field Values</a></dd>
@@ -538,7 +639,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_EXPLODE</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.17">TYPE_EXPLODE</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.19">TYPE_EXPLODE</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_EXPLODE">Constant Field Values</a></dd>
@@ -551,7 +652,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_EVAPORATION</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.18">TYPE_EVAPORATION</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.20">TYPE_EVAPORATION</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_EVAPORATION">Constant Field Values</a></dd>
@@ -564,10 +665,23 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_FLAME</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.19">TYPE_FLAME</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.21">TYPE_FLAME</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_FLAME">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_CANDLE_FLAME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_CANDLE_FLAME</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.22">TYPE_CANDLE_FLAME</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_CANDLE_FLAME">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
@@ -577,7 +691,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_LAVA</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.20">TYPE_LAVA</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.23">TYPE_LAVA</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_LAVA">Constant Field Values</a></dd>
@@ -590,7 +704,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_LARGE_SMOKE</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.21">TYPE_LARGE_SMOKE</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.24">TYPE_LARGE_SMOKE</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_LARGE_SMOKE">Constant Field Values</a></dd>
@@ -603,7 +717,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_REDSTONE</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.22">TYPE_REDSTONE</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.25">TYPE_REDSTONE</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_REDSTONE">Constant Field Values</a></dd>
@@ -616,7 +730,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_RISING_RED_DUST</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.23">TYPE_RISING_RED_DUST</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.26">TYPE_RISING_RED_DUST</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_RISING_RED_DUST">Constant Field Values</a></dd>
@@ -629,7 +743,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_ITEM_BREAK</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.25">TYPE_ITEM_BREAK</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.27">TYPE_ITEM_BREAK</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_ITEM_BREAK">Constant Field Values</a></dd>
@@ -642,7 +756,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_SNOWBALL_POOF</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.26">TYPE_SNOWBALL_POOF</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.28">TYPE_SNOWBALL_POOF</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_SNOWBALL_POOF">Constant Field Values</a></dd>
@@ -655,7 +769,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_HUGE_EXPLODE</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.27">TYPE_HUGE_EXPLODE</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.29">TYPE_HUGE_EXPLODE</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_HUGE_EXPLODE">Constant Field Values</a></dd>
@@ -668,7 +782,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_HUGE_EXPLODE_SEED</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.28">TYPE_HUGE_EXPLODE_SEED</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.30">TYPE_HUGE_EXPLODE_SEED</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_HUGE_EXPLODE_SEED">Constant Field Values</a></dd>
@@ -681,7 +795,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_MOB_FLAME</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.29">TYPE_MOB_FLAME</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.31">TYPE_MOB_FLAME</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_MOB_FLAME">Constant Field Values</a></dd>
@@ -694,7 +808,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_HEART</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.30">TYPE_HEART</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.32">TYPE_HEART</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_HEART">Constant Field Values</a></dd>
@@ -707,7 +821,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_TERRAIN</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.31">TYPE_TERRAIN</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.33">TYPE_TERRAIN</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_TERRAIN">Constant Field Values</a></dd>
@@ -720,7 +834,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_SUSPENDED_TOWN</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.32">TYPE_SUSPENDED_TOWN</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.34">TYPE_SUSPENDED_TOWN</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_SUSPENDED_TOWN">Constant Field Values</a></dd>
@@ -733,7 +847,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_TOWN_AURA</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.32">TYPE_TOWN_AURA</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.34">TYPE_TOWN_AURA</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_TOWN_AURA">Constant Field Values</a></dd>
@@ -746,7 +860,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_PORTAL</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.34">TYPE_PORTAL</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.35">TYPE_PORTAL</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_PORTAL">Constant Field Values</a></dd>
@@ -759,7 +873,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_SPLASH</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.36">TYPE_SPLASH</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.37">TYPE_SPLASH</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_SPLASH">Constant Field Values</a></dd>
@@ -772,10 +886,23 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_WATER_SPLASH</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.36">TYPE_WATER_SPLASH</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.37">TYPE_WATER_SPLASH</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_WATER_SPLASH">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_WATER_SPLASH_MANUAL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_WATER_SPLASH_MANUAL</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.38">TYPE_WATER_SPLASH_MANUAL</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_WATER_SPLASH_MANUAL">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
@@ -785,7 +912,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_WATER_WAKE</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.38">TYPE_WATER_WAKE</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.39">TYPE_WATER_WAKE</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_WATER_WAKE">Constant Field Values</a></dd>
@@ -798,7 +925,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_DRIP_WATER</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.39">TYPE_DRIP_WATER</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.40">TYPE_DRIP_WATER</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_DRIP_WATER">Constant Field Values</a></dd>
@@ -811,7 +938,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_DRIP_LAVA</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.40">TYPE_DRIP_LAVA</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.41">TYPE_DRIP_LAVA</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_DRIP_LAVA">Constant Field Values</a></dd>
@@ -824,10 +951,36 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_DRIP_HONEY</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.41">TYPE_DRIP_HONEY</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.42">TYPE_DRIP_HONEY</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_DRIP_HONEY">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_STALACTITE_DRIP_WATER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_STALACTITE_DRIP_WATER</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.43">TYPE_STALACTITE_DRIP_WATER</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_STALACTITE_DRIP_WATER">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_STALACTITE_DRIP_LAVA">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_STALACTITE_DRIP_LAVA</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.44">TYPE_STALACTITE_DRIP_LAVA</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_STALACTITE_DRIP_LAVA">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
@@ -837,7 +990,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_FALLING_DUST</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.42">TYPE_FALLING_DUST</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.45">TYPE_FALLING_DUST</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_FALLING_DUST">Constant Field Values</a></dd>
@@ -850,7 +1003,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_DUST</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.42">TYPE_DUST</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.45">TYPE_DUST</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_DUST">Constant Field Values</a></dd>
@@ -863,7 +1016,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_MOB_SPELL</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.43">TYPE_MOB_SPELL</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.46">TYPE_MOB_SPELL</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_MOB_SPELL">Constant Field Values</a></dd>
@@ -876,7 +1029,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_MOB_SPELL_AMBIENT</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.44">TYPE_MOB_SPELL_AMBIENT</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.47">TYPE_MOB_SPELL_AMBIENT</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_MOB_SPELL_AMBIENT">Constant Field Values</a></dd>
@@ -889,23 +1042,23 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_MOB_SPELL_INSTANTANEOUS</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.45">TYPE_MOB_SPELL_INSTANTANEOUS</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.48">TYPE_MOB_SPELL_INSTANTANEOUS</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_MOB_SPELL_INSTANTANEOUS">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
-<a name="TYPE_NOTE_AND_DUST">
+<a name="TYPE_INK">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>TYPE_NOTE_AND_DUST</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.46">TYPE_NOTE_AND_DUST</a></pre>
+<h4>TYPE_INK</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.49">TYPE_INK</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_NOTE_AND_DUST">Constant Field Values</a></dd>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_INK">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
@@ -915,7 +1068,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_SLIME</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.48">TYPE_SLIME</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.50">TYPE_SLIME</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_SLIME">Constant Field Values</a></dd>
@@ -928,7 +1081,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_RAIN_SPLASH</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.49">TYPE_RAIN_SPLASH</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.51">TYPE_RAIN_SPLASH</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_RAIN_SPLASH">Constant Field Values</a></dd>
@@ -941,7 +1094,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_VILLAGER_ANGRY</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.50">TYPE_VILLAGER_ANGRY</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.52">TYPE_VILLAGER_ANGRY</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_VILLAGER_ANGRY">Constant Field Values</a></dd>
@@ -954,7 +1107,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_VILLAGER_HAPPY</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.52">TYPE_VILLAGER_HAPPY</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.53">TYPE_VILLAGER_HAPPY</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_VILLAGER_HAPPY">Constant Field Values</a></dd>
@@ -967,7 +1120,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_ENCHANTMENT_TABLE</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.53">TYPE_ENCHANTMENT_TABLE</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.54">TYPE_ENCHANTMENT_TABLE</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_ENCHANTMENT_TABLE">Constant Field Values</a></dd>
@@ -980,7 +1133,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_TRACKING_EMITTER</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.54">TYPE_TRACKING_EMITTER</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.55">TYPE_TRACKING_EMITTER</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_TRACKING_EMITTER">Constant Field Values</a></dd>
@@ -993,7 +1146,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_NOTE</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.55">TYPE_NOTE</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.56">TYPE_NOTE</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_NOTE">Constant Field Values</a></dd>
@@ -1006,7 +1159,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_WITCH_SPELL</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.56">TYPE_WITCH_SPELL</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.57">TYPE_WITCH_SPELL</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_WITCH_SPELL">Constant Field Values</a></dd>
@@ -1019,10 +1172,23 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_CARROT</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.57">TYPE_CARROT</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.58">TYPE_CARROT</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_CARROT">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_MOB_APPEARANCE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_MOB_APPEARANCE</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.59">TYPE_MOB_APPEARANCE</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_MOB_APPEARANCE">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
@@ -1032,7 +1198,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_END_ROD</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.59">TYPE_END_ROD</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.60">TYPE_END_ROD</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_END_ROD">Constant Field Values</a></dd>
@@ -1221,29 +1387,55 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 </dl>
 </li>
 </ul>
+<a name="TYPE_SHULKER_BULLET">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_SHULKER_BULLET</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.75">TYPE_SHULKER_BULLET</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_SHULKER_BULLET">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_BLEACH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_BLEACH</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.76">TYPE_BLEACH</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_BLEACH">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
 <a name="TYPE_LARGE_EXPLOSION">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_LARGE_EXPLOSION</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.76">TYPE_LARGE_EXPLOSION</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.77">TYPE_LARGE_EXPLOSION</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_LARGE_EXPLOSION">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
-<a name="TYPE_INK">
+<a name="TYPE_MYCELIUM_DUST">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>TYPE_INK</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.77">TYPE_INK</a></pre>
+<h4>TYPE_MYCELIUM_DUST</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.78">TYPE_MYCELIUM_DUST</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_INK">Constant Field Values</a></dd>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_MYCELIUM_DUST">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
@@ -1253,7 +1445,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_FALLING_RED_DUST</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.78">TYPE_FALLING_RED_DUST</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.79">TYPE_FALLING_RED_DUST</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_FALLING_RED_DUST">Constant Field Values</a></dd>
@@ -1266,10 +1458,23 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_CAMPFIRE_SMOKE</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.79">TYPE_CAMPFIRE_SMOKE</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.80">TYPE_CAMPFIRE_SMOKE</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_CAMPFIRE_SMOKE">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_TALL_CAMPFIRE_SMOKE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_TALL_CAMPFIRE_SMOKE</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.81">TYPE_TALL_CAMPFIRE_SMOKE</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_TALL_CAMPFIRE_SMOKE">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
@@ -1279,7 +1484,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_FALLING_DRAGONS_BREATH</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.81">TYPE_FALLING_DRAGONS_BREATH</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.82">TYPE_FALLING_DRAGONS_BREATH</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_FALLING_DRAGONS_BREATH">Constant Field Values</a></dd>
@@ -1289,13 +1494,156 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <a name="TYPE_DRAGONS_BREATH">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>TYPE_DRAGONS_BREATH</h4>
-<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.82">TYPE_DRAGONS_BREATH</a></pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.83">TYPE_DRAGONS_BREATH</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_DRAGONS_BREATH">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_BLUE_FLAME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_BLUE_FLAME</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.84">TYPE_BLUE_FLAME</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_BLUE_FLAME">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_SOUL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_SOUL</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.85">TYPE_SOUL</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_SOUL">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_OBSIDIAN_TEAR">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_OBSIDIAN_TEAR</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.86">TYPE_OBSIDIAN_TEAR</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_OBSIDIAN_TEAR">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_PORTAL_REVERSE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_PORTAL_REVERSE</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.87">TYPE_PORTAL_REVERSE</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_PORTAL_REVERSE">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_SNOWFLAKE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_SNOWFLAKE</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.88">TYPE_SNOWFLAKE</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_SNOWFLAKE">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_VIBRATION_SIGNAL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_VIBRATION_SIGNAL</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.89">TYPE_VIBRATION_SIGNAL</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_VIBRATION_SIGNAL">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_SCULK_SENSOR_REDSTONE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_SCULK_SENSOR_REDSTONE</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.90">TYPE_SCULK_SENSOR_REDSTONE</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_SCULK_SENSOR_REDSTONE">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_SPORE_BLOSSOM_SHOWER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_SPORE_BLOSSOM_SHOWER</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.91">TYPE_SPORE_BLOSSOM_SHOWER</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_SPORE_BLOSSOM_SHOWER">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_SPORE_BLOSSOM_AMBIENT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_SPORE_BLOSSOM_AMBIENT</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.92">TYPE_SPORE_BLOSSOM_AMBIENT</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_SPORE_BLOSSOM_AMBIENT">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_WAX">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_WAX</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.93">TYPE_WAX</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_WAX">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_ELECTRIC_SPARK">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>TYPE_ELECTRIC_SPARK</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.94">TYPE_ELECTRIC_SPARK</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_ELECTRIC_SPARK">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
@@ -1313,7 +1661,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>Particle</h4>
-<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.84">Particle</a>()</pre>
+<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.117">Particle</a>()</pre>
 </li>
 </ul>
 <a name="Particle-double-">
@@ -1322,7 +1670,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>Particle</h4>
-<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.88">Particle</a>(double&nbsp;x)</pre>
+<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.121">Particle</a>(double&nbsp;x)</pre>
 </li>
 </ul>
 <a name="Particle-double-double-">
@@ -1331,7 +1679,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockList">
 <li class="blockList">
 <h4>Particle</h4>
-<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.92">Particle</a>(double&nbsp;x,
+<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.125">Particle</a>(double&nbsp;x,
                 double&nbsp;y)</pre>
 </li>
 </ul>
@@ -1341,7 +1689,7 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <ul class="blockListLast">
 <li class="blockList">
 <h4>Particle</h4>
-<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.96">Particle</a>(double&nbsp;x,
+<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.129">Particle</a>(double&nbsp;x,
                 double&nbsp;y,
                 double&nbsp;z)</pre>
 </li>
@@ -1354,13 +1702,31 @@ extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nuk
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="getParticleIdByName-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getParticleIdByName</h4>
+<pre>public static final&nbsp;java.lang.Integer&nbsp;<a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.96">getParticleIdByName</a>(java.lang.String&nbsp;name)</pre>
+</li>
+</ul>
+<a name="particleExists-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>particleExists</h4>
+<pre>public static final&nbsp;boolean&nbsp;<a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.113">particleExists</a>(java.lang.String&nbsp;name)</pre>
+</li>
+</ul>
 <a name="encode--">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>encode</h4>
-<pre>public abstract&nbsp;<a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>[]&nbsp;<a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.100">encode</a>()</pre>
+<pre>public abstract&nbsp;<a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>[]&nbsp;<a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.133">encode</a>()</pre>
 </li>
 </ul>
 </li>

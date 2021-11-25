@@ -1,0 +1,215 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package cn.nukkit.entity.item;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>import cn.nukkit.Server;<a name="line.3"></a>
+<span class="sourceLineNo">004</span>import cn.nukkit.entity.Entity;<a name="line.4"></a>
+<span class="sourceLineNo">005</span>import cn.nukkit.entity.data.ByteEntityData;<a name="line.5"></a>
+<span class="sourceLineNo">006</span>import cn.nukkit.entity.data.IntEntityData;<a name="line.6"></a>
+<span class="sourceLineNo">007</span>import cn.nukkit.entity.data.NBTEntityData;<a name="line.7"></a>
+<span class="sourceLineNo">008</span>import cn.nukkit.event.entity.EntityDamageEvent;<a name="line.8"></a>
+<span class="sourceLineNo">009</span>import cn.nukkit.event.entity.EntityDamageEvent.DamageCause;<a name="line.9"></a>
+<span class="sourceLineNo">010</span>import cn.nukkit.item.Item;<a name="line.10"></a>
+<span class="sourceLineNo">011</span>import cn.nukkit.item.ItemFirework;<a name="line.11"></a>
+<span class="sourceLineNo">012</span>import cn.nukkit.level.format.FullChunk;<a name="line.12"></a>
+<span class="sourceLineNo">013</span>import cn.nukkit.nbt.NBTIO;<a name="line.13"></a>
+<span class="sourceLineNo">014</span>import cn.nukkit.nbt.tag.CompoundTag;<a name="line.14"></a>
+<span class="sourceLineNo">015</span>import cn.nukkit.network.protocol.EntityEventPacket;<a name="line.15"></a>
+<span class="sourceLineNo">016</span>import cn.nukkit.network.protocol.LevelSoundEventPacket;<a name="line.16"></a>
+<span class="sourceLineNo">017</span><a name="line.17"></a>
+<span class="sourceLineNo">018</span>import java.util.Random;<a name="line.18"></a>
+<span class="sourceLineNo">019</span><a name="line.19"></a>
+<span class="sourceLineNo">020</span>/**<a name="line.20"></a>
+<span class="sourceLineNo">021</span> * @author CreeperFace<a name="line.21"></a>
+<span class="sourceLineNo">022</span> */<a name="line.22"></a>
+<span class="sourceLineNo">023</span>public class EntityFirework extends Entity {<a name="line.23"></a>
+<span class="sourceLineNo">024</span><a name="line.24"></a>
+<span class="sourceLineNo">025</span>    public static final int NETWORK_ID = 72;<a name="line.25"></a>
+<span class="sourceLineNo">026</span><a name="line.26"></a>
+<span class="sourceLineNo">027</span>    private int fireworkAge;<a name="line.27"></a>
+<span class="sourceLineNo">028</span>    private int lifetime;<a name="line.28"></a>
+<span class="sourceLineNo">029</span>    private Item firework;<a name="line.29"></a>
+<span class="sourceLineNo">030</span><a name="line.30"></a>
+<span class="sourceLineNo">031</span>    public EntityFirework(FullChunk chunk, CompoundTag nbt) {<a name="line.31"></a>
+<span class="sourceLineNo">032</span>        super(chunk, nbt);<a name="line.32"></a>
+<span class="sourceLineNo">033</span><a name="line.33"></a>
+<span class="sourceLineNo">034</span>        this.fireworkAge = 0;<a name="line.34"></a>
+<span class="sourceLineNo">035</span>        Random rand = new Random();<a name="line.35"></a>
+<span class="sourceLineNo">036</span>        this.lifetime = 30 + rand.nextInt(6) + rand.nextInt(7);<a name="line.36"></a>
+<span class="sourceLineNo">037</span><a name="line.37"></a>
+<span class="sourceLineNo">038</span>        this.motionX = rand.nextGaussian() * 0.001D;<a name="line.38"></a>
+<span class="sourceLineNo">039</span>        this.motionZ = rand.nextGaussian() * 0.001D;<a name="line.39"></a>
+<span class="sourceLineNo">040</span>        this.motionY = 0.05D;<a name="line.40"></a>
+<span class="sourceLineNo">041</span><a name="line.41"></a>
+<span class="sourceLineNo">042</span>        if (nbt.contains("FireworkItem")) {<a name="line.42"></a>
+<span class="sourceLineNo">043</span>            firework = NBTIO.getItemHelper(nbt.getCompound("FireworkItem"));<a name="line.43"></a>
+<span class="sourceLineNo">044</span>        } else {<a name="line.44"></a>
+<span class="sourceLineNo">045</span>            firework = new ItemFirework();<a name="line.45"></a>
+<span class="sourceLineNo">046</span>        }<a name="line.46"></a>
+<span class="sourceLineNo">047</span><a name="line.47"></a>
+<span class="sourceLineNo">048</span>        this.setDataProperty(new NBTEntityData(Entity.DATA_DISPLAY_ITEM, firework.getNamedTag()));<a name="line.48"></a>
+<span class="sourceLineNo">049</span>        this.setDataProperty(new IntEntityData(Entity.DATA_DISPLAY_OFFSET, 1));<a name="line.49"></a>
+<span class="sourceLineNo">050</span>        this.setDataProperty(new ByteEntityData(Entity.DATA_HAS_DISPLAY, 1));<a name="line.50"></a>
+<span class="sourceLineNo">051</span>    }<a name="line.51"></a>
+<span class="sourceLineNo">052</span><a name="line.52"></a>
+<span class="sourceLineNo">053</span>    @Override<a name="line.53"></a>
+<span class="sourceLineNo">054</span>    public int getNetworkId() {<a name="line.54"></a>
+<span class="sourceLineNo">055</span>        return NETWORK_ID;<a name="line.55"></a>
+<span class="sourceLineNo">056</span>    }<a name="line.56"></a>
+<span class="sourceLineNo">057</span><a name="line.57"></a>
+<span class="sourceLineNo">058</span>    @Override<a name="line.58"></a>
+<span class="sourceLineNo">059</span>    public boolean onUpdate(int currentTick) {<a name="line.59"></a>
+<span class="sourceLineNo">060</span>        if (this.closed) {<a name="line.60"></a>
+<span class="sourceLineNo">061</span>            return false;<a name="line.61"></a>
+<span class="sourceLineNo">062</span>        }<a name="line.62"></a>
+<span class="sourceLineNo">063</span><a name="line.63"></a>
+<span class="sourceLineNo">064</span>        int tickDiff = currentTick - this.lastUpdate;<a name="line.64"></a>
+<span class="sourceLineNo">065</span><a name="line.65"></a>
+<span class="sourceLineNo">066</span>        if (tickDiff &lt;= 0 &amp;&amp; !this.justCreated) {<a name="line.66"></a>
+<span class="sourceLineNo">067</span>            return true;<a name="line.67"></a>
+<span class="sourceLineNo">068</span>        }<a name="line.68"></a>
+<span class="sourceLineNo">069</span><a name="line.69"></a>
+<span class="sourceLineNo">070</span>        this.lastUpdate = currentTick;<a name="line.70"></a>
+<span class="sourceLineNo">071</span><a name="line.71"></a>
+<span class="sourceLineNo">072</span>        this.timing.startTiming();<a name="line.72"></a>
+<span class="sourceLineNo">073</span><a name="line.73"></a>
+<span class="sourceLineNo">074</span><a name="line.74"></a>
+<span class="sourceLineNo">075</span>        boolean hasUpdate = this.entityBaseTick(tickDiff);<a name="line.75"></a>
+<span class="sourceLineNo">076</span><a name="line.76"></a>
+<span class="sourceLineNo">077</span>        if (this.isAlive()) {<a name="line.77"></a>
+<span class="sourceLineNo">078</span><a name="line.78"></a>
+<span class="sourceLineNo">079</span>            this.motionX *= 1.15D;<a name="line.79"></a>
+<span class="sourceLineNo">080</span>            this.motionZ *= 1.15D;<a name="line.80"></a>
+<span class="sourceLineNo">081</span>            this.motionY += 0.04D;<a name="line.81"></a>
+<span class="sourceLineNo">082</span>            this.move(this.motionX, this.motionY, this.motionZ);<a name="line.82"></a>
+<span class="sourceLineNo">083</span><a name="line.83"></a>
+<span class="sourceLineNo">084</span>            this.updateMovement();<a name="line.84"></a>
+<span class="sourceLineNo">085</span><a name="line.85"></a>
+<span class="sourceLineNo">086</span><a name="line.86"></a>
+<span class="sourceLineNo">087</span>            float f = (float) Math.sqrt(this.motionX * this.motionX + this.motionZ * this.motionZ);<a name="line.87"></a>
+<span class="sourceLineNo">088</span>            this.yaw = (float) (Math.atan2(this.motionX, this.motionZ) * (180D / Math.PI));<a name="line.88"></a>
+<span class="sourceLineNo">089</span><a name="line.89"></a>
+<span class="sourceLineNo">090</span>            this.pitch = (float) (Math.atan2(this.motionY, (double) f) * (180D / Math.PI));<a name="line.90"></a>
+<span class="sourceLineNo">091</span><a name="line.91"></a>
+<span class="sourceLineNo">092</span><a name="line.92"></a>
+<span class="sourceLineNo">093</span>            if (this.fireworkAge == 0) {<a name="line.93"></a>
+<span class="sourceLineNo">094</span>                this.getLevel().addLevelSoundEvent(this, LevelSoundEventPacket.SOUND_LAUNCH);<a name="line.94"></a>
+<span class="sourceLineNo">095</span>            }<a name="line.95"></a>
+<span class="sourceLineNo">096</span><a name="line.96"></a>
+<span class="sourceLineNo">097</span>            this.fireworkAge++;<a name="line.97"></a>
+<span class="sourceLineNo">098</span><a name="line.98"></a>
+<span class="sourceLineNo">099</span>            hasUpdate = true;<a name="line.99"></a>
+<span class="sourceLineNo">100</span>            if (this.fireworkAge &gt;= this.lifetime) {<a name="line.100"></a>
+<span class="sourceLineNo">101</span>                EntityEventPacket pk = new EntityEventPacket();<a name="line.101"></a>
+<span class="sourceLineNo">102</span>                pk.data = 0;<a name="line.102"></a>
+<span class="sourceLineNo">103</span>                pk.event = EntityEventPacket.FIREWORK_EXPLOSION;<a name="line.103"></a>
+<span class="sourceLineNo">104</span>                pk.eid = this.getId();<a name="line.104"></a>
+<span class="sourceLineNo">105</span><a name="line.105"></a>
+<span class="sourceLineNo">106</span>                level.addLevelSoundEvent(this, LevelSoundEventPacket.SOUND_LARGE_BLAST, -1, NETWORK_ID);<a name="line.106"></a>
+<span class="sourceLineNo">107</span><a name="line.107"></a>
+<span class="sourceLineNo">108</span>                Server.broadcastPacket(getViewers().values(), pk);<a name="line.108"></a>
+<span class="sourceLineNo">109</span><a name="line.109"></a>
+<span class="sourceLineNo">110</span>                this.kill();<a name="line.110"></a>
+<span class="sourceLineNo">111</span>                hasUpdate = true;<a name="line.111"></a>
+<span class="sourceLineNo">112</span>            }<a name="line.112"></a>
+<span class="sourceLineNo">113</span>        }<a name="line.113"></a>
+<span class="sourceLineNo">114</span><a name="line.114"></a>
+<span class="sourceLineNo">115</span>        this.timing.stopTiming();<a name="line.115"></a>
+<span class="sourceLineNo">116</span><a name="line.116"></a>
+<span class="sourceLineNo">117</span>        return hasUpdate || !this.onGround || Math.abs(this.motionX) &gt; 0.00001 || Math.abs(this.motionY) &gt; 0.00001 || Math.abs(this.motionZ) &gt; 0.00001;<a name="line.117"></a>
+<span class="sourceLineNo">118</span>    }<a name="line.118"></a>
+<span class="sourceLineNo">119</span><a name="line.119"></a>
+<span class="sourceLineNo">120</span>    @Override<a name="line.120"></a>
+<span class="sourceLineNo">121</span>    public boolean attack(EntityDamageEvent source) {<a name="line.121"></a>
+<span class="sourceLineNo">122</span>        return (source.getCause() == DamageCause.VOID ||<a name="line.122"></a>
+<span class="sourceLineNo">123</span>                source.getCause() == DamageCause.FIRE_TICK ||<a name="line.123"></a>
+<span class="sourceLineNo">124</span>                source.getCause() == DamageCause.ENTITY_EXPLOSION ||<a name="line.124"></a>
+<span class="sourceLineNo">125</span>                source.getCause() == DamageCause.BLOCK_EXPLOSION)<a name="line.125"></a>
+<span class="sourceLineNo">126</span>                &amp;&amp; super.attack(source);<a name="line.126"></a>
+<span class="sourceLineNo">127</span>    }<a name="line.127"></a>
+<span class="sourceLineNo">128</span><a name="line.128"></a>
+<span class="sourceLineNo">129</span>    public void setFirework(Item item) {<a name="line.129"></a>
+<span class="sourceLineNo">130</span>        this.firework = item;<a name="line.130"></a>
+<span class="sourceLineNo">131</span>        this.setDataProperty(new NBTEntityData(Entity.DATA_DISPLAY_ITEM, item.getNamedTag()));<a name="line.131"></a>
+<span class="sourceLineNo">132</span>    }<a name="line.132"></a>
+<span class="sourceLineNo">133</span><a name="line.133"></a>
+<span class="sourceLineNo">134</span>    @Override<a name="line.134"></a>
+<span class="sourceLineNo">135</span>    public float getWidth() {<a name="line.135"></a>
+<span class="sourceLineNo">136</span>        return 0.25f;<a name="line.136"></a>
+<span class="sourceLineNo">137</span>    }<a name="line.137"></a>
+<span class="sourceLineNo">138</span><a name="line.138"></a>
+<span class="sourceLineNo">139</span>    @Override<a name="line.139"></a>
+<span class="sourceLineNo">140</span>    public float getHeight() {<a name="line.140"></a>
+<span class="sourceLineNo">141</span>        return 0.25f;<a name="line.141"></a>
+<span class="sourceLineNo">142</span>    }<a name="line.142"></a>
+<span class="sourceLineNo">143</span>}<a name="line.143"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>

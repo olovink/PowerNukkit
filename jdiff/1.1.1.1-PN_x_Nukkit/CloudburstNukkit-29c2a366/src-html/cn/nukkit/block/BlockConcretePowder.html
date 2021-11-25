@@ -75,7 +75,7 @@
 <span class="sourceLineNo">067</span><a name="line.67"></a>
 <span class="sourceLineNo">068</span>            for (int side = 1; side &lt;= 5; side++) {<a name="line.68"></a>
 <span class="sourceLineNo">069</span>                Block block = this.getSide(BlockFace.fromIndex(side));<a name="line.69"></a>
-<span class="sourceLineNo">070</span>                if (block.getId() == Block.WATER || block.getId() == Block.STILL_WATER || block.getId() == Block.LAVA || block.getId() == Block.STILL_LAVA) {<a name="line.70"></a>
+<span class="sourceLineNo">070</span>                if (block.getId() == Block.WATER || block.getId() == Block.STILL_WATER) {<a name="line.70"></a>
 <span class="sourceLineNo">071</span>                    this.level.setBlock(this, Block.get(Block.CONCRETE, this.meta), true, true);<a name="line.71"></a>
 <span class="sourceLineNo">072</span>                }<a name="line.72"></a>
 <span class="sourceLineNo">073</span>            }<a name="line.73"></a>
@@ -91,7 +91,7 @@
 <span class="sourceLineNo">083</span><a name="line.83"></a>
 <span class="sourceLineNo">084</span>        for (int side = 1; side &lt;= 5; side++) {<a name="line.84"></a>
 <span class="sourceLineNo">085</span>            Block block = this.getSide(BlockFace.fromIndex(side));<a name="line.85"></a>
-<span class="sourceLineNo">086</span>            if (block.getId() == Block.WATER || block.getId() == Block.STILL_WATER || block.getId() == Block.LAVA || block.getId() == Block.STILL_LAVA) {<a name="line.86"></a>
+<span class="sourceLineNo">086</span>            if (block.getId() == Block.WATER || block.getId() == Block.STILL_WATER) {<a name="line.86"></a>
 <span class="sourceLineNo">087</span>                concrete = true;<a name="line.87"></a>
 <span class="sourceLineNo">088</span>                break;<a name="line.88"></a>
 <span class="sourceLineNo">089</span>            }<a name="line.89"></a>

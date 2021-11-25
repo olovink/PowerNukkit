@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":42,"i23":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":42,"i23":10,"i24":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -256,13 +256,17 @@ extends java.lang.Object</pre>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/entity/data/EntityMetadata.html#putString-int-java.lang.String-">putString</a></span>(int&nbsp;id,
          java.lang.String&nbsp;value)</code>&nbsp;</td>
 </tr>
+<tr id="i24" class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/entity/data/EntityMetadata.html#toString--">toString</a></span>()</code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
-<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait, wait, wait</code></li>
 </ul>
 </li>
 </ul>
@@ -301,7 +305,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>get</h4>
-<pre>public&nbsp;<a href="../../../../cn/nukkit/entity/data/EntityData.html" title="class in cn.nukkit.entity.data">EntityData</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.19">get</a>(int&nbsp;id)</pre>
+<pre>public&nbsp;<a href="../../../../cn/nukkit/entity/data/EntityData.html" title="class in cn.nukkit.entity.data">EntityData</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.20">get</a>(int&nbsp;id)</pre>
 </li>
 </ul>
 <a name="getOrDefault-int-cn.nukkit.entity.data.EntityData-">
@@ -310,7 +314,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getOrDefault</h4>
-<pre>public&nbsp;<a href="../../../../cn/nukkit/entity/data/EntityData.html" title="class in cn.nukkit.entity.data">EntityData</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.23">getOrDefault</a>(int&nbsp;id,
+<pre>public&nbsp;<a href="../../../../cn/nukkit/entity/data/EntityData.html" title="class in cn.nukkit.entity.data">EntityData</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.24">getOrDefault</a>(int&nbsp;id,
                                <a href="../../../../cn/nukkit/entity/data/EntityData.html" title="class in cn.nukkit.entity.data">EntityData</a>&nbsp;defaultValue)</pre>
 </li>
 </ul>
@@ -320,7 +324,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>exists</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.34">exists</a>(int&nbsp;id)</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.35">exists</a>(int&nbsp;id)</pre>
 </li>
 </ul>
 <a name="put-cn.nukkit.entity.data.EntityData-">
@@ -329,7 +333,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>put</h4>
-<pre>public&nbsp;<a href="../../../../cn/nukkit/entity/data/EntityMetadata.html" title="class in cn.nukkit.entity.data">EntityMetadata</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.38">put</a>(<a href="../../../../cn/nukkit/entity/data/EntityData.html" title="class in cn.nukkit.entity.data">EntityData</a>&nbsp;data)</pre>
+<pre>public&nbsp;<a href="../../../../cn/nukkit/entity/data/EntityMetadata.html" title="class in cn.nukkit.entity.data">EntityMetadata</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.39">put</a>(<a href="../../../../cn/nukkit/entity/data/EntityData.html" title="class in cn.nukkit.entity.data">EntityData</a>&nbsp;data)</pre>
 </li>
 </ul>
 <a name="getByte-int-">
@@ -338,7 +342,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getByte</h4>
-<pre>public&nbsp;int&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.43">getByte</a>(int&nbsp;id)</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.45">getByte</a>(int&nbsp;id)</pre>
 </li>
 </ul>
 <a name="getShort-int-">
@@ -347,7 +351,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getShort</h4>
-<pre>public&nbsp;int&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.47">getShort</a>(int&nbsp;id)</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.49">getShort</a>(int&nbsp;id)</pre>
 </li>
 </ul>
 <a name="getInt-int-">
@@ -356,7 +360,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getInt</h4>
-<pre>public&nbsp;int&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.51">getInt</a>(int&nbsp;id)</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.53">getInt</a>(int&nbsp;id)</pre>
 </li>
 </ul>
 <a name="getLong-int-">
@@ -365,7 +369,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getLong</h4>
-<pre>public&nbsp;long&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.55">getLong</a>(int&nbsp;id)</pre>
+<pre>public&nbsp;long&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.57">getLong</a>(int&nbsp;id)</pre>
 </li>
 </ul>
 <a name="getFloat-int-">
@@ -374,7 +378,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getFloat</h4>
-<pre>public&nbsp;float&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.59">getFloat</a>(int&nbsp;id)</pre>
+<pre>public&nbsp;float&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.61">getFloat</a>(int&nbsp;id)</pre>
 </li>
 </ul>
 <a name="getBoolean-int-">
@@ -383,7 +387,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getBoolean</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.63">getBoolean</a>(int&nbsp;id)</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.65">getBoolean</a>(int&nbsp;id)</pre>
 </li>
 </ul>
 <a name="getNBT-int-">
@@ -392,7 +396,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getNBT</h4>
-<pre>public&nbsp;<a href="../../../../cn/nukkit/nbt/tag/CompoundTag.html" title="class in cn.nukkit.nbt.tag">CompoundTag</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.67">getNBT</a>(int&nbsp;id)</pre>
+<pre>public&nbsp;<a href="../../../../cn/nukkit/nbt/tag/CompoundTag.html" title="class in cn.nukkit.nbt.tag">CompoundTag</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.69">getNBT</a>(int&nbsp;id)</pre>
 </li>
 </ul>
 <a name="getString-int-">
@@ -401,7 +405,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getString</h4>
-<pre>public&nbsp;java.lang.String&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.71">getString</a>(int&nbsp;id)</pre>
+<pre>public&nbsp;java.lang.String&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.73">getString</a>(int&nbsp;id)</pre>
 </li>
 </ul>
 <a name="getPosition-int-">
@@ -410,7 +414,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getPosition</h4>
-<pre>public&nbsp;<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.75">getPosition</a>(int&nbsp;id)</pre>
+<pre>public&nbsp;<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.77">getPosition</a>(int&nbsp;id)</pre>
 </li>
 </ul>
 <a name="getFloatPosition-int-">
@@ -419,7 +423,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getFloatPosition</h4>
-<pre>public&nbsp;<a href="../../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.79">getFloatPosition</a>(int&nbsp;id)</pre>
+<pre>public&nbsp;<a href="../../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.81">getFloatPosition</a>(int&nbsp;id)</pre>
 </li>
 </ul>
 <a name="putByte-int-int-">
@@ -428,7 +432,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>putByte</h4>
-<pre>public&nbsp;<a href="../../../../cn/nukkit/entity/data/EntityMetadata.html" title="class in cn.nukkit.entity.data">EntityMetadata</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.83">putByte</a>(int&nbsp;id,
+<pre>public&nbsp;<a href="../../../../cn/nukkit/entity/data/EntityMetadata.html" title="class in cn.nukkit.entity.data">EntityMetadata</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.85">putByte</a>(int&nbsp;id,
                               int&nbsp;value)</pre>
 </li>
 </ul>
@@ -438,7 +442,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>putShort</h4>
-<pre>public&nbsp;<a href="../../../../cn/nukkit/entity/data/EntityMetadata.html" title="class in cn.nukkit.entity.data">EntityMetadata</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.87">putShort</a>(int&nbsp;id,
+<pre>public&nbsp;<a href="../../../../cn/nukkit/entity/data/EntityMetadata.html" title="class in cn.nukkit.entity.data">EntityMetadata</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.89">putShort</a>(int&nbsp;id,
                                int&nbsp;value)</pre>
 </li>
 </ul>
@@ -448,7 +452,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>putInt</h4>
-<pre>public&nbsp;<a href="../../../../cn/nukkit/entity/data/EntityMetadata.html" title="class in cn.nukkit.entity.data">EntityMetadata</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.91">putInt</a>(int&nbsp;id,
+<pre>public&nbsp;<a href="../../../../cn/nukkit/entity/data/EntityMetadata.html" title="class in cn.nukkit.entity.data">EntityMetadata</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.93">putInt</a>(int&nbsp;id,
                              int&nbsp;value)</pre>
 </li>
 </ul>
@@ -458,7 +462,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>putLong</h4>
-<pre>public&nbsp;<a href="../../../../cn/nukkit/entity/data/EntityMetadata.html" title="class in cn.nukkit.entity.data">EntityMetadata</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.95">putLong</a>(int&nbsp;id,
+<pre>public&nbsp;<a href="../../../../cn/nukkit/entity/data/EntityMetadata.html" title="class in cn.nukkit.entity.data">EntityMetadata</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.97">putLong</a>(int&nbsp;id,
                               long&nbsp;value)</pre>
 </li>
 </ul>
@@ -468,7 +472,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>putFloat</h4>
-<pre>public&nbsp;<a href="../../../../cn/nukkit/entity/data/EntityMetadata.html" title="class in cn.nukkit.entity.data">EntityMetadata</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.99">putFloat</a>(int&nbsp;id,
+<pre>public&nbsp;<a href="../../../../cn/nukkit/entity/data/EntityMetadata.html" title="class in cn.nukkit.entity.data">EntityMetadata</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.101">putFloat</a>(int&nbsp;id,
                                float&nbsp;value)</pre>
 </li>
 </ul>
@@ -478,7 +482,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>putBoolean</h4>
-<pre>public&nbsp;<a href="../../../../cn/nukkit/entity/data/EntityMetadata.html" title="class in cn.nukkit.entity.data">EntityMetadata</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.103">putBoolean</a>(int&nbsp;id,
+<pre>public&nbsp;<a href="../../../../cn/nukkit/entity/data/EntityMetadata.html" title="class in cn.nukkit.entity.data">EntityMetadata</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.105">putBoolean</a>(int&nbsp;id,
                                  boolean&nbsp;value)</pre>
 </li>
 </ul>
@@ -488,7 +492,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>putNBT</h4>
-<pre>public&nbsp;<a href="../../../../cn/nukkit/entity/data/EntityMetadata.html" title="class in cn.nukkit.entity.data">EntityMetadata</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.107">putNBT</a>(int&nbsp;id,
+<pre>public&nbsp;<a href="../../../../cn/nukkit/entity/data/EntityMetadata.html" title="class in cn.nukkit.entity.data">EntityMetadata</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.109">putNBT</a>(int&nbsp;id,
                              <a href="../../../../cn/nukkit/nbt/tag/CompoundTag.html" title="class in cn.nukkit.nbt.tag">CompoundTag</a>&nbsp;tag)</pre>
 </li>
 </ul>
@@ -499,7 +503,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>putSlot</h4>
 <pre>@Deprecated
-public&nbsp;<a href="../../../../cn/nukkit/entity/data/EntityMetadata.html" title="class in cn.nukkit.entity.data">EntityMetadata</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.112">putSlot</a>(int&nbsp;id,
+public&nbsp;<a href="../../../../cn/nukkit/entity/data/EntityMetadata.html" title="class in cn.nukkit.entity.data">EntityMetadata</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.114">putSlot</a>(int&nbsp;id,
                                           <a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;value)</pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </li>
@@ -510,17 +514,30 @@ public&nbsp;<a href="../../../../cn/nukkit/entity/data/EntityMetadata.html" titl
 <ul class="blockList">
 <li class="blockList">
 <h4>putString</h4>
-<pre>public&nbsp;<a href="../../../../cn/nukkit/entity/data/EntityMetadata.html" title="class in cn.nukkit.entity.data">EntityMetadata</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.116">putString</a>(int&nbsp;id,
+<pre>public&nbsp;<a href="../../../../cn/nukkit/entity/data/EntityMetadata.html" title="class in cn.nukkit.entity.data">EntityMetadata</a>&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.118">putString</a>(int&nbsp;id,
                                 java.lang.String&nbsp;value)</pre>
 </li>
 </ul>
 <a name="getMap--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getMap</h4>
-<pre>public&nbsp;java.util.Map&lt;java.lang.Integer,<a href="../../../../cn/nukkit/entity/data/EntityData.html" title="class in cn.nukkit.entity.data">EntityData</a>&gt;&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.120">getMap</a>()</pre>
+<pre>public&nbsp;java.util.Map&lt;java.lang.Integer,<a href="../../../../cn/nukkit/entity/data/EntityData.html" title="class in cn.nukkit.entity.data">EntityData</a>&gt;&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.122">getMap</a>()</pre>
+</li>
+</ul>
+<a name="toString--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>toString</h4>
+<pre>public&nbsp;java.lang.String&nbsp;<a href="../../../../src-html/cn/nukkit/entity/data/EntityMetadata.html#line.127">toString</a>()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>toString</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
+</dl>
 </li>
 </ul>
 </li>

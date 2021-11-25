@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package cn.nukkit.command.defaults;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>import cn.nukkit.Server;<a name="line.3"></a>
+<span class="sourceLineNo">004</span>import cn.nukkit.command.CapturingCommandSender;<a name="line.4"></a>
+<span class="sourceLineNo">005</span>import cn.nukkit.command.CommandSender;<a name="line.5"></a>
+<span class="sourceLineNo">006</span>import cn.nukkit.network.protocol.ProtocolInfo;<a name="line.6"></a>
+<span class="sourceLineNo">007</span>import cn.nukkit.plugin.Plugin;<a name="line.7"></a>
+<span class="sourceLineNo">008</span>import cn.nukkit.plugin.PluginDescription;<a name="line.8"></a>
+<span class="sourceLineNo">009</span>import cn.nukkit.scheduler.AsyncTask;<a name="line.9"></a>
+<span class="sourceLineNo">010</span>import cn.nukkit.utils.HastebinUtility;<a name="line.10"></a>
+<span class="sourceLineNo">011</span>import cn.nukkit.utils.MainLogger;<a name="line.11"></a>
+<span class="sourceLineNo">012</span>import cn.nukkit.utils.Utils;<a name="line.12"></a>
+<span class="sourceLineNo">013</span><a name="line.13"></a>
+<span class="sourceLineNo">014</span>import java.io.File;<a name="line.14"></a>
+<span class="sourceLineNo">015</span>import java.io.IOException;<a name="line.15"></a>
+<span class="sourceLineNo">016</span>import java.lang.management.ManagementFactory;<a name="line.16"></a>
+<span class="sourceLineNo">017</span><a name="line.17"></a>
+<span class="sourceLineNo">018</span>public class DebugPasteCommand extends VanillaCommand {<a name="line.18"></a>
+<span class="sourceLineNo">019</span><a name="line.19"></a>
+<span class="sourceLineNo">020</span>    public DebugPasteCommand(String name) {<a name="line.20"></a>
+<span class="sourceLineNo">021</span>        super(name, "%nukkit.command.debug.description", "%nukkit.command.debug.usage");<a name="line.21"></a>
+<span class="sourceLineNo">022</span>        this.setPermission("nukkit.command.debug.perform");<a name="line.22"></a>
+<span class="sourceLineNo">023</span>    }<a name="line.23"></a>
+<span class="sourceLineNo">024</span><a name="line.24"></a>
+<span class="sourceLineNo">025</span>    @Override<a name="line.25"></a>
+<span class="sourceLineNo">026</span>    public boolean execute(CommandSender sender, String commandLabel, String[] args) {<a name="line.26"></a>
+<span class="sourceLineNo">027</span>        if (!this.testPermission(sender)) {<a name="line.27"></a>
+<span class="sourceLineNo">028</span>            return true;<a name="line.28"></a>
+<span class="sourceLineNo">029</span>        }<a name="line.29"></a>
+<span class="sourceLineNo">030</span>        Server server = Server.getInstance();<a name="line.30"></a>
+<span class="sourceLineNo">031</span>        server.getScheduler().scheduleAsyncTask(new AsyncTask() {<a name="line.31"></a>
+<span class="sourceLineNo">032</span>            @Override<a name="line.32"></a>
+<span class="sourceLineNo">033</span>            public void onRun() {<a name="line.33"></a>
+<span class="sourceLineNo">034</span>                try {<a name="line.34"></a>
+<span class="sourceLineNo">035</span>                    CapturingCommandSender capturing = new CapturingCommandSender();<a name="line.35"></a>
+<span class="sourceLineNo">036</span>                    capturing.setOp(true);<a name="line.36"></a>
+<span class="sourceLineNo">037</span>                    new StatusCommand("status").execute(capturing, "status", new String[]{});<a name="line.37"></a>
+<span class="sourceLineNo">038</span>                    String dataPath = server.getDataPath();<a name="line.38"></a>
+<span class="sourceLineNo">039</span>                    String status = HastebinUtility.upload(capturing.getCleanCapture());<a name="line.39"></a>
+<span class="sourceLineNo">040</span>                    String nukkitYML = HastebinUtility.upload(new File(dataPath, "nukkit.yml"));<a name="line.40"></a>
+<span class="sourceLineNo">041</span>                    String serverProperties = HastebinUtility.upload(new File(dataPath, "server.properties"));<a name="line.41"></a>
+<span class="sourceLineNo">042</span>                    String latestLog = HastebinUtility.upload(new File(dataPath, "/logs/server.log"));<a name="line.42"></a>
+<span class="sourceLineNo">043</span>                    String threadDump = HastebinUtility.upload(Utils.getAllThreadDumps());<a name="line.43"></a>
+<span class="sourceLineNo">044</span><a name="line.44"></a>
+<span class="sourceLineNo">045</span>                    StringBuilder b = new StringBuilder();<a name="line.45"></a>
+<span class="sourceLineNo">046</span>                    b.append("# Files\n");<a name="line.46"></a>
+<span class="sourceLineNo">047</span>                    b.append("links.nukkit_yml: ").append(nukkitYML).append('\n');<a name="line.47"></a>
+<span class="sourceLineNo">048</span>                    b.append("links.server_properties: ").append(serverProperties).append('\n');<a name="line.48"></a>
+<span class="sourceLineNo">049</span>                    b.append("links.server_status: ").append(status).append('\n');<a name="line.49"></a>
+<span class="sourceLineNo">050</span>                    b.append("links.server_log: ").append(latestLog).append('\n');<a name="line.50"></a>
+<span class="sourceLineNo">051</span>                    b.append("links.thread_dump: ").append(threadDump).append('\n');<a name="line.51"></a>
+<span class="sourceLineNo">052</span>                    b.append("\n# Server Information\n");<a name="line.52"></a>
+<span class="sourceLineNo">053</span>    <a name="line.53"></a>
+<span class="sourceLineNo">054</span>                    b.append("server.name: ").append(server.getName()).append('\n');<a name="line.54"></a>
+<span class="sourceLineNo">055</span>                    b.append("version.api: ").append(server.getApiVersion()).append('\n');<a name="line.55"></a>
+<span class="sourceLineNo">056</span>                    b.append("version.nukkit: ").append(server.getNukkitVersion()).append('\n');<a name="line.56"></a>
+<span class="sourceLineNo">057</span>                    b.append("version.git: ").append(server.getGitCommit()).append('\n');<a name="line.57"></a>
+<span class="sourceLineNo">058</span>                    b.append("version.codename: ").append(server.getCodename()).append('\n');<a name="line.58"></a>
+<span class="sourceLineNo">059</span>                    b.append("version.minecraft: ").append(server.getVersion()).append('\n');<a name="line.59"></a>
+<span class="sourceLineNo">060</span>                    b.append("version.protocol: ").append(ProtocolInfo.CURRENT_PROTOCOL).append('\n');<a name="line.60"></a>
+<span class="sourceLineNo">061</span>                    b.append("plugins:");<a name="line.61"></a>
+<span class="sourceLineNo">062</span>                    for (Plugin plugin : server.getPluginManager().getPlugins().values()) {<a name="line.62"></a>
+<span class="sourceLineNo">063</span>                        boolean enabled = plugin.isEnabled();<a name="line.63"></a>
+<span class="sourceLineNo">064</span>                        String name = plugin.getName();<a name="line.64"></a>
+<span class="sourceLineNo">065</span>                        PluginDescription desc = plugin.getDescription();<a name="line.65"></a>
+<span class="sourceLineNo">066</span>                        String version = desc.getVersion();<a name="line.66"></a>
+<span class="sourceLineNo">067</span>                        b.append("\n  ")<a name="line.67"></a>
+<span class="sourceLineNo">068</span>                                .append(name)<a name="line.68"></a>
+<span class="sourceLineNo">069</span>                                .append(":\n    ")<a name="line.69"></a>
+<span class="sourceLineNo">070</span>                                .append("version: '")<a name="line.70"></a>
+<span class="sourceLineNo">071</span>                                .append(version)<a name="line.71"></a>
+<span class="sourceLineNo">072</span>                                .append('\'')<a name="line.72"></a>
+<span class="sourceLineNo">073</span>                                .append("\n    enabled: ")<a name="line.73"></a>
+<span class="sourceLineNo">074</span>                                .append(enabled);<a name="line.74"></a>
+<span class="sourceLineNo">075</span>                    }<a name="line.75"></a>
+<span class="sourceLineNo">076</span>                    b.append("\n\n# Java Details\n");<a name="line.76"></a>
+<span class="sourceLineNo">077</span>                    Runtime runtime = Runtime.getRuntime();<a name="line.77"></a>
+<span class="sourceLineNo">078</span>                    b.append("memory.free: ").append(runtime.freeMemory()).append('\n');<a name="line.78"></a>
+<span class="sourceLineNo">079</span>                    b.append("memory.max: ").append(runtime.maxMemory()).append('\n');<a name="line.79"></a>
+<span class="sourceLineNo">080</span>                    b.append("cpu.runtime: ").append(ManagementFactory.getRuntimeMXBean().getUptime()).append('\n');<a name="line.80"></a>
+<span class="sourceLineNo">081</span>                    b.append("cpu.processors: ").append(runtime.availableProcessors()).append('\n');<a name="line.81"></a>
+<span class="sourceLineNo">082</span>                    b.append("java.specification.version: '").append(System.getProperty("java.specification.version")).append("'\n");<a name="line.82"></a>
+<span class="sourceLineNo">083</span>                    b.append("java.vendor: '").append(System.getProperty("java.vendor")).append("'\n");<a name="line.83"></a>
+<span class="sourceLineNo">084</span>                    b.append("java.version: '").append(System.getProperty("java.version")).append("'\n");<a name="line.84"></a>
+<span class="sourceLineNo">085</span>                    b.append("os.arch: '").append(System.getProperty("os.arch")).append("'\n");<a name="line.85"></a>
+<span class="sourceLineNo">086</span>                    b.append("os.name: '").append(System.getProperty("os.name")).append("'\n");<a name="line.86"></a>
+<span class="sourceLineNo">087</span>                    b.append("os.version: '").append(System.getProperty("os.version")).append("'\n\n");<a name="line.87"></a>
+<span class="sourceLineNo">088</span>                    b.append("\n# Create a ticket: https://github.com/GameModsBr/PowerNukkit/issues/new");<a name="line.88"></a>
+<span class="sourceLineNo">089</span>                    String link = HastebinUtility.upload(b.toString());<a name="line.89"></a>
+<span class="sourceLineNo">090</span>                    sender.sendMessage(link);<a name="line.90"></a>
+<span class="sourceLineNo">091</span>                } catch (IOException e) {<a name="line.91"></a>
+<span class="sourceLineNo">092</span>                    MainLogger.getLogger().logException(e);<a name="line.92"></a>
+<span class="sourceLineNo">093</span>                }<a name="line.93"></a>
+<span class="sourceLineNo">094</span>            }<a name="line.94"></a>
+<span class="sourceLineNo">095</span>        });<a name="line.95"></a>
+<span class="sourceLineNo">096</span>        return true;<a name="line.96"></a>
+<span class="sourceLineNo">097</span>    }<a name="line.97"></a>
+<span class="sourceLineNo">098</span>}<a name="line.98"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>

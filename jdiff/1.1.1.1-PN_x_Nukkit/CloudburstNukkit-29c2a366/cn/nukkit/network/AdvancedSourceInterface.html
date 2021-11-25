@@ -50,7 +50,7 @@ var activeTableTab = "activeTableTab";
 <div class="subNav">
 <ul class="navList">
 <li>Prev&nbsp;Class</li>
-<li><a href="../../../cn/nukkit/network/CacheEncapsulatedPacket.html" title="class in cn.nukkit.network"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../cn/nukkit/network/CompressBatchedPacket.html" title="class in cn.nukkit.network"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../index.html?cn/nukkit/network/AdvancedSourceInterface.html" target="_top">Frames</a></li>
@@ -109,7 +109,7 @@ var activeTableTab = "activeTableTab";
 </dl>
 <hr>
 <br>
-<pre>public interface <a href="../../../src-html/cn/nukkit/network/AdvancedSourceInterface.html#line.7">AdvancedSourceInterface</a>
+<pre>public interface <a href="../../../src-html/cn/nukkit/network/AdvancedSourceInterface.html#line.12">AdvancedSourceInterface</a>
 extends <a href="../../../cn/nukkit/network/SourceInterface.html" title="interface in cn.nukkit.network">SourceInterface</a></pre>
 <div class="block">author: MagicDroidX
  Nukkit Project</div>
@@ -133,18 +133,17 @@ extends <a href="../../../cn/nukkit/network/SourceInterface.html" title="interfa
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/AdvancedSourceInterface.html#blockAddress-java.lang.String-">blockAddress</a></span>(java.lang.String&nbsp;address)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/AdvancedSourceInterface.html#blockAddress-java.net.InetAddress-">blockAddress</a></span>(java.net.InetAddress&nbsp;address)</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/AdvancedSourceInterface.html#blockAddress-java.lang.String-int-">blockAddress</a></span>(java.lang.String&nbsp;address,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/AdvancedSourceInterface.html#blockAddress-java.net.InetAddress-int-">blockAddress</a></span>(java.net.InetAddress&nbsp;address,
             int&nbsp;timeout)</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/AdvancedSourceInterface.html#sendRawPacket-java.lang.String-int-byte:A-">sendRawPacket</a></span>(java.lang.String&nbsp;address,
-             int&nbsp;port,
-             byte[]&nbsp;payload)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/AdvancedSourceInterface.html#sendRawPacket-java.net.InetSocketAddress-io.netty.buffer.ByteBuf-">sendRawPacket</a></span>(java.net.InetSocketAddress&nbsp;socketAddress,
+             io.netty.buffer.ByteBuf&nbsp;payload)</code>&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
@@ -152,7 +151,7 @@ extends <a href="../../../cn/nukkit/network/SourceInterface.html" title="interfa
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/AdvancedSourceInterface.html#unblockAddress-java.lang.String-">unblockAddress</a></span>(java.lang.String&nbsp;address)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/AdvancedSourceInterface.html#unblockAddress-java.net.InetAddress-">unblockAddress</a></span>(java.net.InetAddress&nbsp;address)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -176,32 +175,32 @@ extends <a href="../../../cn/nukkit/network/SourceInterface.html" title="interfa
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="blockAddress-java.lang.String-">
+<a name="blockAddress-java.net.InetAddress-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>blockAddress</h4>
-<pre>void&nbsp;<a href="../../../src-html/cn/nukkit/network/AdvancedSourceInterface.html#line.9">blockAddress</a>(java.lang.String&nbsp;address)</pre>
+<pre>void&nbsp;<a href="../../../src-html/cn/nukkit/network/AdvancedSourceInterface.html#line.14">blockAddress</a>(java.net.InetAddress&nbsp;address)</pre>
 </li>
 </ul>
-<a name="blockAddress-java.lang.String-int-">
+<a name="blockAddress-java.net.InetAddress-int-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>blockAddress</h4>
-<pre>void&nbsp;<a href="../../../src-html/cn/nukkit/network/AdvancedSourceInterface.html#line.11">blockAddress</a>(java.lang.String&nbsp;address,
+<pre>void&nbsp;<a href="../../../src-html/cn/nukkit/network/AdvancedSourceInterface.html#line.16">blockAddress</a>(java.net.InetAddress&nbsp;address,
                   int&nbsp;timeout)</pre>
 </li>
 </ul>
-<a name="unblockAddress-java.lang.String-">
+<a name="unblockAddress-java.net.InetAddress-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>unblockAddress</h4>
-<pre>void&nbsp;<a href="../../../src-html/cn/nukkit/network/AdvancedSourceInterface.html#line.13">unblockAddress</a>(java.lang.String&nbsp;address)</pre>
+<pre>void&nbsp;<a href="../../../src-html/cn/nukkit/network/AdvancedSourceInterface.html#line.18">unblockAddress</a>(java.net.InetAddress&nbsp;address)</pre>
 </li>
 </ul>
 <a name="setNetwork-cn.nukkit.network.Network-">
@@ -210,18 +209,17 @@ extends <a href="../../../cn/nukkit/network/SourceInterface.html" title="interfa
 <ul class="blockList">
 <li class="blockList">
 <h4>setNetwork</h4>
-<pre>void&nbsp;<a href="../../../src-html/cn/nukkit/network/AdvancedSourceInterface.html#line.15">setNetwork</a>(<a href="../../../cn/nukkit/network/Network.html" title="class in cn.nukkit.network">Network</a>&nbsp;network)</pre>
+<pre>void&nbsp;<a href="../../../src-html/cn/nukkit/network/AdvancedSourceInterface.html#line.20">setNetwork</a>(<a href="../../../cn/nukkit/network/Network.html" title="class in cn.nukkit.network">Network</a>&nbsp;network)</pre>
 </li>
 </ul>
-<a name="sendRawPacket-java.lang.String-int-byte:A-">
+<a name="sendRawPacket-java.net.InetSocketAddress-io.netty.buffer.ByteBuf-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>sendRawPacket</h4>
-<pre>void&nbsp;<a href="../../../src-html/cn/nukkit/network/AdvancedSourceInterface.html#line.17">sendRawPacket</a>(java.lang.String&nbsp;address,
-                   int&nbsp;port,
-                   byte[]&nbsp;payload)</pre>
+<pre>void&nbsp;<a href="../../../src-html/cn/nukkit/network/AdvancedSourceInterface.html#line.22">sendRawPacket</a>(java.net.InetSocketAddress&nbsp;socketAddress,
+                   io.netty.buffer.ByteBuf&nbsp;payload)</pre>
 </li>
 </ul>
 </li>
@@ -252,7 +250,7 @@ extends <a href="../../../cn/nukkit/network/SourceInterface.html" title="interfa
 <div class="subNav">
 <ul class="navList">
 <li>Prev&nbsp;Class</li>
-<li><a href="../../../cn/nukkit/network/CacheEncapsulatedPacket.html" title="class in cn.nukkit.network"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../cn/nukkit/network/CompressBatchedPacket.html" title="class in cn.nukkit.network"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../index.html?cn/nukkit/network/AdvancedSourceInterface.html" target="_top">Frames</a></li>

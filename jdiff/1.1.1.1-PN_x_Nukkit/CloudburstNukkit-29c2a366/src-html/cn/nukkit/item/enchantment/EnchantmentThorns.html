@@ -22,7 +22,7 @@
 <span class="sourceLineNo">014</span> */<a name="line.14"></a>
 <span class="sourceLineNo">015</span>public class EnchantmentThorns extends Enchantment {<a name="line.15"></a>
 <span class="sourceLineNo">016</span>    protected EnchantmentThorns() {<a name="line.16"></a>
-<span class="sourceLineNo">017</span>        super(ID_THORNS, "thorns", 2, EnchantmentType.ARMOR_TORSO);<a name="line.17"></a>
+<span class="sourceLineNo">017</span>        super(ID_THORNS, "thorns", Rarity.RARE, EnchantmentType.ARMOR);<a name="line.17"></a>
 <span class="sourceLineNo">018</span>    }<a name="line.18"></a>
 <span class="sourceLineNo">019</span><a name="line.19"></a>
 <span class="sourceLineNo">020</span>    @Override<a name="line.20"></a>
@@ -32,7 +32,7 @@
 <span class="sourceLineNo">024</span><a name="line.24"></a>
 <span class="sourceLineNo">025</span>    @Override<a name="line.25"></a>
 <span class="sourceLineNo">026</span>    public int getMaxEnchantAbility(int level) {<a name="line.26"></a>
-<span class="sourceLineNo">027</span>        return this.getMinEnchantAbility(level) + 50;<a name="line.27"></a>
+<span class="sourceLineNo">027</span>        return super.getMinEnchantAbility(level) + 50;<a name="line.27"></a>
 <span class="sourceLineNo">028</span>    }<a name="line.28"></a>
 <span class="sourceLineNo">029</span><a name="line.29"></a>
 <span class="sourceLineNo">030</span>    @Override<a name="line.30"></a>

@@ -244,10 +244,14 @@ extends java.lang.Object</pre>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/types/NetworkInventoryAction.html#sourceType">sourceType</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/types/NetworkInventoryAction.html#stackNetworkId">stackNetworkId</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/types/NetworkInventoryAction.html#unknown">unknown</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/types/NetworkInventoryAction.html#windowId">windowId</a></span></code>&nbsp;</td>
 </tr>
@@ -663,10 +667,19 @@ extends java.lang.Object</pre>
 <a name="newItem">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>newItem</h4>
 <pre>public&nbsp;<a href="../../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a> <a href="../../../../../src-html/cn/nukkit/network/protocol/types/NetworkInventoryAction.html#line.58">newItem</a></pre>
+</li>
+</ul>
+<a name="stackNetworkId">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>stackNetworkId</h4>
+<pre>public&nbsp;int <a href="../../../../../src-html/cn/nukkit/network/protocol/types/NetworkInventoryAction.html#line.59">stackNetworkId</a></pre>
 </li>
 </ul>
 </li>
@@ -700,7 +713,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>read</h4>
-<pre>public&nbsp;<a href="../../../../../cn/nukkit/network/protocol/types/NetworkInventoryAction.html" title="class in cn.nukkit.network.protocol.types">NetworkInventoryAction</a>&nbsp;<a href="../../../../../src-html/cn/nukkit/network/protocol/types/NetworkInventoryAction.html#line.60">read</a>(<a href="../../../../../cn/nukkit/network/protocol/InventoryTransactionPacket.html" title="class in cn.nukkit.network.protocol">InventoryTransactionPacket</a>&nbsp;packet)</pre>
+<pre>public&nbsp;<a href="../../../../../cn/nukkit/network/protocol/types/NetworkInventoryAction.html" title="class in cn.nukkit.network.protocol.types">NetworkInventoryAction</a>&nbsp;<a href="../../../../../src-html/cn/nukkit/network/protocol/types/NetworkInventoryAction.html#line.61">read</a>(<a href="../../../../../cn/nukkit/network/protocol/InventoryTransactionPacket.html" title="class in cn.nukkit.network.protocol">InventoryTransactionPacket</a>&nbsp;packet)</pre>
 </li>
 </ul>
 <a name="write-cn.nukkit.network.protocol.InventoryTransactionPacket-">
@@ -709,7 +722,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>write</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/cn/nukkit/network/protocol/types/NetworkInventoryAction.html#line.88">write</a>(<a href="../../../../../cn/nukkit/network/protocol/InventoryTransactionPacket.html" title="class in cn.nukkit.network.protocol">InventoryTransactionPacket</a>&nbsp;packet)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/cn/nukkit/network/protocol/types/NetworkInventoryAction.html#line.99">write</a>(<a href="../../../../../cn/nukkit/network/protocol/InventoryTransactionPacket.html" title="class in cn.nukkit.network.protocol">InventoryTransactionPacket</a>&nbsp;packet)</pre>
 </li>
 </ul>
 <a name="createInventoryAction-cn.nukkit.Player-">
@@ -718,7 +731,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>createInventoryAction</h4>
-<pre>public&nbsp;<a href="../../../../../cn/nukkit/inventory/transaction/action/InventoryAction.html" title="class in cn.nukkit.inventory.transaction.action">InventoryAction</a>&nbsp;<a href="../../../../../src-html/cn/nukkit/network/protocol/types/NetworkInventoryAction.html#line.109">createInventoryAction</a>(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player)</pre>
+<pre>public&nbsp;<a href="../../../../../cn/nukkit/inventory/transaction/action/InventoryAction.html" title="class in cn.nukkit.inventory.transaction.action">InventoryAction</a>&nbsp;<a href="../../../../../src-html/cn/nukkit/network/protocol/types/NetworkInventoryAction.html#line.118">createInventoryAction</a>(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player)</pre>
 </li>
 </ul>
 <a name="toString--">

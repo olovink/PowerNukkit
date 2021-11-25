@@ -33,8 +33,8 @@ cn.nukkit.network.Network
 </TR>
 <TR>
   <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="cn.nukkit.network.CompressBatchedTask.html"><B>PREV CLASS</B></A>
-&nbsp;<A HREF="cn.nukkit.network.RakNetInterface.html"><B>NEXT CLASS</B></A>
+&nbsp;<B>PREV CLASS</B>&nbsp;
+&nbsp;<B>NEXT CLASS</B>&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <A HREF="../changes.html" TARGET="_top"><B>FRAMES</B></A>  &nbsp;
   &nbsp;<A HREF="cn.nukkit.network.Network.html" TARGET="_top"><B>NO FRAMES</B></A></FONT></TD>
@@ -60,37 +60,29 @@ Class cn.nukkit.network.<A HREF="../../../javadoc/1.1.1.1-PN/cn/nukkit/network/N
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="cn.nukkit.network.Network.blockAddress_removed(java.lang.String)"></A>
-  <nobr><code>void</code>&nbsp;<A HREF="../CloudburstNukkit-29c2a366/cn/nukkit/network/Network.html#blockAddress(java.lang.String)" target="_top"><tt>blockAddress</tt></A>(<code>String</code>)</nobr>
+  <A NAME="cn.nukkit.network.Network.deflateRaw_removed(byte[], int)"></A>
+  <nobr><code>byte[]</code>&nbsp;<A HREF="../CloudburstNukkit-29c2a366/cn/nukkit/network/Network.html#deflateRaw(byte[], int)" target="_top"><tt>deflateRaw</tt></A>(<code>byte[],</nobr> int<nobr><nobr></code>)</nobr>
   </TD>
   <TD>&nbsp;</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="cn.nukkit.network.Network.blockAddress_removed(java.lang.String, int)"></A>
-  <nobr><code>void</code>&nbsp;<A HREF="../CloudburstNukkit-29c2a366/cn/nukkit/network/Network.html#blockAddress(java.lang.String, int)" target="_top"><tt>blockAddress</tt></A>(<code>String,</nobr> int<nobr><nobr></code>)</nobr>
-  </TD>
-  <TD>&nbsp;</TD>
-</TR>
-</TABLE>
-&nbsp;
-<p>
-<a NAME="Added"></a>
-<TABLE summary="Added Methods" BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
-<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
-  <TD VALIGN="TOP" COLSPAN=2><FONT SIZE="+1"><B>Added Methods</B></FONT></TD>
-</TR>
-<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
-  <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="cn.nukkit.network.Network.blockAddress_added(java.net.InetAddress)"></A>
-  <nobr><code>void</code>&nbsp;<A HREF="../../../javadoc/1.1.1.1-PN/cn/nukkit/network/Network.html#blockAddress(java.net.InetAddress)" target="_top"><tt>blockAddress</tt></A>(<code>InetAddress</code>)</nobr>
+  <A NAME="cn.nukkit.network.Network.deflateRaw_removed(byte[][], int)"></A>
+  <nobr><code>byte[]</code>&nbsp;<A HREF="../CloudburstNukkit-29c2a366/cn/nukkit/network/Network.html#deflateRaw(byte[][], int)" target="_top"><tt>deflateRaw</tt></A>(<code>byte[][],</nobr> int<nobr><nobr></code>)</nobr>
   </TD>
   <TD>&nbsp;</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="cn.nukkit.network.Network.blockAddress_added(java.net.InetAddress, int)"></A>
-  <nobr><code>void</code>&nbsp;<A HREF="../../../javadoc/1.1.1.1-PN/cn/nukkit/network/Network.html#blockAddress(java.net.InetAddress, int)" target="_top"><tt>blockAddress</tt></A>(<code>InetAddress,</nobr> int<nobr><nobr></code>)</nobr>
+  <A NAME="cn.nukkit.network.Network.inflateRaw_removed(byte[])"></A>
+  <nobr><code>byte[]</code>&nbsp;<A HREF="../CloudburstNukkit-29c2a366/cn/nukkit/network/Network.html#inflateRaw(byte[])" target="_top"><tt>inflateRaw</tt></A>(<code>byte[]</code>)</nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="cn.nukkit.network.Network.processBatch_removed(byte[], java.util.Collection<cn.nukkit.network.protocol.DataPacket>)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../CloudburstNukkit-29c2a366/cn/nukkit/network/Network.html#processBatch(byte[], java.util.Collection<cn.nukkit.network.protocol.DataPacket>)" target="_top"><tt>processBatch</tt></A>(<code>byte[],</nobr> Collection&lt;DataPacket&gt;<nobr><nobr></code>)</nobr>
   </TD>
   <TD>&nbsp;</TD>
 </TR>
@@ -104,21 +96,11 @@ Class cn.nukkit.network.<A HREF="../../../javadoc/1.1.1.1-PN/cn/nukkit/network/N
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="cn.nukkit.network.Network.sendPacket_changed(java.net.InetSocketAddress, io.netty.buffer.ByteBuf)"></A>
-  <nobr><code>void</code>&nbsp;<A HREF="../../../javadoc/1.1.1.1-PN/cn/nukkit/network/Network.html#sendPacket(java.net.InetSocketAddress, io.netty.buffer.ByteBuf)" target="_top"><tt>sendPacket</tt></A>(<code>InetSocketAddress,</nobr> ByteBuf<nobr><nobr></code>)  </nobr>
+  <A NAME="cn.nukkit.network.Network.getPacket_changed(byte)"></A>
+  <nobr><code>DataPacket</code>&nbsp;<A HREF="../../../javadoc/1.1.1.1-PN/cn/nukkit/network/Network.html#getPacket(byte)" target="_top"><tt>getPacket</tt></A>(<code>byte</code>)  </nobr>
   </TD>
   <TD VALIGN="TOP" WIDTH="30%">
-Change in signature from (<code>String, int, byte[]</code>) to (<code>InetSocketAddress, ByteBuf</code>).<br>
-  </TD>
-  <TD>&nbsp;</TD>
-</TR>
-<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
-  <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="cn.nukkit.network.Network.unblockAddress_changed(java.net.InetAddress)"></A>
-  <nobr><code>void</code>&nbsp;<A HREF="../../../javadoc/1.1.1.1-PN/cn/nukkit/network/Network.html#unblockAddress(java.net.InetAddress)" target="_top"><tt>unblockAddress</tt></A>(<code>InetAddress</code>)  </nobr>
-  </TD>
-  <TD VALIGN="TOP" WIDTH="30%">
-Change in signature from <code>String</code> to <code>InetAddress</code>.<br>
+Change in signature from <code>int</code> to <code>byte</code>.<br>
   </TD>
   <TD>&nbsp;</TD>
 </TR>
@@ -146,8 +128,8 @@ Change in signature from <code>String</code> to <code>InetAddress</code>.<br>
 </TR>
 <TR>
   <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="cn.nukkit.network.CompressBatchedTask.html"><B>PREV CLASS</B></A>
-&nbsp;<A HREF="cn.nukkit.network.RakNetInterface.html"><B>NEXT CLASS</B></A>
+&nbsp;<B>PREV CLASS</B>&nbsp;
+&nbsp;<B>NEXT CLASS</B>&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <A HREF="../changes.html" TARGET="_top"><B>FRAMES</B></A>  &nbsp;
   &nbsp;<A HREF="cn.nukkit.network.Network.html" TARGET="_top"><B>NO FRAMES</B></A></FONT></TD>

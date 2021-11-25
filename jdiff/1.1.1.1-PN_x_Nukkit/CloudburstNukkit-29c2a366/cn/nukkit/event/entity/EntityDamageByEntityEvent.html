@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -132,7 +132,7 @@ var activeTableTab = "activeTableTab";
 </dl>
 <hr>
 <br>
-<pre>public class <a href="../../../../src-html/cn/nukkit/event/entity/EntityDamageByEntityEvent.html#line.12">EntityDamageByEntityEvent</a>
+<pre>public class <a href="../../../../src-html/cn/nukkit/event/entity/EntityDamageByEntityEvent.html#line.13">EntityDamageByEntityEvent</a>
 extends <a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.html" title="class in cn.nukkit.event.entity">EntityDamageEvent</a></pre>
 <div class="block">author: MagicDroidX
  Nukkit Project</div>
@@ -216,6 +216,14 @@ extends <a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.html" titl
                          java.util.Map&lt;<a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageModifier.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageModifier</a>,java.lang.Float&gt;&nbsp;modifiers,
                          float&nbsp;knockBack)</code>&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageByEntityEvent.html#EntityDamageByEntityEvent-cn.nukkit.entity.Entity-cn.nukkit.entity.Entity-cn.nukkit.event.entity.EntityDamageEvent.DamageCause-java.util.Map-float-cn.nukkit.item.enchantment.Enchantment:A-">EntityDamageByEntityEvent</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;damager,
+                         <a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity,
+                         <a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageCause</a>&nbsp;cause,
+                         java.util.Map&lt;<a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageModifier.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageModifier</a>,java.lang.Float&gt;&nbsp;modifiers,
+                         float&nbsp;knockBack,
+                         <a href="../../../../cn/nukkit/item/enchantment/Enchantment.html" title="class in cn.nukkit.item.enchantment">Enchantment</a>[]&nbsp;enchantments)</code>&nbsp;</td>
+</tr>
 </table>
 </li>
 </ul>
@@ -244,6 +252,10 @@ extends <a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.html" titl
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageByEntityEvent.html#getKnockBack--">getKnockBack</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html" title="class in cn.nukkit.item.enchantment">Enchantment</a>[]</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageByEntityEvent.html#getWeaponEnchantments--">getWeaponEnchantments</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageByEntityEvent.html#setKnockBack-float-">setKnockBack</a></span>(float&nbsp;knockBack)</code>&nbsp;</td>
 </tr>
@@ -303,7 +315,7 @@ extends <a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.html" titl
 <ul class="blockList">
 <li class="blockList">
 <h4>EntityDamageByEntityEvent</h4>
-<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/event/entity/EntityDamageByEntityEvent.html#line.18">EntityDamageByEntityEvent</a>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;damager,
+<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/event/entity/EntityDamageByEntityEvent.html#line.21">EntityDamageByEntityEvent</a>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;damager,
                                  <a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity,
                                  <a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageCause</a>&nbsp;cause,
                                  float&nbsp;damage)</pre>
@@ -315,7 +327,7 @@ extends <a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.html" titl
 <ul class="blockList">
 <li class="blockList">
 <h4>EntityDamageByEntityEvent</h4>
-<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/event/entity/EntityDamageByEntityEvent.html#line.22">EntityDamageByEntityEvent</a>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;damager,
+<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/event/entity/EntityDamageByEntityEvent.html#line.25">EntityDamageByEntityEvent</a>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;damager,
                                  <a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity,
                                  <a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageCause</a>&nbsp;cause,
                                  java.util.Map&lt;<a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageModifier.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageModifier</a>,java.lang.Float&gt;&nbsp;modifiers)</pre>
@@ -327,7 +339,7 @@ extends <a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.html" titl
 <ul class="blockList">
 <li class="blockList">
 <h4>EntityDamageByEntityEvent</h4>
-<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/event/entity/EntityDamageByEntityEvent.html#line.26">EntityDamageByEntityEvent</a>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;damager,
+<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/event/entity/EntityDamageByEntityEvent.html#line.29">EntityDamageByEntityEvent</a>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;damager,
                                  <a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity,
                                  <a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageCause</a>&nbsp;cause,
                                  float&nbsp;damage,
@@ -337,14 +349,28 @@ extends <a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.html" titl
 <a name="EntityDamageByEntityEvent-cn.nukkit.entity.Entity-cn.nukkit.entity.Entity-cn.nukkit.event.entity.EntityDamageEvent.DamageCause-java.util.Map-float-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>EntityDamageByEntityEvent</h4>
-<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/event/entity/EntityDamageByEntityEvent.html#line.33">EntityDamageByEntityEvent</a>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;damager,
+<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/event/entity/EntityDamageByEntityEvent.html#line.36">EntityDamageByEntityEvent</a>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;damager,
                                  <a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity,
                                  <a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageCause</a>&nbsp;cause,
                                  java.util.Map&lt;<a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageModifier.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageModifier</a>,java.lang.Float&gt;&nbsp;modifiers,
                                  float&nbsp;knockBack)</pre>
+</li>
+</ul>
+<a name="EntityDamageByEntityEvent-cn.nukkit.entity.Entity-cn.nukkit.entity.Entity-cn.nukkit.event.entity.EntityDamageEvent.DamageCause-java.util.Map-float-cn.nukkit.item.enchantment.Enchantment:A-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>EntityDamageByEntityEvent</h4>
+<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/event/entity/EntityDamageByEntityEvent.html#line.40">EntityDamageByEntityEvent</a>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;damager,
+                                 <a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity,
+                                 <a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageCause</a>&nbsp;cause,
+                                 java.util.Map&lt;<a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageModifier.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageModifier</a>,java.lang.Float&gt;&nbsp;modifiers,
+                                 float&nbsp;knockBack,
+                                 <a href="../../../../cn/nukkit/item/enchantment/Enchantment.html" title="class in cn.nukkit.item.enchantment">Enchantment</a>[]&nbsp;enchantments)</pre>
 </li>
 </ul>
 </li>
@@ -361,7 +387,7 @@ extends <a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.html" titl
 <ul class="blockList">
 <li class="blockList">
 <h4>addAttackerModifiers</h4>
-<pre>protected&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/event/entity/EntityDamageByEntityEvent.html#line.40">addAttackerModifiers</a>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;damager)</pre>
+<pre>protected&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/event/entity/EntityDamageByEntityEvent.html#line.48">addAttackerModifiers</a>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;damager)</pre>
 </li>
 </ul>
 <a name="getDamager--">
@@ -370,7 +396,7 @@ extends <a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.html" titl
 <ul class="blockList">
 <li class="blockList">
 <h4>getDamager</h4>
-<pre>public&nbsp;<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;<a href="../../../../src-html/cn/nukkit/event/entity/EntityDamageByEntityEvent.html#line.50">getDamager</a>()</pre>
+<pre>public&nbsp;<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;<a href="../../../../src-html/cn/nukkit/event/entity/EntityDamageByEntityEvent.html#line.58">getDamager</a>()</pre>
 </li>
 </ul>
 <a name="getKnockBack--">
@@ -379,16 +405,25 @@ extends <a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.html" titl
 <ul class="blockList">
 <li class="blockList">
 <h4>getKnockBack</h4>
-<pre>public&nbsp;float&nbsp;<a href="../../../../src-html/cn/nukkit/event/entity/EntityDamageByEntityEvent.html#line.54">getKnockBack</a>()</pre>
+<pre>public&nbsp;float&nbsp;<a href="../../../../src-html/cn/nukkit/event/entity/EntityDamageByEntityEvent.html#line.62">getKnockBack</a>()</pre>
 </li>
 </ul>
 <a name="setKnockBack-float-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>setKnockBack</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/event/entity/EntityDamageByEntityEvent.html#line.58">setKnockBack</a>(float&nbsp;knockBack)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/event/entity/EntityDamageByEntityEvent.html#line.66">setKnockBack</a>(float&nbsp;knockBack)</pre>
+</li>
+</ul>
+<a name="getWeaponEnchantments--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getWeaponEnchantments</h4>
+<pre>public&nbsp;<a href="../../../../cn/nukkit/item/enchantment/Enchantment.html" title="class in cn.nukkit.item.enchantment">Enchantment</a>[]&nbsp;<a href="../../../../src-html/cn/nukkit/event/entity/EntityDamageByEntityEvent.html#line.70">getWeaponEnchantments</a>()</pre>
 </li>
 </ul>
 </li>

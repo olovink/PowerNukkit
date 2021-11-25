@@ -14,10 +14,10 @@
 <span class="sourceLineNo">006</span>import cn.nukkit.item.Item;<a name="line.6"></a>
 <span class="sourceLineNo">007</span>import cn.nukkit.item.ItemRedstoneComparator;<a name="line.7"></a>
 <span class="sourceLineNo">008</span>import cn.nukkit.level.Level;<a name="line.8"></a>
-<span class="sourceLineNo">009</span>import cn.nukkit.level.Sound;<a name="line.9"></a>
-<span class="sourceLineNo">010</span>import cn.nukkit.math.BlockFace;<a name="line.10"></a>
-<span class="sourceLineNo">011</span>import cn.nukkit.nbt.tag.CompoundTag;<a name="line.11"></a>
-<span class="sourceLineNo">012</span>import cn.nukkit.nbt.tag.ListTag;<a name="line.12"></a>
+<span class="sourceLineNo">009</span>import cn.nukkit.math.BlockFace;<a name="line.9"></a>
+<span class="sourceLineNo">010</span>import cn.nukkit.nbt.tag.CompoundTag;<a name="line.10"></a>
+<span class="sourceLineNo">011</span>import cn.nukkit.nbt.tag.ListTag;<a name="line.11"></a>
+<span class="sourceLineNo">012</span>import cn.nukkit.network.protocol.LevelEventPacket;<a name="line.12"></a>
 <span class="sourceLineNo">013</span>import cn.nukkit.utils.BlockColor;<a name="line.13"></a>
 <span class="sourceLineNo">014</span><a name="line.14"></a>
 <span class="sourceLineNo">015</span>/**<a name="line.15"></a>
@@ -49,12 +49,12 @@
 <span class="sourceLineNo">041</span><a name="line.41"></a>
 <span class="sourceLineNo">042</span>    @Override<a name="line.42"></a>
 <span class="sourceLineNo">043</span>    protected BlockRedstoneComparator getUnpowered() {<a name="line.43"></a>
-<span class="sourceLineNo">044</span>        return new BlockRedstoneComparatorUnpowered(this.getDamage());<a name="line.44"></a>
+<span class="sourceLineNo">044</span>        return (BlockRedstoneComparator) Block.get(BlockID.UNPOWERED_COMPARATOR, this.getDamage());<a name="line.44"></a>
 <span class="sourceLineNo">045</span>    }<a name="line.45"></a>
 <span class="sourceLineNo">046</span><a name="line.46"></a>
 <span class="sourceLineNo">047</span>    @Override<a name="line.47"></a>
 <span class="sourceLineNo">048</span>    protected BlockRedstoneComparator getPowered() {<a name="line.48"></a>
-<span class="sourceLineNo">049</span>        return new BlockRedstoneComparatorPowered(this.getDamage());<a name="line.49"></a>
+<span class="sourceLineNo">049</span>        return (BlockRedstoneComparator) Block.get(BlockID.POWERED_COMPARATOR, this.getDamage());<a name="line.49"></a>
 <span class="sourceLineNo">050</span>    }<a name="line.50"></a>
 <span class="sourceLineNo">051</span><a name="line.51"></a>
 <span class="sourceLineNo">052</span>    @Override<a name="line.52"></a>
@@ -127,7 +127,7 @@
 <span class="sourceLineNo">119</span>            this.setDamage(this.getDamage() + 4);<a name="line.119"></a>
 <span class="sourceLineNo">120</span>        }<a name="line.120"></a>
 <span class="sourceLineNo">121</span><a name="line.121"></a>
-<span class="sourceLineNo">122</span>        this.level.addSound(this, Sound.RANDOM_CLICK, 1, getMode() == Mode.SUBTRACT ? 0.55F : 0.5F);<a name="line.122"></a>
+<span class="sourceLineNo">122</span>        this.level.addLevelEvent(this.add(0.5, 0.5, 0.5), LevelEventPacket.EVENT_SOUND_BUTTON_CLICK, this.getMode() == Mode.SUBTRACT ? 500 : 550);<a name="line.122"></a>
 <span class="sourceLineNo">123</span>        this.level.setBlock(this, this, true, false);<a name="line.123"></a>
 <span class="sourceLineNo">124</span>        //bug?<a name="line.124"></a>
 <span class="sourceLineNo">125</span><a name="line.125"></a>

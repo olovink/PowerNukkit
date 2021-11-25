@@ -1,0 +1,483 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package cn.nukkit.plugin;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>import cn.nukkit.permission.Permission;<a name="line.3"></a>
+<span class="sourceLineNo">004</span>import cn.nukkit.utils.PluginException;<a name="line.4"></a>
+<span class="sourceLineNo">005</span>import org.yaml.snakeyaml.DumperOptions;<a name="line.5"></a>
+<span class="sourceLineNo">006</span>import org.yaml.snakeyaml.Yaml;<a name="line.6"></a>
+<span class="sourceLineNo">007</span><a name="line.7"></a>
+<span class="sourceLineNo">008</span>import java.util.*;<a name="line.8"></a>
+<span class="sourceLineNo">009</span><a name="line.9"></a>
+<span class="sourceLineNo">010</span>/* TODO Add these to Javadoc：<a name="line.10"></a>
+<span class="sourceLineNo">011</span> *     &lt;li&gt;&lt;i&gt;softdepend&lt;/i&gt;&lt;br&gt;<a name="line.11"></a>
+<span class="sourceLineNo">012</span> *     &lt;br&gt;<a name="line.12"></a>
+<span class="sourceLineNo">013</span> *     &lt;/li&gt;<a name="line.13"></a>
+<span class="sourceLineNo">014</span> *     &lt;li&gt;&lt;i&gt;loadbefore&lt;/i&gt;&lt;br&gt;<a name="line.14"></a>
+<span class="sourceLineNo">015</span> *     &lt;br&gt;<a name="line.15"></a>
+<span class="sourceLineNo">016</span> *     &lt;/li&gt;<a name="line.16"></a>
+<span class="sourceLineNo">017</span> */<a name="line.17"></a>
+<span class="sourceLineNo">018</span><a name="line.18"></a>
+<span class="sourceLineNo">019</span>/**<a name="line.19"></a>
+<span class="sourceLineNo">020</span> * 描述一个Nukkit插件的类。&lt;br&gt;<a name="line.20"></a>
+<span class="sourceLineNo">021</span> * Describes a Nukkit plugin.<a name="line.21"></a>
+<span class="sourceLineNo">022</span> *<a name="line.22"></a>
+<span class="sourceLineNo">023</span> * 在jar格式的插件中，插件的描述内容可以在plugin.yml中定义。比如这个：&lt;br&gt;<a name="line.23"></a>
+<span class="sourceLineNo">024</span> * The description of a jar-packed plugin can be defined in the 'plugin.yml' file. For example:<a name="line.24"></a>
+<span class="sourceLineNo">025</span> * &lt;blockquote&gt;&lt;pre&gt;<a name="line.25"></a>
+<span class="sourceLineNo">026</span> * &lt;b&gt;name:&lt;/b&gt; HelloWorldPlugin<a name="line.26"></a>
+<span class="sourceLineNo">027</span> * &lt;b&gt;main:&lt;/b&gt; com.cnblogs.xtypr.helloworldplugin.HelloWorldPlugin<a name="line.27"></a>
+<span class="sourceLineNo">028</span> * &lt;b&gt;version:&lt;/b&gt; "1.0.0"<a name="line.28"></a>
+<span class="sourceLineNo">029</span> * &lt;b&gt;api:&lt;/b&gt; ["1.0.0"]<a name="line.29"></a>
+<span class="sourceLineNo">030</span> * load: POSTWORLD<a name="line.30"></a>
+<span class="sourceLineNo">031</span> * author: 粉鞋大妈<a name="line.31"></a>
+<span class="sourceLineNo">032</span> * description: A simple Hello World plugin for Nukkit<a name="line.32"></a>
+<span class="sourceLineNo">033</span> * website: http://www.cnblogs.com/xtypr<a name="line.33"></a>
+<span class="sourceLineNo">034</span> * permissions:<a name="line.34"></a>
+<span class="sourceLineNo">035</span> *  helloworldplugin.command.helloworld:<a name="line.35"></a>
+<span class="sourceLineNo">036</span> *   description: Allows to use helloworld command.<a name="line.36"></a>
+<span class="sourceLineNo">037</span> *   default: true<a name="line.37"></a>
+<span class="sourceLineNo">038</span> * commands:<a name="line.38"></a>
+<span class="sourceLineNo">039</span> *  helloworld:<a name="line.39"></a>
+<span class="sourceLineNo">040</span> *   description: the helloworld command<a name="line.40"></a>
+<span class="sourceLineNo">041</span> *   usage: "/helloworld"<a name="line.41"></a>
+<span class="sourceLineNo">042</span> *   permission: helloworldplugin.command.helloworld<a name="line.42"></a>
+<span class="sourceLineNo">043</span> * depend:<a name="line.43"></a>
+<span class="sourceLineNo">044</span> * - TestPlugin1<a name="line.44"></a>
+<span class="sourceLineNo">045</span> * &lt;/pre&gt;&lt;/blockquote&gt;<a name="line.45"></a>
+<span class="sourceLineNo">046</span> * 在使用plugin.yml来定义插件时，{@code name}、{@code main}、{@code version}、{@code api}这几个字段是必需的，<a name="line.46"></a>
+<span class="sourceLineNo">047</span> * 要让Nukkit能够正常加载你的插件，必须要合理地填写这几个字段。&lt;br&gt;<a name="line.47"></a>
+<span class="sourceLineNo">048</span> * When using plugin.yml file to define your plugin, it's REQUIRED to fill these items:<a name="line.48"></a>
+<span class="sourceLineNo">049</span> * {@code name},{@code main},{@code version} and {@code api}.You are supposed to fill these items to make sure<a name="line.49"></a>
+<span class="sourceLineNo">050</span> * your plugin can be normally loaded by Nukkit.&lt;br&gt;<a name="line.50"></a>
+<span class="sourceLineNo">051</span> *<a name="line.51"></a>
+<span class="sourceLineNo">052</span> * &lt;p&gt;接下来对所有的字段做一些说明，&lt;b&gt;加粗&lt;/b&gt;的字段表示必需，&lt;i&gt;斜体&lt;/i&gt;表示可选：（来自<a name="line.52"></a>
+<span class="sourceLineNo">053</span> * &lt;a href="http://www.cnblogs.com/xtypr/p/nukkit_plugin_start_from_0_about_config.html"&gt;粉鞋大妈的博客文章&lt;/a&gt;）&lt;br&gt;<a name="line.53"></a>
+<span class="sourceLineNo">054</span> * Here are some instructions for there items, &lt;b&gt;bold&lt;/b&gt; means required, &lt;i&gt;italic&lt;/i&gt; means optional: (From<a name="line.54"></a>
+<span class="sourceLineNo">055</span> * &lt;a href="http://www.cnblogs.com/xtypr/p/nukkit_plugin_start_from_0_about_config.html"&gt;a blog article of @粉鞋大妈&lt;/a&gt;)<a name="line.55"></a>
+<span class="sourceLineNo">056</span> * &lt;/p&gt;<a name="line.56"></a>
+<span class="sourceLineNo">057</span> * &lt;ul&gt;<a name="line.57"></a>
+<span class="sourceLineNo">058</span> * &lt;li&gt;&lt;b&gt;name&lt;/b&gt;&lt;br&gt;<a name="line.58"></a>
+<span class="sourceLineNo">059</span> * 字符串，表示这个插件的名字，名字是区分不同插件的标准之一。<a name="line.59"></a>
+<span class="sourceLineNo">060</span> * 插件的名字&lt;i&gt;不能包含“nukkit”“minecraft”“mojang”&lt;/i&gt;这几个字符串，而且不应该包含空格。&lt;br&gt;<a name="line.60"></a>
+<span class="sourceLineNo">061</span> * String, the plugin name. Name is one of the ways to distinguish different plugins.<a name="line.61"></a>
+<span class="sourceLineNo">062</span> * A plugin name &lt;i&gt;can't contain 'nukkit' 'minecraft' 'mojang'&lt;/i&gt;, and shouldn't contain spaces.&lt;/li&gt;<a name="line.62"></a>
+<span class="sourceLineNo">063</span> * &lt;li&gt;&lt;b&gt;version&lt;/b&gt;&lt;br&gt;<a name="line.63"></a>
+<span class="sourceLineNo">064</span> * 字符串，表示这个插件的版本号。使用类似于1.0.0这样的版本号时，应该使用引号包围来防止误识别。&lt;br&gt;<a name="line.64"></a>
+<span class="sourceLineNo">065</span> * String, the version string of plugin. When using the version string like "1.0.0",<a name="line.65"></a>
+<span class="sourceLineNo">066</span> * quotation marks are required to add, or there will be an exception.&lt;/li&gt;<a name="line.66"></a>
+<span class="sourceLineNo">067</span> * &lt;li&gt;&lt;b&gt;api&lt;/b&gt;&lt;br&gt;<a name="line.67"></a>
+<span class="sourceLineNo">068</span> * 字符串序列，表示这个插件支持的Nukkit API版本号列表。插件作者应该调试能支持的API，然后把版本号添加到这个列表。&lt;br&gt;<a name="line.68"></a>
+<span class="sourceLineNo">069</span> * A set of String, the Nukkit API versions that the plugin supports. Plugin developers should debug in different<a name="line.69"></a>
+<span class="sourceLineNo">070</span> * Nukkit APIs and try out the versions supported, and add them to this list. &lt;/li&gt;<a name="line.70"></a>
+<span class="sourceLineNo">071</span> * &lt;li&gt;&lt;b&gt;main&lt;/b&gt;&lt;br&gt;<a name="line.71"></a>
+<span class="sourceLineNo">072</span> * 字符串，表示这个插件的主类。插件的主类&lt;i&gt;不能放在“cn.nukkit”包下&lt;/i&gt;。&lt;br&gt;<a name="line.72"></a>
+<span class="sourceLineNo">073</span> * String, the main class of plugin. The main class&lt;i&gt; can't be placed at 'cn.nukkit' package&lt;/i&gt;.&lt;/li&gt;<a name="line.73"></a>
+<span class="sourceLineNo">074</span> * &lt;li&gt;&lt;i&gt;author&lt;/i&gt; or &lt;i&gt;authors&lt;/i&gt;&lt;br&gt;<a name="line.74"></a>
+<span class="sourceLineNo">075</span> * 字符串/字符串序列，两个任选一个，表示这个插件的作者/作者列表。&lt;br&gt;<a name="line.75"></a>
+<span class="sourceLineNo">076</span> * String or A set of String. One of two is chosen, to describe the author or the list of authors.&lt;/li&gt;<a name="line.76"></a>
+<span class="sourceLineNo">077</span> * &lt;li&gt;&lt;i&gt;website&lt;/i&gt;&lt;br&gt;<a name="line.77"></a>
+<span class="sourceLineNo">078</span> * 字符串，表示这个插件的网站。插件使用者或者开发者可以访问这个网站来获取插件更多的信息。<a name="line.78"></a>
+<span class="sourceLineNo">079</span> * 这个网站可以是插件发布帖子或者插件官网等。&lt;br&gt;<a name="line.79"></a>
+<span class="sourceLineNo">080</span> * String, the website of plugin. More information can be found by visiting this website. The website<a name="line.80"></a>
+<span class="sourceLineNo">081</span> * can be a forum post or the official website.&lt;/li&gt;<a name="line.81"></a>
+<span class="sourceLineNo">082</span> * &lt;li&gt;&lt;i&gt;description&lt;/i&gt;&lt;br&gt;<a name="line.82"></a>
+<span class="sourceLineNo">083</span> * 字符串，表示这个插件的一些描述。&lt;br&gt;<a name="line.83"></a>
+<span class="sourceLineNo">084</span> * String, some description of plugin.&lt;/li&gt;<a name="line.84"></a>
+<span class="sourceLineNo">085</span> * &lt;li&gt;&lt;i&gt;depend&lt;/i&gt;&lt;br&gt;<a name="line.85"></a>
+<span class="sourceLineNo">086</span> * 序列，表示这个插件所依赖的一个或一些插件的名字的列表。参见：{@link PluginDescription#getDepend()}&lt;br&gt;<a name="line.86"></a>
+<span class="sourceLineNo">087</span> * List, strings for plugin names, what is depended on by this plugin. See:<a name="line.87"></a>
+<span class="sourceLineNo">088</span> * {@link PluginDescription#getDepend()}&lt;/li&gt;<a name="line.88"></a>
+<span class="sourceLineNo">089</span> * &lt;li&gt;&lt;i&gt;prefix&lt;/i&gt;&lt;br&gt;<a name="line.89"></a>
+<span class="sourceLineNo">090</span> * 字符串，表示这个插件的消息头衔。参见：{@link PluginDescription#getPrefix()}&lt;br&gt;<a name="line.90"></a>
+<span class="sourceLineNo">091</span> * String, the message title of the plugin. See: {@link PluginDescription#getPrefix()}&lt;/li&gt;<a name="line.91"></a>
+<span class="sourceLineNo">092</span> * &lt;li&gt;&lt;i&gt;load&lt;/i&gt;&lt;br&gt;<a name="line.92"></a>
+<span class="sourceLineNo">093</span> * 字符串，表示这个插件的加载顺序，或者说在什么时候加载。参见：{@link PluginLoadOrder}&lt;br&gt;<a name="line.93"></a>
+<span class="sourceLineNo">094</span> * String, the load order of plugin, or when the plugin loads. See: {@link PluginLoadOrder}&lt;/li&gt;<a name="line.94"></a>
+<span class="sourceLineNo">095</span> * &lt;li&gt;&lt;i&gt;commands&lt;/i&gt;&lt;br&gt;<a name="line.95"></a>
+<span class="sourceLineNo">096</span> * 序列，表示这个插件的命令列表。&lt;br&gt;<a name="line.96"></a>
+<span class="sourceLineNo">097</span> * List, the command list.&lt;/li&gt;<a name="line.97"></a>
+<span class="sourceLineNo">098</span> * &lt;li&gt;&lt;i&gt;permissions&lt;/i&gt;&lt;br&gt;<a name="line.98"></a>
+<span class="sourceLineNo">099</span> * 序列，表示这个插件的权限组列表。&lt;br&gt;<a name="line.99"></a>
+<span class="sourceLineNo">100</span> * List, the list of permission groups defined.&lt;/li&gt;<a name="line.100"></a>
+<span class="sourceLineNo">101</span> * &lt;/ul&gt;<a name="line.101"></a>
+<span class="sourceLineNo">102</span> *<a name="line.102"></a>
+<span class="sourceLineNo">103</span> * @author MagicDroidX(code) @ Nukkit Project<a name="line.103"></a>
+<span class="sourceLineNo">104</span> * @author iNevet(code and javadoc) @ Nukkit Project<a name="line.104"></a>
+<span class="sourceLineNo">105</span> * @author 粉鞋大妈(javadoc) @ Nukkit Project<a name="line.105"></a>
+<span class="sourceLineNo">106</span> * @see Plugin<a name="line.106"></a>
+<span class="sourceLineNo">107</span> * @see PluginLoadOrder<a name="line.107"></a>
+<span class="sourceLineNo">108</span> * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.108"></a>
+<span class="sourceLineNo">109</span> */<a name="line.109"></a>
+<span class="sourceLineNo">110</span>public class PluginDescription {<a name="line.110"></a>
+<span class="sourceLineNo">111</span><a name="line.111"></a>
+<span class="sourceLineNo">112</span>    private String name;<a name="line.112"></a>
+<span class="sourceLineNo">113</span>    private String main;<a name="line.113"></a>
+<span class="sourceLineNo">114</span>    private List&lt;String&gt; api;<a name="line.114"></a>
+<span class="sourceLineNo">115</span>    private List&lt;String&gt; depend = new ArrayList&lt;&gt;();<a name="line.115"></a>
+<span class="sourceLineNo">116</span>    private List&lt;String&gt; softDepend = new ArrayList&lt;&gt;();<a name="line.116"></a>
+<span class="sourceLineNo">117</span>    private List&lt;String&gt; loadBefore = new ArrayList&lt;&gt;();<a name="line.117"></a>
+<span class="sourceLineNo">118</span>    private String version;<a name="line.118"></a>
+<span class="sourceLineNo">119</span>    private Map&lt;String, Object&gt; commands = new HashMap&lt;&gt;();<a name="line.119"></a>
+<span class="sourceLineNo">120</span>    private String description;<a name="line.120"></a>
+<span class="sourceLineNo">121</span>    private final List&lt;String&gt; authors = new ArrayList&lt;&gt;();<a name="line.121"></a>
+<span class="sourceLineNo">122</span>    private String website;<a name="line.122"></a>
+<span class="sourceLineNo">123</span>    private String prefix;<a name="line.123"></a>
+<span class="sourceLineNo">124</span>    private PluginLoadOrder order = PluginLoadOrder.POSTWORLD;<a name="line.124"></a>
+<span class="sourceLineNo">125</span><a name="line.125"></a>
+<span class="sourceLineNo">126</span>    private List&lt;Permission&gt; permissions = new ArrayList&lt;&gt;();<a name="line.126"></a>
+<span class="sourceLineNo">127</span><a name="line.127"></a>
+<span class="sourceLineNo">128</span>    public PluginDescription(Map&lt;String, Object&gt; yamlMap) {<a name="line.128"></a>
+<span class="sourceLineNo">129</span>        this.loadMap(yamlMap);<a name="line.129"></a>
+<span class="sourceLineNo">130</span>    }<a name="line.130"></a>
+<span class="sourceLineNo">131</span><a name="line.131"></a>
+<span class="sourceLineNo">132</span>    public PluginDescription(String yamlString) {<a name="line.132"></a>
+<span class="sourceLineNo">133</span>        DumperOptions dumperOptions = new DumperOptions();<a name="line.133"></a>
+<span class="sourceLineNo">134</span>        dumperOptions.setDefaultFlowStyle(DumperOptions.FlowStyle.BLOCK);<a name="line.134"></a>
+<span class="sourceLineNo">135</span>        Yaml yaml = new Yaml(dumperOptions);<a name="line.135"></a>
+<span class="sourceLineNo">136</span>        this.loadMap(yaml.loadAs(yamlString, LinkedHashMap.class));<a name="line.136"></a>
+<span class="sourceLineNo">137</span>    }<a name="line.137"></a>
+<span class="sourceLineNo">138</span><a name="line.138"></a>
+<span class="sourceLineNo">139</span>    private void loadMap(Map&lt;String, Object&gt; plugin) throws PluginException {<a name="line.139"></a>
+<span class="sourceLineNo">140</span>        this.name = ((String) plugin.get("name")).replaceAll("[^A-Za-z0-9 _.-]", "");<a name="line.140"></a>
+<span class="sourceLineNo">141</span>        if (this.name.equals("")) {<a name="line.141"></a>
+<span class="sourceLineNo">142</span>            throw new PluginException("Invalid PluginDescription name");<a name="line.142"></a>
+<span class="sourceLineNo">143</span>        }<a name="line.143"></a>
+<span class="sourceLineNo">144</span>        this.name = this.name.replace(" ", "_");<a name="line.144"></a>
+<span class="sourceLineNo">145</span>        this.version = String.valueOf(plugin.get("version"));<a name="line.145"></a>
+<span class="sourceLineNo">146</span>        this.main = (String) plugin.get("main");<a name="line.146"></a>
+<span class="sourceLineNo">147</span>        Object api = plugin.get("api");<a name="line.147"></a>
+<span class="sourceLineNo">148</span>        if (api instanceof List) {<a name="line.148"></a>
+<span class="sourceLineNo">149</span>            this.api = (List&lt;String&gt;) api;<a name="line.149"></a>
+<span class="sourceLineNo">150</span>        } else {<a name="line.150"></a>
+<span class="sourceLineNo">151</span>            List&lt;String&gt; list = new ArrayList&lt;&gt;();<a name="line.151"></a>
+<span class="sourceLineNo">152</span>            list.add((String) api);<a name="line.152"></a>
+<span class="sourceLineNo">153</span>            this.api = list;<a name="line.153"></a>
+<span class="sourceLineNo">154</span>        }<a name="line.154"></a>
+<span class="sourceLineNo">155</span>        if (this.main.startsWith("cn.nukkit.")) {<a name="line.155"></a>
+<span class="sourceLineNo">156</span>            throw new PluginException("Invalid PluginDescription main, cannot start within the cn.nukkit. package");<a name="line.156"></a>
+<span class="sourceLineNo">157</span>        }<a name="line.157"></a>
+<span class="sourceLineNo">158</span><a name="line.158"></a>
+<span class="sourceLineNo">159</span>        if (plugin.containsKey("commands") &amp;&amp; plugin.get("commands") instanceof Map) {<a name="line.159"></a>
+<span class="sourceLineNo">160</span>            this.commands = (Map&lt;String, Object&gt;) plugin.get("commands");<a name="line.160"></a>
+<span class="sourceLineNo">161</span>        }<a name="line.161"></a>
+<span class="sourceLineNo">162</span><a name="line.162"></a>
+<span class="sourceLineNo">163</span>        if (plugin.containsKey("depend")) {<a name="line.163"></a>
+<span class="sourceLineNo">164</span>            this.depend = (List&lt;String&gt;) plugin.get("depend");<a name="line.164"></a>
+<span class="sourceLineNo">165</span>        }<a name="line.165"></a>
+<span class="sourceLineNo">166</span><a name="line.166"></a>
+<span class="sourceLineNo">167</span>        if (plugin.containsKey("softdepend")) {<a name="line.167"></a>
+<span class="sourceLineNo">168</span>            this.softDepend = (List&lt;String&gt;) plugin.get("softdepend");<a name="line.168"></a>
+<span class="sourceLineNo">169</span>        }<a name="line.169"></a>
+<span class="sourceLineNo">170</span><a name="line.170"></a>
+<span class="sourceLineNo">171</span>        if (plugin.containsKey("loadbefore")) {<a name="line.171"></a>
+<span class="sourceLineNo">172</span>            this.loadBefore = (List&lt;String&gt;) plugin.get("loadbefore");<a name="line.172"></a>
+<span class="sourceLineNo">173</span>        }<a name="line.173"></a>
+<span class="sourceLineNo">174</span><a name="line.174"></a>
+<span class="sourceLineNo">175</span>        if (plugin.containsKey("website")) {<a name="line.175"></a>
+<span class="sourceLineNo">176</span>            this.website = (String) plugin.get("website");<a name="line.176"></a>
+<span class="sourceLineNo">177</span>        }<a name="line.177"></a>
+<span class="sourceLineNo">178</span><a name="line.178"></a>
+<span class="sourceLineNo">179</span>        if (plugin.containsKey("description")) {<a name="line.179"></a>
+<span class="sourceLineNo">180</span>            this.description = (String) plugin.get("description");<a name="line.180"></a>
+<span class="sourceLineNo">181</span>        }<a name="line.181"></a>
+<span class="sourceLineNo">182</span><a name="line.182"></a>
+<span class="sourceLineNo">183</span>        if (plugin.containsKey("prefix")) {<a name="line.183"></a>
+<span class="sourceLineNo">184</span>            this.prefix = (String) plugin.get("prefix");<a name="line.184"></a>
+<span class="sourceLineNo">185</span>        }<a name="line.185"></a>
+<span class="sourceLineNo">186</span><a name="line.186"></a>
+<span class="sourceLineNo">187</span>        if (plugin.containsKey("load")) {<a name="line.187"></a>
+<span class="sourceLineNo">188</span>            String order = (String) plugin.get("load");<a name="line.188"></a>
+<span class="sourceLineNo">189</span>            try {<a name="line.189"></a>
+<span class="sourceLineNo">190</span>                this.order = PluginLoadOrder.valueOf(order);<a name="line.190"></a>
+<span class="sourceLineNo">191</span>            } catch (Exception e) {<a name="line.191"></a>
+<span class="sourceLineNo">192</span>                throw new PluginException("Invalid PluginDescription load");<a name="line.192"></a>
+<span class="sourceLineNo">193</span>            }<a name="line.193"></a>
+<span class="sourceLineNo">194</span>        }<a name="line.194"></a>
+<span class="sourceLineNo">195</span><a name="line.195"></a>
+<span class="sourceLineNo">196</span>        if (plugin.containsKey("author")) {<a name="line.196"></a>
+<span class="sourceLineNo">197</span>            this.authors.add((String) plugin.get("author"));<a name="line.197"></a>
+<span class="sourceLineNo">198</span>        }<a name="line.198"></a>
+<span class="sourceLineNo">199</span><a name="line.199"></a>
+<span class="sourceLineNo">200</span>        if (plugin.containsKey("authors")) {<a name="line.200"></a>
+<span class="sourceLineNo">201</span>            this.authors.addAll((Collection&lt;? extends String&gt;) plugin.get("authors"));<a name="line.201"></a>
+<span class="sourceLineNo">202</span>        }<a name="line.202"></a>
+<span class="sourceLineNo">203</span><a name="line.203"></a>
+<span class="sourceLineNo">204</span>        if (plugin.containsKey("permissions")) {<a name="line.204"></a>
+<span class="sourceLineNo">205</span>            this.permissions = Permission.loadPermissions((Map&lt;String, Object&gt;) plugin.get("permissions"));<a name="line.205"></a>
+<span class="sourceLineNo">206</span>        }<a name="line.206"></a>
+<span class="sourceLineNo">207</span>    }<a name="line.207"></a>
+<span class="sourceLineNo">208</span><a name="line.208"></a>
+<span class="sourceLineNo">209</span>    /**<a name="line.209"></a>
+<span class="sourceLineNo">210</span>     * 返回这个插件完整的名字。&lt;br&gt;<a name="line.210"></a>
+<span class="sourceLineNo">211</span>     * Returns the full name of this plugin.<a name="line.211"></a>
+<span class="sourceLineNo">212</span>     *<a name="line.212"></a>
+<span class="sourceLineNo">213</span>     * &lt;p&gt;一个插件完整的名字由{@code 名字+" v"+版本号}组成。比如：&lt;br&gt;<a name="line.213"></a>
+<span class="sourceLineNo">214</span>     * A full name of a plugin is composed by {@code name+" v"+version}.for example:&lt;/p&gt;<a name="line.214"></a>
+<span class="sourceLineNo">215</span>     * &lt;p&gt;{@code HelloWorld v1.0.0}&lt;/p&gt;<a name="line.215"></a>
+<span class="sourceLineNo">216</span>     *<a name="line.216"></a>
+<span class="sourceLineNo">217</span>     * @return 这个插件完整的名字。&lt;br&gt;The full name of this plugin.<a name="line.217"></a>
+<span class="sourceLineNo">218</span>     * @see PluginDescription<a name="line.218"></a>
+<span class="sourceLineNo">219</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.219"></a>
+<span class="sourceLineNo">220</span>     */<a name="line.220"></a>
+<span class="sourceLineNo">221</span>    public String getFullName() {<a name="line.221"></a>
+<span class="sourceLineNo">222</span>        return this.name + " v" + this.version;<a name="line.222"></a>
+<span class="sourceLineNo">223</span>    }<a name="line.223"></a>
+<span class="sourceLineNo">224</span><a name="line.224"></a>
+<span class="sourceLineNo">225</span>    /**<a name="line.225"></a>
+<span class="sourceLineNo">226</span>     * 返回这个插件支持的Nukkit API版本列表。&lt;br&gt;<a name="line.226"></a>
+<span class="sourceLineNo">227</span>     * Returns all Nukkit API versions this plugin supports.<a name="line.227"></a>
+<span class="sourceLineNo">228</span>     *<a name="line.228"></a>
+<span class="sourceLineNo">229</span>     * @return 这个插件支持的Nukkit API版本列表。&lt;br&gt;A list of all Nukkit API versions String this plugin supports.<a name="line.229"></a>
+<span class="sourceLineNo">230</span>     * @see PluginDescription<a name="line.230"></a>
+<span class="sourceLineNo">231</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.231"></a>
+<span class="sourceLineNo">232</span>     */<a name="line.232"></a>
+<span class="sourceLineNo">233</span>    public List&lt;String&gt; getCompatibleAPIs() {<a name="line.233"></a>
+<span class="sourceLineNo">234</span>        return api;<a name="line.234"></a>
+<span class="sourceLineNo">235</span>    }<a name="line.235"></a>
+<span class="sourceLineNo">236</span><a name="line.236"></a>
+<span class="sourceLineNo">237</span>    /**<a name="line.237"></a>
+<span class="sourceLineNo">238</span>     * 返回这个插件的作者列表。&lt;br&gt;<a name="line.238"></a>
+<span class="sourceLineNo">239</span>     * Returns all the authors of this plugin.<a name="line.239"></a>
+<span class="sourceLineNo">240</span>     *<a name="line.240"></a>
+<span class="sourceLineNo">241</span>     * @return 这个插件的作者列表。&lt;br&gt;A list of all authors of this plugin.<a name="line.241"></a>
+<span class="sourceLineNo">242</span>     * @see PluginDescription<a name="line.242"></a>
+<span class="sourceLineNo">243</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.243"></a>
+<span class="sourceLineNo">244</span>     */<a name="line.244"></a>
+<span class="sourceLineNo">245</span>    public List&lt;String&gt; getAuthors() {<a name="line.245"></a>
+<span class="sourceLineNo">246</span>        return authors;<a name="line.246"></a>
+<span class="sourceLineNo">247</span>    }<a name="line.247"></a>
+<span class="sourceLineNo">248</span><a name="line.248"></a>
+<span class="sourceLineNo">249</span>    /**<a name="line.249"></a>
+<span class="sourceLineNo">250</span>     * 返回这个插件的信息前缀。&lt;br&gt;<a name="line.250"></a>
+<span class="sourceLineNo">251</span>     * Returns the message title of this plugin.<a name="line.251"></a>
+<span class="sourceLineNo">252</span>     *<a name="line.252"></a>
+<span class="sourceLineNo">253</span>     * &lt;p&gt;插件的信息前缀在记录器记录信息时，会作为信息头衔使用。如果没有定义记录器，会使用插件的名字作为信息头衔。&lt;br&gt;<a name="line.253"></a>
+<span class="sourceLineNo">254</span>     * When a PluginLogger logs, the message title is used as the prefix of message. If prefix is undefined,<a name="line.254"></a>
+<span class="sourceLineNo">255</span>     * the plugin name will be used instead. &lt;/p&gt;<a name="line.255"></a>
+<span class="sourceLineNo">256</span>     *<a name="line.256"></a>
+<span class="sourceLineNo">257</span>     * @return 这个插件的作信息前缀。如果没定义，返回{@code null}。&lt;br&gt;<a name="line.257"></a>
+<span class="sourceLineNo">258</span>     * The message title of this plugin, or{@code null} if undefined.<a name="line.258"></a>
+<span class="sourceLineNo">259</span>     * @see PluginLogger<a name="line.259"></a>
+<span class="sourceLineNo">260</span>     * @see PluginDescription<a name="line.260"></a>
+<span class="sourceLineNo">261</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.261"></a>
+<span class="sourceLineNo">262</span>     */<a name="line.262"></a>
+<span class="sourceLineNo">263</span>    public String getPrefix() {<a name="line.263"></a>
+<span class="sourceLineNo">264</span>        return prefix;<a name="line.264"></a>
+<span class="sourceLineNo">265</span>    }<a name="line.265"></a>
+<span class="sourceLineNo">266</span><a name="line.266"></a>
+<span class="sourceLineNo">267</span>    /**<a name="line.267"></a>
+<span class="sourceLineNo">268</span>     * 返回这个插件定义的命令列表。&lt;br&gt;<a name="line.268"></a>
+<span class="sourceLineNo">269</span>     * Returns all the defined commands of this plugin.<a name="line.269"></a>
+<span class="sourceLineNo">270</span>     *<a name="line.270"></a>
+<span class="sourceLineNo">271</span>     * @return 这个插件定义的命令列表。&lt;br&gt;A map of all defined commands of this plugin.<a name="line.271"></a>
+<span class="sourceLineNo">272</span>     * @see PluginDescription<a name="line.272"></a>
+<span class="sourceLineNo">273</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.273"></a>
+<span class="sourceLineNo">274</span>     */<a name="line.274"></a>
+<span class="sourceLineNo">275</span>    public Map&lt;String, Object&gt; getCommands() {<a name="line.275"></a>
+<span class="sourceLineNo">276</span>        return commands;<a name="line.276"></a>
+<span class="sourceLineNo">277</span>    }<a name="line.277"></a>
+<span class="sourceLineNo">278</span><a name="line.278"></a>
+<span class="sourceLineNo">279</span>    /**<a name="line.279"></a>
+<span class="sourceLineNo">280</span>     * 返回这个插件所依赖的插件名字。&lt;br&gt;<a name="line.280"></a>
+<span class="sourceLineNo">281</span>     * The names of the plugins what is depended by this plugin.<a name="line.281"></a>
+<span class="sourceLineNo">282</span>     *<a name="line.282"></a>
+<span class="sourceLineNo">283</span>     * Nukkit插件的依赖有这些注意事项：&lt;br&gt;Here are some note for Nukkit plugin depending:<a name="line.283"></a>
+<span class="sourceLineNo">284</span>     * &lt;ul&gt;<a name="line.284"></a>
+<span class="sourceLineNo">285</span>     * &lt;li&gt;一个插件不能依赖自己（否则会报错）。&lt;br&gt;A plugin can not depend on itself (or there will be an exception).&lt;/li&gt;<a name="line.285"></a>
+<span class="sourceLineNo">286</span>     * &lt;li&gt;如果一个插件依赖另一个插件，那么必须要安装依赖的插件后才能加载这个插件。&lt;br&gt;<a name="line.286"></a>
+<span class="sourceLineNo">287</span>     * If a plugin relies on another one, the another one must be installed at the same time, or Nukkit<a name="line.287"></a>
+<span class="sourceLineNo">288</span>     * won't load this plugin.&lt;/li&gt;<a name="line.288"></a>
+<span class="sourceLineNo">289</span>     * &lt;li&gt;当一个插件所依赖的插件不存在时，Nukkit不会加载这个插件，但是会提醒用户去安装所依赖的插件。&lt;br&gt;<a name="line.289"></a>
+<span class="sourceLineNo">290</span>     * When the required dependency plugin does not exists, Nukkit won't load this plugin, but will tell the<a name="line.290"></a>
+<span class="sourceLineNo">291</span>     * user that this dependency is required.&lt;/li&gt;<a name="line.291"></a>
+<span class="sourceLineNo">292</span>     * &lt;/ul&gt;<a name="line.292"></a>
+<span class="sourceLineNo">293</span>     *<a name="line.293"></a>
+<span class="sourceLineNo">294</span>     * &lt;p&gt;举个例子，如果A插件依赖于B插件，在没有安装B插件而安装A插件的情况下，Nukkit会阻止A插件的加载。<a name="line.294"></a>
+<span class="sourceLineNo">295</span>     * 只有在安装B插件前安装了它所依赖的A插件，Nukkit才会允许加载B插件。&lt;br&gt;<a name="line.295"></a>
+<span class="sourceLineNo">296</span>     * For example, there is a Plugin A which relies on Plugin B. If you installed A without installing B,<a name="line.296"></a>
+<span class="sourceLineNo">297</span>     * Nukkit won't load A because its dependency B is lost. Only when B is installed, A will be loaded<a name="line.297"></a>
+<span class="sourceLineNo">298</span>     * by Nukkit.&lt;/p&gt;<a name="line.298"></a>
+<span class="sourceLineNo">299</span>     *<a name="line.299"></a>
+<span class="sourceLineNo">300</span>     * @return 插件名字列表的 {@code List}对象。&lt;br&gt;A {@code List} object carries the plugin names.<a name="line.300"></a>
+<span class="sourceLineNo">301</span>     * @see PluginDescription<a name="line.301"></a>
+<span class="sourceLineNo">302</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.302"></a>
+<span class="sourceLineNo">303</span>     */<a name="line.303"></a>
+<span class="sourceLineNo">304</span>    public List&lt;String&gt; getDepend() {<a name="line.304"></a>
+<span class="sourceLineNo">305</span>        return depend;<a name="line.305"></a>
+<span class="sourceLineNo">306</span>    }<a name="line.306"></a>
+<span class="sourceLineNo">307</span><a name="line.307"></a>
+<span class="sourceLineNo">308</span>    /**<a name="line.308"></a>
+<span class="sourceLineNo">309</span>     * 返回这个插件的描述文字。&lt;br&gt;<a name="line.309"></a>
+<span class="sourceLineNo">310</span>     * Returns the description text of this plugin.<a name="line.310"></a>
+<span class="sourceLineNo">311</span>     *<a name="line.311"></a>
+<span class="sourceLineNo">312</span>     * @return 这个插件的描述文字。&lt;br&gt;The description text of this plugin.<a name="line.312"></a>
+<span class="sourceLineNo">313</span>     * @see PluginDescription<a name="line.313"></a>
+<span class="sourceLineNo">314</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.314"></a>
+<span class="sourceLineNo">315</span>     */<a name="line.315"></a>
+<span class="sourceLineNo">316</span>    public String getDescription() {<a name="line.316"></a>
+<span class="sourceLineNo">317</span>        return description;<a name="line.317"></a>
+<span class="sourceLineNo">318</span>    }<a name="line.318"></a>
+<span class="sourceLineNo">319</span><a name="line.319"></a>
+<span class="sourceLineNo">320</span>    /**<a name="line.320"></a>
+<span class="sourceLineNo">321</span>     * TODO finish javadoc<a name="line.321"></a>
+<span class="sourceLineNo">322</span>     */<a name="line.322"></a>
+<span class="sourceLineNo">323</span>    public List&lt;String&gt; getLoadBefore() {<a name="line.323"></a>
+<span class="sourceLineNo">324</span>        return loadBefore;<a name="line.324"></a>
+<span class="sourceLineNo">325</span>    }<a name="line.325"></a>
+<span class="sourceLineNo">326</span><a name="line.326"></a>
+<span class="sourceLineNo">327</span>    /**<a name="line.327"></a>
+<span class="sourceLineNo">328</span>     * 返回这个插件的主类名。&lt;br&gt;<a name="line.328"></a>
+<span class="sourceLineNo">329</span>     * Returns the main class name of this plugin.<a name="line.329"></a>
+<span class="sourceLineNo">330</span>     *<a name="line.330"></a>
+<span class="sourceLineNo">331</span>     * &lt;p&gt;一个插件的加载都是从主类开始的。主类的名字在插件的配置文件中定义后可以通过这个函数返回。一个返回值例子：&lt;br&gt;<a name="line.331"></a>
+<span class="sourceLineNo">332</span>     * The load action of a Nukkit plugin begins from main class. The name of main class should be defined<a name="line.332"></a>
+<span class="sourceLineNo">333</span>     * in the plugin configuration, and it can be returned by this function. An example for return value: &lt;br&gt;<a name="line.333"></a>
+<span class="sourceLineNo">334</span>     * {@code "com.example.ExamplePlugin"}&lt;/p&gt;<a name="line.334"></a>
+<span class="sourceLineNo">335</span>     *<a name="line.335"></a>
+<span class="sourceLineNo">336</span>     * @return 这个插件的主类名。&lt;br&gt;The main class name of this plugin.<a name="line.336"></a>
+<span class="sourceLineNo">337</span>     * @see PluginDescription<a name="line.337"></a>
+<span class="sourceLineNo">338</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.338"></a>
+<span class="sourceLineNo">339</span>     */<a name="line.339"></a>
+<span class="sourceLineNo">340</span>    public String getMain() {<a name="line.340"></a>
+<span class="sourceLineNo">341</span>        return main;<a name="line.341"></a>
+<span class="sourceLineNo">342</span>    }<a name="line.342"></a>
+<span class="sourceLineNo">343</span><a name="line.343"></a>
+<span class="sourceLineNo">344</span>    /**<a name="line.344"></a>
+<span class="sourceLineNo">345</span>     * 返回这个插件的名字。&lt;br&gt;<a name="line.345"></a>
+<span class="sourceLineNo">346</span>     * Returns the name of this plugin.<a name="line.346"></a>
+<span class="sourceLineNo">347</span>     *<a name="line.347"></a>
+<span class="sourceLineNo">348</span>     * @return 这个插件的名字。&lt;br&gt;The name of this plugin.<a name="line.348"></a>
+<span class="sourceLineNo">349</span>     * @see PluginDescription<a name="line.349"></a>
+<span class="sourceLineNo">350</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.350"></a>
+<span class="sourceLineNo">351</span>     */<a name="line.351"></a>
+<span class="sourceLineNo">352</span>    public String getName() {<a name="line.352"></a>
+<span class="sourceLineNo">353</span>        return name;<a name="line.353"></a>
+<span class="sourceLineNo">354</span>    }<a name="line.354"></a>
+<span class="sourceLineNo">355</span><a name="line.355"></a>
+<span class="sourceLineNo">356</span>    /**<a name="line.356"></a>
+<span class="sourceLineNo">357</span>     * 返回这个插件加载的顺序，即插件应该在什么时候加载。&lt;br&gt;<a name="line.357"></a>
+<span class="sourceLineNo">358</span>     * Returns the order the plugin loads, or when the plugin is loaded.<a name="line.358"></a>
+<span class="sourceLineNo">359</span>     *<a name="line.359"></a>
+<span class="sourceLineNo">360</span>     * @return 这个插件加载的顺序。&lt;br&gt;The order the plugin loads.<a name="line.360"></a>
+<span class="sourceLineNo">361</span>     * @see PluginDescription<a name="line.361"></a>
+<span class="sourceLineNo">362</span>     * @see PluginLoadOrder<a name="line.362"></a>
+<span class="sourceLineNo">363</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.363"></a>
+<span class="sourceLineNo">364</span>     */<a name="line.364"></a>
+<span class="sourceLineNo">365</span>    public PluginLoadOrder getOrder() {<a name="line.365"></a>
+<span class="sourceLineNo">366</span>        return order;<a name="line.366"></a>
+<span class="sourceLineNo">367</span>    }<a name="line.367"></a>
+<span class="sourceLineNo">368</span><a name="line.368"></a>
+<span class="sourceLineNo">369</span>    /**<a name="line.369"></a>
+<span class="sourceLineNo">370</span>     * 返回这个插件定义的权限列表。&lt;br&gt;<a name="line.370"></a>
+<span class="sourceLineNo">371</span>     * Returns all the defined permissions of this plugin.<a name="line.371"></a>
+<span class="sourceLineNo">372</span>     *<a name="line.372"></a>
+<span class="sourceLineNo">373</span>     * @return 这个插件定义的权限列表。&lt;br&gt;A map of all defined permissions of this plugin.<a name="line.373"></a>
+<span class="sourceLineNo">374</span>     * @see PluginDescription<a name="line.374"></a>
+<span class="sourceLineNo">375</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.375"></a>
+<span class="sourceLineNo">376</span>     */<a name="line.376"></a>
+<span class="sourceLineNo">377</span>    public List&lt;Permission&gt; getPermissions() {<a name="line.377"></a>
+<span class="sourceLineNo">378</span>        return permissions;<a name="line.378"></a>
+<span class="sourceLineNo">379</span>    }<a name="line.379"></a>
+<span class="sourceLineNo">380</span><a name="line.380"></a>
+<span class="sourceLineNo">381</span>    /**<a name="line.381"></a>
+<span class="sourceLineNo">382</span>     * TODO finish javadoc<a name="line.382"></a>
+<span class="sourceLineNo">383</span>     */<a name="line.383"></a>
+<span class="sourceLineNo">384</span>    public List&lt;String&gt; getSoftDepend() {<a name="line.384"></a>
+<span class="sourceLineNo">385</span>        return softDepend;<a name="line.385"></a>
+<span class="sourceLineNo">386</span>    }<a name="line.386"></a>
+<span class="sourceLineNo">387</span><a name="line.387"></a>
+<span class="sourceLineNo">388</span>    /**<a name="line.388"></a>
+<span class="sourceLineNo">389</span>     * 返回这个插件的版本号。&lt;br&gt;<a name="line.389"></a>
+<span class="sourceLineNo">390</span>     * Returns the version string of this plugin.<a name="line.390"></a>
+<span class="sourceLineNo">391</span>     *<a name="line.391"></a>
+<span class="sourceLineNo">392</span>     * @return 这个插件的版本号。&lt;br&gt;The version string od this plugin.<a name="line.392"></a>
+<span class="sourceLineNo">393</span>     * @see PluginDescription<a name="line.393"></a>
+<span class="sourceLineNo">394</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.394"></a>
+<span class="sourceLineNo">395</span>     */<a name="line.395"></a>
+<span class="sourceLineNo">396</span>    public String getVersion() {<a name="line.396"></a>
+<span class="sourceLineNo">397</span>        return version;<a name="line.397"></a>
+<span class="sourceLineNo">398</span>    }<a name="line.398"></a>
+<span class="sourceLineNo">399</span><a name="line.399"></a>
+<span class="sourceLineNo">400</span>    /**<a name="line.400"></a>
+<span class="sourceLineNo">401</span>     * 返回这个插件的网站。&lt;br&gt;<a name="line.401"></a>
+<span class="sourceLineNo">402</span>     * Returns the website of this plugin.<a name="line.402"></a>
+<span class="sourceLineNo">403</span>     *<a name="line.403"></a>
+<span class="sourceLineNo">404</span>     * @return 这个插件的网站。&lt;br&gt;The website of this plugin.<a name="line.404"></a>
+<span class="sourceLineNo">405</span>     * @see PluginDescription<a name="line.405"></a>
+<span class="sourceLineNo">406</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.406"></a>
+<span class="sourceLineNo">407</span>     */<a name="line.407"></a>
+<span class="sourceLineNo">408</span>    public String getWebsite() {<a name="line.408"></a>
+<span class="sourceLineNo">409</span>        return website;<a name="line.409"></a>
+<span class="sourceLineNo">410</span>    }<a name="line.410"></a>
+<span class="sourceLineNo">411</span>}<a name="line.411"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>

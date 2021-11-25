@@ -152,7 +152,7 @@
 <span class="sourceLineNo">144</span>                if (commandParameters != null) {<a name="line.144"></a>
 <span class="sourceLineNo">145</span>                    Map&lt;String, CommandParameter[]&gt; map = Arrays.stream(commandParameters.parameters())<a name="line.145"></a>
 <span class="sourceLineNo">146</span>                            .collect(Collectors.toMap(Parameters::name, parameters -&gt; Arrays.stream(parameters.parameters())<a name="line.146"></a>
-<span class="sourceLineNo">147</span>                                    .map(parameter -&gt; new CommandParameter(parameter.name(), parameter.type(), parameter.optional()))<a name="line.147"></a>
+<span class="sourceLineNo">147</span>                                    .map(parameter -&gt; CommandParameter.newType(parameter.name(), parameter.optional(), parameter.type()))<a name="line.147"></a>
 <span class="sourceLineNo">148</span>                                    .distinct()<a name="line.148"></a>
 <span class="sourceLineNo">149</span>                                    .toArray(CommandParameter[]::new)));<a name="line.149"></a>
 <span class="sourceLineNo">150</span><a name="line.150"></a>
@@ -308,7 +308,7 @@
 <span class="sourceLineNo">300</span>            }<a name="line.300"></a>
 <span class="sourceLineNo">301</span>            List&lt;String&gt; targets = new ArrayList&lt;&gt;();<a name="line.301"></a>
 <span class="sourceLineNo">302</span><a name="line.302"></a>
-<span class="sourceLineNo">303</span>            String bad = "";<a name="line.303"></a>
+<span class="sourceLineNo">303</span>            StringBuilder bad = new StringBuilder();<a name="line.303"></a>
 <span class="sourceLineNo">304</span><a name="line.304"></a>
 <span class="sourceLineNo">305</span>            for (String commandString : commandStrings) {<a name="line.305"></a>
 <span class="sourceLineNo">306</span>                String[] args = commandString.split(" ");<a name="line.306"></a>
@@ -316,16 +316,16 @@
 <span class="sourceLineNo">308</span><a name="line.308"></a>
 <span class="sourceLineNo">309</span>                if (command == null) {<a name="line.309"></a>
 <span class="sourceLineNo">310</span>                    if (bad.length() &gt; 0) {<a name="line.310"></a>
-<span class="sourceLineNo">311</span>                        bad += ", ";<a name="line.311"></a>
+<span class="sourceLineNo">311</span>                        bad.append(", ");<a name="line.311"></a>
 <span class="sourceLineNo">312</span>                    }<a name="line.312"></a>
-<span class="sourceLineNo">313</span>                    bad += commandString;<a name="line.313"></a>
+<span class="sourceLineNo">313</span>                    bad.append(commandString);<a name="line.313"></a>
 <span class="sourceLineNo">314</span>                } else {<a name="line.314"></a>
 <span class="sourceLineNo">315</span>                    targets.add(commandString);<a name="line.315"></a>
 <span class="sourceLineNo">316</span>                }<a name="line.316"></a>
 <span class="sourceLineNo">317</span>            }<a name="line.317"></a>
 <span class="sourceLineNo">318</span><a name="line.318"></a>
 <span class="sourceLineNo">319</span>            if (bad.length() &gt; 0) {<a name="line.319"></a>
-<span class="sourceLineNo">320</span>                this.server.getLogger().warning(this.server.getLanguage().translateString("nukkit.command.alias.notFound", new String[]{alias, bad}));<a name="line.320"></a>
+<span class="sourceLineNo">320</span>                this.server.getLogger().warning(this.server.getLanguage().translateString("nukkit.command.alias.notFound", new String[]{alias, bad.toString()}));<a name="line.320"></a>
 <span class="sourceLineNo">321</span>                continue;<a name="line.321"></a>
 <span class="sourceLineNo">322</span>            }<a name="line.322"></a>
 <span class="sourceLineNo">323</span><a name="line.323"></a>

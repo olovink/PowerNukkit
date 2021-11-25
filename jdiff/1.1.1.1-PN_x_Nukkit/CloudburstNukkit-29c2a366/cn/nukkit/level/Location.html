@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":9,"i10":9,"i11":9,"i12":9,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":9,"i10":9,"i11":9,"i12":9,"i13":9,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -49,7 +49,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../cn/nukkit/level/Level.html" title="class in cn.nukkit.level"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../cn/nukkit/level/ListChunkManager.html" title="class in cn.nukkit.level"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../cn/nukkit/level/MovingObjectPosition.html" title="class in cn.nukkit.level"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -151,9 +151,13 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/Location.html#pitch">pitch</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/Location.html#headYaw">headYaw</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/Location.html#pitch">pitch</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/Location.html#yaw">yaw</a></span></code>&nbsp;</td>
 </tr>
@@ -212,6 +216,23 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
         double&nbsp;z,
         double&nbsp;yaw,
         double&nbsp;pitch)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/Location.html#Location-double-double-double-double-double-double-">Location</a></span>(double&nbsp;x,
+        double&nbsp;y,
+        double&nbsp;z,
+        double&nbsp;yaw,
+        double&nbsp;pitch,
+        double&nbsp;headYaw)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/Location.html#Location-double-double-double-double-double-double-cn.nukkit.level.Level-">Location</a></span>(double&nbsp;x,
+        double&nbsp;y,
+        double&nbsp;z,
+        double&nbsp;yaw,
+        double&nbsp;pitch,
+        double&nbsp;headYaw,
+        <a href="../../../cn/nukkit/level/Level.html" title="class in cn.nukkit.level">Level</a>&nbsp;level)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/Location.html#Location-double-double-double-double-double-cn.nukkit.level.Level-">Location</a></span>(double&nbsp;x,
@@ -304,53 +325,65 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
           double&nbsp;pitch)</code>&nbsp;</td>
 </tr>
 <tr id="i13" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/Location.html#fromObject-cn.nukkit.math.Vector3-cn.nukkit.level.Level-double-double-double-">fromObject</a></span>(<a href="../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos,
+          <a href="../../../cn/nukkit/level/Level.html" title="class in cn.nukkit.level">Level</a>&nbsp;level,
+          double&nbsp;yaw,
+          double&nbsp;pitch,
+          double&nbsp;headYaw)</code>&nbsp;</td>
+</tr>
+<tr id="i14" class="altColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/Location.html#getDirectionVector--">getDirectionVector</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i15" class="rowColor">
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/Location.html#getHeadYaw--">getHeadYaw</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i16" class="altColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/Location.html#getLocation--">getLocation</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/Location.html#getPitch--">getPitch</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/Location.html#getYaw--">getYaw</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/Location.html#multiply-double-">multiply</a></span>(double&nbsp;number)</code>&nbsp;</td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/Location.html#round--">round</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/Location.html#subtract--">subtract</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/Location.html#subtract-double-">subtract</a></span>(double&nbsp;x)</code>&nbsp;</td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/Location.html#subtract-double-double-">subtract</a></span>(double&nbsp;x,
         double&nbsp;y)</code>&nbsp;</td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/Location.html#subtract-double-double-double-">subtract</a></span>(double&nbsp;x,
         double&nbsp;y,
         double&nbsp;z)</code>&nbsp;</td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/Location.html#subtract-cn.nukkit.math.Vector3-">subtract</a></span>(<a href="../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;x)</code>&nbsp;</td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/Location.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
@@ -367,7 +400,7 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;cn.nukkit.math.<a href="../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></h3>
-<code><a href="../../../cn/nukkit/math/Vector3.html#asBlockVector3--">asBlockVector3</a>, <a href="../../../cn/nukkit/math/Vector3.html#asVector3f--">asVector3f</a>, <a href="../../../cn/nukkit/math/Vector3.html#cross-cn.nukkit.math.Vector3-">cross</a>, <a href="../../../cn/nukkit/math/Vector3.html#distance-cn.nukkit.math.Vector3-">distance</a>, <a href="../../../cn/nukkit/math/Vector3.html#distanceSquared-cn.nukkit.math.Vector3-">distanceSquared</a>, <a href="../../../cn/nukkit/math/Vector3.html#dot-cn.nukkit.math.Vector3-">dot</a>, <a href="../../../cn/nukkit/math/Vector3.html#down--">down</a>, <a href="../../../cn/nukkit/math/Vector3.html#down-int-">down</a>, <a href="../../../cn/nukkit/math/Vector3.html#east--">east</a>, <a href="../../../cn/nukkit/math/Vector3.html#east-int-">east</a>, <a href="../../../cn/nukkit/math/Vector3.html#equals-java.lang.Object-">equals</a>, <a href="../../../cn/nukkit/math/Vector3.html#getChunkX--">getChunkX</a>, <a href="../../../cn/nukkit/math/Vector3.html#getChunkZ--">getChunkZ</a>, <a href="../../../cn/nukkit/math/Vector3.html#getFloorX--">getFloorX</a>, <a href="../../../cn/nukkit/math/Vector3.html#getFloorY--">getFloorY</a>, <a href="../../../cn/nukkit/math/Vector3.html#getFloorZ--">getFloorZ</a>, <a href="../../../cn/nukkit/math/Vector3.html#getForward--">getForward</a>, <a href="../../../cn/nukkit/math/Vector3.html#getIntermediateWithXValue-cn.nukkit.math.Vector3-double-">getIntermediateWithXValue</a>, <a href="../../../cn/nukkit/math/Vector3.html#getIntermediateWithYValue-cn.nukkit.math.Vector3-double-">getIntermediateWithYValue</a>, <a href="../../../cn/nukkit/math/Vector3.html#getIntermediateWithZValue-cn.nukkit.math.Vector3-double-">getIntermediateWithZValue</a>, <a href="../../../cn/nukkit/math/Vector3.html#getRight--">getRight</a>, <a href="../../../cn/nukkit/math/Vector3.html#getSouth--">getSouth</a>, <a href="../../../cn/nukkit/math/Vector3.html#getUp--">getUp</a>, <a href="../../../cn/nukkit/math/Vector3.html#getWest--">getWest</a>, <a href="../../../cn/nukkit/math/Vector3.html#getX--">getX</a>, <a href="../../../cn/nukkit/math/Vector3.html#getY--">getY</a>, <a href="../../../cn/nukkit/math/Vector3.html#getZ--">getZ</a>, <a href="../../../cn/nukkit/math/Vector3.html#hashCode--">hashCode</a>, <a href="../../../cn/nukkit/math/Vector3.html#length--">length</a>, <a href="../../../cn/nukkit/math/Vector3.html#lengthSquared--">lengthSquared</a>, <a href="../../../cn/nukkit/math/Vector3.html#maxPlainDistance--">maxPlainDistance</a>, <a href="../../../cn/nukkit/math/Vector3.html#maxPlainDistance-double-">maxPlainDistance</a>, <a href="../../../cn/nukkit/math/Vector3.html#maxPlainDistance-double-double-">maxPlainDistance</a>, <a href="../../../cn/nukkit/math/Vector3.html#maxPlainDistance-cn.nukkit.math.Vector2-">maxPlainDistance</a>, <a href="../../../cn/nukkit/math/Vector3.html#maxPlainDistance-cn.nukkit.math.Vector3-">maxPlainDistance</a>, <a href="../../../cn/nukkit/math/Vector3.html#normalize--">normalize</a>, <a href="../../../cn/nukkit/math/Vector3.html#north--">north</a>, <a href="../../../cn/nukkit/math/Vector3.html#north-int-">north</a>, <a href="../../../cn/nukkit/math/Vector3.html#rawHashCode--">rawHashCode</a>, <a href="../../../cn/nukkit/math/Vector3.html#south--">south</a>, <a href="../../../cn/nukkit/math/Vector3.html#south-int-">south</a>, <a href="../../../cn/nukkit/math/Vector3.html#up--">up</a>, <a href="../../../cn/nukkit/math/Vector3.html#up-int-">up</a>, <a href="../../../cn/nukkit/math/Vector3.html#west--">west</a>, <a href="../../../cn/nukkit/math/Vector3.html#west-int-">west</a></code></li>
+<code><a href="../../../cn/nukkit/math/Vector3.html#angleBetween-cn.nukkit.math.Vector3-">angleBetween</a>, <a href="../../../cn/nukkit/math/Vector3.html#asBlockVector3--">asBlockVector3</a>, <a href="../../../cn/nukkit/math/Vector3.html#asVector3f--">asVector3f</a>, <a href="../../../cn/nukkit/math/Vector3.html#cross-cn.nukkit.math.Vector3-">cross</a>, <a href="../../../cn/nukkit/math/Vector3.html#distance-cn.nukkit.math.Vector3-">distance</a>, <a href="../../../cn/nukkit/math/Vector3.html#distanceSquared-cn.nukkit.math.Vector3-">distanceSquared</a>, <a href="../../../cn/nukkit/math/Vector3.html#dot-cn.nukkit.math.Vector3-">dot</a>, <a href="../../../cn/nukkit/math/Vector3.html#down--">down</a>, <a href="../../../cn/nukkit/math/Vector3.html#down-int-">down</a>, <a href="../../../cn/nukkit/math/Vector3.html#east--">east</a>, <a href="../../../cn/nukkit/math/Vector3.html#east-int-">east</a>, <a href="../../../cn/nukkit/math/Vector3.html#equals-java.lang.Object-">equals</a>, <a href="../../../cn/nukkit/math/Vector3.html#getChunkX--">getChunkX</a>, <a href="../../../cn/nukkit/math/Vector3.html#getChunkZ--">getChunkZ</a>, <a href="../../../cn/nukkit/math/Vector3.html#getFloorX--">getFloorX</a>, <a href="../../../cn/nukkit/math/Vector3.html#getFloorY--">getFloorY</a>, <a href="../../../cn/nukkit/math/Vector3.html#getFloorZ--">getFloorZ</a>, <a href="../../../cn/nukkit/math/Vector3.html#getForward--">getForward</a>, <a href="../../../cn/nukkit/math/Vector3.html#getIntermediateWithXValue-cn.nukkit.math.Vector3-double-">getIntermediateWithXValue</a>, <a href="../../../cn/nukkit/math/Vector3.html#getIntermediateWithYValue-cn.nukkit.math.Vector3-double-">getIntermediateWithYValue</a>, <a href="../../../cn/nukkit/math/Vector3.html#getIntermediateWithZValue-cn.nukkit.math.Vector3-double-">getIntermediateWithZValue</a>, <a href="../../../cn/nukkit/math/Vector3.html#getRight--">getRight</a>, <a href="../../../cn/nukkit/math/Vector3.html#getSouth--">getSouth</a>, <a href="../../../cn/nukkit/math/Vector3.html#getUp--">getUp</a>, <a href="../../../cn/nukkit/math/Vector3.html#getWest--">getWest</a>, <a href="../../../cn/nukkit/math/Vector3.html#getX--">getX</a>, <a href="../../../cn/nukkit/math/Vector3.html#getY--">getY</a>, <a href="../../../cn/nukkit/math/Vector3.html#getZ--">getZ</a>, <a href="../../../cn/nukkit/math/Vector3.html#hashCode--">hashCode</a>, <a href="../../../cn/nukkit/math/Vector3.html#length--">length</a>, <a href="../../../cn/nukkit/math/Vector3.html#lengthSquared--">lengthSquared</a>, <a href="../../../cn/nukkit/math/Vector3.html#maxPlainDistance--">maxPlainDistance</a>, <a href="../../../cn/nukkit/math/Vector3.html#maxPlainDistance-double-">maxPlainDistance</a>, <a href="../../../cn/nukkit/math/Vector3.html#maxPlainDistance-double-double-">maxPlainDistance</a>, <a href="../../../cn/nukkit/math/Vector3.html#maxPlainDistance-cn.nukkit.math.Vector2-">maxPlainDistance</a>, <a href="../../../cn/nukkit/math/Vector3.html#maxPlainDistance-cn.nukkit.math.Vector3-">maxPlainDistance</a>, <a href="../../../cn/nukkit/math/Vector3.html#normalize--">normalize</a>, <a href="../../../cn/nukkit/math/Vector3.html#north--">north</a>, <a href="../../../cn/nukkit/math/Vector3.html#north-int-">north</a>, <a href="../../../cn/nukkit/math/Vector3.html#rawHashCode--">rawHashCode</a>, <a href="../../../cn/nukkit/math/Vector3.html#setX-double-">setX</a>, <a href="../../../cn/nukkit/math/Vector3.html#setY-double-">setY</a>, <a href="../../../cn/nukkit/math/Vector3.html#setZ-double-">setZ</a>, <a href="../../../cn/nukkit/math/Vector3.html#south--">south</a>, <a href="../../../cn/nukkit/math/Vector3.html#south-int-">south</a>, <a href="../../../cn/nukkit/math/Vector3.html#up--">up</a>, <a href="../../../cn/nukkit/math/Vector3.html#up-int-">up</a>, <a href="../../../cn/nukkit/math/Vector3.html#west--">west</a>, <a href="../../../cn/nukkit/math/Vector3.html#west-int-">west</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -402,10 +435,19 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <a name="pitch">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>pitch</h4>
 <pre>public&nbsp;double <a href="../../../src-html/cn/nukkit/level/Location.html#line.13">pitch</a></pre>
+</li>
+</ul>
+<a name="headYaw">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>headYaw</h4>
+<pre>public&nbsp;double <a href="../../../src-html/cn/nukkit/level/Location.html#line.14">headYaw</a></pre>
 </li>
 </ul>
 </li>
@@ -422,7 +464,7 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>Location</h4>
-<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.15">Location</a>()</pre>
+<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.16">Location</a>()</pre>
 </li>
 </ul>
 <a name="Location-double-">
@@ -431,7 +473,7 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>Location</h4>
-<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.19">Location</a>(double&nbsp;x)</pre>
+<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.20">Location</a>(double&nbsp;x)</pre>
 </li>
 </ul>
 <a name="Location-double-double-">
@@ -440,20 +482,8 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>Location</h4>
-<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.23">Location</a>(double&nbsp;x,
+<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.24">Location</a>(double&nbsp;x,
                 double&nbsp;y)</pre>
-</li>
-</ul>
-<a name="Location-double-double-double-cn.nukkit.level.Level-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>Location</h4>
-<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.27">Location</a>(double&nbsp;x,
-                double&nbsp;y,
-                double&nbsp;z,
-                <a href="../../../cn/nukkit/level/Level.html" title="class in cn.nukkit.level">Level</a>&nbsp;level)</pre>
 </li>
 </ul>
 <a name="Location-double-double-double-">
@@ -462,9 +492,21 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>Location</h4>
-<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.31">Location</a>(double&nbsp;x,
+<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.28">Location</a>(double&nbsp;x,
                 double&nbsp;y,
                 double&nbsp;z)</pre>
+</li>
+</ul>
+<a name="Location-double-double-double-cn.nukkit.level.Level-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>Location</h4>
+<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.32">Location</a>(double&nbsp;x,
+                double&nbsp;y,
+                double&nbsp;z,
+                <a href="../../../cn/nukkit/level/Level.html" title="class in cn.nukkit.level">Level</a>&nbsp;level)</pre>
 </li>
 </ul>
 <a name="Location-double-double-double-double-">
@@ -473,7 +515,7 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>Location</h4>
-<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.35">Location</a>(double&nbsp;x,
+<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.36">Location</a>(double&nbsp;x,
                 double&nbsp;y,
                 double&nbsp;z,
                 double&nbsp;yaw)</pre>
@@ -485,7 +527,7 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>Location</h4>
-<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.39">Location</a>(double&nbsp;x,
+<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.40">Location</a>(double&nbsp;x,
                 double&nbsp;y,
                 double&nbsp;z,
                 double&nbsp;yaw,
@@ -495,14 +537,43 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <a name="Location-double-double-double-double-double-cn.nukkit.level.Level-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>Location</h4>
-<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.43">Location</a>(double&nbsp;x,
+<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.44">Location</a>(double&nbsp;x,
                 double&nbsp;y,
                 double&nbsp;z,
                 double&nbsp;yaw,
                 double&nbsp;pitch,
+                <a href="../../../cn/nukkit/level/Level.html" title="class in cn.nukkit.level">Level</a>&nbsp;level)</pre>
+</li>
+</ul>
+<a name="Location-double-double-double-double-double-double-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>Location</h4>
+<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.48">Location</a>(double&nbsp;x,
+                double&nbsp;y,
+                double&nbsp;z,
+                double&nbsp;yaw,
+                double&nbsp;pitch,
+                double&nbsp;headYaw)</pre>
+</li>
+</ul>
+<a name="Location-double-double-double-double-double-double-cn.nukkit.level.Level-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>Location</h4>
+<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.52">Location</a>(double&nbsp;x,
+                double&nbsp;y,
+                double&nbsp;z,
+                double&nbsp;yaw,
+                double&nbsp;pitch,
+                double&nbsp;headYaw,
                 <a href="../../../cn/nukkit/level/Level.html" title="class in cn.nukkit.level">Level</a>&nbsp;level)</pre>
 </li>
 </ul>
@@ -520,7 +591,7 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>fromObject</h4>
-<pre>public static&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.52">fromObject</a>(<a href="../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos)</pre>
+<pre>public static&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.62">fromObject</a>(<a href="../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos)</pre>
 </li>
 </ul>
 <a name="fromObject-cn.nukkit.math.Vector3-cn.nukkit.level.Level-">
@@ -529,7 +600,7 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>fromObject</h4>
-<pre>public static&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.56">fromObject</a>(<a href="../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos,
+<pre>public static&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.66">fromObject</a>(<a href="../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos,
                                   <a href="../../../cn/nukkit/level/Level.html" title="class in cn.nukkit.level">Level</a>&nbsp;level)</pre>
 </li>
 </ul>
@@ -539,7 +610,7 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>fromObject</h4>
-<pre>public static&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.60">fromObject</a>(<a href="../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos,
+<pre>public static&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.70">fromObject</a>(<a href="../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos,
                                   <a href="../../../cn/nukkit/level/Level.html" title="class in cn.nukkit.level">Level</a>&nbsp;level,
                                   double&nbsp;yaw)</pre>
 </li>
@@ -550,10 +621,23 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>fromObject</h4>
-<pre>public static&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.64">fromObject</a>(<a href="../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos,
+<pre>public static&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.74">fromObject</a>(<a href="../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos,
                                   <a href="../../../cn/nukkit/level/Level.html" title="class in cn.nukkit.level">Level</a>&nbsp;level,
                                   double&nbsp;yaw,
                                   double&nbsp;pitch)</pre>
+</li>
+</ul>
+<a name="fromObject-cn.nukkit.math.Vector3-cn.nukkit.level.Level-double-double-double-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fromObject</h4>
+<pre>public static&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.78">fromObject</a>(<a href="../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos,
+                                  <a href="../../../cn/nukkit/level/Level.html" title="class in cn.nukkit.level">Level</a>&nbsp;level,
+                                  double&nbsp;yaw,
+                                  double&nbsp;pitch,
+                                  double&nbsp;headYaw)</pre>
 </li>
 </ul>
 <a name="getYaw--">
@@ -562,7 +646,7 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>getYaw</h4>
-<pre>public&nbsp;double&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.68">getYaw</a>()</pre>
+<pre>public&nbsp;double&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.82">getYaw</a>()</pre>
 </li>
 </ul>
 <a name="getPitch--">
@@ -571,7 +655,16 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>getPitch</h4>
-<pre>public&nbsp;double&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.72">getPitch</a>()</pre>
+<pre>public&nbsp;double&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.86">getPitch</a>()</pre>
+</li>
+</ul>
+<a name="getHeadYaw--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getHeadYaw</h4>
+<pre>public&nbsp;double&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.90">getHeadYaw</a>()</pre>
 </li>
 </ul>
 <a name="toString--">
@@ -580,7 +673,7 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>toString</h4>
-<pre>public&nbsp;java.lang.String&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.77">toString</a>()</pre>
+<pre>public&nbsp;java.lang.String&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.95">toString</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../cn/nukkit/level/Position.html#toString--">toString</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukkit.level">Position</a></code></dd>
@@ -593,7 +686,7 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>getLocation</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.82">getLocation</a>()</pre>
+<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.100">getLocation</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../cn/nukkit/level/Position.html#getLocation--">getLocation</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukkit.level">Position</a></code></dd>
@@ -606,7 +699,7 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>add</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.88">add</a>(double&nbsp;x)</pre>
+<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.106">add</a>(double&nbsp;x)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../cn/nukkit/level/Position.html#add-double-">add</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukkit.level">Position</a></code></dd>
@@ -619,7 +712,7 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>add</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.93">add</a>(double&nbsp;x,
+<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.111">add</a>(double&nbsp;x,
                     double&nbsp;y)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
@@ -633,7 +726,7 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>add</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.98">add</a>(double&nbsp;x,
+<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.116">add</a>(double&nbsp;x,
                     double&nbsp;y,
                     double&nbsp;z)</pre>
 <dl>
@@ -648,7 +741,7 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>add</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.103">add</a>(<a href="../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;x)</pre>
+<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.121">add</a>(<a href="../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;x)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../cn/nukkit/level/Position.html#add-cn.nukkit.math.Vector3-">add</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukkit.level">Position</a></code></dd>
@@ -661,7 +754,7 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>subtract</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.108">subtract</a>()</pre>
+<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.126">subtract</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../cn/nukkit/level/Position.html#subtract--">subtract</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukkit.level">Position</a></code></dd>
@@ -674,7 +767,7 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>subtract</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.113">subtract</a>(double&nbsp;x)</pre>
+<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.131">subtract</a>(double&nbsp;x)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../cn/nukkit/level/Position.html#subtract-double-">subtract</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukkit.level">Position</a></code></dd>
@@ -687,7 +780,7 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>subtract</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.118">subtract</a>(double&nbsp;x,
+<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.136">subtract</a>(double&nbsp;x,
                          double&nbsp;y)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
@@ -701,7 +794,7 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>subtract</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.123">subtract</a>(double&nbsp;x,
+<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.141">subtract</a>(double&nbsp;x,
                          double&nbsp;y,
                          double&nbsp;z)</pre>
 <dl>
@@ -716,7 +809,7 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>subtract</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.128">subtract</a>(<a href="../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;x)</pre>
+<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.146">subtract</a>(<a href="../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;x)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../cn/nukkit/level/Position.html#subtract-cn.nukkit.math.Vector3-">subtract</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukkit.level">Position</a></code></dd>
@@ -729,7 +822,7 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>multiply</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.133">multiply</a>(double&nbsp;number)</pre>
+<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.151">multiply</a>(double&nbsp;number)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../cn/nukkit/level/Position.html#multiply-double-">multiply</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukkit.level">Position</a></code></dd>
@@ -742,7 +835,7 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>divide</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.138">divide</a>(double&nbsp;number)</pre>
+<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.156">divide</a>(double&nbsp;number)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../cn/nukkit/level/Position.html#divide-double-">divide</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukkit.level">Position</a></code></dd>
@@ -755,7 +848,7 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>ceil</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.143">ceil</a>()</pre>
+<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.161">ceil</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../cn/nukkit/level/Position.html#ceil--">ceil</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukkit.level">Position</a></code></dd>
@@ -768,7 +861,7 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>floor</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.148">floor</a>()</pre>
+<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.166">floor</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../cn/nukkit/level/Position.html#floor--">floor</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukkit.level">Position</a></code></dd>
@@ -781,7 +874,7 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>round</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.153">round</a>()</pre>
+<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.171">round</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../cn/nukkit/level/Position.html#round--">round</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukkit.level">Position</a></code></dd>
@@ -794,7 +887,7 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>abs</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.158">abs</a>()</pre>
+<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.176">abs</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../cn/nukkit/level/Position.html#abs--">abs</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukkit.level">Position</a></code></dd>
@@ -807,7 +900,7 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>getDirectionVector</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.162">getDirectionVector</a>()</pre>
+<pre>public&nbsp;<a href="../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.180">getDirectionVector</a>()</pre>
 </li>
 </ul>
 <a name="clone--">
@@ -816,7 +909,7 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 <ul class="blockListLast">
 <li class="blockList">
 <h4>clone</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.172">clone</a>()</pre>
+<pre>public&nbsp;<a href="../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;<a href="../../../src-html/cn/nukkit/level/Location.html#line.190">clone</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../cn/nukkit/level/Position.html#clone--">clone</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukkit.level">Position</a></code></dd>
@@ -850,7 +943,7 @@ extends <a href="../../../cn/nukkit/level/Position.html" title="class in cn.nukk
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../cn/nukkit/level/Level.html" title="class in cn.nukkit.level"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../cn/nukkit/level/ListChunkManager.html" title="class in cn.nukkit.level"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../cn/nukkit/level/MovingObjectPosition.html" title="class in cn.nukkit.level"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">

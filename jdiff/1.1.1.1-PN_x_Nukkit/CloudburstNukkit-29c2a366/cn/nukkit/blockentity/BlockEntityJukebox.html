@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -226,17 +226,21 @@ extends <a href="../../../cn/nukkit/blockentity/BlockEntitySpawnable.html" title
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/blockentity/BlockEntityJukebox.html#play--">play</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/blockentity/BlockEntityJukebox.html#onBreak--">onBreak</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/blockentity/BlockEntityJukebox.html#saveNBT--">saveNBT</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/blockentity/BlockEntityJukebox.html#play--">play</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/blockentity/BlockEntityJukebox.html#setRecordItem-cn.nukkit.item.Item-">setRecordItem</a></span>(<a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;recordItem)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/blockentity/BlockEntityJukebox.html#saveNBT--">saveNBT</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i8" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/blockentity/BlockEntityJukebox.html#setRecordItem-cn.nukkit.item.Item-">setRecordItem</a></span>(<a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;recordItem)</code>&nbsp;</td>
+</tr>
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/blockentity/BlockEntityJukebox.html#stop--">stop</a></span>()</code>&nbsp;</td>
 </tr>
@@ -253,7 +257,7 @@ extends <a href="../../../cn/nukkit/blockentity/BlockEntitySpawnable.html" title
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;cn.nukkit.blockentity.<a href="../../../cn/nukkit/blockentity/BlockEntity.html" title="class in cn.nukkit.blockentity">BlockEntity</a></h3>
-<code><a href="../../../cn/nukkit/blockentity/BlockEntity.html#close--">close</a>, <a href="../../../cn/nukkit/blockentity/BlockEntity.html#createBlockEntity-java.lang.String-cn.nukkit.level.format.FullChunk-cn.nukkit.nbt.tag.CompoundTag-java.lang.Object...-">createBlockEntity</a>, <a href="../../../cn/nukkit/blockentity/BlockEntity.html#getBlock--">getBlock</a>, <a href="../../../cn/nukkit/blockentity/BlockEntity.html#getCleanedNBT--">getCleanedNBT</a>, <a href="../../../cn/nukkit/blockentity/BlockEntity.html#getDefaultCompound-cn.nukkit.math.Vector3-java.lang.String-">getDefaultCompound</a>, <a href="../../../cn/nukkit/blockentity/BlockEntity.html#getId--">getId</a>, <a href="../../../cn/nukkit/blockentity/BlockEntity.html#getName--">getName</a>, <a href="../../../cn/nukkit/blockentity/BlockEntity.html#getSaveId--">getSaveId</a>, <a href="../../../cn/nukkit/blockentity/BlockEntity.html#isMovable--">isMovable</a>, <a href="../../../cn/nukkit/blockentity/BlockEntity.html#onBreak--">onBreak</a>, <a href="../../../cn/nukkit/blockentity/BlockEntity.html#onUpdate--">onUpdate</a>, <a href="../../../cn/nukkit/blockentity/BlockEntity.html#registerBlockEntity-java.lang.String-java.lang.Class-">registerBlockEntity</a>, <a href="../../../cn/nukkit/blockentity/BlockEntity.html#scheduleUpdate--">scheduleUpdate</a>, <a href="../../../cn/nukkit/blockentity/BlockEntity.html#setDirty--">setDirty</a></code></li>
+<code><a href="../../../cn/nukkit/blockentity/BlockEntity.html#close--">close</a>, <a href="../../../cn/nukkit/blockentity/BlockEntity.html#createBlockEntity-java.lang.String-cn.nukkit.level.format.FullChunk-cn.nukkit.nbt.tag.CompoundTag-java.lang.Object...-">createBlockEntity</a>, <a href="../../../cn/nukkit/blockentity/BlockEntity.html#getBlock--">getBlock</a>, <a href="../../../cn/nukkit/blockentity/BlockEntity.html#getCleanedNBT--">getCleanedNBT</a>, <a href="../../../cn/nukkit/blockentity/BlockEntity.html#getDefaultCompound-cn.nukkit.math.Vector3-java.lang.String-">getDefaultCompound</a>, <a href="../../../cn/nukkit/blockentity/BlockEntity.html#getId--">getId</a>, <a href="../../../cn/nukkit/blockentity/BlockEntity.html#getName--">getName</a>, <a href="../../../cn/nukkit/blockentity/BlockEntity.html#getSaveId--">getSaveId</a>, <a href="../../../cn/nukkit/blockentity/BlockEntity.html#isMovable--">isMovable</a>, <a href="../../../cn/nukkit/blockentity/BlockEntity.html#onUpdate--">onUpdate</a>, <a href="../../../cn/nukkit/blockentity/BlockEntity.html#registerBlockEntity-java.lang.String-java.lang.Class-">registerBlockEntity</a>, <a href="../../../cn/nukkit/blockentity/BlockEntity.html#scheduleUpdate--">scheduleUpdate</a>, <a href="../../../cn/nukkit/blockentity/BlockEntity.html#setDirty--">setDirty</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.cn.nukkit.level.Position">
@@ -267,7 +271,7 @@ extends <a href="../../../cn/nukkit/blockentity/BlockEntitySpawnable.html" title
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;cn.nukkit.math.<a href="../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></h3>
-<code><a href="../../../cn/nukkit/math/Vector3.html#asBlockVector3--">asBlockVector3</a>, <a href="../../../cn/nukkit/math/Vector3.html#asVector3f--">asVector3f</a>, <a href="../../../cn/nukkit/math/Vector3.html#cross-cn.nukkit.math.Vector3-">cross</a>, <a href="../../../cn/nukkit/math/Vector3.html#distance-cn.nukkit.math.Vector3-">distance</a>, <a href="../../../cn/nukkit/math/Vector3.html#distanceSquared-cn.nukkit.math.Vector3-">distanceSquared</a>, <a href="../../../cn/nukkit/math/Vector3.html#dot-cn.nukkit.math.Vector3-">dot</a>, <a href="../../../cn/nukkit/math/Vector3.html#down--">down</a>, <a href="../../../cn/nukkit/math/Vector3.html#down-int-">down</a>, <a href="../../../cn/nukkit/math/Vector3.html#east--">east</a>, <a href="../../../cn/nukkit/math/Vector3.html#east-int-">east</a>, <a href="../../../cn/nukkit/math/Vector3.html#equals-java.lang.Object-">equals</a>, <a href="../../../cn/nukkit/math/Vector3.html#getChunkX--">getChunkX</a>, <a href="../../../cn/nukkit/math/Vector3.html#getChunkZ--">getChunkZ</a>, <a href="../../../cn/nukkit/math/Vector3.html#getFloorX--">getFloorX</a>, <a href="../../../cn/nukkit/math/Vector3.html#getFloorY--">getFloorY</a>, <a href="../../../cn/nukkit/math/Vector3.html#getFloorZ--">getFloorZ</a>, <a href="../../../cn/nukkit/math/Vector3.html#getForward--">getForward</a>, <a href="../../../cn/nukkit/math/Vector3.html#getIntermediateWithXValue-cn.nukkit.math.Vector3-double-">getIntermediateWithXValue</a>, <a href="../../../cn/nukkit/math/Vector3.html#getIntermediateWithYValue-cn.nukkit.math.Vector3-double-">getIntermediateWithYValue</a>, <a href="../../../cn/nukkit/math/Vector3.html#getIntermediateWithZValue-cn.nukkit.math.Vector3-double-">getIntermediateWithZValue</a>, <a href="../../../cn/nukkit/math/Vector3.html#getRight--">getRight</a>, <a href="../../../cn/nukkit/math/Vector3.html#getSouth--">getSouth</a>, <a href="../../../cn/nukkit/math/Vector3.html#getUp--">getUp</a>, <a href="../../../cn/nukkit/math/Vector3.html#getWest--">getWest</a>, <a href="../../../cn/nukkit/math/Vector3.html#getX--">getX</a>, <a href="../../../cn/nukkit/math/Vector3.html#getY--">getY</a>, <a href="../../../cn/nukkit/math/Vector3.html#getZ--">getZ</a>, <a href="../../../cn/nukkit/math/Vector3.html#hashCode--">hashCode</a>, <a href="../../../cn/nukkit/math/Vector3.html#length--">length</a>, <a href="../../../cn/nukkit/math/Vector3.html#lengthSquared--">lengthSquared</a>, <a href="../../../cn/nukkit/math/Vector3.html#maxPlainDistance--">maxPlainDistance</a>, <a href="../../../cn/nukkit/math/Vector3.html#maxPlainDistance-double-">maxPlainDistance</a>, <a href="../../../cn/nukkit/math/Vector3.html#maxPlainDistance-double-double-">maxPlainDistance</a>, <a href="../../../cn/nukkit/math/Vector3.html#maxPlainDistance-cn.nukkit.math.Vector2-">maxPlainDistance</a>, <a href="../../../cn/nukkit/math/Vector3.html#maxPlainDistance-cn.nukkit.math.Vector3-">maxPlainDistance</a>, <a href="../../../cn/nukkit/math/Vector3.html#normalize--">normalize</a>, <a href="../../../cn/nukkit/math/Vector3.html#north--">north</a>, <a href="../../../cn/nukkit/math/Vector3.html#north-int-">north</a>, <a href="../../../cn/nukkit/math/Vector3.html#rawHashCode--">rawHashCode</a>, <a href="../../../cn/nukkit/math/Vector3.html#south--">south</a>, <a href="../../../cn/nukkit/math/Vector3.html#south-int-">south</a>, <a href="../../../cn/nukkit/math/Vector3.html#up--">up</a>, <a href="../../../cn/nukkit/math/Vector3.html#up-int-">up</a>, <a href="../../../cn/nukkit/math/Vector3.html#west--">west</a>, <a href="../../../cn/nukkit/math/Vector3.html#west-int-">west</a></code></li>
+<code><a href="../../../cn/nukkit/math/Vector3.html#angleBetween-cn.nukkit.math.Vector3-">angleBetween</a>, <a href="../../../cn/nukkit/math/Vector3.html#asBlockVector3--">asBlockVector3</a>, <a href="../../../cn/nukkit/math/Vector3.html#asVector3f--">asVector3f</a>, <a href="../../../cn/nukkit/math/Vector3.html#cross-cn.nukkit.math.Vector3-">cross</a>, <a href="../../../cn/nukkit/math/Vector3.html#distance-cn.nukkit.math.Vector3-">distance</a>, <a href="../../../cn/nukkit/math/Vector3.html#distanceSquared-cn.nukkit.math.Vector3-">distanceSquared</a>, <a href="../../../cn/nukkit/math/Vector3.html#dot-cn.nukkit.math.Vector3-">dot</a>, <a href="../../../cn/nukkit/math/Vector3.html#down--">down</a>, <a href="../../../cn/nukkit/math/Vector3.html#down-int-">down</a>, <a href="../../../cn/nukkit/math/Vector3.html#east--">east</a>, <a href="../../../cn/nukkit/math/Vector3.html#east-int-">east</a>, <a href="../../../cn/nukkit/math/Vector3.html#equals-java.lang.Object-">equals</a>, <a href="../../../cn/nukkit/math/Vector3.html#getChunkX--">getChunkX</a>, <a href="../../../cn/nukkit/math/Vector3.html#getChunkZ--">getChunkZ</a>, <a href="../../../cn/nukkit/math/Vector3.html#getFloorX--">getFloorX</a>, <a href="../../../cn/nukkit/math/Vector3.html#getFloorY--">getFloorY</a>, <a href="../../../cn/nukkit/math/Vector3.html#getFloorZ--">getFloorZ</a>, <a href="../../../cn/nukkit/math/Vector3.html#getForward--">getForward</a>, <a href="../../../cn/nukkit/math/Vector3.html#getIntermediateWithXValue-cn.nukkit.math.Vector3-double-">getIntermediateWithXValue</a>, <a href="../../../cn/nukkit/math/Vector3.html#getIntermediateWithYValue-cn.nukkit.math.Vector3-double-">getIntermediateWithYValue</a>, <a href="../../../cn/nukkit/math/Vector3.html#getIntermediateWithZValue-cn.nukkit.math.Vector3-double-">getIntermediateWithZValue</a>, <a href="../../../cn/nukkit/math/Vector3.html#getRight--">getRight</a>, <a href="../../../cn/nukkit/math/Vector3.html#getSouth--">getSouth</a>, <a href="../../../cn/nukkit/math/Vector3.html#getUp--">getUp</a>, <a href="../../../cn/nukkit/math/Vector3.html#getWest--">getWest</a>, <a href="../../../cn/nukkit/math/Vector3.html#getX--">getX</a>, <a href="../../../cn/nukkit/math/Vector3.html#getY--">getY</a>, <a href="../../../cn/nukkit/math/Vector3.html#getZ--">getZ</a>, <a href="../../../cn/nukkit/math/Vector3.html#hashCode--">hashCode</a>, <a href="../../../cn/nukkit/math/Vector3.html#length--">length</a>, <a href="../../../cn/nukkit/math/Vector3.html#lengthSquared--">lengthSquared</a>, <a href="../../../cn/nukkit/math/Vector3.html#maxPlainDistance--">maxPlainDistance</a>, <a href="../../../cn/nukkit/math/Vector3.html#maxPlainDistance-double-">maxPlainDistance</a>, <a href="../../../cn/nukkit/math/Vector3.html#maxPlainDistance-double-double-">maxPlainDistance</a>, <a href="../../../cn/nukkit/math/Vector3.html#maxPlainDistance-cn.nukkit.math.Vector2-">maxPlainDistance</a>, <a href="../../../cn/nukkit/math/Vector3.html#maxPlainDistance-cn.nukkit.math.Vector3-">maxPlainDistance</a>, <a href="../../../cn/nukkit/math/Vector3.html#normalize--">normalize</a>, <a href="../../../cn/nukkit/math/Vector3.html#north--">north</a>, <a href="../../../cn/nukkit/math/Vector3.html#north-int-">north</a>, <a href="../../../cn/nukkit/math/Vector3.html#rawHashCode--">rawHashCode</a>, <a href="../../../cn/nukkit/math/Vector3.html#setX-double-">setX</a>, <a href="../../../cn/nukkit/math/Vector3.html#setY-double-">setY</a>, <a href="../../../cn/nukkit/math/Vector3.html#setZ-double-">setZ</a>, <a href="../../../cn/nukkit/math/Vector3.html#south--">south</a>, <a href="../../../cn/nukkit/math/Vector3.html#south-int-">south</a>, <a href="../../../cn/nukkit/math/Vector3.html#up--">up</a>, <a href="../../../cn/nukkit/math/Vector3.html#up-int-">up</a>, <a href="../../../cn/nukkit/math/Vector3.html#west--">west</a>, <a href="../../../cn/nukkit/math/Vector3.html#west-int-">west</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -367,7 +371,7 @@ extends <a href="../../../cn/nukkit/blockentity/BlockEntitySpawnable.html" title
 <ul class="blockList">
 <li class="blockList">
 <h4>stop</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/blockentity/BlockEntityJukebox.html#line.92">stop</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/blockentity/BlockEntityJukebox.html#line.95">stop</a>()</pre>
 </li>
 </ul>
 <a name="dropItem--">
@@ -376,7 +380,7 @@ extends <a href="../../../cn/nukkit/blockentity/BlockEntitySpawnable.html" title
 <ul class="blockList">
 <li class="blockList">
 <h4>dropItem</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/blockentity/BlockEntityJukebox.html#line.96">dropItem</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/blockentity/BlockEntityJukebox.html#line.99">dropItem</a>()</pre>
 </li>
 </ul>
 <a name="saveNBT--">
@@ -385,7 +389,7 @@ extends <a href="../../../cn/nukkit/blockentity/BlockEntitySpawnable.html" title
 <ul class="blockList">
 <li class="blockList">
 <h4>saveNBT</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/blockentity/BlockEntityJukebox.html#line.105">saveNBT</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/blockentity/BlockEntityJukebox.html#line.108">saveNBT</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../cn/nukkit/blockentity/BlockEntity.html#saveNBT--">saveNBT</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/blockentity/BlockEntity.html" title="class in cn.nukkit.blockentity">BlockEntity</a></code></dd>
@@ -395,13 +399,26 @@ extends <a href="../../../cn/nukkit/blockentity/BlockEntitySpawnable.html" title
 <a name="getSpawnCompound--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getSpawnCompound</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/nbt/tag/CompoundTag.html" title="class in cn.nukkit.nbt.tag">CompoundTag</a>&nbsp;<a href="../../../src-html/cn/nukkit/blockentity/BlockEntityJukebox.html#line.111">getSpawnCompound</a>()</pre>
+<pre>public&nbsp;<a href="../../../cn/nukkit/nbt/tag/CompoundTag.html" title="class in cn.nukkit.nbt.tag">CompoundTag</a>&nbsp;<a href="../../../src-html/cn/nukkit/blockentity/BlockEntityJukebox.html#line.114">getSpawnCompound</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../cn/nukkit/blockentity/BlockEntitySpawnable.html#getSpawnCompound--">getSpawnCompound</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/blockentity/BlockEntitySpawnable.html" title="class in cn.nukkit.blockentity">BlockEntitySpawnable</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="onBreak--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>onBreak</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/blockentity/BlockEntityJukebox.html#line.120">onBreak</a>()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../cn/nukkit/blockentity/BlockEntity.html#onBreak--">onBreak</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/blockentity/BlockEntity.html" title="class in cn.nukkit.blockentity">BlockEntity</a></code></dd>
 </dl>
 </li>
 </ul>

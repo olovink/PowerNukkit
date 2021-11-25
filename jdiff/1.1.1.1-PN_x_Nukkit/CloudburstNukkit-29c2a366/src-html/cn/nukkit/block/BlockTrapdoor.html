@@ -15,10 +15,10 @@
 <span class="sourceLineNo">007</span>import cn.nukkit.item.ItemBlock;<a name="line.7"></a>
 <span class="sourceLineNo">008</span>import cn.nukkit.item.ItemTool;<a name="line.8"></a>
 <span class="sourceLineNo">009</span>import cn.nukkit.level.Level;<a name="line.9"></a>
-<span class="sourceLineNo">010</span>import cn.nukkit.level.Sound;<a name="line.10"></a>
-<span class="sourceLineNo">011</span>import cn.nukkit.math.AxisAlignedBB;<a name="line.11"></a>
-<span class="sourceLineNo">012</span>import cn.nukkit.math.BlockFace;<a name="line.12"></a>
-<span class="sourceLineNo">013</span>import cn.nukkit.math.SimpleAxisAlignedBB;<a name="line.13"></a>
+<span class="sourceLineNo">010</span>import cn.nukkit.math.AxisAlignedBB;<a name="line.10"></a>
+<span class="sourceLineNo">011</span>import cn.nukkit.math.BlockFace;<a name="line.11"></a>
+<span class="sourceLineNo">012</span>import cn.nukkit.math.SimpleAxisAlignedBB;<a name="line.12"></a>
+<span class="sourceLineNo">013</span>import cn.nukkit.network.protocol.LevelEventPacket;<a name="line.13"></a>
 <span class="sourceLineNo">014</span>import cn.nukkit.utils.BlockColor;<a name="line.14"></a>
 <span class="sourceLineNo">015</span>import cn.nukkit.utils.Faceable;<a name="line.15"></a>
 <span class="sourceLineNo">016</span><a name="line.16"></a>
@@ -179,7 +179,7 @@
 <span class="sourceLineNo">171</span>                this.level.getServer().getPluginManager().callEvent(new BlockRedstoneEvent(this, isOpen() ? 15 : 0, isOpen() ? 0 : 15));<a name="line.171"></a>
 <span class="sourceLineNo">172</span>                this.setDamage(this.getDamage() ^ 0x04);<a name="line.172"></a>
 <span class="sourceLineNo">173</span>                this.level.setBlock(this, this, true);<a name="line.173"></a>
-<span class="sourceLineNo">174</span>                this.level.addSound(this, isOpen() ? Sound.RANDOM_DOOR_OPEN : Sound.RANDOM_DOOR_CLOSE);<a name="line.174"></a>
+<span class="sourceLineNo">174</span>                this.level.addLevelEvent(this.add(0.5, 0.5, 0.5), LevelEventPacket.EVENT_SOUND_DOOR);<a name="line.174"></a>
 <span class="sourceLineNo">175</span>                return type;<a name="line.175"></a>
 <span class="sourceLineNo">176</span>            }<a name="line.176"></a>
 <span class="sourceLineNo">177</span>        }<a name="line.177"></a>
@@ -221,7 +221,7 @@
 <span class="sourceLineNo">213</span>    @Override<a name="line.213"></a>
 <span class="sourceLineNo">214</span>    public boolean onActivate(Item item, Player player) {<a name="line.214"></a>
 <span class="sourceLineNo">215</span>        if(toggle(player)) {<a name="line.215"></a>
-<span class="sourceLineNo">216</span>            this.level.addSound(this, isOpen() ? Sound.RANDOM_DOOR_OPEN : Sound.RANDOM_DOOR_CLOSE);<a name="line.216"></a>
+<span class="sourceLineNo">216</span>            this.level.addLevelEvent(this.add(0.5, 0.5, 0.5), LevelEventPacket.EVENT_SOUND_DOOR);<a name="line.216"></a>
 <span class="sourceLineNo">217</span>            return true;<a name="line.217"></a>
 <span class="sourceLineNo">218</span>        }<a name="line.218"></a>
 <span class="sourceLineNo">219</span>        return false;<a name="line.219"></a>

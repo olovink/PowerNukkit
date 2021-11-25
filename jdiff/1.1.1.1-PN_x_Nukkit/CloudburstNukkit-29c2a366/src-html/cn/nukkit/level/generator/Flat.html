@@ -14,8 +14,8 @@
 <span class="sourceLineNo">006</span>import cn.nukkit.level.format.FullChunk;<a name="line.6"></a>
 <span class="sourceLineNo">007</span>import cn.nukkit.level.format.generic.BaseFullChunk;<a name="line.7"></a>
 <span class="sourceLineNo">008</span>import cn.nukkit.level.generator.object.ore.OreType;<a name="line.8"></a>
-<span class="sourceLineNo">009</span>import cn.nukkit.level.generator.populator.type.Populator;<a name="line.9"></a>
-<span class="sourceLineNo">010</span>import cn.nukkit.level.generator.populator.impl.PopulatorOre;<a name="line.10"></a>
+<span class="sourceLineNo">009</span>import cn.nukkit.level.generator.populator.impl.PopulatorOre;<a name="line.9"></a>
+<span class="sourceLineNo">010</span>import cn.nukkit.level.generator.populator.type.Populator;<a name="line.10"></a>
 <span class="sourceLineNo">011</span>import cn.nukkit.math.NukkitRandom;<a name="line.11"></a>
 <span class="sourceLineNo">012</span>import cn.nukkit.math.Vector3;<a name="line.12"></a>
 <span class="sourceLineNo">013</span><a name="line.13"></a>
@@ -78,131 +78,130 @@
 <span class="sourceLineNo">070</span>        this.options = options;<a name="line.70"></a>
 <span class="sourceLineNo">071</span><a name="line.71"></a>
 <span class="sourceLineNo">072</span>        if (this.options.containsKey("decoration")) {<a name="line.72"></a>
-<span class="sourceLineNo">073</span>            PopulatorOre ores = new PopulatorOre();<a name="line.73"></a>
-<span class="sourceLineNo">074</span>            ores.setOreTypes(new OreType[]{<a name="line.74"></a>
-<span class="sourceLineNo">075</span>                    new OreType(new BlockOreCoal(), 20, 16, 0, 128),<a name="line.75"></a>
-<span class="sourceLineNo">076</span>                    new OreType(new BlockOreIron(), 20, 8, 0, 64),<a name="line.76"></a>
-<span class="sourceLineNo">077</span>                    new OreType(new BlockOreRedstone(), 8, 7, 0, 16),<a name="line.77"></a>
-<span class="sourceLineNo">078</span>                    new OreType(new BlockOreLapis(), 1, 6, 0, 32),<a name="line.78"></a>
-<span class="sourceLineNo">079</span>                    new OreType(new BlockOreGold(), 2, 8, 0, 32),<a name="line.79"></a>
-<span class="sourceLineNo">080</span>                    new OreType(new BlockOreDiamond(), 1, 7, 0, 16),<a name="line.80"></a>
-<span class="sourceLineNo">081</span>                    new OreType(new BlockDirt(), 20, 32, 0, 128),<a name="line.81"></a>
-<span class="sourceLineNo">082</span>                    new OreType(new BlockGravel(), 20, 16, 0, 128),<a name="line.82"></a>
-<span class="sourceLineNo">083</span>            });<a name="line.83"></a>
-<span class="sourceLineNo">084</span>            this.populators.add(ores);<a name="line.84"></a>
-<span class="sourceLineNo">085</span>        }<a name="line.85"></a>
-<span class="sourceLineNo">086</span>    }<a name="line.86"></a>
-<span class="sourceLineNo">087</span><a name="line.87"></a>
-<span class="sourceLineNo">088</span>    protected void parsePreset(String preset, int chunkX, int chunkZ) {<a name="line.88"></a>
-<span class="sourceLineNo">089</span>        try {<a name="line.89"></a>
-<span class="sourceLineNo">090</span>            this.preset = preset;<a name="line.90"></a>
-<span class="sourceLineNo">091</span>            String[] presetArray = preset.split(";");<a name="line.91"></a>
-<span class="sourceLineNo">092</span>            int version = Integer.valueOf(presetArray[0]);<a name="line.92"></a>
-<span class="sourceLineNo">093</span>            String blocks = presetArray.length &gt; 1 ? presetArray[1] : "";<a name="line.93"></a>
-<span class="sourceLineNo">094</span>            this.biome = presetArray.length &gt; 2 ? Integer.valueOf(presetArray[2]) : 1;<a name="line.94"></a>
-<span class="sourceLineNo">095</span>            String options = presetArray.length &gt; 3 ? presetArray[1] : "";<a name="line.95"></a>
-<span class="sourceLineNo">096</span>            this.structure = new int[256][];<a name="line.96"></a>
-<span class="sourceLineNo">097</span>            int y = 0;<a name="line.97"></a>
-<span class="sourceLineNo">098</span>            for (String block : blocks.split(",")) {<a name="line.98"></a>
-<span class="sourceLineNo">099</span>                int id, meta = 0, cnt = 1;<a name="line.99"></a>
-<span class="sourceLineNo">100</span>                if (Pattern.matches("^[0-9]{1,3}x[0-9]$", block)) {<a name="line.100"></a>
-<span class="sourceLineNo">101</span>                    //AxB<a name="line.101"></a>
-<span class="sourceLineNo">102</span>                    String[] s = block.split("x");<a name="line.102"></a>
-<span class="sourceLineNo">103</span>                    cnt = Integer.valueOf(s[0]);<a name="line.103"></a>
-<span class="sourceLineNo">104</span>                    id = Integer.valueOf(s[1]);<a name="line.104"></a>
-<span class="sourceLineNo">105</span>                } else if (Pattern.matches("^[0-9]{1,3}:[0-9]{0,2}$", block)) {<a name="line.105"></a>
-<span class="sourceLineNo">106</span>                    //A:B<a name="line.106"></a>
-<span class="sourceLineNo">107</span>                    String[] s = block.split(":");<a name="line.107"></a>
-<span class="sourceLineNo">108</span>                    id = Integer.valueOf(s[0]);<a name="line.108"></a>
-<span class="sourceLineNo">109</span>                    meta = Integer.valueOf(s[1]);<a name="line.109"></a>
-<span class="sourceLineNo">110</span>                } else if (Pattern.matches("^[0-9]{1,3}$", block)) {<a name="line.110"></a>
-<span class="sourceLineNo">111</span>                    //A<a name="line.111"></a>
-<span class="sourceLineNo">112</span>                    id = Integer.valueOf(block);<a name="line.112"></a>
-<span class="sourceLineNo">113</span>                } else {<a name="line.113"></a>
-<span class="sourceLineNo">114</span>                    continue;<a name="line.114"></a>
-<span class="sourceLineNo">115</span>                }<a name="line.115"></a>
-<span class="sourceLineNo">116</span>                int cY = y;<a name="line.116"></a>
-<span class="sourceLineNo">117</span>                y += cnt;<a name="line.117"></a>
-<span class="sourceLineNo">118</span>                if (y &gt; 0xFF) {<a name="line.118"></a>
-<span class="sourceLineNo">119</span>                    y = 0xFF;<a name="line.119"></a>
-<span class="sourceLineNo">120</span>                }<a name="line.120"></a>
-<span class="sourceLineNo">121</span>                for (; cY &lt; y; ++cY) {<a name="line.121"></a>
-<span class="sourceLineNo">122</span>                    this.structure[cY] = new int[]{id, meta};<a name="line.122"></a>
-<span class="sourceLineNo">123</span>                }<a name="line.123"></a>
-<span class="sourceLineNo">124</span>            }<a name="line.124"></a>
-<span class="sourceLineNo">125</span>            this.floorLevel = y;<a name="line.125"></a>
-<span class="sourceLineNo">126</span>            for (; y &lt;= 0xFF; ++y) {<a name="line.126"></a>
-<span class="sourceLineNo">127</span>                this.structure[y] = new int[]{0, 0};<a name="line.127"></a>
-<span class="sourceLineNo">128</span>            }<a name="line.128"></a>
-<span class="sourceLineNo">129</span>            for (String option : options.split(",")) {<a name="line.129"></a>
-<span class="sourceLineNo">130</span>                if (Pattern.matches("^[0-9a-z_]+$", option)) {<a name="line.130"></a>
-<span class="sourceLineNo">131</span>                    this.options.put(option, true);<a name="line.131"></a>
-<span class="sourceLineNo">132</span>                } else if (Pattern.matches("^[0-9a-z_]+\\([0-9a-z_ =]+\\)$", option)) {<a name="line.132"></a>
-<span class="sourceLineNo">133</span>                    String name = option.substring(0, option.indexOf("("));<a name="line.133"></a>
-<span class="sourceLineNo">134</span>                    String extra = option.substring(option.indexOf("(") + 1, option.indexOf(")"));<a name="line.134"></a>
-<span class="sourceLineNo">135</span>                    Map&lt;String, Float&gt; map = new HashMap&lt;&gt;();<a name="line.135"></a>
-<span class="sourceLineNo">136</span>                    for (String kv : extra.split(" ")) {<a name="line.136"></a>
-<span class="sourceLineNo">137</span>                        String[] data = kv.split("=");<a name="line.137"></a>
-<span class="sourceLineNo">138</span>                        map.put(data[0], Float.valueOf(data[1]));<a name="line.138"></a>
-<span class="sourceLineNo">139</span>                    }<a name="line.139"></a>
-<span class="sourceLineNo">140</span>                    this.options.put(name, map);<a name="line.140"></a>
-<span class="sourceLineNo">141</span>                }<a name="line.141"></a>
-<span class="sourceLineNo">142</span>            }<a name="line.142"></a>
-<span class="sourceLineNo">143</span>        } catch (Exception e) {<a name="line.143"></a>
-<span class="sourceLineNo">144</span>            Server.getInstance().getLogger().error("error while parsing the preset", e);<a name="line.144"></a>
-<span class="sourceLineNo">145</span>            throw new RuntimeException(e);<a name="line.145"></a>
-<span class="sourceLineNo">146</span>        }<a name="line.146"></a>
-<span class="sourceLineNo">147</span>    }<a name="line.147"></a>
-<span class="sourceLineNo">148</span><a name="line.148"></a>
-<span class="sourceLineNo">149</span>    @Override<a name="line.149"></a>
-<span class="sourceLineNo">150</span>    public void init(ChunkManager level, NukkitRandom random) {<a name="line.150"></a>
-<span class="sourceLineNo">151</span>        this.level = level;<a name="line.151"></a>
-<span class="sourceLineNo">152</span>        this.random = random;<a name="line.152"></a>
-<span class="sourceLineNo">153</span>    }<a name="line.153"></a>
-<span class="sourceLineNo">154</span><a name="line.154"></a>
-<span class="sourceLineNo">155</span>    @Override<a name="line.155"></a>
-<span class="sourceLineNo">156</span>    public void generateChunk(int chunkX, int chunkZ) {<a name="line.156"></a>
-<span class="sourceLineNo">157</span>        if (!this.init) {<a name="line.157"></a>
-<span class="sourceLineNo">158</span>            init = true;<a name="line.158"></a>
-<span class="sourceLineNo">159</span>            if (this.options.containsKey("preset") &amp;&amp; !"".equals(this.options.get("preset"))) {<a name="line.159"></a>
-<span class="sourceLineNo">160</span>                this.parsePreset((String) this.options.get("preset"), chunkX, chunkZ);<a name="line.160"></a>
-<span class="sourceLineNo">161</span>            } else {<a name="line.161"></a>
-<span class="sourceLineNo">162</span>                this.parsePreset(this.preset, chunkX, chunkZ);<a name="line.162"></a>
-<span class="sourceLineNo">163</span>            }<a name="line.163"></a>
-<span class="sourceLineNo">164</span>        }<a name="line.164"></a>
-<span class="sourceLineNo">165</span>        this.generateChunk(level.getChunk(chunkX, chunkZ));<a name="line.165"></a>
-<span class="sourceLineNo">166</span>    }<a name="line.166"></a>
-<span class="sourceLineNo">167</span><a name="line.167"></a>
-<span class="sourceLineNo">168</span>    private void generateChunk(FullChunk chunk) {<a name="line.168"></a>
-<span class="sourceLineNo">169</span>        chunk.setGenerated();<a name="line.169"></a>
-<span class="sourceLineNo">170</span><a name="line.170"></a>
-<span class="sourceLineNo">171</span>        for (int Z = 0; Z &lt; 16; ++Z) {<a name="line.171"></a>
-<span class="sourceLineNo">172</span>            for (int X = 0; X &lt; 16; ++X) {<a name="line.172"></a>
-<span class="sourceLineNo">173</span>                chunk.setBiomeId(X, Z, biome);<a name="line.173"></a>
-<span class="sourceLineNo">174</span><a name="line.174"></a>
-<span class="sourceLineNo">175</span>                for (int y = 0; y &lt; 256; ++y) {<a name="line.175"></a>
-<span class="sourceLineNo">176</span>                    int k = this.structure[y][0];<a name="line.176"></a>
-<span class="sourceLineNo">177</span>                    int l = this.structure[y][1];<a name="line.177"></a>
-<span class="sourceLineNo">178</span>                    chunk.setBlock(X, y, Z, this.structure[y][0], this.structure[y][1]);<a name="line.178"></a>
-<span class="sourceLineNo">179</span>                }<a name="line.179"></a>
-<span class="sourceLineNo">180</span>            }<a name="line.180"></a>
-<span class="sourceLineNo">181</span>        }<a name="line.181"></a>
-<span class="sourceLineNo">182</span>    }<a name="line.182"></a>
-<span class="sourceLineNo">183</span><a name="line.183"></a>
-<span class="sourceLineNo">184</span>    @Override<a name="line.184"></a>
-<span class="sourceLineNo">185</span>    public void populateChunk(int chunkX, int chunkZ) {<a name="line.185"></a>
-<span class="sourceLineNo">186</span>        BaseFullChunk chunk = level.getChunk(chunkX, chunkZ);<a name="line.186"></a>
-<span class="sourceLineNo">187</span>        this.random.setSeed(0xdeadbeef ^ (chunkX &lt;&lt; 8) ^ chunkZ ^ this.level.getSeed());<a name="line.187"></a>
-<span class="sourceLineNo">188</span>        for (Populator populator : this.populators) {<a name="line.188"></a>
-<span class="sourceLineNo">189</span>            populator.populate(this.level, chunkX, chunkZ, this.random, chunk);<a name="line.189"></a>
-<span class="sourceLineNo">190</span>        }<a name="line.190"></a>
-<span class="sourceLineNo">191</span>    }<a name="line.191"></a>
-<span class="sourceLineNo">192</span><a name="line.192"></a>
-<span class="sourceLineNo">193</span>    @Override<a name="line.193"></a>
-<span class="sourceLineNo">194</span>    public Vector3 getSpawn() {<a name="line.194"></a>
-<span class="sourceLineNo">195</span>        return new Vector3(128, this.floorLevel, 128);<a name="line.195"></a>
-<span class="sourceLineNo">196</span>    }<a name="line.196"></a>
-<span class="sourceLineNo">197</span>}<a name="line.197"></a>
+<span class="sourceLineNo">073</span>            PopulatorOre ores = new PopulatorOre(BlockID.STONE, new OreType[]{<a name="line.73"></a>
+<span class="sourceLineNo">074</span>                    new OreType(Block.get(BlockID.COAL_ORE), 20, 16, 0, 128),<a name="line.74"></a>
+<span class="sourceLineNo">075</span>                    new OreType(Block.get(BlockID.IRON_ORE), 20, 8, 0, 64),<a name="line.75"></a>
+<span class="sourceLineNo">076</span>                    new OreType(Block.get(BlockID.REDSTONE_ORE), 8, 7, 0, 16),<a name="line.76"></a>
+<span class="sourceLineNo">077</span>                    new OreType(Block.get(BlockID.LAPIS_ORE), 1, 6, 0, 32),<a name="line.77"></a>
+<span class="sourceLineNo">078</span>                    new OreType(Block.get(BlockID.GOLD_ORE), 2, 8, 0, 32),<a name="line.78"></a>
+<span class="sourceLineNo">079</span>                    new OreType(Block.get(BlockID.DIAMOND_ORE), 1, 7, 0, 16),<a name="line.79"></a>
+<span class="sourceLineNo">080</span>                    new OreType(Block.get(BlockID.DIRT), 20, 32, 0, 128),<a name="line.80"></a>
+<span class="sourceLineNo">081</span>                    new OreType(Block.get(BlockID.GRAVEL), 20, 16, 0, 128),<a name="line.81"></a>
+<span class="sourceLineNo">082</span>            });<a name="line.82"></a>
+<span class="sourceLineNo">083</span>            this.populators.add(ores);<a name="line.83"></a>
+<span class="sourceLineNo">084</span>        }<a name="line.84"></a>
+<span class="sourceLineNo">085</span>    }<a name="line.85"></a>
+<span class="sourceLineNo">086</span><a name="line.86"></a>
+<span class="sourceLineNo">087</span>    protected void parsePreset(String preset, int chunkX, int chunkZ) {<a name="line.87"></a>
+<span class="sourceLineNo">088</span>        try {<a name="line.88"></a>
+<span class="sourceLineNo">089</span>            this.preset = preset;<a name="line.89"></a>
+<span class="sourceLineNo">090</span>            String[] presetArray = preset.split(";");<a name="line.90"></a>
+<span class="sourceLineNo">091</span>            int version = Integer.parseInt(presetArray[0]);<a name="line.91"></a>
+<span class="sourceLineNo">092</span>            String blocks = presetArray.length &gt; 1 ? presetArray[1] : "";<a name="line.92"></a>
+<span class="sourceLineNo">093</span>            this.biome = presetArray.length &gt; 2 ? Integer.parseInt(presetArray[2]) : 1;<a name="line.93"></a>
+<span class="sourceLineNo">094</span>            String options = presetArray.length &gt; 3 ? presetArray[1] : "";<a name="line.94"></a>
+<span class="sourceLineNo">095</span>            this.structure = new int[256][];<a name="line.95"></a>
+<span class="sourceLineNo">096</span>            int y = 0;<a name="line.96"></a>
+<span class="sourceLineNo">097</span>            for (String block : blocks.split(",")) {<a name="line.97"></a>
+<span class="sourceLineNo">098</span>                int id, meta = 0, cnt = 1;<a name="line.98"></a>
+<span class="sourceLineNo">099</span>                if (Pattern.matches("^[0-9]{1,3}x[0-9]$", block)) {<a name="line.99"></a>
+<span class="sourceLineNo">100</span>                    //AxB<a name="line.100"></a>
+<span class="sourceLineNo">101</span>                    String[] s = block.split("x");<a name="line.101"></a>
+<span class="sourceLineNo">102</span>                    cnt = Integer.parseInt(s[0]);<a name="line.102"></a>
+<span class="sourceLineNo">103</span>                    id = Integer.parseInt(s[1]);<a name="line.103"></a>
+<span class="sourceLineNo">104</span>                } else if (Pattern.matches("^[0-9]{1,3}:[0-9]{0,2}$", block)) {<a name="line.104"></a>
+<span class="sourceLineNo">105</span>                    //A:B<a name="line.105"></a>
+<span class="sourceLineNo">106</span>                    String[] s = block.split(":");<a name="line.106"></a>
+<span class="sourceLineNo">107</span>                    id = Integer.parseInt(s[0]);<a name="line.107"></a>
+<span class="sourceLineNo">108</span>                    meta = Integer.parseInt(s[1]);<a name="line.108"></a>
+<span class="sourceLineNo">109</span>                } else if (Pattern.matches("^[0-9]{1,3}$", block)) {<a name="line.109"></a>
+<span class="sourceLineNo">110</span>                    //A<a name="line.110"></a>
+<span class="sourceLineNo">111</span>                    id = Integer.parseInt(block);<a name="line.111"></a>
+<span class="sourceLineNo">112</span>                } else {<a name="line.112"></a>
+<span class="sourceLineNo">113</span>                    continue;<a name="line.113"></a>
+<span class="sourceLineNo">114</span>                }<a name="line.114"></a>
+<span class="sourceLineNo">115</span>                int cY = y;<a name="line.115"></a>
+<span class="sourceLineNo">116</span>                y += cnt;<a name="line.116"></a>
+<span class="sourceLineNo">117</span>                if (y &gt; 0xFF) {<a name="line.117"></a>
+<span class="sourceLineNo">118</span>                    y = 0xFF;<a name="line.118"></a>
+<span class="sourceLineNo">119</span>                }<a name="line.119"></a>
+<span class="sourceLineNo">120</span>                for (; cY &lt; y; ++cY) {<a name="line.120"></a>
+<span class="sourceLineNo">121</span>                    this.structure[cY] = new int[]{id, meta};<a name="line.121"></a>
+<span class="sourceLineNo">122</span>                }<a name="line.122"></a>
+<span class="sourceLineNo">123</span>            }<a name="line.123"></a>
+<span class="sourceLineNo">124</span>            this.floorLevel = y;<a name="line.124"></a>
+<span class="sourceLineNo">125</span>            for (; y &lt;= 0xFF; ++y) {<a name="line.125"></a>
+<span class="sourceLineNo">126</span>                this.structure[y] = new int[]{0, 0};<a name="line.126"></a>
+<span class="sourceLineNo">127</span>            }<a name="line.127"></a>
+<span class="sourceLineNo">128</span>            for (String option : options.split(",")) {<a name="line.128"></a>
+<span class="sourceLineNo">129</span>                if (Pattern.matches("^[0-9a-z_]+$", option)) {<a name="line.129"></a>
+<span class="sourceLineNo">130</span>                    this.options.put(option, true);<a name="line.130"></a>
+<span class="sourceLineNo">131</span>                } else if (Pattern.matches("^[0-9a-z_]+\\([0-9a-z_ =]+\\)$", option)) {<a name="line.131"></a>
+<span class="sourceLineNo">132</span>                    String name = option.substring(0, option.indexOf("("));<a name="line.132"></a>
+<span class="sourceLineNo">133</span>                    String extra = option.substring(option.indexOf("(") + 1, option.indexOf(")"));<a name="line.133"></a>
+<span class="sourceLineNo">134</span>                    Map&lt;String, Float&gt; map = new HashMap&lt;&gt;();<a name="line.134"></a>
+<span class="sourceLineNo">135</span>                    for (String kv : extra.split(" ")) {<a name="line.135"></a>
+<span class="sourceLineNo">136</span>                        String[] data = kv.split("=");<a name="line.136"></a>
+<span class="sourceLineNo">137</span>                        map.put(data[0], Float.valueOf(data[1]));<a name="line.137"></a>
+<span class="sourceLineNo">138</span>                    }<a name="line.138"></a>
+<span class="sourceLineNo">139</span>                    this.options.put(name, map);<a name="line.139"></a>
+<span class="sourceLineNo">140</span>                }<a name="line.140"></a>
+<span class="sourceLineNo">141</span>            }<a name="line.141"></a>
+<span class="sourceLineNo">142</span>        } catch (Exception e) {<a name="line.142"></a>
+<span class="sourceLineNo">143</span>            Server.getInstance().getLogger().error("error while parsing the preset", e);<a name="line.143"></a>
+<span class="sourceLineNo">144</span>            throw new RuntimeException(e);<a name="line.144"></a>
+<span class="sourceLineNo">145</span>        }<a name="line.145"></a>
+<span class="sourceLineNo">146</span>    }<a name="line.146"></a>
+<span class="sourceLineNo">147</span><a name="line.147"></a>
+<span class="sourceLineNo">148</span>    @Override<a name="line.148"></a>
+<span class="sourceLineNo">149</span>    public void init(ChunkManager level, NukkitRandom random) {<a name="line.149"></a>
+<span class="sourceLineNo">150</span>        this.level = level;<a name="line.150"></a>
+<span class="sourceLineNo">151</span>        this.random = random;<a name="line.151"></a>
+<span class="sourceLineNo">152</span>    }<a name="line.152"></a>
+<span class="sourceLineNo">153</span><a name="line.153"></a>
+<span class="sourceLineNo">154</span>    @Override<a name="line.154"></a>
+<span class="sourceLineNo">155</span>    public void generateChunk(int chunkX, int chunkZ) {<a name="line.155"></a>
+<span class="sourceLineNo">156</span>        if (!this.init) {<a name="line.156"></a>
+<span class="sourceLineNo">157</span>            init = true;<a name="line.157"></a>
+<span class="sourceLineNo">158</span>            if (this.options.containsKey("preset") &amp;&amp; !"".equals(this.options.get("preset"))) {<a name="line.158"></a>
+<span class="sourceLineNo">159</span>                this.parsePreset((String) this.options.get("preset"), chunkX, chunkZ);<a name="line.159"></a>
+<span class="sourceLineNo">160</span>            } else {<a name="line.160"></a>
+<span class="sourceLineNo">161</span>                this.parsePreset(this.preset, chunkX, chunkZ);<a name="line.161"></a>
+<span class="sourceLineNo">162</span>            }<a name="line.162"></a>
+<span class="sourceLineNo">163</span>        }<a name="line.163"></a>
+<span class="sourceLineNo">164</span>        this.generateChunk(level.getChunk(chunkX, chunkZ));<a name="line.164"></a>
+<span class="sourceLineNo">165</span>    }<a name="line.165"></a>
+<span class="sourceLineNo">166</span><a name="line.166"></a>
+<span class="sourceLineNo">167</span>    private void generateChunk(FullChunk chunk) {<a name="line.167"></a>
+<span class="sourceLineNo">168</span>        chunk.setGenerated();<a name="line.168"></a>
+<span class="sourceLineNo">169</span><a name="line.169"></a>
+<span class="sourceLineNo">170</span>        for (int Z = 0; Z &lt; 16; ++Z) {<a name="line.170"></a>
+<span class="sourceLineNo">171</span>            for (int X = 0; X &lt; 16; ++X) {<a name="line.171"></a>
+<span class="sourceLineNo">172</span>                chunk.setBiomeId(X, Z, biome);<a name="line.172"></a>
+<span class="sourceLineNo">173</span><a name="line.173"></a>
+<span class="sourceLineNo">174</span>                for (int y = 0; y &lt; 256; ++y) {<a name="line.174"></a>
+<span class="sourceLineNo">175</span>                    int k = this.structure[y][0];<a name="line.175"></a>
+<span class="sourceLineNo">176</span>                    int l = this.structure[y][1];<a name="line.176"></a>
+<span class="sourceLineNo">177</span>                    chunk.setBlock(X, y, Z, this.structure[y][0], this.structure[y][1]);<a name="line.177"></a>
+<span class="sourceLineNo">178</span>                }<a name="line.178"></a>
+<span class="sourceLineNo">179</span>            }<a name="line.179"></a>
+<span class="sourceLineNo">180</span>        }<a name="line.180"></a>
+<span class="sourceLineNo">181</span>    }<a name="line.181"></a>
+<span class="sourceLineNo">182</span><a name="line.182"></a>
+<span class="sourceLineNo">183</span>    @Override<a name="line.183"></a>
+<span class="sourceLineNo">184</span>    public void populateChunk(int chunkX, int chunkZ) {<a name="line.184"></a>
+<span class="sourceLineNo">185</span>        BaseFullChunk chunk = level.getChunk(chunkX, chunkZ);<a name="line.185"></a>
+<span class="sourceLineNo">186</span>        this.random.setSeed(0xdeadbeef ^ (chunkX &lt;&lt; 8) ^ chunkZ ^ this.level.getSeed());<a name="line.186"></a>
+<span class="sourceLineNo">187</span>        for (Populator populator : this.populators) {<a name="line.187"></a>
+<span class="sourceLineNo">188</span>            populator.populate(this.level, chunkX, chunkZ, this.random, chunk);<a name="line.188"></a>
+<span class="sourceLineNo">189</span>        }<a name="line.189"></a>
+<span class="sourceLineNo">190</span>    }<a name="line.190"></a>
+<span class="sourceLineNo">191</span><a name="line.191"></a>
+<span class="sourceLineNo">192</span>    @Override<a name="line.192"></a>
+<span class="sourceLineNo">193</span>    public Vector3 getSpawn() {<a name="line.193"></a>
+<span class="sourceLineNo">194</span>        return new Vector3(128, this.floorLevel, 128);<a name="line.194"></a>
+<span class="sourceLineNo">195</span>    }<a name="line.195"></a>
+<span class="sourceLineNo">196</span>}<a name="line.196"></a>
 
 
 

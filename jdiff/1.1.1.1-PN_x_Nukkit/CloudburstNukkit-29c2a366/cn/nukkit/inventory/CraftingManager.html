@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -109,7 +109,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <hr>
 <br>
-<pre>public class <a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.24">CraftingManager</a>
+<pre>public class <a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.22">CraftingManager</a>
 extends java.lang.Object</pre>
 <div class="block">author: MagicDroidX
  Nukkit Project</div>
@@ -163,22 +163,26 @@ extends java.lang.Object</pre>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/inventory/CraftingManager.html#furnaceRecipes">furnaceRecipes</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>static <a href="../../../cn/nukkit/network/protocol/BatchPacket.html" title="class in cn.nukkit.network.protocol">BatchPacket</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/inventory/CraftingManager.html#packet">packet</a></span></code>&nbsp;</td>
+<td class="colFirst"><code>java.util.Map&lt;java.util.UUID,<a href="../../../cn/nukkit/inventory/MultiRecipe.html" title="class in cn.nukkit.inventory">MultiRecipe</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/inventory/CraftingManager.html#multiRecipes">multiRecipes</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/inventory/CraftingManager.html#packet">packet</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static java.util.Comparator&lt;<a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/inventory/CraftingManager.html#recipeComparator">recipeComparator</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>java.util.Collection&lt;<a href="../../../cn/nukkit/inventory/Recipe.html" title="interface in cn.nukkit.inventory">Recipe</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/inventory/CraftingManager.html#recipes">recipes</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected java.util.Map&lt;java.lang.Integer,java.util.Map&lt;java.util.UUID,<a href="../../../cn/nukkit/inventory/ShapedRecipe.html" title="class in cn.nukkit.inventory">ShapedRecipe</a>&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/inventory/CraftingManager.html#shapedRecipes">shapedRecipes</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected java.util.Map&lt;java.lang.Integer,java.util.Map&lt;java.util.UUID,<a href="../../../cn/nukkit/inventory/ShapelessRecipe.html" title="class in cn.nukkit.inventory">ShapelessRecipe</a>&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/inventory/CraftingManager.html#shapelessRecipes">shapelessRecipes</a></span></code>&nbsp;</td>
 </tr>
@@ -238,9 +242,9 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/inventory/CraftingRecipe.html" title="interface in cn.nukkit.inventory">CraftingRecipe</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/inventory/CraftingManager.html#matchRecipe-cn.nukkit.item.Item:A:A-cn.nukkit.item.Item-cn.nukkit.item.Item:A:A-">matchRecipe</a></span>(<a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>[][]&nbsp;inputMap,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/inventory/CraftingManager.html#matchRecipe-java.util.List-cn.nukkit.item.Item-java.util.List-">matchRecipe</a></span>(java.util.List&lt;<a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&gt;&nbsp;inputList,
            <a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;primaryOutput,
-           <a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>[][]&nbsp;extraOutputMap)</code>&nbsp;</td>
+           java.util.List&lt;<a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&gt;&nbsp;extraOutputList)</code>&nbsp;</td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -260,13 +264,17 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/inventory/CraftingManager.html#registerRecipe-cn.nukkit.inventory.Recipe-">registerRecipe</a></span>(<a href="../../../cn/nukkit/inventory/Recipe.html" title="interface in cn.nukkit.inventory">Recipe</a>&nbsp;recipe)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/inventory/CraftingManager.html#registerMultiRecipe-cn.nukkit.inventory.MultiRecipe-">registerMultiRecipe</a></span>(<a href="../../../cn/nukkit/inventory/MultiRecipe.html" title="class in cn.nukkit.inventory">MultiRecipe</a>&nbsp;recipe)</code>&nbsp;</td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/inventory/CraftingManager.html#registerShapedRecipe-cn.nukkit.inventory.ShapedRecipe-">registerShapedRecipe</a></span>(<a href="../../../cn/nukkit/inventory/ShapedRecipe.html" title="class in cn.nukkit.inventory">ShapedRecipe</a>&nbsp;recipe)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/inventory/CraftingManager.html#registerRecipe-cn.nukkit.inventory.Recipe-">registerRecipe</a></span>(<a href="../../../cn/nukkit/inventory/Recipe.html" title="interface in cn.nukkit.inventory">Recipe</a>&nbsp;recipe)</code>&nbsp;</td>
 </tr>
 <tr id="i12" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/inventory/CraftingManager.html#registerShapedRecipe-cn.nukkit.inventory.ShapedRecipe-">registerShapedRecipe</a></span>(<a href="../../../cn/nukkit/inventory/ShapedRecipe.html" title="class in cn.nukkit.inventory">ShapedRecipe</a>&nbsp;recipe)</code>&nbsp;</td>
+</tr>
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/inventory/CraftingManager.html#registerShapelessRecipe-cn.nukkit.inventory.ShapelessRecipe-">registerShapelessRecipe</a></span>(<a href="../../../cn/nukkit/inventory/ShapelessRecipe.html" title="class in cn.nukkit.inventory">ShapelessRecipe</a>&nbsp;recipe)</code>&nbsp;</td>
 </tr>
@@ -298,7 +306,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>recipes</h4>
-<pre>public final&nbsp;java.util.Collection&lt;<a href="../../../cn/nukkit/inventory/Recipe.html" title="interface in cn.nukkit.inventory">Recipe</a>&gt; <a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.27">recipes</a></pre>
+<pre>public final&nbsp;java.util.Collection&lt;<a href="../../../cn/nukkit/inventory/Recipe.html" title="interface in cn.nukkit.inventory">Recipe</a>&gt; <a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.25">recipes</a></pre>
 </li>
 </ul>
 <a name="packet">
@@ -307,7 +315,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>packet</h4>
-<pre>public static&nbsp;<a href="../../../cn/nukkit/network/protocol/BatchPacket.html" title="class in cn.nukkit.network.protocol">BatchPacket</a> <a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.28">packet</a></pre>
+<pre>public static&nbsp;<a href="../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a> <a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.26">packet</a></pre>
 </li>
 </ul>
 <a name="shapedRecipes">
@@ -316,7 +324,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>shapedRecipes</h4>
-<pre>protected final&nbsp;java.util.Map&lt;java.lang.Integer,java.util.Map&lt;java.util.UUID,<a href="../../../cn/nukkit/inventory/ShapedRecipe.html" title="class in cn.nukkit.inventory">ShapedRecipe</a>&gt;&gt; <a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.29">shapedRecipes</a></pre>
+<pre>protected final&nbsp;java.util.Map&lt;java.lang.Integer,java.util.Map&lt;java.util.UUID,<a href="../../../cn/nukkit/inventory/ShapedRecipe.html" title="class in cn.nukkit.inventory">ShapedRecipe</a>&gt;&gt; <a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.27">shapedRecipes</a></pre>
 </li>
 </ul>
 <a name="furnaceRecipes">
@@ -325,7 +333,16 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>furnaceRecipes</h4>
-<pre>public final&nbsp;java.util.Map&lt;java.lang.Integer,<a href="../../../cn/nukkit/inventory/FurnaceRecipe.html" title="class in cn.nukkit.inventory">FurnaceRecipe</a>&gt; <a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.30">furnaceRecipes</a></pre>
+<pre>public final&nbsp;java.util.Map&lt;java.lang.Integer,<a href="../../../cn/nukkit/inventory/FurnaceRecipe.html" title="class in cn.nukkit.inventory">FurnaceRecipe</a>&gt; <a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.28">furnaceRecipes</a></pre>
+</li>
+</ul>
+<a name="multiRecipes">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>multiRecipes</h4>
+<pre>public final&nbsp;java.util.Map&lt;java.util.UUID,<a href="../../../cn/nukkit/inventory/MultiRecipe.html" title="class in cn.nukkit.inventory">MultiRecipe</a>&gt; <a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.29">multiRecipes</a></pre>
 </li>
 </ul>
 <a name="brewingRecipes">
@@ -334,7 +351,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>brewingRecipes</h4>
-<pre>public final&nbsp;java.util.Map&lt;java.lang.Integer,<a href="../../../cn/nukkit/inventory/BrewingRecipe.html" title="class in cn.nukkit.inventory">BrewingRecipe</a>&gt; <a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.31">brewingRecipes</a></pre>
+<pre>public final&nbsp;java.util.Map&lt;java.lang.Integer,<a href="../../../cn/nukkit/inventory/BrewingRecipe.html" title="class in cn.nukkit.inventory">BrewingRecipe</a>&gt; <a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.30">brewingRecipes</a></pre>
 </li>
 </ul>
 <a name="containerRecipes">
@@ -343,7 +360,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>containerRecipes</h4>
-<pre>public final&nbsp;java.util.Map&lt;java.lang.Integer,<a href="../../../cn/nukkit/inventory/ContainerRecipe.html" title="class in cn.nukkit.inventory">ContainerRecipe</a>&gt; <a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.32">containerRecipes</a></pre>
+<pre>public final&nbsp;java.util.Map&lt;java.lang.Integer,<a href="../../../cn/nukkit/inventory/ContainerRecipe.html" title="class in cn.nukkit.inventory">ContainerRecipe</a>&gt; <a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.31">containerRecipes</a></pre>
 </li>
 </ul>
 <a name="shapelessRecipes">
@@ -352,7 +369,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>shapelessRecipes</h4>
-<pre>protected final&nbsp;java.util.Map&lt;java.lang.Integer,java.util.Map&lt;java.util.UUID,<a href="../../../cn/nukkit/inventory/ShapelessRecipe.html" title="class in cn.nukkit.inventory">ShapelessRecipe</a>&gt;&gt; <a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.34">shapelessRecipes</a></pre>
+<pre>protected final&nbsp;java.util.Map&lt;java.lang.Integer,java.util.Map&lt;java.util.UUID,<a href="../../../cn/nukkit/inventory/ShapelessRecipe.html" title="class in cn.nukkit.inventory">ShapelessRecipe</a>&gt;&gt; <a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.33">shapelessRecipes</a></pre>
 </li>
 </ul>
 <a name="recipeComparator">
@@ -361,7 +378,7 @@ extends java.lang.Object</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>recipeComparator</h4>
-<pre>public static final&nbsp;java.util.Comparator&lt;<a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&gt; <a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.35">recipeComparator</a></pre>
+<pre>public static final&nbsp;java.util.Comparator&lt;<a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&gt; <a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.34">recipeComparator</a></pre>
 </li>
 </ul>
 </li>
@@ -378,7 +395,7 @@ extends java.lang.Object</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>CraftingManager</h4>
-<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.47">CraftingManager</a>()</pre>
+<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.46">CraftingManager</a>()</pre>
 </li>
 </ul>
 </li>
@@ -395,7 +412,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>rebuildPacket</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.161">rebuildPacket</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.166">rebuildPacket</a>()</pre>
 </li>
 </ul>
 <a name="getRecipes--">
@@ -404,7 +421,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getRecipes</h4>
-<pre>public&nbsp;java.util.Collection&lt;<a href="../../../cn/nukkit/inventory/Recipe.html" title="interface in cn.nukkit.inventory">Recipe</a>&gt;&nbsp;<a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.184">getRecipes</a>()</pre>
+<pre>public&nbsp;java.util.Collection&lt;<a href="../../../cn/nukkit/inventory/Recipe.html" title="interface in cn.nukkit.inventory">Recipe</a>&gt;&nbsp;<a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.194">getRecipes</a>()</pre>
 </li>
 </ul>
 <a name="getFurnaceRecipes--">
@@ -413,7 +430,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getFurnaceRecipes</h4>
-<pre>public&nbsp;java.util.Map&lt;java.lang.Integer,<a href="../../../cn/nukkit/inventory/FurnaceRecipe.html" title="class in cn.nukkit.inventory">FurnaceRecipe</a>&gt;&nbsp;<a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.188">getFurnaceRecipes</a>()</pre>
+<pre>public&nbsp;java.util.Map&lt;java.lang.Integer,<a href="../../../cn/nukkit/inventory/FurnaceRecipe.html" title="class in cn.nukkit.inventory">FurnaceRecipe</a>&gt;&nbsp;<a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.198">getFurnaceRecipes</a>()</pre>
 </li>
 </ul>
 <a name="matchFurnaceRecipe-cn.nukkit.item.Item-">
@@ -422,7 +439,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>matchFurnaceRecipe</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/inventory/FurnaceRecipe.html" title="class in cn.nukkit.inventory">FurnaceRecipe</a>&nbsp;<a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.192">matchFurnaceRecipe</a>(<a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;input)</pre>
+<pre>public&nbsp;<a href="../../../cn/nukkit/inventory/FurnaceRecipe.html" title="class in cn.nukkit.inventory">FurnaceRecipe</a>&nbsp;<a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.202">matchFurnaceRecipe</a>(<a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;input)</pre>
 </li>
 </ul>
 <a name="registerFurnaceRecipe-cn.nukkit.inventory.FurnaceRecipe-">
@@ -431,7 +448,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>registerFurnaceRecipe</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.210">registerFurnaceRecipe</a>(<a href="../../../cn/nukkit/inventory/FurnaceRecipe.html" title="class in cn.nukkit.inventory">FurnaceRecipe</a>&nbsp;recipe)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.220">registerFurnaceRecipe</a>(<a href="../../../cn/nukkit/inventory/FurnaceRecipe.html" title="class in cn.nukkit.inventory">FurnaceRecipe</a>&nbsp;recipe)</pre>
 </li>
 </ul>
 <a name="registerShapedRecipe-cn.nukkit.inventory.ShapedRecipe-">
@@ -440,7 +457,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>registerShapedRecipe</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.223">registerShapedRecipe</a>(<a href="../../../cn/nukkit/inventory/ShapedRecipe.html" title="class in cn.nukkit.inventory">ShapedRecipe</a>&nbsp;recipe)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.233">registerShapedRecipe</a>(<a href="../../../cn/nukkit/inventory/ShapedRecipe.html" title="class in cn.nukkit.inventory">ShapedRecipe</a>&nbsp;recipe)</pre>
 </li>
 </ul>
 <a name="registerRecipe-cn.nukkit.inventory.Recipe-">
@@ -449,7 +466,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>registerRecipe</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.247">registerRecipe</a>(<a href="../../../cn/nukkit/inventory/Recipe.html" title="interface in cn.nukkit.inventory">Recipe</a>&nbsp;recipe)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.240">registerRecipe</a>(<a href="../../../cn/nukkit/inventory/Recipe.html" title="interface in cn.nukkit.inventory">Recipe</a>&nbsp;recipe)</pre>
 </li>
 </ul>
 <a name="registerShapelessRecipe-cn.nukkit.inventory.ShapelessRecipe-">
@@ -458,7 +475,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>registerShapelessRecipe</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.256">registerShapelessRecipe</a>(<a href="../../../cn/nukkit/inventory/ShapelessRecipe.html" title="class in cn.nukkit.inventory">ShapelessRecipe</a>&nbsp;recipe)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.249">registerShapelessRecipe</a>(<a href="../../../cn/nukkit/inventory/ShapelessRecipe.html" title="class in cn.nukkit.inventory">ShapelessRecipe</a>&nbsp;recipe)</pre>
 </li>
 </ul>
 <a name="registerBrewingRecipe-cn.nukkit.inventory.BrewingRecipe-">
@@ -467,7 +484,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>registerBrewingRecipe</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.273">registerBrewingRecipe</a>(<a href="../../../cn/nukkit/inventory/BrewingRecipe.html" title="class in cn.nukkit.inventory">BrewingRecipe</a>&nbsp;recipe)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.265">registerBrewingRecipe</a>(<a href="../../../cn/nukkit/inventory/BrewingRecipe.html" title="class in cn.nukkit.inventory">BrewingRecipe</a>&nbsp;recipe)</pre>
 </li>
 </ul>
 <a name="registerContainerRecipe-cn.nukkit.inventory.ContainerRecipe-">
@@ -476,7 +493,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>registerContainerRecipe</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.279">registerContainerRecipe</a>(<a href="../../../cn/nukkit/inventory/ContainerRecipe.html" title="class in cn.nukkit.inventory">ContainerRecipe</a>&nbsp;recipe)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.271">registerContainerRecipe</a>(<a href="../../../cn/nukkit/inventory/ContainerRecipe.html" title="class in cn.nukkit.inventory">ContainerRecipe</a>&nbsp;recipe)</pre>
 </li>
 </ul>
 <a name="matchBrewingRecipe-cn.nukkit.item.Item-cn.nukkit.item.Item-">
@@ -485,7 +502,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>matchBrewingRecipe</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/inventory/BrewingRecipe.html" title="class in cn.nukkit.inventory">BrewingRecipe</a>&nbsp;<a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.285">matchBrewingRecipe</a>(<a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;input,
+<pre>public&nbsp;<a href="../../../cn/nukkit/inventory/BrewingRecipe.html" title="class in cn.nukkit.inventory">BrewingRecipe</a>&nbsp;<a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.277">matchBrewingRecipe</a>(<a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;input,
                                         <a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;potion)</pre>
 </li>
 </ul>
@@ -495,19 +512,28 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>matchContainerRecipe</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/inventory/ContainerRecipe.html" title="class in cn.nukkit.inventory">ContainerRecipe</a>&nbsp;<a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.293">matchContainerRecipe</a>(<a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;input,
+<pre>public&nbsp;<a href="../../../cn/nukkit/inventory/ContainerRecipe.html" title="class in cn.nukkit.inventory">ContainerRecipe</a>&nbsp;<a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.285">matchContainerRecipe</a>(<a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;input,
                                             <a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;potion)</pre>
 </li>
 </ul>
-<a name="matchRecipe-cn.nukkit.item.Item:A:A-cn.nukkit.item.Item-cn.nukkit.item.Item:A:A-">
+<a name="matchRecipe-java.util.List-cn.nukkit.item.Item-java.util.List-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>matchRecipe</h4>
+<pre>public&nbsp;<a href="../../../cn/nukkit/inventory/CraftingRecipe.html" title="interface in cn.nukkit.inventory">CraftingRecipe</a>&nbsp;<a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.289">matchRecipe</a>(java.util.List&lt;<a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&gt;&nbsp;inputList,
+                                  <a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;primaryOutput,
+                                  java.util.List&lt;<a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&gt;&nbsp;extraOutputList)</pre>
+</li>
+</ul>
+<a name="registerMultiRecipe-cn.nukkit.inventory.MultiRecipe-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>matchRecipe</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/inventory/CraftingRecipe.html" title="interface in cn.nukkit.inventory">CraftingRecipe</a>&nbsp;<a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.297">matchRecipe</a>(<a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>[][]&nbsp;inputMap,
-                                  <a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;primaryOutput,
-                                  <a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>[][]&nbsp;extraOutputMap)</pre>
+<h4>registerMultiRecipe</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/inventory/CraftingManager.html#line.337">registerMultiRecipe</a>(<a href="../../../cn/nukkit/inventory/MultiRecipe.html" title="class in cn.nukkit.inventory">MultiRecipe</a>&nbsp;recipe)</pre>
 </li>
 </ul>
 </li>

@@ -64,7 +64,7 @@
 <span class="sourceLineNo">056</span><a name="line.56"></a>
 <span class="sourceLineNo">057</span>    protected float movementSpeed = 0.1f;<a name="line.57"></a>
 <span class="sourceLineNo">058</span><a name="line.58"></a>
-<span class="sourceLineNo">059</span>    protected int turtleTicks = 200;<a name="line.59"></a>
+<span class="sourceLineNo">059</span>    protected int turtleTicks = 0;<a name="line.59"></a>
 <span class="sourceLineNo">060</span><a name="line.60"></a>
 <span class="sourceLineNo">061</span>    @Override<a name="line.61"></a>
 <span class="sourceLineNo">062</span>    protected void initEntity() {<a name="line.62"></a>
@@ -214,193 +214,192 @@
 <span class="sourceLineNo">206</span>    public boolean entityBaseTick(int tickDiff) {<a name="line.206"></a>
 <span class="sourceLineNo">207</span>        Timings.livingEntityBaseTickTimer.startTiming();<a name="line.207"></a>
 <span class="sourceLineNo">208</span>        boolean isBreathing = !this.isInsideOfWater();<a name="line.208"></a>
-<span class="sourceLineNo">209</span>        if (this instanceof Player &amp;&amp; (((Player) this).isCreative() || ((Player) this).isSpectator())) {<a name="line.209"></a>
-<span class="sourceLineNo">210</span>            isBreathing = true;<a name="line.210"></a>
-<span class="sourceLineNo">211</span>        }<a name="line.211"></a>
-<span class="sourceLineNo">212</span><a name="line.212"></a>
-<span class="sourceLineNo">213</span>        if (this instanceof Player) {<a name="line.213"></a>
-<span class="sourceLineNo">214</span>            if (!isBreathing &amp;&amp; ((Player) this).getInventory().getHelmet() instanceof ItemTurtleShell) {<a name="line.214"></a>
-<span class="sourceLineNo">215</span>                if (turtleTicks &gt; 0) {<a name="line.215"></a>
-<span class="sourceLineNo">216</span>                    isBreathing = true;<a name="line.216"></a>
-<span class="sourceLineNo">217</span>                    turtleTicks--;<a name="line.217"></a>
-<span class="sourceLineNo">218</span>                }<a name="line.218"></a>
-<span class="sourceLineNo">219</span>            } else {<a name="line.219"></a>
-<span class="sourceLineNo">220</span>                turtleTicks = 200;<a name="line.220"></a>
-<span class="sourceLineNo">221</span>            }<a name="line.221"></a>
-<span class="sourceLineNo">222</span>        }<a name="line.222"></a>
-<span class="sourceLineNo">223</span>        <a name="line.223"></a>
-<span class="sourceLineNo">224</span>        this.setDataFlag(DATA_FLAGS, DATA_FLAG_BREATHING, isBreathing);<a name="line.224"></a>
-<span class="sourceLineNo">225</span><a name="line.225"></a>
-<span class="sourceLineNo">226</span>        boolean hasUpdate = super.entityBaseTick(tickDiff);<a name="line.226"></a>
-<span class="sourceLineNo">227</span><a name="line.227"></a>
-<span class="sourceLineNo">228</span>        if (this.isAlive()) {<a name="line.228"></a>
-<span class="sourceLineNo">229</span><a name="line.229"></a>
-<span class="sourceLineNo">230</span>            if (this.isInsideOfSolid()) {<a name="line.230"></a>
-<span class="sourceLineNo">231</span>                hasUpdate = true;<a name="line.231"></a>
-<span class="sourceLineNo">232</span>                this.attack(new EntityDamageEvent(this, DamageCause.SUFFOCATION, 1));<a name="line.232"></a>
-<span class="sourceLineNo">233</span>            }<a name="line.233"></a>
-<span class="sourceLineNo">234</span><a name="line.234"></a>
-<span class="sourceLineNo">235</span>            if (this.isOnLadder() || this.hasEffect(Effect.LEVITATION)) {<a name="line.235"></a>
-<span class="sourceLineNo">236</span>                this.resetFallDistance();<a name="line.236"></a>
-<span class="sourceLineNo">237</span>            }<a name="line.237"></a>
-<span class="sourceLineNo">238</span><a name="line.238"></a>
-<span class="sourceLineNo">239</span>            if (!this.hasEffect(Effect.WATER_BREATHING) &amp;&amp; this.isInsideOfWater()) {<a name="line.239"></a>
-<span class="sourceLineNo">240</span>                if (this instanceof EntityWaterAnimal || (this instanceof Player &amp;&amp; (((Player) this).isCreative() || ((Player) this).isSpectator()))) {<a name="line.240"></a>
-<span class="sourceLineNo">241</span>                    this.setAirTicks(400);<a name="line.241"></a>
-<span class="sourceLineNo">242</span>                } else {<a name="line.242"></a>
-<span class="sourceLineNo">243</span>                    if (turtleTicks == 0 || turtleTicks == 200) {<a name="line.243"></a>
-<span class="sourceLineNo">244</span>                        hasUpdate = true;<a name="line.244"></a>
-<span class="sourceLineNo">245</span>                        int airTicks = this.getAirTicks() - tickDiff;<a name="line.245"></a>
-<span class="sourceLineNo">246</span><a name="line.246"></a>
-<span class="sourceLineNo">247</span>                        if (airTicks &lt;= -20) {<a name="line.247"></a>
-<span class="sourceLineNo">248</span>                            airTicks = 0;<a name="line.248"></a>
-<span class="sourceLineNo">249</span>                            this.attack(new EntityDamageEvent(this, DamageCause.DROWNING, 2));<a name="line.249"></a>
-<span class="sourceLineNo">250</span>                        }<a name="line.250"></a>
-<span class="sourceLineNo">251</span><a name="line.251"></a>
-<span class="sourceLineNo">252</span>                        setAirTicks(airTicks);<a name="line.252"></a>
-<span class="sourceLineNo">253</span>                    }<a name="line.253"></a>
-<span class="sourceLineNo">254</span>                }<a name="line.254"></a>
-<span class="sourceLineNo">255</span>            } else {<a name="line.255"></a>
-<span class="sourceLineNo">256</span>                if (this instanceof EntityWaterAnimal) {<a name="line.256"></a>
-<span class="sourceLineNo">257</span>                    hasUpdate = true;<a name="line.257"></a>
-<span class="sourceLineNo">258</span>                    int airTicks = getAirTicks() - tickDiff;<a name="line.258"></a>
-<span class="sourceLineNo">259</span><a name="line.259"></a>
-<span class="sourceLineNo">260</span>                    if (airTicks &lt;= -20) {<a name="line.260"></a>
-<span class="sourceLineNo">261</span>                        airTicks = 0;<a name="line.261"></a>
-<span class="sourceLineNo">262</span>                        this.attack(new EntityDamageEvent(this, DamageCause.SUFFOCATION, 2));<a name="line.262"></a>
-<span class="sourceLineNo">263</span>                    }<a name="line.263"></a>
-<span class="sourceLineNo">264</span><a name="line.264"></a>
-<span class="sourceLineNo">265</span>                    setAirTicks(airTicks);<a name="line.265"></a>
-<span class="sourceLineNo">266</span>                } else {<a name="line.266"></a>
-<span class="sourceLineNo">267</span>                    int airTicks = getAirTicks();<a name="line.267"></a>
-<span class="sourceLineNo">268</span><a name="line.268"></a>
-<span class="sourceLineNo">269</span>                    if (airTicks &lt; 400) {<a name="line.269"></a>
-<span class="sourceLineNo">270</span>                        setAirTicks(Math.min(400, airTicks + tickDiff * 5));<a name="line.270"></a>
-<span class="sourceLineNo">271</span>                    }<a name="line.271"></a>
-<span class="sourceLineNo">272</span>                }<a name="line.272"></a>
-<span class="sourceLineNo">273</span>            }<a name="line.273"></a>
-<span class="sourceLineNo">274</span>        }<a name="line.274"></a>
-<span class="sourceLineNo">275</span><a name="line.275"></a>
-<span class="sourceLineNo">276</span>        if (this.attackTime &gt; 0) {<a name="line.276"></a>
-<span class="sourceLineNo">277</span>            this.attackTime -= tickDiff;<a name="line.277"></a>
-<span class="sourceLineNo">278</span>        }<a name="line.278"></a>
-<span class="sourceLineNo">279</span><a name="line.279"></a>
-<span class="sourceLineNo">280</span>        if (this.riding == null) {<a name="line.280"></a>
-<span class="sourceLineNo">281</span>            for (Entity entity : level.getNearbyEntities(this.boundingBox.grow(0.20000000298023224, 0.0D, 0.20000000298023224), this)) {<a name="line.281"></a>
-<span class="sourceLineNo">282</span>                if (entity instanceof EntityRideable) {<a name="line.282"></a>
-<span class="sourceLineNo">283</span>                    this.collidingWith(entity);<a name="line.283"></a>
-<span class="sourceLineNo">284</span>                }<a name="line.284"></a>
-<span class="sourceLineNo">285</span>            }<a name="line.285"></a>
-<span class="sourceLineNo">286</span>        }<a name="line.286"></a>
-<span class="sourceLineNo">287</span><a name="line.287"></a>
-<span class="sourceLineNo">288</span>        // Used to check collisions with magma blocks<a name="line.288"></a>
-<span class="sourceLineNo">289</span>        Block block = this.level.getBlock((int) x, (int) y - 1, (int) z);<a name="line.289"></a>
-<span class="sourceLineNo">290</span>        if (block instanceof BlockMagma) block.onEntityCollide(this);<a name="line.290"></a>
-<span class="sourceLineNo">291</span><a name="line.291"></a>
-<span class="sourceLineNo">292</span>        Timings.livingEntityBaseTickTimer.stopTiming();<a name="line.292"></a>
-<span class="sourceLineNo">293</span><a name="line.293"></a>
-<span class="sourceLineNo">294</span>        return hasUpdate;<a name="line.294"></a>
-<span class="sourceLineNo">295</span>    }<a name="line.295"></a>
-<span class="sourceLineNo">296</span><a name="line.296"></a>
-<span class="sourceLineNo">297</span>    public Item[] getDrops() {<a name="line.297"></a>
-<span class="sourceLineNo">298</span>        return new Item[0];<a name="line.298"></a>
-<span class="sourceLineNo">299</span>    }<a name="line.299"></a>
-<span class="sourceLineNo">300</span><a name="line.300"></a>
-<span class="sourceLineNo">301</span>    public Block[] getLineOfSight(int maxDistance) {<a name="line.301"></a>
-<span class="sourceLineNo">302</span>        return this.getLineOfSight(maxDistance, 0);<a name="line.302"></a>
-<span class="sourceLineNo">303</span>    }<a name="line.303"></a>
-<span class="sourceLineNo">304</span><a name="line.304"></a>
-<span class="sourceLineNo">305</span>    public Block[] getLineOfSight(int maxDistance, int maxLength) {<a name="line.305"></a>
-<span class="sourceLineNo">306</span>        return this.getLineOfSight(maxDistance, maxLength, new Integer[]{});<a name="line.306"></a>
-<span class="sourceLineNo">307</span>    }<a name="line.307"></a>
-<span class="sourceLineNo">308</span><a name="line.308"></a>
-<span class="sourceLineNo">309</span>    @Deprecated<a name="line.309"></a>
-<span class="sourceLineNo">310</span>    public Block[] getLineOfSight(int maxDistance, int maxLength, Map&lt;Integer, Object&gt; transparent) {<a name="line.310"></a>
-<span class="sourceLineNo">311</span>        return this.getLineOfSight(maxDistance, maxLength, transparent.keySet().toArray(new Integer[0]));<a name="line.311"></a>
-<span class="sourceLineNo">312</span>    }<a name="line.312"></a>
-<span class="sourceLineNo">313</span><a name="line.313"></a>
-<span class="sourceLineNo">314</span>    public Block[] getLineOfSight(int maxDistance, int maxLength, Integer[] transparent) {<a name="line.314"></a>
-<span class="sourceLineNo">315</span>        if (maxDistance &gt; 120) {<a name="line.315"></a>
-<span class="sourceLineNo">316</span>            maxDistance = 120;<a name="line.316"></a>
-<span class="sourceLineNo">317</span>        }<a name="line.317"></a>
-<span class="sourceLineNo">318</span><a name="line.318"></a>
-<span class="sourceLineNo">319</span>        if (transparent != null &amp;&amp; transparent.length == 0) {<a name="line.319"></a>
-<span class="sourceLineNo">320</span>            transparent = null;<a name="line.320"></a>
-<span class="sourceLineNo">321</span>        }<a name="line.321"></a>
-<span class="sourceLineNo">322</span><a name="line.322"></a>
-<span class="sourceLineNo">323</span>        List&lt;Block&gt; blocks = new ArrayList&lt;&gt;();<a name="line.323"></a>
-<span class="sourceLineNo">324</span><a name="line.324"></a>
-<span class="sourceLineNo">325</span>        BlockIterator itr = new BlockIterator(this.level, this.getPosition(), this.getDirectionVector(), this.getEyeHeight(), maxDistance);<a name="line.325"></a>
-<span class="sourceLineNo">326</span><a name="line.326"></a>
-<span class="sourceLineNo">327</span>        while (itr.hasNext()) {<a name="line.327"></a>
-<span class="sourceLineNo">328</span>            Block block = itr.next();<a name="line.328"></a>
-<span class="sourceLineNo">329</span>            blocks.add(block);<a name="line.329"></a>
-<span class="sourceLineNo">330</span><a name="line.330"></a>
-<span class="sourceLineNo">331</span>            if (maxLength != 0 &amp;&amp; blocks.size() &gt; maxLength) {<a name="line.331"></a>
-<span class="sourceLineNo">332</span>                blocks.remove(0);<a name="line.332"></a>
-<span class="sourceLineNo">333</span>            }<a name="line.333"></a>
-<span class="sourceLineNo">334</span><a name="line.334"></a>
-<span class="sourceLineNo">335</span>            int id = block.getId();<a name="line.335"></a>
-<span class="sourceLineNo">336</span><a name="line.336"></a>
-<span class="sourceLineNo">337</span>            if (transparent == null) {<a name="line.337"></a>
-<span class="sourceLineNo">338</span>                if (id != 0) {<a name="line.338"></a>
-<span class="sourceLineNo">339</span>                    break;<a name="line.339"></a>
-<span class="sourceLineNo">340</span>                }<a name="line.340"></a>
-<span class="sourceLineNo">341</span>            } else {<a name="line.341"></a>
-<span class="sourceLineNo">342</span>                if (Arrays.binarySearch(transparent, id) &lt; 0) {<a name="line.342"></a>
-<span class="sourceLineNo">343</span>                    break;<a name="line.343"></a>
-<span class="sourceLineNo">344</span>                }<a name="line.344"></a>
-<span class="sourceLineNo">345</span>            }<a name="line.345"></a>
-<span class="sourceLineNo">346</span>        }<a name="line.346"></a>
-<span class="sourceLineNo">347</span><a name="line.347"></a>
-<span class="sourceLineNo">348</span>        return blocks.toArray(new Block[0]);<a name="line.348"></a>
-<span class="sourceLineNo">349</span>    }<a name="line.349"></a>
-<span class="sourceLineNo">350</span><a name="line.350"></a>
-<span class="sourceLineNo">351</span>    public Block getTargetBlock(int maxDistance) {<a name="line.351"></a>
-<span class="sourceLineNo">352</span>        return getTargetBlock(maxDistance, new Integer[]{});<a name="line.352"></a>
-<span class="sourceLineNo">353</span>    }<a name="line.353"></a>
-<span class="sourceLineNo">354</span><a name="line.354"></a>
-<span class="sourceLineNo">355</span>    @Deprecated<a name="line.355"></a>
-<span class="sourceLineNo">356</span>    public Block getTargetBlock(int maxDistance, Map&lt;Integer, Object&gt; transparent) {<a name="line.356"></a>
-<span class="sourceLineNo">357</span>        return getTargetBlock(maxDistance, transparent.keySet().toArray(new Integer[0]));<a name="line.357"></a>
-<span class="sourceLineNo">358</span>    }<a name="line.358"></a>
-<span class="sourceLineNo">359</span><a name="line.359"></a>
-<span class="sourceLineNo">360</span>    public Block getTargetBlock(int maxDistance, Integer[] transparent) {<a name="line.360"></a>
-<span class="sourceLineNo">361</span>        try {<a name="line.361"></a>
-<span class="sourceLineNo">362</span>            Block[] blocks = this.getLineOfSight(maxDistance, 1, transparent);<a name="line.362"></a>
-<span class="sourceLineNo">363</span>            Block block = blocks[0];<a name="line.363"></a>
-<span class="sourceLineNo">364</span>            if (block != null) {<a name="line.364"></a>
-<span class="sourceLineNo">365</span>                if (transparent != null &amp;&amp; transparent.length != 0) {<a name="line.365"></a>
-<span class="sourceLineNo">366</span>                    if (Arrays.binarySearch(transparent, block.getId()) &lt; 0) {<a name="line.366"></a>
-<span class="sourceLineNo">367</span>                        return block;<a name="line.367"></a>
-<span class="sourceLineNo">368</span>                    }<a name="line.368"></a>
-<span class="sourceLineNo">369</span>                } else {<a name="line.369"></a>
-<span class="sourceLineNo">370</span>                    return block;<a name="line.370"></a>
-<span class="sourceLineNo">371</span>                }<a name="line.371"></a>
-<span class="sourceLineNo">372</span>            }<a name="line.372"></a>
-<span class="sourceLineNo">373</span>        } catch (Exception ignored) {<a name="line.373"></a>
-<span class="sourceLineNo">374</span><a name="line.374"></a>
-<span class="sourceLineNo">375</span>        }<a name="line.375"></a>
-<span class="sourceLineNo">376</span><a name="line.376"></a>
-<span class="sourceLineNo">377</span>        return null;<a name="line.377"></a>
-<span class="sourceLineNo">378</span>    }<a name="line.378"></a>
-<span class="sourceLineNo">379</span><a name="line.379"></a>
-<span class="sourceLineNo">380</span>    public void setMovementSpeed(float speed) {<a name="line.380"></a>
-<span class="sourceLineNo">381</span>        this.movementSpeed = speed;<a name="line.381"></a>
-<span class="sourceLineNo">382</span>    }<a name="line.382"></a>
-<span class="sourceLineNo">383</span><a name="line.383"></a>
-<span class="sourceLineNo">384</span>    public float getMovementSpeed() {<a name="line.384"></a>
-<span class="sourceLineNo">385</span>        return this.movementSpeed;<a name="line.385"></a>
-<span class="sourceLineNo">386</span>    }<a name="line.386"></a>
-<span class="sourceLineNo">387</span><a name="line.387"></a>
-<span class="sourceLineNo">388</span>    public int getAirTicks() {<a name="line.388"></a>
-<span class="sourceLineNo">389</span>        return this.getDataPropertyShort(DATA_AIR);<a name="line.389"></a>
-<span class="sourceLineNo">390</span>    }<a name="line.390"></a>
-<span class="sourceLineNo">391</span><a name="line.391"></a>
-<span class="sourceLineNo">392</span>    public void setAirTicks(int ticks) {<a name="line.392"></a>
-<span class="sourceLineNo">393</span>        this.setDataProperty(new ShortEntityData(DATA_AIR, ticks));<a name="line.393"></a>
-<span class="sourceLineNo">394</span>    }<a name="line.394"></a>
-<span class="sourceLineNo">395</span>}<a name="line.395"></a>
+<span class="sourceLineNo">209</span><a name="line.209"></a>
+<span class="sourceLineNo">210</span>        if (this instanceof Player) {<a name="line.210"></a>
+<span class="sourceLineNo">211</span>            if (isBreathing &amp;&amp; ((Player) this).getInventory().getHelmet() instanceof ItemTurtleShell) {<a name="line.211"></a>
+<span class="sourceLineNo">212</span>                turtleTicks = 200;<a name="line.212"></a>
+<span class="sourceLineNo">213</span>            } else if (turtleTicks &gt; 0) {<a name="line.213"></a>
+<span class="sourceLineNo">214</span>                isBreathing = true;<a name="line.214"></a>
+<span class="sourceLineNo">215</span>                turtleTicks--;<a name="line.215"></a>
+<span class="sourceLineNo">216</span>            }<a name="line.216"></a>
+<span class="sourceLineNo">217</span><a name="line.217"></a>
+<span class="sourceLineNo">218</span>            if ((((Player) this).isCreative() || ((Player) this).isSpectator())) {<a name="line.218"></a>
+<span class="sourceLineNo">219</span>                isBreathing = true;<a name="line.219"></a>
+<span class="sourceLineNo">220</span>            }<a name="line.220"></a>
+<span class="sourceLineNo">221</span>        }<a name="line.221"></a>
+<span class="sourceLineNo">222</span>        <a name="line.222"></a>
+<span class="sourceLineNo">223</span>        this.setDataFlag(DATA_FLAGS, DATA_FLAG_BREATHING, isBreathing);<a name="line.223"></a>
+<span class="sourceLineNo">224</span><a name="line.224"></a>
+<span class="sourceLineNo">225</span>        boolean hasUpdate = super.entityBaseTick(tickDiff);<a name="line.225"></a>
+<span class="sourceLineNo">226</span><a name="line.226"></a>
+<span class="sourceLineNo">227</span>        if (this.isAlive()) {<a name="line.227"></a>
+<span class="sourceLineNo">228</span><a name="line.228"></a>
+<span class="sourceLineNo">229</span>            if (this.isInsideOfSolid()) {<a name="line.229"></a>
+<span class="sourceLineNo">230</span>                hasUpdate = true;<a name="line.230"></a>
+<span class="sourceLineNo">231</span>                this.attack(new EntityDamageEvent(this, DamageCause.SUFFOCATION, 1));<a name="line.231"></a>
+<span class="sourceLineNo">232</span>            }<a name="line.232"></a>
+<span class="sourceLineNo">233</span><a name="line.233"></a>
+<span class="sourceLineNo">234</span>            if (this.isOnLadder() || this.hasEffect(Effect.LEVITATION) || this.hasEffect(Effect.SLOW_FALLING)) {<a name="line.234"></a>
+<span class="sourceLineNo">235</span>                this.resetFallDistance();<a name="line.235"></a>
+<span class="sourceLineNo">236</span>            }<a name="line.236"></a>
+<span class="sourceLineNo">237</span><a name="line.237"></a>
+<span class="sourceLineNo">238</span>            if (!this.hasEffect(Effect.WATER_BREATHING) &amp;&amp; this.isInsideOfWater()) {<a name="line.238"></a>
+<span class="sourceLineNo">239</span>                if (this instanceof EntityWaterAnimal || (this instanceof Player &amp;&amp; (((Player) this).isCreative() || ((Player) this).isSpectator()))) {<a name="line.239"></a>
+<span class="sourceLineNo">240</span>                    this.setAirTicks(400);<a name="line.240"></a>
+<span class="sourceLineNo">241</span>                } else {<a name="line.241"></a>
+<span class="sourceLineNo">242</span>                    if (turtleTicks == 0 || turtleTicks == 200) {<a name="line.242"></a>
+<span class="sourceLineNo">243</span>                        hasUpdate = true;<a name="line.243"></a>
+<span class="sourceLineNo">244</span>                        int airTicks = this.getAirTicks() - tickDiff;<a name="line.244"></a>
+<span class="sourceLineNo">245</span><a name="line.245"></a>
+<span class="sourceLineNo">246</span>                        if (airTicks &lt;= -20) {<a name="line.246"></a>
+<span class="sourceLineNo">247</span>                            airTicks = 0;<a name="line.247"></a>
+<span class="sourceLineNo">248</span>                            this.attack(new EntityDamageEvent(this, DamageCause.DROWNING, 2));<a name="line.248"></a>
+<span class="sourceLineNo">249</span>                        }<a name="line.249"></a>
+<span class="sourceLineNo">250</span><a name="line.250"></a>
+<span class="sourceLineNo">251</span>                        setAirTicks(airTicks);<a name="line.251"></a>
+<span class="sourceLineNo">252</span>                    }<a name="line.252"></a>
+<span class="sourceLineNo">253</span>                }<a name="line.253"></a>
+<span class="sourceLineNo">254</span>            } else {<a name="line.254"></a>
+<span class="sourceLineNo">255</span>                if (this instanceof EntityWaterAnimal) {<a name="line.255"></a>
+<span class="sourceLineNo">256</span>                    hasUpdate = true;<a name="line.256"></a>
+<span class="sourceLineNo">257</span>                    int airTicks = getAirTicks() - tickDiff;<a name="line.257"></a>
+<span class="sourceLineNo">258</span><a name="line.258"></a>
+<span class="sourceLineNo">259</span>                    if (airTicks &lt;= -20) {<a name="line.259"></a>
+<span class="sourceLineNo">260</span>                        airTicks = 0;<a name="line.260"></a>
+<span class="sourceLineNo">261</span>                        this.attack(new EntityDamageEvent(this, DamageCause.SUFFOCATION, 2));<a name="line.261"></a>
+<span class="sourceLineNo">262</span>                    }<a name="line.262"></a>
+<span class="sourceLineNo">263</span><a name="line.263"></a>
+<span class="sourceLineNo">264</span>                    setAirTicks(airTicks);<a name="line.264"></a>
+<span class="sourceLineNo">265</span>                } else {<a name="line.265"></a>
+<span class="sourceLineNo">266</span>                    int airTicks = getAirTicks();<a name="line.266"></a>
+<span class="sourceLineNo">267</span><a name="line.267"></a>
+<span class="sourceLineNo">268</span>                    if (airTicks &lt; 400) {<a name="line.268"></a>
+<span class="sourceLineNo">269</span>                        setAirTicks(Math.min(400, airTicks + tickDiff * 5));<a name="line.269"></a>
+<span class="sourceLineNo">270</span>                    }<a name="line.270"></a>
+<span class="sourceLineNo">271</span>                }<a name="line.271"></a>
+<span class="sourceLineNo">272</span>            }<a name="line.272"></a>
+<span class="sourceLineNo">273</span>        }<a name="line.273"></a>
+<span class="sourceLineNo">274</span><a name="line.274"></a>
+<span class="sourceLineNo">275</span>        if (this.attackTime &gt; 0) {<a name="line.275"></a>
+<span class="sourceLineNo">276</span>            this.attackTime -= tickDiff;<a name="line.276"></a>
+<span class="sourceLineNo">277</span>        }<a name="line.277"></a>
+<span class="sourceLineNo">278</span><a name="line.278"></a>
+<span class="sourceLineNo">279</span>        if (this.riding == null) {<a name="line.279"></a>
+<span class="sourceLineNo">280</span>            for (Entity entity : level.getNearbyEntities(this.boundingBox.grow(0.20000000298023224, 0.0D, 0.20000000298023224), this)) {<a name="line.280"></a>
+<span class="sourceLineNo">281</span>                if (entity instanceof EntityRideable) {<a name="line.281"></a>
+<span class="sourceLineNo">282</span>                    this.collidingWith(entity);<a name="line.282"></a>
+<span class="sourceLineNo">283</span>                }<a name="line.283"></a>
+<span class="sourceLineNo">284</span>            }<a name="line.284"></a>
+<span class="sourceLineNo">285</span>        }<a name="line.285"></a>
+<span class="sourceLineNo">286</span><a name="line.286"></a>
+<span class="sourceLineNo">287</span>        // Used to check collisions with magma blocks<a name="line.287"></a>
+<span class="sourceLineNo">288</span>        Block block = this.level.getBlock((int) x, (int) y - 1, (int) z);<a name="line.288"></a>
+<span class="sourceLineNo">289</span>        if (block instanceof BlockMagma) block.onEntityCollide(this);<a name="line.289"></a>
+<span class="sourceLineNo">290</span><a name="line.290"></a>
+<span class="sourceLineNo">291</span>        Timings.livingEntityBaseTickTimer.stopTiming();<a name="line.291"></a>
+<span class="sourceLineNo">292</span><a name="line.292"></a>
+<span class="sourceLineNo">293</span>        return hasUpdate;<a name="line.293"></a>
+<span class="sourceLineNo">294</span>    }<a name="line.294"></a>
+<span class="sourceLineNo">295</span><a name="line.295"></a>
+<span class="sourceLineNo">296</span>    public Item[] getDrops() {<a name="line.296"></a>
+<span class="sourceLineNo">297</span>        return new Item[0];<a name="line.297"></a>
+<span class="sourceLineNo">298</span>    }<a name="line.298"></a>
+<span class="sourceLineNo">299</span><a name="line.299"></a>
+<span class="sourceLineNo">300</span>    public Block[] getLineOfSight(int maxDistance) {<a name="line.300"></a>
+<span class="sourceLineNo">301</span>        return this.getLineOfSight(maxDistance, 0);<a name="line.301"></a>
+<span class="sourceLineNo">302</span>    }<a name="line.302"></a>
+<span class="sourceLineNo">303</span><a name="line.303"></a>
+<span class="sourceLineNo">304</span>    public Block[] getLineOfSight(int maxDistance, int maxLength) {<a name="line.304"></a>
+<span class="sourceLineNo">305</span>        return this.getLineOfSight(maxDistance, maxLength, new Integer[]{});<a name="line.305"></a>
+<span class="sourceLineNo">306</span>    }<a name="line.306"></a>
+<span class="sourceLineNo">307</span><a name="line.307"></a>
+<span class="sourceLineNo">308</span>    @Deprecated<a name="line.308"></a>
+<span class="sourceLineNo">309</span>    public Block[] getLineOfSight(int maxDistance, int maxLength, Map&lt;Integer, Object&gt; transparent) {<a name="line.309"></a>
+<span class="sourceLineNo">310</span>        return this.getLineOfSight(maxDistance, maxLength, transparent.keySet().toArray(new Integer[0]));<a name="line.310"></a>
+<span class="sourceLineNo">311</span>    }<a name="line.311"></a>
+<span class="sourceLineNo">312</span><a name="line.312"></a>
+<span class="sourceLineNo">313</span>    public Block[] getLineOfSight(int maxDistance, int maxLength, Integer[] transparent) {<a name="line.313"></a>
+<span class="sourceLineNo">314</span>        if (maxDistance &gt; 120) {<a name="line.314"></a>
+<span class="sourceLineNo">315</span>            maxDistance = 120;<a name="line.315"></a>
+<span class="sourceLineNo">316</span>        }<a name="line.316"></a>
+<span class="sourceLineNo">317</span><a name="line.317"></a>
+<span class="sourceLineNo">318</span>        if (transparent != null &amp;&amp; transparent.length == 0) {<a name="line.318"></a>
+<span class="sourceLineNo">319</span>            transparent = null;<a name="line.319"></a>
+<span class="sourceLineNo">320</span>        }<a name="line.320"></a>
+<span class="sourceLineNo">321</span><a name="line.321"></a>
+<span class="sourceLineNo">322</span>        List&lt;Block&gt; blocks = new ArrayList&lt;&gt;();<a name="line.322"></a>
+<span class="sourceLineNo">323</span><a name="line.323"></a>
+<span class="sourceLineNo">324</span>        BlockIterator itr = new BlockIterator(this.level, this.getPosition(), this.getDirectionVector(), this.getEyeHeight(), maxDistance);<a name="line.324"></a>
+<span class="sourceLineNo">325</span><a name="line.325"></a>
+<span class="sourceLineNo">326</span>        while (itr.hasNext()) {<a name="line.326"></a>
+<span class="sourceLineNo">327</span>            Block block = itr.next();<a name="line.327"></a>
+<span class="sourceLineNo">328</span>            blocks.add(block);<a name="line.328"></a>
+<span class="sourceLineNo">329</span><a name="line.329"></a>
+<span class="sourceLineNo">330</span>            if (maxLength != 0 &amp;&amp; blocks.size() &gt; maxLength) {<a name="line.330"></a>
+<span class="sourceLineNo">331</span>                blocks.remove(0);<a name="line.331"></a>
+<span class="sourceLineNo">332</span>            }<a name="line.332"></a>
+<span class="sourceLineNo">333</span><a name="line.333"></a>
+<span class="sourceLineNo">334</span>            int id = block.getId();<a name="line.334"></a>
+<span class="sourceLineNo">335</span><a name="line.335"></a>
+<span class="sourceLineNo">336</span>            if (transparent == null) {<a name="line.336"></a>
+<span class="sourceLineNo">337</span>                if (id != 0) {<a name="line.337"></a>
+<span class="sourceLineNo">338</span>                    break;<a name="line.338"></a>
+<span class="sourceLineNo">339</span>                }<a name="line.339"></a>
+<span class="sourceLineNo">340</span>            } else {<a name="line.340"></a>
+<span class="sourceLineNo">341</span>                if (Arrays.binarySearch(transparent, id) &lt; 0) {<a name="line.341"></a>
+<span class="sourceLineNo">342</span>                    break;<a name="line.342"></a>
+<span class="sourceLineNo">343</span>                }<a name="line.343"></a>
+<span class="sourceLineNo">344</span>            }<a name="line.344"></a>
+<span class="sourceLineNo">345</span>        }<a name="line.345"></a>
+<span class="sourceLineNo">346</span><a name="line.346"></a>
+<span class="sourceLineNo">347</span>        return blocks.toArray(new Block[0]);<a name="line.347"></a>
+<span class="sourceLineNo">348</span>    }<a name="line.348"></a>
+<span class="sourceLineNo">349</span><a name="line.349"></a>
+<span class="sourceLineNo">350</span>    public Block getTargetBlock(int maxDistance) {<a name="line.350"></a>
+<span class="sourceLineNo">351</span>        return getTargetBlock(maxDistance, new Integer[]{});<a name="line.351"></a>
+<span class="sourceLineNo">352</span>    }<a name="line.352"></a>
+<span class="sourceLineNo">353</span><a name="line.353"></a>
+<span class="sourceLineNo">354</span>    @Deprecated<a name="line.354"></a>
+<span class="sourceLineNo">355</span>    public Block getTargetBlock(int maxDistance, Map&lt;Integer, Object&gt; transparent) {<a name="line.355"></a>
+<span class="sourceLineNo">356</span>        return getTargetBlock(maxDistance, transparent.keySet().toArray(new Integer[0]));<a name="line.356"></a>
+<span class="sourceLineNo">357</span>    }<a name="line.357"></a>
+<span class="sourceLineNo">358</span><a name="line.358"></a>
+<span class="sourceLineNo">359</span>    public Block getTargetBlock(int maxDistance, Integer[] transparent) {<a name="line.359"></a>
+<span class="sourceLineNo">360</span>        try {<a name="line.360"></a>
+<span class="sourceLineNo">361</span>            Block[] blocks = this.getLineOfSight(maxDistance, 1, transparent);<a name="line.361"></a>
+<span class="sourceLineNo">362</span>            Block block = blocks[0];<a name="line.362"></a>
+<span class="sourceLineNo">363</span>            if (block != null) {<a name="line.363"></a>
+<span class="sourceLineNo">364</span>                if (transparent != null &amp;&amp; transparent.length != 0) {<a name="line.364"></a>
+<span class="sourceLineNo">365</span>                    if (Arrays.binarySearch(transparent, block.getId()) &lt; 0) {<a name="line.365"></a>
+<span class="sourceLineNo">366</span>                        return block;<a name="line.366"></a>
+<span class="sourceLineNo">367</span>                    }<a name="line.367"></a>
+<span class="sourceLineNo">368</span>                } else {<a name="line.368"></a>
+<span class="sourceLineNo">369</span>                    return block;<a name="line.369"></a>
+<span class="sourceLineNo">370</span>                }<a name="line.370"></a>
+<span class="sourceLineNo">371</span>            }<a name="line.371"></a>
+<span class="sourceLineNo">372</span>        } catch (Exception ignored) {<a name="line.372"></a>
+<span class="sourceLineNo">373</span><a name="line.373"></a>
+<span class="sourceLineNo">374</span>        }<a name="line.374"></a>
+<span class="sourceLineNo">375</span><a name="line.375"></a>
+<span class="sourceLineNo">376</span>        return null;<a name="line.376"></a>
+<span class="sourceLineNo">377</span>    }<a name="line.377"></a>
+<span class="sourceLineNo">378</span><a name="line.378"></a>
+<span class="sourceLineNo">379</span>    public void setMovementSpeed(float speed) {<a name="line.379"></a>
+<span class="sourceLineNo">380</span>        this.movementSpeed = speed;<a name="line.380"></a>
+<span class="sourceLineNo">381</span>    }<a name="line.381"></a>
+<span class="sourceLineNo">382</span><a name="line.382"></a>
+<span class="sourceLineNo">383</span>    public float getMovementSpeed() {<a name="line.383"></a>
+<span class="sourceLineNo">384</span>        return this.movementSpeed;<a name="line.384"></a>
+<span class="sourceLineNo">385</span>    }<a name="line.385"></a>
+<span class="sourceLineNo">386</span><a name="line.386"></a>
+<span class="sourceLineNo">387</span>    public int getAirTicks() {<a name="line.387"></a>
+<span class="sourceLineNo">388</span>        return this.getDataPropertyShort(DATA_AIR);<a name="line.388"></a>
+<span class="sourceLineNo">389</span>    }<a name="line.389"></a>
+<span class="sourceLineNo">390</span><a name="line.390"></a>
+<span class="sourceLineNo">391</span>    public void setAirTicks(int ticks) {<a name="line.391"></a>
+<span class="sourceLineNo">392</span>        this.setDataProperty(new ShortEntityData(DATA_AIR, ticks));<a name="line.392"></a>
+<span class="sourceLineNo">393</span>    }<a name="line.393"></a>
+<span class="sourceLineNo">394</span>}<a name="line.394"></a>
 
 
 

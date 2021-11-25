@@ -1,7 +1,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
 <HTML>
 <HEAD>
-<meta name="generator" content="JDiff v1.1.1">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html;charset=utf-8">
+<meta name="generator" content="JDiff v2.0.0-PN">
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <!-- (http://www.jdiff.org) -->
 <meta name="description" content="JDiff is a Javadoc doclet which generates an HTML report of all the packages, classes, constructors, methods, and fields which have been removed, added or changed in any way, including their documentation, when two APIs are compared.">
@@ -49,7 +50,7 @@ FIELDS
 <H2>
 Class cn.nukkit.network.<A HREF="../../../javadoc/1.1.1.0-PN/cn/nukkit/network/RakNetInterface.html" target="_top"><tt>RakNetInterface</tt></A>
 </H2>
-<p><font size="+1">Removed interface <code>cn.nukkit.raknet.server.ServerInstance</code>.<br></font>
+<p><font size="+1">Removed interface <code>cn.nukkit.raknet.server.ServerInstance</code>.<br> Added interface <code>com.nukkitx.network.raknet.RakNetServerListener</code>.<br></font>
 <a NAME="constructors"></a>
 <a NAME="methods"></a>
 <p>
@@ -159,15 +160,15 @@ Class cn.nukkit.network.<A HREF="../../../javadoc/1.1.1.0-PN/cn/nukkit/network/R
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="cn.nukkit.network.RakNetInterface.onSessionCreation_added(RakNetServerSession)"></A>
-  <nobr><code>void</code>&nbsp;<A HREF="../../../javadoc/1.1.1.0-PN/cn/nukkit/network/RakNetInterface.html#onSessionCreation(RakNetServerSession)" target="_top"><tt>onSessionCreation</tt></A>(<code>RakNetServerSession</code>)</nobr>
+  <A NAME="cn.nukkit.network.RakNetInterface.onSessionCreation_added(com.nukkitx.network.raknet.RakNetServerSession)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../../javadoc/1.1.1.0-PN/cn/nukkit/network/RakNetInterface.html#onSessionCreation(com.nukkitx.network.raknet.RakNetServerSession)" target="_top"><tt>onSessionCreation</tt></A>(<code>RakNetServerSession</code>)</nobr>
   </TD>
   <TD>&nbsp;</TD>
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="cn.nukkit.network.RakNetInterface.onUnhandledDatagram_added(ChannelHandlerContext, DatagramPacket)"></A>
-  <nobr><code>void</code>&nbsp;<A HREF="../../../javadoc/1.1.1.0-PN/cn/nukkit/network/RakNetInterface.html#onUnhandledDatagram(ChannelHandlerContext, DatagramPacket)" target="_top"><tt>onUnhandledDatagram</tt></A>(<code>ChannelHandlerContext,</nobr> DatagramPacket<nobr><nobr></code>)</nobr>
+  <A NAME="cn.nukkit.network.RakNetInterface.onUnhandledDatagram_added(io.netty.channel.ChannelHandlerContext, io.netty.channel.socket.DatagramPacket)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../../javadoc/1.1.1.0-PN/cn/nukkit/network/RakNetInterface.html#onUnhandledDatagram(io.netty.channel.ChannelHandlerContext, io.netty.channel.socket.DatagramPacket)" target="_top"><tt>onUnhandledDatagram</tt></A>(<code>ChannelHandlerContext,</nobr> DatagramPacket<nobr><nobr></code>)</nobr>
   </TD>
   <TD>&nbsp;</TD>
 </TR>
@@ -181,8 +182,8 @@ Class cn.nukkit.network.<A HREF="../../../javadoc/1.1.1.0-PN/cn/nukkit/network/R
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="cn.nukkit.network.RakNetInterface.sendRawPacket_changed(java.net.InetSocketAddress, ByteBuf)"></A>
-  <nobr><code>void</code>&nbsp;<A HREF="../../../javadoc/1.1.1.0-PN/cn/nukkit/network/RakNetInterface.html#sendRawPacket(java.net.InetSocketAddress, ByteBuf)" target="_top"><tt>sendRawPacket</tt></A>(<code>InetSocketAddress,</nobr> ByteBuf<nobr><nobr></code>)  </nobr>
+  <A NAME="cn.nukkit.network.RakNetInterface.sendRawPacket_changed(java.net.InetSocketAddress, io.netty.buffer.ByteBuf)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../../javadoc/1.1.1.0-PN/cn/nukkit/network/RakNetInterface.html#sendRawPacket(java.net.InetSocketAddress, io.netty.buffer.ByteBuf)" target="_top"><tt>sendRawPacket</tt></A>(<code>InetSocketAddress,</nobr> ByteBuf<nobr><nobr></code>)  </nobr>
   </TD>
   <TD VALIGN="TOP" WIDTH="30%">
 Change in signature from (<code>String, int, byte[]</code>) to (<code>InetSocketAddress, ByteBuf</code>).<br>

@@ -134,7 +134,7 @@
 <span class="sourceLineNo">126</span>                if (this.pickupDelay &lt; 0) {<a name="line.126"></a>
 <span class="sourceLineNo">127</span>                    this.pickupDelay = 0;<a name="line.127"></a>
 <span class="sourceLineNo">128</span>                }<a name="line.128"></a>
-<span class="sourceLineNo">129</span>            } else {<a name="line.129"></a>
+<span class="sourceLineNo">129</span>            }/* else { // Done in Player#checkNearEntities<a name="line.129"></a>
 <span class="sourceLineNo">130</span>                for (Entity entity : this.level.getCollidingEntities(this.boundingBox, this)) {<a name="line.130"></a>
 <span class="sourceLineNo">131</span>                    if (entity instanceof Player) {<a name="line.131"></a>
 <span class="sourceLineNo">132</span>                        if (((Player) entity).pickupEntity(this, false)) {<a name="line.132"></a>
@@ -142,7 +142,7 @@
 <span class="sourceLineNo">134</span>                        }<a name="line.134"></a>
 <span class="sourceLineNo">135</span>                    }<a name="line.135"></a>
 <span class="sourceLineNo">136</span>                }<a name="line.136"></a>
-<span class="sourceLineNo">137</span>            }<a name="line.137"></a>
+<span class="sourceLineNo">137</span>            }*/<a name="line.137"></a>
 <span class="sourceLineNo">138</span><a name="line.138"></a>
 <span class="sourceLineNo">139</span>            this.motionY -= this.getGravity();<a name="line.139"></a>
 <span class="sourceLineNo">140</span><a name="line.140"></a>
@@ -151,7 +151,7 @@
 <span class="sourceLineNo">143</span>            }<a name="line.143"></a>
 <span class="sourceLineNo">144</span><a name="line.144"></a>
 <span class="sourceLineNo">145</span>            if (this.closestPlayer == null || this.closestPlayer.distanceSquared(this) &gt; 64.0D) {<a name="line.145"></a>
-<span class="sourceLineNo">146</span>                for (Player p : level.getPlayers().values()) {<a name="line.146"></a>
+<span class="sourceLineNo">146</span>                for (Player p : this.getViewers().values()) {<a name="line.146"></a>
 <span class="sourceLineNo">147</span>                    if (!p.isSpectator() &amp;&amp; p.distance(this) &lt;= 8) {<a name="line.147"></a>
 <span class="sourceLineNo">148</span>                        this.closestPlayer = p;<a name="line.148"></a>
 <span class="sourceLineNo">149</span>                        break;<a name="line.149"></a>

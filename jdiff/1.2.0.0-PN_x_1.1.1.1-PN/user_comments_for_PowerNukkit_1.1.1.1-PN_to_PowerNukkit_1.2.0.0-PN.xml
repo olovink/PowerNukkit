@@ -52,42 +52,6 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.block.BlockBlueIce"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockBlueIce.getResistance_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockEndPortal"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockEndPortal.canBeFlowedInto_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockGravel"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockGravel.canSilkTouch_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.block.BlockLectern"/>
   <text>
     InsertCommentsHere
@@ -568,18 +532,6 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.entity.EntityHuman"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.entity.EntityHuman.addMovement_changed(double, double, double, double, double, double)"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.entity.EntityNameable"/>
   <text>
     InsertCommentsHere
@@ -641,24 +593,6 @@
 </comment>
 <comment>
   <identifier id="cn.nukkit.entity.data.Skin.setTrusted_added(boolean)"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.entity.item"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.entity.item.EntityAreaEffectCloud"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.entity.item.EntityAreaEffectCloud.canCollideWith_changed(cn.nukkit.entity.Entity)"/>
   <text>
     InsertCommentsHere
   </text>
@@ -946,12 +880,6 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.item.ItemBookWritable.getPages_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.item.ItemBookWritten"/>
   <text>
     InsertCommentsHere
@@ -1000,7 +928,7 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.item.ItemBookWritten.getMaxStackSize_changed()"/>
+  <identifier id="cn.nukkit.item.ItemBookWritten.getPages_changed()"/>
   <text>
     InsertCommentsHere
   </text>

@@ -1,0 +1,27 @@
+OK: cn.nukkit.command.CapturingCommandSender Class
+MISSING @SINCE TAG: cn.nukkit.api.DeprecationDetails Class
+NO DOC BLOCK: cn.nukkit.item.ItemBannerPattern Class
+NO DOC BLOCK: cn.nukkit.event.player.PlayerJumpEvent Class
+MISSING @SINCE TAG: cn.nukkit.api.PowerNukkitOnly Class
+MISSING @SINCE TAG: cn.nukkit.api.Since Class
+NO DOC BLOCK: cn.nukkit.block.Block Method afterRemoval(cn.nukkit.block.Block, boolean)
+NO DOC BLOCK: cn.nukkit.block.BlockWater Method afterRemoval(cn.nukkit.block.Block, boolean)
+OK: cn.nukkit.item.Item Method equalsIgnoringEnchantmentOrder(cn.nukkit.item.Item, boolean)
+NO DOC BLOCK: cn.nukkit.utils.ClientChainData Method getRawData()
+NO DOC BLOCK: cn.nukkit.utils.LoginChainData Method getRawData()
+OK: cn.nukkit.utils.Hash Method hashBlock(cn.nukkit.math.Vector3)
+OK: cn.nukkit.Player Method isCheckingMovement()
+NO DOC BLOCK: cn.nukkit.entity.Entity Method isInEndPortal()
+MISSING @SINCE TAG: cn.nukkit.item.enchantment.Enchantment Method isItemAcceptable(cn.nukkit.item.Item)
+NO DOC BLOCK: cn.nukkit.item.enchantment.EnchantmentDurability Method isItemAcceptable(cn.nukkit.item.Item)
+NO DOC BLOCK: cn.nukkit.item.enchantment.EnchantmentEfficiency Method isItemAcceptable(cn.nukkit.item.Item)
+NO DOC BLOCK: cn.nukkit.item.enchantment.EnchantmentSilkTouch Method isItemAcceptable(cn.nukkit.item.Item)
+NO DOC BLOCK: cn.nukkit.item.enchantment.EnchantmentThorns Method isItemAcceptable(cn.nukkit.item.Item)
+NO DOC BLOCK: cn.nukkit.item.enchantment.damage.EnchantmentDamage Method isItemAcceptable(cn.nukkit.item.Item)
+NO DOC BLOCK: cn.nukkit.block.Block Method mustDrop(cn.nukkit.math.Vector3, int, cn.nukkit.math.BlockFace, cn.nukkit.item.Item, cn.nukkit.Player)
+NO DOC BLOCK: cn.nukkit.block.BlockBeehive Method mustDrop(cn.nukkit.math.Vector3, int, cn.nukkit.math.BlockFace, cn.nukkit.item.Item, cn.nukkit.Player)
+NO DOC BLOCK: cn.nukkit.block.Block Method mustSilkTouch(cn.nukkit.math.Vector3, int, cn.nukkit.math.BlockFace, cn.nukkit.item.Item, cn.nukkit.Player)
+NO DOC BLOCK: cn.nukkit.block.BlockBeehive Method mustSilkTouch(cn.nukkit.math.Vector3, int, cn.nukkit.math.BlockFace, cn.nukkit.item.Item, cn.nukkit.Player)
+NO DOC BLOCK: cn.nukkit.item.ItemID Field BANNER_PATTERN
+OK: cn.nukkit.entity.item.EntityEndCrystal Field detonated
+NO DOC BLOCK: cn.nukkit.entity.Entity Field inEndPortal

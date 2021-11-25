@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package cn.nukkit.blockentity;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>import cn.nukkit.entity.Entity;<a name="line.3"></a>
+<span class="sourceLineNo">004</span>import cn.nukkit.level.format.FullChunk;<a name="line.4"></a>
+<span class="sourceLineNo">005</span>import cn.nukkit.math.AxisAlignedBB;<a name="line.5"></a>
+<span class="sourceLineNo">006</span>import cn.nukkit.math.BlockFace;<a name="line.6"></a>
+<span class="sourceLineNo">007</span>import cn.nukkit.math.SimpleAxisAlignedBB;<a name="line.7"></a>
+<span class="sourceLineNo">008</span>import cn.nukkit.math.Vector3;<a name="line.8"></a>
+<span class="sourceLineNo">009</span>import cn.nukkit.nbt.tag.CompoundTag;<a name="line.9"></a>
+<span class="sourceLineNo">010</span>import cn.nukkit.nbt.tag.IntTag;<a name="line.10"></a>
+<span class="sourceLineNo">011</span>import cn.nukkit.nbt.tag.ListTag;<a name="line.11"></a>
+<span class="sourceLineNo">012</span><a name="line.12"></a>
+<span class="sourceLineNo">013</span>/**<a name="line.13"></a>
+<span class="sourceLineNo">014</span> * @author CreeperFace<a name="line.14"></a>
+<span class="sourceLineNo">015</span> */<a name="line.15"></a>
+<span class="sourceLineNo">016</span>public class BlockEntityPistonArm extends BlockEntity {<a name="line.16"></a>
+<span class="sourceLineNo">017</span><a name="line.17"></a>
+<span class="sourceLineNo">018</span>    public float progress = 1.0F;<a name="line.18"></a>
+<span class="sourceLineNo">019</span>    public float lastProgress = 1.0F;<a name="line.19"></a>
+<span class="sourceLineNo">020</span>    public BlockFace facing;<a name="line.20"></a>
+<span class="sourceLineNo">021</span>    public boolean extending = false;<a name="line.21"></a>
+<span class="sourceLineNo">022</span>    public boolean sticky = false;<a name="line.22"></a>
+<span class="sourceLineNo">023</span>    public byte state = 1;<a name="line.23"></a>
+<span class="sourceLineNo">024</span>    public byte newState = 1;<a name="line.24"></a>
+<span class="sourceLineNo">025</span>    public Vector3 attachedBlock = null;<a name="line.25"></a>
+<span class="sourceLineNo">026</span>    public boolean isMovable = true;<a name="line.26"></a>
+<span class="sourceLineNo">027</span>    public boolean powered = false;<a name="line.27"></a>
+<span class="sourceLineNo">028</span><a name="line.28"></a>
+<span class="sourceLineNo">029</span>    public BlockEntityPistonArm(FullChunk chunk, CompoundTag nbt) {<a name="line.29"></a>
+<span class="sourceLineNo">030</span>        super(chunk, nbt);<a name="line.30"></a>
+<span class="sourceLineNo">031</span>    }<a name="line.31"></a>
+<span class="sourceLineNo">032</span><a name="line.32"></a>
+<span class="sourceLineNo">033</span>    @Override<a name="line.33"></a>
+<span class="sourceLineNo">034</span>    protected void initBlockEntity() {<a name="line.34"></a>
+<span class="sourceLineNo">035</span>        if (namedTag.contains("Progress")) {<a name="line.35"></a>
+<span class="sourceLineNo">036</span>            this.progress = namedTag.getFloat("Progress");<a name="line.36"></a>
+<span class="sourceLineNo">037</span>        }<a name="line.37"></a>
+<span class="sourceLineNo">038</span><a name="line.38"></a>
+<span class="sourceLineNo">039</span>        if (namedTag.contains("LastProgress")) {<a name="line.39"></a>
+<span class="sourceLineNo">040</span>            this.lastProgress = (float) namedTag.getInt("LastProgress");<a name="line.40"></a>
+<span class="sourceLineNo">041</span>        }<a name="line.41"></a>
+<span class="sourceLineNo">042</span><a name="line.42"></a>
+<span class="sourceLineNo">043</span>        if (namedTag.contains("Sticky")) {<a name="line.43"></a>
+<span class="sourceLineNo">044</span>            this.sticky = namedTag.getBoolean("Sticky");<a name="line.44"></a>
+<span class="sourceLineNo">045</span>        }<a name="line.45"></a>
+<span class="sourceLineNo">046</span><a name="line.46"></a>
+<span class="sourceLineNo">047</span>        if (namedTag.contains("Extending")) {<a name="line.47"></a>
+<span class="sourceLineNo">048</span>            this.extending = namedTag.getBoolean("Extending");<a name="line.48"></a>
+<span class="sourceLineNo">049</span>        }<a name="line.49"></a>
+<span class="sourceLineNo">050</span><a name="line.50"></a>
+<span class="sourceLineNo">051</span>        if (namedTag.contains("powered")) {<a name="line.51"></a>
+<span class="sourceLineNo">052</span>            this.powered = namedTag.getBoolean("powered");<a name="line.52"></a>
+<span class="sourceLineNo">053</span>        }<a name="line.53"></a>
+<span class="sourceLineNo">054</span><a name="line.54"></a>
+<span class="sourceLineNo">055</span>        if (namedTag.contains("AttachedBlocks")) {<a name="line.55"></a>
+<span class="sourceLineNo">056</span>            ListTag blocks = namedTag.getList("AttachedBlocks", IntTag.class);<a name="line.56"></a>
+<span class="sourceLineNo">057</span>            if (blocks != null &amp;&amp; blocks.size() &gt; 0) {<a name="line.57"></a>
+<span class="sourceLineNo">058</span>                this.attachedBlock = new Vector3((double) ((IntTag) blocks.get(0)).getData(), (double) ((IntTag) blocks.get(1)).getData(), (double) ((IntTag) blocks.get(2)).getData());<a name="line.58"></a>
+<span class="sourceLineNo">059</span>            }<a name="line.59"></a>
+<span class="sourceLineNo">060</span>        } else {<a name="line.60"></a>
+<span class="sourceLineNo">061</span>            namedTag.putList(new ListTag("AttachedBlocks"));<a name="line.61"></a>
+<span class="sourceLineNo">062</span>        }<a name="line.62"></a>
+<span class="sourceLineNo">063</span><a name="line.63"></a>
+<span class="sourceLineNo">064</span>        super.initBlockEntity();<a name="line.64"></a>
+<span class="sourceLineNo">065</span>    }<a name="line.65"></a>
+<span class="sourceLineNo">066</span><a name="line.66"></a>
+<span class="sourceLineNo">067</span>    private void pushEntities() {<a name="line.67"></a>
+<span class="sourceLineNo">068</span>        float lastProgress = this.getExtendedProgress(this.lastProgress);<a name="line.68"></a>
+<span class="sourceLineNo">069</span>        double x = (double) (lastProgress * (float) this.facing.getXOffset());<a name="line.69"></a>
+<span class="sourceLineNo">070</span>        double y = (double) (lastProgress * (float) this.facing.getYOffset());<a name="line.70"></a>
+<span class="sourceLineNo">071</span>        double z = (double) (lastProgress * (float) this.facing.getZOffset());<a name="line.71"></a>
+<span class="sourceLineNo">072</span>        AxisAlignedBB bb = new SimpleAxisAlignedBB(x, y, z, x + 1.0D, y + 1.0D, z + 1.0D);<a name="line.72"></a>
+<span class="sourceLineNo">073</span>        Entity[] entities = this.level.getCollidingEntities(bb);<a name="line.73"></a>
+<span class="sourceLineNo">074</span>        if (entities.length != 0) {<a name="line.74"></a>
+<span class="sourceLineNo">075</span><a name="line.75"></a>
+<span class="sourceLineNo">076</span>        }<a name="line.76"></a>
+<span class="sourceLineNo">077</span><a name="line.77"></a>
+<span class="sourceLineNo">078</span>    }<a name="line.78"></a>
+<span class="sourceLineNo">079</span><a name="line.79"></a>
+<span class="sourceLineNo">080</span>    private float getExtendedProgress(float progress) {<a name="line.80"></a>
+<span class="sourceLineNo">081</span>        return this.extending ? progress - 1.0F : 1.0F - progress;<a name="line.81"></a>
+<span class="sourceLineNo">082</span>    }<a name="line.82"></a>
+<span class="sourceLineNo">083</span><a name="line.83"></a>
+<span class="sourceLineNo">084</span>    public boolean isBlockEntityValid() {<a name="line.84"></a>
+<span class="sourceLineNo">085</span>        return true;<a name="line.85"></a>
+<span class="sourceLineNo">086</span>    }<a name="line.86"></a>
+<span class="sourceLineNo">087</span><a name="line.87"></a>
+<span class="sourceLineNo">088</span>    public void saveNBT() {<a name="line.88"></a>
+<span class="sourceLineNo">089</span>        super.saveNBT();<a name="line.89"></a>
+<span class="sourceLineNo">090</span>        this.namedTag.putBoolean("isMovable", this.isMovable);<a name="line.90"></a>
+<span class="sourceLineNo">091</span>        this.namedTag.putByte("State", this.state);<a name="line.91"></a>
+<span class="sourceLineNo">092</span>        this.namedTag.putByte("NewState", this.newState);<a name="line.92"></a>
+<span class="sourceLineNo">093</span>        this.namedTag.putFloat("Progress", this.progress);<a name="line.93"></a>
+<span class="sourceLineNo">094</span>        this.namedTag.putFloat("LastProgress", this.lastProgress);<a name="line.94"></a>
+<span class="sourceLineNo">095</span>        this.namedTag.putBoolean("powered", this.powered);<a name="line.95"></a>
+<span class="sourceLineNo">096</span>    }<a name="line.96"></a>
+<span class="sourceLineNo">097</span><a name="line.97"></a>
+<span class="sourceLineNo">098</span>    public CompoundTag getSpawnCompound() {<a name="line.98"></a>
+<span class="sourceLineNo">099</span>        return (new CompoundTag()).putString("id", "PistonArm").putInt("x", (int) this.x).putInt("y", (int) this.y).putInt("z", (int) this.z);<a name="line.99"></a>
+<span class="sourceLineNo">100</span>    }<a name="line.100"></a>
+<span class="sourceLineNo">101</span>}<a name="line.101"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>

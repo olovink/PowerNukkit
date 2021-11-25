@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -75,7 +75,7 @@ var activeTableTab = "activeTableTab";
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields.inherited.from.class.cn.nukkit.inventory.BaseInventory">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#fields.inherited.from.class.cn.nukkit.inventory.PlayerUIComponent">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
@@ -127,7 +127,7 @@ var activeTableTab = "activeTableTab";
 </dl>
 <hr>
 <br>
-<pre>public class <a href="../../../src-html/cn/nukkit/inventory/FakeBlockUIComponent.html#line.10">FakeBlockUIComponent</a>
+<pre>public class <a href="../../../src-html/cn/nukkit/inventory/FakeBlockUIComponent.html#line.11">FakeBlockUIComponent</a>
 extends <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html" title="class in cn.nukkit.inventory">PlayerUIComponent</a></pre>
 </li>
 </ul>
@@ -141,6 +141,13 @@ extends <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html" title="cla
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="fields.inherited.from.class.cn.nukkit.inventory.PlayerUIComponent">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;cn.nukkit.inventory.<a href="../../../cn/nukkit/inventory/PlayerUIComponent.html" title="class in cn.nukkit.inventory">PlayerUIComponent</a></h3>
+<code><a href="../../../cn/nukkit/inventory/PlayerUIComponent.html#CREATED_ITEM_OUTPUT_UI_SLOT">CREATED_ITEM_OUTPUT_UI_SLOT</a></code></li>
+</ul>
 <ul class="blockList">
 <li class="blockList"><a name="fields.inherited.from.class.cn.nukkit.inventory.BaseInventory">
 <!--   -->
@@ -170,18 +177,22 @@ extends <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html" title="cla
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/inventory/FakeBlockUIComponent.html#close-cn.nukkit.Player-">close</a></span>(<a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;who)</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/inventory/FakeBlockMenu.html" title="class in cn.nukkit.inventory">FakeBlockMenu</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/inventory/FakeBlockUIComponent.html#getHolder--">getHolder</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/inventory/FakeBlockUIComponent.html#onClose-cn.nukkit.Player-">onClose</a></span>(<a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;who)</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/inventory/FakeBlockUIComponent.html#onOpen-cn.nukkit.Player-">onOpen</a></span>(<a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;who)</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/inventory/FakeBlockUIComponent.html#open-cn.nukkit.Player-">open</a></span>(<a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;who)</code>&nbsp;</td>
 </tr>
@@ -191,7 +202,7 @@ extends <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html" title="cla
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;cn.nukkit.inventory.<a href="../../../cn/nukkit/inventory/PlayerUIComponent.html" title="class in cn.nukkit.inventory">PlayerUIComponent</a></h3>
-<code><a href="../../../cn/nukkit/inventory/PlayerUIComponent.html#close-cn.nukkit.Player-">close</a>, <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html#getContents--">getContents</a>, <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html#getItem-int-">getItem</a>, <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html#getMaxStackSize--">getMaxStackSize</a>, <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html#getSize--">getSize</a>, <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html#getTitle--">getTitle</a>, <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html#getType--">getType</a>, <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html#getViewers--">getViewers</a>, <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html#onSlotChange-int-cn.nukkit.item.Item-boolean-">onSlotChange</a>, <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html#sendContents-cn.nukkit.Player...-">sendContents</a>, <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html#sendSlot-int-cn.nukkit.Player...-">sendSlot</a>, <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html#setItem-int-cn.nukkit.item.Item-boolean-">setItem</a>, <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html#setMaxStackSize-int-">setMaxStackSize</a></code></li>
+<code><a href="../../../cn/nukkit/inventory/PlayerUIComponent.html#getContents--">getContents</a>, <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html#getItem-int-">getItem</a>, <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html#getMaxStackSize--">getMaxStackSize</a>, <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html#getSize--">getSize</a>, <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html#getTitle--">getTitle</a>, <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html#getType--">getType</a>, <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html#getViewers--">getViewers</a>, <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html#onSlotChange-int-cn.nukkit.item.Item-boolean-">onSlotChange</a>, <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html#sendContents-cn.nukkit.Player...-">sendContents</a>, <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html#sendSlot-int-cn.nukkit.Player...-">sendSlot</a>, <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html#setItem-int-cn.nukkit.item.Item-boolean-">setItem</a>, <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html#setMaxStackSize-int-">setMaxStackSize</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.cn.nukkit.inventory.BaseInventory">
@@ -234,7 +245,7 @@ extends <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html" title="cla
 <ul class="blockList">
 <li class="blockList">
 <h4>getHolder</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/inventory/FakeBlockMenu.html" title="class in cn.nukkit.inventory">FakeBlockMenu</a>&nbsp;<a href="../../../src-html/cn/nukkit/inventory/FakeBlockUIComponent.html#line.21">getHolder</a>()</pre>
+<pre>public&nbsp;<a href="../../../cn/nukkit/inventory/FakeBlockMenu.html" title="class in cn.nukkit.inventory">FakeBlockMenu</a>&nbsp;<a href="../../../src-html/cn/nukkit/inventory/FakeBlockUIComponent.html#line.22">getHolder</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../cn/nukkit/inventory/Inventory.html#getHolder--">getHolder</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/inventory/Inventory.html" title="interface in cn.nukkit.inventory">Inventory</a></code></dd>
@@ -249,12 +260,27 @@ extends <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html" title="cla
 <ul class="blockList">
 <li class="blockList">
 <h4>open</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../src-html/cn/nukkit/inventory/FakeBlockUIComponent.html#line.26">open</a>(<a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;who)</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../src-html/cn/nukkit/inventory/FakeBlockUIComponent.html#line.27">open</a>(<a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;who)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../cn/nukkit/inventory/Inventory.html#open-cn.nukkit.Player-">open</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/inventory/Inventory.html" title="interface in cn.nukkit.inventory">Inventory</a></code></dd>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../cn/nukkit/inventory/PlayerUIComponent.html#open-cn.nukkit.Player-">open</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/inventory/PlayerUIComponent.html" title="class in cn.nukkit.inventory">PlayerUIComponent</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="close-cn.nukkit.Player-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>close</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/inventory/FakeBlockUIComponent.html#line.39">close</a>(<a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;who)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../cn/nukkit/inventory/Inventory.html#close-cn.nukkit.Player-">close</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/inventory/Inventory.html" title="interface in cn.nukkit.inventory">Inventory</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../cn/nukkit/inventory/PlayerUIComponent.html#close-cn.nukkit.Player-">close</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/inventory/PlayerUIComponent.html" title="class in cn.nukkit.inventory">PlayerUIComponent</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -264,7 +290,7 @@ extends <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html" title="cla
 <ul class="blockList">
 <li class="blockList">
 <h4>onOpen</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/inventory/FakeBlockUIComponent.html#line.38">onOpen</a>(<a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;who)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/inventory/FakeBlockUIComponent.html#line.47">onOpen</a>(<a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;who)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../cn/nukkit/inventory/Inventory.html#onOpen-cn.nukkit.Player-">onOpen</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/inventory/Inventory.html" title="interface in cn.nukkit.inventory">Inventory</a></code></dd>
@@ -279,7 +305,7 @@ extends <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html" title="cla
 <ul class="blockListLast">
 <li class="blockList">
 <h4>onClose</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/inventory/FakeBlockUIComponent.html#line.58">onClose</a>(<a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;who)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/inventory/FakeBlockUIComponent.html#line.67">onClose</a>(<a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;who)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../cn/nukkit/inventory/Inventory.html#onClose-cn.nukkit.Player-">onClose</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/inventory/Inventory.html" title="interface in cn.nukkit.inventory">Inventory</a></code></dd>
@@ -341,7 +367,7 @@ extends <a href="../../../cn/nukkit/inventory/PlayerUIComponent.html" title="cla
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields.inherited.from.class.cn.nukkit.inventory.BaseInventory">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#fields.inherited.from.class.cn.nukkit.inventory.PlayerUIComponent">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>

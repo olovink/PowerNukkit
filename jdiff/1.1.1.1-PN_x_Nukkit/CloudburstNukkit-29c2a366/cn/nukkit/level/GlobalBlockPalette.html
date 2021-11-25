@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9,"i1":9};
+var methods = {"i0":9,"i1":9,"i2":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -75,13 +75,13 @@ var activeTableTab = "activeTableTab";
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -109,7 +109,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <hr>
 <br>
-<pre>public class <a href="../../../src-html/cn/nukkit/level/GlobalBlockPalette.html#line.17">GlobalBlockPalette</a>
+<pre>public class <a href="../../../src-html/cn/nukkit/level/GlobalBlockPalette.html#line.18">GlobalBlockPalette</a>
 extends java.lang.Object</pre>
 </li>
 </ul>
@@ -117,25 +117,6 @@ extends java.lang.Object</pre>
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
-<!-- =========== FIELD SUMMARY =========== -->
-<ul class="blockList">
-<li class="blockList"><a name="field.summary">
-<!--   -->
-</a>
-<h3>Field Summary</h3>
-<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
-<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Field and Description</th>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>static byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/GlobalBlockPalette.html#BLOCK_PALETTE">BLOCK_PALETTE</a></span></code>&nbsp;</td>
-</tr>
-</table>
-</li>
-</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor.summary">
@@ -167,9 +148,13 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/GlobalBlockPalette.html#getOrCreateRuntimeId-int-">getOrCreateRuntimeId</a></span>(int&nbsp;legacyId)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/GlobalBlockPalette.html#getLegacyFullId-int-">getLegacyFullId</a></span>(int&nbsp;runtimeId)</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/GlobalBlockPalette.html#getOrCreateRuntimeId-int-">getOrCreateRuntimeId</a></span>(int&nbsp;legacyId)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/GlobalBlockPalette.html#getOrCreateRuntimeId-int-int-">getOrCreateRuntimeId</a></span>(int&nbsp;id,
                     int&nbsp;meta)</code>&nbsp;</td>
@@ -190,23 +175,6 @@ extends java.lang.Object</pre>
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
-<!-- ============ FIELD DETAIL =========== -->
-<ul class="blockList">
-<li class="blockList"><a name="field.detail">
-<!--   -->
-</a>
-<h3>Field Detail</h3>
-<a name="BLOCK_PALETTE">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>BLOCK_PALETTE</h4>
-<pre>public static final&nbsp;byte[] <a href="../../../src-html/cn/nukkit/level/GlobalBlockPalette.html#line.21">BLOCK_PALETTE</a></pre>
-</li>
-</ul>
-</li>
-</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor.detail">
@@ -219,7 +187,7 @@ extends java.lang.Object</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>GlobalBlockPalette</h4>
-<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/level/GlobalBlockPalette.html#line.17">GlobalBlockPalette</a>()</pre>
+<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/level/GlobalBlockPalette.html#line.18">GlobalBlockPalette</a>()</pre>
 </li>
 </ul>
 </li>
@@ -236,22 +204,31 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getOrCreateRuntimeId</h4>
-<pre>public static&nbsp;int&nbsp;<a href="../../../src-html/cn/nukkit/level/GlobalBlockPalette.html#line.62">getOrCreateRuntimeId</a>(int&nbsp;id,
+<pre>public static&nbsp;int&nbsp;<a href="../../../src-html/cn/nukkit/level/GlobalBlockPalette.html#line.49">getOrCreateRuntimeId</a>(int&nbsp;id,
                                        int&nbsp;meta)</pre>
 </li>
 </ul>
 <a name="getOrCreateRuntimeId-int-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getOrCreateRuntimeId</h4>
-<pre>public static&nbsp;int&nbsp;<a href="../../../src-html/cn/nukkit/level/GlobalBlockPalette.html#line.72">getOrCreateRuntimeId</a>(int&nbsp;legacyId)
+<pre>public static&nbsp;int&nbsp;<a href="../../../src-html/cn/nukkit/level/GlobalBlockPalette.html#line.64">getOrCreateRuntimeId</a>(int&nbsp;legacyId)
                                 throws java.util.NoSuchElementException</pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code>java.util.NoSuchElementException</code></dd>
 </dl>
+</li>
+</ul>
+<a name="getLegacyFullId-int-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getLegacyFullId</h4>
+<pre>public static&nbsp;int&nbsp;<a href="../../../src-html/cn/nukkit/level/GlobalBlockPalette.html#line.68">getLegacyFullId</a>(int&nbsp;runtimeId)</pre>
 </li>
 </ul>
 </li>
@@ -307,13 +284,13 @@ extends java.lang.Object</pre>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

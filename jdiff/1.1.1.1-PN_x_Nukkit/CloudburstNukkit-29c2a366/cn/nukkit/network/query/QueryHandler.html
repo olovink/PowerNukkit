@@ -109,7 +109,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <hr>
 <br>
-<pre>public class <a href="../../../../src-html/cn/nukkit/network/query/QueryHandler.html#line.15">QueryHandler</a>
+<pre>public class <a href="../../../../src-html/cn/nukkit/network/query/QueryHandler.html#line.22">QueryHandler</a>
 extends java.lang.Object</pre>
 <div class="block">author: MagicDroidX
  Nukkit Project</div>
@@ -172,20 +172,19 @@ extends java.lang.Object</pre>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>static java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/query/QueryHandler.html#getTokenString-byte:A-java.lang.String-">getTokenString</a></span>(byte[]&nbsp;token,
-              java.lang.String&nbsp;salt)</code>&nbsp;</td>
+<td class="colFirst"><code>static byte[]</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/query/QueryHandler.html#getTokenString-byte:A-java.net.InetAddress-">getTokenString</a></span>(byte[]&nbsp;token,
+              java.net.InetAddress&nbsp;address)</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>static java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/query/QueryHandler.html#getTokenString-java.lang.String-java.lang.String-">getTokenString</a></span>(java.lang.String&nbsp;token,
-              java.lang.String&nbsp;salt)</code>&nbsp;</td>
+<td class="colFirst"><code>static byte[]</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/query/QueryHandler.html#getTokenString-java.lang.String-java.net.InetAddress-">getTokenString</a></span>(java.lang.String&nbsp;token,
+              java.net.InetAddress&nbsp;address)</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/query/QueryHandler.html#handle-java.lang.String-int-byte:A-">handle</a></span>(java.lang.String&nbsp;address,
-      int&nbsp;port,
-      byte[]&nbsp;packet)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/query/QueryHandler.html#handle-java.net.InetSocketAddress-io.netty.buffer.ByteBuf-">handle</a></span>(java.net.InetSocketAddress&nbsp;address,
+      io.netty.buffer.ByteBuf&nbsp;packet)</code>&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
@@ -223,7 +222,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>HANDSHAKE</h4>
-<pre>public static final&nbsp;byte <a href="../../../../src-html/cn/nukkit/network/query/QueryHandler.html#line.17">HANDSHAKE</a></pre>
+<pre>public static final&nbsp;byte <a href="../../../../src-html/cn/nukkit/network/query/QueryHandler.html#line.24">HANDSHAKE</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.network.query.QueryHandler.HANDSHAKE">Constant Field Values</a></dd>
@@ -236,7 +235,7 @@ extends java.lang.Object</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>STATISTICS</h4>
-<pre>public static final&nbsp;byte <a href="../../../../src-html/cn/nukkit/network/query/QueryHandler.html#line.18">STATISTICS</a></pre>
+<pre>public static final&nbsp;byte <a href="../../../../src-html/cn/nukkit/network/query/QueryHandler.html#line.25">STATISTICS</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.network.query.QueryHandler.STATISTICS">Constant Field Values</a></dd>
@@ -257,7 +256,7 @@ extends java.lang.Object</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>QueryHandler</h4>
-<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/network/query/QueryHandler.html#line.27">QueryHandler</a>()</pre>
+<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/network/query/QueryHandler.html#line.34">QueryHandler</a>()</pre>
 </li>
 </ul>
 </li>
@@ -274,7 +273,7 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>regenerateInfo</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/network/query/QueryHandler.html#line.41">regenerateInfo</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/network/query/QueryHandler.html#line.48">regenerateInfo</a>()</pre>
 </li>
 </ul>
 <a name="regenerateToken--">
@@ -283,38 +282,37 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>regenerateToken</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/network/query/QueryHandler.html#line.48">regenerateToken</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/network/query/QueryHandler.html#line.55">regenerateToken</a>()</pre>
 </li>
 </ul>
-<a name="getTokenString-byte:A-java.lang.String-">
+<a name="getTokenString-java.lang.String-java.net.InetAddress-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getTokenString</h4>
-<pre>public static&nbsp;java.lang.String&nbsp;<a href="../../../../src-html/cn/nukkit/network/query/QueryHandler.html#line.57">getTokenString</a>(byte[]&nbsp;token,
-                                              java.lang.String&nbsp;salt)</pre>
+<pre>public static&nbsp;byte[]&nbsp;<a href="../../../../src-html/cn/nukkit/network/query/QueryHandler.html#line.64">getTokenString</a>(java.lang.String&nbsp;token,
+                                    java.net.InetAddress&nbsp;address)</pre>
 </li>
 </ul>
-<a name="getTokenString-java.lang.String-java.lang.String-">
+<a name="getTokenString-byte:A-java.net.InetAddress-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getTokenString</h4>
-<pre>public static&nbsp;java.lang.String&nbsp;<a href="../../../../src-html/cn/nukkit/network/query/QueryHandler.html#line.62">getTokenString</a>(java.lang.String&nbsp;token,
-                                              java.lang.String&nbsp;salt)</pre>
+<pre>public static&nbsp;byte[]&nbsp;<a href="../../../../src-html/cn/nukkit/network/query/QueryHandler.html#line.68">getTokenString</a>(byte[]&nbsp;token,
+                                    java.net.InetAddress&nbsp;address)</pre>
 </li>
 </ul>
-<a name="handle-java.lang.String-int-byte:A-">
+<a name="handle-java.net.InetSocketAddress-io.netty.buffer.ByteBuf-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>handle</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/network/query/QueryHandler.html#line.70">handle</a>(java.lang.String&nbsp;address,
-                   int&nbsp;port,
-                   byte[]&nbsp;packet)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/network/query/QueryHandler.html#line.79">handle</a>(java.net.InetSocketAddress&nbsp;address,
+                   io.netty.buffer.ByteBuf&nbsp;packet)</pre>
 </li>
 </ul>
 </li>

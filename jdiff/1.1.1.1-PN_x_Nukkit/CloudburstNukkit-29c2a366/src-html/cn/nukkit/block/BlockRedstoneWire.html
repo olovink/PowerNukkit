@@ -165,13 +165,13 @@
 <span class="sourceLineNo">157</span>            return maxStrength;<a name="line.157"></a>
 <span class="sourceLineNo">158</span>        } else {<a name="line.158"></a>
 <span class="sourceLineNo">159</span>            int strength = this.level.getBlockDataAt(pos.getFloorX(), pos.getFloorY(), pos.getFloorZ());<a name="line.159"></a>
-<span class="sourceLineNo">160</span>            return strength &gt; maxStrength ? strength : maxStrength;<a name="line.160"></a>
+<span class="sourceLineNo">160</span>            return Math.max(strength, maxStrength);<a name="line.160"></a>
 <span class="sourceLineNo">161</span>        }<a name="line.161"></a>
 <span class="sourceLineNo">162</span>    }<a name="line.162"></a>
 <span class="sourceLineNo">163</span><a name="line.163"></a>
 <span class="sourceLineNo">164</span>    @Override<a name="line.164"></a>
 <span class="sourceLineNo">165</span>    public boolean onBreak(Item item) {<a name="line.165"></a>
-<span class="sourceLineNo">166</span>        this.getLevel().setBlock(this, new BlockAir(), true, true);<a name="line.166"></a>
+<span class="sourceLineNo">166</span>        this.getLevel().setBlock(this, Block.get(BlockID.AIR), true, true);<a name="line.166"></a>
 <span class="sourceLineNo">167</span><a name="line.167"></a>
 <span class="sourceLineNo">168</span>        Vector3 pos = getLocation();<a name="line.168"></a>
 <span class="sourceLineNo">169</span><a name="line.169"></a>
@@ -228,7 +228,7 @@
 <span class="sourceLineNo">220</span>    public boolean canBePlacedOn(Vector3 v) {<a name="line.220"></a>
 <span class="sourceLineNo">221</span>        Block b = this.level.getBlock(v);<a name="line.221"></a>
 <span class="sourceLineNo">222</span><a name="line.222"></a>
-<span class="sourceLineNo">223</span>        return b.isSolid() &amp;&amp; !b.isTransparent() &amp;&amp; b.getId() != Block.GLOWSTONE;<a name="line.223"></a>
+<span class="sourceLineNo">223</span>        return (b.isSolid() &amp;&amp; !b.isTransparent() &amp;&amp; b.getId() != Block.GLOWSTONE) || b.getId() == HOPPER_BLOCK;<a name="line.223"></a>
 <span class="sourceLineNo">224</span>    }<a name="line.224"></a>
 <span class="sourceLineNo">225</span><a name="line.225"></a>
 <span class="sourceLineNo">226</span>    public int getStrongPower(BlockFace side) {<a name="line.226"></a>

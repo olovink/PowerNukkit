@@ -14,9 +14,9 @@
 <span class="sourceLineNo">006</span>import cn.nukkit.event.player.PlayerTeleportEvent;<a name="line.6"></a>
 <span class="sourceLineNo">007</span>import cn.nukkit.item.Item;<a name="line.7"></a>
 <span class="sourceLineNo">008</span>import cn.nukkit.level.Level;<a name="line.8"></a>
-<span class="sourceLineNo">009</span>import cn.nukkit.level.Sound;<a name="line.9"></a>
-<span class="sourceLineNo">010</span>import cn.nukkit.math.NukkitRandom;<a name="line.10"></a>
-<span class="sourceLineNo">011</span>import cn.nukkit.math.Vector3;<a name="line.11"></a>
+<span class="sourceLineNo">009</span>import cn.nukkit.math.NukkitRandom;<a name="line.9"></a>
+<span class="sourceLineNo">010</span>import cn.nukkit.math.Vector3;<a name="line.10"></a>
+<span class="sourceLineNo">011</span>import cn.nukkit.network.protocol.LevelSoundEventPacket;<a name="line.11"></a>
 <span class="sourceLineNo">012</span><a name="line.12"></a>
 <span class="sourceLineNo">013</span>/**<a name="line.13"></a>
 <span class="sourceLineNo">014</span> * Created by Leonidius20 on 20.08.18.<a name="line.14"></a>
@@ -64,9 +64,9 @@
 <span class="sourceLineNo">056</span>            }<a name="line.56"></a>
 <span class="sourceLineNo">057</span><a name="line.57"></a>
 <span class="sourceLineNo">058</span>            // Sounds are broadcast at both source and destination<a name="line.58"></a>
-<span class="sourceLineNo">059</span>            level.addSound(player.asBlockVector3().asVector3(), Sound.MOB_ENDERMEN_PORTAL);<a name="line.59"></a>
+<span class="sourceLineNo">059</span>            level.addLevelSoundEvent(player, LevelSoundEventPacket.SOUND_TELEPORT);<a name="line.59"></a>
 <span class="sourceLineNo">060</span>            player.teleport(new Vector3(x + 0.5, y + 1, z + 0.5), PlayerTeleportEvent.TeleportCause.CHORUS_FRUIT);<a name="line.60"></a>
-<span class="sourceLineNo">061</span>            level.addSound(player.asBlockVector3().asVector3(), Sound.MOB_ENDERMEN_PORTAL);<a name="line.61"></a>
+<span class="sourceLineNo">061</span>            level.addLevelSoundEvent(player, LevelSoundEventPacket.SOUND_TELEPORT);<a name="line.61"></a>
 <span class="sourceLineNo">062</span><a name="line.62"></a>
 <span class="sourceLineNo">063</span>            break;<a name="line.63"></a>
 <span class="sourceLineNo">064</span>        }<a name="line.64"></a>

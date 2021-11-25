@@ -28,89 +28,94 @@
 <span class="sourceLineNo">020</span><a name="line.20"></a>
 <span class="sourceLineNo">021</span>    public static int mapCount = 0;<a name="line.21"></a>
 <span class="sourceLineNo">022</span><a name="line.22"></a>
-<span class="sourceLineNo">023</span>    public ItemMap() {<a name="line.23"></a>
-<span class="sourceLineNo">024</span>        this(0, 1);<a name="line.24"></a>
-<span class="sourceLineNo">025</span>    }<a name="line.25"></a>
-<span class="sourceLineNo">026</span><a name="line.26"></a>
-<span class="sourceLineNo">027</span>    public ItemMap(Integer meta) {<a name="line.27"></a>
-<span class="sourceLineNo">028</span>        this(meta, 1);<a name="line.28"></a>
-<span class="sourceLineNo">029</span>    }<a name="line.29"></a>
-<span class="sourceLineNo">030</span><a name="line.30"></a>
-<span class="sourceLineNo">031</span>    public ItemMap(Integer meta, int count) {<a name="line.31"></a>
-<span class="sourceLineNo">032</span>        super(MAP, 0, count, "Map");<a name="line.32"></a>
+<span class="sourceLineNo">023</span>    // not very pretty but definitely better than before.<a name="line.23"></a>
+<span class="sourceLineNo">024</span>    private BufferedImage image;<a name="line.24"></a>
+<span class="sourceLineNo">025</span><a name="line.25"></a>
+<span class="sourceLineNo">026</span>    public ItemMap() {<a name="line.26"></a>
+<span class="sourceLineNo">027</span>        this(0, 1);<a name="line.27"></a>
+<span class="sourceLineNo">028</span>    }<a name="line.28"></a>
+<span class="sourceLineNo">029</span><a name="line.29"></a>
+<span class="sourceLineNo">030</span>    public ItemMap(Integer meta) {<a name="line.30"></a>
+<span class="sourceLineNo">031</span>        this(meta, 1);<a name="line.31"></a>
+<span class="sourceLineNo">032</span>    }<a name="line.32"></a>
 <span class="sourceLineNo">033</span><a name="line.33"></a>
-<span class="sourceLineNo">034</span>        if (!hasCompoundTag() || !getNamedTag().contains("map_uuid")) {<a name="line.34"></a>
-<span class="sourceLineNo">035</span>            CompoundTag tag = new CompoundTag();<a name="line.35"></a>
-<span class="sourceLineNo">036</span>            tag.putLong("map_uuid", mapCount++);<a name="line.36"></a>
-<span class="sourceLineNo">037</span>            this.setNamedTag(tag);<a name="line.37"></a>
-<span class="sourceLineNo">038</span>        }<a name="line.38"></a>
-<span class="sourceLineNo">039</span>    }<a name="line.39"></a>
-<span class="sourceLineNo">040</span><a name="line.40"></a>
-<span class="sourceLineNo">041</span>    public void setImage(File file) throws IOException {<a name="line.41"></a>
-<span class="sourceLineNo">042</span>        setImage(ImageIO.read(file));<a name="line.42"></a>
-<span class="sourceLineNo">043</span>    }<a name="line.43"></a>
-<span class="sourceLineNo">044</span><a name="line.44"></a>
-<span class="sourceLineNo">045</span>    public void setImage(BufferedImage img) {<a name="line.45"></a>
-<span class="sourceLineNo">046</span>        try {<a name="line.46"></a>
-<span class="sourceLineNo">047</span>            BufferedImage image = img;<a name="line.47"></a>
-<span class="sourceLineNo">048</span><a name="line.48"></a>
-<span class="sourceLineNo">049</span>            if (img.getHeight() != 128 || img.getWidth() != 128) { //resize<a name="line.49"></a>
-<span class="sourceLineNo">050</span>                image = new BufferedImage(128, 128, img.getType());<a name="line.50"></a>
-<span class="sourceLineNo">051</span>                Graphics2D g = image.createGraphics();<a name="line.51"></a>
-<span class="sourceLineNo">052</span>                g.drawImage(img, 0, 0, 128, 128, null);<a name="line.52"></a>
-<span class="sourceLineNo">053</span>                g.dispose();<a name="line.53"></a>
-<span class="sourceLineNo">054</span>            }<a name="line.54"></a>
-<span class="sourceLineNo">055</span><a name="line.55"></a>
-<span class="sourceLineNo">056</span>            ByteArrayOutputStream baos = new ByteArrayOutputStream();<a name="line.56"></a>
-<span class="sourceLineNo">057</span>            ImageIO.write(image, "png", baos);<a name="line.57"></a>
+<span class="sourceLineNo">034</span>    public ItemMap(Integer meta, int count) {<a name="line.34"></a>
+<span class="sourceLineNo">035</span>        super(MAP, meta, count, "Map");<a name="line.35"></a>
+<span class="sourceLineNo">036</span><a name="line.36"></a>
+<span class="sourceLineNo">037</span>        if (!hasCompoundTag() || !getNamedTag().contains("map_uuid")) {<a name="line.37"></a>
+<span class="sourceLineNo">038</span>            CompoundTag tag = new CompoundTag();<a name="line.38"></a>
+<span class="sourceLineNo">039</span>            tag.putLong("map_uuid", mapCount++);<a name="line.39"></a>
+<span class="sourceLineNo">040</span>            this.setNamedTag(tag);<a name="line.40"></a>
+<span class="sourceLineNo">041</span>        }<a name="line.41"></a>
+<span class="sourceLineNo">042</span>    }<a name="line.42"></a>
+<span class="sourceLineNo">043</span><a name="line.43"></a>
+<span class="sourceLineNo">044</span>    public void setImage(File file) throws IOException {<a name="line.44"></a>
+<span class="sourceLineNo">045</span>        setImage(ImageIO.read(file));<a name="line.45"></a>
+<span class="sourceLineNo">046</span>    }<a name="line.46"></a>
+<span class="sourceLineNo">047</span><a name="line.47"></a>
+<span class="sourceLineNo">048</span>    public void setImage(BufferedImage image) {<a name="line.48"></a>
+<span class="sourceLineNo">049</span>        try {<a name="line.49"></a>
+<span class="sourceLineNo">050</span>            if (image.getHeight() != 128 || image.getWidth() != 128) { //resize<a name="line.50"></a>
+<span class="sourceLineNo">051</span>                this.image = new BufferedImage(128, 128, image.getType());<a name="line.51"></a>
+<span class="sourceLineNo">052</span>                Graphics2D g = this.image.createGraphics();<a name="line.52"></a>
+<span class="sourceLineNo">053</span>                g.drawImage(image, 0, 0, 128, 128, null);<a name="line.53"></a>
+<span class="sourceLineNo">054</span>                g.dispose();<a name="line.54"></a>
+<span class="sourceLineNo">055</span>            } else {<a name="line.55"></a>
+<span class="sourceLineNo">056</span>                this.image = image;<a name="line.56"></a>
+<span class="sourceLineNo">057</span>            }<a name="line.57"></a>
 <span class="sourceLineNo">058</span><a name="line.58"></a>
-<span class="sourceLineNo">059</span>            this.getNamedTag().putByteArray("Colors", baos.toByteArray());<a name="line.59"></a>
-<span class="sourceLineNo">060</span>        } catch (IOException e) {<a name="line.60"></a>
-<span class="sourceLineNo">061</span>            MainLogger.getLogger().logException(e);<a name="line.61"></a>
-<span class="sourceLineNo">062</span>        }<a name="line.62"></a>
-<span class="sourceLineNo">063</span>    }<a name="line.63"></a>
-<span class="sourceLineNo">064</span><a name="line.64"></a>
-<span class="sourceLineNo">065</span>    protected BufferedImage loadImageFromNBT() {<a name="line.65"></a>
-<span class="sourceLineNo">066</span>        try {<a name="line.66"></a>
-<span class="sourceLineNo">067</span>            byte[] data = getNamedTag().getByteArray("Colors");<a name="line.67"></a>
-<span class="sourceLineNo">068</span>            return ImageIO.read(new ByteArrayInputStream(data));<a name="line.68"></a>
-<span class="sourceLineNo">069</span>        } catch (IOException e) {<a name="line.69"></a>
-<span class="sourceLineNo">070</span>            MainLogger.getLogger().logException(e);<a name="line.70"></a>
-<span class="sourceLineNo">071</span>        }<a name="line.71"></a>
-<span class="sourceLineNo">072</span><a name="line.72"></a>
-<span class="sourceLineNo">073</span>        return null;<a name="line.73"></a>
-<span class="sourceLineNo">074</span>    }<a name="line.74"></a>
-<span class="sourceLineNo">075</span><a name="line.75"></a>
-<span class="sourceLineNo">076</span>    public long getMapId() {<a name="line.76"></a>
-<span class="sourceLineNo">077</span>        return getNamedTag().getLong("map_uuid");<a name="line.77"></a>
+<span class="sourceLineNo">059</span>            ByteArrayOutputStream baos = new ByteArrayOutputStream();<a name="line.59"></a>
+<span class="sourceLineNo">060</span>            ImageIO.write(this.image, "png", baos);<a name="line.60"></a>
+<span class="sourceLineNo">061</span><a name="line.61"></a>
+<span class="sourceLineNo">062</span>            this.getNamedTag().putByteArray("Colors", baos.toByteArray());<a name="line.62"></a>
+<span class="sourceLineNo">063</span>        } catch (IOException e) {<a name="line.63"></a>
+<span class="sourceLineNo">064</span>            MainLogger.getLogger().logException(e);<a name="line.64"></a>
+<span class="sourceLineNo">065</span>        }<a name="line.65"></a>
+<span class="sourceLineNo">066</span>    }<a name="line.66"></a>
+<span class="sourceLineNo">067</span><a name="line.67"></a>
+<span class="sourceLineNo">068</span>    protected BufferedImage loadImageFromNBT() {<a name="line.68"></a>
+<span class="sourceLineNo">069</span>        try {<a name="line.69"></a>
+<span class="sourceLineNo">070</span>            byte[] data = getNamedTag().getByteArray("Colors");<a name="line.70"></a>
+<span class="sourceLineNo">071</span>            image = ImageIO.read(new ByteArrayInputStream(data));<a name="line.71"></a>
+<span class="sourceLineNo">072</span>            return image;<a name="line.72"></a>
+<span class="sourceLineNo">073</span>        } catch (IOException e) {<a name="line.73"></a>
+<span class="sourceLineNo">074</span>            MainLogger.getLogger().logException(e);<a name="line.74"></a>
+<span class="sourceLineNo">075</span>        }<a name="line.75"></a>
+<span class="sourceLineNo">076</span><a name="line.76"></a>
+<span class="sourceLineNo">077</span>        return null;<a name="line.77"></a>
 <span class="sourceLineNo">078</span>    }<a name="line.78"></a>
 <span class="sourceLineNo">079</span><a name="line.79"></a>
-<span class="sourceLineNo">080</span>    public void sendImage(Player p) {<a name="line.80"></a>
-<span class="sourceLineNo">081</span>        BufferedImage image = loadImageFromNBT();<a name="line.81"></a>
-<span class="sourceLineNo">082</span><a name="line.82"></a>
-<span class="sourceLineNo">083</span>        ClientboundMapItemDataPacket pk = new ClientboundMapItemDataPacket();<a name="line.83"></a>
-<span class="sourceLineNo">084</span>        pk.mapId = getMapId();<a name="line.84"></a>
-<span class="sourceLineNo">085</span>        pk.update = 2;<a name="line.85"></a>
-<span class="sourceLineNo">086</span>        pk.scale = 0;<a name="line.86"></a>
-<span class="sourceLineNo">087</span>        pk.width = 128;<a name="line.87"></a>
-<span class="sourceLineNo">088</span>        pk.height = 128;<a name="line.88"></a>
-<span class="sourceLineNo">089</span>        pk.offsetX = 0;<a name="line.89"></a>
-<span class="sourceLineNo">090</span>        pk.offsetZ = 0;<a name="line.90"></a>
-<span class="sourceLineNo">091</span>        pk.image = image;<a name="line.91"></a>
-<span class="sourceLineNo">092</span><a name="line.92"></a>
-<span class="sourceLineNo">093</span>        p.dataPacket(pk);<a name="line.93"></a>
-<span class="sourceLineNo">094</span>    }<a name="line.94"></a>
-<span class="sourceLineNo">095</span><a name="line.95"></a>
-<span class="sourceLineNo">096</span>    @Override<a name="line.96"></a>
-<span class="sourceLineNo">097</span>    public boolean canBeActivated() {<a name="line.97"></a>
-<span class="sourceLineNo">098</span>        return true;<a name="line.98"></a>
+<span class="sourceLineNo">080</span>    public long getMapId() {<a name="line.80"></a>
+<span class="sourceLineNo">081</span>        return getNamedTag().getLong("map_uuid");<a name="line.81"></a>
+<span class="sourceLineNo">082</span>    }<a name="line.82"></a>
+<span class="sourceLineNo">083</span><a name="line.83"></a>
+<span class="sourceLineNo">084</span>    public void sendImage(Player p) {<a name="line.84"></a>
+<span class="sourceLineNo">085</span>        // don't load the image from NBT if it has been done before.<a name="line.85"></a>
+<span class="sourceLineNo">086</span>        BufferedImage image = this.image != null ? this.image : loadImageFromNBT();<a name="line.86"></a>
+<span class="sourceLineNo">087</span><a name="line.87"></a>
+<span class="sourceLineNo">088</span>        ClientboundMapItemDataPacket pk = new ClientboundMapItemDataPacket();<a name="line.88"></a>
+<span class="sourceLineNo">089</span>        pk.mapId = getMapId();<a name="line.89"></a>
+<span class="sourceLineNo">090</span>        pk.update = 2;<a name="line.90"></a>
+<span class="sourceLineNo">091</span>        pk.scale = 0;<a name="line.91"></a>
+<span class="sourceLineNo">092</span>        pk.width = 128;<a name="line.92"></a>
+<span class="sourceLineNo">093</span>        pk.height = 128;<a name="line.93"></a>
+<span class="sourceLineNo">094</span>        pk.offsetX = 0;<a name="line.94"></a>
+<span class="sourceLineNo">095</span>        pk.offsetZ = 0;<a name="line.95"></a>
+<span class="sourceLineNo">096</span>        pk.image = image;<a name="line.96"></a>
+<span class="sourceLineNo">097</span><a name="line.97"></a>
+<span class="sourceLineNo">098</span>        p.dataPacket(pk);<a name="line.98"></a>
 <span class="sourceLineNo">099</span>    }<a name="line.99"></a>
 <span class="sourceLineNo">100</span><a name="line.100"></a>
 <span class="sourceLineNo">101</span>    @Override<a name="line.101"></a>
-<span class="sourceLineNo">102</span>    public int getMaxStackSize() {<a name="line.102"></a>
-<span class="sourceLineNo">103</span>        return 1;<a name="line.103"></a>
+<span class="sourceLineNo">102</span>    public boolean canBeActivated() {<a name="line.102"></a>
+<span class="sourceLineNo">103</span>        return true;<a name="line.103"></a>
 <span class="sourceLineNo">104</span>    }<a name="line.104"></a>
-<span class="sourceLineNo">105</span>}<a name="line.105"></a>
+<span class="sourceLineNo">105</span><a name="line.105"></a>
+<span class="sourceLineNo">106</span>    @Override<a name="line.106"></a>
+<span class="sourceLineNo">107</span>    public int getMaxStackSize() {<a name="line.107"></a>
+<span class="sourceLineNo">108</span>        return 1;<a name="line.108"></a>
+<span class="sourceLineNo">109</span>    }<a name="line.109"></a>
+<span class="sourceLineNo">110</span>}<a name="line.110"></a>
 
 
 

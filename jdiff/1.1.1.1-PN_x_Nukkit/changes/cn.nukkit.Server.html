@@ -53,6 +53,28 @@ Class cn.nukkit.<A HREF="../../../javadoc/1.1.1.1-PN/cn/nukkit/Server.html" targ
 <a NAME="constructors"></a>
 <a NAME="methods"></a>
 <p>
+<a NAME="Removed"></a>
+<TABLE summary="Removed Methods" BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+  <TD VALIGN="TOP" COLSPAN=2><FONT SIZE="+1"><B>Removed Methods</B></FONT></TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="cn.nukkit.Server.isIgnoredPacket_removed(java.lang.Class<? extends cn.nukkit.network.protocol.DataPacket>)"></A>
+  <nobr><code>boolean</code>&nbsp;<A HREF="../CloudburstNukkit-29c2a366/cn/nukkit/Server.html#isIgnoredPacket(java.lang.Class<? extends cn.nukkit.network.protocol.DataPacket>)" target="_top"><tt>isIgnoredPacket</tt></A>(<code>Class&lt;DataPacket&gt;</code>)</nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="cn.nukkit.Server.removePlayerListData_removed(java.util.UUID, cn.nukkit.Player)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../CloudburstNukkit-29c2a366/cn/nukkit/Server.html#removePlayerListData(java.util.UUID, cn.nukkit.Player)" target="_top"><tt>removePlayerListData</tt></A>(<code>UUID,</nobr> Player<nobr><nobr></code>)</nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<p>
 <a NAME="Added"></a>
 <TABLE summary="Added Methods" BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
 <TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
@@ -76,44 +98,6 @@ Class cn.nukkit.<A HREF="../../../javadoc/1.1.1.1-PN/cn/nukkit/Server.html" targ
   <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="cn.nukkit.Server.setRedstoneEnabled_added(boolean)"></A>
   <nobr><code>void</code>&nbsp;<A HREF="../../../javadoc/1.1.1.1-PN/cn/nukkit/Server.html#setRedstoneEnabled(boolean)" target="_top"><tt>setRedstoneEnabled</tt></A>(<code>boolean</code>)</nobr>
-  </TD>
-  <TD>&nbsp;</TD>
-</TR>
-</TABLE>
-&nbsp;
-<p>
-<a NAME="Changed"></a>
-<TABLE summary="Changed Methods" BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
-<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
-  <TD VALIGN="TOP" COLSPAN=3><FONT SIZE="+1"><B>Changed Methods</B></FONT></TD>
-</TR>
-<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
-  <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="cn.nukkit.Server.addPlayer_changed(java.net.InetSocketAddress, cn.nukkit.Player)"></A>
-  <nobr><code>void</code>&nbsp;<A HREF="../../../javadoc/1.1.1.1-PN/cn/nukkit/Server.html#addPlayer(java.net.InetSocketAddress, cn.nukkit.Player)" target="_top"><tt>addPlayer</tt></A>(<code>InetSocketAddress,</nobr> Player<nobr><nobr></code>)  </nobr>
-  </TD>
-  <TD VALIGN="TOP" WIDTH="30%">
-Change in signature from (<code>String, Player</code>) to (<code>InetSocketAddress, Player</code>).<br>
-  </TD>
-  <TD>&nbsp;</TD>
-</TR>
-<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
-  <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="cn.nukkit.Server.broadcastPacketsCallback_changed(byte[], java.util.List<java.net.InetSocketAddress>)"></A>
-  <nobr><code>void</code>&nbsp;<A HREF="../../../javadoc/1.1.1.1-PN/cn/nukkit/Server.html#broadcastPacketsCallback(byte[], java.util.List<java.net.InetSocketAddress>)" target="_top"><tt>broadcastPacketsCallback</tt></A>(<code>byte[],</nobr> List&lt;InetSocketAddress&gt;<nobr><nobr></code>)  </nobr>
-  </TD>
-  <TD VALIGN="TOP" WIDTH="30%">
-Change in signature from (<code>byte[], List&lt;String&gt;</code>) to (<code>byte[], List&lt;InetSocketAddress&gt;</code>).<br>
-  </TD>
-  <TD>&nbsp;</TD>
-</TR>
-<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
-  <TD VALIGN="TOP" WIDTH="25%">
-  <A NAME="cn.nukkit.Server.handlePacket_changed(java.net.InetSocketAddress, io.netty.buffer.ByteBuf)"></A>
-  <nobr><code>void</code>&nbsp;<A HREF="../../../javadoc/1.1.1.1-PN/cn/nukkit/Server.html#handlePacket(java.net.InetSocketAddress, io.netty.buffer.ByteBuf)" target="_top"><tt>handlePacket</tt></A>(<code>InetSocketAddress,</nobr> ByteBuf<nobr><nobr></code>)  </nobr>
-  </TD>
-  <TD VALIGN="TOP" WIDTH="30%">
-Change in signature from (<code>String, int, byte[]</code>) to (<code>InetSocketAddress, ByteBuf</code>).<br>
   </TD>
   <TD>&nbsp;</TD>
 </TR>

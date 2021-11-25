@@ -13,8 +13,8 @@
 <span class="sourceLineNo">005</span>import cn.nukkit.item.Item;<a name="line.5"></a>
 <span class="sourceLineNo">006</span>import cn.nukkit.item.ItemBlock;<a name="line.6"></a>
 <span class="sourceLineNo">007</span>import cn.nukkit.level.Level;<a name="line.7"></a>
-<span class="sourceLineNo">008</span>import cn.nukkit.level.Sound;<a name="line.8"></a>
-<span class="sourceLineNo">009</span>import cn.nukkit.math.BlockFace;<a name="line.9"></a>
+<span class="sourceLineNo">008</span>import cn.nukkit.math.BlockFace;<a name="line.8"></a>
+<span class="sourceLineNo">009</span>import cn.nukkit.network.protocol.LevelEventPacket;<a name="line.9"></a>
 <span class="sourceLineNo">010</span>import cn.nukkit.utils.BlockColor;<a name="line.10"></a>
 <span class="sourceLineNo">011</span>import cn.nukkit.utils.Faceable;<a name="line.11"></a>
 <span class="sourceLineNo">012</span><a name="line.12"></a>
@@ -76,7 +76,7 @@
 <span class="sourceLineNo">068</span>        this.setDamage(this.getDamage() ^ 0x08);<a name="line.68"></a>
 <span class="sourceLineNo">069</span><a name="line.69"></a>
 <span class="sourceLineNo">070</span>        this.getLevel().setBlock(this, this, false, true);<a name="line.70"></a>
-<span class="sourceLineNo">071</span>        this.getLevel().addSound(this, Sound.RANDOM_CLICK); //TODO: correct pitch<a name="line.71"></a>
+<span class="sourceLineNo">071</span>        this.getLevel().addLevelEvent(this.add(0.5, 0.5, 0.5), LevelEventPacket.EVENT_SOUND_BUTTON_CLICK, this.isPowerOn() ? 600 : 500);<a name="line.71"></a>
 <span class="sourceLineNo">072</span><a name="line.72"></a>
 <span class="sourceLineNo">073</span>        LeverOrientation orientation = LeverOrientation.byMetadata(this.isPowerOn() ? this.getDamage() ^ 0x08 : this.getDamage());<a name="line.73"></a>
 <span class="sourceLineNo">074</span>        BlockFace face = orientation.getFacing();<a name="line.74"></a>
@@ -109,7 +109,7 @@
 <span class="sourceLineNo">101</span><a name="line.101"></a>
 <span class="sourceLineNo">102</span>    @Override<a name="line.102"></a>
 <span class="sourceLineNo">103</span>    public boolean onBreak(Item item) {<a name="line.103"></a>
-<span class="sourceLineNo">104</span>        this.getLevel().setBlock(this, new BlockAir(), true, true);<a name="line.104"></a>
+<span class="sourceLineNo">104</span>        this.getLevel().setBlock(this, Block.get(BlockID.AIR), true, true);<a name="line.104"></a>
 <span class="sourceLineNo">105</span><a name="line.105"></a>
 <span class="sourceLineNo">106</span>        if (isPowerOn()) {<a name="line.106"></a>
 <span class="sourceLineNo">107</span>            BlockFace face = LeverOrientation.byMetadata(this.isPowerOn() ? this.getDamage() ^ 0x08 : this.getDamage()).getFacing();<a name="line.107"></a>

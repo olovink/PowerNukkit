@@ -57,6 +57,7 @@ Method Differences Index
 <a href="#G"><font size="-2">G</font></a> 
 <a href="#H"><font size="-2">H</font></a> 
 <a href="#I"><font size="-2">I</font></a> 
+<a href="#L"><font size="-2">L</font></a> 
 <a href="#M"><font size="-2">M</font></a> 
 <a href="#N"><font size="-2">N</font></a> 
 <a href="#O"><font size="-2">O</font></a> 
@@ -68,13 +69,6 @@ Method Differences Index
 <a href="#W"><font size="-2">W</font></a> 
  <a href="#topheader"><font size="-2">TOP</font></a>
 <br>
-<i>activate</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.item.EntityMinecartChest.html#cn.nukkit.entity.item.EntityMinecartChest.activate_changed(int, int, int, boolean)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>int, int, int, boolean</code>)&nbsp;in&nbsp;cn.nukkit.entity.item.EntityMinecartChest
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.item.EntityMinecartHopper.html#cn.nukkit.entity.item.EntityMinecartHopper.activate_changed(int, int, int, boolean)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>int, int, int, boolean</code>)&nbsp;in&nbsp;cn.nukkit.entity.item.EntityMinecartHopper
-</A></nobr><br>
 <nobr><A HREF="cn.nukkit.network.protocol.CraftingDataPacket.html#cn.nukkit.network.protocol.CraftingDataPacket.addBlastFurnaceRecipe_added(cn.nukkit.inventory.BlastFurnaceRecipe[])" class="hiddenlink" target="rightframe"><b>addBlastFurnaceRecipe</b>
 (<code>BlastFurnaceRecipe[]</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.network.protocol.CraftingDataPacket.html#cn.nukkit.network.protocol.CraftingDataPacket.addCampfireRecipeRecipe_added(cn.nukkit.inventory.CampfireRecipe[])" class="hiddenlink" target="rightframe"><b>addCampfireRecipeRecipe</b>
@@ -100,6 +94,9 @@ Method Differences Index
 ()</b>&nbsp;in&nbsp;cn.nukkit.entity.projectile.EntitySnowball
 </A></nobr><br>
 <i>addLevelEvent</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.Level.html#cn.nukkit.level.Level.addLevelEvent_removed(cn.nukkit.math.Vector3, int, int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>Vector3, int, int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.Level
+</A></nobr><br>
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.Level.html#cn.nukkit.level.Level.addLevelEvent_added(int, int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
 (<code>int, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.Level
 </A></nobr><br>
@@ -116,14 +113,35 @@ Method Differences Index
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.Inventory.html#cn.nukkit.inventory.Inventory.addListener_added(cn.nukkit.inventory.InventoryListener)" class="hiddenlink" target="rightframe">type&nbsp;<b>
 (<code>InventoryListener</code>)</b>&nbsp;in&nbsp;cn.nukkit.inventory.Inventory
 </A></nobr><br>
-<nobr><A HREF="cn.nukkit.Server.html#cn.nukkit.Server.addPlayer_changed(java.net.InetSocketAddress, cn.nukkit.Player)" class="hiddenlink" target="rightframe">addPlayer
-(<code>InetSocketAddress, Player</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.network.protocol.CraftingDataPacket.html#cn.nukkit.network.protocol.CraftingDataPacket.addMultiRecipe_removed(cn.nukkit.inventory.MultiRecipe[])" class="hiddenlink" target="rightframe"><strike>addMultiRecipe</strike>
+(<code>MultiRecipe[]</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.level.Level.html#cn.nukkit.level.Level.addPlayerMovement_removed(cn.nukkit.entity.Entity, double, double, double, double, double, double)" class="hiddenlink" target="rightframe"><strike>addPlayerMovement</strike>
+(<code>Entity, double, double, double, double, double, double</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.network.protocol.CraftingDataPacket.html#cn.nukkit.network.protocol.CraftingDataPacket.addSmokerRecipe_added(cn.nukkit.inventory.SmokerRecipe[])" class="hiddenlink" target="rightframe"><b>addSmokerRecipe</b>
 (<code>SmokerRecipe[]</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.network.protocol.CraftingDataPacket.html#cn.nukkit.network.protocol.CraftingDataPacket.addStonecutterRecipe_added(cn.nukkit.inventory.StonecutterRecipe[])" class="hiddenlink" target="rightframe"><b>addStonecutterRecipe</b>
 (<code>StonecutterRecipe[]</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.item.ProjectileItem.html#cn.nukkit.item.ProjectileItem.addThrowSound_added(cn.nukkit.Player)" class="hiddenlink" target="rightframe"><b>addThrowSound</b>
 (<code>Player</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.Player.html#cn.nukkit.Player.addWindow_removed(cn.nukkit.inventory.Inventory, java.lang.Integer, boolean, boolean)" class="hiddenlink" target="rightframe"><strike>addWindow</strike>
+(<code>Inventory, Integer, boolean, boolean</code>)</A></nobr><br>
+<i>angleBetween</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.math.Vector3.html#cn.nukkit.math.Vector3.angleBetween_removed(cn.nukkit.math.Vector3)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>Vector3</code>)</strike>&nbsp;in&nbsp;cn.nukkit.math.Vector3
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.math.Vector3f.html#cn.nukkit.math.Vector3f.angleBetween_removed(cn.nukkit.math.Vector3f)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>Vector3f</code>)</strike>&nbsp;in&nbsp;cn.nukkit.math.Vector3f
+</A></nobr><br>
+<i>applyNameTag</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.EntityCreature.html#cn.nukkit.entity.EntityCreature.applyNameTag_removed(cn.nukkit.Player, cn.nukkit.item.Item)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>Player, Item</code>)</strike>&nbsp;in&nbsp;cn.nukkit.entity.EntityCreature
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.EntityHumanType.html#cn.nukkit.entity.EntityHumanType.applyNameTag_removed(cn.nukkit.Player, cn.nukkit.item.Item)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>Player, Item</code>)</strike>&nbsp;in&nbsp;cn.nukkit.entity.EntityHumanType
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.mob.EntityEnderDragon.html#cn.nukkit.entity.mob.EntityEnderDragon.applyNameTag_removed(cn.nukkit.Player, cn.nukkit.item.Item)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>Player, Item</code>)</strike>&nbsp;in&nbsp;cn.nukkit.entity.mob.EntityEnderDragon
+</A></nobr><br>
 <A NAME="B"></A>
 <br><font size="+2">B</font>&nbsp;
 <a href="#A"><font size="-2">A</font></a> 
@@ -134,6 +152,7 @@ Method Differences Index
 <a href="#G"><font size="-2">G</font></a> 
 <a href="#H"><font size="-2">H</font></a> 
 <a href="#I"><font size="-2">I</font></a> 
+<a href="#L"><font size="-2">L</font></a> 
 <a href="#M"><font size="-2">M</font></a> 
 <a href="#N"><font size="-2">N</font></a> 
 <a href="#O"><font size="-2">O</font></a> 
@@ -145,43 +164,6 @@ Method Differences Index
 <a href="#W"><font size="-2">W</font></a> 
  <a href="#topheader"><font size="-2">TOP</font></a>
 <br>
-<i>blockAddress</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.network.AdvancedSourceInterface.html#cn.nukkit.network.AdvancedSourceInterface.blockAddress_removed(java.lang.String)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>String</code>)</strike>&nbsp;in&nbsp;cn.nukkit.network.AdvancedSourceInterface
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.network.AdvancedSourceInterface.html#cn.nukkit.network.AdvancedSourceInterface.blockAddress_removed(java.lang.String, int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>String, int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.network.AdvancedSourceInterface
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.network.AdvancedSourceInterface.html#cn.nukkit.network.AdvancedSourceInterface.blockAddress_added(java.net.InetAddress)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>InetAddress</code>)</b>&nbsp;in&nbsp;cn.nukkit.network.AdvancedSourceInterface
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.network.AdvancedSourceInterface.html#cn.nukkit.network.AdvancedSourceInterface.blockAddress_added(java.net.InetAddress, int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>InetAddress, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.network.AdvancedSourceInterface
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.network.Network.html#cn.nukkit.network.Network.blockAddress_removed(java.lang.String)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>String</code>)</strike>&nbsp;in&nbsp;cn.nukkit.network.Network
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.network.Network.html#cn.nukkit.network.Network.blockAddress_removed(java.lang.String, int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>String, int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.network.Network
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.network.Network.html#cn.nukkit.network.Network.blockAddress_added(java.net.InetAddress)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>InetAddress</code>)</b>&nbsp;in&nbsp;cn.nukkit.network.Network
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.network.Network.html#cn.nukkit.network.Network.blockAddress_added(java.net.InetAddress, int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>InetAddress, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.network.Network
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.network.RakNetInterface.html#cn.nukkit.network.RakNetInterface.blockAddress_removed(java.lang.String)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>String</code>)</strike>&nbsp;in&nbsp;cn.nukkit.network.RakNetInterface
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.network.RakNetInterface.html#cn.nukkit.network.RakNetInterface.blockAddress_removed(java.lang.String, int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>String, int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.network.RakNetInterface
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.network.RakNetInterface.html#cn.nukkit.network.RakNetInterface.blockAddress_added(java.net.InetAddress)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>InetAddress</code>)</b>&nbsp;in&nbsp;cn.nukkit.network.RakNetInterface
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.network.RakNetInterface.html#cn.nukkit.network.RakNetInterface.blockAddress_added(java.net.InetAddress, int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>InetAddress, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.network.RakNetInterface
-</A></nobr><br>
 <i>breaksWhenMoved</i><br>
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.Block.html#cn.nukkit.block.Block.breaksWhenMoved_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
 ()</b>&nbsp;in&nbsp;cn.nukkit.block.Block
@@ -243,8 +225,6 @@ Method Differences Index
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockVine.html#cn.nukkit.block.BlockVine.breaksWhenMoved_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
 ()</b>&nbsp;in&nbsp;cn.nukkit.block.BlockVine
 </A></nobr><br>
-<nobr><A HREF="cn.nukkit.Server.html#cn.nukkit.Server.broadcastPacketsCallback_changed(byte[], java.util.List<java.net.InetSocketAddress>)" class="hiddenlink" target="rightframe">broadcastPacketsCallback
-(<code>byte[], List&lt;InetSocketAddress&gt;</code>)</A></nobr><br>
 <A NAME="C"></A>
 <br><font size="+2">C</font>&nbsp;
 <a href="#A"><font size="-2">A</font></a> 
@@ -255,6 +235,7 @@ Method Differences Index
 <a href="#G"><font size="-2">G</font></a> 
 <a href="#H"><font size="-2">H</font></a> 
 <a href="#I"><font size="-2">I</font></a> 
+<a href="#L"><font size="-2">L</font></a> 
 <a href="#M"><font size="-2">M</font></a> 
 <a href="#N"><font size="-2">N</font></a> 
 <a href="#O"><font size="-2">O</font></a> 
@@ -266,50 +247,6 @@ Method Differences Index
 <a href="#W"><font size="-2">W</font></a> 
  <a href="#topheader"><font size="-2">TOP</font></a>
 <br>
-<i>canBeActivated</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockDaylightDetector.html#cn.nukkit.block.BlockDaylightDetector.canBeActivated_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.block.BlockDaylightDetector
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockDispenser.html#cn.nukkit.block.BlockDispenser.canBeActivated_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.block.BlockDispenser
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockWood.html#cn.nukkit.block.BlockWood.canBeActivated_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.block.BlockWood
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.item.ItemPotionLingering.html#cn.nukkit.item.ItemPotionLingering.canBeActivated_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.item.ItemPotionLingering
-</A></nobr><br>
-<i>canBeFlowedInto</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockBedrockInvisible.html#cn.nukkit.block.BlockBedrockInvisible.canBeFlowedInto_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.block.BlockBedrockInvisible
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockButton.html#cn.nukkit.block.BlockButton.canBeFlowedInto_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.block.BlockButton
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockCocoa.html#cn.nukkit.block.BlockCocoa.canBeFlowedInto_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.block.BlockCocoa
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockEndRod.html#cn.nukkit.block.BlockEndRod.canBeFlowedInto_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.block.BlockEndRod
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockLever.html#cn.nukkit.block.BlockLever.canBeFlowedInto_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.block.BlockLever
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockRedstoneDiode.html#cn.nukkit.block.BlockRedstoneDiode.canBeFlowedInto_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.block.BlockRedstoneDiode
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockSkull.html#cn.nukkit.block.BlockSkull.canBeFlowedInto_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.block.BlockSkull
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockTripWire.html#cn.nukkit.block.BlockTripWire.canBeFlowedInto_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.block.BlockTripWire
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockTripWireHook.html#cn.nukkit.block.BlockTripWireHook.canBeFlowedInto_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.block.BlockTripWireHook
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockVine.html#cn.nukkit.block.BlockVine.canBeFlowedInto_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.block.BlockVine
-</A></nobr><br>
 <nobr><A HREF="cn.nukkit.block.BlockRedstoneWire.html#cn.nukkit.block.BlockRedstoneWire.canBePlacedOn_changed(cn.nukkit.block.Block)" class="hiddenlink" target="rightframe">canBePlacedOn
 (<code>Block</code>)</A></nobr><br>
 <i>canBePulled</i><br>
@@ -346,30 +283,70 @@ Method Differences Index
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockRail.html#cn.nukkit.block.BlockRail.canBePulled_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
 ()</b>&nbsp;in&nbsp;cn.nukkit.block.BlockRail
 </A></nobr><br>
-<i>canBePushed</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockEndPortal.html#cn.nukkit.block.BlockEndPortal.canBePushed_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.block.BlockEndPortal
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockEndRod.html#cn.nukkit.block.BlockEndRod.canBePushed_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.block.BlockEndRod
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockNetherPortal.html#cn.nukkit.block.BlockNetherPortal.canBePushed_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.block.BlockNetherPortal
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockPumpkin.html#cn.nukkit.block.BlockPumpkin.canBePushed_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.block.BlockPumpkin
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockRail.html#cn.nukkit.block.BlockRail.canBePushed_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.block.BlockRail
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.Entity.html#cn.nukkit.entity.Entity.canBePushed_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
-()</b>&nbsp;in&nbsp;cn.nukkit.entity.Entity
-</A></nobr><br>
+<nobr><A HREF="cn.nukkit.entity.Entity.html#cn.nukkit.entity.Entity.canBePushed_added()" class="hiddenlink" target="rightframe"><b>canBePushed</b>
+()</A></nobr><br>
 <nobr><A HREF="cn.nukkit.block.BlockFlower.html#cn.nukkit.block.BlockFlower.canPlantOn_added(cn.nukkit.block.Block)" class="hiddenlink" target="rightframe"><b>canPlantOn</b>
 (<code>Block</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.block.BlockPistonBase.html#cn.nukkit.block.BlockPistonBase.canPush_changed(cn.nukkit.block.Block, cn.nukkit.math.BlockFace, boolean, boolean)" class="hiddenlink" target="rightframe">canPush
 (<code>Block, BlockFace, boolean, boolean</code>)</A></nobr><br>
+<i>canRain</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.Biome.html#cn.nukkit.level.biome.Biome.canRain_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.Biome
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.HellBiome.html#cn.nukkit.level.biome.impl.HellBiome.canRain_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.HellBiome
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.beach.ColdBeachBiome.html#cn.nukkit.level.biome.impl.beach.ColdBeachBiome.canRain_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.beach.ColdBeachBiome
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.desert.DesertBiome.html#cn.nukkit.level.biome.impl.desert.DesertBiome.canRain_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.desert.DesertBiome
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.mesa.MesaBiome.html#cn.nukkit.level.biome.impl.mesa.MesaBiome.canRain_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.mesa.MesaBiome
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.ocean.FrozenOceanBiome.html#cn.nukkit.level.biome.impl.ocean.FrozenOceanBiome.canRain_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.ocean.FrozenOceanBiome
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.river.FrozenRiverBiome.html#cn.nukkit.level.biome.impl.river.FrozenRiverBiome.canRain_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.river.FrozenRiverBiome
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.savanna.SavannaBiome.html#cn.nukkit.level.biome.impl.savanna.SavannaBiome.canRain_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.savanna.SavannaBiome
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.taiga.ColdTaigaBiome.html#cn.nukkit.level.biome.impl.taiga.ColdTaigaBiome.canRain_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.taiga.ColdTaigaBiome
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.type.SnowyBiome.html#cn.nukkit.level.biome.type.SnowyBiome.canRain_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.type.SnowyBiome
+</A></nobr><br>
 <nobr><A HREF="cn.nukkit.block.Block.html#cn.nukkit.block.Block.canWaterloggingFlowInto_added()" class="hiddenlink" target="rightframe"><b>canWaterloggingFlowInto</b>
+()</A></nobr><br>
+<i>checkCompatibility</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.item.enchantment.Enchantment.html#cn.nukkit.item.enchantment.Enchantment.checkCompatibility_removed(cn.nukkit.item.enchantment.Enchantment)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>Enchantment</code>)</strike>&nbsp;in&nbsp;cn.nukkit.item.enchantment.Enchantment
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.item.enchantment.EnchantmentDurability.html#cn.nukkit.item.enchantment.EnchantmentDurability.checkCompatibility_removed(cn.nukkit.item.enchantment.Enchantment)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>Enchantment</code>)</strike>&nbsp;in&nbsp;cn.nukkit.item.enchantment.EnchantmentDurability
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.item.enchantment.EnchantmentMending.html#cn.nukkit.item.enchantment.EnchantmentMending.checkCompatibility_removed(cn.nukkit.item.enchantment.Enchantment)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>Enchantment</code>)</strike>&nbsp;in&nbsp;cn.nukkit.item.enchantment.EnchantmentMending
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.item.enchantment.EnchantmentSilkTouch.html#cn.nukkit.item.enchantment.EnchantmentSilkTouch.checkCompatibility_removed(cn.nukkit.item.enchantment.Enchantment)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>Enchantment</code>)</strike>&nbsp;in&nbsp;cn.nukkit.item.enchantment.EnchantmentSilkTouch
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.item.enchantment.damage.EnchantmentDamage.html#cn.nukkit.item.enchantment.damage.EnchantmentDamage.checkCompatibility_removed(cn.nukkit.item.enchantment.Enchantment)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>Enchantment</code>)</strike>&nbsp;in&nbsp;cn.nukkit.item.enchantment.damage.EnchantmentDamage
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.item.enchantment.loot.EnchantmentLoot.html#cn.nukkit.item.enchantment.loot.EnchantmentLoot.checkCompatibility_removed(cn.nukkit.item.enchantment.Enchantment)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>Enchantment</code>)</strike>&nbsp;in&nbsp;cn.nukkit.item.enchantment.loot.EnchantmentLoot
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.item.enchantment.protection.EnchantmentProtection.html#cn.nukkit.item.enchantment.protection.EnchantmentProtection.checkCompatibility_removed(cn.nukkit.item.enchantment.Enchantment)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>Enchantment</code>)</strike>&nbsp;in&nbsp;cn.nukkit.item.enchantment.protection.EnchantmentProtection
+</A></nobr><br>
+<nobr><A HREF="cn.nukkit.inventory.transaction.CraftingTransaction.html#cn.nukkit.inventory.transaction.CraftingTransaction.checkForCraftingPart_removed(java.util.List<cn.nukkit.inventory.transaction.action.InventoryAction>)" class="hiddenlink" target="rightframe"><strike>checkForCraftingPart</strike>
+(<code>List&lt;InventoryAction&gt;</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.entity.item.EntityFishingHook.html#cn.nukkit.entity.item.EntityFishingHook.checkLure_removed()" class="hiddenlink" target="rightframe"><strike>checkLure</strike>
 ()</A></nobr><br>
 <i>checkState</i><br>
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockRedstoneTorch.html#cn.nukkit.block.BlockRedstoneTorch.checkState_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
@@ -380,12 +357,22 @@ Method Differences Index
 </A></nobr><br>
 <nobr><A HREF="cn.nukkit.block.BlockRailPowered.html#cn.nukkit.block.BlockRailPowered.checkSurrounding_removed(cn.nukkit.math.Vector3, boolean, int)" class="hiddenlink" target="rightframe"><strike>checkSurrounding</strike>
 (<code>Vector3, boolean, int</code>)</A></nobr><br>
-<nobr><A HREF="cn.nukkit.math.MathHelper.html#cn.nukkit.math.MathHelper.clamp_added(float, float, float)" class="hiddenlink" target="rightframe"><b>clamp</b>
-(<code>float, float, float</code>)</A></nobr><br>
+<i>clamp</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.math.MathHelper.html#cn.nukkit.math.MathHelper.clamp_added(float, float, float)" class="hiddenlink" target="rightframe">type&nbsp;<b>
+(<code>float, float, float</code>)</b>&nbsp;in&nbsp;cn.nukkit.math.MathHelper
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.math.NukkitMath.html#cn.nukkit.math.NukkitMath.clamp_removed(float, float, float)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>float, float, float</code>)</strike>&nbsp;in&nbsp;cn.nukkit.math.NukkitMath
+</A></nobr><br>
 <nobr><A HREF="cn.nukkit.block.BlockCauldron.html#cn.nukkit.block.BlockCauldron.clearWithFizz_added(cn.nukkit.blockentity.BlockEntityCauldron)" class="hiddenlink" target="rightframe"><b>clearWithFizz</b>
 (<code>BlockEntityCauldron</code>)</A></nobr><br>
-<nobr><A HREF="cn.nukkit.network.RakNetInterface.html#cn.nukkit.network.RakNetInterface.closeSession_removed(java.lang.String, java.lang.String)" class="hiddenlink" target="rightframe"><strike>closeSession</strike>
-(<code>String, String</code>)</A></nobr><br>
+<i>colorize</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.utils.TextFormat.html#cn.nukkit.utils.TextFormat.colorize_changed(char, java.lang.String)" class="hiddenlink" target="rightframe">type&nbsp;
+(<code>char, String</code>)&nbsp;in&nbsp;cn.nukkit.utils.TextFormat
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.utils.TextFormat.html#cn.nukkit.utils.TextFormat.colorize_changed(java.lang.String)" class="hiddenlink" target="rightframe">type&nbsp;
+(<code>String</code>)&nbsp;in&nbsp;cn.nukkit.utils.TextFormat
+</A></nobr><br>
 <nobr><A HREF="cn.nukkit.level.format.anvil.ChunkSection.html#cn.nukkit.level.format.anvil.ChunkSection.compressStorageLayers_added()" class="hiddenlink" target="rightframe"><b>compressStorageLayers</b>
 ()</A></nobr><br>
 <nobr><A HREF="cn.nukkit.item.ItemPotionLingering.html#cn.nukkit.item.ItemPotionLingering.correctNBT_added(cn.nukkit.nbt.tag.CompoundTag)" class="hiddenlink" target="rightframe"><b>correctNBT</b>
@@ -397,6 +384,8 @@ Method Differences Index
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.item.ProjectileItem.html#cn.nukkit.item.ProjectileItem.correctProjectile_added(cn.nukkit.Player, cn.nukkit.entity.Entity)" class="hiddenlink" target="rightframe">type&nbsp;<b>
 (<code>Player, Entity</code>)</b>&nbsp;in&nbsp;cn.nukkit.item.ProjectileItem
 </A></nobr><br>
+<nobr><A HREF="cn.nukkit.entity.projectile.EntityThrownTrident.html#cn.nukkit.entity.projectile.EntityThrownTrident.create_added(java.lang.Object, cn.nukkit.level.Position, java.lang.Object[])" class="hiddenlink" target="rightframe"><b>create</b>
+(<code>Object, Position, Object[]</code>)</A></nobr><br>
 <i>createBlockEntity</i><br>
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockDispenser.html#cn.nukkit.block.BlockDispenser.createBlockEntity_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
 ()</b>&nbsp;in&nbsp;cn.nukkit.block.BlockDispenser
@@ -413,6 +402,15 @@ Method Differences Index
 (<code>CompoundTag</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.block.BlockPistonBase.html#cn.nukkit.block.BlockPistonBase.createHead_added(int)" class="hiddenlink" target="rightframe"><b>createHead</b>
 (<code>int</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.block.BlockEndPortalFrame.html#cn.nukkit.block.BlockEndPortalFrame.createPortal_removed()" class="hiddenlink" target="rightframe"><strike>createPortal</strike>
+()</A></nobr><br>
+<i>cross</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.math.Vector3.html#cn.nukkit.math.Vector3.cross_changed(cn.nukkit.math.Vector3)" class="hiddenlink" target="rightframe">type&nbsp;
+(<code>Vector3</code>)&nbsp;in&nbsp;cn.nukkit.math.Vector3
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.math.Vector3f.html#cn.nukkit.math.Vector3f.cross_changed(cn.nukkit.math.Vector3f)" class="hiddenlink" target="rightframe">type&nbsp;
+(<code>Vector3f</code>)&nbsp;in&nbsp;cn.nukkit.math.Vector3f
+</A></nobr><br>
 <A NAME="D"></A>
 <br><font size="+2">D</font>&nbsp;
 <a href="#A"><font size="-2">A</font></a> 
@@ -423,6 +421,7 @@ Method Differences Index
 <a href="#G"><font size="-2">G</font></a> 
 <a href="#H"><font size="-2">H</font></a> 
 <a href="#I"><font size="-2">I</font></a> 
+<a href="#L"><font size="-2">L</font></a> 
 <a href="#M"><font size="-2">M</font></a> 
 <a href="#N"><font size="-2">N</font></a> 
 <a href="#O"><font size="-2">O</font></a> 
@@ -434,6 +433,32 @@ Method Differences Index
 <a href="#W"><font size="-2">W</font></a> 
  <a href="#topheader"><font size="-2">TOP</font></a>
 <br>
+<i>deflate</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.utils.ZlibOriginal.html#cn.nukkit.utils.ZlibOriginal.deflate_changed(byte[], int)" class="hiddenlink" target="rightframe">type&nbsp;
+(<code>byte[], int</code>)&nbsp;in&nbsp;cn.nukkit.utils.ZlibOriginal
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.utils.ZlibOriginal.html#cn.nukkit.utils.ZlibOriginal.deflate_changed(byte[][], int)" class="hiddenlink" target="rightframe">type&nbsp;
+(<code>byte[][], int</code>)&nbsp;in&nbsp;cn.nukkit.utils.ZlibOriginal
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.utils.ZlibSingleThreadLowMem.html#cn.nukkit.utils.ZlibSingleThreadLowMem.deflate_changed(byte[], int)" class="hiddenlink" target="rightframe">type&nbsp;
+(<code>byte[], int</code>)&nbsp;in&nbsp;cn.nukkit.utils.ZlibSingleThreadLowMem
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.utils.ZlibSingleThreadLowMem.html#cn.nukkit.utils.ZlibSingleThreadLowMem.deflate_changed(byte[][], int)" class="hiddenlink" target="rightframe">type&nbsp;
+(<code>byte[][], int</code>)&nbsp;in&nbsp;cn.nukkit.utils.ZlibSingleThreadLowMem
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.utils.ZlibThreadLocal.html#cn.nukkit.utils.ZlibThreadLocal.deflate_changed(byte[], int)" class="hiddenlink" target="rightframe">type&nbsp;
+(<code>byte[], int</code>)&nbsp;in&nbsp;cn.nukkit.utils.ZlibThreadLocal
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.utils.ZlibThreadLocal.html#cn.nukkit.utils.ZlibThreadLocal.deflate_changed(byte[][], int)" class="hiddenlink" target="rightframe">type&nbsp;
+(<code>byte[][], int</code>)&nbsp;in&nbsp;cn.nukkit.utils.ZlibThreadLocal
+</A></nobr><br>
+<i>deflateRaw</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.network.Network.html#cn.nukkit.network.Network.deflateRaw_removed(byte[], int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>byte[], int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.network.Network
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.network.Network.html#cn.nukkit.network.Network.deflateRaw_removed(byte[][], int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>byte[][], int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.network.Network
+</A></nobr><br>
 <i>diffusesSkyLight</i><br>
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.Block.html#cn.nukkit.block.Block.diffusesSkyLight_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
 ()</b>&nbsp;in&nbsp;cn.nukkit.block.Block
@@ -463,10 +488,42 @@ Method Differences Index
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.dispenser.ProjectileDispenseBehavior.html#cn.nukkit.dispenser.ProjectileDispenseBehavior.dispense_changed(cn.nukkit.block.BlockDispenser, cn.nukkit.math.BlockFace, cn.nukkit.item.Item)" class="hiddenlink" target="rightframe">type&nbsp;
 (<code>BlockDispenser, BlockFace, Item</code>)&nbsp;in&nbsp;cn.nukkit.dispenser.ProjectileDispenseBehavior
 </A></nobr><br>
-<nobr><A HREF="cn.nukkit.level.biome.type.CoveredBiome.html#cn.nukkit.level.biome.type.CoveredBiome.doCover_added(int, int, cn.nukkit.level.format.FullChunk)" class="hiddenlink" target="rightframe"><b>doCover</b>
-(<code>int, int, FullChunk</code>)</A></nobr><br>
+<i>doAttack</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.item.enchantment.Enchantment.html#cn.nukkit.item.enchantment.Enchantment.doAttack_removed(cn.nukkit.entity.Entity, cn.nukkit.entity.Entity)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>Entity, Entity</code>)</strike>&nbsp;in&nbsp;cn.nukkit.item.enchantment.Enchantment
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.item.enchantment.EnchantmentFireAspect.html#cn.nukkit.item.enchantment.EnchantmentFireAspect.doAttack_removed(cn.nukkit.entity.Entity, cn.nukkit.entity.Entity)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>Entity, Entity</code>)</strike>&nbsp;in&nbsp;cn.nukkit.item.enchantment.EnchantmentFireAspect
+</A></nobr><br>
+<nobr><A HREF="cn.nukkit.Player.html#cn.nukkit.Player.doesTriggerPressurePlate_changed()" class="hiddenlink" target="rightframe">doesTriggerPressurePlate
+()</A></nobr><br>
+<i>dot</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.math.Vector3.html#cn.nukkit.math.Vector3.dot_changed(cn.nukkit.math.Vector3)" class="hiddenlink" target="rightframe">type&nbsp;
+(<code>Vector3</code>)&nbsp;in&nbsp;cn.nukkit.math.Vector3
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.math.Vector3f.html#cn.nukkit.math.Vector3f.dot_changed(cn.nukkit.math.Vector3f)" class="hiddenlink" target="rightframe">type&nbsp;
+(<code>Vector3f</code>)&nbsp;in&nbsp;cn.nukkit.math.Vector3f
+</A></nobr><br>
 <nobr><A HREF="cn.nukkit.block.Block.html#cn.nukkit.block.Block.down_added(int, int)" class="hiddenlink" target="rightframe"><b>down</b>
 (<code>int, int</code>)</A></nobr><br>
+<i>dropAndGetItem</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.Player.html#cn.nukkit.Player.dropAndGetItem_removed(cn.nukkit.item.Item)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>Item</code>)</strike>&nbsp;in&nbsp;cn.nukkit.Player
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.Level.html#cn.nukkit.level.Level.dropAndGetItem_removed(cn.nukkit.math.Vector3, cn.nukkit.item.Item)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>Vector3, Item</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.Level
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.Level.html#cn.nukkit.level.Level.dropAndGetItem_removed(cn.nukkit.math.Vector3, cn.nukkit.item.Item, cn.nukkit.math.Vector3)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>Vector3, Item, Vector3</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.Level
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.Level.html#cn.nukkit.level.Level.dropAndGetItem_removed(cn.nukkit.math.Vector3, cn.nukkit.item.Item, cn.nukkit.math.Vector3, boolean, int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>Vector3, Item, Vector3, boolean, int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.Level
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.Level.html#cn.nukkit.level.Level.dropAndGetItem_removed(cn.nukkit.math.Vector3, cn.nukkit.item.Item, cn.nukkit.math.Vector3, int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>Vector3, Item, Vector3, int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.Level
+</A></nobr><br>
+<nobr><A HREF="cn.nukkit.blockentity.BlockEntityItemFrame.html#cn.nukkit.blockentity.BlockEntityItemFrame.dropItem_removed(cn.nukkit.Player)" class="hiddenlink" target="rightframe"><strike>dropItem</strike>
+(<code>Player</code>)</A></nobr><br>
 <A NAME="E"></A>
 <br><font size="+2">E</font>&nbsp;
 <a href="#A"><font size="-2">A</font></a> 
@@ -477,6 +534,7 @@ Method Differences Index
 <a href="#G"><font size="-2">G</font></a> 
 <a href="#H"><font size="-2">H</font></a> 
 <a href="#I"><font size="-2">I</font></a> 
+<a href="#L"><font size="-2">L</font></a> 
 <a href="#M"><font size="-2">M</font></a> 
 <a href="#N"><font size="-2">N</font></a> 
 <a href="#O"><font size="-2">O</font></a> 
@@ -500,6 +558,7 @@ Method Differences Index
 <a href="#G"><font size="-2">G</font></a> 
 <a href="#H"><font size="-2">H</font></a> 
 <a href="#I"><font size="-2">I</font></a> 
+<a href="#L"><font size="-2">L</font></a> 
 <a href="#M"><font size="-2">M</font></a> 
 <a href="#N"><font size="-2">N</font></a> 
 <a href="#O"><font size="-2">O</font></a> 
@@ -518,6 +577,8 @@ Method Differences Index
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.Block.html#cn.nukkit.block.Block.firstInLayers_added(java.util.function.Predicate<cn.nukkit.block.Block>)" class="hiddenlink" target="rightframe">type&nbsp;<b>
 (<code>Predicate&lt;Block&gt;</code>)</b>&nbsp;in&nbsp;cn.nukkit.block.Block
 </A></nobr><br>
+<nobr><A HREF="cn.nukkit.level.Location.html#cn.nukkit.level.Location.fromObject_removed(cn.nukkit.math.Vector3, cn.nukkit.level.Level, double, double, double)" class="hiddenlink" target="rightframe"><strike>fromObject</strike>
+(<code>Vector3, Level, double, double, double</code>)</A></nobr><br>
 <A NAME="G"></A>
 <br><font size="+2">G</font>&nbsp;
 <a href="#A"><font size="-2">A</font></a> 
@@ -528,6 +589,7 @@ Method Differences Index
 <a href="#F"><font size="-2">F</font></a> 
 <a href="#H"><font size="-2">H</font></a> 
 <a href="#I"><font size="-2">I</font></a> 
+<a href="#L"><font size="-2">L</font></a> 
 <a href="#M"><font size="-2">M</font></a> 
 <a href="#N"><font size="-2">N</font></a> 
 <a href="#O"><font size="-2">O</font></a> 
@@ -547,6 +609,8 @@ Method Differences Index
 (<code>int, Integer, Position, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.block.Block
 </A></nobr><br>
 <nobr><A HREF="cn.nukkit.dispenser.ProjectileDispenseBehavior.html#cn.nukkit.dispenser.ProjectileDispenseBehavior.getAccuracy_added()" class="hiddenlink" target="rightframe"><b>getAccuracy</b>
+()</A></nobr><br>
+<nobr><A HREF="cn.nukkit.inventory.transaction.InventoryTransaction.html#cn.nukkit.inventory.transaction.InventoryTransaction.getActionList_removed()" class="hiddenlink" target="rightframe"><strike>getActionList</strike>
 ()</A></nobr><br>
 <i>getAndSetBlock</i><br>
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.format.ChunkSection.html#cn.nukkit.level.format.ChunkSection.getAndSetBlock_added(int, int, int, int, cn.nukkit.block.Block)" class="hiddenlink" target="rightframe">type&nbsp;<b>
@@ -570,6 +634,10 @@ Method Differences Index
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.format.mcregion.Chunk.html#cn.nukkit.level.format.mcregion.Chunk.getAndSetBlock_added(int, int, int, int, cn.nukkit.block.Block)" class="hiddenlink" target="rightframe">type&nbsp;<b>
 (<code>int, int, int, int, Block</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.format.mcregion.Chunk
 </A></nobr><br>
+<nobr><A HREF="cn.nukkit.entity.data.Skin.html#cn.nukkit.entity.data.Skin.getArmSize_removed()" class="hiddenlink" target="rightframe"><strike>getArmSize</strike>
+()</A></nobr><br>
+<nobr><A HREF="cn.nukkit.utils.BinaryStream.html#cn.nukkit.utils.BinaryStream.getArray_removed(java.lang.Class<T>, java.util.function.Function<cn.nukkit.utils.BinaryStream, T>)" class="hiddenlink" target="rightframe"><strike>getArray</strike>
+(<code>Class&lt;T&gt;, Function&lt;BinaryStream, T&gt;</code>)</A></nobr><br>
 <i>getAttacker</i><br>
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.event.vehicle.VehicleDamageEvent.html#cn.nukkit.event.vehicle.VehicleDamageEvent.getAttacker_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
 ()</strike>&nbsp;in&nbsp;cn.nukkit.event.vehicle.VehicleDamageEvent
@@ -577,10 +645,9 @@ Method Differences Index
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.event.vehicle.VehicleDestroyEvent.html#cn.nukkit.event.vehicle.VehicleDestroyEvent.getAttacker_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
 ()</strike>&nbsp;in&nbsp;cn.nukkit.event.vehicle.VehicleDestroyEvent
 </A></nobr><br>
+<nobr><A HREF="cn.nukkit.item.ItemBookWritten.html#cn.nukkit.item.ItemBookWritten.getAuthor_changed()" class="hiddenlink" target="rightframe">getAuthor
+()</A></nobr><br>
 <i>getBlock</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.blockentity.BlockEntityMovingBlock.html#cn.nukkit.blockentity.BlockEntityMovingBlock.getBlock_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.blockentity.BlockEntityMovingBlock
-</A></nobr><br>
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.item.Item.html#cn.nukkit.item.Item.getBlock_added(int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
 (<code>int</code>)</b>&nbsp;in&nbsp;cn.nukkit.item.Item
 </A></nobr><br>
@@ -634,8 +701,8 @@ Method Differences Index
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.format.FullChunk.html#cn.nukkit.level.format.FullChunk.getBlockDataArray_changed()" class="hiddenlink" target="rightframe">type&nbsp;
 ()&nbsp;in&nbsp;cn.nukkit.level.format.FullChunk
 </A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.format.generic.BaseChunk.html#cn.nukkit.level.format.generic.BaseChunk.getBlockDataArray_changed(int)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>int</code>)&nbsp;in&nbsp;cn.nukkit.level.format.generic.BaseChunk
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.format.generic.BaseChunk.html#cn.nukkit.level.format.generic.BaseChunk.getBlockDataArray_added(int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
+(<code>int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.format.generic.BaseChunk
 </A></nobr><br>
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.format.leveldb.Chunk.html#cn.nukkit.level.format.leveldb.Chunk.getBlockDataArray_added(int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
 (<code>int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.format.leveldb.Chunk
@@ -714,8 +781,8 @@ Method Differences Index
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.format.FullChunk.html#cn.nukkit.level.format.FullChunk.getBlockIdArray_changed()" class="hiddenlink" target="rightframe">type&nbsp;
 ()&nbsp;in&nbsp;cn.nukkit.level.format.FullChunk
 </A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.format.generic.BaseChunk.html#cn.nukkit.level.format.generic.BaseChunk.getBlockIdArray_changed(int)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>int</code>)&nbsp;in&nbsp;cn.nukkit.level.format.generic.BaseChunk
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.format.generic.BaseChunk.html#cn.nukkit.level.format.generic.BaseChunk.getBlockIdArray_added(int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
+(<code>int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.format.generic.BaseChunk
 </A></nobr><br>
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.format.leveldb.Chunk.html#cn.nukkit.level.format.leveldb.Chunk.getBlockIdArray_added(int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
 (<code>int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.format.leveldb.Chunk
@@ -750,50 +817,34 @@ Method Differences Index
 ()</A></nobr><br>
 <nobr><A HREF="cn.nukkit.level.format.anvil.util.BlockStorage.html#cn.nukkit.level.format.anvil.util.BlockStorage.getBlockIdsExtra_added()" class="hiddenlink" target="rightframe"><b>getBlockIdsExtra</b>
 ()</A></nobr><br>
+<nobr><A HREF="cn.nukkit.item.Item.html#cn.nukkit.item.Item.getBlockUnsafe_removed()" class="hiddenlink" target="rightframe"><strike>getBlockUnsafe</strike>
+()</A></nobr><br>
 <nobr><A HREF="cn.nukkit.blockentity.BlockEntityFurnace.html#cn.nukkit.blockentity.BlockEntityFurnace.getBurningBlockId_added()" class="hiddenlink" target="rightframe"><b>getBurningBlockId</b>
+()</A></nobr><br>
+<i>getBytes</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.format.ChunkSection.html#cn.nukkit.level.format.ChunkSection.getBytes_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
+()</b>&nbsp;in&nbsp;cn.nukkit.level.format.ChunkSection
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.format.anvil.ChunkSection.html#cn.nukkit.level.format.anvil.ChunkSection.getBytes_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
+()</b>&nbsp;in&nbsp;cn.nukkit.level.format.anvil.ChunkSection
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.format.generic.EmptyChunkSection.html#cn.nukkit.level.format.generic.EmptyChunkSection.getBytes_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
+()</b>&nbsp;in&nbsp;cn.nukkit.level.format.generic.EmptyChunkSection
+</A></nobr><br>
+<nobr><A HREF="cn.nukkit.event.block.AnvilDamageEvent.html#cn.nukkit.event.block.AnvilDamageEvent.getCause_changed()" class="hiddenlink" target="rightframe">getCause
 ()</A></nobr><br>
 <nobr><A HREF="cn.nukkit.level.Level.html#cn.nukkit.level.Level.getCelestialAngle_added(float)" class="hiddenlink" target="rightframe"><b>getCelestialAngle</b>
 (<code>float</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.event.player.PlayerAsyncPreLoginEvent.html#cn.nukkit.event.player.PlayerAsyncPreLoginEvent.getChainData_removed()" class="hiddenlink" target="rightframe"><strike>getChainData</strike>
+()</A></nobr><br>
 <nobr><A HREF="cn.nukkit.blockentity.BlockEntityFurnace.html#cn.nukkit.blockentity.BlockEntityFurnace.getClientName_added()" class="hiddenlink" target="rightframe"><b>getClientName</b>
+()</A></nobr><br>
+<nobr><A HREF="cn.nukkit.Player.html#cn.nukkit.Player.getClosingWindowId_removed()" class="hiddenlink" target="rightframe"><strike>getClosingWindowId</strike>
 ()</A></nobr><br>
 <nobr><A HREF="cn.nukkit.level.Level.html#cn.nukkit.level.Level.getCollisionBlocks_added(cn.nukkit.math.AxisAlignedBB, boolean, boolean)" class="hiddenlink" target="rightframe"><b>getCollisionBlocks</b>
 (<code>AxisAlignedBB, boolean, boolean</code>)</A></nobr><br>
-<nobr><A HREF="cn.nukkit.block.BlockStone.html#cn.nukkit.block.BlockStone.getColor_changed()" class="hiddenlink" target="rightframe">getColor
+<nobr><A HREF="cn.nukkit.inventory.AnvilInventory.html#cn.nukkit.inventory.AnvilInventory.getCost_removed()" class="hiddenlink" target="rightframe"><strike>getCost</strike>
 ()</A></nobr><br>
-<nobr><A HREF="cn.nukkit.block.BlockUndyedShulkerBox.html#cn.nukkit.block.BlockUndyedShulkerBox.getComparatorInputOverride_changed()" class="hiddenlink" target="rightframe">getComparatorInputOverride
-()</A></nobr><br>
-<i>getCoverBlock</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.beach.ColdBeachBiome.html#cn.nukkit.level.biome.impl.beach.ColdBeachBiome.getCoverBlock_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-()</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.beach.ColdBeachBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.mesa.MesaPlateauFBiome.html#cn.nukkit.level.biome.impl.mesa.MesaPlateauFBiome.getCoverBlock_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-()</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.mesa.MesaPlateauFBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.taiga.ColdTaigaBiome.html#cn.nukkit.level.biome.impl.taiga.ColdTaigaBiome.getCoverBlock_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-()</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.taiga.ColdTaigaBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.type.CoveredBiome.html#cn.nukkit.level.biome.type.CoveredBiome.getCoverBlock_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-()</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.type.CoveredBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.type.SnowyBiome.html#cn.nukkit.level.biome.type.SnowyBiome.getCoverBlock_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-()</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.type.SnowyBiome
-</A></nobr><br>
-<i>getCoverId</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.beach.ColdBeachBiome.html#cn.nukkit.level.biome.impl.beach.ColdBeachBiome.getCoverId_added(int, int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>int, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.beach.ColdBeachBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.mesa.MesaPlateauFBiome.html#cn.nukkit.level.biome.impl.mesa.MesaPlateauFBiome.getCoverId_added(int, int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>int, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.mesa.MesaPlateauFBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.taiga.ColdTaigaBiome.html#cn.nukkit.level.biome.impl.taiga.ColdTaigaBiome.getCoverId_added(int, int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>int, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.taiga.ColdTaigaBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.type.CoveredBiome.html#cn.nukkit.level.biome.type.CoveredBiome.getCoverId_added(int, int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>int, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.biome.type.CoveredBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.type.SnowyBiome.html#cn.nukkit.level.biome.type.SnowyBiome.getCoverId_added(int, int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>int, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.biome.type.SnowyBiome
-</A></nobr><br>
 <nobr><A HREF="cn.nukkit.event.vehicle.VehicleDamageEvent.html#cn.nukkit.event.vehicle.VehicleDamageEvent.getDamage_changed()" class="hiddenlink" target="rightframe">getDamage
 ()</A></nobr><br>
 <i>getDataArray</i><br>
@@ -837,6 +888,8 @@ Method Differences Index
 ()</A></nobr><br>
 <nobr><A HREF="cn.nukkit.inventory.AnvilInventory.html#cn.nukkit.inventory.AnvilInventory.getFirstItem_added()" class="hiddenlink" target="rightframe"><b>getFirstItem</b>
 ()</A></nobr><br>
+<nobr><A HREF="cn.nukkit.event.block.BlockFromToEvent.html#cn.nukkit.event.block.BlockFromToEvent.getFrom_removed()" class="hiddenlink" target="rightframe"><strike>getFrom</strike>
+()</A></nobr><br>
 <i>getFullBlock</i><br>
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.Level.html#cn.nukkit.level.Level.getFullBlock_added(int, int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
 (<code>int, int, int, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.Level
@@ -862,78 +915,21 @@ Method Differences Index
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.format.mcregion.Chunk.html#cn.nukkit.level.format.mcregion.Chunk.getFullBlock_added(int, int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
 (<code>int, int, int, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.format.mcregion.Chunk
 </A></nobr><br>
+<nobr><A HREF="cn.nukkit.block.BlockSnowLayer.html#cn.nukkit.block.BlockSnowLayer.getFullId_changed()" class="hiddenlink" target="rightframe">getFullId
+()</A></nobr><br>
 <nobr><A HREF="cn.nukkit.blockentity.BlockEntityFurnace.html#cn.nukkit.blockentity.BlockEntityFurnace.getFurnaceName_added()" class="hiddenlink" target="rightframe"><b>getFurnaceName</b>
 ()</A></nobr><br>
 <nobr><A HREF="cn.nukkit.level.Level.html#cn.nukkit.level.Level.getFuzzySpawnLocation_added()" class="hiddenlink" target="rightframe"><b>getFuzzySpawnLocation</b>
 ()</A></nobr><br>
+<nobr><A HREF="cn.nukkit.item.ItemBookWritten.html#cn.nukkit.item.ItemBookWritten.getGeneration_removed()" class="hiddenlink" target="rightframe"><strike>getGeneration</strike>
+()</A></nobr><br>
+<nobr><A HREF="cn.nukkit.entity.data.Skin.html#cn.nukkit.entity.data.Skin.getGeometryDataEngineVersion_removed()" class="hiddenlink" target="rightframe"><strike>getGeometryDataEngineVersion</strike>
+()</A></nobr><br>
 <nobr><A HREF="cn.nukkit.Server.html#cn.nukkit.Server.getGitCommit_added()" class="hiddenlink" target="rightframe"><b>getGitCommit</b>
 ()</A></nobr><br>
-<i>getGroundBlock</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.extremehills.StoneBeachBiome.html#cn.nukkit.level.biome.impl.extremehills.StoneBeachBiome.getGroundBlock_removed(int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.extremehills.StoneBeachBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.mesa.MesaBiome.html#cn.nukkit.level.biome.impl.mesa.MesaBiome.getGroundBlock_removed(int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.mesa.MesaBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.ocean.OceanBiome.html#cn.nukkit.level.biome.impl.ocean.OceanBiome.getGroundBlock_removed(int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.ocean.OceanBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.type.CoveredBiome.html#cn.nukkit.level.biome.type.CoveredBiome.getGroundBlock_removed(int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.type.CoveredBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.type.GrassyBiome.html#cn.nukkit.level.biome.type.GrassyBiome.getGroundBlock_removed(int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.type.GrassyBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.type.SandyBiome.html#cn.nukkit.level.biome.type.SandyBiome.getGroundBlock_removed(int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.type.SandyBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.type.WateryBiome.html#cn.nukkit.level.biome.type.WateryBiome.getGroundBlock_removed(int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.type.WateryBiome
-</A></nobr><br>
-<i>getGroundDepth</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.extremehills.ExtremeHillsMBiome.html#cn.nukkit.level.biome.impl.extremehills.ExtremeHillsMBiome.getGroundDepth_changed(int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>int, int, int</code>)&nbsp;in&nbsp;cn.nukkit.level.biome.impl.extremehills.ExtremeHillsMBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.extremehills.StoneBeachBiome.html#cn.nukkit.level.biome.impl.extremehills.StoneBeachBiome.getGroundDepth_changed(int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>int, int, int</code>)&nbsp;in&nbsp;cn.nukkit.level.biome.impl.extremehills.StoneBeachBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.mesa.MesaBiome.html#cn.nukkit.level.biome.impl.mesa.MesaBiome.getGroundDepth_changed(int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>int, int, int</code>)&nbsp;in&nbsp;cn.nukkit.level.biome.impl.mesa.MesaBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.type.CoveredBiome.html#cn.nukkit.level.biome.type.CoveredBiome.getGroundDepth_changed(int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>int, int, int</code>)&nbsp;in&nbsp;cn.nukkit.level.biome.type.CoveredBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.type.SandyBiome.html#cn.nukkit.level.biome.type.SandyBiome.getGroundDepth_changed(int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>int, int, int</code>)&nbsp;in&nbsp;cn.nukkit.level.biome.type.SandyBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.type.WateryBiome.html#cn.nukkit.level.biome.type.WateryBiome.getGroundDepth_changed(int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>int, int, int</code>)&nbsp;in&nbsp;cn.nukkit.level.biome.type.WateryBiome
-</A></nobr><br>
-<i>getGroundId</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.extremehills.StoneBeachBiome.html#cn.nukkit.level.biome.impl.extremehills.StoneBeachBiome.getGroundId_added(int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>int, int, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.extremehills.StoneBeachBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.mesa.MesaBiome.html#cn.nukkit.level.biome.impl.mesa.MesaBiome.getGroundId_added(int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>int, int, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.mesa.MesaBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.ocean.OceanBiome.html#cn.nukkit.level.biome.impl.ocean.OceanBiome.getGroundId_added(int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.ocean.OceanBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.type.CoveredBiome.html#cn.nukkit.level.biome.type.CoveredBiome.getGroundId_added(int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>int, int, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.biome.type.CoveredBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.type.GrassyBiome.html#cn.nukkit.level.biome.type.GrassyBiome.getGroundId_added(int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>int, int, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.biome.type.GrassyBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.type.SandyBiome.html#cn.nukkit.level.biome.type.SandyBiome.getGroundId_added(int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>int, int, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.biome.type.SandyBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.type.WateryBiome.html#cn.nukkit.level.biome.type.WateryBiome.getGroundId_added(int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>int, int, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.biome.type.WateryBiome
-</A></nobr><br>
-<nobr><A HREF="cn.nukkit.level.biome.type.CoveredBiome.html#cn.nukkit.level.biome.type.CoveredBiome.getGroundMeta_removed(int)" class="hiddenlink" target="rightframe"><strike>getGroundMeta</strike>
-(<code>int</code>)</A></nobr><br>
-<nobr><A HREF="cn.nukkit.entity.item.EntityPainting.html#cn.nukkit.entity.item.EntityPainting.getHeight_changed()" class="hiddenlink" target="rightframe">getHeight
+<nobr><A HREF="cn.nukkit.entity.passive.EntityBee.html#cn.nukkit.entity.passive.EntityBee.getHasNectar_added()" class="hiddenlink" target="rightframe"><b>getHasNectar</b>
+()</A></nobr><br>
+<nobr><A HREF="cn.nukkit.level.Location.html#cn.nukkit.level.Location.getHeadYaw_removed()" class="hiddenlink" target="rightframe"><strike>getHeadYaw</strike>
 ()</A></nobr><br>
 <nobr><A HREF="cn.nukkit.level.Level.html#cn.nukkit.level.Level.getHighestAdjacentBlockSkyLight_added(int, int, int)" class="hiddenlink" target="rightframe"><b>getHighestAdjacentBlockSkyLight</b>
 (<code>int, int, int</code>)</A></nobr><br>
@@ -959,31 +955,46 @@ Method Differences Index
 </A></nobr><br>
 <nobr><A HREF="cn.nukkit.blockentity.BlockEntityFurnace.html#cn.nukkit.blockentity.BlockEntityFurnace.getIdleBlockId_added()" class="hiddenlink" target="rightframe"><b>getIdleBlockId</b>
 ()</A></nobr><br>
-<i>getInventory</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.item.EntityMinecartChest.html#cn.nukkit.entity.item.EntityMinecartChest.getInventory_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
-()</b>&nbsp;in&nbsp;cn.nukkit.entity.item.EntityMinecartChest
+<i>getIngredientsAggregate</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.CraftingRecipe.html#cn.nukkit.inventory.CraftingRecipe.getIngredientsAggregate_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.inventory.CraftingRecipe
 </A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.item.EntityMinecartHopper.html#cn.nukkit.entity.item.EntityMinecartHopper.getInventory_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
-()</b>&nbsp;in&nbsp;cn.nukkit.entity.item.EntityMinecartHopper
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.ShapedRecipe.html#cn.nukkit.inventory.ShapedRecipe.getIngredientsAggregate_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.inventory.ShapedRecipe
 </A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.ShapelessRecipe.html#cn.nukkit.inventory.ShapelessRecipe.getIngredientsAggregate_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.inventory.ShapelessRecipe
+</A></nobr><br>
+<nobr><A HREF="cn.nukkit.inventory.transaction.CraftingTransaction.html#cn.nukkit.inventory.transaction.CraftingTransaction.getInputList_removed()" class="hiddenlink" target="rightframe"><strike>getInputList</strike>
+()</A></nobr><br>
+<nobr><A HREF="cn.nukkit.inventory.transaction.CraftingTransaction.html#cn.nukkit.inventory.transaction.CraftingTransaction.getInputMap_added()" class="hiddenlink" target="rightframe"><b>getInputMap</b>
+()</A></nobr><br>
+<i>getInputSlot</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.AnvilInventory.html#cn.nukkit.inventory.AnvilInventory.getInputSlot_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.inventory.AnvilInventory
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.EnchantInventory.html#cn.nukkit.inventory.EnchantInventory.getInputSlot_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.inventory.EnchantInventory
+</A></nobr><br>
+<nobr><A HREF="cn.nukkit.math.Vector3f.html#cn.nukkit.math.Vector3f.getIntermediateWithXValue_changed(cn.nukkit.math.Vector3f, float)" class="hiddenlink" target="rightframe">getIntermediateWithXValue
+(<code>Vector3f, float</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.math.Vector3f.html#cn.nukkit.math.Vector3f.getIntermediateWithYValue_changed(cn.nukkit.math.Vector3f, float)" class="hiddenlink" target="rightframe">getIntermediateWithYValue
+(<code>Vector3f, float</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.math.Vector3f.html#cn.nukkit.math.Vector3f.getIntermediateWithZValue_changed(cn.nukkit.math.Vector3f, float)" class="hiddenlink" target="rightframe">getIntermediateWithZValue
+(<code>Vector3f, float</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.blockentity.BlockEntityFurnace.html#cn.nukkit.blockentity.BlockEntityFurnace.getInventoryType_added()" class="hiddenlink" target="rightframe"><b>getInventoryType</b>
 ()</A></nobr><br>
-<i>getItem</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.blockentity.BlockEntityChest.html#cn.nukkit.blockentity.BlockEntityChest.getItem_changed(int)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>int</code>)&nbsp;in&nbsp;cn.nukkit.blockentity.BlockEntityChest
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.AnvilInventory.html#cn.nukkit.inventory.AnvilInventory.getItem_changed(int)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>int</code>)&nbsp;in&nbsp;cn.nukkit.inventory.AnvilInventory
-</A></nobr><br>
 <nobr><A HREF="cn.nukkit.block.Block.html#cn.nukkit.block.Block.getItemId_added()" class="hiddenlink" target="rightframe"><b>getItemId</b>
 ()</A></nobr><br>
+<nobr><A HREF="cn.nukkit.level.GlobalBlockPalette.html#cn.nukkit.level.GlobalBlockPalette.getLegacyFullId_removed(int)" class="hiddenlink" target="rightframe"><strike>getLegacyFullId</strike>
+(<code>int</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.level.GlobalBlockPalette.html#cn.nukkit.level.GlobalBlockPalette.getLegacyId_added(int)" class="hiddenlink" target="rightframe"><b>getLegacyId</b>
 (<code>int</code>)</A></nobr><br>
-<nobr><A HREF="cn.nukkit.entity.item.EntityPainting.html#cn.nukkit.entity.item.EntityPainting.getLength_changed()" class="hiddenlink" target="rightframe">getLength
-()</A></nobr><br>
 <nobr><A HREF="cn.nukkit.level.Position.html#cn.nukkit.level.Position.getLevelBlockAtLayer_added(int)" class="hiddenlink" target="rightframe"><b>getLevelBlockAtLayer</b>
 (<code>int</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.inventory.AnvilInventory.html#cn.nukkit.inventory.AnvilInventory.getLevelCost_added()" class="hiddenlink" target="rightframe"><b>getLevelCost</b>
+()</A></nobr><br>
+<nobr><A HREF="cn.nukkit.inventory.AnvilInventory.html#cn.nukkit.inventory.AnvilInventory.getMaterialSlot_removed()" class="hiddenlink" target="rightframe"><strike>getMaterialSlot</strike>
 ()</A></nobr><br>
 <i>getMaximumLayer</i><br>
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.format.ChunkSection.html#cn.nukkit.level.format.ChunkSection.getMaximumLayer_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
@@ -1009,12 +1020,35 @@ Method Differences Index
 ()</A></nobr><br>
 <nobr><A HREF="cn.nukkit.level.GlobalBlockPalette.html#cn.nukkit.level.GlobalBlockPalette.getName_added(int)" class="hiddenlink" target="rightframe"><b>getName</b>
 (<code>int</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.item.Item.html#cn.nukkit.item.Item.getNetworkId_removed()" class="hiddenlink" target="rightframe"><strike>getNetworkId</strike>
+()</A></nobr><br>
+<nobr><A HREF="cn.nukkit.event.block.AnvilDamageEvent.html#cn.nukkit.event.block.AnvilDamageEvent.getNewDamage_removed()" class="hiddenlink" target="rightframe"><strike>getNewDamage</strike>
+()</A></nobr><br>
 <nobr><A HREF="cn.nukkit.inventory.AnvilInventory.html#cn.nukkit.inventory.AnvilInventory.getNewItemName_added()" class="hiddenlink" target="rightframe"><b>getNewItemName</b>
 ()</A></nobr><br>
 <nobr><A HREF="cn.nukkit.math.AxisAlignedBB.html#cn.nukkit.math.AxisAlignedBB.getOffsetBoundingBox_added(cn.nukkit.math.BlockFace, double, double, double)" class="hiddenlink" target="rightframe"><b>getOffsetBoundingBox</b>
 (<code>BlockFace, double, double, double</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.event.block.AnvilDamageEvent.html#cn.nukkit.event.block.AnvilDamageEvent.getOldDamage_removed()" class="hiddenlink" target="rightframe"><strike>getOldDamage</strike>
+()</A></nobr><br>
 <nobr><A HREF="cn.nukkit.level.format.anvil.ChunkSection.html#cn.nukkit.level.format.anvil.ChunkSection.getOrSetStorage_added(int)" class="hiddenlink" target="rightframe"><b>getOrSetStorage</b>
 (<code>int</code>)</A></nobr><br>
+<i>getOutputSlot</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.AnvilInventory.html#cn.nukkit.inventory.AnvilInventory.getOutputSlot_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.inventory.AnvilInventory
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.EnchantInventory.html#cn.nukkit.inventory.EnchantInventory.getOutputSlot_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.inventory.EnchantInventory
+</A></nobr><br>
+<nobr><A HREF="cn.nukkit.network.Network.html#cn.nukkit.network.Network.getPacket_changed(byte)" class="hiddenlink" target="rightframe">getPacket
+(<code>byte</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.item.ItemBookWritten.html#cn.nukkit.item.ItemBookWritten.getPages_changed()" class="hiddenlink" target="rightframe">getPages
+()</A></nobr><br>
+<nobr><A HREF="cn.nukkit.level.particle.Particle.html#cn.nukkit.level.particle.Particle.getParticleIdByName_removed(java.lang.String)" class="hiddenlink" target="rightframe"><strike>getParticleIdByName</strike>
+(<code>String</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.entity.data.Skin.html#cn.nukkit.entity.data.Skin.getPersonaPieces_removed()" class="hiddenlink" target="rightframe"><strike>getPersonaPieces</strike>
+()</A></nobr><br>
+<nobr><A HREF="cn.nukkit.entity.projectile.EntityThrownTrident.html#cn.nukkit.entity.projectile.EntityThrownTrident.getPickupMode_removed()" class="hiddenlink" target="rightframe"><strike>getPickupMode</strike>
+()</A></nobr><br>
 <i>getPistonHeadBlockId</i><br>
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockPiston.html#cn.nukkit.block.BlockPiston.getPistonHeadBlockId_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
 ()</b>&nbsp;in&nbsp;cn.nukkit.block.BlockPiston
@@ -1025,7 +1059,7 @@ Method Differences Index
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockPistonSticky.html#cn.nukkit.block.BlockPistonSticky.getPistonHeadBlockId_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
 ()</b>&nbsp;in&nbsp;cn.nukkit.block.BlockPistonSticky
 </A></nobr><br>
-<nobr><A HREF="cn.nukkit.event.player.PlayerAsyncPreLoginEvent.html#cn.nukkit.event.player.PlayerAsyncPreLoginEvent.getPlayer_changed()" class="hiddenlink" target="rightframe">getPlayer
+<nobr><A HREF="cn.nukkit.entity.data.Skin.html#cn.nukkit.entity.data.Skin.getPlayFabId_removed()" class="hiddenlink" target="rightframe"><strike>getPlayFabId</strike>
 ()</A></nobr><br>
 <i>getPostId</i><br>
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockSignPost.html#cn.nukkit.block.BlockSignPost.getPostId_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
@@ -1040,9 +1074,24 @@ Method Differences Index
 ()</A></nobr><br>
 <nobr><A HREF="cn.nukkit.level.Level.html#cn.nukkit.level.Level.getRainStrength_added(float)" class="hiddenlink" target="rightframe"><b>getRainStrength</b>
 (<code>float</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.item.enchantment.Enchantment.html#cn.nukkit.item.enchantment.Enchantment.getRarity_removed()" class="hiddenlink" target="rightframe"><strike>getRarity</strike>
+()</A></nobr><br>
+<i>getRawData</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.utils.ClientChainData.html#cn.nukkit.utils.ClientChainData.getRawData_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.utils.ClientChainData
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.utils.LoginChainData.html#cn.nukkit.utils.LoginChainData.getRawData_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.utils.LoginChainData
+</A></nobr><br>
+<nobr><A HREF="cn.nukkit.inventory.EnchantInventory.html#cn.nukkit.inventory.EnchantInventory.getReagentSlot_removed()" class="hiddenlink" target="rightframe"><strike>getReagentSlot</strike>
+()</A></nobr><br>
 <nobr><A HREF="cn.nukkit.inventory.transaction.CraftingTransaction.html#cn.nukkit.inventory.transaction.CraftingTransaction.getRecipe_changed()" class="hiddenlink" target="rightframe">getRecipe
 ()</A></nobr><br>
+<nobr><A HREF="cn.nukkit.item.Item.html#cn.nukkit.item.Item.getRepairCost_removed()" class="hiddenlink" target="rightframe"><strike>getRepairCost</strike>
+()</A></nobr><br>
 <nobr><A HREF="cn.nukkit.inventory.AnvilInventory.html#cn.nukkit.inventory.AnvilInventory.getResult_added()" class="hiddenlink" target="rightframe"><b>getResult</b>
+()</A></nobr><br>
+<nobr><A HREF="cn.nukkit.item.Item.html#cn.nukkit.item.Item.getRuntimeEntry_removed()" class="hiddenlink" target="rightframe"><strike>getRuntimeEntry</strike>
 ()</A></nobr><br>
 <nobr><A HREF="cn.nukkit.inventory.AnvilInventory.html#cn.nukkit.inventory.AnvilInventory.getSecondItem_added()" class="hiddenlink" target="rightframe"><b>getSecondItem</b>
 ()</A></nobr><br>
@@ -1053,22 +1102,12 @@ Method Differences Index
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.Block.html#cn.nukkit.block.Block.getSideAtLayer_added(int, cn.nukkit.math.BlockFace, int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
 (<code>int, BlockFace, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.block.Block
 </A></nobr><br>
-<nobr><A HREF="cn.nukkit.blockentity.BlockEntityChest.html#cn.nukkit.blockentity.BlockEntityChest.getSlotIndex_changed(int)" class="hiddenlink" target="rightframe">getSlotIndex
-(<code>int</code>)</A></nobr><br>
-<i>getSocketAddress</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.Player.html#cn.nukkit.Player.getSocketAddress_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
-()</b>&nbsp;in&nbsp;cn.nukkit.Player
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.event.player.PlayerCreationEvent.html#cn.nukkit.event.player.PlayerCreationEvent.getSocketAddress_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
-()</b>&nbsp;in&nbsp;cn.nukkit.event.player.PlayerCreationEvent
-</A></nobr><br>
-<i>getSpawnCompound</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.blockentity.BlockEntityMovingBlock.html#cn.nukkit.blockentity.BlockEntityMovingBlock.getSpawnCompound_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.blockentity.BlockEntityMovingBlock
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.blockentity.BlockEntitySpawnable.html#cn.nukkit.blockentity.BlockEntitySpawnable.getSpawnCompound_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.blockentity.BlockEntitySpawnable
-</A></nobr><br>
+<nobr><A HREF="cn.nukkit.event.player.PlayerAsyncPreLoginEvent.html#cn.nukkit.event.player.PlayerAsyncPreLoginEvent.getSkin_removed()" class="hiddenlink" target="rightframe"><strike>getSkin</strike>
+()</A></nobr><br>
+<nobr><A HREF="cn.nukkit.entity.data.Skin.html#cn.nukkit.entity.data.Skin.getSkinColor_removed()" class="hiddenlink" target="rightframe"><strike>getSkinColor</strike>
+()</A></nobr><br>
+<nobr><A HREF="cn.nukkit.blockentity.BlockEntitySpawnable.html#cn.nukkit.blockentity.BlockEntitySpawnable.getSpawnCompound_changed()" class="hiddenlink" target="rightframe">getSpawnCompound
+()</A></nobr><br>
 <i>getSpawnPacket</i><br>
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.blockentity.BlockEntitySpawnable.html#cn.nukkit.blockentity.BlockEntitySpawnable.getSpawnPacket_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
 ()</b>&nbsp;in&nbsp;cn.nukkit.blockentity.BlockEntitySpawnable
@@ -1077,8 +1116,6 @@ Method Differences Index
 (<code>CompoundTag</code>)</b>&nbsp;in&nbsp;cn.nukkit.blockentity.BlockEntitySpawnable
 </A></nobr><br>
 <nobr><A HREF="cn.nukkit.blockentity.BlockEntityFurnace.html#cn.nukkit.blockentity.BlockEntityFurnace.getSpeedMultiplier_added()" class="hiddenlink" target="rightframe"><b>getSpeedMultiplier</b>
-()</A></nobr><br>
-<nobr><A HREF="cn.nukkit.level.biome.type.CoveredBiome.html#cn.nukkit.level.biome.type.CoveredBiome.getStoneBlock_removed()" class="hiddenlink" target="rightframe"><strike>getStoneBlock</strike>
 ()</A></nobr><br>
 <nobr><A HREF="cn.nukkit.level.format.anvil.ChunkSection.html#cn.nukkit.level.format.anvil.ChunkSection.getStorageIfExists_added(int)" class="hiddenlink" target="rightframe"><b>getStorageIfExists</b>
 (<code>int</code>)</A></nobr><br>
@@ -1091,117 +1128,20 @@ Method Differences Index
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockWood2.html#cn.nukkit.block.BlockWood2.getStrippedId_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
 ()</b>&nbsp;in&nbsp;cn.nukkit.block.BlockWood2
 </A></nobr><br>
-<i>getSurfaceBlock</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.extremehills.ExtremeHillsMBiome.html#cn.nukkit.level.biome.impl.extremehills.ExtremeHillsMBiome.getSurfaceBlock_removed(int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.extremehills.ExtremeHillsMBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.extremehills.StoneBeachBiome.html#cn.nukkit.level.biome.impl.extremehills.StoneBeachBiome.getSurfaceBlock_removed(int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.extremehills.StoneBeachBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.iceplains.IcePlainsSpikesBiome.html#cn.nukkit.level.biome.impl.iceplains.IcePlainsSpikesBiome.getSurfaceBlock_removed(int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.iceplains.IcePlainsSpikesBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.mesa.MesaBiome.html#cn.nukkit.level.biome.impl.mesa.MesaBiome.getSurfaceBlock_removed(int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.mesa.MesaBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.mushroom.MushroomIslandBiome.html#cn.nukkit.level.biome.impl.mushroom.MushroomIslandBiome.getSurfaceBlock_removed(int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.mushroom.MushroomIslandBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.type.CoveredBiome.html#cn.nukkit.level.biome.type.CoveredBiome.getSurfaceBlock_removed(int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.type.CoveredBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.type.GrassyBiome.html#cn.nukkit.level.biome.type.GrassyBiome.getSurfaceBlock_removed(int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.type.GrassyBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.type.SandyBiome.html#cn.nukkit.level.biome.type.SandyBiome.getSurfaceBlock_removed(int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.type.SandyBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.type.WateryBiome.html#cn.nukkit.level.biome.type.WateryBiome.getSurfaceBlock_removed(int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.type.WateryBiome
-</A></nobr><br>
-<i>getSurfaceDepth</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.extremehills.ExtremeHillsMBiome.html#cn.nukkit.level.biome.impl.extremehills.ExtremeHillsMBiome.getSurfaceDepth_changed(int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>int, int, int</code>)&nbsp;in&nbsp;cn.nukkit.level.biome.impl.extremehills.ExtremeHillsMBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.extremehills.StoneBeachBiome.html#cn.nukkit.level.biome.impl.extremehills.StoneBeachBiome.getSurfaceDepth_changed(int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>int, int, int</code>)&nbsp;in&nbsp;cn.nukkit.level.biome.impl.extremehills.StoneBeachBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.mesa.MesaBiome.html#cn.nukkit.level.biome.impl.mesa.MesaBiome.getSurfaceDepth_changed(int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>int, int, int</code>)&nbsp;in&nbsp;cn.nukkit.level.biome.impl.mesa.MesaBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.type.CoveredBiome.html#cn.nukkit.level.biome.type.CoveredBiome.getSurfaceDepth_changed(int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>int, int, int</code>)&nbsp;in&nbsp;cn.nukkit.level.biome.type.CoveredBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.type.SandyBiome.html#cn.nukkit.level.biome.type.SandyBiome.getSurfaceDepth_changed(int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>int, int, int</code>)&nbsp;in&nbsp;cn.nukkit.level.biome.type.SandyBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.type.WateryBiome.html#cn.nukkit.level.biome.type.WateryBiome.getSurfaceDepth_changed(int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>int, int, int</code>)&nbsp;in&nbsp;cn.nukkit.level.biome.type.WateryBiome
-</A></nobr><br>
-<i>getSurfaceId</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.extremehills.ExtremeHillsMBiome.html#cn.nukkit.level.biome.impl.extremehills.ExtremeHillsMBiome.getSurfaceId_added(int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>int, int, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.extremehills.ExtremeHillsMBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.extremehills.StoneBeachBiome.html#cn.nukkit.level.biome.impl.extremehills.StoneBeachBiome.getSurfaceId_added(int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>int, int, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.extremehills.StoneBeachBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.iceplains.IcePlainsSpikesBiome.html#cn.nukkit.level.biome.impl.iceplains.IcePlainsSpikesBiome.getSurfaceId_added(int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>int, int, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.iceplains.IcePlainsSpikesBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.mesa.MesaBiome.html#cn.nukkit.level.biome.impl.mesa.MesaBiome.getSurfaceId_added(int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>int, int, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.mesa.MesaBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.mushroom.MushroomIslandBiome.html#cn.nukkit.level.biome.impl.mushroom.MushroomIslandBiome.getSurfaceId_added(int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>int, int, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.mushroom.MushroomIslandBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.type.CoveredBiome.html#cn.nukkit.level.biome.type.CoveredBiome.getSurfaceId_added(int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>int, int, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.biome.type.CoveredBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.type.GrassyBiome.html#cn.nukkit.level.biome.type.GrassyBiome.getSurfaceId_added(int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>int, int, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.biome.type.GrassyBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.type.SandyBiome.html#cn.nukkit.level.biome.type.SandyBiome.getSurfaceId_added(int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>int, int, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.biome.type.SandyBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.type.WateryBiome.html#cn.nukkit.level.biome.type.WateryBiome.getSurfaceId_added(int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>int, int, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.biome.type.WateryBiome
-</A></nobr><br>
-<i>getSurfaceMeta</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.mesa.MesaBiome.html#cn.nukkit.level.biome.impl.mesa.MesaBiome.getSurfaceMeta_removed(int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.mesa.MesaBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.type.CoveredBiome.html#cn.nukkit.level.biome.type.CoveredBiome.getSurfaceMeta_removed(int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.type.CoveredBiome
-</A></nobr><br>
 <nobr><A HREF="cn.nukkit.item.ItemPotionLingering.html#cn.nukkit.item.ItemPotionLingering.getThrowForce_added()" class="hiddenlink" target="rightframe"><b>getThrowForce</b>
 ()</A></nobr><br>
 <nobr><A HREF="cn.nukkit.level.Level.html#cn.nukkit.level.Level.getThunderStrength_added(float)" class="hiddenlink" target="rightframe"><b>getThunderStrength</b>
 (<code>float</code>)</A></nobr><br>
-<i>getTokenString</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.network.query.QueryHandler.html#cn.nukkit.network.query.QueryHandler.getTokenString_removed(byte[], java.lang.String)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>byte[], String</code>)</strike>&nbsp;in&nbsp;cn.nukkit.network.query.QueryHandler
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.network.query.QueryHandler.html#cn.nukkit.network.query.QueryHandler.getTokenString_removed(java.lang.String, java.lang.String)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>String, String</code>)</strike>&nbsp;in&nbsp;cn.nukkit.network.query.QueryHandler
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.network.query.QueryHandler.html#cn.nukkit.network.query.QueryHandler.getTokenString_added(byte[], java.net.InetAddress)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>byte[], InetAddress</code>)</b>&nbsp;in&nbsp;cn.nukkit.network.query.QueryHandler
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.network.query.QueryHandler.html#cn.nukkit.network.query.QueryHandler.getTokenString_added(java.lang.String, java.net.InetAddress)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>String, InetAddress</code>)</b>&nbsp;in&nbsp;cn.nukkit.network.query.QueryHandler
-</A></nobr><br>
-<nobr><A HREF="cn.nukkit.block.BlockDaylightDetector.html#cn.nukkit.block.BlockDaylightDetector.getToolType_changed()" class="hiddenlink" target="rightframe">getToolType
+<nobr><A HREF="cn.nukkit.Player.html#cn.nukkit.Player.getTimeSinceRest_removed()" class="hiddenlink" target="rightframe"><strike>getTimeSinceRest</strike>
 ()</A></nobr><br>
-<i>getType</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.BigCraftingGrid.html#cn.nukkit.inventory.BigCraftingGrid.getType_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.inventory.BigCraftingGrid
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.FakeBlockUIComponent.html#cn.nukkit.inventory.FakeBlockUIComponent.getType_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.inventory.FakeBlockUIComponent
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.PlayerCursorInventory.html#cn.nukkit.inventory.PlayerCursorInventory.getType_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.inventory.PlayerCursorInventory
-</A></nobr><br>
+<nobr><A HREF="cn.nukkit.network.protocol.LoginPacket.html#cn.nukkit.network.protocol.LoginPacket.getTint_removed(com.google.gson.JsonObject)" class="hiddenlink" target="rightframe"><strike>getTint</strike>
+(<code>JsonObject</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.entity.data.Skin.html#cn.nukkit.entity.data.Skin.getTintColors_removed()" class="hiddenlink" target="rightframe"><strike>getTintColors</strike>
+()</A></nobr><br>
+<nobr><A HREF="cn.nukkit.item.ItemBookWritten.html#cn.nukkit.item.ItemBookWritten.getTitle_changed()" class="hiddenlink" target="rightframe">getTitle
+()</A></nobr><br>
+<nobr><A HREF="cn.nukkit.event.block.AnvilDamageEvent.html#cn.nukkit.event.block.AnvilDamageEvent.getTransaction_added()" class="hiddenlink" target="rightframe"><b>getTransaction</b>
+()</A></nobr><br>
 <i>getWallId</i><br>
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockSignPost.html#cn.nukkit.block.BlockSignPost.getWallId_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
 ()</b>&nbsp;in&nbsp;cn.nukkit.block.BlockSignPost
@@ -1351,9 +1291,13 @@ Method Differences Index
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockWall.html#cn.nukkit.block.BlockWall.getWaterloggingLevel_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
 ()</b>&nbsp;in&nbsp;cn.nukkit.block.BlockWall
 </A></nobr><br>
-<nobr><A HREF="cn.nukkit.block.BlockDaylightDetector.html#cn.nukkit.block.BlockDaylightDetector.getWeakPower_changed(cn.nukkit.math.BlockFace)" class="hiddenlink" target="rightframe">getWeakPower
-(<code>BlockFace</code>)</A></nobr><br>
-<nobr><A HREF="cn.nukkit.entity.item.EntityPainting.html#cn.nukkit.entity.item.EntityPainting.getWidth_changed()" class="hiddenlink" target="rightframe">getWidth
+<nobr><A HREF="cn.nukkit.event.entity.EntityDamageByEntityEvent.html#cn.nukkit.event.entity.EntityDamageByEntityEvent.getWeaponEnchantments_removed()" class="hiddenlink" target="rightframe"><strike>getWeaponEnchantments</strike>
+()</A></nobr><br>
+<nobr><A HREF="cn.nukkit.item.enchantment.Enchantment.html#cn.nukkit.item.enchantment.Enchantment.getWeight_changed()" class="hiddenlink" target="rightframe">getWeight
+()</A></nobr><br>
+<nobr><A HREF="cn.nukkit.event.player.PlayerAsyncPreLoginEvent.html#cn.nukkit.event.player.PlayerAsyncPreLoginEvent.getXuid_removed()" class="hiddenlink" target="rightframe"><strike>getXuid</strike>
+()</A></nobr><br>
+<nobr><A HREF="cn.nukkit.item.ItemBookWritten.html#cn.nukkit.item.ItemBookWritten.getXUID_removed()" class="hiddenlink" target="rightframe"><strike>getXUID</strike>
 ()</A></nobr><br>
 <nobr><A HREF="cn.nukkit.level.generator.object.ObjectTallGrass.html#cn.nukkit.level.generator.object.ObjectTallGrass.growGrass_added(cn.nukkit.level.ChunkManager, cn.nukkit.math.Vector3, cn.nukkit.math.NukkitRandom, int, int)" class="hiddenlink" target="rightframe"><b>growGrass</b>
 (<code>ChunkManager, Vector3, NukkitRandom, int, int</code>)</A></nobr><br>
@@ -1367,6 +1311,7 @@ Method Differences Index
 <a href="#F"><font size="-2">F</font></a> 
 <a href="#G"><font size="-2">G</font></a> 
 <a href="#I"><font size="-2">I</font></a> 
+<a href="#L"><font size="-2">L</font></a> 
 <a href="#M"><font size="-2">M</font></a> 
 <a href="#N"><font size="-2">N</font></a> 
 <a href="#O"><font size="-2">O</font></a> 
@@ -1378,24 +1323,16 @@ Method Differences Index
 <a href="#W"><font size="-2">W</font></a> 
  <a href="#topheader"><font size="-2">TOP</font></a>
 <br>
-<nobr><A HREF="cn.nukkit.network.query.QueryHandler.html#cn.nukkit.network.query.QueryHandler.handle_changed(java.net.InetSocketAddress, io.netty.buffer.ByteBuf)" class="hiddenlink" target="rightframe">handle
-(<code>InetSocketAddress, ByteBuf</code>)</A></nobr><br>
-<nobr><A HREF="cn.nukkit.network.RakNetInterface.html#cn.nukkit.network.RakNetInterface.handleEncapsulated_removed(java.lang.String, cn.nukkit.raknet.protocol.EncapsulatedPacket, int)" class="hiddenlink" target="rightframe"><strike>handleEncapsulated</strike>
-(<code>String, EncapsulatedPacket, int</code>)</A></nobr><br>
-<nobr><A HREF="cn.nukkit.network.RakNetInterface.html#cn.nukkit.network.RakNetInterface.handleOption_removed(java.lang.String, java.lang.String)" class="hiddenlink" target="rightframe"><strike>handleOption</strike>
-(<code>String, String</code>)</A></nobr><br>
-<nobr><A HREF="cn.nukkit.Server.html#cn.nukkit.Server.handlePacket_changed(java.net.InetSocketAddress, io.netty.buffer.ByteBuf)" class="hiddenlink" target="rightframe">handlePacket
-(<code>InetSocketAddress, ByteBuf</code>)</A></nobr><br>
-<nobr><A HREF="cn.nukkit.network.RakNetInterface.html#cn.nukkit.network.RakNetInterface.handleRaw_removed(java.lang.String, int, byte[])" class="hiddenlink" target="rightframe"><strike>handleRaw</strike>
-(<code>String, int, byte[]</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.level.format.anvil.util.BlockStorage.html#cn.nukkit.level.format.anvil.util.BlockStorage.hasBlockDataExtras_added()" class="hiddenlink" target="rightframe"><b>hasBlockDataExtras</b>
 ()</A></nobr><br>
 <nobr><A HREF="cn.nukkit.level.format.anvil.util.BlockStorage.html#cn.nukkit.level.format.anvil.util.BlockStorage.hasBlockIdExtras_added()" class="hiddenlink" target="rightframe"><b>hasBlockIdExtras</b>
 ()</A></nobr><br>
 <nobr><A HREF="cn.nukkit.level.format.anvil.util.BlockStorage.html#cn.nukkit.level.format.anvil.util.BlockStorage.hasBlockIds_added()" class="hiddenlink" target="rightframe"><b>hasBlockIds</b>
 ()</A></nobr><br>
-<nobr><A HREF="cn.nukkit.block.BlockUndyedShulkerBox.html#cn.nukkit.block.BlockUndyedShulkerBox.hasComparatorInputOverride_changed()" class="hiddenlink" target="rightframe">hasComparatorInputOverride
-()</A></nobr><br>
+<nobr><A HREF="cn.nukkit.item.Item.html#cn.nukkit.item.Item.hasEnchantment_removed(int)" class="hiddenlink" target="rightframe"><strike>hasEnchantment</strike>
+(<code>int</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.network.protocol.MoveEntityDeltaPacket.html#cn.nukkit.network.protocol.MoveEntityDeltaPacket.hasFlag_removed(int)" class="hiddenlink" target="rightframe"><strike>hasFlag</strike>
+(<code>int</code>)</A></nobr><br>
 <i>hashCode</i><br>
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.nbt.tag.ByteArrayTag.html#cn.nukkit.nbt.tag.ByteArrayTag.hashCode_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
 ()</b>&nbsp;in&nbsp;cn.nukkit.nbt.tag.ByteArrayTag
@@ -1428,6 +1365,7 @@ Method Differences Index
 <a href="#F"><font size="-2">F</font></a> 
 <a href="#G"><font size="-2">G</font></a> 
 <a href="#H"><font size="-2">H</font></a> 
+<a href="#L"><font size="-2">L</font></a> 
 <a href="#M"><font size="-2">M</font></a> 
 <a href="#N"><font size="-2">N</font></a> 
 <a href="#O"><font size="-2">O</font></a> 
@@ -1441,15 +1379,23 @@ Method Differences Index
 <br>
 <nobr><A HREF="cn.nukkit.entity.projectile.EntityProjectile.html#cn.nukkit.entity.projectile.EntityProjectile.inaccurate_added(float)" class="hiddenlink" target="rightframe"><b>inaccurate</b>
 (<code>float</code>)</A></nobr><br>
+<i>inflate</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.utils.Zlib.html#cn.nukkit.utils.Zlib.inflate_added(java.io.InputStream)" class="hiddenlink" target="rightframe">type&nbsp;<b>
+(<code>InputStream</code>)</b>&nbsp;in&nbsp;cn.nukkit.utils.Zlib
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.utils.ZlibOriginal.html#cn.nukkit.utils.ZlibOriginal.inflate_changed(java.io.InputStream)" class="hiddenlink" target="rightframe">type&nbsp;
+(<code>InputStream</code>)&nbsp;in&nbsp;cn.nukkit.utils.ZlibOriginal
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.utils.ZlibSingleThreadLowMem.html#cn.nukkit.utils.ZlibSingleThreadLowMem.inflate_changed(java.io.InputStream)" class="hiddenlink" target="rightframe">type&nbsp;
+(<code>InputStream</code>)&nbsp;in&nbsp;cn.nukkit.utils.ZlibSingleThreadLowMem
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.utils.ZlibThreadLocal.html#cn.nukkit.utils.ZlibThreadLocal.inflate_changed(java.io.InputStream)" class="hiddenlink" target="rightframe">type&nbsp;
+(<code>InputStream</code>)&nbsp;in&nbsp;cn.nukkit.utils.ZlibThreadLocal
+</A></nobr><br>
+<nobr><A HREF="cn.nukkit.network.Network.html#cn.nukkit.network.Network.inflateRaw_removed(byte[])" class="hiddenlink" target="rightframe"><strike>inflateRaw</strike>
+(<code>byte[]</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.dispenser.DispenseBehaviorRegister.html#cn.nukkit.dispenser.DispenseBehaviorRegister.init_added()" class="hiddenlink" target="rightframe"><b>init</b>
 ()</A></nobr><br>
-<i>initEntity</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.item.EntityMinecartChest.html#cn.nukkit.entity.item.EntityMinecartChest.initEntity_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.entity.item.EntityMinecartChest
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.item.EntityMinecartHopper.html#cn.nukkit.entity.item.EntityMinecartHopper.initEntity_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.entity.item.EntityMinecartHopper
-</A></nobr><br>
 <i>invertDetect</i><br>
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockDaylightDetector.html#cn.nukkit.block.BlockDaylightDetector.invertDetect_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
 ()</strike>&nbsp;in&nbsp;cn.nukkit.block.BlockDaylightDetector
@@ -1457,10 +1403,41 @@ Method Differences Index
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockDaylightDetectorInverted.html#cn.nukkit.block.BlockDaylightDetectorInverted.invertDetect_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
 ()</strike>&nbsp;in&nbsp;cn.nukkit.block.BlockDaylightDetectorInverted
 </A></nobr><br>
-<nobr><A HREF="cn.nukkit.block.BlockLeaves2.html#cn.nukkit.block.BlockLeaves2.isCheckDecay_changed()" class="hiddenlink" target="rightframe">isCheckDecay
+<nobr><A HREF="cn.nukkit.entity.passive.EntityBee.html#cn.nukkit.entity.passive.EntityBee.isAngry_added()" class="hiddenlink" target="rightframe"><b>isAngry</b>
 ()</A></nobr><br>
-<nobr><A HREF="cn.nukkit.item.enchantment.EnchantmentFrostWalker.html#cn.nukkit.item.enchantment.EnchantmentFrostWalker.isCompatibleWith_changed(cn.nukkit.item.enchantment.Enchantment)" class="hiddenlink" target="rightframe">isCompatibleWith
-(<code>Enchantment</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.level.GameRules.Value.html#cn.nukkit.level.GameRules.Value.isCanBeChanged_removed()" class="hiddenlink" target="rightframe"><strike>isCanBeChanged</strike>
+()</A></nobr><br>
+<nobr><A HREF="cn.nukkit.Player.html#cn.nukkit.Player.isCheckingMovement_removed()" class="hiddenlink" target="rightframe"><strike>isCheckingMovement</strike>
+()</A></nobr><br>
+<i>isCompatibleWith</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.item.enchantment.Enchantment.html#cn.nukkit.item.enchantment.Enchantment.isCompatibleWith_changed(cn.nukkit.item.enchantment.Enchantment)" class="hiddenlink" target="rightframe">type&nbsp;
+(<code>Enchantment</code>)&nbsp;in&nbsp;cn.nukkit.item.enchantment.Enchantment
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.item.enchantment.EnchantmentDurability.html#cn.nukkit.item.enchantment.EnchantmentDurability.isCompatibleWith_changed(cn.nukkit.item.enchantment.Enchantment)" class="hiddenlink" target="rightframe">type&nbsp;
+(<code>Enchantment</code>)&nbsp;in&nbsp;cn.nukkit.item.enchantment.EnchantmentDurability
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.item.enchantment.EnchantmentFrostWalker.html#cn.nukkit.item.enchantment.EnchantmentFrostWalker.isCompatibleWith_changed(cn.nukkit.item.enchantment.Enchantment)" class="hiddenlink" target="rightframe">type&nbsp;
+(<code>Enchantment</code>)&nbsp;in&nbsp;cn.nukkit.item.enchantment.EnchantmentFrostWalker
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.item.enchantment.EnchantmentMending.html#cn.nukkit.item.enchantment.EnchantmentMending.isCompatibleWith_changed(cn.nukkit.item.enchantment.Enchantment)" class="hiddenlink" target="rightframe">type&nbsp;
+(<code>Enchantment</code>)&nbsp;in&nbsp;cn.nukkit.item.enchantment.EnchantmentMending
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.item.enchantment.EnchantmentSilkTouch.html#cn.nukkit.item.enchantment.EnchantmentSilkTouch.isCompatibleWith_changed(cn.nukkit.item.enchantment.Enchantment)" class="hiddenlink" target="rightframe">type&nbsp;
+(<code>Enchantment</code>)&nbsp;in&nbsp;cn.nukkit.item.enchantment.EnchantmentSilkTouch
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.item.enchantment.damage.EnchantmentDamage.html#cn.nukkit.item.enchantment.damage.EnchantmentDamage.isCompatibleWith_changed(cn.nukkit.item.enchantment.Enchantment)" class="hiddenlink" target="rightframe">type&nbsp;
+(<code>Enchantment</code>)&nbsp;in&nbsp;cn.nukkit.item.enchantment.damage.EnchantmentDamage
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.item.enchantment.loot.EnchantmentLoot.html#cn.nukkit.item.enchantment.loot.EnchantmentLoot.isCompatibleWith_changed(cn.nukkit.item.enchantment.Enchantment)" class="hiddenlink" target="rightframe">type&nbsp;
+(<code>Enchantment</code>)&nbsp;in&nbsp;cn.nukkit.item.enchantment.loot.EnchantmentLoot
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.item.enchantment.protection.EnchantmentProtection.html#cn.nukkit.item.enchantment.protection.EnchantmentProtection.isCompatibleWith_changed(cn.nukkit.item.enchantment.Enchantment)" class="hiddenlink" target="rightframe">type&nbsp;
+(<code>Enchantment</code>)&nbsp;in&nbsp;cn.nukkit.item.enchantment.protection.EnchantmentProtection
+</A></nobr><br>
+<nobr><A HREF="cn.nukkit.entity.projectile.EntityThrownTrident.html#cn.nukkit.entity.projectile.EntityThrownTrident.isCritical_added()" class="hiddenlink" target="rightframe"><b>isCritical</b>
+()</A></nobr><br>
+<nobr><A HREF="cn.nukkit.Server.html#cn.nukkit.Server.isIgnoredPacket_removed(java.lang.Class<? extends cn.nukkit.network.protocol.DataPacket>)" class="hiddenlink" target="rightframe"><strike>isIgnoredPacket</strike>
+(<code>Class&lt;DataPacket&gt;</code>)</A></nobr><br>
 <i>isInverted</i><br>
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockDaylightDetector.html#cn.nukkit.block.BlockDaylightDetector.isInverted_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
 ()</b>&nbsp;in&nbsp;cn.nukkit.block.BlockDaylightDetector
@@ -1468,16 +1445,45 @@ Method Differences Index
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockDaylightDetectorInverted.html#cn.nukkit.block.BlockDaylightDetectorInverted.isInverted_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
 ()</b>&nbsp;in&nbsp;cn.nukkit.block.BlockDaylightDetectorInverted
 </A></nobr><br>
-<nobr><A HREF="cn.nukkit.block.BlockLeaves2.html#cn.nukkit.block.BlockLeaves2.isPersistent_changed()" class="hiddenlink" target="rightframe">isPersistent
-()</A></nobr><br>
-<nobr><A HREF="cn.nukkit.block.BlockDaylightDetector.html#cn.nukkit.block.BlockDaylightDetector.isPowerSource_changed()" class="hiddenlink" target="rightframe">isPowerSource
+<nobr><A HREF="cn.nukkit.entity.data.Skin.html#cn.nukkit.entity.data.Skin.isPrimaryUser_removed()" class="hiddenlink" target="rightframe"><strike>isPrimaryUser</strike>
 ()</A></nobr><br>
 <nobr><A HREF="cn.nukkit.Server.html#cn.nukkit.Server.isRedstoneEnabled_added()" class="hiddenlink" target="rightframe"><b>isRedstoneEnabled</b>
 ()</A></nobr><br>
-<nobr><A HREF="cn.nukkit.block.BlockPistonHead.html#cn.nukkit.block.BlockPistonHead.isSolid_changed()" class="hiddenlink" target="rightframe">isSolid
-()</A></nobr><br>
 <nobr><A HREF="cn.nukkit.entity.Entity.html#cn.nukkit.entity.Entity.isTouchingWater_added()" class="hiddenlink" target="rightframe"><b>isTouchingWater</b>
 ()</A></nobr><br>
+<nobr><A HREF="cn.nukkit.entity.data.Skin.html#cn.nukkit.entity.data.Skin.isTrusted_removed()" class="hiddenlink" target="rightframe"><strike>isTrusted</strike>
+()</A></nobr><br>
+<A NAME="L"></A>
+<br><font size="+2">L</font>&nbsp;
+<a href="#A"><font size="-2">A</font></a> 
+<a href="#B"><font size="-2">B</font></a> 
+<a href="#C"><font size="-2">C</font></a> 
+<a href="#D"><font size="-2">D</font></a> 
+<a href="#E"><font size="-2">E</font></a> 
+<a href="#F"><font size="-2">F</font></a> 
+<a href="#G"><font size="-2">G</font></a> 
+<a href="#H"><font size="-2">H</font></a> 
+<a href="#I"><font size="-2">I</font></a> 
+<a href="#M"><font size="-2">M</font></a> 
+<a href="#N"><font size="-2">N</font></a> 
+<a href="#O"><font size="-2">O</font></a> 
+<a href="#P"><font size="-2">P</font></a> 
+<a href="#R"><font size="-2">R</font></a> 
+<a href="#S"><font size="-2">S</font></a> 
+<a href="#T"><font size="-2">T</font></a> 
+<a href="#U"><font size="-2">U</font></a> 
+<a href="#W"><font size="-2">W</font></a> 
+ <a href="#topheader"><font size="-2">TOP</font></a>
+<br>
+<nobr><A HREF="cn.nukkit.entity.passive.EntityBee.html#cn.nukkit.entity.passive.EntityBee.leftBeehive_added(cn.nukkit.blockentity.BlockEntityBeehive)" class="hiddenlink" target="rightframe"><b>leftBeehive</b>
+(<code>BlockEntityBeehive</code>)</A></nobr><br>
+<i>length</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.math.Vector3.html#cn.nukkit.math.Vector3.length_changed()" class="hiddenlink" target="rightframe">type&nbsp;
+()&nbsp;in&nbsp;cn.nukkit.math.Vector3
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.math.Vector3f.html#cn.nukkit.math.Vector3f.length_changed()" class="hiddenlink" target="rightframe">type&nbsp;
+()&nbsp;in&nbsp;cn.nukkit.math.Vector3f
+</A></nobr><br>
 <A NAME="M"></A>
 <br><font size="+2">M</font>&nbsp;
 <a href="#A"><font size="-2">A</font></a> 
@@ -1489,6 +1495,7 @@ Method Differences Index
 <a href="#G"><font size="-2">G</font></a> 
 <a href="#H"><font size="-2">H</font></a> 
 <a href="#I"><font size="-2">I</font></a> 
+<a href="#L"><font size="-2">L</font></a> 
 <a href="#N"><font size="-2">N</font></a> 
 <a href="#O"><font size="-2">O</font></a> 
 <a href="#P"><font size="-2">P</font></a> 
@@ -1505,19 +1512,45 @@ Method Differences Index
 (<code>Item</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.inventory.CraftingManager.html#cn.nukkit.inventory.CraftingManager.matchCartographyRecipe_added(cn.nukkit.item.Item[][], cn.nukkit.item.Item, cn.nukkit.item.Item[][])" class="hiddenlink" target="rightframe"><b>matchCartographyRecipe</b>
 (<code>Item[][], Item, Item[][]</code>)</A></nobr><br>
-<nobr><A HREF="cn.nukkit.blockentity.BlockEntityFurnace.html#cn.nukkit.blockentity.BlockEntityFurnace.matchRecipe_added(cn.nukkit.item.Item)" class="hiddenlink" target="rightframe"><b>matchRecipe</b>
-(<code>Item</code>)</A></nobr><br>
+<i>matchItems</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.CraftingRecipe.html#cn.nukkit.inventory.CraftingRecipe.matchItems_removed(java.util.List<cn.nukkit.item.Item>, java.util.List<cn.nukkit.item.Item>)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>List&lt;Item&gt;, List&lt;Item&gt;</code>)</strike>&nbsp;in&nbsp;cn.nukkit.inventory.CraftingRecipe
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.CraftingRecipe.html#cn.nukkit.inventory.CraftingRecipe.matchItems_removed(java.util.List<cn.nukkit.item.Item>, java.util.List<cn.nukkit.item.Item>, int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>List&lt;Item&gt;, List&lt;Item&gt;, int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.inventory.CraftingRecipe
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.CraftingRecipe.html#cn.nukkit.inventory.CraftingRecipe.matchItems_added(cn.nukkit.item.Item[][], cn.nukkit.item.Item[][])" class="hiddenlink" target="rightframe">type&nbsp;<b>
+(<code>Item[][], Item[][]</code>)</b>&nbsp;in&nbsp;cn.nukkit.inventory.CraftingRecipe
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.ShapedRecipe.html#cn.nukkit.inventory.ShapedRecipe.matchItems_removed(java.util.List<cn.nukkit.item.Item>, java.util.List<cn.nukkit.item.Item>)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>List&lt;Item&gt;, List&lt;Item&gt;</code>)</strike>&nbsp;in&nbsp;cn.nukkit.inventory.ShapedRecipe
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.ShapedRecipe.html#cn.nukkit.inventory.ShapedRecipe.matchItems_removed(java.util.List<cn.nukkit.item.Item>, java.util.List<cn.nukkit.item.Item>, int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>List&lt;Item&gt;, List&lt;Item&gt;, int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.inventory.ShapedRecipe
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.ShapedRecipe.html#cn.nukkit.inventory.ShapedRecipe.matchItems_added(cn.nukkit.item.Item[][], cn.nukkit.item.Item[][])" class="hiddenlink" target="rightframe">type&nbsp;<b>
+(<code>Item[][], Item[][]</code>)</b>&nbsp;in&nbsp;cn.nukkit.inventory.ShapedRecipe
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.ShapelessRecipe.html#cn.nukkit.inventory.ShapelessRecipe.matchItems_removed(java.util.List<cn.nukkit.item.Item>, java.util.List<cn.nukkit.item.Item>)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>List&lt;Item&gt;, List&lt;Item&gt;</code>)</strike>&nbsp;in&nbsp;cn.nukkit.inventory.ShapelessRecipe
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.ShapelessRecipe.html#cn.nukkit.inventory.ShapelessRecipe.matchItems_removed(java.util.List<cn.nukkit.item.Item>, java.util.List<cn.nukkit.item.Item>, int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>List&lt;Item&gt;, List&lt;Item&gt;, int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.inventory.ShapelessRecipe
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.ShapelessRecipe.html#cn.nukkit.inventory.ShapelessRecipe.matchItems_added(cn.nukkit.item.Item[][], cn.nukkit.item.Item[][])" class="hiddenlink" target="rightframe">type&nbsp;<b>
+(<code>Item[][], Item[][]</code>)</b>&nbsp;in&nbsp;cn.nukkit.inventory.ShapelessRecipe
+</A></nobr><br>
+<i>matchRecipe</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.blockentity.BlockEntityFurnace.html#cn.nukkit.blockentity.BlockEntityFurnace.matchRecipe_added(cn.nukkit.item.Item)" class="hiddenlink" target="rightframe">type&nbsp;<b>
+(<code>Item</code>)</b>&nbsp;in&nbsp;cn.nukkit.blockentity.BlockEntityFurnace
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.CraftingManager.html#cn.nukkit.inventory.CraftingManager.matchRecipe_changed(cn.nukkit.item.Item[][], cn.nukkit.item.Item, cn.nukkit.item.Item[][])" class="hiddenlink" target="rightframe">type&nbsp;
+(<code>Item[][], Item, Item[][]</code>)&nbsp;in&nbsp;cn.nukkit.inventory.CraftingManager
+</A></nobr><br>
 <nobr><A HREF="cn.nukkit.inventory.CraftingManager.html#cn.nukkit.inventory.CraftingManager.matchSmokerRecipe_added(cn.nukkit.item.Item)" class="hiddenlink" target="rightframe"><b>matchSmokerRecipe</b>
 (<code>Item</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.inventory.CraftingManager.html#cn.nukkit.inventory.CraftingManager.matchStonecutterRecipe_added(cn.nukkit.item.Item)" class="hiddenlink" target="rightframe"><b>matchStonecutterRecipe</b>
 (<code>Item</code>)</A></nobr><br>
-<i>mountEntity</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.item.EntityMinecartChest.html#cn.nukkit.entity.item.EntityMinecartChest.mountEntity_changed(cn.nukkit.entity.Entity, byte)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>Entity, byte</code>)&nbsp;in&nbsp;cn.nukkit.entity.item.EntityMinecartChest
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.item.EntityMinecartHopper.html#cn.nukkit.entity.item.EntityMinecartHopper.mountEntity_changed(cn.nukkit.entity.Entity, byte)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>Entity, byte</code>)&nbsp;in&nbsp;cn.nukkit.entity.item.EntityMinecartHopper
-</A></nobr><br>
 <nobr><A HREF="cn.nukkit.blockentity.BlockEntityPistonArm.html#cn.nukkit.blockentity.BlockEntityPistonArm.move_added(boolean, java.util.List<cn.nukkit.math.BlockVector3>)" class="hiddenlink" target="rightframe"><b>move</b>
 (<code>boolean, List&lt;BlockVector3&gt;</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.blockentity.BlockEntityMovingBlock.html#cn.nukkit.blockentity.BlockEntityMovingBlock.moveCollidedEntities_added(cn.nukkit.blockentity.BlockEntityPistonArm, cn.nukkit.math.BlockFace)" class="hiddenlink" target="rightframe"><b>moveCollidedEntities</b>
@@ -1533,6 +1566,7 @@ Method Differences Index
 <a href="#G"><font size="-2">G</font></a> 
 <a href="#H"><font size="-2">H</font></a> 
 <a href="#I"><font size="-2">I</font></a> 
+<a href="#L"><font size="-2">L</font></a> 
 <a href="#M"><font size="-2">M</font></a> 
 <a href="#O"><font size="-2">O</font></a> 
 <a href="#P"><font size="-2">P</font></a> 
@@ -1543,15 +1577,63 @@ Method Differences Index
 <a href="#W"><font size="-2">W</font></a> 
  <a href="#topheader"><font size="-2">TOP</font></a>
 <br>
+<nobr><A HREF="cn.nukkit.entity.passive.EntityBee.html#cn.nukkit.entity.passive.EntityBee.nectarDelivered_added(cn.nukkit.blockentity.BlockEntityBeehive)" class="hiddenlink" target="rightframe"><b>nectarDelivered</b>
+(<code>BlockEntityBeehive</code>)</A></nobr><br>
+<i>newEnum</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.command.data.CommandParameter.html#cn.nukkit.command.data.CommandParameter.newEnum_removed(java.lang.String, boolean, cn.nukkit.command.data.CommandEnum)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>String, boolean, CommandEnum</code>)</strike>&nbsp;in&nbsp;cn.nukkit.command.data.CommandParameter
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.command.data.CommandParameter.html#cn.nukkit.command.data.CommandParameter.newEnum_removed(java.lang.String, boolean, java.lang.String)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>String, boolean, String</code>)</strike>&nbsp;in&nbsp;cn.nukkit.command.data.CommandParameter
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.command.data.CommandParameter.html#cn.nukkit.command.data.CommandParameter.newEnum_removed(java.lang.String, boolean, java.lang.String[])" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>String, boolean, String[]</code>)</strike>&nbsp;in&nbsp;cn.nukkit.command.data.CommandParameter
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.command.data.CommandParameter.html#cn.nukkit.command.data.CommandParameter.newEnum_removed(java.lang.String, cn.nukkit.command.data.CommandEnum)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>String, CommandEnum</code>)</strike>&nbsp;in&nbsp;cn.nukkit.command.data.CommandParameter
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.command.data.CommandParameter.html#cn.nukkit.command.data.CommandParameter.newEnum_removed(java.lang.String, java.lang.String)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>String, String</code>)</strike>&nbsp;in&nbsp;cn.nukkit.command.data.CommandParameter
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.command.data.CommandParameter.html#cn.nukkit.command.data.CommandParameter.newEnum_removed(java.lang.String, java.lang.String[])" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>String, String[]</code>)</strike>&nbsp;in&nbsp;cn.nukkit.command.data.CommandParameter
+</A></nobr><br>
+<i>newPostfix</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.command.data.CommandParameter.html#cn.nukkit.command.data.CommandParameter.newPostfix_removed(java.lang.String, boolean, java.lang.String)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>String, boolean, String</code>)</strike>&nbsp;in&nbsp;cn.nukkit.command.data.CommandParameter
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.command.data.CommandParameter.html#cn.nukkit.command.data.CommandParameter.newPostfix_removed(java.lang.String, java.lang.String)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>String, String</code>)</strike>&nbsp;in&nbsp;cn.nukkit.command.data.CommandParameter
+</A></nobr><br>
+<i>newType</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.command.data.CommandParameter.html#cn.nukkit.command.data.CommandParameter.newType_removed(java.lang.String, boolean, cn.nukkit.command.data.CommandParamType)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>String, boolean, CommandParamType</code>)</strike>&nbsp;in&nbsp;cn.nukkit.command.data.CommandParameter
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.command.data.CommandParameter.html#cn.nukkit.command.data.CommandParameter.newType_removed(java.lang.String, cn.nukkit.command.data.CommandParamType)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>String, CommandParamType</code>)</strike>&nbsp;in&nbsp;cn.nukkit.command.data.CommandParameter
+</A></nobr><br>
+<i>noDamageOnAttack</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.item.ItemCarrotOnAStick.html#cn.nukkit.item.ItemCarrotOnAStick.noDamageOnAttack_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.item.ItemCarrotOnAStick
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.item.ItemFishingRod.html#cn.nukkit.item.ItemFishingRod.noDamageOnAttack_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.item.ItemFishingRod
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.item.ItemTool.html#cn.nukkit.item.ItemTool.noDamageOnAttack_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.item.ItemTool
+</A></nobr><br>
+<i>noDamageOnBreak</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.item.ItemCarrotOnAStick.html#cn.nukkit.item.ItemCarrotOnAStick.noDamageOnBreak_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.item.ItemCarrotOnAStick
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.item.ItemFishingRod.html#cn.nukkit.item.ItemFishingRod.noDamageOnBreak_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.item.ItemFishingRod
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.item.ItemTool.html#cn.nukkit.item.ItemTool.noDamageOnBreak_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.item.ItemTool
+</A></nobr><br>
 <nobr><A HREF="cn.nukkit.block.Block.html#cn.nukkit.block.Block.north_added(int, int)" class="hiddenlink" target="rightframe"><b>north</b>
 (<code>int, int</code>)</A></nobr><br>
-<i>notifyACK</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.Player.html#cn.nukkit.Player.notifyACK_removed(int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.Player
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.network.RakNetInterface.html#cn.nukkit.network.RakNetInterface.notifyACK_removed(java.lang.String, int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>String, int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.network.RakNetInterface
-</A></nobr><br>
 <A NAME="O"></A>
 <br><font size="+2">O</font>&nbsp;
 <a href="#A"><font size="-2">A</font></a> 
@@ -1563,6 +1645,7 @@ Method Differences Index
 <a href="#G"><font size="-2">G</font></a> 
 <a href="#H"><font size="-2">H</font></a> 
 <a href="#I"><font size="-2">I</font></a> 
+<a href="#L"><font size="-2">L</font></a> 
 <a href="#M"><font size="-2">M</font></a> 
 <a href="#N"><font size="-2">N</font></a> 
 <a href="#P"><font size="-2">P</font></a> 
@@ -1573,32 +1656,8 @@ Method Differences Index
 <a href="#W"><font size="-2">W</font></a> 
  <a href="#topheader"><font size="-2">TOP</font></a>
 <br>
-<i>onActivate</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockDaylightDetector.html#cn.nukkit.block.BlockDaylightDetector.onActivate_added(cn.nukkit.item.Item, cn.nukkit.Player)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>Item, Player</code>)</b>&nbsp;in&nbsp;cn.nukkit.block.BlockDaylightDetector
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockDaylightDetectorInverted.html#cn.nukkit.block.BlockDaylightDetectorInverted.onActivate_added(cn.nukkit.item.Item, cn.nukkit.Player)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>Item, Player</code>)</b>&nbsp;in&nbsp;cn.nukkit.block.BlockDaylightDetectorInverted
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockDispenser.html#cn.nukkit.block.BlockDispenser.onActivate_added(cn.nukkit.item.Item, cn.nukkit.Player)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>Item, Player</code>)</b>&nbsp;in&nbsp;cn.nukkit.block.BlockDispenser
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockGrass.html#cn.nukkit.block.BlockGrass.onActivate_added(cn.nukkit.item.Item)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>Item</code>)</b>&nbsp;in&nbsp;cn.nukkit.block.BlockGrass
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockWood.html#cn.nukkit.block.BlockWood.onActivate_added(cn.nukkit.item.Item, cn.nukkit.Player)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>Item, Player</code>)</b>&nbsp;in&nbsp;cn.nukkit.block.BlockWood
-</A></nobr><br>
-<i>onBreak</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockDaylightDetector.html#cn.nukkit.block.BlockDaylightDetector.onBreak_changed(cn.nukkit.item.Item)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>Item</code>)&nbsp;in&nbsp;cn.nukkit.block.BlockDaylightDetector
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.blockentity.BlockEntity.html#cn.nukkit.blockentity.BlockEntity.onBreak_added(boolean)" class="hiddenlink" target="rightframe">type&nbsp;<b>
-(<code>boolean</code>)</b>&nbsp;in&nbsp;cn.nukkit.blockentity.BlockEntity
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.blockentity.BlockEntityChest.html#cn.nukkit.blockentity.BlockEntityChest.onBreak_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-()</strike>&nbsp;in&nbsp;cn.nukkit.blockentity.BlockEntityChest
-</A></nobr><br>
+<nobr><A HREF="cn.nukkit.blockentity.BlockEntity.html#cn.nukkit.blockentity.BlockEntity.onBreak_added(boolean)" class="hiddenlink" target="rightframe"><b>onBreak</b>
+(<code>boolean</code>)</A></nobr><br>
 <i>onCollideWithBlock</i><br>
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.projectile.EntityArrow.html#cn.nukkit.entity.projectile.EntityArrow.onCollideWithBlock_added(cn.nukkit.block.Block)" class="hiddenlink" target="rightframe">type&nbsp;<b>
 (<code>Block</code>)</b>&nbsp;in&nbsp;cn.nukkit.entity.projectile.EntityArrow
@@ -1609,8 +1668,8 @@ Method Differences Index
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.projectile.EntityProjectile.html#cn.nukkit.entity.projectile.EntityProjectile.onCollideWithBlock_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
 ()</b>&nbsp;in&nbsp;cn.nukkit.entity.projectile.EntityProjectile
 </A></nobr><br>
-<nobr><A HREF="cn.nukkit.network.RakNetInterface.html#cn.nukkit.network.RakNetInterface.onConnectionRequest_added(java.net.InetSocketAddress)" class="hiddenlink" target="rightframe"><b>onConnectionRequest</b>
-(<code>InetSocketAddress</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.entity.item.EntityBoat.html#cn.nukkit.entity.item.EntityBoat.onInput_removed(double, double, double, double)" class="hiddenlink" target="rightframe"><strike>onInput</strike>
+(<code>double, double, double, double</code>)</A></nobr><br>
 <i>onPushByPiston</i><br>
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.Entity.html#cn.nukkit.entity.Entity.onPushByPiston_added(cn.nukkit.blockentity.BlockEntityPistonArm)" class="hiddenlink" target="rightframe">type&nbsp;<b>
 (<code>BlockEntityPistonArm</code>)</b>&nbsp;in&nbsp;cn.nukkit.entity.Entity
@@ -1618,38 +1677,8 @@ Method Differences Index
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.item.EntityPainting.html#cn.nukkit.entity.item.EntityPainting.onPushByPiston_added(cn.nukkit.blockentity.BlockEntityPistonArm)" class="hiddenlink" target="rightframe">type&nbsp;<b>
 (<code>BlockEntityPistonArm</code>)</b>&nbsp;in&nbsp;cn.nukkit.entity.item.EntityPainting
 </A></nobr><br>
-<nobr><A HREF="cn.nukkit.network.RakNetInterface.html#cn.nukkit.network.RakNetInterface.onQuery_added(java.net.InetSocketAddress)" class="hiddenlink" target="rightframe"><b>onQuery</b>
-(<code>InetSocketAddress</code>)</A></nobr><br>
-<nobr><A HREF="cn.nukkit.inventory.AnvilInventory.html#cn.nukkit.inventory.AnvilInventory.onRename_removed(cn.nukkit.Player, cn.nukkit.item.Item)" class="hiddenlink" target="rightframe"><strike>onRename</strike>
-(<code>Player, Item</code>)</A></nobr><br>
-<nobr><A HREF="cn.nukkit.network.RakNetInterface.html#cn.nukkit.network.RakNetInterface.onSessionCreation_added(com.nukkitx.network.raknet.RakNetServerSession)" class="hiddenlink" target="rightframe"><b>onSessionCreation</b>
-(<code>RakNetServerSession</code>)</A></nobr><br>
-<i>onSlotChange</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.AnvilInventory.html#cn.nukkit.inventory.AnvilInventory.onSlotChange_changed(int, cn.nukkit.item.Item, boolean)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>int, Item, boolean</code>)&nbsp;in&nbsp;cn.nukkit.inventory.AnvilInventory
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.PlayerUIInventory.html#cn.nukkit.inventory.PlayerUIInventory.onSlotChange_changed(int, cn.nukkit.item.Item, boolean)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>int, Item, boolean</code>)&nbsp;in&nbsp;cn.nukkit.inventory.PlayerUIInventory
-</A></nobr><br>
 <nobr><A HREF="cn.nukkit.inventory.PlayerUIInventory.html#cn.nukkit.inventory.PlayerUIInventory.onSlotChangeBase_added(int, cn.nukkit.item.Item, boolean)" class="hiddenlink" target="rightframe"><b>onSlotChangeBase</b>
 (<code>int, Item, boolean</code>)</A></nobr><br>
-<nobr><A HREF="cn.nukkit.network.RakNetInterface.html#cn.nukkit.network.RakNetInterface.onUnhandledDatagram_added(io.netty.channel.ChannelHandlerContext, io.netty.channel.socket.DatagramPacket)" class="hiddenlink" target="rightframe"><b>onUnhandledDatagram</b>
-(<code>ChannelHandlerContext, DatagramPacket</code>)</A></nobr><br>
-<i>onUpdate</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockDispenser.html#cn.nukkit.block.BlockDispenser.onUpdate_changed(int)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>int</code>)&nbsp;in&nbsp;cn.nukkit.block.BlockDispenser
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockMagma.html#cn.nukkit.block.BlockMagma.onUpdate_changed(int)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>int</code>)&nbsp;in&nbsp;cn.nukkit.block.BlockMagma
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockSoulSand.html#cn.nukkit.block.BlockSoulSand.onUpdate_changed(int)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>int</code>)&nbsp;in&nbsp;cn.nukkit.block.BlockSoulSand
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.blockentity.BlockEntityPistonArm.html#cn.nukkit.blockentity.BlockEntityPistonArm.onUpdate_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.blockentity.BlockEntityPistonArm
-</A></nobr><br>
-<nobr><A HREF="cn.nukkit.network.RakNetInterface.html#cn.nukkit.network.RakNetInterface.openSession_removed(java.lang.String, java.lang.String, int, long)" class="hiddenlink" target="rightframe"><strike>openSession</strike>
-(<code>String, String, int, long</code>)</A></nobr><br>
 <A NAME="P"></A>
 <br><font size="+2">P</font>&nbsp;
 <a href="#A"><font size="-2">A</font></a> 
@@ -1661,6 +1690,7 @@ Method Differences Index
 <a href="#G"><font size="-2">G</font></a> 
 <a href="#H"><font size="-2">H</font></a> 
 <a href="#I"><font size="-2">I</font></a> 
+<a href="#L"><font size="-2">L</font></a> 
 <a href="#M"><font size="-2">M</font></a> 
 <a href="#N"><font size="-2">N</font></a> 
 <a href="#O"><font size="-2">O</font></a> 
@@ -1673,23 +1703,12 @@ Method Differences Index
 <br>
 <nobr><A HREF="cn.nukkit.command.Command.html#cn.nukkit.command.Command.parseTilde_added(java.lang.String, double)" class="hiddenlink" target="rightframe"><b>parseTilde</b>
 (<code>String, double</code>)</A></nobr><br>
-<i>place</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockDaylightDetector.html#cn.nukkit.block.BlockDaylightDetector.place_changed(cn.nukkit.item.Item, cn.nukkit.block.Block, cn.nukkit.block.Block, cn.nukkit.math.BlockFace, double, double, double, cn.nukkit.Player)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>Item, Block, Block, BlockFace, double, double, double, Player</code>)&nbsp;in&nbsp;cn.nukkit.block.BlockDaylightDetector
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockDispenser.html#cn.nukkit.block.BlockDispenser.place_changed(cn.nukkit.item.Item, cn.nukkit.block.Block, cn.nukkit.block.Block, cn.nukkit.math.BlockFace, double, double, double, cn.nukkit.Player)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>Item, Block, Block, BlockFace, double, double, double, Player</code>)&nbsp;in&nbsp;cn.nukkit.block.BlockDispenser
-</A></nobr><br>
-<i>preCover</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.extremehills.ExtremeHillsMBiome.html#cn.nukkit.level.biome.impl.extremehills.ExtremeHillsMBiome.preCover_removed(int, int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>int, int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.extremehills.ExtremeHillsMBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.impl.mesa.MesaBiome.html#cn.nukkit.level.biome.impl.mesa.MesaBiome.preCover_removed(int, int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>int, int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.impl.mesa.MesaBiome
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.biome.type.CoveredBiome.html#cn.nukkit.level.biome.type.CoveredBiome.preCover_removed(int, int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
-(<code>int, int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.biome.type.CoveredBiome
-</A></nobr><br>
+<nobr><A HREF="cn.nukkit.level.particle.Particle.html#cn.nukkit.level.particle.Particle.particleExists_removed(java.lang.String)" class="hiddenlink" target="rightframe"><strike>particleExists</strike>
+(<code>String</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.network.Network.html#cn.nukkit.network.Network.processBatch_removed(byte[], java.util.Collection<cn.nukkit.network.protocol.DataPacket>)" class="hiddenlink" target="rightframe"><strike>processBatch</strike>
+(<code>byte[], Collection&lt;DataPacket&gt;</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.utils.BinaryStream.html#cn.nukkit.utils.BinaryStream.putSlot_removed(cn.nukkit.item.Item, boolean)" class="hiddenlink" target="rightframe"><strike>putSlot</strike>
+(<code>Item, boolean</code>)</A></nobr><br>
 <A NAME="R"></A>
 <br><font size="+2">R</font>&nbsp;
 <a href="#A"><font size="-2">A</font></a> 
@@ -1701,6 +1720,7 @@ Method Differences Index
 <a href="#G"><font size="-2">G</font></a> 
 <a href="#H"><font size="-2">H</font></a> 
 <a href="#I"><font size="-2">I</font></a> 
+<a href="#L"><font size="-2">L</font></a> 
 <a href="#M"><font size="-2">M</font></a> 
 <a href="#N"><font size="-2">N</font></a> 
 <a href="#O"><font size="-2">O</font></a> 
@@ -1711,8 +1731,6 @@ Method Differences Index
 <a href="#W"><font size="-2">W</font></a> 
  <a href="#topheader"><font size="-2">TOP</font></a>
 <br>
-<nobr><A HREF="cn.nukkit.block.BlockRedstoneDiode.html#cn.nukkit.block.BlockRedstoneDiode.recalculateBoundingBox_changed()" class="hiddenlink" target="rightframe">recalculateBoundingBox
-()</A></nobr><br>
 <i>recalculateHeightMapColumn</i><br>
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.format.FullChunk.html#cn.nukkit.level.format.FullChunk.recalculateHeightMapColumn_added(int, int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
 (<code>int, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.format.FullChunk
@@ -1728,6 +1746,8 @@ Method Differences Index
 (<code>CampfireRecipe</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.inventory.CraftingManager.html#cn.nukkit.inventory.CraftingManager.registerCartographyRecipe_added(cn.nukkit.inventory.CartographyRecipe)" class="hiddenlink" target="rightframe"><b>registerCartographyRecipe</b>
 (<code>CartographyRecipe</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.inventory.CraftingManager.html#cn.nukkit.inventory.CraftingManager.registerMultiRecipe_removed(cn.nukkit.inventory.MultiRecipe)" class="hiddenlink" target="rightframe"><strike>registerMultiRecipe</strike>
+(<code>MultiRecipe</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.inventory.CraftingManager.html#cn.nukkit.inventory.CraftingManager.registerSmokerRecipe_added(cn.nukkit.inventory.SmokerRecipe)" class="hiddenlink" target="rightframe"><b>registerSmokerRecipe</b>
 (<code>SmokerRecipe</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.inventory.CraftingManager.html#cn.nukkit.inventory.CraftingManager.registerStonecutterRecipe_added(cn.nukkit.inventory.StonecutterRecipe)" class="hiddenlink" target="rightframe"><b>registerStonecutterRecipe</b>
@@ -1739,6 +1759,10 @@ Method Differences Index
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.Inventory.html#cn.nukkit.inventory.Inventory.removeListener_added(cn.nukkit.inventory.InventoryListener)" class="hiddenlink" target="rightframe">type&nbsp;<b>
 (<code>InventoryListener</code>)</b>&nbsp;in&nbsp;cn.nukkit.inventory.Inventory
 </A></nobr><br>
+<nobr><A HREF="cn.nukkit.Server.html#cn.nukkit.Server.removePlayerListData_removed(java.util.UUID, cn.nukkit.Player)" class="hiddenlink" target="rightframe"><strike>removePlayerListData</strike>
+(<code>UUID, Player</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.Player.html#cn.nukkit.Player.removeWindow_removed(cn.nukkit.inventory.Inventory, boolean)" class="hiddenlink" target="rightframe"><strike>removeWindow</strike>
+(<code>Inventory, boolean</code>)</A></nobr><br>
 <A NAME="S"></A>
 <br><font size="+2">S</font>&nbsp;
 <a href="#A"><font size="-2">A</font></a> 
@@ -1750,6 +1774,7 @@ Method Differences Index
 <a href="#G"><font size="-2">G</font></a> 
 <a href="#H"><font size="-2">H</font></a> 
 <a href="#I"><font size="-2">I</font></a> 
+<a href="#L"><font size="-2">L</font></a> 
 <a href="#M"><font size="-2">M</font></a> 
 <a href="#N"><font size="-2">N</font></a> 
 <a href="#O"><font size="-2">O</font></a> 
@@ -1760,25 +1785,19 @@ Method Differences Index
 <a href="#W"><font size="-2">W</font></a> 
  <a href="#topheader"><font size="-2">TOP</font></a>
 <br>
-<i>saveNBT</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.blockentity.BlockEntityChest.html#cn.nukkit.blockentity.BlockEntityChest.saveNBT_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.blockentity.BlockEntityChest
+<nobr><A HREF="cn.nukkit.Player.html#cn.nukkit.Player.sendMovementSpeed_removed(float)" class="hiddenlink" target="rightframe"><strike>sendMovementSpeed</strike>
+(<code>float</code>)</A></nobr><br>
+<i>setAngry</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.passive.EntityBee.html#cn.nukkit.entity.passive.EntityBee.setAngry_added(boolean)" class="hiddenlink" target="rightframe">type&nbsp;<b>
+(<code>boolean</code>)</b>&nbsp;in&nbsp;cn.nukkit.entity.passive.EntityBee
 </A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.item.EntityMinecartChest.html#cn.nukkit.entity.item.EntityMinecartChest.saveNBT_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.entity.item.EntityMinecartChest
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.passive.EntityBee.html#cn.nukkit.entity.passive.EntityBee.setAngry_added(cn.nukkit.Player)" class="hiddenlink" target="rightframe">type&nbsp;<b>
+(<code>Player</code>)</b>&nbsp;in&nbsp;cn.nukkit.entity.passive.EntityBee
 </A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.item.EntityMinecartHopper.html#cn.nukkit.entity.item.EntityMinecartHopper.saveNBT_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.entity.item.EntityMinecartHopper
-</A></nobr><br>
-<nobr><A HREF="cn.nukkit.network.Network.html#cn.nukkit.network.Network.sendPacket_changed(java.net.InetSocketAddress, io.netty.buffer.ByteBuf)" class="hiddenlink" target="rightframe">sendPacket
-(<code>InetSocketAddress, ByteBuf</code>)</A></nobr><br>
-<i>sendRawPacket</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.network.AdvancedSourceInterface.html#cn.nukkit.network.AdvancedSourceInterface.sendRawPacket_changed(java.net.InetSocketAddress, io.netty.buffer.ByteBuf)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>InetSocketAddress, ByteBuf</code>)&nbsp;in&nbsp;cn.nukkit.network.AdvancedSourceInterface
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.network.RakNetInterface.html#cn.nukkit.network.RakNetInterface.sendRawPacket_changed(java.net.InetSocketAddress, io.netty.buffer.ByteBuf)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>InetSocketAddress, ByteBuf</code>)&nbsp;in&nbsp;cn.nukkit.network.RakNetInterface
-</A></nobr><br>
+<nobr><A HREF="cn.nukkit.entity.data.Skin.html#cn.nukkit.entity.data.Skin.setArmSize_removed(java.lang.String)" class="hiddenlink" target="rightframe"><strike>setArmSize</strike>
+(<code>String</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.item.ItemBookWritten.html#cn.nukkit.item.ItemBookWritten.setAuthor_removed(java.lang.String)" class="hiddenlink" target="rightframe"><strike>setAuthor</strike>
+(<code>String</code>)</A></nobr><br>
 <i>setBlock</i><br>
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.Level.html#cn.nukkit.level.Level.setBlock_added(cn.nukkit.math.Vector3, int, cn.nukkit.block.Block)" class="hiddenlink" target="rightframe">type&nbsp;<b>
 (<code>Vector3, int, Block</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.Level
@@ -1940,12 +1959,23 @@ Method Differences Index
 (<code>int</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.blockentity.BlockEntityFurnace.html#cn.nukkit.blockentity.BlockEntityFurnace.setBurning_added(boolean)" class="hiddenlink" target="rightframe"><b>setBurning</b>
 (<code>boolean</code>)</A></nobr><br>
-<nobr><A HREF="cn.nukkit.block.BlockLeaves2.html#cn.nukkit.block.BlockLeaves2.setCheckDecay_changed(boolean)" class="hiddenlink" target="rightframe">setCheckDecay
+<nobr><A HREF="cn.nukkit.level.GameRules.Value.html#cn.nukkit.level.GameRules.Value.setCanBeChanged_removed(boolean)" class="hiddenlink" target="rightframe"><strike>setCanBeChanged</strike>
 (<code>boolean</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.inventory.AnvilInventory.html#cn.nukkit.inventory.AnvilInventory.setCost_removed(int)" class="hiddenlink" target="rightframe"><strike>setCost</strike>
+(<code>int</code>)</A></nobr><br>
+<i>setCritical</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.projectile.EntityThrownTrident.html#cn.nukkit.entity.projectile.EntityThrownTrident.setCritical_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
+()</b>&nbsp;in&nbsp;cn.nukkit.entity.projectile.EntityThrownTrident
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.projectile.EntityThrownTrident.html#cn.nukkit.entity.projectile.EntityThrownTrident.setCritical_added(boolean)" class="hiddenlink" target="rightframe">type&nbsp;<b>
+(<code>boolean</code>)</b>&nbsp;in&nbsp;cn.nukkit.entity.projectile.EntityThrownTrident
+</A></nobr><br>
 <nobr><A HREF="cn.nukkit.event.vehicle.VehicleDamageEvent.html#cn.nukkit.event.vehicle.VehicleDamageEvent.setDamage_changed(double)" class="hiddenlink" target="rightframe">setDamage
 (<code>double</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.Player.html#cn.nukkit.Player.setExperience_added(int, int, boolean)" class="hiddenlink" target="rightframe"><b>setExperience</b>
 (<code>int, int, boolean</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.inventory.transaction.CraftingTransaction.html#cn.nukkit.inventory.transaction.CraftingTransaction.setExtraOutput_changed(int, cn.nukkit.item.Item)" class="hiddenlink" target="rightframe">setExtraOutput
+(<code>int, Item</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.block.BlockCauldron.html#cn.nukkit.block.BlockCauldron.setFillLevel_added(int)" class="hiddenlink" target="rightframe"><b>setFillLevel</b>
 (<code>int</code>)</A></nobr><br>
 <i>setFirstItem</i><br>
@@ -1971,31 +2001,40 @@ Method Differences Index
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.format.generic.EmptyChunkSection.html#cn.nukkit.level.format.generic.EmptyChunkSection.setFullBlockId_added(int, int, int, int, int)" class="hiddenlink" target="rightframe">type&nbsp;<b>
 (<code>int, int, int, int, int</code>)</b>&nbsp;in&nbsp;cn.nukkit.level.format.generic.EmptyChunkSection
 </A></nobr><br>
+<nobr><A HREF="cn.nukkit.item.ItemBookWritten.html#cn.nukkit.item.ItemBookWritten.setGeneration_removed(int)" class="hiddenlink" target="rightframe"><strike>setGeneration</strike>
+(<code>int</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.entity.data.Skin.html#cn.nukkit.entity.data.Skin.setGeometryDataEngineVersion_removed(java.lang.String)" class="hiddenlink" target="rightframe"><strike>setGeometryDataEngineVersion</strike>
+(<code>String</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.entity.passive.EntityBee.html#cn.nukkit.entity.passive.EntityBee.setHasNectar_added(boolean)" class="hiddenlink" target="rightframe"><b>setHasNectar</b>
+(<code>boolean</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.entity.passive.EntityTurtle.html#cn.nukkit.entity.passive.EntityTurtle.setHomePos_added(cn.nukkit.math.Vector3)" class="hiddenlink" target="rightframe"><b>setHomePos</b>
 (<code>Vector3</code>)</A></nobr><br>
-<i>setItem</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.blockentity.BlockEntityChest.html#cn.nukkit.blockentity.BlockEntityChest.setItem_changed(int, cn.nukkit.item.Item)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>int, Item</code>)&nbsp;in&nbsp;cn.nukkit.blockentity.BlockEntityChest
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.AnvilInventory.html#cn.nukkit.inventory.AnvilInventory.setItem_changed(int, cn.nukkit.item.Item, boolean)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>int, Item, boolean</code>)&nbsp;in&nbsp;cn.nukkit.inventory.AnvilInventory
-</A></nobr><br>
+<nobr><A HREF="cn.nukkit.inventory.transaction.CraftingTransaction.html#cn.nukkit.inventory.transaction.CraftingTransaction.setInput_changed(int, cn.nukkit.item.Item)" class="hiddenlink" target="rightframe">setInput
+(<code>int, Item</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.inventory.AnvilInventory.html#cn.nukkit.inventory.AnvilInventory.setLevelCost_added(int)" class="hiddenlink" target="rightframe"><b>setLevelCost</b>
+(<code>int</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.entity.item.EntityMinecartAbstract.html#cn.nukkit.entity.item.EntityMinecartAbstract.setName_added(java.lang.String)" class="hiddenlink" target="rightframe"><b>setName</b>
+(<code>String</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.event.block.AnvilDamageEvent.html#cn.nukkit.event.block.AnvilDamageEvent.setNewDamage_removed(int)" class="hiddenlink" target="rightframe"><strike>setNewDamage</strike>
 (<code>int</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.inventory.AnvilInventory.html#cn.nukkit.inventory.AnvilInventory.setNewItemName_added(java.lang.String)" class="hiddenlink" target="rightframe"><b>setNewItemName</b>
 (<code>String</code>)</A></nobr><br>
-<nobr><A HREF="cn.nukkit.level.generator.populator.impl.PopulatorOre.html#cn.nukkit.level.generator.populator.impl.PopulatorOre.setOreTypes_removed(cn.nukkit.level.generator.object.ore.OreType[])" class="hiddenlink" target="rightframe"><strike>setOreTypes</strike>
-(<code>OreType[]</code>)</A></nobr><br>
-<nobr><A HREF="cn.nukkit.block.BlockLeaves2.html#cn.nukkit.block.BlockLeaves2.setPersistent_changed(boolean)" class="hiddenlink" target="rightframe">setPersistent
-(<code>boolean</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.entity.projectile.EntityThrownTrident.html#cn.nukkit.entity.projectile.EntityThrownTrident.setPickupMode_removed(int)" class="hiddenlink" target="rightframe"><strike>setPickupMode</strike>
+(<code>int</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.level.Location.html#cn.nukkit.level.Location.setPitch_added(double)" class="hiddenlink" target="rightframe"><b>setPitch</b>
 (<code>double</code>)</A></nobr><br>
-<nobr><A HREF="cn.nukkit.network.RakNetInterface.html#cn.nukkit.network.RakNetInterface.setPortCheck_removed(boolean)" class="hiddenlink" target="rightframe"><strike>setPortCheck</strike>
-(<code>boolean</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.entity.data.Skin.html#cn.nukkit.entity.data.Skin.setPlayFabId_removed(java.lang.String)" class="hiddenlink" target="rightframe"><strike>setPlayFabId</strike>
+(<code>String</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.entity.Entity.html#cn.nukkit.entity.Entity.setPositionAndRotation_removed(cn.nukkit.math.Vector3, double, double, double)" class="hiddenlink" target="rightframe"><strike>setPositionAndRotation</strike>
+(<code>Vector3, double, double, double</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.blockentity.BlockEntityCauldron.html#cn.nukkit.blockentity.BlockEntityCauldron.setPotionType_added(int)" class="hiddenlink" target="rightframe"><b>setPotionType</b>
 (<code>int</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.entity.data.Skin.html#cn.nukkit.entity.data.Skin.setPrimaryUser_removed(boolean)" class="hiddenlink" target="rightframe"><strike>setPrimaryUser</strike>
+(<code>boolean</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.Server.html#cn.nukkit.Server.setRedstoneEnabled_added(boolean)" class="hiddenlink" target="rightframe"><b>setRedstoneEnabled</b>
 (<code>boolean</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.item.Item.html#cn.nukkit.item.Item.setRepairCost_removed(int)" class="hiddenlink" target="rightframe"><strike>setRepairCost</strike>
+(<code>int</code>)</A></nobr><br>
 <i>setResult</i><br>
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.AnvilInventory.html#cn.nukkit.inventory.AnvilInventory.setResult_added(cn.nukkit.item.Item)" class="hiddenlink" target="rightframe">type&nbsp;<b>
 (<code>Item</code>)</b>&nbsp;in&nbsp;cn.nukkit.inventory.AnvilInventory
@@ -2003,6 +2042,8 @@ Method Differences Index
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.AnvilInventory.html#cn.nukkit.inventory.AnvilInventory.setResult_added(cn.nukkit.item.Item, boolean)" class="hiddenlink" target="rightframe">type&nbsp;<b>
 (<code>Item, boolean</code>)</b>&nbsp;in&nbsp;cn.nukkit.inventory.AnvilInventory
 </A></nobr><br>
+<nobr><A HREF="cn.nukkit.entity.Entity.html#cn.nukkit.entity.Entity.setRotation_removed(double, double, double)" class="hiddenlink" target="rightframe"><strike>setRotation</strike>
+(<code>double, double, double</code>)</A></nobr><br>
 <i>setSecondItem</i><br>
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.AnvilInventory.html#cn.nukkit.inventory.AnvilInventory.setSecondItem_added(cn.nukkit.item.Item)" class="hiddenlink" target="rightframe">type&nbsp;<b>
 (<code>Item</code>)</b>&nbsp;in&nbsp;cn.nukkit.inventory.AnvilInventory
@@ -2010,14 +2051,66 @@ Method Differences Index
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.AnvilInventory.html#cn.nukkit.inventory.AnvilInventory.setSecondItem_added(cn.nukkit.item.Item, boolean)" class="hiddenlink" target="rightframe">type&nbsp;<b>
 (<code>Item, boolean</code>)</b>&nbsp;in&nbsp;cn.nukkit.inventory.AnvilInventory
 </A></nobr><br>
+<nobr><A HREF="cn.nukkit.event.player.PlayerAsyncPreLoginEvent.html#cn.nukkit.event.player.PlayerAsyncPreLoginEvent.setSkin_removed(cn.nukkit.entity.data.Skin)" class="hiddenlink" target="rightframe"><strike>setSkin</strike>
+(<code>Skin</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.entity.data.Skin.html#cn.nukkit.entity.data.Skin.setSkinColor_removed(java.lang.String)" class="hiddenlink" target="rightframe"><strike>setSkinColor</strike>
+(<code>String</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.blockentity.BlockEntityCauldron.html#cn.nukkit.blockentity.BlockEntityCauldron.setSplashPotion_changed(boolean)" class="hiddenlink" target="rightframe">setSplashPotion
 (<code>boolean</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.entity.item.EntityFishingHook.html#cn.nukkit.entity.item.EntityFishingHook.setTarget_removed(long)" class="hiddenlink" target="rightframe"><strike>setTarget</strike>
+(<code>long</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.Player.html#cn.nukkit.Player.setTimeSinceRest_removed(int)" class="hiddenlink" target="rightframe"><strike>setTimeSinceRest</strike>
+(<code>int</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.item.ItemBookWritten.html#cn.nukkit.item.ItemBookWritten.setTitle_removed(java.lang.String)" class="hiddenlink" target="rightframe"><strike>setTitle</strike>
+(<code>String</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.event.block.BlockFromToEvent.html#cn.nukkit.event.block.BlockFromToEvent.setTo_removed(cn.nukkit.block.Block)" class="hiddenlink" target="rightframe"><strike>setTo</strike>
+(<code>Block</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.entity.data.Skin.html#cn.nukkit.entity.data.Skin.setTrusted_removed(boolean)" class="hiddenlink" target="rightframe"><strike>setTrusted</strike>
+(<code>boolean</code>)</A></nobr><br>
+<i>setX</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.math.BlockVector3.html#cn.nukkit.math.BlockVector3.setX_removed(int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.math.BlockVector3
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.math.Vector3.html#cn.nukkit.math.Vector3.setX_removed(double)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>double</code>)</strike>&nbsp;in&nbsp;cn.nukkit.math.Vector3
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.math.Vector3f.html#cn.nukkit.math.Vector3f.setX_removed(float)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>float</code>)</strike>&nbsp;in&nbsp;cn.nukkit.math.Vector3f
+</A></nobr><br>
+<nobr><A HREF="cn.nukkit.item.ItemBookWritten.html#cn.nukkit.item.ItemBookWritten.setXUID_removed(java.lang.String)" class="hiddenlink" target="rightframe"><strike>setXUID</strike>
+(<code>String</code>)</A></nobr><br>
+<i>setY</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.math.BlockVector3.html#cn.nukkit.math.BlockVector3.setY_removed(int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.math.BlockVector3
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.math.Vector3.html#cn.nukkit.math.Vector3.setY_removed(double)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>double</code>)</strike>&nbsp;in&nbsp;cn.nukkit.math.Vector3
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.math.Vector3f.html#cn.nukkit.math.Vector3f.setY_removed(float)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>float</code>)</strike>&nbsp;in&nbsp;cn.nukkit.math.Vector3f
+</A></nobr><br>
 <nobr><A HREF="cn.nukkit.level.Location.html#cn.nukkit.level.Location.setYaw_added(double)" class="hiddenlink" target="rightframe"><b>setYaw</b>
 (<code>double</code>)</A></nobr><br>
+<i>setZ</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.math.BlockVector3.html#cn.nukkit.math.BlockVector3.setZ_removed(int)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>int</code>)</strike>&nbsp;in&nbsp;cn.nukkit.math.BlockVector3
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.math.Vector3.html#cn.nukkit.math.Vector3.setZ_removed(double)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>double</code>)</strike>&nbsp;in&nbsp;cn.nukkit.math.Vector3
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.math.Vector3f.html#cn.nukkit.math.Vector3f.setZ_removed(float)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>float</code>)</strike>&nbsp;in&nbsp;cn.nukkit.math.Vector3f
+</A></nobr><br>
+<nobr><A HREF="cn.nukkit.item.ItemBookWritten.html#cn.nukkit.item.ItemBookWritten.signBook_removed(java.lang.String, java.lang.String, java.lang.String, int)" class="hiddenlink" target="rightframe"><strike>signBook</strike>
+(<code>String, String, String, int</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.block.Block.html#cn.nukkit.block.Block.south_added(int, int)" class="hiddenlink" target="rightframe"><b>south</b>
 (<code>int, int</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.entity.item.EntityPotion.html#cn.nukkit.entity.item.EntityPotion.splash_added(cn.nukkit.entity.Entity)" class="hiddenlink" target="rightframe"><b>splash</b>
 (<code>Entity</code>)</A></nobr><br>
+<nobr><A HREF="cn.nukkit.inventory.transaction.InventoryTransaction.html#cn.nukkit.inventory.transaction.InventoryTransaction.squashDuplicateSlotChanges_added()" class="hiddenlink" target="rightframe"><b>squashDuplicateSlotChanges</b>
+()</A></nobr><br>
+<nobr><A HREF="cn.nukkit.Player.html#cn.nukkit.Player.startFishing_changed(cn.nukkit.item.Item)" class="hiddenlink" target="rightframe">startFishing
+(<code>Item</code>)</A></nobr><br>
 <i>sticksToPiston</i><br>
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.Block.html#cn.nukkit.block.Block.sticksToPiston_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
 ()</b>&nbsp;in&nbsp;cn.nukkit.block.Block
@@ -2073,6 +2166,8 @@ Method Differences Index
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockVine.html#cn.nukkit.block.BlockVine.sticksToPiston_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
 ()</b>&nbsp;in&nbsp;cn.nukkit.block.BlockVine
 </A></nobr><br>
+<nobr><A HREF="cn.nukkit.Player.html#cn.nukkit.Player.stopFishing_changed(boolean)" class="hiddenlink" target="rightframe">stopFishing
+(<code>boolean</code>)</A></nobr><br>
 <A NAME="T"></A>
 <br><font size="+2">T</font>&nbsp;
 <a href="#A"><font size="-2">A</font></a> 
@@ -2084,6 +2179,7 @@ Method Differences Index
 <a href="#G"><font size="-2">G</font></a> 
 <a href="#H"><font size="-2">H</font></a> 
 <a href="#I"><font size="-2">I</font></a> 
+<a href="#L"><font size="-2">L</font></a> 
 <a href="#M"><font size="-2">M</font></a> 
 <a href="#N"><font size="-2">N</font></a> 
 <a href="#O"><font size="-2">O</font></a> 
@@ -2094,13 +2190,8 @@ Method Differences Index
 <a href="#W"><font size="-2">W</font></a> 
  <a href="#topheader"><font size="-2">TOP</font></a>
 <br>
-<i>toItem</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockLeaves2.html#cn.nukkit.block.BlockLeaves2.toItem_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.block.BlockLeaves2
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.block.BlockWood2.html#cn.nukkit.block.BlockWood2.toItem_changed()" class="hiddenlink" target="rightframe">type&nbsp;
-()&nbsp;in&nbsp;cn.nukkit.block.BlockWood2
-</A></nobr><br>
+<nobr><A HREF="cn.nukkit.utils.Utils.html#cn.nukkit.utils.Utils.toABGR_removed(int)" class="hiddenlink" target="rightframe"><strike>toABGR</strike>
+(<code>int</code>)</A></nobr><br>
 <i>toNBT</i><br>
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.format.ChunkSection.html#cn.nukkit.level.format.ChunkSection.toNBT_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
 ()</b>&nbsp;in&nbsp;cn.nukkit.level.format.ChunkSection
@@ -2112,12 +2203,44 @@ Method Differences Index
 ()</b>&nbsp;in&nbsp;cn.nukkit.level.format.generic.EmptyChunkSection
 </A></nobr><br>
 <i>toString</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.Attribute.html#cn.nukkit.entity.Attribute.toString_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.entity.Attribute
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.data.ByteEntityData.html#cn.nukkit.entity.data.ByteEntityData.toString_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.entity.data.ByteEntityData
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.data.EntityMetadata.html#cn.nukkit.entity.data.EntityMetadata.toString_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.entity.data.EntityMetadata
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.data.FloatEntityData.html#cn.nukkit.entity.data.FloatEntityData.toString_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.entity.data.FloatEntityData
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.data.IntEntityData.html#cn.nukkit.entity.data.IntEntityData.toString_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.entity.data.IntEntityData
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.data.IntPositionEntityData.html#cn.nukkit.entity.data.IntPositionEntityData.toString_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.entity.data.IntPositionEntityData
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.data.LongEntityData.html#cn.nukkit.entity.data.LongEntityData.toString_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.entity.data.LongEntityData
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.data.NBTEntityData.html#cn.nukkit.entity.data.NBTEntityData.toString_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.entity.data.NBTEntityData
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.data.ShortEntityData.html#cn.nukkit.entity.data.ShortEntityData.toString_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.entity.data.ShortEntityData
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.entity.data.Vector3fEntityData.html#cn.nukkit.entity.data.Vector3fEntityData.toString_removed()" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+()</strike>&nbsp;in&nbsp;cn.nukkit.entity.data.Vector3fEntityData
+</A></nobr><br>
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.inventory.transaction.data.UseItemOnEntityData.html#cn.nukkit.inventory.transaction.data.UseItemOnEntityData.toString_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
 ()</b>&nbsp;in&nbsp;cn.nukkit.inventory.transaction.data.UseItemOnEntityData
 </A></nobr><br>
 &nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.MovingObjectPosition.html#cn.nukkit.level.MovingObjectPosition.toString_added()" class="hiddenlink" target="rightframe">type&nbsp;<b>
 ()</b>&nbsp;in&nbsp;cn.nukkit.level.MovingObjectPosition
 </A></nobr><br>
+<nobr><A HREF="cn.nukkit.network.protocol.DataPacket.html#cn.nukkit.network.protocol.DataPacket.tryEncode_removed()" class="hiddenlink" target="rightframe"><strike>tryEncode</strike>
+()</A></nobr><br>
 <A NAME="U"></A>
 <br><font size="+2">U</font>&nbsp;
 <a href="#A"><font size="-2">A</font></a> 
@@ -2129,6 +2252,7 @@ Method Differences Index
 <a href="#G"><font size="-2">G</font></a> 
 <a href="#H"><font size="-2">H</font></a> 
 <a href="#I"><font size="-2">I</font></a> 
+<a href="#L"><font size="-2">L</font></a> 
 <a href="#M"><font size="-2">M</font></a> 
 <a href="#N"><font size="-2">N</font></a> 
 <a href="#O"><font size="-2">O</font></a> 
@@ -2139,16 +2263,6 @@ Method Differences Index
 <a href="#W"><font size="-2">W</font></a> 
  <a href="#topheader"><font size="-2">TOP</font></a>
 <br>
-<i>unblockAddress</i><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.network.AdvancedSourceInterface.html#cn.nukkit.network.AdvancedSourceInterface.unblockAddress_changed(java.net.InetAddress)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>InetAddress</code>)&nbsp;in&nbsp;cn.nukkit.network.AdvancedSourceInterface
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.network.Network.html#cn.nukkit.network.Network.unblockAddress_changed(java.net.InetAddress)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>InetAddress</code>)&nbsp;in&nbsp;cn.nukkit.network.Network
-</A></nobr><br>
-&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.network.RakNetInterface.html#cn.nukkit.network.RakNetInterface.unblockAddress_changed(java.net.InetAddress)" class="hiddenlink" target="rightframe">type&nbsp;
-(<code>InetAddress</code>)&nbsp;in&nbsp;cn.nukkit.network.RakNetInterface
-</A></nobr><br>
 <nobr><A HREF="cn.nukkit.block.Block.html#cn.nukkit.block.Block.up_added(int, int)" class="hiddenlink" target="rightframe"><b>up</b>
 (<code>int, int</code>)</A></nobr><br>
 <nobr><A HREF="cn.nukkit.block.BlockTripWire.html#cn.nukkit.block.BlockTripWire.updateHook_removed(boolean)" class="hiddenlink" target="rightframe"><strike>updateHook</strike>
@@ -2184,6 +2298,7 @@ Method Differences Index
 <a href="#G"><font size="-2">G</font></a> 
 <a href="#H"><font size="-2">H</font></a> 
 <a href="#I"><font size="-2">I</font></a> 
+<a href="#L"><font size="-2">L</font></a> 
 <a href="#M"><font size="-2">M</font></a> 
 <a href="#N"><font size="-2">N</font></a> 
 <a href="#O"><font size="-2">O</font></a> 
@@ -2196,6 +2311,19 @@ Method Differences Index
 <br>
 <nobr><A HREF="cn.nukkit.block.Block.html#cn.nukkit.block.Block.west_added(int, int)" class="hiddenlink" target="rightframe"><b>west</b>
 (<code>int, int</code>)</A></nobr><br>
+<i>writeTo</i><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.format.ChunkSection.html#cn.nukkit.level.format.ChunkSection.writeTo_removed(cn.nukkit.utils.BinaryStream)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>BinaryStream</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.format.ChunkSection
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.format.anvil.ChunkSection.html#cn.nukkit.level.format.anvil.ChunkSection.writeTo_removed(cn.nukkit.utils.BinaryStream)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>BinaryStream</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.format.anvil.ChunkSection
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.format.anvil.util.BlockStorage.html#cn.nukkit.level.format.anvil.util.BlockStorage.writeTo_removed(cn.nukkit.utils.BinaryStream)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>BinaryStream</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.format.anvil.util.BlockStorage
+</A></nobr><br>
+&nbsp;&nbsp;<nobr><A HREF="cn.nukkit.level.format.generic.EmptyChunkSection.html#cn.nukkit.level.format.generic.EmptyChunkSection.writeTo_removed(cn.nukkit.utils.BinaryStream)" class="hiddenlink" target="rightframe">type&nbsp;<strike>
+(<code>BinaryStream</code>)</strike>&nbsp;in&nbsp;cn.nukkit.level.format.generic.EmptyChunkSection
+</A></nobr><br>
 <nobr><A HREF="cn.nukkit.level.format.anvil.ChunkSection.html#cn.nukkit.level.format.anvil.ChunkSection.writeToStream_added(cn.nukkit.utils.BinaryStream)" class="hiddenlink" target="rightframe"><b>writeToStream</b>
 (<code>BinaryStream</code>)</A></nobr><br>
 </BODY>

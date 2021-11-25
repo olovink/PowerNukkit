@@ -8,80 +8,81 @@
 <div class="sourceContainer">
 <pre><span class="sourceLineNo">001</span>package cn.nukkit.item.enchantment;<a name="line.1"></a>
 <span class="sourceLineNo">002</span><a name="line.2"></a>
-<span class="sourceLineNo">003</span>import cn.nukkit.block.BlockPumpkin;<a name="line.3"></a>
-<span class="sourceLineNo">004</span>import cn.nukkit.item.Item;<a name="line.4"></a>
-<span class="sourceLineNo">005</span>import cn.nukkit.item.ItemArmor;<a name="line.5"></a>
-<span class="sourceLineNo">006</span>import cn.nukkit.item.ItemBlock;<a name="line.6"></a>
-<span class="sourceLineNo">007</span>import cn.nukkit.item.ItemBow;<a name="line.7"></a>
-<span class="sourceLineNo">008</span>import cn.nukkit.item.ItemElytra;<a name="line.8"></a>
-<span class="sourceLineNo">009</span>import cn.nukkit.item.ItemFishingRod;<a name="line.9"></a>
-<span class="sourceLineNo">010</span>import cn.nukkit.item.ItemSkull;<a name="line.10"></a>
-<span class="sourceLineNo">011</span>import cn.nukkit.item.ItemTrident;<a name="line.11"></a>
-<span class="sourceLineNo">012</span><a name="line.12"></a>
-<span class="sourceLineNo">013</span>/**<a name="line.13"></a>
-<span class="sourceLineNo">014</span> * author: MagicDroidX<a name="line.14"></a>
-<span class="sourceLineNo">015</span> * Nukkit Project<a name="line.15"></a>
-<span class="sourceLineNo">016</span> */<a name="line.16"></a>
-<span class="sourceLineNo">017</span>public enum EnchantmentType {<a name="line.17"></a>
-<span class="sourceLineNo">018</span>    ALL,<a name="line.18"></a>
-<span class="sourceLineNo">019</span>    ARMOR,<a name="line.19"></a>
-<span class="sourceLineNo">020</span>    ARMOR_HEAD,<a name="line.20"></a>
-<span class="sourceLineNo">021</span>    ARMOR_TORSO,<a name="line.21"></a>
-<span class="sourceLineNo">022</span>    ARMOR_LEGS,<a name="line.22"></a>
-<span class="sourceLineNo">023</span>    ARMOR_FEET,<a name="line.23"></a>
-<span class="sourceLineNo">024</span>    SWORD,<a name="line.24"></a>
-<span class="sourceLineNo">025</span>    DIGGER,<a name="line.25"></a>
-<span class="sourceLineNo">026</span>    FISHING_ROD,<a name="line.26"></a>
-<span class="sourceLineNo">027</span>    BREAKABLE,<a name="line.27"></a>
-<span class="sourceLineNo">028</span>    BOW,<a name="line.28"></a>
-<span class="sourceLineNo">029</span>    WEARABLE,<a name="line.29"></a>
-<span class="sourceLineNo">030</span>    TRIDENT;<a name="line.30"></a>
-<span class="sourceLineNo">031</span><a name="line.31"></a>
-<span class="sourceLineNo">032</span>    public boolean canEnchantItem(Item item) {<a name="line.32"></a>
-<span class="sourceLineNo">033</span>        if (this == ALL) {<a name="line.33"></a>
-<span class="sourceLineNo">034</span>            return true;<a name="line.34"></a>
-<span class="sourceLineNo">035</span><a name="line.35"></a>
-<span class="sourceLineNo">036</span>        } else if (this == BREAKABLE &amp;&amp; item.getMaxDurability() &gt;= 0) {<a name="line.36"></a>
-<span class="sourceLineNo">037</span>            return true;<a name="line.37"></a>
-<span class="sourceLineNo">038</span><a name="line.38"></a>
-<span class="sourceLineNo">039</span>        } else if (item instanceof ItemArmor) {<a name="line.39"></a>
-<span class="sourceLineNo">040</span>            if (this == ARMOR) {<a name="line.40"></a>
-<span class="sourceLineNo">041</span>                return true;<a name="line.41"></a>
-<span class="sourceLineNo">042</span>            }<a name="line.42"></a>
-<span class="sourceLineNo">043</span><a name="line.43"></a>
-<span class="sourceLineNo">044</span>            switch (this) {<a name="line.44"></a>
-<span class="sourceLineNo">045</span>                case ARMOR_HEAD:<a name="line.45"></a>
-<span class="sourceLineNo">046</span>                    return item.isHelmet();<a name="line.46"></a>
-<span class="sourceLineNo">047</span>                case ARMOR_TORSO:<a name="line.47"></a>
-<span class="sourceLineNo">048</span>                    return item.isChestplate();<a name="line.48"></a>
-<span class="sourceLineNo">049</span>                case ARMOR_LEGS:<a name="line.49"></a>
-<span class="sourceLineNo">050</span>                    return item.isLeggings();<a name="line.50"></a>
-<span class="sourceLineNo">051</span>                case ARMOR_FEET:<a name="line.51"></a>
-<span class="sourceLineNo">052</span>                    return item.isBoots();<a name="line.52"></a>
-<span class="sourceLineNo">053</span>                default:<a name="line.53"></a>
-<span class="sourceLineNo">054</span>                    return false;<a name="line.54"></a>
-<span class="sourceLineNo">055</span>            }<a name="line.55"></a>
-<span class="sourceLineNo">056</span><a name="line.56"></a>
-<span class="sourceLineNo">057</span>        } else {<a name="line.57"></a>
-<span class="sourceLineNo">058</span>            switch (this) {<a name="line.58"></a>
-<span class="sourceLineNo">059</span>                case SWORD:<a name="line.59"></a>
-<span class="sourceLineNo">060</span>                    return item.isSword();<a name="line.60"></a>
-<span class="sourceLineNo">061</span>                case DIGGER:<a name="line.61"></a>
-<span class="sourceLineNo">062</span>                    return item.isPickaxe() || item.isShovel() || item.isAxe();<a name="line.62"></a>
-<span class="sourceLineNo">063</span>                case BOW:<a name="line.63"></a>
-<span class="sourceLineNo">064</span>                    return item instanceof ItemBow;<a name="line.64"></a>
-<span class="sourceLineNo">065</span>                case FISHING_ROD:<a name="line.65"></a>
-<span class="sourceLineNo">066</span>                    return item instanceof ItemFishingRod;<a name="line.66"></a>
-<span class="sourceLineNo">067</span>                case WEARABLE:<a name="line.67"></a>
-<span class="sourceLineNo">068</span>                    return item instanceof ItemArmor || item instanceof ItemElytra || item instanceof ItemSkull || item.getBlock() instanceof BlockPumpkin;<a name="line.68"></a>
-<span class="sourceLineNo">069</span>                case TRIDENT:<a name="line.69"></a>
-<span class="sourceLineNo">070</span>                    return item instanceof ItemTrident;<a name="line.70"></a>
-<span class="sourceLineNo">071</span>                default:<a name="line.71"></a>
-<span class="sourceLineNo">072</span>                    return false;<a name="line.72"></a>
-<span class="sourceLineNo">073</span>            }<a name="line.73"></a>
-<span class="sourceLineNo">074</span>        }<a name="line.74"></a>
-<span class="sourceLineNo">075</span>    }<a name="line.75"></a>
-<span class="sourceLineNo">076</span>}<a name="line.76"></a>
+<span class="sourceLineNo">003</span>import cn.nukkit.item.Item;<a name="line.3"></a>
+<span class="sourceLineNo">004</span>import cn.nukkit.item.ItemArmor;<a name="line.4"></a>
+<span class="sourceLineNo">005</span>import cn.nukkit.item.ItemBow;<a name="line.5"></a>
+<span class="sourceLineNo">006</span>import cn.nukkit.item.ItemCrossbow;<a name="line.6"></a>
+<span class="sourceLineNo">007</span>import cn.nukkit.item.ItemFishingRod;<a name="line.7"></a>
+<span class="sourceLineNo">008</span>import cn.nukkit.item.ItemSkull;<a name="line.8"></a>
+<span class="sourceLineNo">009</span>import cn.nukkit.item.ItemTrident;<a name="line.9"></a>
+<span class="sourceLineNo">010</span><a name="line.10"></a>
+<span class="sourceLineNo">011</span>/**<a name="line.11"></a>
+<span class="sourceLineNo">012</span> * author: MagicDroidX<a name="line.12"></a>
+<span class="sourceLineNo">013</span> * Nukkit Project<a name="line.13"></a>
+<span class="sourceLineNo">014</span> */<a name="line.14"></a>
+<span class="sourceLineNo">015</span>public enum EnchantmentType {<a name="line.15"></a>
+<span class="sourceLineNo">016</span>    ALL,<a name="line.16"></a>
+<span class="sourceLineNo">017</span>    ARMOR,<a name="line.17"></a>
+<span class="sourceLineNo">018</span>    ARMOR_HEAD,<a name="line.18"></a>
+<span class="sourceLineNo">019</span>    ARMOR_TORSO,<a name="line.19"></a>
+<span class="sourceLineNo">020</span>    ARMOR_LEGS,<a name="line.20"></a>
+<span class="sourceLineNo">021</span>    ARMOR_FEET,<a name="line.21"></a>
+<span class="sourceLineNo">022</span>    SWORD,<a name="line.22"></a>
+<span class="sourceLineNo">023</span>    DIGGER,<a name="line.23"></a>
+<span class="sourceLineNo">024</span>    FISHING_ROD,<a name="line.24"></a>
+<span class="sourceLineNo">025</span>    BREAKABLE,<a name="line.25"></a>
+<span class="sourceLineNo">026</span>    BOW,<a name="line.26"></a>
+<span class="sourceLineNo">027</span>    WEARABLE,<a name="line.27"></a>
+<span class="sourceLineNo">028</span>    TRIDENT,<a name="line.28"></a>
+<span class="sourceLineNo">029</span>    CROSSBOW;<a name="line.29"></a>
+<span class="sourceLineNo">030</span><a name="line.30"></a>
+<span class="sourceLineNo">031</span>    public boolean canEnchantItem(Item item) {<a name="line.31"></a>
+<span class="sourceLineNo">032</span>        if (this == ALL) {<a name="line.32"></a>
+<span class="sourceLineNo">033</span>            return true;<a name="line.33"></a>
+<span class="sourceLineNo">034</span><a name="line.34"></a>
+<span class="sourceLineNo">035</span>        } else if (this == BREAKABLE &amp;&amp; item.getMaxDurability() &gt;= 0) {<a name="line.35"></a>
+<span class="sourceLineNo">036</span>            return true;<a name="line.36"></a>
+<span class="sourceLineNo">037</span><a name="line.37"></a>
+<span class="sourceLineNo">038</span>        } else if (item instanceof ItemArmor) {<a name="line.38"></a>
+<span class="sourceLineNo">039</span>            if (this == ARMOR || this == WEARABLE) {<a name="line.39"></a>
+<span class="sourceLineNo">040</span>                return true;<a name="line.40"></a>
+<span class="sourceLineNo">041</span>            }<a name="line.41"></a>
+<span class="sourceLineNo">042</span><a name="line.42"></a>
+<span class="sourceLineNo">043</span>            switch (this) {<a name="line.43"></a>
+<span class="sourceLineNo">044</span>                case ARMOR_HEAD:<a name="line.44"></a>
+<span class="sourceLineNo">045</span>                    return item.isHelmet();<a name="line.45"></a>
+<span class="sourceLineNo">046</span>                case ARMOR_TORSO:<a name="line.46"></a>
+<span class="sourceLineNo">047</span>                    return item.isChestplate();<a name="line.47"></a>
+<span class="sourceLineNo">048</span>                case ARMOR_LEGS:<a name="line.48"></a>
+<span class="sourceLineNo">049</span>                    return item.isLeggings();<a name="line.49"></a>
+<span class="sourceLineNo">050</span>                case ARMOR_FEET:<a name="line.50"></a>
+<span class="sourceLineNo">051</span>                    return item.isBoots();<a name="line.51"></a>
+<span class="sourceLineNo">052</span>                default:<a name="line.52"></a>
+<span class="sourceLineNo">053</span>                    return false;<a name="line.53"></a>
+<span class="sourceLineNo">054</span>            }<a name="line.54"></a>
+<span class="sourceLineNo">055</span><a name="line.55"></a>
+<span class="sourceLineNo">056</span>        } else {<a name="line.56"></a>
+<span class="sourceLineNo">057</span>            switch (this) {<a name="line.57"></a>
+<span class="sourceLineNo">058</span>                case SWORD:<a name="line.58"></a>
+<span class="sourceLineNo">059</span>                    return item.isSword();<a name="line.59"></a>
+<span class="sourceLineNo">060</span>                case DIGGER:<a name="line.60"></a>
+<span class="sourceLineNo">061</span>                    return item.isPickaxe() || item.isShovel() || item.isAxe() || item.isHoe();<a name="line.61"></a>
+<span class="sourceLineNo">062</span>                case BOW:<a name="line.62"></a>
+<span class="sourceLineNo">063</span>                    return item instanceof ItemBow;<a name="line.63"></a>
+<span class="sourceLineNo">064</span>                case FISHING_ROD:<a name="line.64"></a>
+<span class="sourceLineNo">065</span>                    return item instanceof ItemFishingRod;<a name="line.65"></a>
+<span class="sourceLineNo">066</span>                case WEARABLE:<a name="line.66"></a>
+<span class="sourceLineNo">067</span>                    return item instanceof ItemSkull;<a name="line.67"></a>
+<span class="sourceLineNo">068</span>                case TRIDENT:<a name="line.68"></a>
+<span class="sourceLineNo">069</span>                    return item instanceof ItemTrident;<a name="line.69"></a>
+<span class="sourceLineNo">070</span>                case CROSSBOW:<a name="line.70"></a>
+<span class="sourceLineNo">071</span>                    return item instanceof ItemCrossbow;<a name="line.71"></a>
+<span class="sourceLineNo">072</span>                default:<a name="line.72"></a>
+<span class="sourceLineNo">073</span>                    return false;<a name="line.73"></a>
+<span class="sourceLineNo">074</span>            }<a name="line.74"></a>
+<span class="sourceLineNo">075</span>        }<a name="line.75"></a>
+<span class="sourceLineNo">076</span>    }<a name="line.76"></a>
+<span class="sourceLineNo">077</span>}<a name="line.77"></a>
 
 
 

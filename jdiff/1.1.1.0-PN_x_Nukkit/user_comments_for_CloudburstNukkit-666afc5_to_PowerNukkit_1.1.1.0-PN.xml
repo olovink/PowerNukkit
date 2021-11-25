@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <comments
   xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
   xsi:noNamespaceSchemaLocation='comments.xsd'
   name="CloudburstNukkit-666afc5_to_PowerNukkit_1.1.1.0-PN"
-  jdversion="1.1.1">
+  jdversion="2.0.0-PN">
 
 <!-- This file contains comments for a JDiff report. -->
 <!-- It is used only in generating the report, and does not need to ship with the final report. -->
@@ -142,7 +142,7 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.Server.handlePacket_changed(java.net.InetSocketAddress, ByteBuf)"/>
+  <identifier id="cn.nukkit.Server.handlePacket_changed(java.net.InetSocketAddress, io.netty.buffer.ByteBuf)"/>
   <text>
     InsertCommentsHere
   </text>
@@ -203,30 +203,6 @@
 </comment>
 <comment>
   <identifier id="cn.nukkit.block.Block.canBePulled_added()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.Block.canBePushed_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.Block.canBePushed_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.Block.canBePushed_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.Block.canBePushed_changed()"/>
   <text>
     InsertCommentsHere
   </text>
@@ -478,12 +454,6 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.block.BlockBedrockInvisible.canBeFlowedInto_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.block.BlockBedrockInvisible.canBePulled_added()"/>
   <text>
     InsertCommentsHere
@@ -563,12 +533,6 @@
 </comment>
 <comment>
   <identifier id="cn.nukkit.block.BlockButton"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockButton.canBeFlowedInto_changed()"/>
   <text>
     InsertCommentsHere
   </text>
@@ -796,12 +760,6 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.block.BlockCocoa.canBeFlowedInto_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.block.BlockCocoa.getWaterloggingLevel_added()"/>
   <text>
     InsertCommentsHere
@@ -898,25 +856,7 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.block.BlockDaylightDetector.canBeActivated_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockDaylightDetector.getToolType_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.block.BlockDaylightDetector.getWaterloggingLevel_added()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockDaylightDetector.getWeakPower_changed(cn.nukkit.math.BlockFace)"/>
   <text>
     InsertCommentsHere
   </text>
@@ -929,30 +869,6 @@
 </comment>
 <comment>
   <identifier id="cn.nukkit.block.BlockDaylightDetector.isInverted_added()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockDaylightDetector.isPowerSource_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockDaylightDetector.onActivate_added(cn.nukkit.item.Item, cn.nukkit.Player)"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockDaylightDetector.onBreak_changed(cn.nukkit.item.Item)"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockDaylightDetector.place_changed(cn.nukkit.item.Item, cn.nukkit.block.Block, cn.nukkit.block.Block, cn.nukkit.math.BlockFace, double, double, double, cn.nukkit.Player)"/>
   <text>
     InsertCommentsHere
   </text>
@@ -982,12 +898,6 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.block.BlockDaylightDetectorInverted.onActivate_added(cn.nukkit.item.Item, cn.nukkit.Player)"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.block.BlockDeadBush"/>
   <text>
     InsertCommentsHere
@@ -1001,12 +911,6 @@
 </comment>
 <comment>
   <identifier id="cn.nukkit.block.BlockDispenser"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockDispenser.canBeActivated_changed()"/>
   <text>
     InsertCommentsHere
   </text>
@@ -1037,24 +941,6 @@
 </comment>
 <comment>
   <identifier id="cn.nukkit.block.BlockDispenser.getFacing_removed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockDispenser.onActivate_added(cn.nukkit.item.Item, cn.nukkit.Player)"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockDispenser.onUpdate_changed(int)"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockDispenser.place_changed(cn.nukkit.item.Item, cn.nukkit.block.Block, cn.nukkit.block.Block, cn.nukkit.math.BlockFace, double, double, double, cn.nukkit.Player)"/>
   <text>
     InsertCommentsHere
   </text>
@@ -1144,12 +1030,6 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.block.BlockEndPortal"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.block.BlockEndPortalFrame"/>
   <text>
     InsertCommentsHere
@@ -1169,12 +1049,6 @@
 </comment>
 <comment>
   <identifier id="cn.nukkit.block.BlockEndRod"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockEndRod.canBeFlowedInto_changed()"/>
   <text>
     InsertCommentsHere
   </text>
@@ -1313,18 +1187,6 @@
 </comment>
 <comment>
   <identifier id="cn.nukkit.block.BlockGlassPane.getWaterloggingLevel_added()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockGrass"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockGrass.onActivate_added(cn.nukkit.item.Item)"/>
   <text>
     InsertCommentsHere
   </text>
@@ -2122,42 +1984,6 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.block.BlockLeaves2"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockLeaves2.isCheckDecay_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockLeaves2.isPersistent_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockLeaves2.setCheckDecay_changed(boolean)"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockLeaves2.setPersistent_changed(boolean)"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockLeaves2.toItem_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.block.BlockLectern"/>
   <text>
     InsertCommentsHere
@@ -2165,12 +1991,6 @@
 </comment>
 <comment>
   <identifier id="cn.nukkit.block.BlockLever"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockLever.canBeFlowedInto_changed()"/>
   <text>
     InsertCommentsHere
   </text>
@@ -2218,18 +2038,6 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.block.BlockMagma"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockMagma.onUpdate_changed(int)"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.block.BlockMobSpawner"/>
   <text>
     InsertCommentsHere
@@ -2249,12 +2057,6 @@
 </comment>
 <comment>
   <identifier id="cn.nukkit.block.BlockMoving"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockNetherPortal"/>
   <text>
     InsertCommentsHere
   </text>
@@ -2368,12 +2170,6 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.block.BlockPistonHead.isSolid_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.block.BlockPistonHeadSticky"/>
   <text>
     InsertCommentsHere
@@ -2464,12 +2260,6 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.block.BlockRail.canBePushed_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.block.BlockRailPowered"/>
   <text>
     InsertCommentsHere
@@ -2488,19 +2278,7 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.block.BlockRedstoneDiode.canBeFlowedInto_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.block.BlockRedstoneDiode.getWaterloggingLevel_added()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockRedstoneDiode.recalculateBoundingBox_changed()"/>
   <text>
     InsertCommentsHere
   </text>
@@ -2597,12 +2375,6 @@
 </comment>
 <comment>
   <identifier id="cn.nukkit.block.BlockSkull.breaksWhenMoved_added()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockSkull.canBeFlowedInto_changed()"/>
   <text>
     InsertCommentsHere
   </text>
@@ -2705,18 +2477,6 @@
 </comment>
 <comment>
   <identifier id="cn.nukkit.block.BlockSmoothStone"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockSoulSand"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockSoulSand.onUpdate_changed(int)"/>
   <text>
     InsertCommentsHere
   </text>
@@ -2848,18 +2608,6 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.block.BlockStone"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockStone.getColor_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.block.BlockStonecutter"/>
   <text>
     InsertCommentsHere
@@ -2932,12 +2680,6 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.block.BlockTripWire.canBeFlowedInto_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.block.BlockTripWire.getWaterloggingLevel_added()"/>
   <text>
     InsertCommentsHere
@@ -2951,12 +2693,6 @@
 </comment>
 <comment>
   <identifier id="cn.nukkit.block.BlockTripWireHook"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockTripWireHook.canBeFlowedInto_changed()"/>
   <text>
     InsertCommentsHere
   </text>
@@ -2986,19 +2722,7 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.block.BlockUndyedShulkerBox.getComparatorInputOverride_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.block.BlockUndyedShulkerBox.getWaterloggingLevel_added()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockUndyedShulkerBox.hasComparatorInputOverride_changed()"/>
   <text>
     InsertCommentsHere
   </text>
@@ -3017,12 +2741,6 @@
 </comment>
 <comment>
   <identifier id="cn.nukkit.block.BlockVine.breaksWhenMoved_added()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockVine.canBeFlowedInto_changed()"/>
   <text>
     InsertCommentsHere
   </text>
@@ -3094,12 +2812,6 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.block.BlockWood.canBeActivated_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.block.BlockWood.getStrippedDamage_added()"/>
   <text>
     InsertCommentsHere
@@ -3112,12 +2824,6 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.block.BlockWood.onActivate_added(cn.nukkit.item.Item, cn.nukkit.Player)"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.block.BlockWood2"/>
   <text>
     InsertCommentsHere
@@ -3125,12 +2831,6 @@
 </comment>
 <comment>
   <identifier id="cn.nukkit.block.BlockWood2.getStrippedId_added()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.block.BlockWood2.toItem_changed()"/>
   <text>
     InsertCommentsHere
   </text>
@@ -3268,12 +2968,6 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.blockentity.BlockEntity.getBlock_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.blockentity.BlockEntity.onBreak_added(boolean)"/>
   <text>
     InsertCommentsHere
@@ -3371,12 +3065,6 @@
 </comment>
 <comment>
   <identifier id="cn.nukkit.blockentity.BlockEntityChest"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.blockentity.BlockEntityChest.onBreak_removed()"/>
   <text>
     InsertCommentsHere
   </text>
@@ -3562,12 +3250,6 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.blockentity.BlockEntityPistonArm.onUpdate_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.blockentity.BlockEntityPistonArm.state"/>
   <text>
     InsertCommentsHere
@@ -3581,12 +3263,6 @@
 </comment>
 <comment>
   <identifier id="cn.nukkit.blockentity.BlockEntitySpawnable"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.blockentity.BlockEntitySpawnable.getSpawnCompound_changed()"/>
   <text>
     InsertCommentsHere
   </text>
@@ -3616,31 +3292,7 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.blockentity.BlockEntitySpawnableContainer.getItem_changed(int)"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.blockentity.BlockEntitySpawnableContainer.getSlotIndex_changed(int)"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.blockentity.BlockEntitySpawnableContainer.inventory"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.blockentity.BlockEntitySpawnableContainer.saveNBT_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.blockentity.BlockEntitySpawnableContainer.setItem_changed(int, cn.nukkit.item.Item)"/>
   <text>
     InsertCommentsHere
   </text>
@@ -4078,18 +3730,6 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.entity.item.EntityMinecartAbstract.activate_changed(int, int, int, boolean)"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.entity.item.EntityMinecartAbstract.activate_changed(int, int, int, boolean)"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.entity.item.EntityMinecartChest"/>
   <text>
     InsertCommentsHere
@@ -4102,25 +3742,13 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.entity.item.EntityMinecartChest.initEntity_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.entity.item.EntityMinecartChest.inventory"/>
   <text>
     InsertCommentsHere
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.entity.item.EntityMinecartChest.mountEntity_changed(cn.nukkit.entity.Entity, byte)"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.entity.item.EntityMinecartChest.saveNBT_changed()"/>
+  <identifier id="cn.nukkit.entity.item.EntityMinecartChest.mountEntity_added(cn.nukkit.entity.Entity, byte)"/>
   <text>
     InsertCommentsHere
   </text>
@@ -4138,49 +3766,19 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.entity.item.EntityMinecartHopper.initEntity_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.entity.item.EntityMinecartHopper.inventory"/>
   <text>
     InsertCommentsHere
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.entity.item.EntityMinecartHopper.mountEntity_changed(cn.nukkit.entity.Entity, byte)"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.entity.item.EntityMinecartHopper.saveNBT_changed()"/>
+  <identifier id="cn.nukkit.entity.item.EntityMinecartHopper.mountEntity_added(cn.nukkit.entity.Entity, byte)"/>
   <text>
     InsertCommentsHere
   </text>
 </comment>
 <comment>
   <identifier id="cn.nukkit.entity.item.EntityPainting"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.entity.item.EntityPainting.getHeight_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.entity.item.EntityPainting.getLength_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.entity.item.EntityPainting.getWidth_changed()"/>
   <text>
     InsertCommentsHere
   </text>
@@ -4474,18 +4072,6 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.event.player.PlayerAsyncPreLoginEvent"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.event.player.PlayerAsyncPreLoginEvent.getPlayer_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.event.player.PlayerBucketEmptyEvent"/>
   <text>
     InsertCommentsHere
@@ -4630,12 +4216,6 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.inventory.AnvilInventory.getItem_changed(int)"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.inventory.AnvilInventory.getLevelCost_added()"/>
   <text>
     InsertCommentsHere
@@ -4666,12 +4246,6 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.inventory.AnvilInventory.onSlotChange_changed(int, cn.nukkit.item.Item, boolean)"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.inventory.AnvilInventory.setFirstItem_added(cn.nukkit.item.Item)"/>
   <text>
     InsertCommentsHere
@@ -4679,12 +4253,6 @@
 </comment>
 <comment>
   <identifier id="cn.nukkit.inventory.AnvilInventory.setFirstItem_added(cn.nukkit.item.Item, boolean)"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.inventory.AnvilInventory.setItem_changed(int, cn.nukkit.item.Item, boolean)"/>
   <text>
     InsertCommentsHere
   </text>
@@ -4751,18 +4319,6 @@
 </comment>
 <comment>
   <identifier id="cn.nukkit.inventory.BaseInventory.removeListener_added(cn.nukkit.inventory.InventoryListener)"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.inventory.BigCraftingGrid"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.inventory.BigCraftingGrid.getType_changed()"/>
   <text>
     InsertCommentsHere
   </text>
@@ -4900,18 +4456,6 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.inventory.FakeBlockUIComponent"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.inventory.FakeBlockUIComponent.getType_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.inventory.FurnaceInventory"/>
   <text>
     InsertCommentsHere
@@ -4972,18 +4516,6 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.inventory.PlayerCursorInventory"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.inventory.PlayerCursorInventory.getType_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.inventory.PlayerOffhandInventory"/>
   <text>
     InsertCommentsHere
@@ -5009,12 +4541,6 @@
 </comment>
 <comment>
   <identifier id="cn.nukkit.inventory.PlayerUIInventory.onSlotChangeBase_added(int, cn.nukkit.item.Item, boolean)"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.inventory.PlayerUIInventory.onSlotChange_changed(int, cn.nukkit.item.Item, boolean)"/>
   <text>
     InsertCommentsHere
   </text>
@@ -5314,12 +4840,6 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.item.ItemPotionLingering.canBeActivated_changed()"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
   <identifier id="cn.nukkit.item.ItemPotionLingering.correctNBT_added(cn.nukkit.nbt.tag.CompoundTag)"/>
   <text>
     InsertCommentsHere
@@ -5399,24 +4919,6 @@
 </comment>
 <comment>
   <identifier id="cn.nukkit.item.ProjectileItem.correctProjectile_added(cn.nukkit.Player, cn.nukkit.entity.Entity)"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.item.enchantment"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.item.enchantment.EnchantmentFrostWalker"/>
-  <text>
-    InsertCommentsHere
-  </text>
-</comment>
-<comment>
-  <identifier id="cn.nukkit.item.enchantment.EnchantmentFrostWalker.isCompatibleWith_changed(cn.nukkit.item.enchantment.Enchantment)"/>
   <text>
     InsertCommentsHere
   </text>
@@ -6766,7 +6268,7 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.level.format.generic.BaseChunk.getBlockDataArray_changed(int)"/>
+  <identifier id="cn.nukkit.level.format.generic.BaseChunk.getBlockDataArray_added(int)"/>
   <text>
     InsertCommentsHere
   </text>
@@ -6778,7 +6280,7 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.level.format.generic.BaseChunk.getBlockIdArray_changed(int)"/>
+  <identifier id="cn.nukkit.level.format.generic.BaseChunk.getBlockIdArray_added(int)"/>
   <text>
     InsertCommentsHere
   </text>
@@ -7420,7 +6922,7 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.network.AdvancedSourceInterface.sendRawPacket_changed(java.net.InetSocketAddress, ByteBuf)"/>
+  <identifier id="cn.nukkit.network.AdvancedSourceInterface.sendRawPacket_changed(java.net.InetSocketAddress, io.netty.buffer.ByteBuf)"/>
   <text>
     InsertCommentsHere
   </text>
@@ -7564,7 +7066,7 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.network.Network.sendPacket_changed(java.net.InetSocketAddress, ByteBuf)"/>
+  <identifier id="cn.nukkit.network.Network.sendPacket_changed(java.net.InetSocketAddress, io.netty.buffer.ByteBuf)"/>
   <text>
     InsertCommentsHere
   </text>
@@ -7648,13 +7150,13 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.network.RakNetInterface.onSessionCreation_added(RakNetServerSession)"/>
+  <identifier id="cn.nukkit.network.RakNetInterface.onSessionCreation_added(com.nukkitx.network.raknet.RakNetServerSession)"/>
   <text>
     InsertCommentsHere
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.network.RakNetInterface.onUnhandledDatagram_added(ChannelHandlerContext, DatagramPacket)"/>
+  <identifier id="cn.nukkit.network.RakNetInterface.onUnhandledDatagram_added(io.netty.channel.ChannelHandlerContext, io.netty.channel.socket.DatagramPacket)"/>
   <text>
     InsertCommentsHere
   </text>
@@ -7666,7 +7168,7 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.network.RakNetInterface.sendRawPacket_changed(java.net.InetSocketAddress, ByteBuf)"/>
+  <identifier id="cn.nukkit.network.RakNetInterface.sendRawPacket_changed(java.net.InetSocketAddress, io.netty.buffer.ByteBuf)"/>
   <text>
     InsertCommentsHere
   </text>
@@ -7822,7 +7324,7 @@
   </text>
 </comment>
 <comment>
-  <identifier id="cn.nukkit.network.query.QueryHandler.handle_changed(java.net.InetSocketAddress, ByteBuf)"/>
+  <identifier id="cn.nukkit.network.query.QueryHandler.handle_changed(java.net.InetSocketAddress, io.netty.buffer.ByteBuf)"/>
   <text>
     InsertCommentsHere
   </text>

@@ -18,7 +18,7 @@
 <span class="sourceLineNo">010</span> */<a name="line.10"></a>
 <span class="sourceLineNo">011</span>public class EnchantmentDurability extends Enchantment {<a name="line.11"></a>
 <span class="sourceLineNo">012</span>    protected EnchantmentDurability() {<a name="line.12"></a>
-<span class="sourceLineNo">013</span>        super(ID_DURABILITY, "durability", 5, EnchantmentType.BREAKABLE);<a name="line.13"></a>
+<span class="sourceLineNo">013</span>        super(ID_DURABILITY, "durability", Rarity.UNCOMMON, EnchantmentType.BREAKABLE);<a name="line.13"></a>
 <span class="sourceLineNo">014</span>    }<a name="line.14"></a>
 <span class="sourceLineNo">015</span><a name="line.15"></a>
 <span class="sourceLineNo">016</span>    @Override<a name="line.16"></a>
@@ -28,7 +28,7 @@
 <span class="sourceLineNo">020</span><a name="line.20"></a>
 <span class="sourceLineNo">021</span>    @Override<a name="line.21"></a>
 <span class="sourceLineNo">022</span>    public int getMaxEnchantAbility(int level) {<a name="line.22"></a>
-<span class="sourceLineNo">023</span>        return this.getMinEnchantAbility(level) + 50;<a name="line.23"></a>
+<span class="sourceLineNo">023</span>        return super.getMinEnchantAbility(level) + 50;<a name="line.23"></a>
 <span class="sourceLineNo">024</span>    }<a name="line.24"></a>
 <span class="sourceLineNo">025</span><a name="line.25"></a>
 <span class="sourceLineNo">026</span>    @Override<a name="line.26"></a>
@@ -37,8 +37,8 @@
 <span class="sourceLineNo">029</span>    }<a name="line.29"></a>
 <span class="sourceLineNo">030</span><a name="line.30"></a>
 <span class="sourceLineNo">031</span>    @Override<a name="line.31"></a>
-<span class="sourceLineNo">032</span>    public boolean isCompatibleWith(Enchantment enchantment) {<a name="line.32"></a>
-<span class="sourceLineNo">033</span>        return super.isCompatibleWith(enchantment) &amp;&amp; enchantment.id != ID_FORTUNE_DIGGING;<a name="line.33"></a>
+<span class="sourceLineNo">032</span>    public boolean checkCompatibility(Enchantment enchantment) {<a name="line.32"></a>
+<span class="sourceLineNo">033</span>        return super.checkCompatibility(enchantment) &amp;&amp; enchantment.id != ID_FORTUNE_DIGGING;<a name="line.33"></a>
 <span class="sourceLineNo">034</span>    }<a name="line.34"></a>
 <span class="sourceLineNo">035</span><a name="line.35"></a>
 <span class="sourceLineNo">036</span>    @Override<a name="line.36"></a>

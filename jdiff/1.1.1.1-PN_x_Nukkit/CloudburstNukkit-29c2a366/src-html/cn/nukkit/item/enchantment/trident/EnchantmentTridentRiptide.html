@@ -12,24 +12,19 @@
 <span class="sourceLineNo">004</span><a name="line.4"></a>
 <span class="sourceLineNo">005</span>public class EnchantmentTridentRiptide extends EnchantmentTrident {<a name="line.5"></a>
 <span class="sourceLineNo">006</span>    public EnchantmentTridentRiptide() {<a name="line.6"></a>
-<span class="sourceLineNo">007</span>        super(Enchantment.ID_TRIDENT_RIPTIDE, "riptide", 2);<a name="line.7"></a>
+<span class="sourceLineNo">007</span>        super(Enchantment.ID_TRIDENT_RIPTIDE, "tridentRiptide", Rarity.RARE);<a name="line.7"></a>
 <span class="sourceLineNo">008</span>    }<a name="line.8"></a>
 <span class="sourceLineNo">009</span><a name="line.9"></a>
 <span class="sourceLineNo">010</span>    @Override<a name="line.10"></a>
 <span class="sourceLineNo">011</span>    public int getMinEnchantAbility(int level) {<a name="line.11"></a>
-<span class="sourceLineNo">012</span>        return level * 10;<a name="line.12"></a>
+<span class="sourceLineNo">012</span>        return 7 * level + 10;<a name="line.12"></a>
 <span class="sourceLineNo">013</span>    }<a name="line.13"></a>
 <span class="sourceLineNo">014</span><a name="line.14"></a>
 <span class="sourceLineNo">015</span>    @Override<a name="line.15"></a>
-<span class="sourceLineNo">016</span>    public int getMaxEnchantAbility(int level) {<a name="line.16"></a>
-<span class="sourceLineNo">017</span>        return this.getMinEnchantAbility(level) + 15;<a name="line.17"></a>
+<span class="sourceLineNo">016</span>    public int getMaxLevel() {<a name="line.16"></a>
+<span class="sourceLineNo">017</span>        return 3;<a name="line.17"></a>
 <span class="sourceLineNo">018</span>    }<a name="line.18"></a>
-<span class="sourceLineNo">019</span><a name="line.19"></a>
-<span class="sourceLineNo">020</span>    @Override<a name="line.20"></a>
-<span class="sourceLineNo">021</span>    public int getMaxLevel() {<a name="line.21"></a>
-<span class="sourceLineNo">022</span>        return 3;<a name="line.22"></a>
-<span class="sourceLineNo">023</span>    }<a name="line.23"></a>
-<span class="sourceLineNo">024</span>}<a name="line.24"></a>
+<span class="sourceLineNo">019</span>}<a name="line.19"></a>
 
 
 

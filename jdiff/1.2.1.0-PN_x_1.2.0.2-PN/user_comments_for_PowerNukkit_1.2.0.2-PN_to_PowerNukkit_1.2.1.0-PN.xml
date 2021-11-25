@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<comments
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xsi:noNamespaceSchemaLocation='comments.xsd'
+  name="PowerNukkit_1.2.0.2-PN_to_PowerNukkit_1.2.1.0-PN"
+  jdversion="2.0.0-PN">
+
+<!-- This file contains comments for a JDiff report. -->
+<!-- It is used only in generating the report, and does not need to ship with the final report. -->
+
+<!-- The id attribute in an identifier element identifies the change as noted in the report. -->
+<!-- An id has the form package[.class[.[ctor|method|field].signature]], where [] indicates optional text. -->
+<!-- A comment element can have multiple identifier elements, which will -->
+<!-- will cause the same text to appear at each place in the report, but -->
+<!-- will be converted to separate comments when the comments file is used. -->
+<!-- HTML tags in the text field will appear in the report. -->
+<!-- You also need to close p HTML elements, used for paragraphs - see the top-level documentation. -->
+<comment>
+  <identifier id="cn.nukkit"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.Player"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.Player.isCheckingMovement_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.api"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.api.DeprecationDetails"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.api.PowerNukkitOnly"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.api.Since"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.Block"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.Block.afterRemoval_added(cn.nukkit.block.Block, boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.Block.mustDrop_added(cn.nukkit.math.Vector3, int, cn.nukkit.math.BlockFace, cn.nukkit.item.Item, cn.nukkit.Player)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.Block.mustSilkTouch_added(cn.nukkit.math.Vector3, int, cn.nukkit.math.BlockFace, cn.nukkit.item.Item, cn.nukkit.Player)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockBeehive"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockBeehive.mustDrop_added(cn.nukkit.math.Vector3, int, cn.nukkit.math.BlockFace, cn.nukkit.item.Item, cn.nukkit.Player)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockBeehive.mustSilkTouch_added(cn.nukkit.math.Vector3, int, cn.nukkit.math.BlockFace, cn.nukkit.item.Item, cn.nukkit.Player)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockWater"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockWater.afterRemoval_added(cn.nukkit.block.Block, boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.command"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.command.CapturingCommandSender"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.inEndPortal"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.isInEndPortal_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityEndCrystal"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityEndCrystal.detonated"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.event.player"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.event.player.PlayerJumpEvent"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.Item"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.Item.equalsIgnoringEnchantmentOrder_added(cn.nukkit.item.Item, boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.ItemBannerPattern"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.ItemID"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.ItemID.BANNER_PATTERN"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.enchantment"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.enchantment.Enchantment"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.enchantment.Enchantment.isItemAcceptable_added(cn.nukkit.item.Item)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.enchantment.EnchantmentDurability"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.enchantment.EnchantmentDurability.isItemAcceptable_added(cn.nukkit.item.Item)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.enchantment.EnchantmentEfficiency"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.enchantment.EnchantmentEfficiency.isItemAcceptable_added(cn.nukkit.item.Item)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.enchantment.EnchantmentSilkTouch"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.enchantment.EnchantmentSilkTouch.isItemAcceptable_added(cn.nukkit.item.Item)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.enchantment.EnchantmentThorns"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.enchantment.EnchantmentThorns.isItemAcceptable_added(cn.nukkit.item.Item)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.enchantment.damage"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.enchantment.damage.EnchantmentDamage"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.enchantment.damage.EnchantmentDamage.isItemAcceptable_added(cn.nukkit.item.Item)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.utils"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.utils.ClientChainData"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.utils.ClientChainData.getRawData_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.utils.Hash"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.utils.Hash.hashBlock_added(cn.nukkit.math.Vector3)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.utils.LoginChainData"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.utils.LoginChainData.getRawData_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+
+</comments>

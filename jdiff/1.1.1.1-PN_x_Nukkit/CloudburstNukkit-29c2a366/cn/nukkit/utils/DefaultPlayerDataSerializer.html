@@ -136,6 +136,9 @@ implements <a href="../../../cn/nukkit/utils/PlayerDataSerializer.html" title="i
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/DefaultPlayerDataSerializer.html#DefaultPlayerDataSerializer-cn.nukkit.Server-">DefaultPlayerDataSerializer</a></span>(<a href="../../../cn/nukkit/Server.html" title="class in cn.nukkit">Server</a>&nbsp;server)</code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/DefaultPlayerDataSerializer.html#DefaultPlayerDataSerializer-java.lang.String-">DefaultPlayerDataSerializer</a></span>(java.lang.String&nbsp;dataPath)</code>&nbsp;</td>
+</tr>
 </table>
 </li>
 </ul>
@@ -190,10 +193,19 @@ implements <a href="../../../cn/nukkit/utils/PlayerDataSerializer.html" title="i
 <a name="DefaultPlayerDataSerializer-cn.nukkit.Server-">
 <!--   -->
 </a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DefaultPlayerDataSerializer</h4>
+<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/utils/DefaultPlayerDataSerializer.html#line.13">DefaultPlayerDataSerializer</a>(<a href="../../../cn/nukkit/Server.html" title="class in cn.nukkit">Server</a>&nbsp;server)</pre>
+</li>
+</ul>
+<a name="DefaultPlayerDataSerializer-java.lang.String-">
+<!--   -->
+</a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>DefaultPlayerDataSerializer</h4>
-<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/utils/DefaultPlayerDataSerializer.html#line.32">DefaultPlayerDataSerializer</a>(<a href="../../../cn/nukkit/Server.html" title="class in cn.nukkit">Server</a>&nbsp;server)</pre>
+<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/utils/DefaultPlayerDataSerializer.html#line.17">DefaultPlayerDataSerializer</a>(java.lang.String&nbsp;dataPath)</pre>
 </li>
 </ul>
 </li>
@@ -210,7 +222,7 @@ implements <a href="../../../cn/nukkit/utils/PlayerDataSerializer.html" title="i
 <ul class="blockList">
 <li class="blockList">
 <h4>read</h4>
-<pre>public&nbsp;java.util.Optional&lt;java.io.InputStream&gt;&nbsp;<a href="../../../src-html/cn/nukkit/utils/DefaultPlayerDataSerializer.html#line.14">read</a>(java.lang.String&nbsp;name,
+<pre>public&nbsp;java.util.Optional&lt;java.io.InputStream&gt;&nbsp;<a href="../../../src-html/cn/nukkit/utils/DefaultPlayerDataSerializer.html#line.22">read</a>(java.lang.String&nbsp;name,
                                                     java.util.UUID&nbsp;uuid)
                                              throws java.io.IOException</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../cn/nukkit/utils/PlayerDataSerializer.html#read-java.lang.String-java.util.UUID-">PlayerDataSerializer</a></code></span></div>
@@ -234,7 +246,7 @@ implements <a href="../../../cn/nukkit/utils/PlayerDataSerializer.html" title="i
 <ul class="blockListLast">
 <li class="blockList">
 <h4>write</h4>
-<pre>public&nbsp;java.io.OutputStream&nbsp;<a href="../../../src-html/cn/nukkit/utils/DefaultPlayerDataSerializer.html#line.24">write</a>(java.lang.String&nbsp;name,
+<pre>public&nbsp;java.io.OutputStream&nbsp;<a href="../../../src-html/cn/nukkit/utils/DefaultPlayerDataSerializer.html#line.33">write</a>(java.lang.String&nbsp;name,
                                   java.util.UUID&nbsp;uuid)
                            throws java.io.IOException</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../cn/nukkit/utils/PlayerDataSerializer.html#write-java.lang.String-java.util.UUID-">PlayerDataSerializer</a></code></span></div>

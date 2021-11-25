@@ -109,7 +109,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <hr>
 <br>
-<pre>public class <a href="../../../src-html/cn/nukkit/utils/ZlibOriginal.html#line.9">ZlibOriginal</a>
+<pre>public class <a href="../../../src-html/cn/nukkit/utils/ZlibOriginal.html#line.10">ZlibOriginal</a>
 extends java.lang.Object</pre>
 </li>
 </ul>
@@ -158,7 +158,8 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/ZlibOriginal.html#inflate-java.io.InputStream-">inflate</a></span>(java.io.InputStream&nbsp;stream)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/ZlibOriginal.html#inflate-byte:A-int-">inflate</a></span>(byte[]&nbsp;data,
+       int&nbsp;maxSize)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -188,7 +189,7 @@ extends java.lang.Object</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>ZlibOriginal</h4>
-<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/utils/ZlibOriginal.html#line.9">ZlibOriginal</a>()</pre>
+<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/utils/ZlibOriginal.html#line.10">ZlibOriginal</a>()</pre>
 </li>
 </ul>
 </li>
@@ -205,12 +206,12 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>deflate</h4>
-<pre>public&nbsp;byte[]&nbsp;<a href="../../../src-html/cn/nukkit/utils/ZlibOriginal.html#line.12">deflate</a>(byte[][]&nbsp;datas,
+<pre>public&nbsp;byte[]&nbsp;<a href="../../../src-html/cn/nukkit/utils/ZlibOriginal.html#line.13">deflate</a>(byte[][]&nbsp;datas,
                       int&nbsp;level)
-               throws java.lang.Exception</pre>
+               throws java.io.IOException</pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code>java.lang.Exception</code></dd>
+<dd><code>java.io.IOException</code></dd>
 </dl>
 </li>
 </ul>
@@ -220,22 +221,23 @@ extends java.lang.Object</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>deflate</h4>
-<pre>public&nbsp;byte[]&nbsp;<a href="../../../src-html/cn/nukkit/utils/ZlibOriginal.html#line.37">deflate</a>(byte[]&nbsp;data,
+<pre>public&nbsp;byte[]&nbsp;<a href="../../../src-html/cn/nukkit/utils/ZlibOriginal.html#line.38">deflate</a>(byte[]&nbsp;data,
                       int&nbsp;level)
-               throws java.lang.Exception</pre>
+               throws java.io.IOException</pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code>java.lang.Exception</code></dd>
+<dd><code>java.io.IOException</code></dd>
 </dl>
 </li>
 </ul>
-<a name="inflate-java.io.InputStream-">
+<a name="inflate-byte:A-int-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>inflate</h4>
-<pre>public&nbsp;byte[]&nbsp;<a href="../../../src-html/cn/nukkit/utils/ZlibOriginal.html#line.56">inflate</a>(java.io.InputStream&nbsp;stream)
+<pre>public&nbsp;byte[]&nbsp;<a href="../../../src-html/cn/nukkit/utils/ZlibOriginal.html#line.57">inflate</a>(byte[]&nbsp;data,
+                      int&nbsp;maxSize)
                throws java.io.IOException</pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>

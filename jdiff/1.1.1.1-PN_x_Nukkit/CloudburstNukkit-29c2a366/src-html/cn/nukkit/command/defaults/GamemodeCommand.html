@@ -12,34 +12,34 @@
 <span class="sourceLineNo">004</span>import cn.nukkit.Server;<a name="line.4"></a>
 <span class="sourceLineNo">005</span>import cn.nukkit.command.Command;<a name="line.5"></a>
 <span class="sourceLineNo">006</span>import cn.nukkit.command.CommandSender;<a name="line.6"></a>
-<span class="sourceLineNo">007</span>import cn.nukkit.command.data.CommandParamType;<a name="line.7"></a>
-<span class="sourceLineNo">008</span>import cn.nukkit.command.data.CommandParameter;<a name="line.8"></a>
-<span class="sourceLineNo">009</span>import cn.nukkit.lang.TranslationContainer;<a name="line.9"></a>
-<span class="sourceLineNo">010</span>import cn.nukkit.utils.TextFormat;<a name="line.10"></a>
-<span class="sourceLineNo">011</span><a name="line.11"></a>
-<span class="sourceLineNo">012</span>/**<a name="line.12"></a>
-<span class="sourceLineNo">013</span> * Created on 2015/11/13 by xtypr.<a name="line.13"></a>
-<span class="sourceLineNo">014</span> * Package cn.nukkit.command.defaults in project Nukkit .<a name="line.14"></a>
-<span class="sourceLineNo">015</span> */<a name="line.15"></a>
-<span class="sourceLineNo">016</span>public class GamemodeCommand extends VanillaCommand {<a name="line.16"></a>
-<span class="sourceLineNo">017</span><a name="line.17"></a>
-<span class="sourceLineNo">018</span>    public GamemodeCommand(String name) {<a name="line.18"></a>
-<span class="sourceLineNo">019</span>        super(name, "%nukkit.command.gamemode.description", "%commands.gamemode.usage",<a name="line.19"></a>
-<span class="sourceLineNo">020</span>                new String[]{"gm"});<a name="line.20"></a>
-<span class="sourceLineNo">021</span>        this.setPermission("nukkit.command.gamemode.survival;" +<a name="line.21"></a>
-<span class="sourceLineNo">022</span>                "nukkit.command.gamemode.creative;" +<a name="line.22"></a>
-<span class="sourceLineNo">023</span>                "nukkit.command.gamemode.adventure;" +<a name="line.23"></a>
-<span class="sourceLineNo">024</span>                "nukkit.command.gamemode.spectator;" +<a name="line.24"></a>
-<span class="sourceLineNo">025</span>                "nukkit.command.gamemode.other");<a name="line.25"></a>
-<span class="sourceLineNo">026</span>        this.commandParameters.clear();<a name="line.26"></a>
-<span class="sourceLineNo">027</span>        this.commandParameters.put("default", new CommandParameter[]{<a name="line.27"></a>
-<span class="sourceLineNo">028</span>                new CommandParameter("mode", CommandParamType.INT, false),<a name="line.28"></a>
-<span class="sourceLineNo">029</span>                new CommandParameter("player", CommandParamType.TARGET, true)<a name="line.29"></a>
-<span class="sourceLineNo">030</span>        });<a name="line.30"></a>
-<span class="sourceLineNo">031</span>        this.commandParameters.put("byString", new CommandParameter[]{<a name="line.31"></a>
-<span class="sourceLineNo">032</span>                new CommandParameter("mode", new String[]{"survival", "s", "creative", "c",<a name="line.32"></a>
-<span class="sourceLineNo">033</span>                        "adventure", "a", "spectator", "spc", "view", "v"}),<a name="line.33"></a>
-<span class="sourceLineNo">034</span>                new CommandParameter("player", CommandParamType.TARGET, true)<a name="line.34"></a>
+<span class="sourceLineNo">007</span>import cn.nukkit.command.data.CommandEnum;<a name="line.7"></a>
+<span class="sourceLineNo">008</span>import cn.nukkit.command.data.CommandParamType;<a name="line.8"></a>
+<span class="sourceLineNo">009</span>import cn.nukkit.command.data.CommandParameter;<a name="line.9"></a>
+<span class="sourceLineNo">010</span>import cn.nukkit.lang.TranslationContainer;<a name="line.10"></a>
+<span class="sourceLineNo">011</span>import cn.nukkit.utils.TextFormat;<a name="line.11"></a>
+<span class="sourceLineNo">012</span><a name="line.12"></a>
+<span class="sourceLineNo">013</span>/**<a name="line.13"></a>
+<span class="sourceLineNo">014</span> * Created on 2015/11/13 by xtypr.<a name="line.14"></a>
+<span class="sourceLineNo">015</span> * Package cn.nukkit.command.defaults in project Nukkit .<a name="line.15"></a>
+<span class="sourceLineNo">016</span> */<a name="line.16"></a>
+<span class="sourceLineNo">017</span>public class GamemodeCommand extends VanillaCommand {<a name="line.17"></a>
+<span class="sourceLineNo">018</span><a name="line.18"></a>
+<span class="sourceLineNo">019</span>    public GamemodeCommand(String name) {<a name="line.19"></a>
+<span class="sourceLineNo">020</span>        super(name, "%nukkit.command.gamemode.description", "%commands.gamemode.usage",<a name="line.20"></a>
+<span class="sourceLineNo">021</span>                new String[]{"gm"});<a name="line.21"></a>
+<span class="sourceLineNo">022</span>        this.setPermission("nukkit.command.gamemode.survival;" +<a name="line.22"></a>
+<span class="sourceLineNo">023</span>                "nukkit.command.gamemode.creative;" +<a name="line.23"></a>
+<span class="sourceLineNo">024</span>                "nukkit.command.gamemode.adventure;" +<a name="line.24"></a>
+<span class="sourceLineNo">025</span>                "nukkit.command.gamemode.spectator;" +<a name="line.25"></a>
+<span class="sourceLineNo">026</span>                "nukkit.command.gamemode.other");<a name="line.26"></a>
+<span class="sourceLineNo">027</span>        this.commandParameters.clear();<a name="line.27"></a>
+<span class="sourceLineNo">028</span>        this.commandParameters.put("default", new CommandParameter[]{<a name="line.28"></a>
+<span class="sourceLineNo">029</span>                CommandParameter.newType("gameMode", CommandParamType.INT),<a name="line.29"></a>
+<span class="sourceLineNo">030</span>                CommandParameter.newType("player", true, CommandParamType.TARGET)<a name="line.30"></a>
+<span class="sourceLineNo">031</span>        });<a name="line.31"></a>
+<span class="sourceLineNo">032</span>        this.commandParameters.put("byString", new CommandParameter[]{<a name="line.32"></a>
+<span class="sourceLineNo">033</span>                CommandParameter.newEnum("gameMode", CommandEnum.ENUM_GAMEMODE),<a name="line.33"></a>
+<span class="sourceLineNo">034</span>                CommandParameter.newType("player", true, CommandParamType.TARGET)<a name="line.34"></a>
 <span class="sourceLineNo">035</span>        });<a name="line.35"></a>
 <span class="sourceLineNo">036</span>    }<a name="line.36"></a>
 <span class="sourceLineNo">037</span><a name="line.37"></a>
@@ -87,7 +87,7 @@
 <span class="sourceLineNo">079</span>            if (target.equals(sender)) {<a name="line.79"></a>
 <span class="sourceLineNo">080</span>                Command.broadcastCommandMessage(sender, new TranslationContainer("commands.gamemode.success.self", Server.getGamemodeString(gameMode)));<a name="line.80"></a>
 <span class="sourceLineNo">081</span>            } else {<a name="line.81"></a>
-<span class="sourceLineNo">082</span>                target.sendMessage(new TranslationContainer("gameMode.changed"));<a name="line.82"></a>
+<span class="sourceLineNo">082</span>                target.sendMessage(new TranslationContainer("gameMode.changed", Server.getGamemodeString(gameMode)));<a name="line.82"></a>
 <span class="sourceLineNo">083</span>                Command.broadcastCommandMessage(sender, new TranslationContainer("commands.gamemode.success.other", target.getName(), Server.getGamemodeString(gameMode)));<a name="line.83"></a>
 <span class="sourceLineNo">084</span>            }<a name="line.84"></a>
 <span class="sourceLineNo">085</span>        }<a name="line.85"></a>

@@ -11,7 +11,7 @@
 <span class="sourceLineNo">003</span>import java.util.Random;<a name="line.3"></a>
 <span class="sourceLineNo">004</span><a name="line.4"></a>
 <span class="sourceLineNo">005</span>public class MathHelper {<a name="line.5"></a>
-<span class="sourceLineNo">006</span>    private static float[] a = new float[65536];<a name="line.6"></a>
+<span class="sourceLineNo">006</span>    private static final float[] a = new float[65536];<a name="line.6"></a>
 <span class="sourceLineNo">007</span><a name="line.7"></a>
 <span class="sourceLineNo">008</span>    static {<a name="line.8"></a>
 <span class="sourceLineNo">009</span>        for (int i = 0; i &lt; 65536; i++)<a name="line.9"></a>
@@ -88,29 +88,26 @@
 <span class="sourceLineNo">080</span>        if (second &gt; third &amp;&amp; second &gt; fourth) {<a name="line.80"></a>
 <span class="sourceLineNo">081</span>            return second;<a name="line.81"></a>
 <span class="sourceLineNo">082</span>        }<a name="line.82"></a>
-<span class="sourceLineNo">083</span>        if (third &gt; fourth) {<a name="line.83"></a>
-<span class="sourceLineNo">084</span>            return third;<a name="line.84"></a>
-<span class="sourceLineNo">085</span>        }<a name="line.85"></a>
-<span class="sourceLineNo">086</span>        return fourth;<a name="line.86"></a>
-<span class="sourceLineNo">087</span>    }<a name="line.87"></a>
-<span class="sourceLineNo">088</span><a name="line.88"></a>
-<span class="sourceLineNo">089</span>    public static int ceil(float floatNumber) {<a name="line.89"></a>
-<span class="sourceLineNo">090</span>        int truncated = (int) floatNumber;<a name="line.90"></a>
-<span class="sourceLineNo">091</span>        return floatNumber &gt; truncated ? truncated + 1 : truncated;<a name="line.91"></a>
-<span class="sourceLineNo">092</span>    }<a name="line.92"></a>
-<span class="sourceLineNo">093</span><a name="line.93"></a>
-<span class="sourceLineNo">094</span>    public static int clamp(int check, int min, int max) {<a name="line.94"></a>
-<span class="sourceLineNo">095</span>        return check &gt; max ? max : (check &lt; min ? min : check);<a name="line.95"></a>
-<span class="sourceLineNo">096</span>    }<a name="line.96"></a>
-<span class="sourceLineNo">097</span><a name="line.97"></a>
-<span class="sourceLineNo">098</span>    public static double denormalizeClamp(double lowerBnd, double upperBnd, double slide) {<a name="line.98"></a>
-<span class="sourceLineNo">099</span>        return slide &lt; 0.0D ? lowerBnd : (slide &gt; 1.0D ? upperBnd : lowerBnd + (upperBnd - lowerBnd) * slide);<a name="line.99"></a>
-<span class="sourceLineNo">100</span>    }<a name="line.100"></a>
-<span class="sourceLineNo">101</span><a name="line.101"></a>
-<span class="sourceLineNo">102</span>    public static float denormalizeClamp(float lowerBnd, float upperBnd, float slide) {<a name="line.102"></a>
-<span class="sourceLineNo">103</span>        return slide &lt; 0.0f ? lowerBnd : (slide &gt; 1.0f ? upperBnd : lowerBnd + (upperBnd - lowerBnd) * slide);<a name="line.103"></a>
-<span class="sourceLineNo">104</span>    }<a name="line.104"></a>
-<span class="sourceLineNo">105</span>}<a name="line.105"></a>
+<span class="sourceLineNo">083</span>        return Math.max(third, fourth);<a name="line.83"></a>
+<span class="sourceLineNo">084</span>    }<a name="line.84"></a>
+<span class="sourceLineNo">085</span><a name="line.85"></a>
+<span class="sourceLineNo">086</span>    public static int ceil(float floatNumber) {<a name="line.86"></a>
+<span class="sourceLineNo">087</span>        int truncated = (int) floatNumber;<a name="line.87"></a>
+<span class="sourceLineNo">088</span>        return floatNumber &gt; truncated ? truncated + 1 : truncated;<a name="line.88"></a>
+<span class="sourceLineNo">089</span>    }<a name="line.89"></a>
+<span class="sourceLineNo">090</span><a name="line.90"></a>
+<span class="sourceLineNo">091</span>    public static int clamp(int check, int min, int max) {<a name="line.91"></a>
+<span class="sourceLineNo">092</span>        return check &gt; max ? max : (check &lt; min ? min : check);<a name="line.92"></a>
+<span class="sourceLineNo">093</span>    }<a name="line.93"></a>
+<span class="sourceLineNo">094</span><a name="line.94"></a>
+<span class="sourceLineNo">095</span>    public static double denormalizeClamp(double lowerBnd, double upperBnd, double slide) {<a name="line.95"></a>
+<span class="sourceLineNo">096</span>        return slide &lt; 0.0D ? lowerBnd : (slide &gt; 1.0D ? upperBnd : lowerBnd + (upperBnd - lowerBnd) * slide);<a name="line.96"></a>
+<span class="sourceLineNo">097</span>    }<a name="line.97"></a>
+<span class="sourceLineNo">098</span><a name="line.98"></a>
+<span class="sourceLineNo">099</span>    public static float denormalizeClamp(float lowerBnd, float upperBnd, float slide) {<a name="line.99"></a>
+<span class="sourceLineNo">100</span>        return slide &lt; 0.0f ? lowerBnd : (slide &gt; 1.0f ? upperBnd : lowerBnd + (upperBnd - lowerBnd) * slide);<a name="line.100"></a>
+<span class="sourceLineNo">101</span>    }<a name="line.101"></a>
+<span class="sourceLineNo">102</span>}<a name="line.102"></a>
 
 
 

@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -109,13 +109,13 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../cn/nukkit/network/AdvancedSourceInterface.html" title="interface in cn.nukkit.network">AdvancedSourceInterface</a>, <a href="../../../cn/nukkit/network/SourceInterface.html" title="interface in cn.nukkit.network">SourceInterface</a>, <a href="../../../cn/nukkit/raknet/server/ServerInstance.html" title="interface in cn.nukkit.raknet.server">ServerInstance</a></dd>
+<dd><a href="../../../cn/nukkit/network/AdvancedSourceInterface.html" title="interface in cn.nukkit.network">AdvancedSourceInterface</a>, <a href="../../../cn/nukkit/network/SourceInterface.html" title="interface in cn.nukkit.network">SourceInterface</a>, com.nukkitx.network.raknet.RakNetServerListener</dd>
 </dl>
 <hr>
 <br>
-<pre>public class <a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.31">RakNetInterface</a>
+<pre>public class <a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.41">RakNetInterface</a>
 extends java.lang.Object
-implements <a href="../../../cn/nukkit/raknet/server/ServerInstance.html" title="interface in cn.nukkit.raknet.server">ServerInstance</a>, <a href="../../../cn/nukkit/network/AdvancedSourceInterface.html" title="interface in cn.nukkit.network">AdvancedSourceInterface</a></pre>
+implements com.nukkitx.network.raknet.RakNetServerListener, <a href="../../../cn/nukkit/network/AdvancedSourceInterface.html" title="interface in cn.nukkit.network">AdvancedSourceInterface</a></pre>
 <div class="block">author: MagicDroidX
  Nukkit Project</div>
 </li>
@@ -155,11 +155,11 @@ implements <a href="../../../cn/nukkit/raknet/server/ServerInstance.html" title=
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#blockAddress-java.lang.String-">blockAddress</a></span>(java.lang.String&nbsp;address)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#blockAddress-java.net.InetAddress-">blockAddress</a></span>(java.net.InetAddress&nbsp;address)</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#blockAddress-java.lang.String-int-">blockAddress</a></span>(java.lang.String&nbsp;address,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#blockAddress-java.net.InetAddress-int-">blockAddress</a></span>(java.net.InetAddress&nbsp;address,
             int&nbsp;timeout)</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
@@ -173,93 +173,71 @@ implements <a href="../../../cn/nukkit/raknet/server/ServerInstance.html" title=
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#closeSession-java.lang.String-java.lang.String-">closeSession</a></span>(java.lang.String&nbsp;identifier,
-            java.lang.String&nbsp;reason)</code>&nbsp;</td>
-</tr>
-<tr id="i5" class="rowColor">
-<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#emergencyShutdown--">emergencyShutdown</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#getNetworkLatency-cn.nukkit.Player-">getNetworkLatency</a></span>(<a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player)</code>&nbsp;</td>
 </tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#onConnectionRequest-java.net.InetSocketAddress-">onConnectionRequest</a></span>(java.net.InetSocketAddress&nbsp;inetSocketAddress)</code>&nbsp;</td>
+</tr>
 <tr id="i7" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#handleEncapsulated-java.lang.String-cn.nukkit.raknet.protocol.EncapsulatedPacket-int-">handleEncapsulated</a></span>(java.lang.String&nbsp;identifier,
-                  <a href="../../../cn/nukkit/raknet/protocol/EncapsulatedPacket.html" title="class in cn.nukkit.raknet.protocol">EncapsulatedPacket</a>&nbsp;packet,
-                  int&nbsp;flags)</code>&nbsp;</td>
+<td class="colFirst"><code>byte[]</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#onQuery-java.net.InetSocketAddress-">onQuery</a></span>(java.net.InetSocketAddress&nbsp;inetSocketAddress)</code>&nbsp;</td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#handleOption-java.lang.String-java.lang.String-">handleOption</a></span>(java.lang.String&nbsp;name,
-            java.lang.String&nbsp;value)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#onSessionCreation-com.nukkitx.network.raknet.RakNetServerSession-">onSessionCreation</a></span>(com.nukkitx.network.raknet.RakNetServerSession&nbsp;session)</code>&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#handleRaw-java.lang.String-int-byte:A-">handleRaw</a></span>(java.lang.String&nbsp;address,
-         int&nbsp;port,
-         byte[]&nbsp;payload)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#onUnhandledDatagram-io.netty.channel.ChannelHandlerContext-io.netty.channel.socket.DatagramPacket-">onUnhandledDatagram</a></span>(io.netty.channel.ChannelHandlerContext&nbsp;ctx,
+                   io.netty.channel.socket.DatagramPacket&nbsp;datagramPacket)</code>&nbsp;</td>
 </tr>
 <tr id="i10" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#notifyACK-java.lang.String-int-">notifyACK</a></span>(java.lang.String&nbsp;identifier,
-         int&nbsp;identifierACK)</code>&nbsp;</td>
-</tr>
-<tr id="i11" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#openSession-java.lang.String-java.lang.String-int-long-">openSession</a></span>(java.lang.String&nbsp;identifier,
-           java.lang.String&nbsp;address,
-           int&nbsp;port,
-           long&nbsp;clientID)</code>&nbsp;</td>
-</tr>
-<tr id="i12" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#process--">process</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>java.lang.Integer</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#putPacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-">putPacket</a></span>(<a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
          <a href="../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</code>&nbsp;</td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>java.lang.Integer</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#putPacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-boolean-">putPacket</a></span>(<a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
          <a href="../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet,
          boolean&nbsp;needACK)</code>&nbsp;</td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>java.lang.Integer</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#putPacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-boolean-boolean-">putPacket</a></span>(<a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
          <a href="../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet,
          boolean&nbsp;needACK,
          boolean&nbsp;immediate)</code>&nbsp;</td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#sendRawPacket-java.lang.String-int-byte:A-">sendRawPacket</a></span>(java.lang.String&nbsp;address,
-             int&nbsp;port,
-             byte[]&nbsp;payload)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#sendRawPacket-java.net.InetSocketAddress-io.netty.buffer.ByteBuf-">sendRawPacket</a></span>(java.net.InetSocketAddress&nbsp;socketAddress,
+             io.netty.buffer.ByteBuf&nbsp;payload)</code>&nbsp;</td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#setName-java.lang.String-">setName</a></span>(java.lang.String&nbsp;name)</code>&nbsp;</td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#setNetwork-cn.nukkit.network.Network-">setNetwork</a></span>(<a href="../../../cn/nukkit/network/Network.html" title="class in cn.nukkit.network">Network</a>&nbsp;network)</code>&nbsp;</td>
 </tr>
-<tr id="i19" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#setPortCheck-boolean-">setPortCheck</a></span>(boolean&nbsp;value)</code>&nbsp;</td>
-</tr>
-<tr id="i20" class="altColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#shutdown--">shutdown</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#unblockAddress-java.lang.String-">unblockAddress</a></span>(java.lang.String&nbsp;address)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/RakNetInterface.html#unblockAddress-java.net.InetAddress-">unblockAddress</a></span>(java.net.InetAddress&nbsp;address)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -289,7 +267,7 @@ implements <a href="../../../cn/nukkit/raknet/server/ServerInstance.html" title=
 <ul class="blockListLast">
 <li class="blockList">
 <h4>RakNetInterface</h4>
-<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.51">RakNetInterface</a>(<a href="../../../cn/nukkit/Server.html" title="class in cn.nukkit">Server</a>&nbsp;server)</pre>
+<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.58">RakNetInterface</a>(<a href="../../../cn/nukkit/Server.html" title="class in cn.nukkit">Server</a>&nbsp;server)</pre>
 </li>
 </ul>
 </li>
@@ -306,7 +284,7 @@ implements <a href="../../../cn/nukkit/raknet/server/ServerInstance.html" title=
 <ul class="blockList">
 <li class="blockList">
 <h4>setNetwork</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.59">setNetwork</a>(<a href="../../../cn/nukkit/network/Network.html" title="class in cn.nukkit.network">Network</a>&nbsp;network)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.74">setNetwork</a>(<a href="../../../cn/nukkit/network/Network.html" title="class in cn.nukkit.network">Network</a>&nbsp;network)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../cn/nukkit/network/AdvancedSourceInterface.html#setNetwork-cn.nukkit.network.Network-">setNetwork</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/network/AdvancedSourceInterface.html" title="interface in cn.nukkit.network">AdvancedSourceInterface</a></code></dd>
@@ -319,24 +297,10 @@ implements <a href="../../../cn/nukkit/raknet/server/ServerInstance.html" title=
 <ul class="blockList">
 <li class="blockList">
 <h4>process</h4>
-<pre>public&nbsp;boolean&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.64">process</a>()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.79">process</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../cn/nukkit/network/SourceInterface.html#process--">process</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/network/SourceInterface.html" title="interface in cn.nukkit.network">SourceInterface</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="closeSession-java.lang.String-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>closeSession</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.77">closeSession</a>(java.lang.String&nbsp;identifier,
-                         java.lang.String&nbsp;reason)</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../cn/nukkit/raknet/server/ServerInstance.html#closeSession-java.lang.String-java.lang.String-">closeSession</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/raknet/server/ServerInstance.html" title="interface in cn.nukkit.raknet.server">ServerInstance</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -346,7 +310,7 @@ implements <a href="../../../cn/nukkit/raknet/server/ServerInstance.html" title=
 <ul class="blockList">
 <li class="blockList">
 <h4>getNetworkLatency</h4>
-<pre>public&nbsp;int&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.89">getNetworkLatency</a>(<a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player)</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.118">getNetworkLatency</a>(<a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../cn/nukkit/network/SourceInterface.html#getNetworkLatency-cn.nukkit.Player-">getNetworkLatency</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/network/SourceInterface.html" title="interface in cn.nukkit.network">SourceInterface</a></code></dd>
@@ -359,7 +323,7 @@ implements <a href="../../../cn/nukkit/raknet/server/ServerInstance.html" title=
 <ul class="blockList">
 <li class="blockList">
 <h4>close</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.94">close</a>(<a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.124">close</a>(<a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../cn/nukkit/network/SourceInterface.html#close-cn.nukkit.Player-">close</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/network/SourceInterface.html" title="interface in cn.nukkit.network">SourceInterface</a></code></dd>
@@ -372,7 +336,7 @@ implements <a href="../../../cn/nukkit/raknet/server/ServerInstance.html" title=
 <ul class="blockList">
 <li class="blockList">
 <h4>close</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.99">close</a>(<a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.129">close</a>(<a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
                   java.lang.String&nbsp;reason)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -386,7 +350,7 @@ implements <a href="../../../cn/nukkit/raknet/server/ServerInstance.html" title=
 <ul class="blockList">
 <li class="blockList">
 <h4>shutdown</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.111">shutdown</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.137">shutdown</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../cn/nukkit/network/SourceInterface.html#shutdown--">shutdown</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/network/SourceInterface.html" title="interface in cn.nukkit.network">SourceInterface</a></code></dd>
@@ -399,125 +363,64 @@ implements <a href="../../../cn/nukkit/raknet/server/ServerInstance.html" title=
 <ul class="blockList">
 <li class="blockList">
 <h4>emergencyShutdown</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.116">emergencyShutdown</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.143">emergencyShutdown</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../cn/nukkit/network/SourceInterface.html#emergencyShutdown--">emergencyShutdown</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/network/SourceInterface.html" title="interface in cn.nukkit.network">SourceInterface</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="openSession-java.lang.String-java.lang.String-int-long-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>openSession</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.121">openSession</a>(java.lang.String&nbsp;identifier,
-                        java.lang.String&nbsp;address,
-                        int&nbsp;port,
-                        long&nbsp;clientID)</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../cn/nukkit/raknet/server/ServerInstance.html#openSession-java.lang.String-java.lang.String-int-long-">openSession</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/raknet/server/ServerInstance.html" title="interface in cn.nukkit.raknet.server">ServerInstance</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="handleEncapsulated-java.lang.String-cn.nukkit.raknet.protocol.EncapsulatedPacket-int-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>handleEncapsulated</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.140">handleEncapsulated</a>(java.lang.String&nbsp;identifier,
-                               <a href="../../../cn/nukkit/raknet/protocol/EncapsulatedPacket.html" title="class in cn.nukkit.raknet.protocol">EncapsulatedPacket</a>&nbsp;packet,
-                               int&nbsp;flags)</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../cn/nukkit/raknet/server/ServerInstance.html#handleEncapsulated-java.lang.String-cn.nukkit.raknet.protocol.EncapsulatedPacket-int-">handleEncapsulated</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/raknet/server/ServerInstance.html" title="interface in cn.nukkit.raknet.server">ServerInstance</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="blockAddress-java.lang.String-">
+<a name="blockAddress-java.net.InetAddress-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>blockAddress</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.178">blockAddress</a>(java.lang.String&nbsp;address)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.149">blockAddress</a>(java.net.InetAddress&nbsp;address)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../cn/nukkit/network/AdvancedSourceInterface.html#blockAddress-java.lang.String-">blockAddress</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/network/AdvancedSourceInterface.html" title="interface in cn.nukkit.network">AdvancedSourceInterface</a></code></dd>
+<dd><code><a href="../../../cn/nukkit/network/AdvancedSourceInterface.html#blockAddress-java.net.InetAddress-">blockAddress</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/network/AdvancedSourceInterface.html" title="interface in cn.nukkit.network">AdvancedSourceInterface</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="blockAddress-java.lang.String-int-">
+<a name="blockAddress-java.net.InetAddress-int-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>blockAddress</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.183">blockAddress</a>(java.lang.String&nbsp;address,
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.154">blockAddress</a>(java.net.InetAddress&nbsp;address,
                          int&nbsp;timeout)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../cn/nukkit/network/AdvancedSourceInterface.html#blockAddress-java.lang.String-int-">blockAddress</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/network/AdvancedSourceInterface.html" title="interface in cn.nukkit.network">AdvancedSourceInterface</a></code></dd>
+<dd><code><a href="../../../cn/nukkit/network/AdvancedSourceInterface.html#blockAddress-java.net.InetAddress-int-">blockAddress</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/network/AdvancedSourceInterface.html" title="interface in cn.nukkit.network">AdvancedSourceInterface</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="unblockAddress-java.lang.String-">
+<a name="unblockAddress-java.net.InetAddress-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>unblockAddress</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.188">unblockAddress</a>(java.lang.String&nbsp;address)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.159">unblockAddress</a>(java.net.InetAddress&nbsp;address)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../cn/nukkit/network/AdvancedSourceInterface.html#unblockAddress-java.lang.String-">unblockAddress</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/network/AdvancedSourceInterface.html" title="interface in cn.nukkit.network">AdvancedSourceInterface</a></code></dd>
+<dd><code><a href="../../../cn/nukkit/network/AdvancedSourceInterface.html#unblockAddress-java.net.InetAddress-">unblockAddress</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/network/AdvancedSourceInterface.html" title="interface in cn.nukkit.network">AdvancedSourceInterface</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="handleRaw-java.lang.String-int-byte:A-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>handleRaw</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.193">handleRaw</a>(java.lang.String&nbsp;address,
-                      int&nbsp;port,
-                      byte[]&nbsp;payload)</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../cn/nukkit/raknet/server/ServerInstance.html#handleRaw-java.lang.String-int-byte:A-">handleRaw</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/raknet/server/ServerInstance.html" title="interface in cn.nukkit.raknet.server">ServerInstance</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="sendRawPacket-java.lang.String-int-byte:A-">
+<a name="sendRawPacket-java.net.InetSocketAddress-io.netty.buffer.ByteBuf-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>sendRawPacket</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.198">sendRawPacket</a>(java.lang.String&nbsp;address,
-                          int&nbsp;port,
-                          byte[]&nbsp;payload)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.164">sendRawPacket</a>(java.net.InetSocketAddress&nbsp;socketAddress,
+                          io.netty.buffer.ByteBuf&nbsp;payload)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../cn/nukkit/network/AdvancedSourceInterface.html#sendRawPacket-java.lang.String-int-byte:A-">sendRawPacket</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/network/AdvancedSourceInterface.html" title="interface in cn.nukkit.network">AdvancedSourceInterface</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="notifyACK-java.lang.String-int-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>notifyACK</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.203">notifyACK</a>(java.lang.String&nbsp;identifier,
-                      int&nbsp;identifierACK)</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../cn/nukkit/raknet/server/ServerInstance.html#notifyACK-java.lang.String-int-">notifyACK</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/raknet/server/ServerInstance.html" title="interface in cn.nukkit.raknet.server">ServerInstance</a></code></dd>
+<dd><code><a href="../../../cn/nukkit/network/AdvancedSourceInterface.html#sendRawPacket-java.net.InetSocketAddress-io.netty.buffer.ByteBuf-">sendRawPacket</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/network/AdvancedSourceInterface.html" title="interface in cn.nukkit.network">AdvancedSourceInterface</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -527,33 +430,10 @@ implements <a href="../../../cn/nukkit/raknet/server/ServerInstance.html" title=
 <ul class="blockList">
 <li class="blockList">
 <h4>setName</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.211">setName</a>(java.lang.String&nbsp;name)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.169">setName</a>(java.lang.String&nbsp;name)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../cn/nukkit/network/SourceInterface.html#setName-java.lang.String-">setName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/network/SourceInterface.html" title="interface in cn.nukkit.network">SourceInterface</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="setPortCheck-boolean-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setPortCheck</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.225">setPortCheck</a>(boolean&nbsp;value)</pre>
-</li>
-</ul>
-<a name="handleOption-java.lang.String-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>handleOption</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.230">handleOption</a>(java.lang.String&nbsp;name,
-                         java.lang.String&nbsp;value)</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../cn/nukkit/raknet/server/ServerInstance.html#handleOption-java.lang.String-java.lang.String-">handleOption</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/raknet/server/ServerInstance.html" title="interface in cn.nukkit.raknet.server">ServerInstance</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -563,7 +443,7 @@ implements <a href="../../../cn/nukkit/raknet/server/ServerInstance.html" title=
 <ul class="blockList">
 <li class="blockList">
 <h4>putPacket</h4>
-<pre>public&nbsp;java.lang.Integer&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.238">putPacket</a>(<a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
+<pre>public&nbsp;java.lang.Integer&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.179">putPacket</a>(<a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
                                    <a href="../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -577,7 +457,7 @@ implements <a href="../../../cn/nukkit/raknet/server/ServerInstance.html" title=
 <ul class="blockList">
 <li class="blockList">
 <h4>putPacket</h4>
-<pre>public&nbsp;java.lang.Integer&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.243">putPacket</a>(<a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
+<pre>public&nbsp;java.lang.Integer&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.184">putPacket</a>(<a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
                                    <a href="../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet,
                                    boolean&nbsp;needACK)</pre>
 <dl>
@@ -589,16 +469,69 @@ implements <a href="../../../cn/nukkit/raknet/server/ServerInstance.html" title=
 <a name="putPacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-boolean-boolean-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>putPacket</h4>
-<pre>public&nbsp;java.lang.Integer&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.248">putPacket</a>(<a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
+<pre>public&nbsp;java.lang.Integer&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.189">putPacket</a>(<a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
                                    <a href="../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet,
                                    boolean&nbsp;needACK,
                                    boolean&nbsp;immediate)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../cn/nukkit/network/SourceInterface.html#putPacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-boolean-boolean-">putPacket</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/network/SourceInterface.html" title="interface in cn.nukkit.network">SourceInterface</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="onConnectionRequest-java.net.InetSocketAddress-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onConnectionRequest</h4>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.199">onConnectionRequest</a>(java.net.InetSocketAddress&nbsp;inetSocketAddress)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>onConnectionRequest</code>&nbsp;in interface&nbsp;<code>com.nukkitx.network.raknet.RakNetServerListener</code></dd>
+</dl>
+</li>
+</ul>
+<a name="onQuery-java.net.InetSocketAddress-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onQuery</h4>
+<pre>public&nbsp;byte[]&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.204">onQuery</a>(java.net.InetSocketAddress&nbsp;inetSocketAddress)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>onQuery</code>&nbsp;in interface&nbsp;<code>com.nukkitx.network.raknet.RakNetServerListener</code></dd>
+</dl>
+</li>
+</ul>
+<a name="onSessionCreation-com.nukkitx.network.raknet.RakNetServerSession-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onSessionCreation</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.209">onSessionCreation</a>(com.nukkitx.network.raknet.RakNetServerSession&nbsp;session)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>onSessionCreation</code>&nbsp;in interface&nbsp;<code>com.nukkitx.network.raknet.RakNetServerListener</code></dd>
+</dl>
+</li>
+</ul>
+<a name="onUnhandledDatagram-io.netty.channel.ChannelHandlerContext-io.netty.channel.socket.DatagramPacket-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>onUnhandledDatagram</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/RakNetInterface.html#line.221">onUnhandledDatagram</a>(io.netty.channel.ChannelHandlerContext&nbsp;ctx,
+                                io.netty.channel.socket.DatagramPacket&nbsp;datagramPacket)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>onUnhandledDatagram</code>&nbsp;in interface&nbsp;<code>com.nukkitx.network.raknet.RakNetServerListener</code></dd>
 </dl>
 </li>
 </ul>

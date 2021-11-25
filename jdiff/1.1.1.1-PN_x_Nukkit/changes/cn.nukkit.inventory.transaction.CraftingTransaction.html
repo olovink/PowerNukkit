@@ -34,7 +34,7 @@ cn.nukkit.inventory.transaction.CraftingTransaction
 <TR>
   <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<B>PREV CLASS</B>&nbsp;
-&nbsp;<B>NEXT CLASS</B>&nbsp;
+&nbsp;<A HREF="cn.nukkit.inventory.transaction.InventoryTransaction.html"><B>NEXT CLASS</B></A>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <A HREF="../changes.html" TARGET="_top"><B>FRAMES</B></A>  &nbsp;
   &nbsp;<A HREF="cn.nukkit.inventory.transaction.CraftingTransaction.html" TARGET="_top"><B>NO FRAMES</B></A></FONT></TD>
@@ -53,6 +53,43 @@ Class cn.nukkit.inventory.transaction.<A HREF="../../../javadoc/1.1.1.1-PN/cn/nu
 <a NAME="constructors"></a>
 <a NAME="methods"></a>
 <p>
+<a NAME="Removed"></a>
+<TABLE summary="Removed Methods" BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+  <TD VALIGN="TOP" COLSPAN=2><FONT SIZE="+1"><B>Removed Methods</B></FONT></TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="cn.nukkit.inventory.transaction.CraftingTransaction.checkForCraftingPart_removed(java.util.List<cn.nukkit.inventory.transaction.action.InventoryAction>)"></A>
+  <nobr><code>boolean</code>&nbsp;<A HREF="../CloudburstNukkit-29c2a366/cn/nukkit/inventory/transaction/CraftingTransaction.html#checkForCraftingPart(java.util.List<cn.nukkit.inventory.transaction.action.InventoryAction>)" target="_top"><tt>checkForCraftingPart</tt></A>(<code>List&lt;InventoryAction&gt;</code>)</nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="cn.nukkit.inventory.transaction.CraftingTransaction.getInputList_removed()"></A>
+  <nobr><code>List&lt;Item&gt;</code>&nbsp;<A HREF="../CloudburstNukkit-29c2a366/cn/nukkit/inventory/transaction/CraftingTransaction.html#getInputList()" target="_top"><tt>getInputList</tt></A>()</nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<p>
+<a NAME="Added"></a>
+<TABLE summary="Added Methods" BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+  <TD VALIGN="TOP" COLSPAN=2><FONT SIZE="+1"><B>Added Methods</B></FONT></TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="cn.nukkit.inventory.transaction.CraftingTransaction.getInputMap_added()"></A>
+  <nobr><code>Item[][]</code>&nbsp;<A HREF="../../../javadoc/1.1.1.1-PN/cn/nukkit/inventory/transaction/CraftingTransaction.html#getInputMap()" target="_top"><tt>getInputMap</tt></A>()</nobr>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<p>
 <a NAME="Changed"></a>
 <TABLE summary="Changed Methods" BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
 <TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
@@ -65,6 +102,26 @@ Class cn.nukkit.inventory.transaction.<A HREF="../../../javadoc/1.1.1.1-PN/cn/nu
   </TD>
   <TD VALIGN="TOP" WIDTH="30%">
 Change in return type from <code>CraftingRecipe</code> to <code>Recipe</code>.<br>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="cn.nukkit.inventory.transaction.CraftingTransaction.setExtraOutput_changed(int, cn.nukkit.item.Item)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../../javadoc/1.1.1.1-PN/cn/nukkit/inventory/transaction/CraftingTransaction.html#setExtraOutput(int, cn.nukkit.item.Item)" target="_top"><tt>setExtraOutput</tt></A>(<code>int,</nobr> Item<nobr><nobr></code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in signature from <code>Item</code> to (<code>int, Item</code>).<br>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="cn.nukkit.inventory.transaction.CraftingTransaction.setInput_changed(int, cn.nukkit.item.Item)"></A>
+  <nobr><code>void</code>&nbsp;<A HREF="../../../javadoc/1.1.1.1-PN/cn/nukkit/inventory/transaction/CraftingTransaction.html#setInput(int, cn.nukkit.item.Item)" target="_top"><tt>setInput</tt></A>(<code>int,</nobr> Item<nobr><nobr></code>)  </nobr>
+  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in signature from <code>Item</code> to (<code>int, Item</code>).<br>
   </TD>
   <TD>&nbsp;</TD>
 </TR>
@@ -94,10 +151,28 @@ Change in return type from <code>CraftingRecipe</code> to <code>Recipe</code>.<b
 </TR>
 <TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
   <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="cn.nukkit.inventory.transaction.CraftingTransaction.inputs"></A>
+  <nobr><code>Item[][]</code>&nbsp;<A HREF="../../../javadoc/1.1.1.1-PN/cn/nukkit/inventory/transaction/CraftingTransaction.html#inputs" target="_top"><tt>inputs</tt></A></nobr>  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in type from <code>List&lt;Item&gt;</code> to <code>Item[][]</code>.<br>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
   <A NAME="cn.nukkit.inventory.transaction.CraftingTransaction.recipe"></A>
   <nobr><code>Recipe</code>&nbsp;<A HREF="../../../javadoc/1.1.1.1-PN/cn/nukkit/inventory/transaction/CraftingTransaction.html#recipe" target="_top"><tt>recipe</tt></A></nobr>  </TD>
   <TD VALIGN="TOP" WIDTH="30%">
 Change in type from <code>CraftingRecipe</code> to <code>Recipe</code>.<br>
+  </TD>
+  <TD>&nbsp;</TD>
+</TR>
+<TR BGCOLOR="#FFFFFF" CLASS="TableRowColor">
+  <TD VALIGN="TOP" WIDTH="25%">
+  <A NAME="cn.nukkit.inventory.transaction.CraftingTransaction.secondaryOutputs"></A>
+  <nobr><code>Item[][]</code>&nbsp;<A HREF="../../../javadoc/1.1.1.1-PN/cn/nukkit/inventory/transaction/CraftingTransaction.html#secondaryOutputs" target="_top"><tt>secondaryOutputs</tt></A></nobr>  </TD>
+  <TD VALIGN="TOP" WIDTH="30%">
+Change in type from <code>List&lt;Item&gt;</code> to <code>Item[][]</code>.<br>
   </TD>
   <TD>&nbsp;</TD>
 </TR>
@@ -125,7 +200,7 @@ Change in type from <code>CraftingRecipe</code> to <code>Recipe</code>.<br>
 <TR>
   <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<B>PREV CLASS</B>&nbsp;
-&nbsp;<B>NEXT CLASS</B>&nbsp;
+&nbsp;<A HREF="cn.nukkit.inventory.transaction.InventoryTransaction.html"><B>NEXT CLASS</B></A>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <A HREF="../changes.html" TARGET="_top"><B>FRAMES</B></A>  &nbsp;
   &nbsp;<A HREF="cn.nukkit.inventory.transaction.CraftingTransaction.html" TARGET="_top"><B>NO FRAMES</B></A></FONT></TD>

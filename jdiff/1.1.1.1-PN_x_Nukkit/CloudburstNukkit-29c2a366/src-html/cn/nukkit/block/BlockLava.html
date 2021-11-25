@@ -105,7 +105,7 @@
 <span class="sourceLineNo">097</span>                            this.level.getServer().getPluginManager().callEvent(e);<a name="line.97"></a>
 <span class="sourceLineNo">098</span><a name="line.98"></a>
 <span class="sourceLineNo">099</span>                            if (!e.isCancelled()) {<a name="line.99"></a>
-<span class="sourceLineNo">100</span>                                BlockFire fire = new BlockFire();<a name="line.100"></a>
+<span class="sourceLineNo">100</span>                                Block fire = Block.get(BlockID.FIRE);<a name="line.100"></a>
 <span class="sourceLineNo">101</span>                                this.getLevel().setBlock(v, fire, true);<a name="line.101"></a>
 <span class="sourceLineNo">102</span>                                this.getLevel().scheduleUpdate(fire, fire.tickRate());<a name="line.102"></a>
 <span class="sourceLineNo">103</span>                                return Level.BLOCK_UPDATE_RANDOM;<a name="line.103"></a>
@@ -127,7 +127,7 @@
 <span class="sourceLineNo">119</span>                        this.level.getServer().getPluginManager().callEvent(e);<a name="line.119"></a>
 <span class="sourceLineNo">120</span><a name="line.120"></a>
 <span class="sourceLineNo">121</span>                        if (!e.isCancelled()) {<a name="line.121"></a>
-<span class="sourceLineNo">122</span>                            BlockFire fire = new BlockFire();<a name="line.122"></a>
+<span class="sourceLineNo">122</span>                            Block fire = Block.get(BlockID.FIRE);<a name="line.122"></a>
 <span class="sourceLineNo">123</span>                            this.getLevel().setBlock(v, fire, true);<a name="line.123"></a>
 <span class="sourceLineNo">124</span>                            this.getLevel().scheduleUpdate(fire, fire.tickRate());<a name="line.124"></a>
 <span class="sourceLineNo">125</span>                        }<a name="line.125"></a>
@@ -156,57 +156,60 @@
 <span class="sourceLineNo">148</span><a name="line.148"></a>
 <span class="sourceLineNo">149</span>    @Override<a name="line.149"></a>
 <span class="sourceLineNo">150</span>    public BlockLiquid getBlock(int meta) {<a name="line.150"></a>
-<span class="sourceLineNo">151</span>        return new BlockLava(meta);<a name="line.151"></a>
+<span class="sourceLineNo">151</span>        return (BlockLiquid) Block.get(BlockID.LAVA, meta);<a name="line.151"></a>
 <span class="sourceLineNo">152</span>    }<a name="line.152"></a>
 <span class="sourceLineNo">153</span><a name="line.153"></a>
 <span class="sourceLineNo">154</span>    @Override<a name="line.154"></a>
 <span class="sourceLineNo">155</span>    public int tickRate() {<a name="line.155"></a>
-<span class="sourceLineNo">156</span>        return 30;<a name="line.156"></a>
-<span class="sourceLineNo">157</span>    }<a name="line.157"></a>
-<span class="sourceLineNo">158</span><a name="line.158"></a>
-<span class="sourceLineNo">159</span>    @Override<a name="line.159"></a>
-<span class="sourceLineNo">160</span>    public int getFlowDecayPerBlock() {<a name="line.160"></a>
-<span class="sourceLineNo">161</span>        if (this.level.getDimension() == Level.DIMENSION_NETHER) {<a name="line.161"></a>
-<span class="sourceLineNo">162</span>            return 1;<a name="line.162"></a>
-<span class="sourceLineNo">163</span>        }<a name="line.163"></a>
-<span class="sourceLineNo">164</span>        return 2;<a name="line.164"></a>
-<span class="sourceLineNo">165</span>    }<a name="line.165"></a>
-<span class="sourceLineNo">166</span><a name="line.166"></a>
-<span class="sourceLineNo">167</span>    @Override<a name="line.167"></a>
-<span class="sourceLineNo">168</span>    protected void checkForHarden(){ <a name="line.168"></a>
-<span class="sourceLineNo">169</span>        Block colliding = null;<a name="line.169"></a>
-<span class="sourceLineNo">170</span>        for(int side = 1; side &lt; 6; ++side){ //don't check downwards side<a name="line.170"></a>
-<span class="sourceLineNo">171</span>            Block blockSide = this.getSide(BlockFace.fromIndex(side));<a name="line.171"></a>
-<span class="sourceLineNo">172</span>            if(blockSide instanceof BlockWater){<a name="line.172"></a>
-<span class="sourceLineNo">173</span>                colliding = blockSide;<a name="line.173"></a>
-<span class="sourceLineNo">174</span>                break;<a name="line.174"></a>
-<span class="sourceLineNo">175</span>            }<a name="line.175"></a>
-<span class="sourceLineNo">176</span>        }<a name="line.176"></a>
-<span class="sourceLineNo">177</span>        if(colliding != null){<a name="line.177"></a>
-<span class="sourceLineNo">178</span>            if(this.getDamage() == 0){<a name="line.178"></a>
-<span class="sourceLineNo">179</span>                this.liquidCollide(colliding, new BlockObsidian());<a name="line.179"></a>
-<span class="sourceLineNo">180</span>            }else if(this.getDamage() &lt;= 4){<a name="line.180"></a>
-<span class="sourceLineNo">181</span>                this.liquidCollide(colliding, new BlockCobblestone());<a name="line.181"></a>
-<span class="sourceLineNo">182</span>            }<a name="line.182"></a>
-<span class="sourceLineNo">183</span>        }<a name="line.183"></a>
-<span class="sourceLineNo">184</span>    }<a name="line.184"></a>
-<span class="sourceLineNo">185</span><a name="line.185"></a>
-<span class="sourceLineNo">186</span>    @Override<a name="line.186"></a>
-<span class="sourceLineNo">187</span>    protected void flowIntoBlock(Block block, int newFlowDecay){<a name="line.187"></a>
-<span class="sourceLineNo">188</span>        if(block instanceof BlockWater){<a name="line.188"></a>
-<span class="sourceLineNo">189</span>            ((BlockLiquid) block).liquidCollide(this, new BlockStone());<a name="line.189"></a>
-<span class="sourceLineNo">190</span>        }else{<a name="line.190"></a>
-<span class="sourceLineNo">191</span>            super.flowIntoBlock(block, newFlowDecay);<a name="line.191"></a>
-<span class="sourceLineNo">192</span>        }<a name="line.192"></a>
-<span class="sourceLineNo">193</span>    }<a name="line.193"></a>
-<span class="sourceLineNo">194</span><a name="line.194"></a>
-<span class="sourceLineNo">195</span>    @Override<a name="line.195"></a>
-<span class="sourceLineNo">196</span>    public void addVelocityToEntity(Entity entity, Vector3 vector) {<a name="line.196"></a>
-<span class="sourceLineNo">197</span>        if (!(entity instanceof EntityPrimedTNT)) {<a name="line.197"></a>
-<span class="sourceLineNo">198</span>            super.addVelocityToEntity(entity, vector);<a name="line.198"></a>
-<span class="sourceLineNo">199</span>        }<a name="line.199"></a>
-<span class="sourceLineNo">200</span>    }<a name="line.200"></a>
-<span class="sourceLineNo">201</span>}<a name="line.201"></a>
+<span class="sourceLineNo">156</span>        if (this.level.getDimension() == Level.DIMENSION_NETHER) {<a name="line.156"></a>
+<span class="sourceLineNo">157</span>            return 10;<a name="line.157"></a>
+<span class="sourceLineNo">158</span>        }<a name="line.158"></a>
+<span class="sourceLineNo">159</span>        return 30;<a name="line.159"></a>
+<span class="sourceLineNo">160</span>    }<a name="line.160"></a>
+<span class="sourceLineNo">161</span><a name="line.161"></a>
+<span class="sourceLineNo">162</span>    @Override<a name="line.162"></a>
+<span class="sourceLineNo">163</span>    public int getFlowDecayPerBlock() {<a name="line.163"></a>
+<span class="sourceLineNo">164</span>        if (this.level.getDimension() == Level.DIMENSION_NETHER) {<a name="line.164"></a>
+<span class="sourceLineNo">165</span>            return 1;<a name="line.165"></a>
+<span class="sourceLineNo">166</span>        }<a name="line.166"></a>
+<span class="sourceLineNo">167</span>        return 2;<a name="line.167"></a>
+<span class="sourceLineNo">168</span>    }<a name="line.168"></a>
+<span class="sourceLineNo">169</span><a name="line.169"></a>
+<span class="sourceLineNo">170</span>    @Override<a name="line.170"></a>
+<span class="sourceLineNo">171</span>    protected void checkForHarden(){ <a name="line.171"></a>
+<span class="sourceLineNo">172</span>        Block colliding = null;<a name="line.172"></a>
+<span class="sourceLineNo">173</span>        for(int side = 1; side &lt; 6; ++side){ //don't check downwards side<a name="line.173"></a>
+<span class="sourceLineNo">174</span>            Block blockSide = this.getSide(BlockFace.fromIndex(side));<a name="line.174"></a>
+<span class="sourceLineNo">175</span>            if(blockSide instanceof BlockWater){<a name="line.175"></a>
+<span class="sourceLineNo">176</span>                colliding = blockSide;<a name="line.176"></a>
+<span class="sourceLineNo">177</span>                break;<a name="line.177"></a>
+<span class="sourceLineNo">178</span>            }<a name="line.178"></a>
+<span class="sourceLineNo">179</span>        }<a name="line.179"></a>
+<span class="sourceLineNo">180</span>        if(colliding != null){<a name="line.180"></a>
+<span class="sourceLineNo">181</span>            if(this.getDamage() == 0){<a name="line.181"></a>
+<span class="sourceLineNo">182</span>                this.liquidCollide(colliding, Block.get(BlockID.OBSIDIAN));<a name="line.182"></a>
+<span class="sourceLineNo">183</span>            }else if(this.getDamage() &lt;= 4){<a name="line.183"></a>
+<span class="sourceLineNo">184</span>                this.liquidCollide(colliding, Block.get(BlockID.COBBLESTONE));<a name="line.184"></a>
+<span class="sourceLineNo">185</span>            }<a name="line.185"></a>
+<span class="sourceLineNo">186</span>        }<a name="line.186"></a>
+<span class="sourceLineNo">187</span>    }<a name="line.187"></a>
+<span class="sourceLineNo">188</span><a name="line.188"></a>
+<span class="sourceLineNo">189</span>    @Override<a name="line.189"></a>
+<span class="sourceLineNo">190</span>    protected void flowIntoBlock(Block block, int newFlowDecay){<a name="line.190"></a>
+<span class="sourceLineNo">191</span>        if(block instanceof BlockWater){<a name="line.191"></a>
+<span class="sourceLineNo">192</span>            ((BlockLiquid) block).liquidCollide(this, Block.get(BlockID.STONE));<a name="line.192"></a>
+<span class="sourceLineNo">193</span>        }else{<a name="line.193"></a>
+<span class="sourceLineNo">194</span>            super.flowIntoBlock(block, newFlowDecay);<a name="line.194"></a>
+<span class="sourceLineNo">195</span>        }<a name="line.195"></a>
+<span class="sourceLineNo">196</span>    }<a name="line.196"></a>
+<span class="sourceLineNo">197</span><a name="line.197"></a>
+<span class="sourceLineNo">198</span>    @Override<a name="line.198"></a>
+<span class="sourceLineNo">199</span>    public void addVelocityToEntity(Entity entity, Vector3 vector) {<a name="line.199"></a>
+<span class="sourceLineNo">200</span>        if (!(entity instanceof EntityPrimedTNT)) {<a name="line.200"></a>
+<span class="sourceLineNo">201</span>            super.addVelocityToEntity(entity, vector);<a name="line.201"></a>
+<span class="sourceLineNo">202</span>        }<a name="line.202"></a>
+<span class="sourceLineNo">203</span>    }<a name="line.203"></a>
+<span class="sourceLineNo">204</span>}<a name="line.204"></a>
 
 
 

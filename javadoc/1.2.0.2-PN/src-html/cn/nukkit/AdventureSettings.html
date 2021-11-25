@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package cn.nukkit;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>import cn.nukkit.network.protocol.AdventureSettingsPacket;<a name="line.3"></a>
+<span class="sourceLineNo">004</span><a name="line.4"></a>
+<span class="sourceLineNo">005</span>import java.util.EnumMap;<a name="line.5"></a>
+<span class="sourceLineNo">006</span>import java.util.Map;<a name="line.6"></a>
+<span class="sourceLineNo">007</span><a name="line.7"></a>
+<span class="sourceLineNo">008</span>/**<a name="line.8"></a>
+<span class="sourceLineNo">009</span> * Nukkit Project<a name="line.9"></a>
+<span class="sourceLineNo">010</span> * Author: MagicDroidX<a name="line.10"></a>
+<span class="sourceLineNo">011</span> */<a name="line.11"></a>
+<span class="sourceLineNo">012</span>public class AdventureSettings implements Cloneable {<a name="line.12"></a>
+<span class="sourceLineNo">013</span><a name="line.13"></a>
+<span class="sourceLineNo">014</span>    public static final int PERMISSION_NORMAL = 0;<a name="line.14"></a>
+<span class="sourceLineNo">015</span>    public static final int PERMISSION_OPERATOR = 1;<a name="line.15"></a>
+<span class="sourceLineNo">016</span>    public static final int PERMISSION_HOST = 2;<a name="line.16"></a>
+<span class="sourceLineNo">017</span>    public static final int PERMISSION_AUTOMATION = 3;<a name="line.17"></a>
+<span class="sourceLineNo">018</span>    public static final int PERMISSION_ADMIN = 4;<a name="line.18"></a>
+<span class="sourceLineNo">019</span><a name="line.19"></a>
+<span class="sourceLineNo">020</span>    private Map&lt;Type, Boolean&gt; values = new EnumMap&lt;&gt;(Type.class);<a name="line.20"></a>
+<span class="sourceLineNo">021</span><a name="line.21"></a>
+<span class="sourceLineNo">022</span>    private Player player;<a name="line.22"></a>
+<span class="sourceLineNo">023</span><a name="line.23"></a>
+<span class="sourceLineNo">024</span>    public AdventureSettings(Player player) {<a name="line.24"></a>
+<span class="sourceLineNo">025</span>        this.player = player;<a name="line.25"></a>
+<span class="sourceLineNo">026</span>    }<a name="line.26"></a>
+<span class="sourceLineNo">027</span><a name="line.27"></a>
+<span class="sourceLineNo">028</span>    public AdventureSettings clone(Player newPlayer) {<a name="line.28"></a>
+<span class="sourceLineNo">029</span>        try {<a name="line.29"></a>
+<span class="sourceLineNo">030</span>            AdventureSettings settings = (AdventureSettings) super.clone();<a name="line.30"></a>
+<span class="sourceLineNo">031</span>            settings.player = newPlayer;<a name="line.31"></a>
+<span class="sourceLineNo">032</span>            return settings;<a name="line.32"></a>
+<span class="sourceLineNo">033</span>        } catch (CloneNotSupportedException e) {<a name="line.33"></a>
+<span class="sourceLineNo">034</span>            return null;<a name="line.34"></a>
+<span class="sourceLineNo">035</span>        }<a name="line.35"></a>
+<span class="sourceLineNo">036</span>    }<a name="line.36"></a>
+<span class="sourceLineNo">037</span><a name="line.37"></a>
+<span class="sourceLineNo">038</span>    public AdventureSettings set(Type type, boolean value) {<a name="line.38"></a>
+<span class="sourceLineNo">039</span>        this.values.put(type, value);<a name="line.39"></a>
+<span class="sourceLineNo">040</span>        return this;<a name="line.40"></a>
+<span class="sourceLineNo">041</span>    }<a name="line.41"></a>
+<span class="sourceLineNo">042</span><a name="line.42"></a>
+<span class="sourceLineNo">043</span>    public boolean get(Type type) {<a name="line.43"></a>
+<span class="sourceLineNo">044</span>        Boolean value = this.values.get(type);<a name="line.44"></a>
+<span class="sourceLineNo">045</span><a name="line.45"></a>
+<span class="sourceLineNo">046</span>        return value == null ? type.getDefaultValue() : value;<a name="line.46"></a>
+<span class="sourceLineNo">047</span>    }<a name="line.47"></a>
+<span class="sourceLineNo">048</span><a name="line.48"></a>
+<span class="sourceLineNo">049</span>    public void update() {<a name="line.49"></a>
+<span class="sourceLineNo">050</span>        AdventureSettingsPacket pk = new AdventureSettingsPacket();<a name="line.50"></a>
+<span class="sourceLineNo">051</span>        for (Type t : Type.values()) {<a name="line.51"></a>
+<span class="sourceLineNo">052</span>            pk.setFlag(t.getId(), get(t));<a name="line.52"></a>
+<span class="sourceLineNo">053</span>        }<a name="line.53"></a>
+<span class="sourceLineNo">054</span><a name="line.54"></a>
+<span class="sourceLineNo">055</span>        pk.commandPermission = (player.isOp() ? AdventureSettingsPacket.PERMISSION_OPERATOR : AdventureSettingsPacket.PERMISSION_NORMAL);<a name="line.55"></a>
+<span class="sourceLineNo">056</span>        pk.playerPermission = (player.isOp() ? Player.PERMISSION_OPERATOR : Player.PERMISSION_MEMBER);<a name="line.56"></a>
+<span class="sourceLineNo">057</span>        pk.entityUniqueId = player.getId();<a name="line.57"></a>
+<span class="sourceLineNo">058</span><a name="line.58"></a>
+<span class="sourceLineNo">059</span>        Server.broadcastPacket(player.getViewers().values(), pk);<a name="line.59"></a>
+<span class="sourceLineNo">060</span>        player.dataPacket(pk);<a name="line.60"></a>
+<span class="sourceLineNo">061</span><a name="line.61"></a>
+<span class="sourceLineNo">062</span>        player.resetInAirTicks();<a name="line.62"></a>
+<span class="sourceLineNo">063</span>    }<a name="line.63"></a>
+<span class="sourceLineNo">064</span><a name="line.64"></a>
+<span class="sourceLineNo">065</span>    public enum Type {<a name="line.65"></a>
+<span class="sourceLineNo">066</span>        WORLD_IMMUTABLE(AdventureSettingsPacket.WORLD_IMMUTABLE, false),<a name="line.66"></a>
+<span class="sourceLineNo">067</span>        AUTO_JUMP(AdventureSettingsPacket.AUTO_JUMP, true),<a name="line.67"></a>
+<span class="sourceLineNo">068</span>        ALLOW_FLIGHT(AdventureSettingsPacket.ALLOW_FLIGHT, false),<a name="line.68"></a>
+<span class="sourceLineNo">069</span>        NO_CLIP(AdventureSettingsPacket.NO_CLIP, false),<a name="line.69"></a>
+<span class="sourceLineNo">070</span>        WORLD_BUILDER(AdventureSettingsPacket.WORLD_BUILDER, true),<a name="line.70"></a>
+<span class="sourceLineNo">071</span>        FLYING(AdventureSettingsPacket.FLYING, false),<a name="line.71"></a>
+<span class="sourceLineNo">072</span>        MUTED(AdventureSettingsPacket.MUTED, false),<a name="line.72"></a>
+<span class="sourceLineNo">073</span>        BUILD_AND_MINE(AdventureSettingsPacket.BUILD_AND_MINE, true),<a name="line.73"></a>
+<span class="sourceLineNo">074</span>        DOORS_AND_SWITCHED(AdventureSettingsPacket.DOORS_AND_SWITCHES, true),<a name="line.74"></a>
+<span class="sourceLineNo">075</span>        OPEN_CONTAINERS(AdventureSettingsPacket.OPEN_CONTAINERS, true),<a name="line.75"></a>
+<span class="sourceLineNo">076</span>        ATTACK_PLAYERS(AdventureSettingsPacket.ATTACK_PLAYERS, true),<a name="line.76"></a>
+<span class="sourceLineNo">077</span>        ATTACK_MOBS(AdventureSettingsPacket.ATTACK_MOBS, true),<a name="line.77"></a>
+<span class="sourceLineNo">078</span>        OPERATOR(AdventureSettingsPacket.OPERATOR, false),<a name="line.78"></a>
+<span class="sourceLineNo">079</span>        TELEPORT(AdventureSettingsPacket.TELEPORT, false);<a name="line.79"></a>
+<span class="sourceLineNo">080</span><a name="line.80"></a>
+<span class="sourceLineNo">081</span>        private final int id;<a name="line.81"></a>
+<span class="sourceLineNo">082</span>        private final boolean defaultValue;<a name="line.82"></a>
+<span class="sourceLineNo">083</span><a name="line.83"></a>
+<span class="sourceLineNo">084</span>        Type(int id, boolean defaultValue) {<a name="line.84"></a>
+<span class="sourceLineNo">085</span>            this.id = id;<a name="line.85"></a>
+<span class="sourceLineNo">086</span>            this.defaultValue = defaultValue;<a name="line.86"></a>
+<span class="sourceLineNo">087</span>        }<a name="line.87"></a>
+<span class="sourceLineNo">088</span><a name="line.88"></a>
+<span class="sourceLineNo">089</span>        public int getId() {<a name="line.89"></a>
+<span class="sourceLineNo">090</span>            return id;<a name="line.90"></a>
+<span class="sourceLineNo">091</span>        }<a name="line.91"></a>
+<span class="sourceLineNo">092</span><a name="line.92"></a>
+<span class="sourceLineNo">093</span>        public boolean getDefaultValue() {<a name="line.93"></a>
+<span class="sourceLineNo">094</span>            return this.defaultValue;<a name="line.94"></a>
+<span class="sourceLineNo">095</span>        }<a name="line.95"></a>
+<span class="sourceLineNo">096</span>    }<a name="line.96"></a>
+<span class="sourceLineNo">097</span>}<a name="line.97"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>

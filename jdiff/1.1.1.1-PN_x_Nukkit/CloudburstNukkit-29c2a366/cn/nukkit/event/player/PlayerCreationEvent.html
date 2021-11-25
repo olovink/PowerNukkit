@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":9,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":9,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -114,7 +114,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <hr>
 <br>
-<pre>public class <a href="../../../../src-html/cn/nukkit/event/player/PlayerCreationEvent.html#line.12">PlayerCreationEvent</a>
+<pre>public class <a href="../../../../src-html/cn/nukkit/event/player/PlayerCreationEvent.html#line.14">PlayerCreationEvent</a>
 extends <a href="../../../../cn/nukkit/event/Event.html" title="class in cn.nukkit.event">Event</a></pre>
 <div class="block">author: MagicDroidX
  Nukkit Project</div>
@@ -151,12 +151,11 @@ extends <a href="../../../../cn/nukkit/event/Event.html" title="class in cn.nukk
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerCreationEvent.html#PlayerCreationEvent-cn.nukkit.network.SourceInterface-java.lang.Class-java.lang.Class-java.lang.Long-java.lang.String-int-">PlayerCreationEvent</a></span>(<a href="../../../../cn/nukkit/network/SourceInterface.html" title="interface in cn.nukkit.network">SourceInterface</a>&nbsp;interfaz,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerCreationEvent.html#PlayerCreationEvent-cn.nukkit.network.SourceInterface-java.lang.Class-java.lang.Class-java.lang.Long-java.net.InetSocketAddress-">PlayerCreationEvent</a></span>(<a href="../../../../cn/nukkit/network/SourceInterface.html" title="interface in cn.nukkit.network">SourceInterface</a>&nbsp;interfaz,
                    java.lang.Class&lt;? extends <a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&gt;&nbsp;baseClass,
                    java.lang.Class&lt;? extends <a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&gt;&nbsp;playerClass,
                    java.lang.Long&nbsp;clientId,
-                   java.lang.String&nbsp;address,
-                   int&nbsp;port)</code>&nbsp;</td>
+                   java.net.InetSocketAddress&nbsp;socketAddress)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -202,10 +201,14 @@ extends <a href="../../../../cn/nukkit/event/Event.html" title="class in cn.nukk
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerCreationEvent.html#getPort--">getPort</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i7" class="rowColor">
+<td class="colFirst"><code>java.net.InetSocketAddress</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerCreationEvent.html#getSocketAddress--">getSocketAddress</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerCreationEvent.html#setBaseClass-java.lang.Class-">setBaseClass</a></span>(java.lang.Class&lt;? extends <a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&gt;&nbsp;baseClass)</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerCreationEvent.html#setPlayerClass-java.lang.Class-">setPlayerClass</a></span>(java.lang.Class&lt;? extends <a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&gt;&nbsp;playerClass)</code>&nbsp;</td>
 </tr>
@@ -238,7 +241,7 @@ extends <a href="../../../../cn/nukkit/event/Event.html" title="class in cn.nukk
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="PlayerCreationEvent-cn.nukkit.network.SourceInterface-java.lang.Class-java.lang.Class-java.lang.Long-java.lang.String-int-">
+<a name="PlayerCreationEvent-cn.nukkit.network.SourceInterface-java.lang.Class-java.lang.Class-java.lang.Long-java.net.InetSocketAddress-">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -248,8 +251,7 @@ extends <a href="../../../../cn/nukkit/event/Event.html" title="class in cn.nukk
                            java.lang.Class&lt;? extends <a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&gt;&nbsp;baseClass,
                            java.lang.Class&lt;? extends <a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&gt;&nbsp;playerClass,
                            java.lang.Long&nbsp;clientId,
-                           java.lang.String&nbsp;address,
-                           int&nbsp;port)</pre>
+                           java.net.InetSocketAddress&nbsp;socketAddress)</pre>
 </li>
 </ul>
 </li>
@@ -266,7 +268,7 @@ extends <a href="../../../../cn/nukkit/event/Event.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>getHandlers</h4>
-<pre>public static&nbsp;<a href="../../../../cn/nukkit/event/HandlerList.html" title="class in cn.nukkit.event">HandlerList</a>&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerCreationEvent.html#line.16">getHandlers</a>()</pre>
+<pre>public static&nbsp;<a href="../../../../cn/nukkit/event/HandlerList.html" title="class in cn.nukkit.event">HandlerList</a>&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerCreationEvent.html#line.18">getHandlers</a>()</pre>
 </li>
 </ul>
 <a name="getInterface--">
@@ -275,7 +277,7 @@ extends <a href="../../../../cn/nukkit/event/Event.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>getInterface</h4>
-<pre>public&nbsp;<a href="../../../../cn/nukkit/network/SourceInterface.html" title="interface in cn.nukkit.network">SourceInterface</a>&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerCreationEvent.html#line.42">getInterface</a>()</pre>
+<pre>public&nbsp;<a href="../../../../cn/nukkit/network/SourceInterface.html" title="interface in cn.nukkit.network">SourceInterface</a>&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerCreationEvent.html#line.41">getInterface</a>()</pre>
 </li>
 </ul>
 <a name="getAddress--">
@@ -284,7 +286,7 @@ extends <a href="../../../../cn/nukkit/event/Event.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>getAddress</h4>
-<pre>public&nbsp;java.lang.String&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerCreationEvent.html#line.46">getAddress</a>()</pre>
+<pre>public&nbsp;java.lang.String&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerCreationEvent.html#line.45">getAddress</a>()</pre>
 </li>
 </ul>
 <a name="getPort--">
@@ -293,7 +295,16 @@ extends <a href="../../../../cn/nukkit/event/Event.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>getPort</h4>
-<pre>public&nbsp;int&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerCreationEvent.html#line.50">getPort</a>()</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerCreationEvent.html#line.49">getPort</a>()</pre>
+</li>
+</ul>
+<a name="getSocketAddress--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSocketAddress</h4>
+<pre>public&nbsp;java.net.InetSocketAddress&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerCreationEvent.html#line.53">getSocketAddress</a>()</pre>
 </li>
 </ul>
 <a name="getClientId--">
@@ -302,7 +313,7 @@ extends <a href="../../../../cn/nukkit/event/Event.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>getClientId</h4>
-<pre>public&nbsp;java.lang.Long&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerCreationEvent.html#line.54">getClientId</a>()</pre>
+<pre>public&nbsp;java.lang.Long&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerCreationEvent.html#line.57">getClientId</a>()</pre>
 </li>
 </ul>
 <a name="getBaseClass--">
@@ -311,7 +322,7 @@ extends <a href="../../../../cn/nukkit/event/Event.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>getBaseClass</h4>
-<pre>public&nbsp;java.lang.Class&lt;? extends <a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&gt;&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerCreationEvent.html#line.58">getBaseClass</a>()</pre>
+<pre>public&nbsp;java.lang.Class&lt;? extends <a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&gt;&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerCreationEvent.html#line.61">getBaseClass</a>()</pre>
 </li>
 </ul>
 <a name="setBaseClass-java.lang.Class-">
@@ -320,7 +331,7 @@ extends <a href="../../../../cn/nukkit/event/Event.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>setBaseClass</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerCreationEvent.html#line.62">setBaseClass</a>(java.lang.Class&lt;? extends <a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&gt;&nbsp;baseClass)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerCreationEvent.html#line.65">setBaseClass</a>(java.lang.Class&lt;? extends <a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&gt;&nbsp;baseClass)</pre>
 </li>
 </ul>
 <a name="getPlayerClass--">
@@ -329,7 +340,7 @@ extends <a href="../../../../cn/nukkit/event/Event.html" title="class in cn.nukk
 <ul class="blockList">
 <li class="blockList">
 <h4>getPlayerClass</h4>
-<pre>public&nbsp;java.lang.Class&lt;? extends <a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&gt;&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerCreationEvent.html#line.66">getPlayerClass</a>()</pre>
+<pre>public&nbsp;java.lang.Class&lt;? extends <a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&gt;&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerCreationEvent.html#line.69">getPlayerClass</a>()</pre>
 </li>
 </ul>
 <a name="setPlayerClass-java.lang.Class-">
@@ -338,7 +349,7 @@ extends <a href="../../../../cn/nukkit/event/Event.html" title="class in cn.nukk
 <ul class="blockListLast">
 <li class="blockList">
 <h4>setPlayerClass</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerCreationEvent.html#line.70">setPlayerClass</a>(java.lang.Class&lt;? extends <a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&gt;&nbsp;playerClass)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerCreationEvent.html#line.73">setPlayerClass</a>(java.lang.Class&lt;? extends <a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&gt;&nbsp;playerClass)</pre>
 </li>
 </ul>
 </li>

@@ -21,8 +21,8 @@
 <span class="sourceLineNo">013</span>    }<a name="line.13"></a>
 <span class="sourceLineNo">014</span><a name="line.14"></a>
 <span class="sourceLineNo">015</span>    @Override<a name="line.15"></a>
-<span class="sourceLineNo">016</span>    public int getCoverBlock() {<a name="line.16"></a>
-<span class="sourceLineNo">017</span>        return SNOW_LAYER;<a name="line.17"></a>
+<span class="sourceLineNo">016</span>    public int getCoverId(int x, int z) {<a name="line.16"></a>
+<span class="sourceLineNo">017</span>        return SNOW_LAYER &lt;&lt; 4;<a name="line.17"></a>
 <span class="sourceLineNo">018</span>    }<a name="line.18"></a>
 <span class="sourceLineNo">019</span><a name="line.19"></a>
 <span class="sourceLineNo">020</span>    @Override<a name="line.20"></a>
@@ -34,7 +34,12 @@
 <span class="sourceLineNo">026</span>    public boolean isFreezing() {<a name="line.26"></a>
 <span class="sourceLineNo">027</span>        return true;<a name="line.27"></a>
 <span class="sourceLineNo">028</span>    }<a name="line.28"></a>
-<span class="sourceLineNo">029</span>}<a name="line.29"></a>
+<span class="sourceLineNo">029</span><a name="line.29"></a>
+<span class="sourceLineNo">030</span>    @Override<a name="line.30"></a>
+<span class="sourceLineNo">031</span>    public boolean canRain() {<a name="line.31"></a>
+<span class="sourceLineNo">032</span>        return false;<a name="line.32"></a>
+<span class="sourceLineNo">033</span>    }<a name="line.33"></a>
+<span class="sourceLineNo">034</span>}<a name="line.34"></a>
 
 
 

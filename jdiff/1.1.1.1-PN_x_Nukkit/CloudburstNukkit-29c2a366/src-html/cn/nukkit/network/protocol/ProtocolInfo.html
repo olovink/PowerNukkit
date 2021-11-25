@@ -22,12 +22,12 @@
 <span class="sourceLineNo">014</span>     * Actual Minecraft: PE protocol version<a name="line.14"></a>
 <span class="sourceLineNo">015</span>     */<a name="line.15"></a>
 <span class="sourceLineNo">016</span>    @SuppressWarnings("UnnecessaryBoxing")<a name="line.16"></a>
-<span class="sourceLineNo">017</span>    int CURRENT_PROTOCOL = Integer.valueOf("389"); // DO NOT REMOVE BOXING<a name="line.17"></a>
+<span class="sourceLineNo">017</span>    int CURRENT_PROTOCOL = Integer.valueOf("471"); // DO NOT REMOVE BOXING<a name="line.17"></a>
 <span class="sourceLineNo">018</span><a name="line.18"></a>
 <span class="sourceLineNo">019</span>    List&lt;Integer&gt; SUPPORTED_PROTOCOLS = Ints.asList(CURRENT_PROTOCOL);<a name="line.19"></a>
 <span class="sourceLineNo">020</span><a name="line.20"></a>
-<span class="sourceLineNo">021</span>    String MINECRAFT_VERSION = "v1.14.0";<a name="line.21"></a>
-<span class="sourceLineNo">022</span>    String MINECRAFT_VERSION_NETWORK = "1.14.0";<a name="line.22"></a>
+<span class="sourceLineNo">021</span>    String MINECRAFT_VERSION = "v1.17.40";<a name="line.21"></a>
+<span class="sourceLineNo">022</span>    String MINECRAFT_VERSION_NETWORK = "1.17.40";<a name="line.22"></a>
 <span class="sourceLineNo">023</span><a name="line.23"></a>
 <span class="sourceLineNo">024</span>    byte LOGIN_PACKET = 0x01;<a name="line.24"></a>
 <span class="sourceLineNo">025</span>    byte PLAY_STATUS_PACKET = 0x02;<a name="line.25"></a>
@@ -167,9 +167,29 @@
 <span class="sourceLineNo">159</span>    byte COMPLETED_USING_ITEM_PACKET = (byte) 0x8e;<a name="line.159"></a>
 <span class="sourceLineNo">160</span>    byte NETWORK_SETTINGS_PACKET = (byte) 0x8f;<a name="line.160"></a>
 <span class="sourceLineNo">161</span>    byte PLAYER_AUTH_INPUT_PACKET = (byte) 0x90;<a name="line.161"></a>
-<span class="sourceLineNo">162</span><a name="line.162"></a>
-<span class="sourceLineNo">163</span>    byte BATCH_PACKET = (byte) 0xff;<a name="line.163"></a>
-<span class="sourceLineNo">164</span>}<a name="line.164"></a>
+<span class="sourceLineNo">162</span>    byte CREATIVE_CONTENT_PACKET = (byte) 0x91;<a name="line.162"></a>
+<span class="sourceLineNo">163</span>    byte PLAYER_ENCHANT_OPTIONS_PACKET = (byte) 0x92;<a name="line.163"></a>
+<span class="sourceLineNo">164</span>    byte ITEM_STACK_REQUEST_PACKET = (byte) 0x93;<a name="line.164"></a>
+<span class="sourceLineNo">165</span>    byte ITEM_STACK_RESPONSE_PACKET = (byte) 0x94;<a name="line.165"></a>
+<span class="sourceLineNo">166</span>    byte PLAYER_ARMOR_DAMAGE_PACKET = (byte) 0x95;<a name="line.166"></a>
+<span class="sourceLineNo">167</span>    byte CODE_BUILDER_PACKET = (byte) 0x96;<a name="line.167"></a>
+<span class="sourceLineNo">168</span>    byte UPDATE_PLAYER_GAME_TYPE_PACKET = (byte) 0x97;<a name="line.168"></a>
+<span class="sourceLineNo">169</span>    byte EMOTE_LIST_PACKET = (byte) 0x98;<a name="line.169"></a>
+<span class="sourceLineNo">170</span>    byte POS_TRACKING_SERVER_BROADCAST_PACKET = (byte) 0x99;<a name="line.170"></a>
+<span class="sourceLineNo">171</span>    byte POS_TRACKING_CLIENT_REQUEST_PACKET = (byte) 0x9a;<a name="line.171"></a>
+<span class="sourceLineNo">172</span>    byte DEBUG_INFO_PACKET = (byte) 0x9b;<a name="line.172"></a>
+<span class="sourceLineNo">173</span>    byte PACKET_VIOLATION_WARNING_PACKET = (byte) 0x9c;<a name="line.173"></a>
+<span class="sourceLineNo">174</span>    byte MOTION_PREDICTION_HINTS_PACKET = (byte) 0x9d;<a name="line.174"></a>
+<span class="sourceLineNo">175</span>    byte ANIMATE_ENTITY_PACKET = (byte) 0x9e;<a name="line.175"></a>
+<span class="sourceLineNo">176</span>    byte CAMERA_SHAKE_PACKET = (byte) 0x9f;<a name="line.176"></a>
+<span class="sourceLineNo">177</span>    byte PLAYER_FOG_PACKET = (byte) 0xa0;<a name="line.177"></a>
+<span class="sourceLineNo">178</span>    byte CORRECT_PLAYER_MOVE_PREDICTION_PACKET = (byte) 0xa1;<a name="line.178"></a>
+<span class="sourceLineNo">179</span>    byte ITEM_COMPONENT_PACKET = (byte) 0xa2;<a name="line.179"></a>
+<span class="sourceLineNo">180</span>    byte FILTER_TEXT_PACKET = (byte) 0xa3;<a name="line.180"></a>
+<span class="sourceLineNo">181</span>    byte CLIENTBOUND_DEBUG_RENDERER_PACKET = (byte) 0xa4;<a name="line.181"></a>
+<span class="sourceLineNo">182</span><a name="line.182"></a>
+<span class="sourceLineNo">183</span>    byte BATCH_PACKET = (byte) 0xff;<a name="line.183"></a>
+<span class="sourceLineNo">184</span>}<a name="line.184"></a>
 
 
 

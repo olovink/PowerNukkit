@@ -150,14 +150,14 @@
 <span class="sourceLineNo">142</span>        if (buffer == null) buffer = new byte[Character.MAX_VALUE];<a name="line.142"></a>
 <span class="sourceLineNo">143</span>        FastByteArrayOutputStream query = new FastByteArrayOutputStream(buffer);<a name="line.143"></a>
 <span class="sourceLineNo">144</span>        try {<a name="line.144"></a>
-<span class="sourceLineNo">145</span>            String plist = this.server_engine;<a name="line.145"></a>
+<span class="sourceLineNo">145</span>            StringBuilder plist = new StringBuilder(this.server_engine);<a name="line.145"></a>
 <span class="sourceLineNo">146</span>            if (this.plugins.length &gt; 0 &amp;&amp; this.listPlugins) {<a name="line.146"></a>
-<span class="sourceLineNo">147</span>                plist += ":";<a name="line.147"></a>
+<span class="sourceLineNo">147</span>                plist.append(":");<a name="line.147"></a>
 <span class="sourceLineNo">148</span>                for (Plugin p : this.plugins) {<a name="line.148"></a>
 <span class="sourceLineNo">149</span>                    PluginDescription d = p.getDescription();<a name="line.149"></a>
-<span class="sourceLineNo">150</span>                    plist += " " + d.getName().replace(";", "").replace(":", "").replace(" ", "_") + " " + d.getVersion().replace(";", "").replace(":", "").replace(" ", "_") + ";";<a name="line.150"></a>
+<span class="sourceLineNo">150</span>                    plist.append(" ").append(d.getName().replace(";", "").replace(":", "").replace(" ", "_")).append(" ").append(d.getVersion().replace(";", "").replace(":", "").replace(" ", "_")).append(";");<a name="line.150"></a>
 <span class="sourceLineNo">151</span>                }<a name="line.151"></a>
-<span class="sourceLineNo">152</span>                plist = plist.substring(0, plist.length() - 2);<a name="line.152"></a>
+<span class="sourceLineNo">152</span>                plist = new StringBuilder(plist.substring(0, plist.length() - 2));<a name="line.152"></a>
 <span class="sourceLineNo">153</span>            }<a name="line.153"></a>
 <span class="sourceLineNo">154</span><a name="line.154"></a>
 <span class="sourceLineNo">155</span>            query.write("splitnum".getBytes());<a name="line.155"></a>
@@ -171,7 +171,7 @@
 <span class="sourceLineNo">163</span>            KVdata.put("game_id", GAME_ID);<a name="line.163"></a>
 <span class="sourceLineNo">164</span>            KVdata.put("version", this.version);<a name="line.164"></a>
 <span class="sourceLineNo">165</span>            KVdata.put("server_engine", this.server_engine);<a name="line.165"></a>
-<span class="sourceLineNo">166</span>            KVdata.put("plugins", plist);<a name="line.166"></a>
+<span class="sourceLineNo">166</span>            KVdata.put("plugins", plist.toString());<a name="line.166"></a>
 <span class="sourceLineNo">167</span>            KVdata.put("map", this.map);<a name="line.167"></a>
 <span class="sourceLineNo">168</span>            KVdata.put("numplayers", String.valueOf(this.numPlayers));<a name="line.168"></a>
 <span class="sourceLineNo">169</span>            KVdata.put("maxplayers", String.valueOf(this.maxPlayers));<a name="line.169"></a>

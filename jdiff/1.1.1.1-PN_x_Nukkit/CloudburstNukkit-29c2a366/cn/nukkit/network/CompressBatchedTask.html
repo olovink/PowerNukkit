@@ -50,7 +50,7 @@ var activeTableTab = "activeTableTab";
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../cn/nukkit/network/CompressBatchedPacket.html" title="class in cn.nukkit.network"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../cn/nukkit/network/Network.html" title="class in cn.nukkit.network"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../cn/nukkit/network/LittleEndianByteBufInputStream.html" title="class in cn.nukkit.network"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../index.html?cn/nukkit/network/CompressBatchedTask.html" target="_top">Frames</a></li>
@@ -118,7 +118,7 @@ var activeTableTab = "activeTableTab";
 </dl>
 <hr>
 <br>
-<pre>public class <a href="../../../src-html/cn/nukkit/network/CompressBatchedTask.html#line.14">CompressBatchedTask</a>
+<pre>public class <a href="../../../src-html/cn/nukkit/network/CompressBatchedTask.html#line.13">CompressBatchedTask</a>
 extends <a href="../../../cn/nukkit/scheduler/AsyncTask.html" title="class in cn.nukkit.scheduler">AsyncTask</a></pre>
 <div class="block">author: MagicDroidX
  Nukkit Project</div>
@@ -157,7 +157,7 @@ extends <a href="../../../cn/nukkit/scheduler/AsyncTask.html" title="class in cn
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/CompressBatchedTask.html#level">level</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
+<td class="colFirst"><code>java.util.List&lt;java.net.InetSocketAddress&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/CompressBatchedTask.html#targets">targets</a></span></code>&nbsp;</td>
 </tr>
 </table>
@@ -183,16 +183,16 @@ extends <a href="../../../cn/nukkit/scheduler/AsyncTask.html" title="class in cn
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/CompressBatchedTask.html#CompressBatchedTask-byte:A:A-java.util.List-">CompressBatchedTask</a></span>(byte[][]&nbsp;data,
-                   java.util.List&lt;java.lang.String&gt;&nbsp;targets)</code>&nbsp;</td>
+                   java.util.List&lt;java.net.InetSocketAddress&gt;&nbsp;targets)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/CompressBatchedTask.html#CompressBatchedTask-byte:A:A-java.util.List-int-">CompressBatchedTask</a></span>(byte[][]&nbsp;data,
-                   java.util.List&lt;java.lang.String&gt;&nbsp;targets,
+                   java.util.List&lt;java.net.InetSocketAddress&gt;&nbsp;targets,
                    int&nbsp;level)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../cn/nukkit/network/CompressBatchedTask.html#CompressBatchedTask-byte:A:A-java.util.List-int-int-">CompressBatchedTask</a></span>(byte[][]&nbsp;data,
-                   java.util.List&lt;java.lang.String&gt;&nbsp;targets,
+                   java.util.List&lt;java.net.InetSocketAddress&gt;&nbsp;targets,
                    int&nbsp;level,
                    int&nbsp;channel)</code>&nbsp;</td>
 </tr>
@@ -254,7 +254,7 @@ extends <a href="../../../cn/nukkit/scheduler/AsyncTask.html" title="class in cn
 <ul class="blockList">
 <li class="blockList">
 <h4>level</h4>
-<pre>public&nbsp;int <a href="../../../src-html/cn/nukkit/network/CompressBatchedTask.html#line.16">level</a></pre>
+<pre>public&nbsp;int <a href="../../../src-html/cn/nukkit/network/CompressBatchedTask.html#line.15">level</a></pre>
 </li>
 </ul>
 <a name="data">
@@ -263,7 +263,7 @@ extends <a href="../../../cn/nukkit/scheduler/AsyncTask.html" title="class in cn
 <ul class="blockList">
 <li class="blockList">
 <h4>data</h4>
-<pre>public&nbsp;byte[][] <a href="../../../src-html/cn/nukkit/network/CompressBatchedTask.html#line.17">data</a></pre>
+<pre>public&nbsp;byte[][] <a href="../../../src-html/cn/nukkit/network/CompressBatchedTask.html#line.16">data</a></pre>
 </li>
 </ul>
 <a name="finalData">
@@ -272,7 +272,7 @@ extends <a href="../../../cn/nukkit/scheduler/AsyncTask.html" title="class in cn
 <ul class="blockList">
 <li class="blockList">
 <h4>finalData</h4>
-<pre>public&nbsp;byte[] <a href="../../../src-html/cn/nukkit/network/CompressBatchedTask.html#line.18">finalData</a></pre>
+<pre>public&nbsp;byte[] <a href="../../../src-html/cn/nukkit/network/CompressBatchedTask.html#line.17">finalData</a></pre>
 </li>
 </ul>
 <a name="channel">
@@ -281,7 +281,7 @@ extends <a href="../../../cn/nukkit/scheduler/AsyncTask.html" title="class in cn
 <ul class="blockList">
 <li class="blockList">
 <h4>channel</h4>
-<pre>public&nbsp;int <a href="../../../src-html/cn/nukkit/network/CompressBatchedTask.html#line.19">channel</a></pre>
+<pre>public&nbsp;int <a href="../../../src-html/cn/nukkit/network/CompressBatchedTask.html#line.18">channel</a></pre>
 </li>
 </ul>
 <a name="targets">
@@ -290,7 +290,7 @@ extends <a href="../../../cn/nukkit/scheduler/AsyncTask.html" title="class in cn
 <ul class="blockListLast">
 <li class="blockList">
 <h4>targets</h4>
-<pre>public&nbsp;java.util.List&lt;java.lang.String&gt; <a href="../../../src-html/cn/nukkit/network/CompressBatchedTask.html#line.20">targets</a></pre>
+<pre>public&nbsp;java.util.List&lt;java.net.InetSocketAddress&gt; <a href="../../../src-html/cn/nukkit/network/CompressBatchedTask.html#line.19">targets</a></pre>
 </li>
 </ul>
 </li>
@@ -307,8 +307,8 @@ extends <a href="../../../cn/nukkit/scheduler/AsyncTask.html" title="class in cn
 <ul class="blockList">
 <li class="blockList">
 <h4>CompressBatchedTask</h4>
-<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/network/CompressBatchedTask.html#line.22">CompressBatchedTask</a>(byte[][]&nbsp;data,
-                           java.util.List&lt;java.lang.String&gt;&nbsp;targets)</pre>
+<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/network/CompressBatchedTask.html#line.21">CompressBatchedTask</a>(byte[][]&nbsp;data,
+                           java.util.List&lt;java.net.InetSocketAddress&gt;&nbsp;targets)</pre>
 </li>
 </ul>
 <a name="CompressBatchedTask-byte:A:A-java.util.List-int-">
@@ -317,8 +317,8 @@ extends <a href="../../../cn/nukkit/scheduler/AsyncTask.html" title="class in cn
 <ul class="blockList">
 <li class="blockList">
 <h4>CompressBatchedTask</h4>
-<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/network/CompressBatchedTask.html#line.26">CompressBatchedTask</a>(byte[][]&nbsp;data,
-                           java.util.List&lt;java.lang.String&gt;&nbsp;targets,
+<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/network/CompressBatchedTask.html#line.25">CompressBatchedTask</a>(byte[][]&nbsp;data,
+                           java.util.List&lt;java.net.InetSocketAddress&gt;&nbsp;targets,
                            int&nbsp;level)</pre>
 </li>
 </ul>
@@ -328,8 +328,8 @@ extends <a href="../../../cn/nukkit/scheduler/AsyncTask.html" title="class in cn
 <ul class="blockListLast">
 <li class="blockList">
 <h4>CompressBatchedTask</h4>
-<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/network/CompressBatchedTask.html#line.30">CompressBatchedTask</a>(byte[][]&nbsp;data,
-                           java.util.List&lt;java.lang.String&gt;&nbsp;targets,
+<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/network/CompressBatchedTask.html#line.29">CompressBatchedTask</a>(byte[][]&nbsp;data,
+                           java.util.List&lt;java.net.InetSocketAddress&gt;&nbsp;targets,
                            int&nbsp;level,
                            int&nbsp;channel)</pre>
 </li>
@@ -348,7 +348,7 @@ extends <a href="../../../cn/nukkit/scheduler/AsyncTask.html" title="class in cn
 <ul class="blockList">
 <li class="blockList">
 <h4>onRun</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/CompressBatchedTask.html#line.38">onRun</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/CompressBatchedTask.html#line.37">onRun</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../cn/nukkit/scheduler/AsyncTask.html#onRun--">onRun</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/scheduler/AsyncTask.html" title="class in cn.nukkit.scheduler">AsyncTask</a></code></dd>
@@ -361,7 +361,7 @@ extends <a href="../../../cn/nukkit/scheduler/AsyncTask.html" title="class in cn
 <ul class="blockListLast">
 <li class="blockList">
 <h4>onCompletion</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/CompressBatchedTask.html#line.48">onCompletion</a>(<a href="../../../cn/nukkit/Server.html" title="class in cn.nukkit">Server</a>&nbsp;server)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/network/CompressBatchedTask.html#line.47">onCompletion</a>(<a href="../../../cn/nukkit/Server.html" title="class in cn.nukkit">Server</a>&nbsp;server)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../cn/nukkit/scheduler/AsyncTask.html#onCompletion-cn.nukkit.Server-">onCompletion</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/scheduler/AsyncTask.html" title="class in cn.nukkit.scheduler">AsyncTask</a></code></dd>
@@ -396,7 +396,7 @@ extends <a href="../../../cn/nukkit/scheduler/AsyncTask.html" title="class in cn
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../cn/nukkit/network/CompressBatchedPacket.html" title="class in cn.nukkit.network"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../cn/nukkit/network/Network.html" title="class in cn.nukkit.network"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../cn/nukkit/network/LittleEndianByteBufInputStream.html" title="class in cn.nukkit.network"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../index.html?cn/nukkit/network/CompressBatchedTask.html" target="_top">Frames</a></li>

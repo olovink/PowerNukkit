@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":9,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":9,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -119,7 +119,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <hr>
 <br>
-<pre>public class <a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.16">PlayerAsyncPreLoginEvent</a>
+<pre>public class <a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.18">PlayerAsyncPreLoginEvent</a>
 extends <a href="../../../../cn/nukkit/event/player/PlayerEvent.html" title="class in cn.nukkit.event.player">PlayerEvent</a></pre>
 <div class="block">This event is called asynchronously</div>
 <dl>
@@ -185,8 +185,10 @@ extends <a href="../../../../cn/nukkit/event/player/PlayerEvent.html" title="cla
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#PlayerAsyncPreLoginEvent-java.lang.String-java.util.UUID-java.lang.String-int-">PlayerAsyncPreLoginEvent</a></span>(java.lang.String&nbsp;name,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#PlayerAsyncPreLoginEvent-java.lang.String-java.util.UUID-cn.nukkit.utils.LoginChainData-cn.nukkit.entity.data.Skin-java.lang.String-int-">PlayerAsyncPreLoginEvent</a></span>(java.lang.String&nbsp;name,
                         java.util.UUID&nbsp;uuid,
+                        <a href="../../../../cn/nukkit/utils/LoginChainData.html" title="interface in cn.nukkit.utils">LoginChainData</a>&nbsp;chainData,
+                        <a href="../../../../cn/nukkit/entity/data/Skin.html" title="class in cn.nukkit.entity.data">Skin</a>&nbsp;skin,
                         java.lang.String&nbsp;address,
                         int&nbsp;port)</code>&nbsp;</td>
 </tr>
@@ -218,44 +220,60 @@ extends <a href="../../../../cn/nukkit/event/player/PlayerEvent.html" title="cla
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#getAddress--">getAddress</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/utils/LoginChainData.html" title="interface in cn.nukkit.utils">LoginChainData</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#getChainData--">getChainData</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/event/HandlerList.html" title="class in cn.nukkit.event">HandlerList</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#getHandlers--">getHandlers</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#getKickMessage--">getKickMessage</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/event/player/PlayerAsyncPreLoginEvent.LoginResult.html" title="enum in cn.nukkit.event.player">PlayerAsyncPreLoginEvent.LoginResult</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#getLoginResult--">getLoginResult</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#getName--">getName</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#getPort--">getPort</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;java.util.function.Consumer&lt;<a href="../../../../cn/nukkit/Server.html" title="class in cn.nukkit">Server</a>&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#getScheduledActions--">getScheduledActions</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/entity/data/Skin.html" title="class in cn.nukkit.entity.data">Skin</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#getSkin--">getSkin</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>java.util.UUID</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#getUuid--">getUuid</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i12" class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#getXuid--">getXuid</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#scheduleSyncAction-java.util.function.Consumer-">scheduleSyncAction</a></span>(java.util.function.Consumer&lt;<a href="../../../../cn/nukkit/Server.html" title="class in cn.nukkit">Server</a>&gt;&nbsp;action)</code>&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#setKickMessage-java.lang.String-">setKickMessage</a></span>(java.lang.String&nbsp;kickMessage)</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#setLoginResult-cn.nukkit.event.player.PlayerAsyncPreLoginEvent.LoginResult-">setLoginResult</a></span>(<a href="../../../../cn/nukkit/event/player/PlayerAsyncPreLoginEvent.LoginResult.html" title="enum in cn.nukkit.event.player">PlayerAsyncPreLoginEvent.LoginResult</a>&nbsp;loginResult)</code>&nbsp;</td>
+</tr>
+<tr id="i16" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#setSkin-cn.nukkit.entity.data.Skin-">setSkin</a></span>(<a href="../../../../cn/nukkit/entity/data/Skin.html" title="class in cn.nukkit.entity.data">Skin</a>&nbsp;skin)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -293,14 +311,16 @@ extends <a href="../../../../cn/nukkit/event/player/PlayerEvent.html" title="cla
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="PlayerAsyncPreLoginEvent-java.lang.String-java.util.UUID-java.lang.String-int-">
+<a name="PlayerAsyncPreLoginEvent-java.lang.String-java.util.UUID-cn.nukkit.utils.LoginChainData-cn.nukkit.entity.data.Skin-java.lang.String-int-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>PlayerAsyncPreLoginEvent</h4>
-<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.34">PlayerAsyncPreLoginEvent</a>(java.lang.String&nbsp;name,
+<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.38">PlayerAsyncPreLoginEvent</a>(java.lang.String&nbsp;name,
                                 java.util.UUID&nbsp;uuid,
+                                <a href="../../../../cn/nukkit/utils/LoginChainData.html" title="interface in cn.nukkit.utils">LoginChainData</a>&nbsp;chainData,
+                                <a href="../../../../cn/nukkit/entity/data/Skin.html" title="class in cn.nukkit.entity.data">Skin</a>&nbsp;skin,
                                 java.lang.String&nbsp;address,
                                 int&nbsp;port)</pre>
 </li>
@@ -319,7 +339,7 @@ extends <a href="../../../../cn/nukkit/event/player/PlayerEvent.html" title="cla
 <ul class="blockList">
 <li class="blockList">
 <h4>getHandlers</h4>
-<pre>public static&nbsp;<a href="../../../../cn/nukkit/event/HandlerList.html" title="class in cn.nukkit.event">HandlerList</a>&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.20">getHandlers</a>()</pre>
+<pre>public static&nbsp;<a href="../../../../cn/nukkit/event/HandlerList.html" title="class in cn.nukkit.event">HandlerList</a>&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.22">getHandlers</a>()</pre>
 </li>
 </ul>
 <a name="getName--">
@@ -328,7 +348,7 @@ extends <a href="../../../../cn/nukkit/event/player/PlayerEvent.html" title="cla
 <ul class="blockList">
 <li class="blockList">
 <h4>getName</h4>
-<pre>public&nbsp;java.lang.String&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.41">getName</a>()</pre>
+<pre>public&nbsp;java.lang.String&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.47">getName</a>()</pre>
 </li>
 </ul>
 <a name="getUuid--">
@@ -337,7 +357,43 @@ extends <a href="../../../../cn/nukkit/event/player/PlayerEvent.html" title="cla
 <ul class="blockList">
 <li class="blockList">
 <h4>getUuid</h4>
-<pre>public&nbsp;java.util.UUID&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.45">getUuid</a>()</pre>
+<pre>public&nbsp;java.util.UUID&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.51">getUuid</a>()</pre>
+</li>
+</ul>
+<a name="getChainData--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getChainData</h4>
+<pre>public&nbsp;<a href="../../../../cn/nukkit/utils/LoginChainData.html" title="interface in cn.nukkit.utils">LoginChainData</a>&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.55">getChainData</a>()</pre>
+</li>
+</ul>
+<a name="getXuid--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getXuid</h4>
+<pre>public&nbsp;java.lang.String&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.59">getXuid</a>()</pre>
+</li>
+</ul>
+<a name="getSkin--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSkin</h4>
+<pre>public&nbsp;<a href="../../../../cn/nukkit/entity/data/Skin.html" title="class in cn.nukkit.entity.data">Skin</a>&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.63">getSkin</a>()</pre>
+</li>
+</ul>
+<a name="setSkin-cn.nukkit.entity.data.Skin-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSkin</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.67">setSkin</a>(<a href="../../../../cn/nukkit/entity/data/Skin.html" title="class in cn.nukkit.entity.data">Skin</a>&nbsp;skin)</pre>
 </li>
 </ul>
 <a name="getAddress--">
@@ -346,7 +402,7 @@ extends <a href="../../../../cn/nukkit/event/player/PlayerEvent.html" title="cla
 <ul class="blockList">
 <li class="blockList">
 <h4>getAddress</h4>
-<pre>public&nbsp;java.lang.String&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.49">getAddress</a>()</pre>
+<pre>public&nbsp;java.lang.String&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.71">getAddress</a>()</pre>
 </li>
 </ul>
 <a name="getPort--">
@@ -355,7 +411,7 @@ extends <a href="../../../../cn/nukkit/event/player/PlayerEvent.html" title="cla
 <ul class="blockList">
 <li class="blockList">
 <h4>getPort</h4>
-<pre>public&nbsp;int&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.53">getPort</a>()</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.75">getPort</a>()</pre>
 </li>
 </ul>
 <a name="getLoginResult--">
@@ -364,7 +420,7 @@ extends <a href="../../../../cn/nukkit/event/player/PlayerEvent.html" title="cla
 <ul class="blockList">
 <li class="blockList">
 <h4>getLoginResult</h4>
-<pre>public&nbsp;<a href="../../../../cn/nukkit/event/player/PlayerAsyncPreLoginEvent.LoginResult.html" title="enum in cn.nukkit.event.player">PlayerAsyncPreLoginEvent.LoginResult</a>&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.57">getLoginResult</a>()</pre>
+<pre>public&nbsp;<a href="../../../../cn/nukkit/event/player/PlayerAsyncPreLoginEvent.LoginResult.html" title="enum in cn.nukkit.event.player">PlayerAsyncPreLoginEvent.LoginResult</a>&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.79">getLoginResult</a>()</pre>
 </li>
 </ul>
 <a name="setLoginResult-cn.nukkit.event.player.PlayerAsyncPreLoginEvent.LoginResult-">
@@ -373,7 +429,7 @@ extends <a href="../../../../cn/nukkit/event/player/PlayerEvent.html" title="cla
 <ul class="blockList">
 <li class="blockList">
 <h4>setLoginResult</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.61">setLoginResult</a>(<a href="../../../../cn/nukkit/event/player/PlayerAsyncPreLoginEvent.LoginResult.html" title="enum in cn.nukkit.event.player">PlayerAsyncPreLoginEvent.LoginResult</a>&nbsp;loginResult)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.83">setLoginResult</a>(<a href="../../../../cn/nukkit/event/player/PlayerAsyncPreLoginEvent.LoginResult.html" title="enum in cn.nukkit.event.player">PlayerAsyncPreLoginEvent.LoginResult</a>&nbsp;loginResult)</pre>
 </li>
 </ul>
 <a name="getKickMessage--">
@@ -382,7 +438,7 @@ extends <a href="../../../../cn/nukkit/event/player/PlayerEvent.html" title="cla
 <ul class="blockList">
 <li class="blockList">
 <h4>getKickMessage</h4>
-<pre>public&nbsp;java.lang.String&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.65">getKickMessage</a>()</pre>
+<pre>public&nbsp;java.lang.String&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.87">getKickMessage</a>()</pre>
 </li>
 </ul>
 <a name="setKickMessage-java.lang.String-">
@@ -391,7 +447,7 @@ extends <a href="../../../../cn/nukkit/event/player/PlayerEvent.html" title="cla
 <ul class="blockList">
 <li class="blockList">
 <h4>setKickMessage</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.69">setKickMessage</a>(java.lang.String&nbsp;kickMessage)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.91">setKickMessage</a>(java.lang.String&nbsp;kickMessage)</pre>
 </li>
 </ul>
 <a name="scheduleSyncAction-java.util.function.Consumer-">
@@ -400,7 +456,7 @@ extends <a href="../../../../cn/nukkit/event/player/PlayerEvent.html" title="cla
 <ul class="blockList">
 <li class="blockList">
 <h4>scheduleSyncAction</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.73">scheduleSyncAction</a>(java.util.function.Consumer&lt;<a href="../../../../cn/nukkit/Server.html" title="class in cn.nukkit">Server</a>&gt;&nbsp;action)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.95">scheduleSyncAction</a>(java.util.function.Consumer&lt;<a href="../../../../cn/nukkit/Server.html" title="class in cn.nukkit">Server</a>&gt;&nbsp;action)</pre>
 </li>
 </ul>
 <a name="getScheduledActions--">
@@ -409,7 +465,7 @@ extends <a href="../../../../cn/nukkit/event/player/PlayerEvent.html" title="cla
 <ul class="blockList">
 <li class="blockList">
 <h4>getScheduledActions</h4>
-<pre>public&nbsp;java.util.List&lt;java.util.function.Consumer&lt;<a href="../../../../cn/nukkit/Server.html" title="class in cn.nukkit">Server</a>&gt;&gt;&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.77">getScheduledActions</a>()</pre>
+<pre>public&nbsp;java.util.List&lt;java.util.function.Consumer&lt;<a href="../../../../cn/nukkit/Server.html" title="class in cn.nukkit">Server</a>&gt;&gt;&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.99">getScheduledActions</a>()</pre>
 </li>
 </ul>
 <a name="allow--">
@@ -418,7 +474,7 @@ extends <a href="../../../../cn/nukkit/event/player/PlayerEvent.html" title="cla
 <ul class="blockList">
 <li class="blockList">
 <h4>allow</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.81">allow</a>()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.103">allow</a>()</pre>
 </li>
 </ul>
 <a name="disAllow-java.lang.String-">
@@ -427,7 +483,7 @@ extends <a href="../../../../cn/nukkit/event/player/PlayerEvent.html" title="cla
 <ul class="blockListLast">
 <li class="blockList">
 <h4>disAllow</h4>
-<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.85">disAllow</a>(java.lang.String&nbsp;message)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html#line.107">disAllow</a>(java.lang.String&nbsp;message)</pre>
 </li>
 </ul>
 </li>

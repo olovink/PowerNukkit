@@ -17,7 +17,7 @@
 <span class="sourceLineNo">009</span>public class EnchantmentDamageAll extends EnchantmentDamage {<a name="line.9"></a>
 <span class="sourceLineNo">010</span><a name="line.10"></a>
 <span class="sourceLineNo">011</span>    public EnchantmentDamageAll() {<a name="line.11"></a>
-<span class="sourceLineNo">012</span>        super(ID_DAMAGE_ALL, "all", 10, TYPE.ALL);<a name="line.12"></a>
+<span class="sourceLineNo">012</span>        super(ID_DAMAGE_ALL, "all", Rarity.COMMON, TYPE.ALL);<a name="line.12"></a>
 <span class="sourceLineNo">013</span>    }<a name="line.13"></a>
 <span class="sourceLineNo">014</span><a name="line.14"></a>
 <span class="sourceLineNo">015</span>    @Override<a name="line.15"></a>
@@ -37,13 +37,9 @@
 <span class="sourceLineNo">029</span><a name="line.29"></a>
 <span class="sourceLineNo">030</span>    @Override<a name="line.30"></a>
 <span class="sourceLineNo">031</span>    public double getDamageBonus(Entity entity) {<a name="line.31"></a>
-<span class="sourceLineNo">032</span>        if (this.getLevel() &lt;= 0) {<a name="line.32"></a>
-<span class="sourceLineNo">033</span>            return 0;<a name="line.33"></a>
-<span class="sourceLineNo">034</span>        }<a name="line.34"></a>
-<span class="sourceLineNo">035</span><a name="line.35"></a>
-<span class="sourceLineNo">036</span>        return 0.5 + getLevel() * 0.5;<a name="line.36"></a>
-<span class="sourceLineNo">037</span>    }<a name="line.37"></a>
-<span class="sourceLineNo">038</span>}<a name="line.38"></a>
+<span class="sourceLineNo">032</span>        return this.getLevel() * 1.25; //https://minecraft.fandom.com/wiki/Sharpness#Usage<a name="line.32"></a>
+<span class="sourceLineNo">033</span>    }<a name="line.33"></a>
+<span class="sourceLineNo">034</span>}<a name="line.34"></a>
 
 
 

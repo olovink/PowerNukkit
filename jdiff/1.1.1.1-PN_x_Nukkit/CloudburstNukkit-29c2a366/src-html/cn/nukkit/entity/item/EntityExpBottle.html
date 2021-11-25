@@ -11,10 +11,10 @@
 <span class="sourceLineNo">003</span>import cn.nukkit.entity.Entity;<a name="line.3"></a>
 <span class="sourceLineNo">004</span>import cn.nukkit.entity.projectile.EntityProjectile;<a name="line.4"></a>
 <span class="sourceLineNo">005</span>import cn.nukkit.level.format.FullChunk;<a name="line.5"></a>
-<span class="sourceLineNo">006</span>import cn.nukkit.level.particle.EnchantParticle;<a name="line.6"></a>
-<span class="sourceLineNo">007</span>import cn.nukkit.level.particle.Particle;<a name="line.7"></a>
-<span class="sourceLineNo">008</span>import cn.nukkit.level.particle.SpellParticle;<a name="line.8"></a>
-<span class="sourceLineNo">009</span>import cn.nukkit.nbt.tag.CompoundTag;<a name="line.9"></a>
+<span class="sourceLineNo">006</span>import cn.nukkit.level.particle.Particle;<a name="line.6"></a>
+<span class="sourceLineNo">007</span>import cn.nukkit.level.particle.SpellParticle;<a name="line.7"></a>
+<span class="sourceLineNo">008</span>import cn.nukkit.nbt.tag.CompoundTag;<a name="line.8"></a>
+<span class="sourceLineNo">009</span>import cn.nukkit.network.protocol.LevelSoundEventPacket;<a name="line.9"></a>
 <span class="sourceLineNo">010</span><a name="line.10"></a>
 <span class="sourceLineNo">011</span>import java.util.concurrent.ThreadLocalRandom;<a name="line.11"></a>
 <span class="sourceLineNo">012</span><a name="line.12"></a>
@@ -96,10 +96,10 @@
 <span class="sourceLineNo">088</span>    }<a name="line.88"></a>
 <span class="sourceLineNo">089</span><a name="line.89"></a>
 <span class="sourceLineNo">090</span>    public void dropXp() {<a name="line.90"></a>
-<span class="sourceLineNo">091</span>        Particle particle1 = new EnchantParticle(this);<a name="line.91"></a>
-<span class="sourceLineNo">092</span>        this.getLevel().addParticle(particle1);<a name="line.92"></a>
-<span class="sourceLineNo">093</span>        Particle particle2 = new SpellParticle(this, 0x00385dc6);<a name="line.93"></a>
-<span class="sourceLineNo">094</span>        this.getLevel().addParticle(particle2);<a name="line.94"></a>
+<span class="sourceLineNo">091</span>        Particle particle2 = new SpellParticle(this, 0x00385dc6);<a name="line.91"></a>
+<span class="sourceLineNo">092</span>        this.getLevel().addParticle(particle2);<a name="line.92"></a>
+<span class="sourceLineNo">093</span><a name="line.93"></a>
+<span class="sourceLineNo">094</span>        this.getLevel().addLevelSoundEvent(this, LevelSoundEventPacket.SOUND_GLASS);<a name="line.94"></a>
 <span class="sourceLineNo">095</span><a name="line.95"></a>
 <span class="sourceLineNo">096</span>        this.getLevel().dropExpOrb(this, ThreadLocalRandom.current().nextInt(3, 12));<a name="line.96"></a>
 <span class="sourceLineNo">097</span>    }<a name="line.97"></a>

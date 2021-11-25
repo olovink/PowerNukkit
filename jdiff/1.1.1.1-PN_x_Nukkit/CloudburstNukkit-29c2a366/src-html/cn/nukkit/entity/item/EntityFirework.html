@@ -95,7 +95,7 @@
 <span class="sourceLineNo">087</span>            float f = (float) Math.sqrt(this.motionX * this.motionX + this.motionZ * this.motionZ);<a name="line.87"></a>
 <span class="sourceLineNo">088</span>            this.yaw = (float) (Math.atan2(this.motionX, this.motionZ) * (180D / Math.PI));<a name="line.88"></a>
 <span class="sourceLineNo">089</span><a name="line.89"></a>
-<span class="sourceLineNo">090</span>            this.pitch = (float) (Math.atan2(this.motionY, (double) f) * (180D / Math.PI));<a name="line.90"></a>
+<span class="sourceLineNo">090</span>            this.pitch = (float) (Math.atan2(this.motionY, f) * (180D / Math.PI));<a name="line.90"></a>
 <span class="sourceLineNo">091</span><a name="line.91"></a>
 <span class="sourceLineNo">092</span><a name="line.92"></a>
 <span class="sourceLineNo">093</span>            if (this.fireworkAge == 0) {<a name="line.93"></a>

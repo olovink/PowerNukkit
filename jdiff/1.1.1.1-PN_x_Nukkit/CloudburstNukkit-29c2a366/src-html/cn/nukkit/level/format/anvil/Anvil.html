@@ -139,159 +139,138 @@
 <span class="sourceLineNo">131</span>            }<a name="line.131"></a>
 <span class="sourceLineNo">132</span>        }<a name="line.132"></a>
 <span class="sourceLineNo">133</span><a name="line.133"></a>
-<span class="sourceLineNo">134</span>        Map&lt;Integer, Integer&gt; extra = chunk.getBlockExtraDataArray();<a name="line.134"></a>
-<span class="sourceLineNo">135</span>        BinaryStream extraData;<a name="line.135"></a>
-<span class="sourceLineNo">136</span>        if (!extra.isEmpty()) {<a name="line.136"></a>
-<span class="sourceLineNo">137</span>            extraData = new BinaryStream();<a name="line.137"></a>
-<span class="sourceLineNo">138</span>            extraData.putVarInt(extra.size());<a name="line.138"></a>
-<span class="sourceLineNo">139</span>            for (Map.Entry&lt;Integer, Integer&gt; entry : extra.entrySet()) {<a name="line.139"></a>
-<span class="sourceLineNo">140</span>                extraData.putVarInt(entry.getKey());<a name="line.140"></a>
-<span class="sourceLineNo">141</span>                extraData.putLShort(entry.getValue());<a name="line.141"></a>
-<span class="sourceLineNo">142</span>            }<a name="line.142"></a>
-<span class="sourceLineNo">143</span>        } else {<a name="line.143"></a>
-<span class="sourceLineNo">144</span>            extraData = null;<a name="line.144"></a>
-<span class="sourceLineNo">145</span>        }<a name="line.145"></a>
-<span class="sourceLineNo">146</span><a name="line.146"></a>
-<span class="sourceLineNo">147</span>        BinaryStream stream = ThreadCache.binaryStream.get().reset();<a name="line.147"></a>
-<span class="sourceLineNo">148</span>        int count = 0;<a name="line.148"></a>
-<span class="sourceLineNo">149</span>        cn.nukkit.level.format.ChunkSection[] sections = chunk.getSections();<a name="line.149"></a>
-<span class="sourceLineNo">150</span>        for (int i = sections.length - 1; i &gt;= 0; i--) {<a name="line.150"></a>
-<span class="sourceLineNo">151</span>            if (!sections[i].isEmpty()) {<a name="line.151"></a>
-<span class="sourceLineNo">152</span>                count = i + 1;<a name="line.152"></a>
-<span class="sourceLineNo">153</span>                break;<a name="line.153"></a>
-<span class="sourceLineNo">154</span>            }<a name="line.154"></a>
-<span class="sourceLineNo">155</span>        }<a name="line.155"></a>
-<span class="sourceLineNo">156</span>//        stream.putByte((byte) count);  count is now sent in packet<a name="line.156"></a>
-<span class="sourceLineNo">157</span>        for (int i = 0; i &lt; count; i++) {<a name="line.157"></a>
-<span class="sourceLineNo">158</span>            stream.putByte((byte) 0);<a name="line.158"></a>
-<span class="sourceLineNo">159</span>            stream.put(sections[i].getBytes());<a name="line.159"></a>
-<span class="sourceLineNo">160</span>        }<a name="line.160"></a>
-<span class="sourceLineNo">161</span>//        for (byte height : chunk.getHeightMapArray()) {<a name="line.161"></a>
-<span class="sourceLineNo">162</span>//            stream.putByte(height);<a name="line.162"></a>
-<span class="sourceLineNo">163</span>//        } computed client side?<a name="line.163"></a>
-<span class="sourceLineNo">164</span>        stream.put(chunk.getBiomeIdArray());<a name="line.164"></a>
-<span class="sourceLineNo">165</span>        stream.putByte((byte) 0);<a name="line.165"></a>
-<span class="sourceLineNo">166</span>        if (extraData != null) {<a name="line.166"></a>
-<span class="sourceLineNo">167</span>            stream.put(extraData.getBuffer());<a name="line.167"></a>
-<span class="sourceLineNo">168</span>        } else {<a name="line.168"></a>
-<span class="sourceLineNo">169</span>            stream.putVarInt(0);<a name="line.169"></a>
-<span class="sourceLineNo">170</span>        }<a name="line.170"></a>
-<span class="sourceLineNo">171</span>        stream.put(blockEntities);<a name="line.171"></a>
-<span class="sourceLineNo">172</span><a name="line.172"></a>
-<span class="sourceLineNo">173</span>        this.getLevel().chunkRequestCallback(timestamp, x, z, count, stream.getBuffer());<a name="line.173"></a>
-<span class="sourceLineNo">174</span><a name="line.174"></a>
-<span class="sourceLineNo">175</span>        return null;<a name="line.175"></a>
-<span class="sourceLineNo">176</span>    }<a name="line.176"></a>
-<span class="sourceLineNo">177</span><a name="line.177"></a>
-<span class="sourceLineNo">178</span>    private int lastPosition = 0;<a name="line.178"></a>
-<span class="sourceLineNo">179</span><a name="line.179"></a>
-<span class="sourceLineNo">180</span>    @Override<a name="line.180"></a>
-<span class="sourceLineNo">181</span>    public void doGarbageCollection(long time) {<a name="line.181"></a>
-<span class="sourceLineNo">182</span>        long start = System.currentTimeMillis();<a name="line.182"></a>
-<span class="sourceLineNo">183</span>        int maxIterations = size();<a name="line.183"></a>
-<span class="sourceLineNo">184</span>        if (lastPosition &gt; maxIterations) lastPosition = 0;<a name="line.184"></a>
-<span class="sourceLineNo">185</span>        int i;<a name="line.185"></a>
-<span class="sourceLineNo">186</span>        synchronized (chunks) {<a name="line.186"></a>
-<span class="sourceLineNo">187</span>            ObjectIterator&lt;BaseFullChunk&gt; iter = chunks.values().iterator();<a name="line.187"></a>
-<span class="sourceLineNo">188</span>            if (lastPosition != 0) iter.skip(lastPosition);<a name="line.188"></a>
-<span class="sourceLineNo">189</span>            for (i = 0; i &lt; maxIterations; i++) {<a name="line.189"></a>
-<span class="sourceLineNo">190</span>                if (!iter.hasNext()) {<a name="line.190"></a>
-<span class="sourceLineNo">191</span>                    iter = chunks.values().iterator();<a name="line.191"></a>
-<span class="sourceLineNo">192</span>                }<a name="line.192"></a>
-<span class="sourceLineNo">193</span>                if (!iter.hasNext()) break;<a name="line.193"></a>
-<span class="sourceLineNo">194</span>                BaseFullChunk chunk = iter.next();<a name="line.194"></a>
-<span class="sourceLineNo">195</span>                if (chunk == null) continue;<a name="line.195"></a>
-<span class="sourceLineNo">196</span>                if (chunk.isGenerated() &amp;&amp; chunk.isPopulated() &amp;&amp; chunk instanceof Chunk) {<a name="line.196"></a>
-<span class="sourceLineNo">197</span>                    Chunk anvilChunk = (Chunk) chunk;<a name="line.197"></a>
-<span class="sourceLineNo">198</span>                    chunk.compress();<a name="line.198"></a>
-<span class="sourceLineNo">199</span>                    if (System.currentTimeMillis() - start &gt;= time) break;<a name="line.199"></a>
-<span class="sourceLineNo">200</span>                }<a name="line.200"></a>
+<span class="sourceLineNo">134</span>        BinaryStream stream = ThreadCache.binaryStream.get().reset();<a name="line.134"></a>
+<span class="sourceLineNo">135</span>        int count = 0;<a name="line.135"></a>
+<span class="sourceLineNo">136</span>        cn.nukkit.level.format.ChunkSection[] sections = chunk.getSections();<a name="line.136"></a>
+<span class="sourceLineNo">137</span>        for (int i = sections.length - 1; i &gt;= 0; i--) {<a name="line.137"></a>
+<span class="sourceLineNo">138</span>            if (!sections[i].isEmpty()) {<a name="line.138"></a>
+<span class="sourceLineNo">139</span>                count = i + 1;<a name="line.139"></a>
+<span class="sourceLineNo">140</span>                break;<a name="line.140"></a>
+<span class="sourceLineNo">141</span>            }<a name="line.141"></a>
+<span class="sourceLineNo">142</span>        }<a name="line.142"></a>
+<span class="sourceLineNo">143</span><a name="line.143"></a>
+<span class="sourceLineNo">144</span>        for (int i = 0; i &lt; count; i++) {<a name="line.144"></a>
+<span class="sourceLineNo">145</span>            sections[i].writeTo(stream);<a name="line.145"></a>
+<span class="sourceLineNo">146</span>        }<a name="line.146"></a>
+<span class="sourceLineNo">147</span><a name="line.147"></a>
+<span class="sourceLineNo">148</span>        stream.put(chunk.getBiomeIdArray());<a name="line.148"></a>
+<span class="sourceLineNo">149</span>        stream.putByte((byte) 0); // Border blocks<a name="line.149"></a>
+<span class="sourceLineNo">150</span>        stream.put(blockEntities);<a name="line.150"></a>
+<span class="sourceLineNo">151</span><a name="line.151"></a>
+<span class="sourceLineNo">152</span>        this.getLevel().chunkRequestCallback(timestamp, x, z, count, stream.getBuffer());<a name="line.152"></a>
+<span class="sourceLineNo">153</span><a name="line.153"></a>
+<span class="sourceLineNo">154</span>        return null;<a name="line.154"></a>
+<span class="sourceLineNo">155</span>    }<a name="line.155"></a>
+<span class="sourceLineNo">156</span><a name="line.156"></a>
+<span class="sourceLineNo">157</span>    private int lastPosition = 0;<a name="line.157"></a>
+<span class="sourceLineNo">158</span><a name="line.158"></a>
+<span class="sourceLineNo">159</span>    @Override<a name="line.159"></a>
+<span class="sourceLineNo">160</span>    public void doGarbageCollection(long time) {<a name="line.160"></a>
+<span class="sourceLineNo">161</span>        long start = System.currentTimeMillis();<a name="line.161"></a>
+<span class="sourceLineNo">162</span>        int maxIterations = size();<a name="line.162"></a>
+<span class="sourceLineNo">163</span>        if (lastPosition &gt; maxIterations) lastPosition = 0;<a name="line.163"></a>
+<span class="sourceLineNo">164</span>        int i;<a name="line.164"></a>
+<span class="sourceLineNo">165</span>        synchronized (chunks) {<a name="line.165"></a>
+<span class="sourceLineNo">166</span>            ObjectIterator&lt;BaseFullChunk&gt; iter = chunks.values().iterator();<a name="line.166"></a>
+<span class="sourceLineNo">167</span>            if (lastPosition != 0) iter.skip(lastPosition);<a name="line.167"></a>
+<span class="sourceLineNo">168</span>            for (i = 0; i &lt; maxIterations; i++) {<a name="line.168"></a>
+<span class="sourceLineNo">169</span>                if (!iter.hasNext()) {<a name="line.169"></a>
+<span class="sourceLineNo">170</span>                    iter = chunks.values().iterator();<a name="line.170"></a>
+<span class="sourceLineNo">171</span>                }<a name="line.171"></a>
+<span class="sourceLineNo">172</span>                if (!iter.hasNext()) break;<a name="line.172"></a>
+<span class="sourceLineNo">173</span>                BaseFullChunk chunk = iter.next();<a name="line.173"></a>
+<span class="sourceLineNo">174</span>                if (chunk == null) continue;<a name="line.174"></a>
+<span class="sourceLineNo">175</span>                if (chunk.isGenerated() &amp;&amp; chunk.isPopulated() &amp;&amp; chunk instanceof Chunk) {<a name="line.175"></a>
+<span class="sourceLineNo">176</span>                    Chunk anvilChunk = (Chunk) chunk;<a name="line.176"></a>
+<span class="sourceLineNo">177</span>                    chunk.compress();<a name="line.177"></a>
+<span class="sourceLineNo">178</span>                    if (System.currentTimeMillis() - start &gt;= time) break;<a name="line.178"></a>
+<span class="sourceLineNo">179</span>                }<a name="line.179"></a>
+<span class="sourceLineNo">180</span>            }<a name="line.180"></a>
+<span class="sourceLineNo">181</span>        }<a name="line.181"></a>
+<span class="sourceLineNo">182</span>        lastPosition += i;<a name="line.182"></a>
+<span class="sourceLineNo">183</span>    }<a name="line.183"></a>
+<span class="sourceLineNo">184</span><a name="line.184"></a>
+<span class="sourceLineNo">185</span>    @Override<a name="line.185"></a>
+<span class="sourceLineNo">186</span>    public synchronized BaseFullChunk loadChunk(long index, int chunkX, int chunkZ, boolean create) {<a name="line.186"></a>
+<span class="sourceLineNo">187</span>        int regionX = getRegionIndexX(chunkX);<a name="line.187"></a>
+<span class="sourceLineNo">188</span>        int regionZ = getRegionIndexZ(chunkZ);<a name="line.188"></a>
+<span class="sourceLineNo">189</span>        BaseRegionLoader region = this.loadRegion(regionX, regionZ);<a name="line.189"></a>
+<span class="sourceLineNo">190</span>        this.level.timings.syncChunkLoadDataTimer.startTiming();<a name="line.190"></a>
+<span class="sourceLineNo">191</span>        BaseFullChunk chunk;<a name="line.191"></a>
+<span class="sourceLineNo">192</span>        try {<a name="line.192"></a>
+<span class="sourceLineNo">193</span>            chunk = region.readChunk(chunkX - regionX * 32, chunkZ - regionZ * 32);<a name="line.193"></a>
+<span class="sourceLineNo">194</span>        } catch (IOException e) {<a name="line.194"></a>
+<span class="sourceLineNo">195</span>            throw new RuntimeException(e);<a name="line.195"></a>
+<span class="sourceLineNo">196</span>        }<a name="line.196"></a>
+<span class="sourceLineNo">197</span>        if (chunk == null) {<a name="line.197"></a>
+<span class="sourceLineNo">198</span>            if (create) {<a name="line.198"></a>
+<span class="sourceLineNo">199</span>                chunk = this.getEmptyChunk(chunkX, chunkZ);<a name="line.199"></a>
+<span class="sourceLineNo">200</span>                putChunk(index, chunk);<a name="line.200"></a>
 <span class="sourceLineNo">201</span>            }<a name="line.201"></a>
-<span class="sourceLineNo">202</span>        }<a name="line.202"></a>
-<span class="sourceLineNo">203</span>        lastPosition += i;<a name="line.203"></a>
-<span class="sourceLineNo">204</span>    }<a name="line.204"></a>
-<span class="sourceLineNo">205</span><a name="line.205"></a>
-<span class="sourceLineNo">206</span>    @Override<a name="line.206"></a>
-<span class="sourceLineNo">207</span>    public synchronized BaseFullChunk loadChunk(long index, int chunkX, int chunkZ, boolean create) {<a name="line.207"></a>
-<span class="sourceLineNo">208</span>        int regionX = getRegionIndexX(chunkX);<a name="line.208"></a>
-<span class="sourceLineNo">209</span>        int regionZ = getRegionIndexZ(chunkZ);<a name="line.209"></a>
-<span class="sourceLineNo">210</span>        BaseRegionLoader region = this.loadRegion(regionX, regionZ);<a name="line.210"></a>
-<span class="sourceLineNo">211</span>        this.level.timings.syncChunkLoadDataTimer.startTiming();<a name="line.211"></a>
-<span class="sourceLineNo">212</span>        BaseFullChunk chunk;<a name="line.212"></a>
-<span class="sourceLineNo">213</span>        try {<a name="line.213"></a>
-<span class="sourceLineNo">214</span>            chunk = region.readChunk(chunkX - regionX * 32, chunkZ - regionZ * 32);<a name="line.214"></a>
-<span class="sourceLineNo">215</span>        } catch (IOException e) {<a name="line.215"></a>
-<span class="sourceLineNo">216</span>            throw new RuntimeException(e);<a name="line.216"></a>
-<span class="sourceLineNo">217</span>        }<a name="line.217"></a>
-<span class="sourceLineNo">218</span>        if (chunk == null) {<a name="line.218"></a>
-<span class="sourceLineNo">219</span>            if (create) {<a name="line.219"></a>
-<span class="sourceLineNo">220</span>                chunk = this.getEmptyChunk(chunkX, chunkZ);<a name="line.220"></a>
-<span class="sourceLineNo">221</span>                putChunk(index, chunk);<a name="line.221"></a>
-<span class="sourceLineNo">222</span>            }<a name="line.222"></a>
-<span class="sourceLineNo">223</span>        } else {<a name="line.223"></a>
-<span class="sourceLineNo">224</span>            putChunk(index, chunk);<a name="line.224"></a>
-<span class="sourceLineNo">225</span>        }<a name="line.225"></a>
-<span class="sourceLineNo">226</span>        this.level.timings.syncChunkLoadDataTimer.stopTiming();<a name="line.226"></a>
-<span class="sourceLineNo">227</span>        return chunk;<a name="line.227"></a>
-<span class="sourceLineNo">228</span>    }<a name="line.228"></a>
-<span class="sourceLineNo">229</span><a name="line.229"></a>
-<span class="sourceLineNo">230</span>    @Override<a name="line.230"></a>
-<span class="sourceLineNo">231</span>    public synchronized void saveChunk(int X, int Z) {<a name="line.231"></a>
-<span class="sourceLineNo">232</span>        BaseFullChunk chunk = this.getChunk(X, Z);<a name="line.232"></a>
-<span class="sourceLineNo">233</span>        if (chunk != null) {<a name="line.233"></a>
-<span class="sourceLineNo">234</span>            try {<a name="line.234"></a>
-<span class="sourceLineNo">235</span>                this.loadRegion(X &gt;&gt; 5, Z &gt;&gt; 5).writeChunk(chunk);<a name="line.235"></a>
-<span class="sourceLineNo">236</span>            } catch (Exception e) {<a name="line.236"></a>
-<span class="sourceLineNo">237</span>                throw new ChunkException("Error saving chunk (" + X + ", " + Z + ")", e);<a name="line.237"></a>
-<span class="sourceLineNo">238</span>            }<a name="line.238"></a>
-<span class="sourceLineNo">239</span>        }<a name="line.239"></a>
-<span class="sourceLineNo">240</span>    }<a name="line.240"></a>
-<span class="sourceLineNo">241</span><a name="line.241"></a>
-<span class="sourceLineNo">242</span><a name="line.242"></a>
-<span class="sourceLineNo">243</span>    @Override<a name="line.243"></a>
-<span class="sourceLineNo">244</span>    public synchronized void saveChunk(int x, int z, FullChunk chunk) {<a name="line.244"></a>
-<span class="sourceLineNo">245</span>        if (!(chunk instanceof Chunk)) {<a name="line.245"></a>
-<span class="sourceLineNo">246</span>            throw new ChunkException("Invalid Chunk class");<a name="line.246"></a>
-<span class="sourceLineNo">247</span>        }<a name="line.247"></a>
-<span class="sourceLineNo">248</span>        int regionX = x &gt;&gt; 5;<a name="line.248"></a>
-<span class="sourceLineNo">249</span>        int regionZ = z &gt;&gt; 5;<a name="line.249"></a>
-<span class="sourceLineNo">250</span>        this.loadRegion(regionX, regionZ);<a name="line.250"></a>
-<span class="sourceLineNo">251</span>        chunk.setX(x);<a name="line.251"></a>
-<span class="sourceLineNo">252</span>        chunk.setZ(z);<a name="line.252"></a>
-<span class="sourceLineNo">253</span>        try {<a name="line.253"></a>
-<span class="sourceLineNo">254</span>            this.getRegion(regionX, regionZ).writeChunk(chunk);<a name="line.254"></a>
-<span class="sourceLineNo">255</span>        } catch (Exception e) {<a name="line.255"></a>
-<span class="sourceLineNo">256</span>            throw new RuntimeException(e);<a name="line.256"></a>
-<span class="sourceLineNo">257</span>        }<a name="line.257"></a>
-<span class="sourceLineNo">258</span>    }<a name="line.258"></a>
-<span class="sourceLineNo">259</span><a name="line.259"></a>
-<span class="sourceLineNo">260</span>    public static ChunkSection createChunkSection(int y) {<a name="line.260"></a>
-<span class="sourceLineNo">261</span>        ChunkSection cs = new ChunkSection(y);<a name="line.261"></a>
-<span class="sourceLineNo">262</span>        cs.hasSkyLight = true;<a name="line.262"></a>
-<span class="sourceLineNo">263</span>        return cs;<a name="line.263"></a>
+<span class="sourceLineNo">202</span>        } else {<a name="line.202"></a>
+<span class="sourceLineNo">203</span>            putChunk(index, chunk);<a name="line.203"></a>
+<span class="sourceLineNo">204</span>        }<a name="line.204"></a>
+<span class="sourceLineNo">205</span>        this.level.timings.syncChunkLoadDataTimer.stopTiming();<a name="line.205"></a>
+<span class="sourceLineNo">206</span>        return chunk;<a name="line.206"></a>
+<span class="sourceLineNo">207</span>    }<a name="line.207"></a>
+<span class="sourceLineNo">208</span><a name="line.208"></a>
+<span class="sourceLineNo">209</span>    @Override<a name="line.209"></a>
+<span class="sourceLineNo">210</span>    public synchronized void saveChunk(int X, int Z) {<a name="line.210"></a>
+<span class="sourceLineNo">211</span>        BaseFullChunk chunk = this.getChunk(X, Z);<a name="line.211"></a>
+<span class="sourceLineNo">212</span>        if (chunk != null) {<a name="line.212"></a>
+<span class="sourceLineNo">213</span>            try {<a name="line.213"></a>
+<span class="sourceLineNo">214</span>                this.loadRegion(X &gt;&gt; 5, Z &gt;&gt; 5).writeChunk(chunk);<a name="line.214"></a>
+<span class="sourceLineNo">215</span>            } catch (Exception e) {<a name="line.215"></a>
+<span class="sourceLineNo">216</span>                throw new ChunkException("Error saving chunk (" + X + ", " + Z + ")", e);<a name="line.216"></a>
+<span class="sourceLineNo">217</span>            }<a name="line.217"></a>
+<span class="sourceLineNo">218</span>        }<a name="line.218"></a>
+<span class="sourceLineNo">219</span>    }<a name="line.219"></a>
+<span class="sourceLineNo">220</span><a name="line.220"></a>
+<span class="sourceLineNo">221</span><a name="line.221"></a>
+<span class="sourceLineNo">222</span>    @Override<a name="line.222"></a>
+<span class="sourceLineNo">223</span>    public synchronized void saveChunk(int x, int z, FullChunk chunk) {<a name="line.223"></a>
+<span class="sourceLineNo">224</span>        if (!(chunk instanceof Chunk)) {<a name="line.224"></a>
+<span class="sourceLineNo">225</span>            throw new ChunkException("Invalid Chunk class");<a name="line.225"></a>
+<span class="sourceLineNo">226</span>        }<a name="line.226"></a>
+<span class="sourceLineNo">227</span>        int regionX = x &gt;&gt; 5;<a name="line.227"></a>
+<span class="sourceLineNo">228</span>        int regionZ = z &gt;&gt; 5;<a name="line.228"></a>
+<span class="sourceLineNo">229</span>        this.loadRegion(regionX, regionZ);<a name="line.229"></a>
+<span class="sourceLineNo">230</span>        chunk.setX(x);<a name="line.230"></a>
+<span class="sourceLineNo">231</span>        chunk.setZ(z);<a name="line.231"></a>
+<span class="sourceLineNo">232</span>        try {<a name="line.232"></a>
+<span class="sourceLineNo">233</span>            this.getRegion(regionX, regionZ).writeChunk(chunk);<a name="line.233"></a>
+<span class="sourceLineNo">234</span>        } catch (Exception e) {<a name="line.234"></a>
+<span class="sourceLineNo">235</span>            throw new RuntimeException(e);<a name="line.235"></a>
+<span class="sourceLineNo">236</span>        }<a name="line.236"></a>
+<span class="sourceLineNo">237</span>    }<a name="line.237"></a>
+<span class="sourceLineNo">238</span><a name="line.238"></a>
+<span class="sourceLineNo">239</span>    public static ChunkSection createChunkSection(int y) {<a name="line.239"></a>
+<span class="sourceLineNo">240</span>        ChunkSection cs = new ChunkSection(y);<a name="line.240"></a>
+<span class="sourceLineNo">241</span>        cs.hasSkyLight = true;<a name="line.241"></a>
+<span class="sourceLineNo">242</span>        return cs;<a name="line.242"></a>
+<span class="sourceLineNo">243</span>    }<a name="line.243"></a>
+<span class="sourceLineNo">244</span><a name="line.244"></a>
+<span class="sourceLineNo">245</span>    protected synchronized BaseRegionLoader loadRegion(int x, int z) {<a name="line.245"></a>
+<span class="sourceLineNo">246</span>        BaseRegionLoader tmp = lastRegion.get();<a name="line.246"></a>
+<span class="sourceLineNo">247</span>        if (tmp != null &amp;&amp; x == tmp.getX() &amp;&amp; z == tmp.getZ()) {<a name="line.247"></a>
+<span class="sourceLineNo">248</span>            return tmp;<a name="line.248"></a>
+<span class="sourceLineNo">249</span>        }<a name="line.249"></a>
+<span class="sourceLineNo">250</span>        long index = Level.chunkHash(x, z);<a name="line.250"></a>
+<span class="sourceLineNo">251</span>        synchronized (regions) {<a name="line.251"></a>
+<span class="sourceLineNo">252</span>            BaseRegionLoader region = this.regions.get(index);<a name="line.252"></a>
+<span class="sourceLineNo">253</span>            if (region == null) {<a name="line.253"></a>
+<span class="sourceLineNo">254</span>                try {<a name="line.254"></a>
+<span class="sourceLineNo">255</span>                    region = new RegionLoader(this, x, z);<a name="line.255"></a>
+<span class="sourceLineNo">256</span>                } catch (IOException e) {<a name="line.256"></a>
+<span class="sourceLineNo">257</span>                    throw new RuntimeException(e);<a name="line.257"></a>
+<span class="sourceLineNo">258</span>                }<a name="line.258"></a>
+<span class="sourceLineNo">259</span>                this.regions.put(index, region);<a name="line.259"></a>
+<span class="sourceLineNo">260</span>            }<a name="line.260"></a>
+<span class="sourceLineNo">261</span>            lastRegion.set(region);<a name="line.261"></a>
+<span class="sourceLineNo">262</span>            return region;<a name="line.262"></a>
+<span class="sourceLineNo">263</span>        }<a name="line.263"></a>
 <span class="sourceLineNo">264</span>    }<a name="line.264"></a>
-<span class="sourceLineNo">265</span><a name="line.265"></a>
-<span class="sourceLineNo">266</span>    protected synchronized BaseRegionLoader loadRegion(int x, int z) {<a name="line.266"></a>
-<span class="sourceLineNo">267</span>        BaseRegionLoader tmp = lastRegion.get();<a name="line.267"></a>
-<span class="sourceLineNo">268</span>        if (tmp != null &amp;&amp; x == tmp.getX() &amp;&amp; z == tmp.getZ()) {<a name="line.268"></a>
-<span class="sourceLineNo">269</span>            return tmp;<a name="line.269"></a>
-<span class="sourceLineNo">270</span>        }<a name="line.270"></a>
-<span class="sourceLineNo">271</span>        long index = Level.chunkHash(x, z);<a name="line.271"></a>
-<span class="sourceLineNo">272</span>        synchronized (regions) {<a name="line.272"></a>
-<span class="sourceLineNo">273</span>            BaseRegionLoader region = this.regions.get(index);<a name="line.273"></a>
-<span class="sourceLineNo">274</span>            if (region == null) {<a name="line.274"></a>
-<span class="sourceLineNo">275</span>                try {<a name="line.275"></a>
-<span class="sourceLineNo">276</span>                    region = new RegionLoader(this, x, z);<a name="line.276"></a>
-<span class="sourceLineNo">277</span>                } catch (IOException e) {<a name="line.277"></a>
-<span class="sourceLineNo">278</span>                    throw new RuntimeException(e);<a name="line.278"></a>
-<span class="sourceLineNo">279</span>                }<a name="line.279"></a>
-<span class="sourceLineNo">280</span>                this.regions.put(index, region);<a name="line.280"></a>
-<span class="sourceLineNo">281</span>            }<a name="line.281"></a>
-<span class="sourceLineNo">282</span>            lastRegion.set(region);<a name="line.282"></a>
-<span class="sourceLineNo">283</span>            return region;<a name="line.283"></a>
-<span class="sourceLineNo">284</span>        }<a name="line.284"></a>
-<span class="sourceLineNo">285</span>    }<a name="line.285"></a>
-<span class="sourceLineNo">286</span>}<a name="line.286"></a>
+<span class="sourceLineNo">265</span>}<a name="line.265"></a>
 
 
 

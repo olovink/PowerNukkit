@@ -15,9 +15,6 @@
 <ul>
 <li><a href="cn/nukkit/resourcepacks/AbstractResourcePack.html" title="class in cn.nukkit.resourcepacks" target="classFrame">AbstractResourcePack</a></li>
 <li><a href="cn/nukkit/Achievement.html" title="class in cn.nukkit" target="classFrame">Achievement</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/ACK.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">ACK</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/ACK.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">ACK.Factory</a></li>
-<li><a href="cn/nukkit/raknet/protocol/AcknowledgePacket.html" title="class in cn.nukkit.raknet.protocol" target="classFrame">AcknowledgePacket</a></li>
 <li><a href="cn/nukkit/network/protocol/AddBehaviorTreePacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">AddBehaviorTreePacket</a></li>
 <li><a href="cn/nukkit/network/protocol/AddEntityPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">AddEntityPacket</a></li>
 <li><a href="cn/nukkit/network/protocol/AddItemEntityPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">AddItemEntityPacket</a></li>
@@ -27,13 +24,14 @@
 <li><a href="cn/nukkit/AdventureSettings.html" title="class in cn.nukkit" target="classFrame">AdventureSettings</a></li>
 <li><a href="cn/nukkit/AdventureSettings.Type.html" title="enum in cn.nukkit" target="classFrame">AdventureSettings.Type</a></li>
 <li><a href="cn/nukkit/network/protocol/AdventureSettingsPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">AdventureSettingsPacket</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/ADVERTISE_SYSTEM.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">ADVERTISE_SYSTEM</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/ADVERTISE_SYSTEM.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">ADVERTISE_SYSTEM.Factory</a></li>
 <li><a href="cn/nukkit/math/Angle.html" title="class in cn.nukkit.math" target="classFrame">Angle</a></li>
 <li><a href="cn/nukkit/level/particle/AngryVillagerParticle.html" title="class in cn.nukkit.level.particle" target="classFrame">AngryVillagerParticle</a></li>
 <li><a href="cn/nukkit/network/protocol/AnimatePacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">AnimatePacket</a></li>
 <li><a href="cn/nukkit/network/protocol/AnimatePacket.Action.html" title="enum in cn.nukkit.network.protocol" target="classFrame">AnimatePacket.Action</a></li>
 <li><a href="cn/nukkit/level/format/anvil/Anvil.html" title="class in cn.nukkit.level.format.anvil" target="classFrame">Anvil</a></li>
+<li><a href="cn/nukkit/event/block/AnvilDamageEvent.html" title="class in cn.nukkit.event.block" target="classFrame">AnvilDamageEvent</a></li>
+<li><a href="cn/nukkit/event/block/AnvilDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.block" target="classFrame">AnvilDamageEvent.DamageCause</a></li>
+<li><a href="cn/nukkit/network/protocol/AnvilDamagePacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">AnvilDamagePacket</a></li>
 <li><a href="cn/nukkit/inventory/AnvilInventory.html" title="class in cn.nukkit.inventory" target="classFrame">AnvilInventory</a></li>
 <li><a href="cn/nukkit/api/API.html" title="annotation in cn.nukkit.api" target="classFrame">API</a></li>
 <li><a href="cn/nukkit/api/API.Definition.html" title="enum in cn.nukkit.api" target="classFrame">API.Definition</a></li>
@@ -74,8 +72,10 @@
 <li><a href="cn/nukkit/network/protocol/BiomeDefinitionListPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">BiomeDefinitionListPacket</a></li>
 <li><a href="cn/nukkit/level/format/anvil/palette/BiomePalette.html" title="class in cn.nukkit.level.format.anvil.palette" target="classFrame">BiomePalette</a></li>
 <li><a href="cn/nukkit/level/biome/BiomeSelector.html" title="class in cn.nukkit.level.biome" target="classFrame">BiomeSelector</a></li>
+<li><a href="cn/nukkit/level/util/BitArray.html" title="interface in cn.nukkit.level.util" target="classFrame"><span class="interfaceName">BitArray</span></a></li>
 <li><a href="cn/nukkit/level/format/anvil/palette/BitArray256.html" title="class in cn.nukkit.level.format.anvil.palette" target="classFrame">BitArray256</a></li>
 <li><a href="cn/nukkit/level/format/anvil/palette/BitArray4096.html" title="class in cn.nukkit.level.format.anvil.palette" target="classFrame">BitArray4096</a></li>
+<li><a href="cn/nukkit/level/util/BitArrayVersion.html" title="enum in cn.nukkit.level.util" target="classFrame">BitArrayVersion</a></li>
 <li><a href="cn/nukkit/block/Block.html" title="class in cn.nukkit.block" target="classFrame">Block</a></li>
 <li><a href="cn/nukkit/block/BlockAir.html" title="class in cn.nukkit.block" target="classFrame">BlockAir</a></li>
 <li><a href="cn/nukkit/block/BlockAnvil.html" title="class in cn.nukkit.block" target="classFrame">BlockAnvil</a></li>
@@ -179,6 +179,7 @@
 <li><a href="cn/nukkit/math/BlockFace.Plane.html" title="enum in cn.nukkit.math" target="classFrame">BlockFace.Plane</a></li>
 <li><a href="cn/nukkit/event/block/BlockFadeEvent.html" title="class in cn.nukkit.event.block" target="classFrame">BlockFadeEvent</a></li>
 <li><a href="cn/nukkit/block/BlockFallable.html" title="class in cn.nukkit.block" target="classFrame">BlockFallable</a></li>
+<li><a href="cn/nukkit/event/block/BlockFallEvent.html" title="class in cn.nukkit.event.block" target="classFrame">BlockFallEvent</a></li>
 <li><a href="cn/nukkit/block/BlockFarmland.html" title="class in cn.nukkit.block" target="classFrame">BlockFarmland</a></li>
 <li><a href="cn/nukkit/block/BlockFence.html" title="class in cn.nukkit.block" target="classFrame">BlockFence</a></li>
 <li><a href="cn/nukkit/block/BlockFenceGate.html" title="class in cn.nukkit.block" target="classFrame">BlockFenceGate</a></li>
@@ -263,6 +264,7 @@
 <li><a href="cn/nukkit/network/protocol/BlockPickRequestPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">BlockPickRequestPacket</a></li>
 <li><a href="cn/nukkit/block/BlockPiston.html" title="class in cn.nukkit.block" target="classFrame">BlockPiston</a></li>
 <li><a href="cn/nukkit/block/BlockPistonBase.html" title="class in cn.nukkit.block" target="classFrame">BlockPistonBase</a></li>
+<li><a href="cn/nukkit/block/BlockPistonBase.BlocksCalculator.html" title="class in cn.nukkit.block" target="classFrame">BlockPistonBase.BlocksCalculator</a></li>
 <li><a href="cn/nukkit/event/block/BlockPistonChangeEvent.html" title="class in cn.nukkit.event.block" target="classFrame">BlockPistonChangeEvent</a></li>
 <li><a href="cn/nukkit/block/BlockPistonHead.html" title="class in cn.nukkit.block" target="classFrame">BlockPistonHead</a></li>
 <li><a href="cn/nukkit/block/BlockPistonSticky.html" title="class in cn.nukkit.block" target="classFrame">BlockPistonSticky</a></li>
@@ -388,6 +390,7 @@
 <li><a href="cn/nukkit/block/BlockWool.html" title="class in cn.nukkit.block" target="classFrame">BlockWool</a></li>
 <li><a href="cn/nukkit/level/particle/BoneMealParticle.html" title="class in cn.nukkit.level.particle" target="classFrame">BoneMealParticle</a></li>
 <li><a href="cn/nukkit/network/protocol/BookEditPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">BookEditPacket</a></li>
+<li><a href="cn/nukkit/network/protocol/BookEditPacket.Action.html" title="enum in cn.nukkit.network.protocol" target="classFrame">BookEditPacket.Action</a></li>
 <li><a href="cn/nukkit/network/protocol/BossEventPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">BossEventPacket</a></li>
 <li><a href="cn/nukkit/event/inventory/BrewEvent.html" title="class in cn.nukkit.event.inventory" target="classFrame">BrewEvent</a></li>
 <li><a href="cn/nukkit/inventory/BrewingInventory.html" title="class in cn.nukkit.inventory" target="classFrame">BrewingInventory</a></li>
@@ -400,7 +403,6 @@
 <li><a href="cn/nukkit/entity/data/ByteEntityData.html" title="class in cn.nukkit.entity.data" target="classFrame">ByteEntityData</a></li>
 <li><a href="cn/nukkit/level/format/anvil/palette/BytePalette.html" title="class in cn.nukkit.level.format.anvil.palette" target="classFrame">BytePalette</a></li>
 <li><a href="cn/nukkit/nbt/tag/ByteTag.html" title="class in cn.nukkit.nbt.tag" target="classFrame">ByteTag</a></li>
-<li><a href="cn/nukkit/network/CacheEncapsulatedPacket.html" title="class in cn.nukkit.network" target="classFrame">CacheEncapsulatedPacket</a></li>
 <li><a href="cn/nukkit/network/protocol/CameraPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">CameraPacket</a></li>
 <li><a href="cn/nukkit/event/Cancellable.html" title="interface in cn.nukkit.event" target="classFrame"><span class="interfaceName">Cancellable</span></a></li>
 <li><a href="cn/nukkit/network/protocol/ChangeDimensionPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">ChangeDimensionPacket</a></li>
@@ -423,16 +425,12 @@
 <li><a href="cn/nukkit/level/format/anvil/ChunkSection.html" title="class in cn.nukkit.level.format.anvil" target="classFrame">ChunkSection</a></li>
 <li><a href="cn/nukkit/level/format/ChunkSection.html" title="interface in cn.nukkit.level.format" target="classFrame"><span class="interfaceName">ChunkSection</span></a></li>
 <li><a href="cn/nukkit/event/level/ChunkUnloadEvent.html" title="class in cn.nukkit.event.level" target="classFrame">ChunkUnloadEvent</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/CLIENT_CONNECT_DataPacket.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">CLIENT_CONNECT_DataPacket</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/CLIENT_CONNECT_DataPacket.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">CLIENT_CONNECT_DataPacket.Factory</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/CLIENT_DISCONNECT_DataPacket.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">CLIENT_DISCONNECT_DataPacket</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/CLIENT_DISCONNECT_DataPacket.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">CLIENT_DISCONNECT_DataPacket.Factory</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/CLIENT_HANDSHAKE_DataPacket.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">CLIENT_HANDSHAKE_DataPacket</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/CLIENT_HANDSHAKE_DataPacket.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">CLIENT_HANDSHAKE_DataPacket.Factory</a></li>
 <li><a href="cn/nukkit/network/protocol/ClientboundMapItemDataPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">ClientboundMapItemDataPacket</a></li>
+<li><a href="cn/nukkit/network/protocol/ClientboundMapItemDataPacket.MapDecorator.html" title="class in cn.nukkit.network.protocol" target="classFrame">ClientboundMapItemDataPacket.MapDecorator</a></li>
 <li><a href="cn/nukkit/network/protocol/ClientCacheStatusPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">ClientCacheStatusPacket</a></li>
 <li><a href="cn/nukkit/utils/ClientChainData.html" title="class in cn.nukkit.utils" target="classFrame">ClientChainData</a></li>
 <li><a href="cn/nukkit/network/protocol/ClientToServerHandshakePacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">ClientToServerHandshakePacket</a></li>
+<li><a href="cn/nukkit/network/protocol/CodeBuilderPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">CodeBuilderPacket</a></li>
 <li><a href="cn/nukkit/level/biome/impl/beach/ColdBeachBiome.html" title="class in cn.nukkit.level.biome.impl.beach" target="classFrame">ColdBeachBiome</a></li>
 <li><a href="cn/nukkit/level/biome/impl/taiga/ColdTaigaBiome.html" title="class in cn.nukkit.level.biome.impl.taiga" target="classFrame">ColdTaigaBiome</a></li>
 <li><a href="cn/nukkit/level/biome/impl/taiga/ColdTaigaHillsBiome.html" title="class in cn.nukkit.level.biome.impl.taiga" target="classFrame">ColdTaigaHillsBiome</a></li>
@@ -485,6 +483,7 @@
 <li><a href="cn/nukkit/inventory/transaction/CraftingTransaction.html" title="class in cn.nukkit.inventory.transaction" target="classFrame">CraftingTransaction</a></li>
 <li><a href="cn/nukkit/inventory/transaction/action/CraftingTransferMaterialAction.html" title="class in cn.nukkit.inventory.transaction.action" target="classFrame">CraftingTransferMaterialAction</a></li>
 <li><a href="cn/nukkit/event/inventory/CraftItemEvent.html" title="class in cn.nukkit.event.inventory" target="classFrame">CraftItemEvent</a></li>
+<li><a href="cn/nukkit/network/protocol/CreativeContentPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">CreativeContentPacket</a></li>
 <li><a href="cn/nukkit/inventory/transaction/action/CreativeInventoryAction.html" title="class in cn.nukkit.inventory.transaction.action" target="classFrame">CreativeInventoryAction</a></li>
 <li><a href="cn/nukkit/event/entity/CreatureSpawnEvent.html" title="class in cn.nukkit.event.entity" target="classFrame">CreatureSpawnEvent</a></li>
 <li><a href="cn/nukkit/event/entity/CreatureSpawnEvent.SpawnReason.html" title="enum in cn.nukkit.event.entity" target="classFrame">CreatureSpawnEvent.SpawnReason</a></li>
@@ -493,42 +492,10 @@
 <li><a href="cn/nukkit/level/particle/CriticalParticle.html" title="class in cn.nukkit.level.particle" target="classFrame">CriticalParticle</a></li>
 <li><a href="cn/nukkit/inventory/CustomInventory.html" title="class in cn.nukkit.inventory" target="classFrame">CustomInventory</a></li>
 <li><a href="cn/nukkit/level/generator/populator/impl/tree/DarkOakTreePopulator.html" title="class in cn.nukkit.level.generator.populator.impl.tree" target="classFrame">DarkOakTreePopulator</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_0.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_0</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_0.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_0.Factory</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_1.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_1</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_1.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_1.Factory</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_2.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_2</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_2.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_2.Factory</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_3.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_3</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_3.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_3.Factory</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_4.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_4</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_4.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_4.Factory</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_5.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_5</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_5.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_5.Factory</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_6.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_6</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_6.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_6.Factory</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_7.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_7</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_7.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_7.Factory</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_8.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_8</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_8.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_8.Factory</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_9.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_9</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_9.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_9.Factory</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_A.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_A</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_A.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_A.Factory</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_B.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_B</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_B.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_B.Factory</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_C.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_C</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_C.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_C.Factory</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_D.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_D</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_D.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_D.Factory</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_E.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_E</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_E.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_E.Factory</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_F.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_F</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/DATA_PACKET_F.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">DATA_PACKET_F.Factory</a></li>
 <li><a href="cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">DataPacket</a></li>
-<li><a href="cn/nukkit/raknet/protocol/DataPacket.html" title="class in cn.nukkit.raknet.protocol" target="classFrame">DataPacket</a></li>
 <li><a href="cn/nukkit/event/server/DataPacketReceiveEvent.html" title="class in cn.nukkit.event.server" target="classFrame">DataPacketReceiveEvent</a></li>
 <li><a href="cn/nukkit/event/server/DataPacketSendEvent.html" title="class in cn.nukkit.event.server" target="classFrame">DataPacketSendEvent</a></li>
+<li><a href="cn/nukkit/network/protocol/DebugInfoPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">DebugInfoPacket</a></li>
 <li><a href="cn/nukkit/command/defaults/DebugPasteCommand.html" title="class in cn.nukkit.command.defaults" target="classFrame">DebugPasteCommand</a></li>
 <li><a href="cn/nukkit/level/biome/impl/ocean/DeepOceanBiome.html" title="class in cn.nukkit.level.biome.impl.ocean" target="classFrame">DeepOceanBiome</a></li>
 <li><a href="cn/nukkit/dispenser/DefaultDispenseBehavior.html" title="class in cn.nukkit.dispenser" target="classFrame">DefaultDispenseBehavior</a></li>
@@ -563,18 +530,26 @@
 <li><a href="cn/nukkit/form/element/ElementSlider.html" title="class in cn.nukkit.form.element" target="classFrame">ElementSlider</a></li>
 <li><a href="cn/nukkit/form/element/ElementStepSlider.html" title="class in cn.nukkit.form.element" target="classFrame">ElementStepSlider</a></li>
 <li><a href="cn/nukkit/form/element/ElementToggle.html" title="class in cn.nukkit.form.element" target="classFrame">ElementToggle</a></li>
+<li><a href="cn/nukkit/network/protocol/EmoteListPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">EmoteListPacket</a></li>
+<li><a href="cn/nukkit/network/protocol/EmotePacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">EmotePacket</a></li>
 <li><a href="cn/nukkit/dispenser/EmptyBucketDispenseBehavior.html" title="class in cn.nukkit.dispenser" target="classFrame">EmptyBucketDispenseBehavior</a></li>
 <li><a href="cn/nukkit/level/format/generic/EmptyChunkSection.html" title="class in cn.nukkit.level.format.generic" target="classFrame">EmptyChunkSection</a></li>
-<li><a href="cn/nukkit/raknet/protocol/EncapsulatedPacket.html" title="class in cn.nukkit.raknet.protocol" target="classFrame">EncapsulatedPacket</a></li>
 <li><a href="cn/nukkit/command/defaults/EnchantCommand.html" title="class in cn.nukkit.command.defaults" target="classFrame">EnchantCommand</a></li>
+<li><a href="cn/nukkit/inventory/transaction/action/EnchantingAction.html" title="class in cn.nukkit.inventory.transaction.action" target="classFrame">EnchantingAction</a></li>
 <li><a href="cn/nukkit/inventory/EnchantInventory.html" title="class in cn.nukkit.inventory" target="classFrame">EnchantInventory</a></li>
+<li><a href="cn/nukkit/event/inventory/EnchantItemEvent.html" title="class in cn.nukkit.event.inventory" target="classFrame">EnchantItemEvent</a></li>
 <li><a href="cn/nukkit/item/enchantment/Enchantment.html" title="class in cn.nukkit.item.enchantment" target="classFrame">Enchantment</a></li>
+<li><a href="cn/nukkit/item/enchantment/Enchantment.Rarity.html" title="enum in cn.nukkit.item.enchantment" target="classFrame">Enchantment.Rarity</a></li>
 <li><a href="cn/nukkit/item/enchantment/EnchantmentBindingCurse.html" title="class in cn.nukkit.item.enchantment" target="classFrame">EnchantmentBindingCurse</a></li>
 <li><a href="cn/nukkit/item/enchantment/bow/EnchantmentBow.html" title="class in cn.nukkit.item.enchantment.bow" target="classFrame">EnchantmentBow</a></li>
 <li><a href="cn/nukkit/item/enchantment/bow/EnchantmentBowFlame.html" title="class in cn.nukkit.item.enchantment.bow" target="classFrame">EnchantmentBowFlame</a></li>
 <li><a href="cn/nukkit/item/enchantment/bow/EnchantmentBowInfinity.html" title="class in cn.nukkit.item.enchantment.bow" target="classFrame">EnchantmentBowInfinity</a></li>
 <li><a href="cn/nukkit/item/enchantment/bow/EnchantmentBowKnockback.html" title="class in cn.nukkit.item.enchantment.bow" target="classFrame">EnchantmentBowKnockback</a></li>
 <li><a href="cn/nukkit/item/enchantment/bow/EnchantmentBowPower.html" title="class in cn.nukkit.item.enchantment.bow" target="classFrame">EnchantmentBowPower</a></li>
+<li><a href="cn/nukkit/item/enchantment/crossbow/EnchantmentCrossbow.html" title="class in cn.nukkit.item.enchantment.crossbow" target="classFrame">EnchantmentCrossbow</a></li>
+<li><a href="cn/nukkit/item/enchantment/crossbow/EnchantmentCrossbowMultishot.html" title="class in cn.nukkit.item.enchantment.crossbow" target="classFrame">EnchantmentCrossbowMultishot</a></li>
+<li><a href="cn/nukkit/item/enchantment/crossbow/EnchantmentCrossbowPiercing.html" title="class in cn.nukkit.item.enchantment.crossbow" target="classFrame">EnchantmentCrossbowPiercing</a></li>
+<li><a href="cn/nukkit/item/enchantment/crossbow/EnchantmentCrossbowQuickCharge.html" title="class in cn.nukkit.item.enchantment.crossbow" target="classFrame">EnchantmentCrossbowQuickCharge</a></li>
 <li><a href="cn/nukkit/item/enchantment/damage/EnchantmentDamage.html" title="class in cn.nukkit.item.enchantment.damage" target="classFrame">EnchantmentDamage</a></li>
 <li><a href="cn/nukkit/item/enchantment/damage/EnchantmentDamage.TYPE.html" title="enum in cn.nukkit.item.enchantment.damage" target="classFrame">EnchantmentDamage.TYPE</a></li>
 <li><a href="cn/nukkit/item/enchantment/damage/EnchantmentDamageAll.html" title="class in cn.nukkit.item.enchantment.damage" target="classFrame">EnchantmentDamageAll</a></li>
@@ -601,6 +576,7 @@
 <li><a href="cn/nukkit/item/enchantment/protection/EnchantmentProtectionFire.html" title="class in cn.nukkit.item.enchantment.protection" target="classFrame">EnchantmentProtectionFire</a></li>
 <li><a href="cn/nukkit/item/enchantment/protection/EnchantmentProtectionProjectile.html" title="class in cn.nukkit.item.enchantment.protection" target="classFrame">EnchantmentProtectionProjectile</a></li>
 <li><a href="cn/nukkit/item/enchantment/EnchantmentSilkTouch.html" title="class in cn.nukkit.item.enchantment" target="classFrame">EnchantmentSilkTouch</a></li>
+<li><a href="cn/nukkit/item/enchantment/EnchantmentSoulSpeed.html" title="class in cn.nukkit.item.enchantment" target="classFrame">EnchantmentSoulSpeed</a></li>
 <li><a href="cn/nukkit/level/particle/EnchantmentTableParticle.html" title="class in cn.nukkit.level.particle" target="classFrame">EnchantmentTableParticle</a></li>
 <li><a href="cn/nukkit/item/enchantment/EnchantmentThorns.html" title="class in cn.nukkit.item.enchantment" target="classFrame">EnchantmentThorns</a></li>
 <li><a href="cn/nukkit/item/enchantment/trident/EnchantmentTrident.html" title="class in cn.nukkit.item.enchantment.trident" target="classFrame">EnchantmentTrident</a></li>
@@ -614,6 +590,7 @@
 <li><a href="cn/nukkit/item/enchantment/EnchantmentWaterWalker.html" title="class in cn.nukkit.item.enchantment" target="classFrame">EnchantmentWaterWalker</a></li>
 <li><a href="cn/nukkit/item/enchantment/EnchantmentWaterWorker.html" title="class in cn.nukkit.item.enchantment" target="classFrame">EnchantmentWaterWorker</a></li>
 <li><a href="cn/nukkit/level/particle/EnchantParticle.html" title="class in cn.nukkit.level.particle" target="classFrame">EnchantParticle</a></li>
+<li><a href="cn/nukkit/inventory/transaction/EnchantTransaction.html" title="class in cn.nukkit.inventory.transaction" target="classFrame">EnchantTransaction</a></li>
 <li><a href="cn/nukkit/nbt/tag/EndTag.html" title="class in cn.nukkit.nbt.tag" target="classFrame">EndTag</a></li>
 <li><a href="cn/nukkit/level/generator/populator/helper/EnsureBelow.html" title="interface in cn.nukkit.level.generator.populator.helper" target="classFrame"><span class="interfaceName">EnsureBelow</span></a></li>
 <li><a href="cn/nukkit/level/generator/populator/helper/EnsureCover.html" title="interface in cn.nukkit.level.generator.populator.helper" target="classFrame"><span class="interfaceName">EnsureCover</span></a></li>
@@ -626,6 +603,7 @@
 <li><a href="cn/nukkit/entity/projectile/EntityArrow.html" title="class in cn.nukkit.entity.projectile" target="classFrame">EntityArrow</a></li>
 <li><a href="cn/nukkit/entity/EntityArthropod.html" title="interface in cn.nukkit.entity" target="classFrame"><span class="interfaceName">EntityArthropod</span></a></li>
 <li><a href="cn/nukkit/entity/passive/EntityBat.html" title="class in cn.nukkit.entity.passive" target="classFrame">EntityBat</a></li>
+<li><a href="cn/nukkit/entity/passive/EntityBee.html" title="class in cn.nukkit.entity.passive" target="classFrame">EntityBee</a></li>
 <li><a href="cn/nukkit/entity/mob/EntityBlaze.html" title="class in cn.nukkit.entity.mob" target="classFrame">EntityBlaze</a></li>
 <li><a href="cn/nukkit/event/entity/EntityBlockChangeEvent.html" title="class in cn.nukkit.event.entity" target="classFrame">EntityBlockChangeEvent</a></li>
 <li><a href="cn/nukkit/entity/item/EntityBoat.html" title="class in cn.nukkit.entity.item" target="classFrame">EntityBoat</a></li>
@@ -673,9 +651,11 @@
 <li><a href="cn/nukkit/entity/item/EntityFirework.html" title="class in cn.nukkit.entity.item" target="classFrame">EntityFirework</a></li>
 <li><a href="cn/nukkit/entity/item/EntityFishingHook.html" title="class in cn.nukkit.entity.item" target="classFrame">EntityFishingHook</a></li>
 <li><a href="cn/nukkit/level/particle/EntityFlameParticle.html" title="class in cn.nukkit.level.particle" target="classFrame">EntityFlameParticle</a></li>
+<li><a href="cn/nukkit/entity/passive/EntityFox.html" title="class in cn.nukkit.entity.passive" target="classFrame">EntityFox</a></li>
 <li><a href="cn/nukkit/entity/mob/EntityGhast.html" title="class in cn.nukkit.entity.mob" target="classFrame">EntityGhast</a></li>
 <li><a href="cn/nukkit/entity/mob/EntityGuardian.html" title="class in cn.nukkit.entity.mob" target="classFrame">EntityGuardian</a></li>
 <li><a href="cn/nukkit/entity/EntityHanging.html" title="class in cn.nukkit.entity" target="classFrame">EntityHanging</a></li>
+<li><a href="cn/nukkit/entity/mob/EntityHoglin.html" title="class in cn.nukkit.entity.mob" target="classFrame">EntityHoglin</a></li>
 <li><a href="cn/nukkit/entity/passive/EntityHorse.html" title="class in cn.nukkit.entity.passive" target="classFrame">EntityHorse</a></li>
 <li><a href="cn/nukkit/entity/EntityHuman.html" title="class in cn.nukkit.entity" target="classFrame">EntityHuman</a></li>
 <li><a href="cn/nukkit/entity/EntityHumanType.html" title="class in cn.nukkit.entity" target="classFrame">EntityHumanType</a></li>
@@ -712,6 +692,7 @@
 <li><a href="cn/nukkit/entity/mob/EntityPhantom.html" title="class in cn.nukkit.entity.mob" target="classFrame">EntityPhantom</a></li>
 <li><a href="cn/nukkit/network/protocol/EntityPickRequestPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">EntityPickRequestPacket</a></li>
 <li><a href="cn/nukkit/entity/passive/EntityPig.html" title="class in cn.nukkit.entity.passive" target="classFrame">EntityPig</a></li>
+<li><a href="cn/nukkit/entity/mob/EntityPiglin.html" title="class in cn.nukkit.entity.mob" target="classFrame">EntityPiglin</a></li>
 <li><a href="cn/nukkit/entity/mob/EntityPillager.html" title="class in cn.nukkit.entity.mob" target="classFrame">EntityPillager</a></li>
 <li><a href="cn/nukkit/entity/passive/EntityPolarBear.html" title="class in cn.nukkit.entity.passive" target="classFrame">EntityPolarBear</a></li>
 <li><a href="cn/nukkit/event/entity/EntityPortalEnterEvent.html" title="class in cn.nukkit.event.entity" target="classFrame">EntityPortalEnterEvent</a></li>
@@ -734,10 +715,12 @@
 <li><a href="cn/nukkit/entity/mob/EntitySlime.html" title="class in cn.nukkit.entity.mob" target="classFrame">EntitySlime</a></li>
 <li><a href="cn/nukkit/entity/EntitySmite.html" title="interface in cn.nukkit.entity" target="classFrame"><span class="interfaceName">EntitySmite</span></a></li>
 <li><a href="cn/nukkit/entity/projectile/EntitySnowball.html" title="class in cn.nukkit.entity.projectile" target="classFrame">EntitySnowball</a></li>
+<li><a href="cn/nukkit/entity/mob/EntitySnowGolem.html" title="class in cn.nukkit.entity.mob" target="classFrame">EntitySnowGolem</a></li>
 <li><a href="cn/nukkit/event/entity/EntitySpawnEvent.html" title="class in cn.nukkit.event.entity" target="classFrame">EntitySpawnEvent</a></li>
 <li><a href="cn/nukkit/entity/mob/EntitySpider.html" title="class in cn.nukkit.entity.mob" target="classFrame">EntitySpider</a></li>
 <li><a href="cn/nukkit/entity/passive/EntitySquid.html" title="class in cn.nukkit.entity.passive" target="classFrame">EntitySquid</a></li>
 <li><a href="cn/nukkit/entity/mob/EntityStray.html" title="class in cn.nukkit.entity.mob" target="classFrame">EntityStray</a></li>
+<li><a href="cn/nukkit/entity/passive/EntityStrider.html" title="class in cn.nukkit.entity.passive" target="classFrame">EntityStrider</a></li>
 <li><a href="cn/nukkit/entity/passive/EntityTameable.html" title="class in cn.nukkit.entity.passive" target="classFrame">EntityTameable</a></li>
 <li><a href="cn/nukkit/event/entity/EntityTeleportEvent.html" title="class in cn.nukkit.event.entity" target="classFrame">EntityTeleportEvent</a></li>
 <li><a href="cn/nukkit/entity/projectile/EntityThrownTrident.html" title="class in cn.nukkit.entity.projectile" target="classFrame">EntityThrownTrident</a></li>
@@ -758,6 +741,7 @@
 <li><a href="cn/nukkit/entity/mob/EntityWitherSkeleton.html" title="class in cn.nukkit.entity.mob" target="classFrame">EntityWitherSkeleton</a></li>
 <li><a href="cn/nukkit/entity/passive/EntityWolf.html" title="class in cn.nukkit.entity.passive" target="classFrame">EntityWolf</a></li>
 <li><a href="cn/nukkit/entity/item/EntityXPOrb.html" title="class in cn.nukkit.entity.item" target="classFrame">EntityXPOrb</a></li>
+<li><a href="cn/nukkit/entity/mob/EntityZoglin.html" title="class in cn.nukkit.entity.mob" target="classFrame">EntityZoglin</a></li>
 <li><a href="cn/nukkit/entity/mob/EntityZombie.html" title="class in cn.nukkit.entity.mob" target="classFrame">EntityZombie</a></li>
 <li><a href="cn/nukkit/entity/passive/EntityZombieHorse.html" title="class in cn.nukkit.entity.passive" target="classFrame">EntityZombieHorse</a></li>
 <li><a href="cn/nukkit/entity/mob/EntityZombiePigman.html" title="class in cn.nukkit.entity.mob" target="classFrame">EntityZombiePigman</a></li>
@@ -786,6 +770,7 @@
 <li><a href="cn/nukkit/inventory/FakeBlockUIComponent.html" title="class in cn.nukkit.inventory" target="classFrame">FakeBlockUIComponent</a></li>
 <li><a href="cn/nukkit/nbt/stream/FastByteArrayOutputStream.html" title="class in cn.nukkit.nbt.stream" target="classFrame">FastByteArrayOutputStream</a></li>
 <li><a href="cn/nukkit/scheduler/FileWriteTask.html" title="class in cn.nukkit.scheduler" target="classFrame">FileWriteTask</a></li>
+<li><a href="cn/nukkit/network/protocol/FilterTextPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">FilterTextPacket</a></li>
 <li><a href="cn/nukkit/item/randomitem/Fishing.html" title="class in cn.nukkit.item.randomitem" target="classFrame">Fishing</a></li>
 <li><a href="cn/nukkit/level/format/leveldb/key/FlagsKey.html" title="class in cn.nukkit.level.format.leveldb.key" target="classFrame">FlagsKey</a></li>
 <li><a href="cn/nukkit/level/particle/FlameParticle.html" title="class in cn.nukkit.level.particle" target="classFrame">FlameParticle</a></li>
@@ -875,6 +860,7 @@
 <li><a href="cn/nukkit/event/inventory/InventoryOpenEvent.html" title="class in cn.nukkit.event.inventory" target="classFrame">InventoryOpenEvent</a></li>
 <li><a href="cn/nukkit/event/inventory/InventoryPickupArrowEvent.html" title="class in cn.nukkit.event.inventory" target="classFrame">InventoryPickupArrowEvent</a></li>
 <li><a href="cn/nukkit/event/inventory/InventoryPickupItemEvent.html" title="class in cn.nukkit.event.inventory" target="classFrame">InventoryPickupItemEvent</a></li>
+<li><a href="cn/nukkit/event/inventory/InventoryPickupTridentEvent.html" title="class in cn.nukkit.event.inventory" target="classFrame">InventoryPickupTridentEvent</a></li>
 <li><a href="cn/nukkit/network/protocol/InventorySlotPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">InventorySlotPacket</a></li>
 <li><a href="cn/nukkit/inventory/transaction/InventoryTransaction.html" title="class in cn.nukkit.inventory.transaction" target="classFrame">InventoryTransaction</a></li>
 <li><a href="cn/nukkit/event/inventory/InventoryTransactionEvent.html" title="class in cn.nukkit.event.inventory" target="classFrame">InventoryTransactionEvent</a></li>
@@ -886,13 +872,16 @@
 <li><a href="cn/nukkit/item/ItemAppleGold.html" title="class in cn.nukkit.item" target="classFrame">ItemAppleGold</a></li>
 <li><a href="cn/nukkit/item/ItemAppleGoldEnchanted.html" title="class in cn.nukkit.item" target="classFrame">ItemAppleGoldEnchanted</a></li>
 <li><a href="cn/nukkit/item/ItemArmor.html" title="class in cn.nukkit.item" target="classFrame">ItemArmor</a></li>
+<li><a href="cn/nukkit/item/ItemArmorStand.html" title="class in cn.nukkit.item" target="classFrame">ItemArmorStand</a></li>
 <li><a href="cn/nukkit/item/ItemArrow.html" title="class in cn.nukkit.item" target="classFrame">ItemArrow</a></li>
 <li><a href="cn/nukkit/item/ItemAxeDiamond.html" title="class in cn.nukkit.item" target="classFrame">ItemAxeDiamond</a></li>
 <li><a href="cn/nukkit/item/ItemAxeGold.html" title="class in cn.nukkit.item" target="classFrame">ItemAxeGold</a></li>
 <li><a href="cn/nukkit/item/ItemAxeIron.html" title="class in cn.nukkit.item" target="classFrame">ItemAxeIron</a></li>
+<li><a href="cn/nukkit/item/ItemAxeNetherite.html" title="class in cn.nukkit.item" target="classFrame">ItemAxeNetherite</a></li>
 <li><a href="cn/nukkit/item/ItemAxeStone.html" title="class in cn.nukkit.item" target="classFrame">ItemAxeStone</a></li>
 <li><a href="cn/nukkit/item/ItemAxeWood.html" title="class in cn.nukkit.item" target="classFrame">ItemAxeWood</a></li>
 <li><a href="cn/nukkit/item/ItemBanner.html" title="class in cn.nukkit.item" target="classFrame">ItemBanner</a></li>
+<li><a href="cn/nukkit/item/ItemBannerPattern.html" title="class in cn.nukkit.item" target="classFrame">ItemBannerPattern</a></li>
 <li><a href="cn/nukkit/item/ItemBed.html" title="class in cn.nukkit.item" target="classFrame">ItemBed</a></li>
 <li><a href="cn/nukkit/item/ItemBeefRaw.html" title="class in cn.nukkit.item" target="classFrame">ItemBeefRaw</a></li>
 <li><a href="cn/nukkit/item/ItemBeetroot.html" title="class in cn.nukkit.item" target="classFrame">ItemBeetroot</a></li>
@@ -903,13 +892,16 @@
 <li><a href="cn/nukkit/item/ItemBoat.html" title="class in cn.nukkit.item" target="classFrame">ItemBoat</a></li>
 <li><a href="cn/nukkit/item/ItemBone.html" title="class in cn.nukkit.item" target="classFrame">ItemBone</a></li>
 <li><a href="cn/nukkit/item/ItemBook.html" title="class in cn.nukkit.item" target="classFrame">ItemBook</a></li>
+<li><a href="cn/nukkit/item/ItemBookAndQuill.html" title="class in cn.nukkit.item" target="classFrame">ItemBookAndQuill</a></li>
 <li><a href="cn/nukkit/item/ItemBookEnchanted.html" title="class in cn.nukkit.item" target="classFrame">ItemBookEnchanted</a></li>
+<li><a href="cn/nukkit/item/ItemBookWritable.html" title="class in cn.nukkit.item" target="classFrame">ItemBookWritable</a></li>
 <li><a href="cn/nukkit/item/ItemBookWritten.html" title="class in cn.nukkit.item" target="classFrame">ItemBookWritten</a></li>
 <li><a href="cn/nukkit/item/ItemBootsChain.html" title="class in cn.nukkit.item" target="classFrame">ItemBootsChain</a></li>
 <li><a href="cn/nukkit/item/ItemBootsDiamond.html" title="class in cn.nukkit.item" target="classFrame">ItemBootsDiamond</a></li>
 <li><a href="cn/nukkit/item/ItemBootsGold.html" title="class in cn.nukkit.item" target="classFrame">ItemBootsGold</a></li>
 <li><a href="cn/nukkit/item/ItemBootsIron.html" title="class in cn.nukkit.item" target="classFrame">ItemBootsIron</a></li>
 <li><a href="cn/nukkit/item/ItemBootsLeather.html" title="class in cn.nukkit.item" target="classFrame">ItemBootsLeather</a></li>
+<li><a href="cn/nukkit/item/ItemBootsNetherite.html" title="class in cn.nukkit.item" target="classFrame">ItemBootsNetherite</a></li>
 <li><a href="cn/nukkit/item/ItemBow.html" title="class in cn.nukkit.item" target="classFrame">ItemBow</a></li>
 <li><a href="cn/nukkit/item/ItemBowl.html" title="class in cn.nukkit.item" target="classFrame">ItemBowl</a></li>
 <li><a href="cn/nukkit/item/ItemBread.html" title="class in cn.nukkit.item" target="classFrame">ItemBread</a></li>
@@ -927,9 +919,11 @@
 <li><a href="cn/nukkit/item/ItemChestplateGold.html" title="class in cn.nukkit.item" target="classFrame">ItemChestplateGold</a></li>
 <li><a href="cn/nukkit/item/ItemChestplateIron.html" title="class in cn.nukkit.item" target="classFrame">ItemChestplateIron</a></li>
 <li><a href="cn/nukkit/item/ItemChestplateLeather.html" title="class in cn.nukkit.item" target="classFrame">ItemChestplateLeather</a></li>
+<li><a href="cn/nukkit/item/ItemChestplateNetherite.html" title="class in cn.nukkit.item" target="classFrame">ItemChestplateNetherite</a></li>
 <li><a href="cn/nukkit/item/ItemChickenCooked.html" title="class in cn.nukkit.item" target="classFrame">ItemChickenCooked</a></li>
 <li><a href="cn/nukkit/item/ItemChickenRaw.html" title="class in cn.nukkit.item" target="classFrame">ItemChickenRaw</a></li>
 <li><a href="cn/nukkit/item/ItemChorusFruit.html" title="class in cn.nukkit.item" target="classFrame">ItemChorusFruit</a></li>
+<li><a href="cn/nukkit/item/ItemChorusFruitPopped.html" title="class in cn.nukkit.item" target="classFrame">ItemChorusFruitPopped</a></li>
 <li><a href="cn/nukkit/item/ItemClay.html" title="class in cn.nukkit.item" target="classFrame">ItemClay</a></li>
 <li><a href="cn/nukkit/item/ItemClock.html" title="class in cn.nukkit.item" target="classFrame">ItemClock</a></li>
 <li><a href="cn/nukkit/item/ItemClownfish.html" title="class in cn.nukkit.item" target="classFrame">ItemClownfish</a></li>
@@ -937,6 +931,7 @@
 <li><a href="cn/nukkit/item/ItemColorArmor.html" title="class in cn.nukkit.item" target="classFrame">ItemColorArmor</a></li>
 <li><a href="cn/nukkit/item/ItemCompass.html" title="class in cn.nukkit.item" target="classFrame">ItemCompass</a></li>
 <li><a href="cn/nukkit/item/ItemCookie.html" title="class in cn.nukkit.item" target="classFrame">ItemCookie</a></li>
+<li><a href="cn/nukkit/item/ItemCrossbow.html" title="class in cn.nukkit.item" target="classFrame">ItemCrossbow</a></li>
 <li><a href="cn/nukkit/event/entity/ItemDespawnEvent.html" title="class in cn.nukkit.event.entity" target="classFrame">ItemDespawnEvent</a></li>
 <li><a href="cn/nukkit/item/ItemDiamond.html" title="class in cn.nukkit.item" target="classFrame">ItemDiamond</a></li>
 <li><a href="cn/nukkit/item/ItemDoorAcacia.html" title="class in cn.nukkit.item" target="classFrame">ItemDoorAcacia</a></li>
@@ -946,6 +941,7 @@
 <li><a href="cn/nukkit/item/ItemDoorJungle.html" title="class in cn.nukkit.item" target="classFrame">ItemDoorJungle</a></li>
 <li><a href="cn/nukkit/item/ItemDoorSpruce.html" title="class in cn.nukkit.item" target="classFrame">ItemDoorSpruce</a></li>
 <li><a href="cn/nukkit/item/ItemDoorWood.html" title="class in cn.nukkit.item" target="classFrame">ItemDoorWood</a></li>
+<li><a href="cn/nukkit/item/ItemDragonBreath.html" title="class in cn.nukkit.item" target="classFrame">ItemDragonBreath</a></li>
 <li><a href="cn/nukkit/item/ItemDriedKelp.html" title="class in cn.nukkit.item" target="classFrame">ItemDriedKelp</a></li>
 <li><a href="cn/nukkit/item/ItemDurable.html" title="interface in cn.nukkit.item" target="classFrame"><span class="interfaceName">ItemDurable</span></a></li>
 <li><a href="cn/nukkit/item/ItemDye.html" title="class in cn.nukkit.item" target="classFrame">ItemDye</a></li>
@@ -953,6 +949,7 @@
 <li><a href="cn/nukkit/item/ItemEgg.html" title="class in cn.nukkit.item" target="classFrame">ItemEgg</a></li>
 <li><a href="cn/nukkit/item/ItemElytra.html" title="class in cn.nukkit.item" target="classFrame">ItemElytra</a></li>
 <li><a href="cn/nukkit/item/ItemEmerald.html" title="class in cn.nukkit.item" target="classFrame">ItemEmerald</a></li>
+<li><a href="cn/nukkit/item/ItemEmptyMap.html" title="class in cn.nukkit.item" target="classFrame">ItemEmptyMap</a></li>
 <li><a href="cn/nukkit/item/ItemEndCrystal.html" title="class in cn.nukkit.item" target="classFrame">ItemEndCrystal</a></li>
 <li><a href="cn/nukkit/item/ItemEnderEye.html" title="class in cn.nukkit.item" target="classFrame">ItemEnderEye</a></li>
 <li><a href="cn/nukkit/item/ItemEnderPearl.html" title="class in cn.nukkit.item" target="classFrame">ItemEnderPearl</a></li>
@@ -962,6 +959,7 @@
 <li><a href="cn/nukkit/item/ItemFirework.html" title="class in cn.nukkit.item" target="classFrame">ItemFirework</a></li>
 <li><a href="cn/nukkit/item/ItemFirework.FireworkExplosion.html" title="class in cn.nukkit.item" target="classFrame">ItemFirework.FireworkExplosion</a></li>
 <li><a href="cn/nukkit/item/ItemFirework.FireworkExplosion.ExplosionType.html" title="enum in cn.nukkit.item" target="classFrame">ItemFirework.FireworkExplosion.ExplosionType</a></li>
+<li><a href="cn/nukkit/item/ItemFireworkStar.html" title="class in cn.nukkit.item" target="classFrame">ItemFireworkStar</a></li>
 <li><a href="cn/nukkit/item/ItemFish.html" title="class in cn.nukkit.item" target="classFrame">ItemFish</a></li>
 <li><a href="cn/nukkit/item/ItemFishCooked.html" title="class in cn.nukkit.item" target="classFrame">ItemFishCooked</a></li>
 <li><a href="cn/nukkit/item/ItemFishingRod.html" title="class in cn.nukkit.item" target="classFrame">ItemFishingRod</a></li>
@@ -974,16 +972,21 @@
 <li><a href="cn/nukkit/item/ItemGlassBottle.html" title="class in cn.nukkit.item" target="classFrame">ItemGlassBottle</a></li>
 <li><a href="cn/nukkit/item/ItemGlowstoneDust.html" title="class in cn.nukkit.item" target="classFrame">ItemGlowstoneDust</a></li>
 <li><a href="cn/nukkit/item/ItemGunpowder.html" title="class in cn.nukkit.item" target="classFrame">ItemGunpowder</a></li>
+<li><a href="cn/nukkit/item/ItemHeartOfTheSea.html" title="class in cn.nukkit.item" target="classFrame">ItemHeartOfTheSea</a></li>
 <li><a href="cn/nukkit/item/ItemHelmetChain.html" title="class in cn.nukkit.item" target="classFrame">ItemHelmetChain</a></li>
 <li><a href="cn/nukkit/item/ItemHelmetDiamond.html" title="class in cn.nukkit.item" target="classFrame">ItemHelmetDiamond</a></li>
 <li><a href="cn/nukkit/item/ItemHelmetGold.html" title="class in cn.nukkit.item" target="classFrame">ItemHelmetGold</a></li>
 <li><a href="cn/nukkit/item/ItemHelmetIron.html" title="class in cn.nukkit.item" target="classFrame">ItemHelmetIron</a></li>
 <li><a href="cn/nukkit/item/ItemHelmetLeather.html" title="class in cn.nukkit.item" target="classFrame">ItemHelmetLeather</a></li>
+<li><a href="cn/nukkit/item/ItemHelmetNetherite.html" title="class in cn.nukkit.item" target="classFrame">ItemHelmetNetherite</a></li>
 <li><a href="cn/nukkit/item/ItemHoeDiamond.html" title="class in cn.nukkit.item" target="classFrame">ItemHoeDiamond</a></li>
 <li><a href="cn/nukkit/item/ItemHoeGold.html" title="class in cn.nukkit.item" target="classFrame">ItemHoeGold</a></li>
 <li><a href="cn/nukkit/item/ItemHoeIron.html" title="class in cn.nukkit.item" target="classFrame">ItemHoeIron</a></li>
+<li><a href="cn/nukkit/item/ItemHoeNetherite.html" title="class in cn.nukkit.item" target="classFrame">ItemHoeNetherite</a></li>
 <li><a href="cn/nukkit/item/ItemHoeStone.html" title="class in cn.nukkit.item" target="classFrame">ItemHoeStone</a></li>
 <li><a href="cn/nukkit/item/ItemHoeWood.html" title="class in cn.nukkit.item" target="classFrame">ItemHoeWood</a></li>
+<li><a href="cn/nukkit/item/ItemHoneyBottle.html" title="class in cn.nukkit.item" target="classFrame">ItemHoneyBottle</a></li>
+<li><a href="cn/nukkit/item/ItemHoneycomb.html" title="class in cn.nukkit.item" target="classFrame">ItemHoneycomb</a></li>
 <li><a href="cn/nukkit/item/ItemHopper.html" title="class in cn.nukkit.item" target="classFrame">ItemHopper</a></li>
 <li><a href="cn/nukkit/item/ItemHorseArmorDiamond.html" title="class in cn.nukkit.item" target="classFrame">ItemHorseArmorDiamond</a></li>
 <li><a href="cn/nukkit/item/ItemHorseArmorGold.html" title="class in cn.nukkit.item" target="classFrame">ItemHorseArmorGold</a></li>
@@ -992,13 +995,16 @@
 <li><a href="cn/nukkit/item/ItemID.html" title="interface in cn.nukkit.item" target="classFrame"><span class="interfaceName">ItemID</span></a></li>
 <li><a href="cn/nukkit/item/ItemIngotGold.html" title="class in cn.nukkit.item" target="classFrame">ItemIngotGold</a></li>
 <li><a href="cn/nukkit/item/ItemIngotIron.html" title="class in cn.nukkit.item" target="classFrame">ItemIngotIron</a></li>
+<li><a href="cn/nukkit/item/ItemIngotNetherite.html" title="class in cn.nukkit.item" target="classFrame">ItemIngotNetherite</a></li>
 <li><a href="cn/nukkit/item/ItemItemFrame.html" title="class in cn.nukkit.item" target="classFrame">ItemItemFrame</a></li>
+<li><a href="cn/nukkit/item/ItemLead.html" title="class in cn.nukkit.item" target="classFrame">ItemLead</a></li>
 <li><a href="cn/nukkit/item/ItemLeather.html" title="class in cn.nukkit.item" target="classFrame">ItemLeather</a></li>
 <li><a href="cn/nukkit/item/ItemLeggingsChain.html" title="class in cn.nukkit.item" target="classFrame">ItemLeggingsChain</a></li>
 <li><a href="cn/nukkit/item/ItemLeggingsDiamond.html" title="class in cn.nukkit.item" target="classFrame">ItemLeggingsDiamond</a></li>
 <li><a href="cn/nukkit/item/ItemLeggingsGold.html" title="class in cn.nukkit.item" target="classFrame">ItemLeggingsGold</a></li>
 <li><a href="cn/nukkit/item/ItemLeggingsIron.html" title="class in cn.nukkit.item" target="classFrame">ItemLeggingsIron</a></li>
 <li><a href="cn/nukkit/item/ItemLeggingsLeather.html" title="class in cn.nukkit.item" target="classFrame">ItemLeggingsLeather</a></li>
+<li><a href="cn/nukkit/item/ItemLeggingsNetherite.html" title="class in cn.nukkit.item" target="classFrame">ItemLeggingsNetherite</a></li>
 <li><a href="cn/nukkit/item/ItemMagmaCream.html" title="class in cn.nukkit.item" target="classFrame">ItemMagmaCream</a></li>
 <li><a href="cn/nukkit/item/ItemMap.html" title="class in cn.nukkit.item" target="classFrame">ItemMap</a></li>
 <li><a href="cn/nukkit/item/ItemMelon.html" title="class in cn.nukkit.item" target="classFrame">ItemMelon</a></li>
@@ -1010,15 +1016,20 @@
 <li><a href="cn/nukkit/item/ItemMushroomStew.html" title="class in cn.nukkit.item" target="classFrame">ItemMushroomStew</a></li>
 <li><a href="cn/nukkit/item/ItemMuttonCooked.html" title="class in cn.nukkit.item" target="classFrame">ItemMuttonCooked</a></li>
 <li><a href="cn/nukkit/item/ItemMuttonRaw.html" title="class in cn.nukkit.item" target="classFrame">ItemMuttonRaw</a></li>
+<li><a href="cn/nukkit/item/ItemNameTag.html" title="class in cn.nukkit.item" target="classFrame">ItemNameTag</a></li>
+<li><a href="cn/nukkit/item/ItemNautilusShell.html" title="class in cn.nukkit.item" target="classFrame">ItemNautilusShell</a></li>
 <li><a href="cn/nukkit/item/ItemNetherBrick.html" title="class in cn.nukkit.item" target="classFrame">ItemNetherBrick</a></li>
 <li><a href="cn/nukkit/item/ItemNetherStar.html" title="class in cn.nukkit.item" target="classFrame">ItemNetherStar</a></li>
 <li><a href="cn/nukkit/item/ItemNetherWart.html" title="class in cn.nukkit.item" target="classFrame">ItemNetherWart</a></li>
 <li><a href="cn/nukkit/item/ItemNuggetGold.html" title="class in cn.nukkit.item" target="classFrame">ItemNuggetGold</a></li>
+<li><a href="cn/nukkit/item/ItemNuggetIron.html" title="class in cn.nukkit.item" target="classFrame">ItemNuggetIron</a></li>
 <li><a href="cn/nukkit/item/ItemPainting.html" title="class in cn.nukkit.item" target="classFrame">ItemPainting</a></li>
 <li><a href="cn/nukkit/item/ItemPaper.html" title="class in cn.nukkit.item" target="classFrame">ItemPaper</a></li>
+<li><a href="cn/nukkit/item/ItemPhantomMembrane.html" title="class in cn.nukkit.item" target="classFrame">ItemPhantomMembrane</a></li>
 <li><a href="cn/nukkit/item/ItemPickaxeDiamond.html" title="class in cn.nukkit.item" target="classFrame">ItemPickaxeDiamond</a></li>
 <li><a href="cn/nukkit/item/ItemPickaxeGold.html" title="class in cn.nukkit.item" target="classFrame">ItemPickaxeGold</a></li>
 <li><a href="cn/nukkit/item/ItemPickaxeIron.html" title="class in cn.nukkit.item" target="classFrame">ItemPickaxeIron</a></li>
+<li><a href="cn/nukkit/item/ItemPickaxeNetherite.html" title="class in cn.nukkit.item" target="classFrame">ItemPickaxeNetherite</a></li>
 <li><a href="cn/nukkit/item/ItemPickaxeStone.html" title="class in cn.nukkit.item" target="classFrame">ItemPickaxeStone</a></li>
 <li><a href="cn/nukkit/item/ItemPickaxeWood.html" title="class in cn.nukkit.item" target="classFrame">ItemPickaxeWood</a></li>
 <li><a href="cn/nukkit/item/ItemPorkchopCooked.html" title="class in cn.nukkit.item" target="classFrame">ItemPorkchopCooked</a></li>
@@ -1036,6 +1047,7 @@
 <li><a href="cn/nukkit/item/ItemQuartz.html" title="class in cn.nukkit.item" target="classFrame">ItemQuartz</a></li>
 <li><a href="cn/nukkit/item/ItemRabbitCooked.html" title="class in cn.nukkit.item" target="classFrame">ItemRabbitCooked</a></li>
 <li><a href="cn/nukkit/item/ItemRabbitFoot.html" title="class in cn.nukkit.item" target="classFrame">ItemRabbitFoot</a></li>
+<li><a href="cn/nukkit/item/ItemRabbitHide.html" title="class in cn.nukkit.item" target="classFrame">ItemRabbitHide</a></li>
 <li><a href="cn/nukkit/item/ItemRabbitRaw.html" title="class in cn.nukkit.item" target="classFrame">ItemRabbitRaw</a></li>
 <li><a href="cn/nukkit/item/ItemRabbitStew.html" title="class in cn.nukkit.item" target="classFrame">ItemRabbitStew</a></li>
 <li><a href="cn/nukkit/item/ItemRecord.html" title="class in cn.nukkit.item" target="classFrame">ItemRecord</a></li>
@@ -1047,6 +1059,7 @@
 <li><a href="cn/nukkit/item/ItemRecordFar.html" title="class in cn.nukkit.item" target="classFrame">ItemRecordFar</a></li>
 <li><a href="cn/nukkit/item/ItemRecordMall.html" title="class in cn.nukkit.item" target="classFrame">ItemRecordMall</a></li>
 <li><a href="cn/nukkit/item/ItemRecordMellohi.html" title="class in cn.nukkit.item" target="classFrame">ItemRecordMellohi</a></li>
+<li><a href="cn/nukkit/item/ItemRecordPigstep.html" title="class in cn.nukkit.item" target="classFrame">ItemRecordPigstep</a></li>
 <li><a href="cn/nukkit/item/ItemRecordStal.html" title="class in cn.nukkit.item" target="classFrame">ItemRecordStal</a></li>
 <li><a href="cn/nukkit/item/ItemRecordStrad.html" title="class in cn.nukkit.item" target="classFrame">ItemRecordStrad</a></li>
 <li><a href="cn/nukkit/item/ItemRecordWait.html" title="class in cn.nukkit.item" target="classFrame">ItemRecordWait</a></li>
@@ -1058,6 +1071,8 @@
 <li><a href="cn/nukkit/item/ItemSaddle.html" title="class in cn.nukkit.item" target="classFrame">ItemSaddle</a></li>
 <li><a href="cn/nukkit/item/ItemSalmon.html" title="class in cn.nukkit.item" target="classFrame">ItemSalmon</a></li>
 <li><a href="cn/nukkit/item/ItemSalmonCooked.html" title="class in cn.nukkit.item" target="classFrame">ItemSalmonCooked</a></li>
+<li><a href="cn/nukkit/item/ItemScrapNetherite.html" title="class in cn.nukkit.item" target="classFrame">ItemScrapNetherite</a></li>
+<li><a href="cn/nukkit/item/ItemScute.html" title="class in cn.nukkit.item" target="classFrame">ItemScute</a></li>
 <li><a href="cn/nukkit/item/ItemSeedsBeetroot.html" title="class in cn.nukkit.item" target="classFrame">ItemSeedsBeetroot</a></li>
 <li><a href="cn/nukkit/item/ItemSeedsMelon.html" title="class in cn.nukkit.item" target="classFrame">ItemSeedsMelon</a></li>
 <li><a href="cn/nukkit/item/ItemSeedsPumpkin.html" title="class in cn.nukkit.item" target="classFrame">ItemSeedsPumpkin</a></li>
@@ -1067,8 +1082,10 @@
 <li><a href="cn/nukkit/item/ItemShovelDiamond.html" title="class in cn.nukkit.item" target="classFrame">ItemShovelDiamond</a></li>
 <li><a href="cn/nukkit/item/ItemShovelGold.html" title="class in cn.nukkit.item" target="classFrame">ItemShovelGold</a></li>
 <li><a href="cn/nukkit/item/ItemShovelIron.html" title="class in cn.nukkit.item" target="classFrame">ItemShovelIron</a></li>
+<li><a href="cn/nukkit/item/ItemShovelNetherite.html" title="class in cn.nukkit.item" target="classFrame">ItemShovelNetherite</a></li>
 <li><a href="cn/nukkit/item/ItemShovelStone.html" title="class in cn.nukkit.item" target="classFrame">ItemShovelStone</a></li>
 <li><a href="cn/nukkit/item/ItemShovelWood.html" title="class in cn.nukkit.item" target="classFrame">ItemShovelWood</a></li>
+<li><a href="cn/nukkit/item/ItemShulkerShell.html" title="class in cn.nukkit.item" target="classFrame">ItemShulkerShell</a></li>
 <li><a href="cn/nukkit/item/ItemSign.html" title="class in cn.nukkit.item" target="classFrame">ItemSign</a></li>
 <li><a href="cn/nukkit/item/ItemSkull.html" title="class in cn.nukkit.item" target="classFrame">ItemSkull</a></li>
 <li><a href="cn/nukkit/item/ItemSlimeball.html" title="class in cn.nukkit.item" target="classFrame">ItemSlimeball</a></li>
@@ -1077,21 +1094,28 @@
 <li><a href="cn/nukkit/event/entity/ItemSpawnEvent.html" title="class in cn.nukkit.event.entity" target="classFrame">ItemSpawnEvent</a></li>
 <li><a href="cn/nukkit/item/ItemSpiderEye.html" title="class in cn.nukkit.item" target="classFrame">ItemSpiderEye</a></li>
 <li><a href="cn/nukkit/item/ItemSpiderEyeFermented.html" title="class in cn.nukkit.item" target="classFrame">ItemSpiderEyeFermented</a></li>
+<li><a href="cn/nukkit/item/ItemSpyglass.html" title="class in cn.nukkit.item" target="classFrame">ItemSpyglass</a></li>
+<li><a href="cn/nukkit/network/protocol/ItemStackRequestPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">ItemStackRequestPacket</a></li>
+<li><a href="cn/nukkit/network/protocol/ItemStackRequestPacket.ItemStackAction.html" title="class in cn.nukkit.network.protocol" target="classFrame">ItemStackRequestPacket.ItemStackAction</a></li>
+<li><a href="cn/nukkit/network/protocol/ItemStackRequestPacket.Request.html" title="class in cn.nukkit.network.protocol" target="classFrame">ItemStackRequestPacket.Request</a></li>
 <li><a href="cn/nukkit/item/ItemSteak.html" title="class in cn.nukkit.item" target="classFrame">ItemSteak</a></li>
 <li><a href="cn/nukkit/item/ItemStick.html" title="class in cn.nukkit.item" target="classFrame">ItemStick</a></li>
 <li><a href="cn/nukkit/item/ItemString.html" title="class in cn.nukkit.item" target="classFrame">ItemString</a></li>
 <li><a href="cn/nukkit/item/ItemSugar.html" title="class in cn.nukkit.item" target="classFrame">ItemSugar</a></li>
 <li><a href="cn/nukkit/item/ItemSugarcane.html" title="class in cn.nukkit.item" target="classFrame">ItemSugarcane</a></li>
+<li><a href="cn/nukkit/item/ItemSuspiciousStew.html" title="class in cn.nukkit.item" target="classFrame">ItemSuspiciousStew</a></li>
 <li><a href="cn/nukkit/item/ItemSweetBerries.html" title="class in cn.nukkit.item" target="classFrame">ItemSweetBerries</a></li>
 <li><a href="cn/nukkit/item/ItemSwordDiamond.html" title="class in cn.nukkit.item" target="classFrame">ItemSwordDiamond</a></li>
 <li><a href="cn/nukkit/item/ItemSwordGold.html" title="class in cn.nukkit.item" target="classFrame">ItemSwordGold</a></li>
 <li><a href="cn/nukkit/item/ItemSwordIron.html" title="class in cn.nukkit.item" target="classFrame">ItemSwordIron</a></li>
+<li><a href="cn/nukkit/item/ItemSwordNetherite.html" title="class in cn.nukkit.item" target="classFrame">ItemSwordNetherite</a></li>
 <li><a href="cn/nukkit/item/ItemSwordStone.html" title="class in cn.nukkit.item" target="classFrame">ItemSwordStone</a></li>
 <li><a href="cn/nukkit/item/ItemSwordWood.html" title="class in cn.nukkit.item" target="classFrame">ItemSwordWood</a></li>
 <li><a href="cn/nukkit/item/ItemTool.html" title="class in cn.nukkit.item" target="classFrame">ItemTool</a></li>
 <li><a href="cn/nukkit/item/ItemTotem.html" title="class in cn.nukkit.item" target="classFrame">ItemTotem</a></li>
 <li><a href="cn/nukkit/item/ItemTrident.html" title="class in cn.nukkit.item" target="classFrame">ItemTrident</a></li>
 <li><a href="cn/nukkit/item/ItemTurtleShell.html" title="class in cn.nukkit.item" target="classFrame">ItemTurtleShell</a></li>
+<li><a href="cn/nukkit/item/ItemWarpedFungusOnAStick.html" title="class in cn.nukkit.item" target="classFrame">ItemWarpedFungusOnAStick</a></li>
 <li><a href="cn/nukkit/item/ItemWheat.html" title="class in cn.nukkit.item" target="classFrame">ItemWheat</a></li>
 <li><a href="cn/nukkit/utils/IterableThreadLocal.html" title="class in cn.nukkit.utils" target="classFrame">IterableThreadLocal</a></li>
 <li><a href="cn/nukkit/plugin/JavaPluginLoader.html" title="class in cn.nukkit.plugin" target="classFrame">JavaPluginLoader</a></li>
@@ -1135,9 +1159,12 @@
 <li><a href="cn/nukkit/event/weather/LightningStrikeEvent.html" title="class in cn.nukkit.event.weather" target="classFrame">LightningStrikeEvent</a></li>
 <li><a href="cn/nukkit/level/generator/task/LightPopulationTask.html" title="class in cn.nukkit.level.generator.task" target="classFrame">LightPopulationTask</a></li>
 <li><a href="cn/nukkit/event/block/LiquidFlowEvent.html" title="class in cn.nukkit.event.block" target="classFrame">LiquidFlowEvent</a></li>
+<li><a href="cn/nukkit/level/ListChunkManager.html" title="class in cn.nukkit.level" target="classFrame">ListChunkManager</a></li>
 <li><a href="cn/nukkit/command/defaults/ListCommand.html" title="class in cn.nukkit.command.defaults" target="classFrame">ListCommand</a></li>
 <li><a href="cn/nukkit/event/Listener.html" title="interface in cn.nukkit.event" target="classFrame"><span class="interfaceName">Listener</span></a></li>
 <li><a href="cn/nukkit/nbt/tag/ListTag.html" title="class in cn.nukkit.nbt.tag" target="classFrame">ListTag</a></li>
+<li><a href="cn/nukkit/network/LittleEndianByteBufInputStream.html" title="class in cn.nukkit.network" target="classFrame">LittleEndianByteBufInputStream</a></li>
+<li><a href="cn/nukkit/network/LittleEndianByteBufOutputStream.html" title="class in cn.nukkit.network" target="classFrame">LittleEndianByteBufOutputStream</a></li>
 <li><a href="cn/nukkit/level/Location.html" title="class in cn.nukkit.level" target="classFrame">Location</a></li>
 <li><a href="cn/nukkit/utils/Logger.html" title="interface in cn.nukkit.utils" target="classFrame"><span class="interfaceName">Logger</span></a></li>
 <li><a href="cn/nukkit/utils/LoginChainData.html" title="interface in cn.nukkit.utils" target="classFrame"><span class="interfaceName">LoginChainData</span></a></li>
@@ -1164,6 +1191,17 @@
 <li><a href="cn/nukkit/metadata/MetadataStore.html" title="class in cn.nukkit.metadata" target="classFrame">MetadataStore</a></li>
 <li><a href="cn/nukkit/metadata/MetadataValue.html" title="class in cn.nukkit.metadata" target="classFrame">MetadataValue</a></li>
 <li><a href="cn/nukkit/plugin/MethodEventExecutor.html" title="class in cn.nukkit.plugin" target="classFrame">MethodEventExecutor</a></li>
+<li><a href="cn/nukkit/metrics/Metrics.html" title="class in cn.nukkit.metrics" target="classFrame">Metrics</a></li>
+<li><a href="cn/nukkit/metrics/Metrics.AdvancedBarChart.html" title="class in cn.nukkit.metrics" target="classFrame">Metrics.AdvancedBarChart</a></li>
+<li><a href="cn/nukkit/metrics/Metrics.AdvancedPie.html" title="class in cn.nukkit.metrics" target="classFrame">Metrics.AdvancedPie</a></li>
+<li><a href="cn/nukkit/metrics/Metrics.CustomChart.html" title="class in cn.nukkit.metrics" target="classFrame">Metrics.CustomChart</a></li>
+<li><a href="cn/nukkit/metrics/Metrics.DrilldownPie.html" title="class in cn.nukkit.metrics" target="classFrame">Metrics.DrilldownPie</a></li>
+<li><a href="cn/nukkit/metrics/Metrics.MultiLineChart.html" title="class in cn.nukkit.metrics" target="classFrame">Metrics.MultiLineChart</a></li>
+<li><a href="cn/nukkit/metrics/Metrics.SimpleBarChart.html" title="class in cn.nukkit.metrics" target="classFrame">Metrics.SimpleBarChart</a></li>
+<li><a href="cn/nukkit/metrics/Metrics.SimplePie.html" title="class in cn.nukkit.metrics" target="classFrame">Metrics.SimplePie</a></li>
+<li><a href="cn/nukkit/metrics/Metrics.SingleLineChart.html" title="class in cn.nukkit.metrics" target="classFrame">Metrics.SingleLineChart</a></li>
+<li><a href="cn/nukkit/inventory/MinecartChestInventory.html" title="class in cn.nukkit.inventory" target="classFrame">MinecartChestInventory</a></li>
+<li><a href="cn/nukkit/inventory/MinecartHopperInventory.html" title="class in cn.nukkit.inventory" target="classFrame">MinecartHopperInventory</a></li>
 <li><a href="cn/nukkit/utils/MinecartType.html" title="enum in cn.nukkit.utils" target="classFrame">MinecartType</a></li>
 <li><a href="cn/nukkit/inventory/MixRecipe.html" title="class in cn.nukkit.inventory" target="classFrame">MixRecipe</a></li>
 <li><a href="cn/nukkit/network/protocol/MobArmorEquipmentPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">MobArmorEquipmentPacket</a></li>
@@ -1176,11 +1214,10 @@
 <li><a href="cn/nukkit/network/protocol/MoveEntityDeltaPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">MoveEntityDeltaPacket</a></li>
 <li><a href="cn/nukkit/network/protocol/MovePlayerPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">MovePlayerPacket</a></li>
 <li><a href="cn/nukkit/level/MovingObjectPosition.html" title="class in cn.nukkit.level" target="classFrame">MovingObjectPosition</a></li>
+<li><a href="cn/nukkit/inventory/MultiRecipe.html" title="class in cn.nukkit.inventory" target="classFrame">MultiRecipe</a></li>
 <li><a href="cn/nukkit/level/biome/impl/mushroom/MushroomIslandBiome.html" title="class in cn.nukkit.level.biome.impl.mushroom" target="classFrame">MushroomIslandBiome</a></li>
 <li><a href="cn/nukkit/level/biome/impl/mushroom/MushroomIslandShoreBiome.html" title="class in cn.nukkit.level.biome.impl.mushroom" target="classFrame">MushroomIslandShoreBiome</a></li>
 <li><a href="cn/nukkit/level/generator/populator/impl/MushroomPopulator.html" title="class in cn.nukkit.level.generator.populator.impl" target="classFrame">MushroomPopulator</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/NACK.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">NACK</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/NACK.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">NACK.Factory</a></li>
 <li><a href="cn/nukkit/entity/data/NBTEntityData.html" title="class in cn.nukkit.entity.data" target="classFrame">NBTEntityData</a></li>
 <li><a href="cn/nukkit/nbt/stream/NBTInputStream.html" title="class in cn.nukkit.nbt.stream" target="classFrame">NBTInputStream</a></li>
 <li><a href="cn/nukkit/nbt/NBTIO.html" title="class in cn.nukkit.nbt" target="classFrame">NBTIO</a></li>
@@ -1205,10 +1242,12 @@
 <li><a href="cn/nukkit/level/generator/noise/vanilla/f/NoiseGeneratorSimplexF.html" title="class in cn.nukkit.level.generator.noise.vanilla.f" target="classFrame">NoiseGeneratorSimplexF</a></li>
 <li><a href="cn/nukkit/level/generator/Normal.html" title="class in cn.nukkit.level.generator" target="classFrame">Normal</a></li>
 <li><a href="cn/nukkit/network/protocol/NPCRequestPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">NPCRequestPacket</a></li>
+<li><a href="cn/nukkit/network/protocol/NPCRequestPacket.RequestType.html" title="enum in cn.nukkit.network.protocol" target="classFrame">NPCRequestPacket.RequestType</a></li>
 <li><a href="cn/nukkit/Nukkit.html" title="class in cn.nukkit" target="classFrame">Nukkit</a></li>
 <li><a href="cn/nukkit/console/NukkitConsole.html" title="class in cn.nukkit.console" target="classFrame">NukkitConsole</a></li>
 <li><a href="cn/nukkit/console/NukkitConsoleCompleter.html" title="class in cn.nukkit.console" target="classFrame">NukkitConsoleCompleter</a></li>
 <li><a href="cn/nukkit/math/NukkitMath.html" title="class in cn.nukkit.math" target="classFrame">NukkitMath</a></li>
+<li><a href="cn/nukkit/metrics/NukkitMetrics.html" title="class in cn.nukkit.metrics" target="classFrame">NukkitMetrics</a></li>
 <li><a href="cn/nukkit/math/NukkitRandom.html" title="class in cn.nukkit.math" target="classFrame">NukkitRandom</a></li>
 <li><a href="cn/nukkit/scheduler/NukkitRunnable.html" title="class in cn.nukkit.scheduler" target="classFrame">NukkitRunnable</a></li>
 <li><a href="cn/nukkit/nbt/tag/NumberTag.html" title="class in cn.nukkit.nbt.tag" target="classFrame">NumberTag</a></li>
@@ -1228,17 +1267,12 @@
 <li><a href="cn/nukkit/OfflinePlayer.html" title="class in cn.nukkit" target="classFrame">OfflinePlayer</a></li>
 <li><a href="cn/nukkit/network/protocol/OnScreenTextureAnimationPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">OnScreenTextureAnimationPacket</a></li>
 <li><a href="cn/nukkit/command/defaults/OpCommand.html" title="class in cn.nukkit.command.defaults" target="classFrame">OpCommand</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/OPEN_CONNECTION_REPLY_1.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">OPEN_CONNECTION_REPLY_1</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/OPEN_CONNECTION_REPLY_1.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">OPEN_CONNECTION_REPLY_1.Factory</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/OPEN_CONNECTION_REPLY_2.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">OPEN_CONNECTION_REPLY_2</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/OPEN_CONNECTION_REPLY_2.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">OPEN_CONNECTION_REPLY_2.Factory</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/OPEN_CONNECTION_REQUEST_1.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">OPEN_CONNECTION_REQUEST_1</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/OPEN_CONNECTION_REQUEST_1.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">OPEN_CONNECTION_REQUEST_1.Factory</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/OPEN_CONNECTION_REQUEST_2.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">OPEN_CONNECTION_REQUEST_2</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/OPEN_CONNECTION_REQUEST_2.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">OPEN_CONNECTION_REQUEST_2.Factory</a></li>
 <li><a href="cn/nukkit/level/generator/object/ore/OreType.html" title="class in cn.nukkit.level.generator.object.ore" target="classFrame">OreType</a></li>
-<li><a href="cn/nukkit/raknet/protocol/Packet.html" title="class in cn.nukkit.raknet.protocol" target="classFrame">Packet</a></li>
-<li><a href="cn/nukkit/raknet/protocol/Packet.PacketFactory.html" title="interface in cn.nukkit.raknet.protocol" target="classFrame"><span class="interfaceName">Packet.PacketFactory</span></a></li>
+<li><a href="cn/nukkit/network/protocol/PacketViolationWarningPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">PacketViolationWarningPacket</a></li>
+<li><a href="cn/nukkit/network/protocol/PacketViolationWarningPacket.PacketViolationSeverity.html" title="enum in cn.nukkit.network.protocol" target="classFrame">PacketViolationWarningPacket.PacketViolationSeverity</a></li>
+<li><a href="cn/nukkit/network/protocol/PacketViolationWarningPacket.PacketViolationType.html" title="enum in cn.nukkit.network.protocol" target="classFrame">PacketViolationWarningPacket.PacketViolationType</a></li>
+<li><a href="cn/nukkit/level/util/PaddedBitArray.html" title="class in cn.nukkit.level.util" target="classFrame">PaddedBitArray</a></li>
+<li><a href="cn/nukkit/level/util/PalettedBlockStorage.html" title="class in cn.nukkit.level.util" target="classFrame">PalettedBlockStorage</a></li>
 <li><a href="cn/nukkit/command/simple/Parameter.html" title="annotation in cn.nukkit.command.simple" target="classFrame">Parameter</a></li>
 <li><a href="cn/nukkit/command/simple/Parameters.html" title="annotation in cn.nukkit.command.simple" target="classFrame">Parameters</a></li>
 <li><a href="cn/nukkit/command/defaults/PardonCommand.html" title="class in cn.nukkit.command.defaults" target="classFrame">PardonCommand</a></li>
@@ -1254,17 +1288,19 @@
 <li><a href="cn/nukkit/permission/PermissionAttachment.html" title="class in cn.nukkit.permission" target="classFrame">PermissionAttachment</a></li>
 <li><a href="cn/nukkit/permission/PermissionAttachmentInfo.html" title="class in cn.nukkit.permission" target="classFrame">PermissionAttachmentInfo</a></li>
 <li><a href="cn/nukkit/permission/PermissionRemovedExecutor.html" title="interface in cn.nukkit.permission" target="classFrame"><span class="interfaceName">PermissionRemovedExecutor</span></a></li>
+<li><a href="cn/nukkit/utils/PersonaPiece.html" title="class in cn.nukkit.utils" target="classFrame">PersonaPiece</a></li>
+<li><a href="cn/nukkit/utils/PersonaPieceTint.html" title="class in cn.nukkit.utils" target="classFrame">PersonaPieceTint</a></li>
 <li><a href="cn/nukkit/nbt/stream/PGZIPBlock.html" title="class in cn.nukkit.nbt.stream" target="classFrame">PGZIPBlock</a></li>
 <li><a href="cn/nukkit/nbt/stream/PGZIPOutputStream.html" title="class in cn.nukkit.nbt.stream" target="classFrame">PGZIPOutputStream</a></li>
 <li><a href="cn/nukkit/nbt/stream/PGZIPState.html" title="class in cn.nukkit.nbt.stream" target="classFrame">PGZIPState</a></li>
 <li><a href="cn/nukkit/nbt/stream/PGZIPThreadLocal.html" title="class in cn.nukkit.nbt.stream" target="classFrame">PGZIPThreadLocal</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/PING_DataPacket.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">PING_DataPacket</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/PING_DataPacket.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">PING_DataPacket.Factory</a></li>
 <li><a href="cn/nukkit/level/biome/impl/plains/PlainsBiome.html" title="class in cn.nukkit.level.biome.impl.plains" target="classFrame">PlainsBiome</a></li>
 <li><a href="cn/nukkit/Player.html" title="class in cn.nukkit" target="classFrame">Player</a></li>
 <li><a href="cn/nukkit/event/player/PlayerAchievementAwardedEvent.html" title="class in cn.nukkit.event.player" target="classFrame">PlayerAchievementAwardedEvent</a></li>
 <li><a href="cn/nukkit/network/protocol/PlayerActionPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">PlayerActionPacket</a></li>
 <li><a href="cn/nukkit/event/player/PlayerAnimationEvent.html" title="class in cn.nukkit.event.player" target="classFrame">PlayerAnimationEvent</a></li>
+<li><a href="cn/nukkit/network/protocol/PlayerArmorDamagePacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">PlayerArmorDamagePacket</a></li>
+<li><a href="cn/nukkit/network/protocol/PlayerArmorDamagePacket.PlayerArmorDamageFlag.html" title="enum in cn.nukkit.network.protocol" target="classFrame">PlayerArmorDamagePacket.PlayerArmorDamageFlag</a></li>
 <li><a href="cn/nukkit/event/player/PlayerAsyncPreLoginEvent.html" title="class in cn.nukkit.event.player" target="classFrame">PlayerAsyncPreLoginEvent</a></li>
 <li><a href="cn/nukkit/event/player/PlayerAsyncPreLoginEvent.LoginResult.html" title="enum in cn.nukkit.event.player" target="classFrame">PlayerAsyncPreLoginEvent.LoginResult</a></li>
 <li><a href="cn/nukkit/event/player/PlayerBedEnterEvent.html" title="class in cn.nukkit.event.player" target="classFrame">PlayerBedEnterEvent</a></li>
@@ -1283,8 +1319,11 @@
 <li><a href="cn/nukkit/event/player/PlayerDeathEvent.html" title="class in cn.nukkit.event.player" target="classFrame">PlayerDeathEvent</a></li>
 <li><a href="cn/nukkit/event/player/PlayerDropItemEvent.html" title="class in cn.nukkit.event.player" target="classFrame">PlayerDropItemEvent</a></li>
 <li><a href="cn/nukkit/event/player/PlayerEatFoodEvent.html" title="class in cn.nukkit.event.player" target="classFrame">PlayerEatFoodEvent</a></li>
+<li><a href="cn/nukkit/event/player/PlayerEditBookEvent.html" title="class in cn.nukkit.event.player" target="classFrame">PlayerEditBookEvent</a></li>
+<li><a href="cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">PlayerEnchantOptionsPacket</a></li>
 <li><a href="cn/nukkit/inventory/PlayerEnderChestInventory.html" title="class in cn.nukkit.inventory" target="classFrame">PlayerEnderChestInventory</a></li>
 <li><a href="cn/nukkit/event/player/PlayerEvent.html" title="class in cn.nukkit.event.player" target="classFrame">PlayerEvent</a></li>
+<li><a href="cn/nukkit/event/player/PlayerFishEvent.html" title="class in cn.nukkit.event.player" target="classFrame">PlayerFishEvent</a></li>
 <li><a href="cn/nukkit/PlayerFood.html" title="class in cn.nukkit" target="classFrame">PlayerFood</a></li>
 <li><a href="cn/nukkit/event/player/PlayerFoodLevelChangeEvent.html" title="class in cn.nukkit.event.player" target="classFrame">PlayerFoodLevelChangeEvent</a></li>
 <li><a href="cn/nukkit/event/player/PlayerFormRespondedEvent.html" title="class in cn.nukkit.event.player" target="classFrame">PlayerFormRespondedEvent</a></li>
@@ -1300,10 +1339,12 @@
 <li><a href="cn/nukkit/event/player/PlayerItemConsumeEvent.html" title="class in cn.nukkit.event.player" target="classFrame">PlayerItemConsumeEvent</a></li>
 <li><a href="cn/nukkit/event/player/PlayerItemHeldEvent.html" title="class in cn.nukkit.event.player" target="classFrame">PlayerItemHeldEvent</a></li>
 <li><a href="cn/nukkit/event/player/PlayerJoinEvent.html" title="class in cn.nukkit.event.player" target="classFrame">PlayerJoinEvent</a></li>
+<li><a href="cn/nukkit/event/player/PlayerJumpEvent.html" title="class in cn.nukkit.event.player" target="classFrame">PlayerJumpEvent</a></li>
 <li><a href="cn/nukkit/event/player/PlayerKickEvent.html" title="class in cn.nukkit.event.player" target="classFrame">PlayerKickEvent</a></li>
 <li><a href="cn/nukkit/event/player/PlayerKickEvent.Reason.html" title="enum in cn.nukkit.event.player" target="classFrame">PlayerKickEvent.Reason</a></li>
 <li><a href="cn/nukkit/network/protocol/PlayerListPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">PlayerListPacket</a></li>
 <li><a href="cn/nukkit/network/protocol/PlayerListPacket.Entry.html" title="class in cn.nukkit.network.protocol" target="classFrame">PlayerListPacket.Entry</a></li>
+<li><a href="cn/nukkit/event/player/PlayerLocallyInitializedEvent.html" title="class in cn.nukkit.event.player" target="classFrame">PlayerLocallyInitializedEvent</a></li>
 <li><a href="cn/nukkit/event/player/PlayerLoginEvent.html" title="class in cn.nukkit.event.player" target="classFrame">PlayerLoginEvent</a></li>
 <li><a href="cn/nukkit/event/player/PlayerMapInfoRequestEvent.html" title="class in cn.nukkit.event.player" target="classFrame">PlayerMapInfoRequestEvent</a></li>
 <li><a href="cn/nukkit/event/player/PlayerMessageEvent.html" title="class in cn.nukkit.event.player" target="classFrame">PlayerMessageEvent</a></li>
@@ -1344,8 +1385,6 @@
 <li><a href="cn/nukkit/plugin/PluginManager.html" title="class in cn.nukkit.plugin" target="classFrame">PluginManager</a></li>
 <li><a href="cn/nukkit/command/defaults/PluginsCommand.html" title="class in cn.nukkit.command.defaults" target="classFrame">PluginsCommand</a></li>
 <li><a href="cn/nukkit/scheduler/PluginTask.html" title="class in cn.nukkit.scheduler" target="classFrame">PluginTask</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/PONG_DataPacket.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">PONG_DataPacket</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/PONG_DataPacket.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">PONG_DataPacket.Factory</a></li>
 <li><a href="cn/nukkit/level/generator/PopChunkManager.html" title="class in cn.nukkit.level.generator" target="classFrame">PopChunkManager</a></li>
 <li><a href="cn/nukkit/level/generator/task/PopulationTask.html" title="class in cn.nukkit.level.generator.task" target="classFrame">PopulationTask</a></li>
 <li><a href="cn/nukkit/level/generator/populator/type/Populator.html" title="class in cn.nukkit.level.generator.populator.type" target="classFrame">Populator</a></li>
@@ -1378,6 +1417,7 @@
 <li><a href="cn/nukkit/event/potion/PotionApplyEvent.html" title="class in cn.nukkit.event.potion" target="classFrame">PotionApplyEvent</a></li>
 <li><a href="cn/nukkit/event/potion/PotionCollideEvent.html" title="class in cn.nukkit.event.potion" target="classFrame">PotionCollideEvent</a></li>
 <li><a href="cn/nukkit/event/potion/PotionEvent.html" title="class in cn.nukkit.event.potion" target="classFrame">PotionEvent</a></li>
+<li><a href="cn/nukkit/level/util/Pow2BitArray.html" title="class in cn.nukkit.level.util" target="classFrame">Pow2BitArray</a></li>
 <li><a href="cn/nukkit/dispenser/ProjectileDispenseBehavior.html" title="class in cn.nukkit.dispenser" target="classFrame">ProjectileDispenseBehavior</a></li>
 <li><a href="cn/nukkit/event/entity/ProjectileHitEvent.html" title="class in cn.nukkit.event.entity" target="classFrame">ProjectileHitEvent</a></li>
 <li><a href="cn/nukkit/item/ProjectileItem.html" title="class in cn.nukkit.item" target="classFrame">ProjectileItem</a></li>
@@ -1390,9 +1430,7 @@
 <li><a href="cn/nukkit/utils/Rail.Orientation.html" title="enum in cn.nukkit.utils" target="classFrame">Rail.Orientation</a></li>
 <li><a href="cn/nukkit/utils/Rail.Orientation.State.html" title="enum in cn.nukkit.utils" target="classFrame">Rail.Orientation.State</a></li>
 <li><a href="cn/nukkit/level/particle/RainSplashParticle.html" title="class in cn.nukkit.level.particle" target="classFrame">RainSplashParticle</a></li>
-<li><a href="cn/nukkit/raknet/RakNet.html" title="class in cn.nukkit.raknet" target="classFrame">RakNet</a></li>
 <li><a href="cn/nukkit/network/RakNetInterface.html" title="class in cn.nukkit.network" target="classFrame">RakNetInterface</a></li>
-<li><a href="cn/nukkit/raknet/server/RakNetServer.html" title="class in cn.nukkit.raknet.server" target="classFrame">RakNetServer</a></li>
 <li><a href="cn/nukkit/item/randomitem/RandomItem.html" title="class in cn.nukkit.item.randomitem" target="classFrame">RandomItem</a></li>
 <li><a href="cn/nukkit/network/rcon/RCON.html" title="class in cn.nukkit.network.rcon" target="classFrame">RCON</a></li>
 <li><a href="cn/nukkit/network/rcon/RCONCommand.html" title="class in cn.nukkit.network.rcon" target="classFrame">RCONCommand</a></li>
@@ -1411,6 +1449,9 @@
 <li><a href="cn/nukkit/command/RemoteConsoleCommandSender.html" title="class in cn.nukkit.command" target="classFrame">RemoteConsoleCommandSender</a></li>
 <li><a href="cn/nukkit/event/server/RemoteServerCommandEvent.html" title="class in cn.nukkit.event.server" target="classFrame">RemoteServerCommandEvent</a></li>
 <li><a href="cn/nukkit/network/protocol/RemoveEntityPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">RemoveEntityPacket</a></li>
+<li><a href="cn/nukkit/inventory/transaction/action/RepairItemAction.html" title="class in cn.nukkit.inventory.transaction.action" target="classFrame">RepairItemAction</a></li>
+<li><a href="cn/nukkit/event/inventory/RepairItemEvent.html" title="class in cn.nukkit.event.inventory" target="classFrame">RepairItemEvent</a></li>
+<li><a href="cn/nukkit/inventory/transaction/RepairItemTransaction.html" title="class in cn.nukkit.inventory.transaction" target="classFrame">RepairItemTransaction</a></li>
 <li><a href="cn/nukkit/network/protocol/RequestChunkRadiusPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">RequestChunkRadiusPacket</a></li>
 <li><a href="cn/nukkit/resourcepacks/ResourcePack.html" title="interface in cn.nukkit.resourcepacks" target="classFrame"><span class="interfaceName">ResourcePack</span></a></li>
 <li><a href="cn/nukkit/network/protocol/ResourcePackChunkDataPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">ResourcePackChunkDataPacket</a></li>
@@ -1426,6 +1467,11 @@
 <li><a href="cn/nukkit/level/biome/impl/river/RiverBiome.html" title="class in cn.nukkit.level.biome.impl.river" target="classFrame">RiverBiome</a></li>
 <li><a href="cn/nukkit/level/biome/impl/roofedforest/RoofedForestBiome.html" title="class in cn.nukkit.level.biome.impl.roofedforest" target="classFrame">RoofedForestBiome</a></li>
 <li><a href="cn/nukkit/level/biome/impl/roofedforest/RoofedForestMBiome.html" title="class in cn.nukkit.level.biome.impl.roofedforest" target="classFrame">RoofedForestMBiome</a></li>
+<li><a href="cn/nukkit/item/RuntimeItemMapping.html" title="class in cn.nukkit.item" target="classFrame">RuntimeItemMapping</a></li>
+<li><a href="cn/nukkit/item/RuntimeItemMapping.LegacyEntry.html" title="class in cn.nukkit.item" target="classFrame">RuntimeItemMapping.LegacyEntry</a></li>
+<li><a href="cn/nukkit/item/RuntimeItemMapping.RuntimeEntry.html" title="class in cn.nukkit.item" target="classFrame">RuntimeItemMapping.RuntimeEntry</a></li>
+<li><a href="cn/nukkit/item/RuntimeItems.html" title="class in cn.nukkit.item" target="classFrame">RuntimeItems</a></li>
+<li><a href="cn/nukkit/item/RuntimeItems.MappingEntry.html" title="class in cn.nukkit.item" target="classFrame">RuntimeItems.MappingEntry</a></li>
 <li><a href="cn/nukkit/level/biome/type/SandyBiome.html" title="class in cn.nukkit.level.biome.type" target="classFrame">SandyBiome</a></li>
 <li><a href="cn/nukkit/level/biome/impl/savanna/SavannaBiome.html" title="class in cn.nukkit.level.biome.impl.savanna" target="classFrame">SavannaBiome</a></li>
 <li><a href="cn/nukkit/level/biome/impl/savanna/SavannaMBiome.html" title="class in cn.nukkit.level.biome.impl.savanna" target="classFrame">SavannaMBiome</a></li>
@@ -1441,23 +1487,18 @@
 <li><a href="cn/nukkit/item/randomitem/Selector.html" title="class in cn.nukkit.item.randomitem" target="classFrame">Selector</a></li>
 <li><a href="cn/nukkit/utils/SerializedImage.html" title="class in cn.nukkit.utils" target="classFrame">SerializedImage</a></li>
 <li><a href="cn/nukkit/Server.html" title="class in cn.nukkit" target="classFrame">Server</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/SERVER_HANDSHAKE_DataPacket.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">SERVER_HANDSHAKE_DataPacket</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/SERVER_HANDSHAKE_DataPacket.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">SERVER_HANDSHAKE_DataPacket.Factory</a></li>
 <li><a href="cn/nukkit/event/server/ServerCommandEvent.html" title="class in cn.nukkit.event.server" target="classFrame">ServerCommandEvent</a></li>
 <li><a href="cn/nukkit/event/server/ServerEvent.html" title="class in cn.nukkit.event.server" target="classFrame">ServerEvent</a></li>
 <li><a href="cn/nukkit/utils/ServerException.html" title="class in cn.nukkit.utils" target="classFrame">ServerException</a></li>
-<li><a href="cn/nukkit/raknet/server/ServerHandler.html" title="class in cn.nukkit.raknet.server" target="classFrame">ServerHandler</a></li>
-<li><a href="cn/nukkit/raknet/server/ServerInstance.html" title="interface in cn.nukkit.raknet.server" target="classFrame"><span class="interfaceName">ServerInstance</span></a></li>
 <li><a href="cn/nukkit/utils/ServerKiller.html" title="class in cn.nukkit.utils" target="classFrame">ServerKiller</a></li>
 <li><a href="cn/nukkit/permission/ServerOperator.html" title="interface in cn.nukkit.permission" target="classFrame"><span class="interfaceName">ServerOperator</span></a></li>
 <li><a href="cn/nukkit/scheduler/ServerScheduler.html" title="class in cn.nukkit.scheduler" target="classFrame">ServerScheduler</a></li>
 <li><a href="cn/nukkit/network/protocol/ServerSettingsRequestPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">ServerSettingsRequestPacket</a></li>
 <li><a href="cn/nukkit/network/protocol/ServerSettingsResponsePacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">ServerSettingsResponsePacket</a></li>
+<li><a href="cn/nukkit/event/server/ServerStopEvent.html" title="class in cn.nukkit.event.server" target="classFrame">ServerStopEvent</a></li>
 <li><a href="cn/nukkit/network/protocol/ServerToClientHandshakePacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">ServerToClientHandshakePacket</a></li>
 <li><a href="cn/nukkit/plugin/service/ServiceManager.html" title="interface in cn.nukkit.plugin.service" target="classFrame"><span class="interfaceName">ServiceManager</span></a></li>
 <li><a href="cn/nukkit/plugin/service/ServicePriority.html" title="enum in cn.nukkit.plugin.service" target="classFrame">ServicePriority</a></li>
-<li><a href="cn/nukkit/raknet/server/Session.html" title="class in cn.nukkit.raknet.server" target="classFrame">Session</a></li>
-<li><a href="cn/nukkit/raknet/server/SessionManager.html" title="class in cn.nukkit.raknet.server" target="classFrame">SessionManager</a></li>
 <li><a href="cn/nukkit/network/protocol/SetCommandsEnabledPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">SetCommandsEnabledPacket</a></li>
 <li><a href="cn/nukkit/network/protocol/SetDifficultyPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">SetDifficultyPacket</a></li>
 <li><a href="cn/nukkit/network/protocol/SetEntityDataPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">SetEntityDataPacket</a></li>
@@ -1516,6 +1557,7 @@
 <li><a href="cn/nukkit/entity/data/StringEntityData.html" title="class in cn.nukkit.entity.data" target="classFrame">StringEntityData</a></li>
 <li><a href="cn/nukkit/nbt/tag/StringTag.html" title="class in cn.nukkit.nbt.tag" target="classFrame">StringTag</a></li>
 <li><a href="cn/nukkit/network/protocol/StructureBlockUpdatePacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">StructureBlockUpdatePacket</a></li>
+<li><a href="cn/nukkit/event/level/StructureGrowEvent.html" title="class in cn.nukkit.event.level" target="classFrame">StructureGrowEvent</a></li>
 <li><a href="cn/nukkit/network/protocol/SubClientLoginPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">SubClientLoginPacket</a></li>
 <li><a href="cn/nukkit/level/biome/impl/plains/SunflowerPlainsBiome.html" title="class in cn.nukkit.level.biome.impl.plains" target="classFrame">SunflowerPlainsBiome</a></li>
 <li><a href="cn/nukkit/level/biome/impl/swamp/SwampBiome.html" title="class in cn.nukkit.level.biome.impl.swamp" target="classFrame">SwampBiome</a></li>
@@ -1540,7 +1582,6 @@
 <li><a href="cn/nukkit/utils/ThreadedLogger.html" title="class in cn.nukkit.utils" target="classFrame">ThreadedLogger</a></li>
 <li><a href="cn/nukkit/utils/ThreadStore.html" title="class in cn.nukkit.utils" target="classFrame">ThreadStore</a></li>
 <li><a href="cn/nukkit/event/level/ThunderChangeEvent.html" title="class in cn.nukkit.event.level" target="classFrame">ThunderChangeEvent</a></li>
-<li><a href="cn/nukkit/event/weather/ThunderChangeEvent.html" title="class in cn.nukkit.event.weather" target="classFrame">ThunderChangeEvent</a></li>
 <li><a href="cn/nukkit/level/format/leveldb/key/TicksKey.html" title="class in cn.nukkit.level.format.leveldb.key" target="classFrame">TicksKey</a></li>
 <li><a href="cn/nukkit/level/format/leveldb/key/TilesKey.html" title="class in cn.nukkit.level.format.leveldb.key" target="classFrame">TilesKey</a></li>
 <li><a href="cn/nukkit/command/defaults/TimeCommand.html" title="class in cn.nukkit.command.defaults" target="classFrame">TimeCommand</a></li>
@@ -1555,17 +1596,12 @@
 <li><a href="cn/nukkit/network/protocol/TransferPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">TransferPacket</a></li>
 <li><a href="cn/nukkit/lang/TranslationContainer.html" title="class in cn.nukkit.lang" target="classFrame">TranslationContainer</a></li>
 <li><a href="cn/nukkit/level/generator/object/tree/TreeGenerator.html" title="class in cn.nukkit.level.generator.object.tree" target="classFrame">TreeGenerator</a></li>
-<li><a href="cn/nukkit/raknet/server/UDPServerSocket.html" title="class in cn.nukkit.raknet.server" target="classFrame">UDPServerSocket</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/UNCONNECTED_PING.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">UNCONNECTED_PING</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/UNCONNECTED_PING.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">UNCONNECTED_PING.Factory</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/UNCONNECTED_PING_OPEN_CONNECTIONS.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">UNCONNECTED_PING_OPEN_CONNECTIONS</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/UNCONNECTED_PING_OPEN_CONNECTIONS.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">UNCONNECTED_PING_OPEN_CONNECTIONS.Factory</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/UNCONNECTED_PONG.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">UNCONNECTED_PONG</a></li>
-<li><a href="cn/nukkit/raknet/protocol/packet/UNCONNECTED_PONG.Factory.html" title="class in cn.nukkit.raknet.protocol.packet" target="classFrame">UNCONNECTED_PONG.Factory</a></li>
 <li><a href="cn/nukkit/network/protocol/UpdateAttributesPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">UpdateAttributesPacket</a></li>
 <li><a href="cn/nukkit/network/protocol/UpdateBlockPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">UpdateBlockPacket</a></li>
 <li><a href="cn/nukkit/network/protocol/UpdateBlockPacket.Entry.html" title="class in cn.nukkit.network.protocol" target="classFrame">UpdateBlockPacket.Entry</a></li>
 <li><a href="cn/nukkit/network/protocol/UpdateEquipmentPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">UpdateEquipmentPacket</a></li>
+<li><a href="cn/nukkit/network/protocol/UpdatePlayerGameTypePacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">UpdatePlayerGameTypePacket</a></li>
+<li><a href="cn/nukkit/network/protocol/UpdatePlayerGameTypePacket.GameType.html" title="enum in cn.nukkit.network.protocol" target="classFrame">UpdatePlayerGameTypePacket.GameType</a></li>
 <li><a href="cn/nukkit/network/protocol/UpdateSoftEnumPacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">UpdateSoftEnumPacket</a></li>
 <li><a href="cn/nukkit/network/protocol/UpdateSoftEnumPacket.Type.html" title="enum in cn.nukkit.network.protocol" target="classFrame">UpdateSoftEnumPacket.Type</a></li>
 <li><a href="cn/nukkit/network/protocol/UpdateTradePacket.html" title="class in cn.nukkit.network.protocol" target="classFrame">UpdateTradePacket</a></li>
@@ -1595,10 +1631,8 @@
 <li><a href="cn/nukkit/level/particle/WaterParticle.html" title="class in cn.nukkit.level.particle" target="classFrame">WaterParticle</a></li>
 <li><a href="cn/nukkit/level/biome/type/WateryBiome.html" title="class in cn.nukkit.level.biome.type" target="classFrame">WateryBiome</a></li>
 <li><a href="cn/nukkit/event/level/WeatherChangeEvent.html" title="class in cn.nukkit.event.level" target="classFrame">WeatherChangeEvent</a></li>
-<li><a href="cn/nukkit/event/weather/WeatherChangeEvent.html" title="class in cn.nukkit.event.weather" target="classFrame">WeatherChangeEvent</a></li>
 <li><a href="cn/nukkit/command/defaults/WeatherCommand.html" title="class in cn.nukkit.command.defaults" target="classFrame">WeatherCommand</a></li>
 <li><a href="cn/nukkit/event/level/WeatherEvent.html" title="class in cn.nukkit.event.level" target="classFrame">WeatherEvent</a></li>
-<li><a href="cn/nukkit/event/weather/WeatherEvent.html" title="class in cn.nukkit.event.weather" target="classFrame">WeatherEvent</a></li>
 <li><a href="cn/nukkit/command/defaults/WhitelistCommand.html" title="class in cn.nukkit.command.defaults" target="classFrame">WhitelistCommand</a></li>
 <li><a href="cn/nukkit/command/defaults/XpCommand.html" title="class in cn.nukkit.command.defaults" target="classFrame">XpCommand</a></li>
 <li><a href="cn/nukkit/resourcepacks/ZippedResourcePack.html" title="class in cn.nukkit.resourcepacks" target="classFrame">ZippedResourcePack</a></li>

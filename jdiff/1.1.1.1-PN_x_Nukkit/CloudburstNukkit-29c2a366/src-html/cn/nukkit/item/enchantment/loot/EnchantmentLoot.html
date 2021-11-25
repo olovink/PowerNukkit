@@ -17,8 +17,8 @@
 <span class="sourceLineNo">009</span> */<a name="line.9"></a>
 <span class="sourceLineNo">010</span>public abstract class EnchantmentLoot extends Enchantment {<a name="line.10"></a>
 <span class="sourceLineNo">011</span><a name="line.11"></a>
-<span class="sourceLineNo">012</span>    protected EnchantmentLoot(int id, String name, int weight, EnchantmentType type) {<a name="line.12"></a>
-<span class="sourceLineNo">013</span>        super(id, name, weight, type);<a name="line.13"></a>
+<span class="sourceLineNo">012</span>    protected EnchantmentLoot(int id, String name, Rarity rarity, EnchantmentType type) {<a name="line.12"></a>
+<span class="sourceLineNo">013</span>        super(id, name, rarity, type);<a name="line.13"></a>
 <span class="sourceLineNo">014</span>    }<a name="line.14"></a>
 <span class="sourceLineNo">015</span><a name="line.15"></a>
 <span class="sourceLineNo">016</span>    @Override<a name="line.16"></a>
@@ -37,8 +37,8 @@
 <span class="sourceLineNo">029</span>    }<a name="line.29"></a>
 <span class="sourceLineNo">030</span><a name="line.30"></a>
 <span class="sourceLineNo">031</span>    @Override<a name="line.31"></a>
-<span class="sourceLineNo">032</span>    public boolean isCompatibleWith(Enchantment enchantment) {<a name="line.32"></a>
-<span class="sourceLineNo">033</span>        return super.isCompatibleWith(enchantment) &amp;&amp; enchantment.id != Enchantment.ID_SILK_TOUCH;<a name="line.33"></a>
+<span class="sourceLineNo">032</span>    public boolean checkCompatibility(Enchantment enchantment) {<a name="line.32"></a>
+<span class="sourceLineNo">033</span>        return super.checkCompatibility(enchantment) &amp;&amp; enchantment.id != Enchantment.ID_SILK_TOUCH;<a name="line.33"></a>
 <span class="sourceLineNo">034</span>    }<a name="line.34"></a>
 <span class="sourceLineNo">035</span>}<a name="line.35"></a>
 

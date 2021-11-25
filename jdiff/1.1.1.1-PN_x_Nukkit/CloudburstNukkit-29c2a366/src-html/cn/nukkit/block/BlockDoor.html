@@ -13,10 +13,10 @@
 <span class="sourceLineNo">005</span>import cn.nukkit.event.block.DoorToggleEvent;<a name="line.5"></a>
 <span class="sourceLineNo">006</span>import cn.nukkit.item.Item;<a name="line.6"></a>
 <span class="sourceLineNo">007</span>import cn.nukkit.level.Level;<a name="line.7"></a>
-<span class="sourceLineNo">008</span>import cn.nukkit.level.Sound;<a name="line.8"></a>
-<span class="sourceLineNo">009</span>import cn.nukkit.math.AxisAlignedBB;<a name="line.9"></a>
-<span class="sourceLineNo">010</span>import cn.nukkit.math.BlockFace;<a name="line.10"></a>
-<span class="sourceLineNo">011</span>import cn.nukkit.math.SimpleAxisAlignedBB;<a name="line.11"></a>
+<span class="sourceLineNo">008</span>import cn.nukkit.math.AxisAlignedBB;<a name="line.8"></a>
+<span class="sourceLineNo">009</span>import cn.nukkit.math.BlockFace;<a name="line.9"></a>
+<span class="sourceLineNo">010</span>import cn.nukkit.math.SimpleAxisAlignedBB;<a name="line.10"></a>
+<span class="sourceLineNo">011</span>import cn.nukkit.network.protocol.LevelEventPacket;<a name="line.11"></a>
 <span class="sourceLineNo">012</span>import cn.nukkit.utils.Faceable;<a name="line.12"></a>
 <span class="sourceLineNo">013</span><a name="line.13"></a>
 <span class="sourceLineNo">014</span>/**<a name="line.14"></a>
@@ -209,7 +209,7 @@
 <span class="sourceLineNo">201</span>                Block up = this.up();<a name="line.201"></a>
 <span class="sourceLineNo">202</span><a name="line.202"></a>
 <span class="sourceLineNo">203</span>                if (up instanceof BlockDoor) {<a name="line.203"></a>
-<span class="sourceLineNo">204</span>                    this.getLevel().setBlock(up, new BlockAir(), false);<a name="line.204"></a>
+<span class="sourceLineNo">204</span>                    this.getLevel().setBlock(up, Block.get(BlockID.AIR), false);<a name="line.204"></a>
 <span class="sourceLineNo">205</span>                    this.getLevel().useBreakOn(this);<a name="line.205"></a>
 <span class="sourceLineNo">206</span>                }<a name="line.206"></a>
 <span class="sourceLineNo">207</span><a name="line.207"></a>
@@ -268,15 +268,15 @@
 <span class="sourceLineNo">260</span>        if (isTop(this.getDamage())) {<a name="line.260"></a>
 <span class="sourceLineNo">261</span>            Block down = this.down();<a name="line.261"></a>
 <span class="sourceLineNo">262</span>            if (down.getId() == this.getId()) {<a name="line.262"></a>
-<span class="sourceLineNo">263</span>                this.getLevel().setBlock(down, new BlockAir(), true);<a name="line.263"></a>
+<span class="sourceLineNo">263</span>                this.getLevel().setBlock(down, Block.get(BlockID.AIR), true);<a name="line.263"></a>
 <span class="sourceLineNo">264</span>            }<a name="line.264"></a>
 <span class="sourceLineNo">265</span>        } else {<a name="line.265"></a>
 <span class="sourceLineNo">266</span>            Block up = this.up();<a name="line.266"></a>
 <span class="sourceLineNo">267</span>            if (up.getId() == this.getId()) {<a name="line.267"></a>
-<span class="sourceLineNo">268</span>                this.getLevel().setBlock(up, new BlockAir(), true);<a name="line.268"></a>
+<span class="sourceLineNo">268</span>                this.getLevel().setBlock(up, Block.get(BlockID.AIR), true);<a name="line.268"></a>
 <span class="sourceLineNo">269</span>            }<a name="line.269"></a>
 <span class="sourceLineNo">270</span>        }<a name="line.270"></a>
-<span class="sourceLineNo">271</span>        this.getLevel().setBlock(this, new BlockAir(), true);<a name="line.271"></a>
+<span class="sourceLineNo">271</span>        this.getLevel().setBlock(this, Block.get(BlockID.AIR), true);<a name="line.271"></a>
 <span class="sourceLineNo">272</span><a name="line.272"></a>
 <span class="sourceLineNo">273</span>        return true;<a name="line.273"></a>
 <span class="sourceLineNo">274</span>    }<a name="line.274"></a>
@@ -292,7 +292,7 @@
 <span class="sourceLineNo">284</span>            return false;<a name="line.284"></a>
 <span class="sourceLineNo">285</span>        }<a name="line.285"></a>
 <span class="sourceLineNo">286</span><a name="line.286"></a>
-<span class="sourceLineNo">287</span>        this.level.addSound(this, isOpen() ? Sound.RANDOM_DOOR_OPEN : Sound.RANDOM_DOOR_CLOSE);<a name="line.287"></a>
+<span class="sourceLineNo">287</span>        this.getLevel().addLevelEvent(this.add(0.5, 0.5, 0.5), LevelEventPacket.EVENT_SOUND_DOOR);<a name="line.287"></a>
 <span class="sourceLineNo">288</span>        return true;<a name="line.288"></a>
 <span class="sourceLineNo">289</span>    }<a name="line.289"></a>
 <span class="sourceLineNo">290</span><a name="line.290"></a>

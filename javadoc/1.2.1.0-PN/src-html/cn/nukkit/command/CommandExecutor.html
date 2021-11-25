@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package cn.nukkit.command;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>/**<a name="line.3"></a>
+<span class="sourceLineNo">004</span> * 能监听命令执行的类实现的接口。&lt;br&gt;<a name="line.4"></a>
+<span class="sourceLineNo">005</span> * An interface what can be implemented by classes which listens command executing.<a name="line.5"></a>
+<span class="sourceLineNo">006</span> *<a name="line.6"></a>
+<span class="sourceLineNo">007</span> * @author MagicDroidX(code) @ Nukkit Project<a name="line.7"></a>
+<span class="sourceLineNo">008</span> * @author 粉鞋大妈(javadoc) @ Nukkit Project<a name="line.8"></a>
+<span class="sourceLineNo">009</span> * @see cn.nukkit.plugin.PluginBase<a name="line.9"></a>
+<span class="sourceLineNo">010</span> * @see cn.nukkit.command.CommandExecutor#onCommand<a name="line.10"></a>
+<span class="sourceLineNo">011</span> * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.11"></a>
+<span class="sourceLineNo">012</span> */<a name="line.12"></a>
+<span class="sourceLineNo">013</span>public interface CommandExecutor {<a name="line.13"></a>
+<span class="sourceLineNo">014</span>    /**<a name="line.14"></a>
+<span class="sourceLineNo">015</span>     * 在命令执行时会调用的方法。&lt;br&gt;<a name="line.15"></a>
+<span class="sourceLineNo">016</span>     * Called when a command is executed.<a name="line.16"></a>
+<span class="sourceLineNo">017</span>     *<a name="line.17"></a>
+<span class="sourceLineNo">018</span>     * &lt;p&gt;一个命令可以是{@code /a_LABEL an_arg1 AN_ARG2...}的形式，这时{@code label}变量的值为{@code "a_label"}，<a name="line.18"></a>
+<span class="sourceLineNo">019</span>     * {@code args}数组的元素有{@code "an_arg1","AN_ARG2",...}。注意到{@code label}变量会被转化成小写，<a name="line.19"></a>
+<span class="sourceLineNo">020</span>     * 而{@code args}数组内字符串元素的大小写不变。&lt;br&gt;<a name="line.20"></a>
+<span class="sourceLineNo">021</span>     * A command can be such a form like {@code /a_LABEL an_arg1 AN_ARG2...}. At this time, the value of<a name="line.21"></a>
+<span class="sourceLineNo">022</span>     * variable {@code label} is {@code "a_label"}, and the values of elements of array {@code args} are<a name="line.22"></a>
+<span class="sourceLineNo">023</span>     * {@code "an_arg1","AN_ARG2",...}. Notice that the value of variable {@code label} will be converted to<a name="line.23"></a>
+<span class="sourceLineNo">024</span>     * lower case, but the cases of elements of array {@code args} won't change.&lt;/p&gt;<a name="line.24"></a>
+<span class="sourceLineNo">025</span>     *<a name="line.25"></a>
+<span class="sourceLineNo">026</span>     * &lt;p&gt;关于返回值，如果返回{@code false}，Nukkit会给sender发送这个命令的使用方法等信息，来表示这个命令没有使用成功。<a name="line.26"></a>
+<span class="sourceLineNo">027</span>     * 如果你的命令成功的发挥了作用，你应该返回{@code true}来表示这个命令已执行成功。&lt;br&gt;<a name="line.27"></a>
+<span class="sourceLineNo">028</span>     * If this function returns {@code false}, Nukkit will send command usages to command sender, to explain that<a name="line.28"></a>
+<span class="sourceLineNo">029</span>     * the command didn't work normally. If your command works properly, a {@code true} should be returned to explain<a name="line.29"></a>
+<span class="sourceLineNo">030</span>     * that the command works.&lt;/p&gt;<a name="line.30"></a>
+<span class="sourceLineNo">031</span>     *<a name="line.31"></a>
+<span class="sourceLineNo">032</span>     * &lt;p&gt;如果你想测试一个命令发送者是否有权限执行这个命令，<a name="line.32"></a>
+<span class="sourceLineNo">033</span>     * 可以使用{@link cn.nukkit.command.Command#testPermissionSilent}。&lt;br&gt;<a name="line.33"></a>
+<span class="sourceLineNo">034</span>     * If you want to test whether a command sender has the permission to execute a command,<a name="line.34"></a>
+<span class="sourceLineNo">035</span>     * you can use {@link cn.nukkit.command.Command#testPermissionSilent}.&lt;/p&gt;<a name="line.35"></a>
+<span class="sourceLineNo">036</span>     *<a name="line.36"></a>
+<span class="sourceLineNo">037</span>     * @param sender  这个命令的发送者，可以是玩家或控制台等。&lt;br&gt;<a name="line.37"></a>
+<span class="sourceLineNo">038</span>     *                The sender of this command, this can be a player or a console.<a name="line.38"></a>
+<span class="sourceLineNo">039</span>     * @param command 要被发送的命令。&lt;br&gt;<a name="line.39"></a>
+<span class="sourceLineNo">040</span>     *                The command to send.<a name="line.40"></a>
+<span class="sourceLineNo">041</span>     * @param label   这个命令的标签。&lt;br&gt;<a name="line.41"></a>
+<span class="sourceLineNo">042</span>     *                Label of the command.<a name="line.42"></a>
+<span class="sourceLineNo">043</span>     * @param args    这个命令的参数列表。&lt;br&gt;<a name="line.43"></a>
+<span class="sourceLineNo">044</span>     *                Arguments of this command.<a name="line.44"></a>
+<span class="sourceLineNo">045</span>     * @return 这个命令执行是否执行成功。&lt;br&gt;whether this command is executed successfully.<a name="line.45"></a>
+<span class="sourceLineNo">046</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.46"></a>
+<span class="sourceLineNo">047</span>     */<a name="line.47"></a>
+<span class="sourceLineNo">048</span>    boolean onCommand(CommandSender sender, Command command, String label, String[] args);<a name="line.48"></a>
+<span class="sourceLineNo">049</span>}<a name="line.49"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>

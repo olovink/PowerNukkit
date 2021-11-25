@@ -10,15 +10,15 @@
 <span class="sourceLineNo">002</span><a name="line.2"></a>
 <span class="sourceLineNo">003</span>import cn.nukkit.Player;<a name="line.3"></a>
 <span class="sourceLineNo">004</span>import cn.nukkit.entity.Entity;<a name="line.4"></a>
-<span class="sourceLineNo">005</span>import cn.nukkit.entity.item.EntityPrimedTNT;<a name="line.5"></a>
-<span class="sourceLineNo">006</span>import cn.nukkit.item.Item;<a name="line.6"></a>
+<span class="sourceLineNo">005</span>import cn.nukkit.item.Item;<a name="line.5"></a>
+<span class="sourceLineNo">006</span>import cn.nukkit.item.enchantment.Enchantment;<a name="line.6"></a>
 <span class="sourceLineNo">007</span>import cn.nukkit.level.Level;<a name="line.7"></a>
-<span class="sourceLineNo">008</span>import cn.nukkit.level.Sound;<a name="line.8"></a>
-<span class="sourceLineNo">009</span>import cn.nukkit.math.NukkitRandom;<a name="line.9"></a>
-<span class="sourceLineNo">010</span>import cn.nukkit.nbt.tag.CompoundTag;<a name="line.10"></a>
-<span class="sourceLineNo">011</span>import cn.nukkit.nbt.tag.DoubleTag;<a name="line.11"></a>
-<span class="sourceLineNo">012</span>import cn.nukkit.nbt.tag.FloatTag;<a name="line.12"></a>
-<span class="sourceLineNo">013</span>import cn.nukkit.nbt.tag.ListTag;<a name="line.13"></a>
+<span class="sourceLineNo">008</span>import cn.nukkit.math.NukkitRandom;<a name="line.8"></a>
+<span class="sourceLineNo">009</span>import cn.nukkit.nbt.tag.CompoundTag;<a name="line.9"></a>
+<span class="sourceLineNo">010</span>import cn.nukkit.nbt.tag.DoubleTag;<a name="line.10"></a>
+<span class="sourceLineNo">011</span>import cn.nukkit.nbt.tag.FloatTag;<a name="line.11"></a>
+<span class="sourceLineNo">012</span>import cn.nukkit.nbt.tag.ListTag;<a name="line.12"></a>
+<span class="sourceLineNo">013</span>import cn.nukkit.network.protocol.LevelEventPacket;<a name="line.13"></a>
 <span class="sourceLineNo">014</span>import cn.nukkit.utils.BlockColor;<a name="line.14"></a>
 <span class="sourceLineNo">015</span><a name="line.15"></a>
 <span class="sourceLineNo">016</span>/**<a name="line.16"></a>
@@ -74,7 +74,7 @@
 <span class="sourceLineNo">066</span>    }<a name="line.66"></a>
 <span class="sourceLineNo">067</span><a name="line.67"></a>
 <span class="sourceLineNo">068</span>    public void prime(int fuse, Entity source) {<a name="line.68"></a>
-<span class="sourceLineNo">069</span>        this.getLevel().setBlock(this, new BlockAir(), true);<a name="line.69"></a>
+<span class="sourceLineNo">069</span>        this.getLevel().setBlock(this, Block.get(BlockID.AIR), true);<a name="line.69"></a>
 <span class="sourceLineNo">070</span>        double mot = (new NukkitRandom()).nextSignedFloat() * Math.PI * 2;<a name="line.70"></a>
 <span class="sourceLineNo">071</span>        CompoundTag nbt = new CompoundTag()<a name="line.71"></a>
 <span class="sourceLineNo">072</span>                .putList(new ListTag&lt;DoubleTag&gt;("Pos")<a name="line.72"></a>
@@ -97,7 +97,7 @@
 <span class="sourceLineNo">089</span>            return;<a name="line.89"></a>
 <span class="sourceLineNo">090</span>        }<a name="line.90"></a>
 <span class="sourceLineNo">091</span>        tnt.spawnToAll();<a name="line.91"></a>
-<span class="sourceLineNo">092</span>        this.level.addSound(this, Sound.RANDOM_FUSE);<a name="line.92"></a>
+<span class="sourceLineNo">092</span>        this.getLevel().addLevelEvent(this, LevelEventPacket.EVENT_SOUND_TNT);<a name="line.92"></a>
 <span class="sourceLineNo">093</span>    }<a name="line.93"></a>
 <span class="sourceLineNo">094</span><a name="line.94"></a>
 <span class="sourceLineNo">095</span>    @Override<a name="line.95"></a>
@@ -115,21 +115,23 @@
 <span class="sourceLineNo">107</span>            item.useOn(this);<a name="line.107"></a>
 <span class="sourceLineNo">108</span>            this.prime(80, player);<a name="line.108"></a>
 <span class="sourceLineNo">109</span>            return true;<a name="line.109"></a>
-<span class="sourceLineNo">110</span>        }<a name="line.110"></a>
-<span class="sourceLineNo">111</span>        if (item.getId() == Item.FIRE_CHARGE) {<a name="line.111"></a>
-<span class="sourceLineNo">112</span>            if (!player.isCreative()) player.getInventory().removeItem(Item.get(Item.FIRE_CHARGE, 0, 1));<a name="line.112"></a>
-<span class="sourceLineNo">113</span>            this.level.addSound(player, Sound.MOB_GHAST_FIREBALL);<a name="line.113"></a>
-<span class="sourceLineNo">114</span>            this.prime(80, player);<a name="line.114"></a>
-<span class="sourceLineNo">115</span>            return true;<a name="line.115"></a>
-<span class="sourceLineNo">116</span>        }<a name="line.116"></a>
-<span class="sourceLineNo">117</span>        return false;<a name="line.117"></a>
-<span class="sourceLineNo">118</span>    }<a name="line.118"></a>
-<span class="sourceLineNo">119</span><a name="line.119"></a>
-<span class="sourceLineNo">120</span>    @Override<a name="line.120"></a>
-<span class="sourceLineNo">121</span>    public BlockColor getColor() {<a name="line.121"></a>
-<span class="sourceLineNo">122</span>        return BlockColor.TNT_BLOCK_COLOR;<a name="line.122"></a>
-<span class="sourceLineNo">123</span>    }<a name="line.123"></a>
-<span class="sourceLineNo">124</span>}<a name="line.124"></a>
+<span class="sourceLineNo">110</span>        } else if (item.getId() == Item.FIRE_CHARGE) {<a name="line.110"></a>
+<span class="sourceLineNo">111</span>            if (!player.isCreative()) item.count--;<a name="line.111"></a>
+<span class="sourceLineNo">112</span>            this.prime(80, player);<a name="line.112"></a>
+<span class="sourceLineNo">113</span>            return true;<a name="line.113"></a>
+<span class="sourceLineNo">114</span>        } else if (item.hasEnchantment(Enchantment.ID_FIRE_ASPECT)) {<a name="line.114"></a>
+<span class="sourceLineNo">115</span>            item.useOn(this);<a name="line.115"></a>
+<span class="sourceLineNo">116</span>            this.prime(80, player);<a name="line.116"></a>
+<span class="sourceLineNo">117</span>            return true;<a name="line.117"></a>
+<span class="sourceLineNo">118</span>        }<a name="line.118"></a>
+<span class="sourceLineNo">119</span>        return false;<a name="line.119"></a>
+<span class="sourceLineNo">120</span>    }<a name="line.120"></a>
+<span class="sourceLineNo">121</span><a name="line.121"></a>
+<span class="sourceLineNo">122</span>    @Override<a name="line.122"></a>
+<span class="sourceLineNo">123</span>    public BlockColor getColor() {<a name="line.123"></a>
+<span class="sourceLineNo">124</span>        return BlockColor.TNT_BLOCK_COLOR;<a name="line.124"></a>
+<span class="sourceLineNo">125</span>    }<a name="line.125"></a>
+<span class="sourceLineNo">126</span>}<a name="line.126"></a>
 
 
 

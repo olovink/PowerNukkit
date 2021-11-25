@@ -28,7 +28,7 @@
 <span class="sourceLineNo">020</span>        this.setPermission("nukkit.command.op.give");<a name="line.20"></a>
 <span class="sourceLineNo">021</span>        this.commandParameters.clear();<a name="line.21"></a>
 <span class="sourceLineNo">022</span>        this.commandParameters.put("default", new CommandParameter[]{<a name="line.22"></a>
-<span class="sourceLineNo">023</span>                new CommandParameter("player", CommandParamType.TARGET, false)<a name="line.23"></a>
+<span class="sourceLineNo">023</span>                CommandParameter.newType("player", CommandParamType.TARGET)<a name="line.23"></a>
 <span class="sourceLineNo">024</span>        });<a name="line.24"></a>
 <span class="sourceLineNo">025</span>    }<a name="line.25"></a>
 <span class="sourceLineNo">026</span><a name="line.26"></a>
@@ -38,7 +38,7 @@
 <span class="sourceLineNo">030</span>            return true;<a name="line.30"></a>
 <span class="sourceLineNo">031</span>        }<a name="line.31"></a>
 <span class="sourceLineNo">032</span>        if (args.length == 0) {<a name="line.32"></a>
-<span class="sourceLineNo">033</span>            sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));<a name="line.33"></a>
+<span class="sourceLineNo">033</span>            sender.sendMessage(new TranslationContainer("commands.op.usage", this.usageMessage));<a name="line.33"></a>
 <span class="sourceLineNo">034</span>            return false;<a name="line.34"></a>
 <span class="sourceLineNo">035</span>        }<a name="line.35"></a>
 <span class="sourceLineNo">036</span><a name="line.36"></a>
