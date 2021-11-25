@@ -1,0 +1,318 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package cn.nukkit.entity;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>import cn.nukkit.Player;<a name="line.3"></a>
+<span class="sourceLineNo">004</span>import cn.nukkit.block.BlockAir;<a name="line.4"></a>
+<span class="sourceLineNo">005</span>import cn.nukkit.event.entity.EntityDamageByEntityEvent;<a name="line.5"></a>
+<span class="sourceLineNo">006</span>import cn.nukkit.event.entity.EntityDamageEvent;<a name="line.6"></a>
+<span class="sourceLineNo">007</span>import cn.nukkit.event.entity.EntityDamageEvent.DamageCause;<a name="line.7"></a>
+<span class="sourceLineNo">008</span>import cn.nukkit.event.entity.EntityDamageEvent.DamageModifier;<a name="line.8"></a>
+<span class="sourceLineNo">009</span>import cn.nukkit.inventory.InventoryHolder;<a name="line.9"></a>
+<span class="sourceLineNo">010</span>import cn.nukkit.inventory.PlayerEnderChestInventory;<a name="line.10"></a>
+<span class="sourceLineNo">011</span>import cn.nukkit.inventory.PlayerInventory;<a name="line.11"></a>
+<span class="sourceLineNo">012</span>import cn.nukkit.inventory.PlayerOffhandInventory;<a name="line.12"></a>
+<span class="sourceLineNo">013</span>import cn.nukkit.item.Item;<a name="line.13"></a>
+<span class="sourceLineNo">014</span>import cn.nukkit.item.ItemBlock;<a name="line.14"></a>
+<span class="sourceLineNo">015</span>import cn.nukkit.item.enchantment.Enchantment;<a name="line.15"></a>
+<span class="sourceLineNo">016</span>import cn.nukkit.level.format.FullChunk;<a name="line.16"></a>
+<span class="sourceLineNo">017</span>import cn.nukkit.math.NukkitMath;<a name="line.17"></a>
+<span class="sourceLineNo">018</span>import cn.nukkit.nbt.NBTIO;<a name="line.18"></a>
+<span class="sourceLineNo">019</span>import cn.nukkit.nbt.tag.CompoundTag;<a name="line.19"></a>
+<span class="sourceLineNo">020</span>import cn.nukkit.nbt.tag.ListTag;<a name="line.20"></a>
+<span class="sourceLineNo">021</span><a name="line.21"></a>
+<span class="sourceLineNo">022</span>import java.util.ArrayList;<a name="line.22"></a>
+<span class="sourceLineNo">023</span>import java.util.List;<a name="line.23"></a>
+<span class="sourceLineNo">024</span>import java.util.concurrent.ThreadLocalRandom;<a name="line.24"></a>
+<span class="sourceLineNo">025</span><a name="line.25"></a>
+<span class="sourceLineNo">026</span>public abstract class EntityHumanType extends EntityCreature implements InventoryHolder {<a name="line.26"></a>
+<span class="sourceLineNo">027</span><a name="line.27"></a>
+<span class="sourceLineNo">028</span>    protected PlayerInventory inventory;<a name="line.28"></a>
+<span class="sourceLineNo">029</span>    protected PlayerEnderChestInventory enderChestInventory;<a name="line.29"></a>
+<span class="sourceLineNo">030</span>    protected PlayerOffhandInventory offhandInventory;<a name="line.30"></a>
+<span class="sourceLineNo">031</span><a name="line.31"></a>
+<span class="sourceLineNo">032</span>    public EntityHumanType(FullChunk chunk, CompoundTag nbt) {<a name="line.32"></a>
+<span class="sourceLineNo">033</span>        super(chunk, nbt);<a name="line.33"></a>
+<span class="sourceLineNo">034</span>    }<a name="line.34"></a>
+<span class="sourceLineNo">035</span><a name="line.35"></a>
+<span class="sourceLineNo">036</span>    @Override<a name="line.36"></a>
+<span class="sourceLineNo">037</span>    public PlayerInventory getInventory() {<a name="line.37"></a>
+<span class="sourceLineNo">038</span>        return inventory;<a name="line.38"></a>
+<span class="sourceLineNo">039</span>    }<a name="line.39"></a>
+<span class="sourceLineNo">040</span><a name="line.40"></a>
+<span class="sourceLineNo">041</span>    public PlayerEnderChestInventory getEnderChestInventory() {<a name="line.41"></a>
+<span class="sourceLineNo">042</span>        return enderChestInventory;<a name="line.42"></a>
+<span class="sourceLineNo">043</span>    }<a name="line.43"></a>
+<span class="sourceLineNo">044</span><a name="line.44"></a>
+<span class="sourceLineNo">045</span>    public PlayerOffhandInventory getOffhandInventory() {<a name="line.45"></a>
+<span class="sourceLineNo">046</span>        return offhandInventory;<a name="line.46"></a>
+<span class="sourceLineNo">047</span>    }<a name="line.47"></a>
+<span class="sourceLineNo">048</span><a name="line.48"></a>
+<span class="sourceLineNo">049</span>    @Override<a name="line.49"></a>
+<span class="sourceLineNo">050</span>    protected void initEntity() {<a name="line.50"></a>
+<span class="sourceLineNo">051</span>        this.inventory = new PlayerInventory(this);<a name="line.51"></a>
+<span class="sourceLineNo">052</span>        this.offhandInventory = new PlayerOffhandInventory(this);<a name="line.52"></a>
+<span class="sourceLineNo">053</span><a name="line.53"></a>
+<span class="sourceLineNo">054</span>        if (this.namedTag.contains("Inventory") &amp;&amp; this.namedTag.get("Inventory") instanceof ListTag) {<a name="line.54"></a>
+<span class="sourceLineNo">055</span>            ListTag&lt;CompoundTag&gt; inventoryList = this.namedTag.getList("Inventory", CompoundTag.class);<a name="line.55"></a>
+<span class="sourceLineNo">056</span>            for (CompoundTag item : inventoryList.getAll()) {<a name="line.56"></a>
+<span class="sourceLineNo">057</span>                int slot = item.getByte("Slot");<a name="line.57"></a>
+<span class="sourceLineNo">058</span>                if (slot &gt;= 0 &amp;&amp; slot &lt; 9) { //hotbar<a name="line.58"></a>
+<span class="sourceLineNo">059</span>                    //Old hotbar saving stuff, remove it (useless now)<a name="line.59"></a>
+<span class="sourceLineNo">060</span>                    inventoryList.remove(item);<a name="line.60"></a>
+<span class="sourceLineNo">061</span>                } else if (slot &gt;= 100 &amp;&amp; slot &lt; 104) {<a name="line.61"></a>
+<span class="sourceLineNo">062</span>                    this.inventory.setItem(this.inventory.getSize() + slot - 100, NBTIO.getItemHelper(item));<a name="line.62"></a>
+<span class="sourceLineNo">063</span>                } else if (slot == -106) {<a name="line.63"></a>
+<span class="sourceLineNo">064</span>                    this.offhandInventory.setItem(0, NBTIO.getItemHelper(item));<a name="line.64"></a>
+<span class="sourceLineNo">065</span>                } else {<a name="line.65"></a>
+<span class="sourceLineNo">066</span>                    this.inventory.setItem(slot - 9, NBTIO.getItemHelper(item));<a name="line.66"></a>
+<span class="sourceLineNo">067</span>                }<a name="line.67"></a>
+<span class="sourceLineNo">068</span>            }<a name="line.68"></a>
+<span class="sourceLineNo">069</span>        }<a name="line.69"></a>
+<span class="sourceLineNo">070</span><a name="line.70"></a>
+<span class="sourceLineNo">071</span>        this.enderChestInventory = new PlayerEnderChestInventory(this);<a name="line.71"></a>
+<span class="sourceLineNo">072</span><a name="line.72"></a>
+<span class="sourceLineNo">073</span>        if (this.namedTag.contains("EnderItems") &amp;&amp; this.namedTag.get("EnderItems") instanceof ListTag) {<a name="line.73"></a>
+<span class="sourceLineNo">074</span>            ListTag&lt;CompoundTag&gt; inventoryList = this.namedTag.getList("EnderItems", CompoundTag.class);<a name="line.74"></a>
+<span class="sourceLineNo">075</span>            for (CompoundTag item : inventoryList.getAll()) {<a name="line.75"></a>
+<span class="sourceLineNo">076</span>                this.enderChestInventory.setItem(item.getByte("Slot"), NBTIO.getItemHelper(item));<a name="line.76"></a>
+<span class="sourceLineNo">077</span>            }<a name="line.77"></a>
+<span class="sourceLineNo">078</span>        }<a name="line.78"></a>
+<span class="sourceLineNo">079</span><a name="line.79"></a>
+<span class="sourceLineNo">080</span>        super.initEntity();<a name="line.80"></a>
+<span class="sourceLineNo">081</span>    }<a name="line.81"></a>
+<span class="sourceLineNo">082</span><a name="line.82"></a>
+<span class="sourceLineNo">083</span>    @Override<a name="line.83"></a>
+<span class="sourceLineNo">084</span>    public void saveNBT() {<a name="line.84"></a>
+<span class="sourceLineNo">085</span>        super.saveNBT();<a name="line.85"></a>
+<span class="sourceLineNo">086</span><a name="line.86"></a>
+<span class="sourceLineNo">087</span>        ListTag&lt;CompoundTag&gt; inventoryTag = null;<a name="line.87"></a>
+<span class="sourceLineNo">088</span>        if (this.inventory != null) {<a name="line.88"></a>
+<span class="sourceLineNo">089</span>            inventoryTag = new ListTag&lt;&gt;("Inventory");<a name="line.89"></a>
+<span class="sourceLineNo">090</span>            this.namedTag.putList(inventoryTag);<a name="line.90"></a>
+<span class="sourceLineNo">091</span><a name="line.91"></a>
+<span class="sourceLineNo">092</span>            for (int slot = 0; slot &lt; 9; ++slot) {<a name="line.92"></a>
+<span class="sourceLineNo">093</span>                inventoryTag.add(new CompoundTag()<a name="line.93"></a>
+<span class="sourceLineNo">094</span>                        .putByte("Count", 0)<a name="line.94"></a>
+<span class="sourceLineNo">095</span>                        .putShort("Damage", 0)<a name="line.95"></a>
+<span class="sourceLineNo">096</span>                        .putByte("Slot", slot)<a name="line.96"></a>
+<span class="sourceLineNo">097</span>                        .putByte("TrueSlot", -1)<a name="line.97"></a>
+<span class="sourceLineNo">098</span>                        .putShort("id", 0)<a name="line.98"></a>
+<span class="sourceLineNo">099</span>                );<a name="line.99"></a>
+<span class="sourceLineNo">100</span>            }<a name="line.100"></a>
+<span class="sourceLineNo">101</span><a name="line.101"></a>
+<span class="sourceLineNo">102</span>            int slotCount = Player.SURVIVAL_SLOTS + 9;<a name="line.102"></a>
+<span class="sourceLineNo">103</span>            for (int slot = 9; slot &lt; slotCount; ++slot) {<a name="line.103"></a>
+<span class="sourceLineNo">104</span>                Item item = this.inventory.getItem(slot - 9);<a name="line.104"></a>
+<span class="sourceLineNo">105</span>                inventoryTag.add(NBTIO.putItemHelper(item, slot));<a name="line.105"></a>
+<span class="sourceLineNo">106</span>            }<a name="line.106"></a>
+<span class="sourceLineNo">107</span><a name="line.107"></a>
+<span class="sourceLineNo">108</span>            for (int slot = 100; slot &lt; 104; ++slot) {<a name="line.108"></a>
+<span class="sourceLineNo">109</span>                Item item = this.inventory.getItem(this.inventory.getSize() + slot - 100);<a name="line.109"></a>
+<span class="sourceLineNo">110</span>                if (item != null &amp;&amp; item.getId() != Item.AIR) {<a name="line.110"></a>
+<span class="sourceLineNo">111</span>                    inventoryTag.add(NBTIO.putItemHelper(item, slot));<a name="line.111"></a>
+<span class="sourceLineNo">112</span>                }<a name="line.112"></a>
+<span class="sourceLineNo">113</span>            }<a name="line.113"></a>
+<span class="sourceLineNo">114</span>        }<a name="line.114"></a>
+<span class="sourceLineNo">115</span><a name="line.115"></a>
+<span class="sourceLineNo">116</span>        if (this.offhandInventory != null) {<a name="line.116"></a>
+<span class="sourceLineNo">117</span>            Item item = this.offhandInventory.getItem(0);<a name="line.117"></a>
+<span class="sourceLineNo">118</span>            if (item.getId() != Item.AIR) {<a name="line.118"></a>
+<span class="sourceLineNo">119</span>                if (inventoryTag == null) {<a name="line.119"></a>
+<span class="sourceLineNo">120</span>                    inventoryTag = new ListTag&lt;&gt;("Inventory");<a name="line.120"></a>
+<span class="sourceLineNo">121</span>                    this.namedTag.putList(inventoryTag);<a name="line.121"></a>
+<span class="sourceLineNo">122</span>                }<a name="line.122"></a>
+<span class="sourceLineNo">123</span>                inventoryTag.add(NBTIO.putItemHelper(item, -106));<a name="line.123"></a>
+<span class="sourceLineNo">124</span>            }<a name="line.124"></a>
+<span class="sourceLineNo">125</span>        }<a name="line.125"></a>
+<span class="sourceLineNo">126</span><a name="line.126"></a>
+<span class="sourceLineNo">127</span>        this.namedTag.putList(new ListTag&lt;CompoundTag&gt;("EnderItems"));<a name="line.127"></a>
+<span class="sourceLineNo">128</span>        if (this.enderChestInventory != null) {<a name="line.128"></a>
+<span class="sourceLineNo">129</span>            for (int slot = 0; slot &lt; 27; ++slot) {<a name="line.129"></a>
+<span class="sourceLineNo">130</span>                Item item = this.enderChestInventory.getItem(slot);<a name="line.130"></a>
+<span class="sourceLineNo">131</span>                if (item != null &amp;&amp; item.getId() != Item.AIR) {<a name="line.131"></a>
+<span class="sourceLineNo">132</span>                    this.namedTag.getList("EnderItems", CompoundTag.class).add(NBTIO.putItemHelper(item, slot));<a name="line.132"></a>
+<span class="sourceLineNo">133</span>                }<a name="line.133"></a>
+<span class="sourceLineNo">134</span>            }<a name="line.134"></a>
+<span class="sourceLineNo">135</span>        }<a name="line.135"></a>
+<span class="sourceLineNo">136</span>    }<a name="line.136"></a>
+<span class="sourceLineNo">137</span><a name="line.137"></a>
+<span class="sourceLineNo">138</span>    @Override<a name="line.138"></a>
+<span class="sourceLineNo">139</span>    public Item[] getDrops() {<a name="line.139"></a>
+<span class="sourceLineNo">140</span>        if (this.inventory != null) {<a name="line.140"></a>
+<span class="sourceLineNo">141</span>            List&lt;Item&gt; drops = new ArrayList&lt;&gt;(this.inventory.getContents().values());<a name="line.141"></a>
+<span class="sourceLineNo">142</span>            drops.addAll(this.offhandInventory.getContents().values());<a name="line.142"></a>
+<span class="sourceLineNo">143</span>            return drops.toArray(new Item[0]);<a name="line.143"></a>
+<span class="sourceLineNo">144</span>        }<a name="line.144"></a>
+<span class="sourceLineNo">145</span>        return new Item[0];<a name="line.145"></a>
+<span class="sourceLineNo">146</span>    }<a name="line.146"></a>
+<span class="sourceLineNo">147</span><a name="line.147"></a>
+<span class="sourceLineNo">148</span>    @Override<a name="line.148"></a>
+<span class="sourceLineNo">149</span>    public boolean attack(EntityDamageEvent source) {<a name="line.149"></a>
+<span class="sourceLineNo">150</span>        if (this.isClosed() || !this.isAlive()) {<a name="line.150"></a>
+<span class="sourceLineNo">151</span>            return false;<a name="line.151"></a>
+<span class="sourceLineNo">152</span>        }<a name="line.152"></a>
+<span class="sourceLineNo">153</span><a name="line.153"></a>
+<span class="sourceLineNo">154</span>        if (source.getCause() != DamageCause.VOID &amp;&amp; source.getCause() != DamageCause.CUSTOM &amp;&amp; source.getCause() != DamageCause.MAGIC) {<a name="line.154"></a>
+<span class="sourceLineNo">155</span>            int armorPoints = 0;<a name="line.155"></a>
+<span class="sourceLineNo">156</span>            int epf = 0;<a name="line.156"></a>
+<span class="sourceLineNo">157</span>            int toughness = 0;<a name="line.157"></a>
+<span class="sourceLineNo">158</span><a name="line.158"></a>
+<span class="sourceLineNo">159</span>            for (Item armor : inventory.getArmorContents()) {<a name="line.159"></a>
+<span class="sourceLineNo">160</span>                armorPoints += armor.getArmorPoints();<a name="line.160"></a>
+<span class="sourceLineNo">161</span>                epf += calculateEnchantmentProtectionFactor(armor, source);<a name="line.161"></a>
+<span class="sourceLineNo">162</span>                //toughness += armor.getToughness();<a name="line.162"></a>
+<span class="sourceLineNo">163</span>            }<a name="line.163"></a>
+<span class="sourceLineNo">164</span><a name="line.164"></a>
+<span class="sourceLineNo">165</span>            if (source.canBeReducedByArmor()) {<a name="line.165"></a>
+<span class="sourceLineNo">166</span>                source.setDamage(-source.getFinalDamage() * armorPoints * 0.04f, DamageModifier.ARMOR);<a name="line.166"></a>
+<span class="sourceLineNo">167</span>            }<a name="line.167"></a>
+<span class="sourceLineNo">168</span><a name="line.168"></a>
+<span class="sourceLineNo">169</span>            source.setDamage(-source.getFinalDamage() * Math.min(NukkitMath.ceilFloat(Math.min(epf, 25) * ((float) ThreadLocalRandom.current().nextInt(50, 100) / 100)), 20) * 0.04f,<a name="line.169"></a>
+<span class="sourceLineNo">170</span>                    DamageModifier.ARMOR_ENCHANTMENTS);<a name="line.170"></a>
+<span class="sourceLineNo">171</span><a name="line.171"></a>
+<span class="sourceLineNo">172</span>            source.setDamage(-Math.min(this.getAbsorption(), source.getFinalDamage()), DamageModifier.ABSORPTION);<a name="line.172"></a>
+<span class="sourceLineNo">173</span>        }<a name="line.173"></a>
+<span class="sourceLineNo">174</span><a name="line.174"></a>
+<span class="sourceLineNo">175</span>        if (super.attack(source)) {<a name="line.175"></a>
+<span class="sourceLineNo">176</span>            Entity damager = null;<a name="line.176"></a>
+<span class="sourceLineNo">177</span><a name="line.177"></a>
+<span class="sourceLineNo">178</span>            if (source instanceof EntityDamageByEntityEvent) {<a name="line.178"></a>
+<span class="sourceLineNo">179</span>                damager = ((EntityDamageByEntityEvent) source).getDamager();<a name="line.179"></a>
+<span class="sourceLineNo">180</span>            }<a name="line.180"></a>
+<span class="sourceLineNo">181</span><a name="line.181"></a>
+<span class="sourceLineNo">182</span>            for (int slot = 0; slot &lt; 4; slot++) {<a name="line.182"></a>
+<span class="sourceLineNo">183</span>                Item armor = this.inventory.getArmorItem(slot);<a name="line.183"></a>
+<span class="sourceLineNo">184</span><a name="line.184"></a>
+<span class="sourceLineNo">185</span>                if (armor.hasEnchantments()) {<a name="line.185"></a>
+<span class="sourceLineNo">186</span>                    if (damager != null) {<a name="line.186"></a>
+<span class="sourceLineNo">187</span>                        for (Enchantment enchantment : armor.getEnchantments()) {<a name="line.187"></a>
+<span class="sourceLineNo">188</span>                            enchantment.doPostAttack(damager, this);<a name="line.188"></a>
+<span class="sourceLineNo">189</span>                        }<a name="line.189"></a>
+<span class="sourceLineNo">190</span>                    }<a name="line.190"></a>
+<span class="sourceLineNo">191</span><a name="line.191"></a>
+<span class="sourceLineNo">192</span>                    Enchantment durability = armor.getEnchantment(Enchantment.ID_DURABILITY);<a name="line.192"></a>
+<span class="sourceLineNo">193</span>                    if (durability != null &amp;&amp; durability.getLevel() &gt; 0 &amp;&amp; (100 / (durability.getLevel() + 1)) &lt;= ThreadLocalRandom.current().nextInt(100))<a name="line.193"></a>
+<span class="sourceLineNo">194</span>                        continue;<a name="line.194"></a>
+<span class="sourceLineNo">195</span>                }<a name="line.195"></a>
+<span class="sourceLineNo">196</span><a name="line.196"></a>
+<span class="sourceLineNo">197</span>                if (armor.isUnbreakable()) {<a name="line.197"></a>
+<span class="sourceLineNo">198</span>                    continue;<a name="line.198"></a>
+<span class="sourceLineNo">199</span>                }<a name="line.199"></a>
+<span class="sourceLineNo">200</span><a name="line.200"></a>
+<span class="sourceLineNo">201</span>                armor.setDamage(armor.getDamage() + 1);<a name="line.201"></a>
+<span class="sourceLineNo">202</span><a name="line.202"></a>
+<span class="sourceLineNo">203</span>                if (armor.getDamage() &gt;= armor.getMaxDurability()) {<a name="line.203"></a>
+<span class="sourceLineNo">204</span>                    inventory.setArmorItem(slot, new ItemBlock(new BlockAir()));<a name="line.204"></a>
+<span class="sourceLineNo">205</span>                } else {<a name="line.205"></a>
+<span class="sourceLineNo">206</span>                    inventory.setArmorItem(slot, armor, true);<a name="line.206"></a>
+<span class="sourceLineNo">207</span>                }<a name="line.207"></a>
+<span class="sourceLineNo">208</span>            }<a name="line.208"></a>
+<span class="sourceLineNo">209</span><a name="line.209"></a>
+<span class="sourceLineNo">210</span>            return true;<a name="line.210"></a>
+<span class="sourceLineNo">211</span>        } else {<a name="line.211"></a>
+<span class="sourceLineNo">212</span>            return false;<a name="line.212"></a>
+<span class="sourceLineNo">213</span>        }<a name="line.213"></a>
+<span class="sourceLineNo">214</span>    }<a name="line.214"></a>
+<span class="sourceLineNo">215</span><a name="line.215"></a>
+<span class="sourceLineNo">216</span>    protected double calculateEnchantmentProtectionFactor(Item item, EntityDamageEvent source) {<a name="line.216"></a>
+<span class="sourceLineNo">217</span>        if (!item.hasEnchantments()) {<a name="line.217"></a>
+<span class="sourceLineNo">218</span>            return 0;<a name="line.218"></a>
+<span class="sourceLineNo">219</span>        }<a name="line.219"></a>
+<span class="sourceLineNo">220</span><a name="line.220"></a>
+<span class="sourceLineNo">221</span>        double epf = 0;<a name="line.221"></a>
+<span class="sourceLineNo">222</span><a name="line.222"></a>
+<span class="sourceLineNo">223</span>        for (Enchantment ench : item.getEnchantments()) {<a name="line.223"></a>
+<span class="sourceLineNo">224</span>            epf += ench.getProtectionFactor(source);<a name="line.224"></a>
+<span class="sourceLineNo">225</span>        }<a name="line.225"></a>
+<span class="sourceLineNo">226</span><a name="line.226"></a>
+<span class="sourceLineNo">227</span>        return epf;<a name="line.227"></a>
+<span class="sourceLineNo">228</span>    }<a name="line.228"></a>
+<span class="sourceLineNo">229</span><a name="line.229"></a>
+<span class="sourceLineNo">230</span>    @Override<a name="line.230"></a>
+<span class="sourceLineNo">231</span>    public void setOnFire(int seconds) {<a name="line.231"></a>
+<span class="sourceLineNo">232</span>        int level = 0;<a name="line.232"></a>
+<span class="sourceLineNo">233</span><a name="line.233"></a>
+<span class="sourceLineNo">234</span>        for (Item armor : this.inventory.getArmorContents()) {<a name="line.234"></a>
+<span class="sourceLineNo">235</span>            Enchantment fireProtection = armor.getEnchantment(Enchantment.ID_PROTECTION_FIRE);<a name="line.235"></a>
+<span class="sourceLineNo">236</span><a name="line.236"></a>
+<span class="sourceLineNo">237</span>            if (fireProtection != null &amp;&amp; fireProtection.getLevel() &gt; 0) {<a name="line.237"></a>
+<span class="sourceLineNo">238</span>                level = Math.max(level, fireProtection.getLevel());<a name="line.238"></a>
+<span class="sourceLineNo">239</span>            }<a name="line.239"></a>
+<span class="sourceLineNo">240</span>        }<a name="line.240"></a>
+<span class="sourceLineNo">241</span><a name="line.241"></a>
+<span class="sourceLineNo">242</span>        seconds = (int) (seconds * (1 - level * 0.15));<a name="line.242"></a>
+<span class="sourceLineNo">243</span><a name="line.243"></a>
+<span class="sourceLineNo">244</span>        super.setOnFire(seconds);<a name="line.244"></a>
+<span class="sourceLineNo">245</span>    }<a name="line.245"></a>
+<span class="sourceLineNo">246</span>}<a name="line.246"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>

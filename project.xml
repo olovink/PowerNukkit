@@ -1,32 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="jdiff" default="jdiff_report" basedir=".">
-  <property name="powernukkit.version" value="1.1.1.0-PN" />
-  <property name="nukkit.version" value="Nukkit-666afc5" />
-  <property name="jdiff.nukkit.folder" value="./jdiff/${powernukkit.version}_x_Nukkit"/>
+  <property name="powernukkit.version.old" value="1.1.1.0-PN" />
+  <property name="powernukkit.version.new" value="1.1.1.1-PN" />
+  <property name="nukkit.commit" value="Nukkit-29c2a366" />
 
-  <target name="jdiff_report" depends="">
-    <taskdef name="jdiff" classname="jdiff.JDiffAntTask" classpath="./libs/antjdiff-2.0.0-SNAPSHOT.jar"/>
-    <jdiff destdir="${jdiff.nukkit.folder}"
-           verbose="on"
+  <property name="powernukkit.src.old" value="../PowerNukkit-old" />
+  <property name="powernukkit.src.new" value="../PowerNukkit" />
+  <property name="nukkit.src" value="../../org.cloudburst/Nukkit" />
+
+  <target name="call_mvn">
+    <exec executable="/bin/env" dir="${mvn.project.dir}">
+      <arg value="sh" />
+      <arg value="mvnw" />
+      <arg value="git-commit-id:revision" />
+      <arg value="lombok:delombok" />
+      <arg value="dependency:build-classpath" />
+      <arg value="-Dmdep.outputFile=target/classpath.txt" />
+    </exec>
+  </target>
+
+  <target name="jdiff_powernukkit_nukkit">
+    <antcall target="call_mvn">
+      <param name="mvn.project.dir" value="${powernukkit.src.new}" />
+    </antcall>
+    <antcall target="call_mvn">
+      <param name="mvn.project.dir" value="${nukkit.src}" />
+    </antcall>
+
+    <antcall target="jdiff_execute">
+      <param name="jdiff.working.folder" value="./jdiff/${powernukkit.version.new}_x_Nukkit" />
+
+      <param name="jdiff.old.name" value="Cloudburst${nukkit.commit}" />
+      <param name="jdiff.new.name" value="PowerNukkit ${powernukkit.version.new}" />
+
+      <param name="jdiff.old.src" value="${nukkit.src}/target/delombok" />
+      <param name="jdiff.new.src" value="${powernukkit.src.new}/target/delombok" />
+    </antcall>
+  </target>
+
+  <target name="jdiff_powernukkit_old">
+    <antcall target="call_mvn">
+      <param name="mvn.project.dir" value="${powernukkit.src.new}" />
+    </antcall>
+    <antcall target="call_mvn">
+      <param name="mvn.project.dir" value="${powernukkit.src.old}" />
+    </antcall>
+
+    <antcall target="jdiff_execute">
+      <param name="jdiff.working.folder" value="./jdiff/${powernukkit.version.new}_x_${powernukkit.version.old}" />
+
+      <param name="jdiff.old.name" value="PowerNukkit ${powernukkit.version.old}" />
+      <param name="jdiff.new.name" value="PowerNukkit ${powernukkit.version.new}" />
+
+      <param name="jdiff.old.src" value="${powernukkit.src.old}/target/delombok" />
+      <param name="jdiff.new.src" value="${powernukkit.src.new}/target/delombok" />
+    </antcall>
+    <deltree dir="./jdiff/${powernukkit.version.new}_x_${powernukkit.version.old}/PowerNukkit ${powernukkit.version.old}" />
+  </target>
+
+  <target name="jdiff_execute" depends="def_jdiff">
+    <loadfile srcFile="${jdiff.old.src}/../classpath.txt" property="jdiff.old.javadoc.classpath" />
+    <loadfile srcFile="${jdiff.new.src}/../classpath.txt" property="jdiff.new.javadoc.classpath" />
+    <jdiff destdir="${jdiff.working.folder}"
+           verbose="off"
            stats="on"
            docchanges="on"
            docEncoding="UTF-8"
            charset="UTF-8"
            encoding="UTF-8"
            linkSource="on">
-      <old name="Cloudburst${nukkit.version}">
-        <dirset dir="../../org.cloudburst/Nukkit/target/delombok" />
+      <old name="${jdiff.old.name}">
+        <dirset dir="${jdiff.old.src}" />
       </old>
-      <new name="PowerNukkit ${powernukkit.version}">
-        <dirset dir="../PowerNukkit/target/delombok" />
+      <new name="${jdiff.new.name}">
+        <dirset dir="${jdiff.new.src}" />
       </new>
+      <additionalParam value="-cp" comparison="off" />
+      <additionalParam value="${jdiff.old.javadoc.classpath}" comparison="off" newJavadocXML="off" newJavadoc="off" />
+      <additionalParam value="${jdiff.new.javadoc.classpath}" comparison="off" oldJavadocXML="off" oldJavadoc="off" />
     </jdiff>
-    <replace dir="${jdiff.nukkit.folder}/changes"
-             token="../PowerNukkit ${powernukkit.version}/"
-             value="../../../javadoc/${powernukkit.version}/">
+    <replace dir="${jdiff.working.folder}/changes">
       <include name="*.html"/>
-      <replacefilter token="../PowerNukkit ${powernukkit.version}/"
-                     value="../../../javadoc/${powernukkit.version}/"/>
+      <replacefilter token="../PowerNukkit ${powernukkit.version.new}/"
+                     value="../../../javadoc/${powernukkit.version.new}/"/>
+      <replacefilter token="../PowerNukkit ${powernukkit.version.old}/"
+                     value="../../../javadoc/${powernukkit.version.old}/"/>
       <replacefilter token="../stylesheet-jdiff.css"
                      value="../../stylesheet-jdiff.css"/>
       <replacefilter token="../background.gif"
@@ -34,9 +92,7 @@
       <replacefilter token="../black.gif"
                      value="../../black.gif"/>
     </replace>
-    <replace dir="${jdiff.nukkit.folder}"
-             token="../PowerNukkit ${powernukkit.version}/"
-             value="../../../javadoc/${powernukkit.version}/">
+    <replace dir="${jdiff.working.folder}">
       <include name="*.html"/>
       <replacefilter token="stylesheet-jdiff.css"
                      value="../stylesheet-jdiff.css"/>
@@ -45,13 +101,18 @@
       <replacefilter token="black.gif"
                      value="../black.gif"/>
     </replace>
-    <deltree dir="${jdiff.nukkit.folder}/PowerNukkit ${powernukkit.version}" />
-    <delete file="${jdiff.nukkit.folder}/stylesheet-jdiff.css"/>
-    <delete file="${jdiff.nukkit.folder}/background.gif"/>
-    <delete file="${jdiff.nukkit.folder}/black.gif"/>
-    <exec executable="/bin/sh" dir="${jdiff.nukkit.folder}">
+    <deltree dir="${jdiff.working.folder}/${jdiff.new.name}" />
+    <delete file="${jdiff.working.folder}/stylesheet-jdiff.css"/>
+    <delete file="${jdiff.working.folder}/background.gif"/>
+    <delete file="${jdiff.working.folder}/black.gif"/>
+    <exec executable="/bin/sh" dir="${jdiff.working.folder}">
       <arg value="../../google-analytics.sh"/>
     </exec>
   </target>
 
+  <target name="jdiff_report" depends="jdiff_powernukkit_nukkit,jdiff_powernukkit_old"/>
+
+  <target name="def_jdiff" depends="">
+    <taskdef name="jdiff" classname="jdiff.JDiffAntTask" classpath="./libs/antjdiff-2.0.0-PN-SNAPSHOT.jar"/>
+  </target>
 </project>

@@ -1,0 +1,269 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package cn.nukkit.level.generator;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>import cn.nukkit.Server;<a name="line.3"></a>
+<span class="sourceLineNo">004</span>import cn.nukkit.block.*;<a name="line.4"></a>
+<span class="sourceLineNo">005</span>import cn.nukkit.level.ChunkManager;<a name="line.5"></a>
+<span class="sourceLineNo">006</span>import cn.nukkit.level.format.FullChunk;<a name="line.6"></a>
+<span class="sourceLineNo">007</span>import cn.nukkit.level.format.generic.BaseFullChunk;<a name="line.7"></a>
+<span class="sourceLineNo">008</span>import cn.nukkit.level.generator.object.ore.OreType;<a name="line.8"></a>
+<span class="sourceLineNo">009</span>import cn.nukkit.level.generator.populator.type.Populator;<a name="line.9"></a>
+<span class="sourceLineNo">010</span>import cn.nukkit.level.generator.populator.impl.PopulatorOre;<a name="line.10"></a>
+<span class="sourceLineNo">011</span>import cn.nukkit.math.NukkitRandom;<a name="line.11"></a>
+<span class="sourceLineNo">012</span>import cn.nukkit.math.Vector3;<a name="line.12"></a>
+<span class="sourceLineNo">013</span><a name="line.13"></a>
+<span class="sourceLineNo">014</span>import java.util.ArrayList;<a name="line.14"></a>
+<span class="sourceLineNo">015</span>import java.util.HashMap;<a name="line.15"></a>
+<span class="sourceLineNo">016</span>import java.util.List;<a name="line.16"></a>
+<span class="sourceLineNo">017</span>import java.util.Map;<a name="line.17"></a>
+<span class="sourceLineNo">018</span>import java.util.regex.Pattern;<a name="line.18"></a>
+<span class="sourceLineNo">019</span><a name="line.19"></a>
+<span class="sourceLineNo">020</span>/**<a name="line.20"></a>
+<span class="sourceLineNo">021</span> * author: MagicDroidX<a name="line.21"></a>
+<span class="sourceLineNo">022</span> * Nukkit Project<a name="line.22"></a>
+<span class="sourceLineNo">023</span> */<a name="line.23"></a>
+<span class="sourceLineNo">024</span>public class Flat extends Generator {<a name="line.24"></a>
+<span class="sourceLineNo">025</span><a name="line.25"></a>
+<span class="sourceLineNo">026</span>    @Override<a name="line.26"></a>
+<span class="sourceLineNo">027</span>    public int getId() {<a name="line.27"></a>
+<span class="sourceLineNo">028</span>        return TYPE_FLAT;<a name="line.28"></a>
+<span class="sourceLineNo">029</span>    }<a name="line.29"></a>
+<span class="sourceLineNo">030</span><a name="line.30"></a>
+<span class="sourceLineNo">031</span>    private ChunkManager level;<a name="line.31"></a>
+<span class="sourceLineNo">032</span><a name="line.32"></a>
+<span class="sourceLineNo">033</span>    private NukkitRandom random;<a name="line.33"></a>
+<span class="sourceLineNo">034</span><a name="line.34"></a>
+<span class="sourceLineNo">035</span>    private final List&lt;Populator&gt; populators = new ArrayList&lt;&gt;();<a name="line.35"></a>
+<span class="sourceLineNo">036</span><a name="line.36"></a>
+<span class="sourceLineNo">037</span>    private int[][] structure;<a name="line.37"></a>
+<span class="sourceLineNo">038</span><a name="line.38"></a>
+<span class="sourceLineNo">039</span>    private final Map&lt;String, Object&gt; options;<a name="line.39"></a>
+<span class="sourceLineNo">040</span><a name="line.40"></a>
+<span class="sourceLineNo">041</span>    private int floorLevel;<a name="line.41"></a>
+<span class="sourceLineNo">042</span><a name="line.42"></a>
+<span class="sourceLineNo">043</span>    private String preset;<a name="line.43"></a>
+<span class="sourceLineNo">044</span><a name="line.44"></a>
+<span class="sourceLineNo">045</span>    private boolean init = false;<a name="line.45"></a>
+<span class="sourceLineNo">046</span><a name="line.46"></a>
+<span class="sourceLineNo">047</span>    private int biome;<a name="line.47"></a>
+<span class="sourceLineNo">048</span><a name="line.48"></a>
+<span class="sourceLineNo">049</span>    @Override<a name="line.49"></a>
+<span class="sourceLineNo">050</span>    public ChunkManager getChunkManager() {<a name="line.50"></a>
+<span class="sourceLineNo">051</span>        return level;<a name="line.51"></a>
+<span class="sourceLineNo">052</span>    }<a name="line.52"></a>
+<span class="sourceLineNo">053</span><a name="line.53"></a>
+<span class="sourceLineNo">054</span>    @Override<a name="line.54"></a>
+<span class="sourceLineNo">055</span>    public Map&lt;String, Object&gt; getSettings() {<a name="line.55"></a>
+<span class="sourceLineNo">056</span>        return this.options;<a name="line.56"></a>
+<span class="sourceLineNo">057</span>    }<a name="line.57"></a>
+<span class="sourceLineNo">058</span><a name="line.58"></a>
+<span class="sourceLineNo">059</span>    @Override<a name="line.59"></a>
+<span class="sourceLineNo">060</span>    public String getName() {<a name="line.60"></a>
+<span class="sourceLineNo">061</span>        return "flat";<a name="line.61"></a>
+<span class="sourceLineNo">062</span>    }<a name="line.62"></a>
+<span class="sourceLineNo">063</span><a name="line.63"></a>
+<span class="sourceLineNo">064</span>    public Flat() {<a name="line.64"></a>
+<span class="sourceLineNo">065</span>        this(new HashMap&lt;&gt;());<a name="line.65"></a>
+<span class="sourceLineNo">066</span>    }<a name="line.66"></a>
+<span class="sourceLineNo">067</span><a name="line.67"></a>
+<span class="sourceLineNo">068</span>    public Flat(Map&lt;String, Object&gt; options) {<a name="line.68"></a>
+<span class="sourceLineNo">069</span>        this.preset = "2;7,2x3,2;1;";<a name="line.69"></a>
+<span class="sourceLineNo">070</span>        this.options = options;<a name="line.70"></a>
+<span class="sourceLineNo">071</span><a name="line.71"></a>
+<span class="sourceLineNo">072</span>        if (this.options.containsKey("decoration")) {<a name="line.72"></a>
+<span class="sourceLineNo">073</span>            PopulatorOre ores = new PopulatorOre();<a name="line.73"></a>
+<span class="sourceLineNo">074</span>            ores.setOreTypes(new OreType[]{<a name="line.74"></a>
+<span class="sourceLineNo">075</span>                    new OreType(new BlockOreCoal(), 20, 16, 0, 128),<a name="line.75"></a>
+<span class="sourceLineNo">076</span>                    new OreType(new BlockOreIron(), 20, 8, 0, 64),<a name="line.76"></a>
+<span class="sourceLineNo">077</span>                    new OreType(new BlockOreRedstone(), 8, 7, 0, 16),<a name="line.77"></a>
+<span class="sourceLineNo">078</span>                    new OreType(new BlockOreLapis(), 1, 6, 0, 32),<a name="line.78"></a>
+<span class="sourceLineNo">079</span>                    new OreType(new BlockOreGold(), 2, 8, 0, 32),<a name="line.79"></a>
+<span class="sourceLineNo">080</span>                    new OreType(new BlockOreDiamond(), 1, 7, 0, 16),<a name="line.80"></a>
+<span class="sourceLineNo">081</span>                    new OreType(new BlockDirt(), 20, 32, 0, 128),<a name="line.81"></a>
+<span class="sourceLineNo">082</span>                    new OreType(new BlockGravel(), 20, 16, 0, 128),<a name="line.82"></a>
+<span class="sourceLineNo">083</span>            });<a name="line.83"></a>
+<span class="sourceLineNo">084</span>            this.populators.add(ores);<a name="line.84"></a>
+<span class="sourceLineNo">085</span>        }<a name="line.85"></a>
+<span class="sourceLineNo">086</span>    }<a name="line.86"></a>
+<span class="sourceLineNo">087</span><a name="line.87"></a>
+<span class="sourceLineNo">088</span>    protected void parsePreset(String preset, int chunkX, int chunkZ) {<a name="line.88"></a>
+<span class="sourceLineNo">089</span>        try {<a name="line.89"></a>
+<span class="sourceLineNo">090</span>            this.preset = preset;<a name="line.90"></a>
+<span class="sourceLineNo">091</span>            String[] presetArray = preset.split(";");<a name="line.91"></a>
+<span class="sourceLineNo">092</span>            int version = Integer.valueOf(presetArray[0]);<a name="line.92"></a>
+<span class="sourceLineNo">093</span>            String blocks = presetArray.length &gt; 1 ? presetArray[1] : "";<a name="line.93"></a>
+<span class="sourceLineNo">094</span>            this.biome = presetArray.length &gt; 2 ? Integer.valueOf(presetArray[2]) : 1;<a name="line.94"></a>
+<span class="sourceLineNo">095</span>            String options = presetArray.length &gt; 3 ? presetArray[1] : "";<a name="line.95"></a>
+<span class="sourceLineNo">096</span>            this.structure = new int[256][];<a name="line.96"></a>
+<span class="sourceLineNo">097</span>            int y = 0;<a name="line.97"></a>
+<span class="sourceLineNo">098</span>            for (String block : blocks.split(",")) {<a name="line.98"></a>
+<span class="sourceLineNo">099</span>                int id, meta = 0, cnt = 1;<a name="line.99"></a>
+<span class="sourceLineNo">100</span>                if (Pattern.matches("^[0-9]{1,3}x[0-9]$", block)) {<a name="line.100"></a>
+<span class="sourceLineNo">101</span>                    //AxB<a name="line.101"></a>
+<span class="sourceLineNo">102</span>                    String[] s = block.split("x");<a name="line.102"></a>
+<span class="sourceLineNo">103</span>                    cnt = Integer.valueOf(s[0]);<a name="line.103"></a>
+<span class="sourceLineNo">104</span>                    id = Integer.valueOf(s[1]);<a name="line.104"></a>
+<span class="sourceLineNo">105</span>                } else if (Pattern.matches("^[0-9]{1,3}:[0-9]{0,2}$", block)) {<a name="line.105"></a>
+<span class="sourceLineNo">106</span>                    //A:B<a name="line.106"></a>
+<span class="sourceLineNo">107</span>                    String[] s = block.split(":");<a name="line.107"></a>
+<span class="sourceLineNo">108</span>                    id = Integer.valueOf(s[0]);<a name="line.108"></a>
+<span class="sourceLineNo">109</span>                    meta = Integer.valueOf(s[1]);<a name="line.109"></a>
+<span class="sourceLineNo">110</span>                } else if (Pattern.matches("^[0-9]{1,3}$", block)) {<a name="line.110"></a>
+<span class="sourceLineNo">111</span>                    //A<a name="line.111"></a>
+<span class="sourceLineNo">112</span>                    id = Integer.valueOf(block);<a name="line.112"></a>
+<span class="sourceLineNo">113</span>                } else {<a name="line.113"></a>
+<span class="sourceLineNo">114</span>                    continue;<a name="line.114"></a>
+<span class="sourceLineNo">115</span>                }<a name="line.115"></a>
+<span class="sourceLineNo">116</span>                int cY = y;<a name="line.116"></a>
+<span class="sourceLineNo">117</span>                y += cnt;<a name="line.117"></a>
+<span class="sourceLineNo">118</span>                if (y &gt; 0xFF) {<a name="line.118"></a>
+<span class="sourceLineNo">119</span>                    y = 0xFF;<a name="line.119"></a>
+<span class="sourceLineNo">120</span>                }<a name="line.120"></a>
+<span class="sourceLineNo">121</span>                for (; cY &lt; y; ++cY) {<a name="line.121"></a>
+<span class="sourceLineNo">122</span>                    this.structure[cY] = new int[]{id, meta};<a name="line.122"></a>
+<span class="sourceLineNo">123</span>                }<a name="line.123"></a>
+<span class="sourceLineNo">124</span>            }<a name="line.124"></a>
+<span class="sourceLineNo">125</span>            this.floorLevel = y;<a name="line.125"></a>
+<span class="sourceLineNo">126</span>            for (; y &lt;= 0xFF; ++y) {<a name="line.126"></a>
+<span class="sourceLineNo">127</span>                this.structure[y] = new int[]{0, 0};<a name="line.127"></a>
+<span class="sourceLineNo">128</span>            }<a name="line.128"></a>
+<span class="sourceLineNo">129</span>            for (String option : options.split(",")) {<a name="line.129"></a>
+<span class="sourceLineNo">130</span>                if (Pattern.matches("^[0-9a-z_]+$", option)) {<a name="line.130"></a>
+<span class="sourceLineNo">131</span>                    this.options.put(option, true);<a name="line.131"></a>
+<span class="sourceLineNo">132</span>                } else if (Pattern.matches("^[0-9a-z_]+\\([0-9a-z_ =]+\\)$", option)) {<a name="line.132"></a>
+<span class="sourceLineNo">133</span>                    String name = option.substring(0, option.indexOf("("));<a name="line.133"></a>
+<span class="sourceLineNo">134</span>                    String extra = option.substring(option.indexOf("(") + 1, option.indexOf(")"));<a name="line.134"></a>
+<span class="sourceLineNo">135</span>                    Map&lt;String, Float&gt; map = new HashMap&lt;&gt;();<a name="line.135"></a>
+<span class="sourceLineNo">136</span>                    for (String kv : extra.split(" ")) {<a name="line.136"></a>
+<span class="sourceLineNo">137</span>                        String[] data = kv.split("=");<a name="line.137"></a>
+<span class="sourceLineNo">138</span>                        map.put(data[0], Float.valueOf(data[1]));<a name="line.138"></a>
+<span class="sourceLineNo">139</span>                    }<a name="line.139"></a>
+<span class="sourceLineNo">140</span>                    this.options.put(name, map);<a name="line.140"></a>
+<span class="sourceLineNo">141</span>                }<a name="line.141"></a>
+<span class="sourceLineNo">142</span>            }<a name="line.142"></a>
+<span class="sourceLineNo">143</span>        } catch (Exception e) {<a name="line.143"></a>
+<span class="sourceLineNo">144</span>            Server.getInstance().getLogger().error("error while parsing the preset", e);<a name="line.144"></a>
+<span class="sourceLineNo">145</span>            throw new RuntimeException(e);<a name="line.145"></a>
+<span class="sourceLineNo">146</span>        }<a name="line.146"></a>
+<span class="sourceLineNo">147</span>    }<a name="line.147"></a>
+<span class="sourceLineNo">148</span><a name="line.148"></a>
+<span class="sourceLineNo">149</span>    @Override<a name="line.149"></a>
+<span class="sourceLineNo">150</span>    public void init(ChunkManager level, NukkitRandom random) {<a name="line.150"></a>
+<span class="sourceLineNo">151</span>        this.level = level;<a name="line.151"></a>
+<span class="sourceLineNo">152</span>        this.random = random;<a name="line.152"></a>
+<span class="sourceLineNo">153</span>    }<a name="line.153"></a>
+<span class="sourceLineNo">154</span><a name="line.154"></a>
+<span class="sourceLineNo">155</span>    @Override<a name="line.155"></a>
+<span class="sourceLineNo">156</span>    public void generateChunk(int chunkX, int chunkZ) {<a name="line.156"></a>
+<span class="sourceLineNo">157</span>        if (!this.init) {<a name="line.157"></a>
+<span class="sourceLineNo">158</span>            init = true;<a name="line.158"></a>
+<span class="sourceLineNo">159</span>            if (this.options.containsKey("preset") &amp;&amp; !"".equals(this.options.get("preset"))) {<a name="line.159"></a>
+<span class="sourceLineNo">160</span>                this.parsePreset((String) this.options.get("preset"), chunkX, chunkZ);<a name="line.160"></a>
+<span class="sourceLineNo">161</span>            } else {<a name="line.161"></a>
+<span class="sourceLineNo">162</span>                this.parsePreset(this.preset, chunkX, chunkZ);<a name="line.162"></a>
+<span class="sourceLineNo">163</span>            }<a name="line.163"></a>
+<span class="sourceLineNo">164</span>        }<a name="line.164"></a>
+<span class="sourceLineNo">165</span>        this.generateChunk(level.getChunk(chunkX, chunkZ));<a name="line.165"></a>
+<span class="sourceLineNo">166</span>    }<a name="line.166"></a>
+<span class="sourceLineNo">167</span><a name="line.167"></a>
+<span class="sourceLineNo">168</span>    private void generateChunk(FullChunk chunk) {<a name="line.168"></a>
+<span class="sourceLineNo">169</span>        chunk.setGenerated();<a name="line.169"></a>
+<span class="sourceLineNo">170</span><a name="line.170"></a>
+<span class="sourceLineNo">171</span>        for (int Z = 0; Z &lt; 16; ++Z) {<a name="line.171"></a>
+<span class="sourceLineNo">172</span>            for (int X = 0; X &lt; 16; ++X) {<a name="line.172"></a>
+<span class="sourceLineNo">173</span>                chunk.setBiomeId(X, Z, biome);<a name="line.173"></a>
+<span class="sourceLineNo">174</span><a name="line.174"></a>
+<span class="sourceLineNo">175</span>                for (int y = 0; y &lt; 256; ++y) {<a name="line.175"></a>
+<span class="sourceLineNo">176</span>                    int k = this.structure[y][0];<a name="line.176"></a>
+<span class="sourceLineNo">177</span>                    int l = this.structure[y][1];<a name="line.177"></a>
+<span class="sourceLineNo">178</span>                    chunk.setBlock(X, y, Z, this.structure[y][0], this.structure[y][1]);<a name="line.178"></a>
+<span class="sourceLineNo">179</span>                }<a name="line.179"></a>
+<span class="sourceLineNo">180</span>            }<a name="line.180"></a>
+<span class="sourceLineNo">181</span>        }<a name="line.181"></a>
+<span class="sourceLineNo">182</span>    }<a name="line.182"></a>
+<span class="sourceLineNo">183</span><a name="line.183"></a>
+<span class="sourceLineNo">184</span>    @Override<a name="line.184"></a>
+<span class="sourceLineNo">185</span>    public void populateChunk(int chunkX, int chunkZ) {<a name="line.185"></a>
+<span class="sourceLineNo">186</span>        BaseFullChunk chunk = level.getChunk(chunkX, chunkZ);<a name="line.186"></a>
+<span class="sourceLineNo">187</span>        this.random.setSeed(0xdeadbeef ^ (chunkX &lt;&lt; 8) ^ chunkZ ^ this.level.getSeed());<a name="line.187"></a>
+<span class="sourceLineNo">188</span>        for (Populator populator : this.populators) {<a name="line.188"></a>
+<span class="sourceLineNo">189</span>            populator.populate(this.level, chunkX, chunkZ, this.random, chunk);<a name="line.189"></a>
+<span class="sourceLineNo">190</span>        }<a name="line.190"></a>
+<span class="sourceLineNo">191</span>    }<a name="line.191"></a>
+<span class="sourceLineNo">192</span><a name="line.192"></a>
+<span class="sourceLineNo">193</span>    @Override<a name="line.193"></a>
+<span class="sourceLineNo">194</span>    public Vector3 getSpawn() {<a name="line.194"></a>
+<span class="sourceLineNo">195</span>        return new Vector3(128, this.floorLevel, 128);<a name="line.195"></a>
+<span class="sourceLineNo">196</span>    }<a name="line.196"></a>
+<span class="sourceLineNo">197</span>}<a name="line.197"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>
