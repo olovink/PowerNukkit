@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="jdiff" default="jdiff_report" basedir=".">
+  <property name="powernukkit.version" value="1.1.1.0-PN" />
+  <property name="nukkit.version" value="Nukkit-666afc5" />
+  <property name="jdiff.nukkit.folder" value="./jdiff/${powernukkit.version}_x_Nukkit"/>
+
+  <target name="jdiff_report" depends="">
+    <taskdef name="jdiff" classname="jdiff.JDiffAntTask" classpath="./libs/antjdiff-2.0.0-SNAPSHOT.jar"/>
+    <jdiff destdir="${jdiff.nukkit.folder}"
+           verbose="on"
+           stats="on"
+           docchanges="on"
+           docEncoding="UTF-8"
+           charset="UTF-8"
+           encoding="UTF-8"
+           linkSource="on">
+      <old name="Cloudburst${nukkit.version}">
+        <dirset dir="../../org.cloudburst/Nukkit/target/delombok" />
+      </old>
+      <new name="PowerNukkit ${powernukkit.version}">
+        <dirset dir="../PowerNukkit/target/delombok" />
+      </new>
+    </jdiff>
+    <replace dir="${jdiff.nukkit.folder}/changes"
+             token="../PowerNukkit ${powernukkit.version}/"
+             value="../../../javadoc/${powernukkit.version}/">
+      <include name="*.html"/>
+      <replacefilter token="../PowerNukkit ${powernukkit.version}/"
+                     value="../../../javadoc/${powernukkit.version}/"/>
+      <replacefilter token="../stylesheet-jdiff.css"
+                     value="../../stylesheet-jdiff.css"/>
+      <replacefilter token="../background.gif"
+                     value="../../background.gif"/>
+      <replacefilter token="../black.gif"
+                     value="../../black.gif"/>
+    </replace>
+    <replace dir="${jdiff.nukkit.folder}"
+             token="../PowerNukkit ${powernukkit.version}/"
+             value="../../../javadoc/${powernukkit.version}/">
+      <include name="*.html"/>
+      <replacefilter token="stylesheet-jdiff.css"
+                     value="../stylesheet-jdiff.css"/>
+      <replacefilter token="background.gif"
+                     value="../background.gif"/>
+      <replacefilter token="black.gif"
+                     value="../black.gif"/>
+    </replace>
+    <deltree dir="${jdiff.nukkit.folder}/PowerNukkit ${powernukkit.version}" />
+    <delete file="${jdiff.nukkit.folder}/stylesheet-jdiff.css"/>
+    <delete file="${jdiff.nukkit.folder}/background.gif"/>
+    <delete file="${jdiff.nukkit.folder}/black.gif"/>
+    <exec executable="/bin/sh" dir="${jdiff.nukkit.folder}">
+      <arg value="../../google-analytics.sh"/>
+    </exec>
+  </target>
+
+</project>

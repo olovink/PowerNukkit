@@ -1,0 +1,882 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="pt">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>SessionManager</title>
+<meta name="date" content="2021-11-24">
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+<script type="text/javascript" src="../../../../script.js"></script>
+</head>
+<body>
+<script type="text/javascript"><!--
+    try {
+        if (location.href.indexOf('is-external=true') == -1) {
+            parent.document.title="SessionManager";
+        }
+    }
+    catch(err) {
+    }
+//-->
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+var altColor = "altColor";
+var rowColor = "rowColor";
+var tableTab = "tableTab";
+var activeTableTab = "activeTableTab";
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar.top">
+<!--   -->
+</a>
+<div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.top.firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../cn/nukkit/raknet/server/Session.html" title="class in cn.nukkit.raknet.server"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../cn/nukkit/raknet/server/UDPServerSocket.html" title="class in cn.nukkit.raknet.server"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?cn/nukkit/raknet/server/SessionManager.html" target="_top">Frames</a></li>
+<li><a href="SessionManager.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">cn.nukkit.raknet.server</div>
+<h2 title="Class SessionManager" class="title">Class SessionManager</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>cn.nukkit.raknet.server.SessionManager</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<hr>
+<br>
+<pre>public class <a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.21">SessionManager</a>
+extends java.lang.Object</pre>
+<div class="block">author: MagicDroidX
+ Nukkit Project</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected java.util.Map&lt;java.lang.String,java.lang.Long&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#block">block</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#currentSource">currentSource</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected java.util.Map&lt;java.lang.String,java.lang.Integer&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#ipSec">ipSec</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected long</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#lastMeasure">lastMeasure</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#name">name</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#packetLimit">packetLimit</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../../cn/nukkit/raknet/protocol/Packet.PacketFactory.html" title="interface in cn.nukkit.raknet.protocol">Packet.PacketFactory</a>[]</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#packetPool">packetPool</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#portChecking">portChecking</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#receiveBytes">receiveBytes</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#sendBytes">sendBytes</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../../cn/nukkit/raknet/server/RakNetServer.html" title="class in cn.nukkit.raknet.server">RakNetServer</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#server">server</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>long</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#serverId">serverId</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected java.util.Map&lt;java.lang.String,<a href="../../../../cn/nukkit/raknet/server/Session.html" title="class in cn.nukkit.raknet.server">Session</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#sessions">sessions</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#shutdown">shutdown</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>protected <a href="../../../../cn/nukkit/raknet/server/UDPServerSocket.html" title="class in cn.nukkit.raknet.server">UDPServerSocket</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#socket">socket</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected long</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#ticks">ticks</a></span></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor.summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#SessionManager-cn.nukkit.raknet.server.RakNetServer-cn.nukkit.raknet.server.UDPServerSocket-">SessionManager</a></span>(<a href="../../../../cn/nukkit/raknet/server/RakNetServer.html" title="class in cn.nukkit.raknet.server">RakNetServer</a>&nbsp;server,
+              <a href="../../../../cn/nukkit/raknet/server/UDPServerSocket.html" title="class in cn.nukkit.raknet.server">UDPServerSocket</a>&nbsp;socket)</code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method.summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr id="i0" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#blockAddress-java.lang.String-">blockAddress</a></span>(java.lang.String&nbsp;address)</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#blockAddress-java.lang.String-int-">blockAddress</a></span>(java.lang.String&nbsp;address,
+            int&nbsp;timeout)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>long</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#getID--">getID</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/utils/ThreadedLogger.html" title="class in cn.nukkit.utils">ThreadedLogger</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#getLogger--">getLogger</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#getName--">getName</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/raknet/protocol/Packet.html" title="class in cn.nukkit.raknet.protocol">Packet</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#getPacketFromPool-byte-">getPacketFromPool</a></span>(byte&nbsp;id)</code>&nbsp;</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#getPort--">getPort</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/raknet/server/Session.html" title="class in cn.nukkit.raknet.server">Session</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#getSession-java.lang.String-int-">getSession</a></span>(java.lang.String&nbsp;ip,
+          int&nbsp;port)</code>&nbsp;</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#notifyACK-cn.nukkit.raknet.server.Session-int-">notifyACK</a></span>(<a href="../../../../cn/nukkit/raknet/server/Session.html" title="class in cn.nukkit.raknet.server">Session</a>&nbsp;session,
+         int&nbsp;identifierACK)</code>&nbsp;</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#openSession-cn.nukkit.raknet.server.Session-">openSession</a></span>(<a href="../../../../cn/nukkit/raknet/server/Session.html" title="class in cn.nukkit.raknet.server">Session</a>&nbsp;session)</code>&nbsp;</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#receiveStream--">receiveStream</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#removeSession-cn.nukkit.raknet.server.Session-">removeSession</a></span>(<a href="../../../../cn/nukkit/raknet/server/Session.html" title="class in cn.nukkit.raknet.server">Session</a>&nbsp;session)</code>&nbsp;</td>
+</tr>
+<tr id="i12" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#removeSession-cn.nukkit.raknet.server.Session-java.lang.String-">removeSession</a></span>(<a href="../../../../cn/nukkit/raknet/server/Session.html" title="class in cn.nukkit.raknet.server">Session</a>&nbsp;session,
+             java.lang.String&nbsp;reason)</code>&nbsp;</td>
+</tr>
+<tr id="i13" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#run--">run</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i14" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#sendPacket-cn.nukkit.raknet.protocol.Packet-java.net.InetSocketAddress-">sendPacket</a></span>(<a href="../../../../cn/nukkit/raknet/protocol/Packet.html" title="class in cn.nukkit.raknet.protocol">Packet</a>&nbsp;packet,
+          java.net.InetSocketAddress&nbsp;dest)</code>&nbsp;</td>
+</tr>
+<tr id="i15" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#sendPacket-cn.nukkit.raknet.protocol.Packet-java.lang.String-int-">sendPacket</a></span>(<a href="../../../../cn/nukkit/raknet/protocol/Packet.html" title="class in cn.nukkit.raknet.protocol">Packet</a>&nbsp;packet,
+          java.lang.String&nbsp;dest,
+          int&nbsp;port)</code>&nbsp;</td>
+</tr>
+<tr id="i16" class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#streamACK-java.lang.String-int-">streamACK</a></span>(java.lang.String&nbsp;identifier,
+         int&nbsp;identifierACK)</code>&nbsp;</td>
+</tr>
+<tr id="i17" class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#streamClose-java.lang.String-java.lang.String-">streamClose</a></span>(java.lang.String&nbsp;identifier,
+           java.lang.String&nbsp;reason)</code>&nbsp;</td>
+</tr>
+<tr id="i18" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#streamEncapsulated-cn.nukkit.raknet.server.Session-cn.nukkit.raknet.protocol.EncapsulatedPacket-">streamEncapsulated</a></span>(<a href="../../../../cn/nukkit/raknet/server/Session.html" title="class in cn.nukkit.raknet.server">Session</a>&nbsp;session,
+                  <a href="../../../../cn/nukkit/raknet/protocol/EncapsulatedPacket.html" title="class in cn.nukkit.raknet.protocol">EncapsulatedPacket</a>&nbsp;packet)</code>&nbsp;</td>
+</tr>
+<tr id="i19" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#streamEncapsulated-cn.nukkit.raknet.server.Session-cn.nukkit.raknet.protocol.EncapsulatedPacket-int-">streamEncapsulated</a></span>(<a href="../../../../cn/nukkit/raknet/server/Session.html" title="class in cn.nukkit.raknet.server">Session</a>&nbsp;session,
+                  <a href="../../../../cn/nukkit/raknet/protocol/EncapsulatedPacket.html" title="class in cn.nukkit.raknet.protocol">EncapsulatedPacket</a>&nbsp;packet,
+                  int&nbsp;flags)</code>&nbsp;</td>
+</tr>
+<tr id="i20" class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#streamInvalid-java.lang.String-">streamInvalid</a></span>(java.lang.String&nbsp;identifier)</code>&nbsp;</td>
+</tr>
+<tr id="i21" class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#streamOpen-cn.nukkit.raknet.server.Session-">streamOpen</a></span>(<a href="../../../../cn/nukkit/raknet/server/Session.html" title="class in cn.nukkit.raknet.server">Session</a>&nbsp;session)</code>&nbsp;</td>
+</tr>
+<tr id="i22" class="altColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#streamOption-java.lang.String-java.lang.String-">streamOption</a></span>(java.lang.String&nbsp;name,
+            java.lang.String&nbsp;value)</code>&nbsp;</td>
+</tr>
+<tr id="i23" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#streamRAW-java.lang.String-int-byte:A-">streamRAW</a></span>(java.lang.String&nbsp;address,
+         int&nbsp;port,
+         byte[]&nbsp;payload)</code>&nbsp;</td>
+</tr>
+<tr id="i24" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/raknet/server/SessionManager.html#unblockAddress-java.lang.String-">unblockAddress</a></span>(java.lang.String&nbsp;address)</code>&nbsp;</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="packetPool">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>packetPool</h4>
+<pre>protected final&nbsp;<a href="../../../../cn/nukkit/raknet/protocol/Packet.PacketFactory.html" title="interface in cn.nukkit.raknet.protocol">Packet.PacketFactory</a>[] <a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.22">packetPool</a></pre>
+</li>
+</ul>
+<a name="server">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>server</h4>
+<pre>protected final&nbsp;<a href="../../../../cn/nukkit/raknet/server/RakNetServer.html" title="class in cn.nukkit.raknet.server">RakNetServer</a> <a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.24">server</a></pre>
+</li>
+</ul>
+<a name="socket">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>socket</h4>
+<pre>protected final&nbsp;<a href="../../../../cn/nukkit/raknet/server/UDPServerSocket.html" title="class in cn.nukkit.raknet.server">UDPServerSocket</a> <a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.26">socket</a></pre>
+</li>
+</ul>
+<a name="receiveBytes">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>receiveBytes</h4>
+<pre>protected&nbsp;int <a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.28">receiveBytes</a></pre>
+</li>
+</ul>
+<a name="sendBytes">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sendBytes</h4>
+<pre>protected&nbsp;int <a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.29">sendBytes</a></pre>
+</li>
+</ul>
+<a name="sessions">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sessions</h4>
+<pre>protected final&nbsp;java.util.Map&lt;java.lang.String,<a href="../../../../cn/nukkit/raknet/server/Session.html" title="class in cn.nukkit.raknet.server">Session</a>&gt; <a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.31">sessions</a></pre>
+</li>
+</ul>
+<a name="name">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>name</h4>
+<pre>protected&nbsp;java.lang.String <a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.33">name</a></pre>
+</li>
+</ul>
+<a name="packetLimit">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>packetLimit</h4>
+<pre>protected&nbsp;int <a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.35">packetLimit</a></pre>
+</li>
+</ul>
+<a name="shutdown">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>shutdown</h4>
+<pre>protected&nbsp;boolean <a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.37">shutdown</a></pre>
+</li>
+</ul>
+<a name="ticks">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ticks</h4>
+<pre>protected&nbsp;long <a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.39">ticks</a></pre>
+</li>
+</ul>
+<a name="lastMeasure">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>lastMeasure</h4>
+<pre>protected&nbsp;long <a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.40">lastMeasure</a></pre>
+</li>
+</ul>
+<a name="block">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>block</h4>
+<pre>protected final&nbsp;java.util.Map&lt;java.lang.String,java.lang.Long&gt; <a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.42">block</a></pre>
+</li>
+</ul>
+<a name="ipSec">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ipSec</h4>
+<pre>protected final&nbsp;java.util.Map&lt;java.lang.String,java.lang.Integer&gt; <a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.43">ipSec</a></pre>
+</li>
+</ul>
+<a name="portChecking">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>portChecking</h4>
+<pre>public&nbsp;boolean <a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.45">portChecking</a></pre>
+</li>
+</ul>
+<a name="serverId">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serverId</h4>
+<pre>public final&nbsp;long <a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.47">serverId</a></pre>
+</li>
+</ul>
+<a name="currentSource">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>currentSource</h4>
+<pre>protected&nbsp;java.lang.String <a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.49">currentSource</a></pre>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor.detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="SessionManager-cn.nukkit.raknet.server.RakNetServer-cn.nukkit.raknet.server.UDPServerSocket-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>SessionManager</h4>
+<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.51">SessionManager</a>(<a href="../../../../cn/nukkit/raknet/server/RakNetServer.html" title="class in cn.nukkit.raknet.server">RakNetServer</a>&nbsp;server,
+                      <a href="../../../../cn/nukkit/raknet/server/UDPServerSocket.html" title="class in cn.nukkit.raknet.server">UDPServerSocket</a>&nbsp;socket)
+               throws java.lang.Exception</pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>java.lang.Exception</code></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method.detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getPort--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPort</h4>
+<pre>public&nbsp;int&nbsp;<a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.61">getPort</a>()</pre>
+</li>
+</ul>
+<a name="getLogger--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getLogger</h4>
+<pre>public&nbsp;<a href="../../../../cn/nukkit/utils/ThreadedLogger.html" title="class in cn.nukkit.utils">ThreadedLogger</a>&nbsp;<a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.65">getLogger</a>()</pre>
+</li>
+</ul>
+<a name="run--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>run</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.69">run</a>()
+         throws java.lang.Exception</pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>java.lang.Exception</code></dd>
+</dl>
+</li>
+</ul>
+<a name="sendPacket-cn.nukkit.raknet.protocol.Packet-java.lang.String-int-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sendPacket</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.207">sendPacket</a>(<a href="../../../../cn/nukkit/raknet/protocol/Packet.html" title="class in cn.nukkit.raknet.protocol">Packet</a>&nbsp;packet,
+                       java.lang.String&nbsp;dest,
+                       int&nbsp;port)
+                throws java.io.IOException</pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>java.io.IOException</code></dd>
+</dl>
+</li>
+</ul>
+<a name="sendPacket-cn.nukkit.raknet.protocol.Packet-java.net.InetSocketAddress-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sendPacket</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.212">sendPacket</a>(<a href="../../../../cn/nukkit/raknet/protocol/Packet.html" title="class in cn.nukkit.raknet.protocol">Packet</a>&nbsp;packet,
+                       java.net.InetSocketAddress&nbsp;dest)
+                throws java.io.IOException</pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>java.io.IOException</code></dd>
+</dl>
+</li>
+</ul>
+<a name="streamEncapsulated-cn.nukkit.raknet.server.Session-cn.nukkit.raknet.protocol.EncapsulatedPacket-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>streamEncapsulated</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.217">streamEncapsulated</a>(<a href="../../../../cn/nukkit/raknet/server/Session.html" title="class in cn.nukkit.raknet.server">Session</a>&nbsp;session,
+                               <a href="../../../../cn/nukkit/raknet/protocol/EncapsulatedPacket.html" title="class in cn.nukkit.raknet.protocol">EncapsulatedPacket</a>&nbsp;packet)</pre>
+</li>
+</ul>
+<a name="streamEncapsulated-cn.nukkit.raknet.server.Session-cn.nukkit.raknet.protocol.EncapsulatedPacket-int-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>streamEncapsulated</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.221">streamEncapsulated</a>(<a href="../../../../cn/nukkit/raknet/server/Session.html" title="class in cn.nukkit.raknet.server">Session</a>&nbsp;session,
+                               <a href="../../../../cn/nukkit/raknet/protocol/EncapsulatedPacket.html" title="class in cn.nukkit.raknet.protocol">EncapsulatedPacket</a>&nbsp;packet,
+                               int&nbsp;flags)</pre>
+</li>
+</ul>
+<a name="streamRAW-java.lang.String-int-byte:A-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>streamRAW</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.233">streamRAW</a>(java.lang.String&nbsp;address,
+                      int&nbsp;port,
+                      byte[]&nbsp;payload)</pre>
+</li>
+</ul>
+<a name="streamClose-java.lang.String-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>streamClose</h4>
+<pre>protected&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.244">streamClose</a>(java.lang.String&nbsp;identifier,
+                           java.lang.String&nbsp;reason)</pre>
+</li>
+</ul>
+<a name="streamInvalid-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>streamInvalid</h4>
+<pre>protected&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.255">streamInvalid</a>(java.lang.String&nbsp;identifier)</pre>
+</li>
+</ul>
+<a name="streamOpen-cn.nukkit.raknet.server.Session-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>streamOpen</h4>
+<pre>protected&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.264">streamOpen</a>(<a href="../../../../cn/nukkit/raknet/server/Session.html" title="class in cn.nukkit.raknet.server">Session</a>&nbsp;session)</pre>
+</li>
+</ul>
+<a name="streamACK-java.lang.String-int-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>streamACK</h4>
+<pre>protected&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.278">streamACK</a>(java.lang.String&nbsp;identifier,
+                         int&nbsp;identifierACK)</pre>
+</li>
+</ul>
+<a name="streamOption-java.lang.String-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>streamOption</h4>
+<pre>protected&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.288">streamOption</a>(java.lang.String&nbsp;name,
+                            java.lang.String&nbsp;value)</pre>
+</li>
+</ul>
+<a name="receiveStream--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>receiveStream</h4>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.319">receiveStream</a>()
+                      throws java.lang.Exception</pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>java.lang.Exception</code></dd>
+</dl>
+</li>
+</ul>
+<a name="blockAddress-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>blockAddress</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.410">blockAddress</a>(java.lang.String&nbsp;address)</pre>
+</li>
+</ul>
+<a name="blockAddress-java.lang.String-int-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>blockAddress</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.414">blockAddress</a>(java.lang.String&nbsp;address,
+                         int&nbsp;timeout)</pre>
+</li>
+</ul>
+<a name="unblockAddress-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>unblockAddress</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.428">unblockAddress</a>(java.lang.String&nbsp;address)</pre>
+</li>
+</ul>
+<a name="getSession-java.lang.String-int-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSession</h4>
+<pre>public&nbsp;<a href="../../../../cn/nukkit/raknet/server/Session.html" title="class in cn.nukkit.raknet.server">Session</a>&nbsp;<a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.432">getSession</a>(java.lang.String&nbsp;ip,
+                          int&nbsp;port)</pre>
+</li>
+</ul>
+<a name="removeSession-cn.nukkit.raknet.server.Session-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeSession</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.445">removeSession</a>(<a href="../../../../cn/nukkit/raknet/server/Session.html" title="class in cn.nukkit.raknet.server">Session</a>&nbsp;session)
+                   throws java.lang.Exception</pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>java.lang.Exception</code></dd>
+</dl>
+</li>
+</ul>
+<a name="removeSession-cn.nukkit.raknet.server.Session-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>removeSession</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.449">removeSession</a>(<a href="../../../../cn/nukkit/raknet/server/Session.html" title="class in cn.nukkit.raknet.server">Session</a>&nbsp;session,
+                          java.lang.String&nbsp;reason)
+                   throws java.lang.Exception</pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code>java.lang.Exception</code></dd>
+</dl>
+</li>
+</ul>
+<a name="openSession-cn.nukkit.raknet.server.Session-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>openSession</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.458">openSession</a>(<a href="../../../../cn/nukkit/raknet/server/Session.html" title="class in cn.nukkit.raknet.server">Session</a>&nbsp;session)</pre>
+</li>
+</ul>
+<a name="notifyACK-cn.nukkit.raknet.server.Session-int-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>notifyACK</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.462">notifyACK</a>(<a href="../../../../cn/nukkit/raknet/server/Session.html" title="class in cn.nukkit.raknet.server">Session</a>&nbsp;session,
+                      int&nbsp;identifierACK)</pre>
+</li>
+</ul>
+<a name="getName--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getName</h4>
+<pre>public&nbsp;java.lang.String&nbsp;<a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.466">getName</a>()</pre>
+</li>
+</ul>
+<a name="getID--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getID</h4>
+<pre>public&nbsp;long&nbsp;<a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.470">getID</a>()</pre>
+</li>
+</ul>
+<a name="getPacketFromPool-byte-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getPacketFromPool</h4>
+<pre>public&nbsp;<a href="../../../../cn/nukkit/raknet/protocol/Packet.html" title="class in cn.nukkit.raknet.protocol">Packet</a>&nbsp;<a href="../../../../src-html/cn/nukkit/raknet/server/SessionManager.html#line.478">getPacketFromPool</a>(byte&nbsp;id)</pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar.bottom">
+<!--   -->
+</a>
+<div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.bottom.firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../cn/nukkit/raknet/server/Session.html" title="class in cn.nukkit.raknet.server"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../cn/nukkit/raknet/server/UDPServerSocket.html" title="class in cn.nukkit.raknet.server"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?cn/nukkit/raknet/server/SessionManager.html" target="_top">Frames</a></li>
+<li><a href="SessionManager.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>
