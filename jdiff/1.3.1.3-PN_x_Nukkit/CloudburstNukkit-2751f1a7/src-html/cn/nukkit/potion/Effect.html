@@ -1,0 +1,383 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package cn.nukkit.potion;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>import cn.nukkit.Player;<a name="line.3"></a>
+<span class="sourceLineNo">004</span>import cn.nukkit.entity.Entity;<a name="line.4"></a>
+<span class="sourceLineNo">005</span>import cn.nukkit.event.entity.EntityDamageEvent;<a name="line.5"></a>
+<span class="sourceLineNo">006</span>import cn.nukkit.event.entity.EntityDamageEvent.DamageCause;<a name="line.6"></a>
+<span class="sourceLineNo">007</span>import cn.nukkit.event.entity.EntityRegainHealthEvent;<a name="line.7"></a>
+<span class="sourceLineNo">008</span>import cn.nukkit.network.protocol.MobEffectPacket;<a name="line.8"></a>
+<span class="sourceLineNo">009</span>import cn.nukkit.utils.ServerException;<a name="line.9"></a>
+<span class="sourceLineNo">010</span><a name="line.10"></a>
+<span class="sourceLineNo">011</span>/**<a name="line.11"></a>
+<span class="sourceLineNo">012</span> * author: MagicDroidX<a name="line.12"></a>
+<span class="sourceLineNo">013</span> * Nukkit Project<a name="line.13"></a>
+<span class="sourceLineNo">014</span> */<a name="line.14"></a>
+<span class="sourceLineNo">015</span>public class Effect implements Cloneable {<a name="line.15"></a>
+<span class="sourceLineNo">016</span><a name="line.16"></a>
+<span class="sourceLineNo">017</span>    public static final int SPEED = 1;<a name="line.17"></a>
+<span class="sourceLineNo">018</span>    public static final int SLOWNESS = 2;<a name="line.18"></a>
+<span class="sourceLineNo">019</span>    public static final int HASTE = 3;<a name="line.19"></a>
+<span class="sourceLineNo">020</span>    public static final int SWIFTNESS = 3;<a name="line.20"></a>
+<span class="sourceLineNo">021</span>    public static final int FATIGUE = 4;<a name="line.21"></a>
+<span class="sourceLineNo">022</span>    public static final int MINING_FATIGUE = 4;<a name="line.22"></a>
+<span class="sourceLineNo">023</span>    public static final int STRENGTH = 5;<a name="line.23"></a>
+<span class="sourceLineNo">024</span>    public static final int HEALING = 6;<a name="line.24"></a>
+<span class="sourceLineNo">025</span>    public static final int HARMING = 7;<a name="line.25"></a>
+<span class="sourceLineNo">026</span>    public static final int JUMP = 8;<a name="line.26"></a>
+<span class="sourceLineNo">027</span>    public static final int NAUSEA = 9;<a name="line.27"></a>
+<span class="sourceLineNo">028</span>    public static final int CONFUSION = 9;<a name="line.28"></a>
+<span class="sourceLineNo">029</span>    public static final int REGENERATION = 10;<a name="line.29"></a>
+<span class="sourceLineNo">030</span>    public static final int DAMAGE_RESISTANCE = 11;<a name="line.30"></a>
+<span class="sourceLineNo">031</span>    public static final int FIRE_RESISTANCE = 12;<a name="line.31"></a>
+<span class="sourceLineNo">032</span>    public static final int WATER_BREATHING = 13;<a name="line.32"></a>
+<span class="sourceLineNo">033</span>    public static final int INVISIBILITY = 14;<a name="line.33"></a>
+<span class="sourceLineNo">034</span>    public static final int BLINDNESS = 15;<a name="line.34"></a>
+<span class="sourceLineNo">035</span>    public static final int NIGHT_VISION = 16;<a name="line.35"></a>
+<span class="sourceLineNo">036</span>    public static final int HUNGER = 17;<a name="line.36"></a>
+<span class="sourceLineNo">037</span>    public static final int WEAKNESS = 18;<a name="line.37"></a>
+<span class="sourceLineNo">038</span>    public static final int POISON = 19;<a name="line.38"></a>
+<span class="sourceLineNo">039</span>    public static final int WITHER = 20;<a name="line.39"></a>
+<span class="sourceLineNo">040</span>    public static final int HEALTH_BOOST = 21;<a name="line.40"></a>
+<span class="sourceLineNo">041</span>    public static final int ABSORPTION = 22;<a name="line.41"></a>
+<span class="sourceLineNo">042</span>    public static final int SATURATION = 23;<a name="line.42"></a>
+<span class="sourceLineNo">043</span>    public static final int LEVITATION = 24;<a name="line.43"></a>
+<span class="sourceLineNo">044</span>    public static final int FATAL_POISON = 25;<a name="line.44"></a>
+<span class="sourceLineNo">045</span>    public static final int COUNDIT_POWER = 26;<a name="line.45"></a>
+<span class="sourceLineNo">046</span>    public static final int SLOW_FALLING = 27;<a name="line.46"></a>
+<span class="sourceLineNo">047</span><a name="line.47"></a>
+<span class="sourceLineNo">048</span>    protected static Effect[] effects;<a name="line.48"></a>
+<span class="sourceLineNo">049</span><a name="line.49"></a>
+<span class="sourceLineNo">050</span>    public static void init() {<a name="line.50"></a>
+<span class="sourceLineNo">051</span>        effects = new Effect[256];<a name="line.51"></a>
+<span class="sourceLineNo">052</span><a name="line.52"></a>
+<span class="sourceLineNo">053</span>        effects[Effect.SPEED] = new Effect(Effect.SPEED, "%potion.moveSpeed", 124, 175, 198);<a name="line.53"></a>
+<span class="sourceLineNo">054</span>        effects[Effect.SLOWNESS] = new Effect(Effect.SLOWNESS, "%potion.moveSlowdown", 90, 108, 129, true);<a name="line.54"></a>
+<span class="sourceLineNo">055</span>        effects[Effect.SWIFTNESS] = new Effect(Effect.SWIFTNESS, "%potion.digSpeed", 217, 192, 67);<a name="line.55"></a>
+<span class="sourceLineNo">056</span>        effects[Effect.FATIGUE] = new Effect(Effect.FATIGUE, "%potion.digSlowDown", 74, 66, 23, true);<a name="line.56"></a>
+<span class="sourceLineNo">057</span>        effects[Effect.STRENGTH] = new Effect(Effect.STRENGTH, "%potion.damageBoost", 147, 36, 35);<a name="line.57"></a>
+<span class="sourceLineNo">058</span>        effects[Effect.HEALING] = new InstantEffect(Effect.HEALING, "%potion.heal", 248, 36, 35);<a name="line.58"></a>
+<span class="sourceLineNo">059</span>        effects[Effect.HARMING] = new InstantEffect(Effect.HARMING, "%potion.harm", 67, 10, 9, true);<a name="line.59"></a>
+<span class="sourceLineNo">060</span>        effects[Effect.JUMP] = new Effect(Effect.JUMP, "%potion.jump", 34, 255, 76);<a name="line.60"></a>
+<span class="sourceLineNo">061</span>        effects[Effect.NAUSEA] = new Effect(Effect.NAUSEA, "%potion.confusion", 85, 29, 74, true);<a name="line.61"></a>
+<span class="sourceLineNo">062</span>        effects[Effect.REGENERATION] = new Effect(Effect.REGENERATION, "%potion.regeneration", 205, 92, 171);<a name="line.62"></a>
+<span class="sourceLineNo">063</span>        effects[Effect.DAMAGE_RESISTANCE] = new Effect(Effect.DAMAGE_RESISTANCE, "%potion.resistance", 153, 69, 58);<a name="line.63"></a>
+<span class="sourceLineNo">064</span>        effects[Effect.FIRE_RESISTANCE] = new Effect(Effect.FIRE_RESISTANCE, "%potion.fireResistance", 228, 154, 58);<a name="line.64"></a>
+<span class="sourceLineNo">065</span>        effects[Effect.WATER_BREATHING] = new Effect(Effect.WATER_BREATHING, "%potion.waterBreathing", 46, 82, 153);<a name="line.65"></a>
+<span class="sourceLineNo">066</span>        effects[Effect.INVISIBILITY] = new Effect(Effect.INVISIBILITY, "%potion.invisibility", 127, 131, 146);<a name="line.66"></a>
+<span class="sourceLineNo">067</span><a name="line.67"></a>
+<span class="sourceLineNo">068</span>        effects[Effect.BLINDNESS] = new Effect(Effect.BLINDNESS, "%potion.blindness", 191, 192, 192);<a name="line.68"></a>
+<span class="sourceLineNo">069</span>        effects[Effect.NIGHT_VISION] = new Effect(Effect.NIGHT_VISION, "%potion.nightVision", 0, 0, 139);<a name="line.69"></a>
+<span class="sourceLineNo">070</span>        effects[Effect.HUNGER] = new Effect(Effect.HUNGER, "%potion.hunger", 46, 139, 87);<a name="line.70"></a>
+<span class="sourceLineNo">071</span><a name="line.71"></a>
+<span class="sourceLineNo">072</span>        effects[Effect.WEAKNESS] = new Effect(Effect.WEAKNESS, "%potion.weakness", 72, 77, 72, true);<a name="line.72"></a>
+<span class="sourceLineNo">073</span>        effects[Effect.POISON] = new Effect(Effect.POISON, "%potion.poison", 78, 147, 49, true);<a name="line.73"></a>
+<span class="sourceLineNo">074</span>        effects[Effect.WITHER] = new Effect(Effect.WITHER, "%potion.wither", 53, 42, 39, true);<a name="line.74"></a>
+<span class="sourceLineNo">075</span>        effects[Effect.HEALTH_BOOST] = new Effect(Effect.HEALTH_BOOST, "%potion.healthBoost", 248, 125, 35);<a name="line.75"></a>
+<span class="sourceLineNo">076</span><a name="line.76"></a>
+<span class="sourceLineNo">077</span>        effects[Effect.ABSORPTION] = new Effect(Effect.ABSORPTION, "%potion.absorption", 36, 107, 251);<a name="line.77"></a>
+<span class="sourceLineNo">078</span>        effects[Effect.SATURATION] = new Effect(Effect.SATURATION, "%potion.saturation", 255, 0, 255);<a name="line.78"></a>
+<span class="sourceLineNo">079</span>        effects[Effect.LEVITATION] = new Effect(Effect.LEVITATION, "%potion.levitation", 206, 255, 255);<a name="line.79"></a>
+<span class="sourceLineNo">080</span>        effects[Effect.FATAL_POISON] = new Effect(Effect.FATAL_POISON, "%potion.poison", 78, 147, 49, true);<a name="line.80"></a>
+<span class="sourceLineNo">081</span>        effects[Effect.COUNDIT_POWER] = new Effect(Effect.COUNDIT_POWER, "%potion.conduitPower", 29, 194, 209);<a name="line.81"></a>
+<span class="sourceLineNo">082</span>        effects[Effect.SLOW_FALLING] = new Effect(Effect.SLOW_FALLING, "%potion.slowFalling", 206, 255, 255);<a name="line.82"></a>
+<span class="sourceLineNo">083</span>    }<a name="line.83"></a>
+<span class="sourceLineNo">084</span><a name="line.84"></a>
+<span class="sourceLineNo">085</span>    public static Effect getEffect(int id) {<a name="line.85"></a>
+<span class="sourceLineNo">086</span>        if (id &gt;= 0 &amp;&amp; id &lt; effects.length &amp;&amp; effects[id] != null) {<a name="line.86"></a>
+<span class="sourceLineNo">087</span>            return effects[id].clone();<a name="line.87"></a>
+<span class="sourceLineNo">088</span>        } else {<a name="line.88"></a>
+<span class="sourceLineNo">089</span>            throw new ServerException("Effect id: " + id + " not found");<a name="line.89"></a>
+<span class="sourceLineNo">090</span>        }<a name="line.90"></a>
+<span class="sourceLineNo">091</span>    }<a name="line.91"></a>
+<span class="sourceLineNo">092</span><a name="line.92"></a>
+<span class="sourceLineNo">093</span>    public static Effect getEffectByName(String name) {<a name="line.93"></a>
+<span class="sourceLineNo">094</span>        name = name.trim().replace(' ', '_').replace("minecraft:", "");<a name="line.94"></a>
+<span class="sourceLineNo">095</span>        try {<a name="line.95"></a>
+<span class="sourceLineNo">096</span>            int id = Effect.class.getField(name.toUpperCase()).getInt(null);<a name="line.96"></a>
+<span class="sourceLineNo">097</span>            return getEffect(id);<a name="line.97"></a>
+<span class="sourceLineNo">098</span>        } catch (Exception e) {<a name="line.98"></a>
+<span class="sourceLineNo">099</span>            throw new RuntimeException(e);<a name="line.99"></a>
+<span class="sourceLineNo">100</span>        }<a name="line.100"></a>
+<span class="sourceLineNo">101</span>    }<a name="line.101"></a>
+<span class="sourceLineNo">102</span><a name="line.102"></a>
+<span class="sourceLineNo">103</span>    protected final int id;<a name="line.103"></a>
+<span class="sourceLineNo">104</span><a name="line.104"></a>
+<span class="sourceLineNo">105</span>    protected final String name;<a name="line.105"></a>
+<span class="sourceLineNo">106</span><a name="line.106"></a>
+<span class="sourceLineNo">107</span>    protected int duration;<a name="line.107"></a>
+<span class="sourceLineNo">108</span><a name="line.108"></a>
+<span class="sourceLineNo">109</span>    protected int amplifier = 0;<a name="line.109"></a>
+<span class="sourceLineNo">110</span><a name="line.110"></a>
+<span class="sourceLineNo">111</span>    protected int color;<a name="line.111"></a>
+<span class="sourceLineNo">112</span><a name="line.112"></a>
+<span class="sourceLineNo">113</span>    protected boolean show = true;<a name="line.113"></a>
+<span class="sourceLineNo">114</span><a name="line.114"></a>
+<span class="sourceLineNo">115</span>    protected boolean ambient = false;<a name="line.115"></a>
+<span class="sourceLineNo">116</span><a name="line.116"></a>
+<span class="sourceLineNo">117</span>    protected final boolean bad;<a name="line.117"></a>
+<span class="sourceLineNo">118</span><a name="line.118"></a>
+<span class="sourceLineNo">119</span>    public Effect(int id, String name, int r, int g, int b) {<a name="line.119"></a>
+<span class="sourceLineNo">120</span>        this(id, name, r, g, b, false);<a name="line.120"></a>
+<span class="sourceLineNo">121</span>    }<a name="line.121"></a>
+<span class="sourceLineNo">122</span><a name="line.122"></a>
+<span class="sourceLineNo">123</span>    public Effect(int id, String name, int r, int g, int b, boolean isBad) {<a name="line.123"></a>
+<span class="sourceLineNo">124</span>        this.id = id;<a name="line.124"></a>
+<span class="sourceLineNo">125</span>        this.name = name;<a name="line.125"></a>
+<span class="sourceLineNo">126</span>        this.bad = isBad;<a name="line.126"></a>
+<span class="sourceLineNo">127</span>        this.setColor(r, g, b);<a name="line.127"></a>
+<span class="sourceLineNo">128</span>    }<a name="line.128"></a>
+<span class="sourceLineNo">129</span><a name="line.129"></a>
+<span class="sourceLineNo">130</span>    public String getName() {<a name="line.130"></a>
+<span class="sourceLineNo">131</span>        return name;<a name="line.131"></a>
+<span class="sourceLineNo">132</span>    }<a name="line.132"></a>
+<span class="sourceLineNo">133</span><a name="line.133"></a>
+<span class="sourceLineNo">134</span>    public int getId() {<a name="line.134"></a>
+<span class="sourceLineNo">135</span>        return id;<a name="line.135"></a>
+<span class="sourceLineNo">136</span>    }<a name="line.136"></a>
+<span class="sourceLineNo">137</span><a name="line.137"></a>
+<span class="sourceLineNo">138</span>    public Effect setDuration(int ticks) {<a name="line.138"></a>
+<span class="sourceLineNo">139</span>        this.duration = ticks;<a name="line.139"></a>
+<span class="sourceLineNo">140</span>        return this;<a name="line.140"></a>
+<span class="sourceLineNo">141</span>    }<a name="line.141"></a>
+<span class="sourceLineNo">142</span><a name="line.142"></a>
+<span class="sourceLineNo">143</span>    public int getDuration() {<a name="line.143"></a>
+<span class="sourceLineNo">144</span>        return duration;<a name="line.144"></a>
+<span class="sourceLineNo">145</span>    }<a name="line.145"></a>
+<span class="sourceLineNo">146</span><a name="line.146"></a>
+<span class="sourceLineNo">147</span>    public boolean isVisible() {<a name="line.147"></a>
+<span class="sourceLineNo">148</span>        return show;<a name="line.148"></a>
+<span class="sourceLineNo">149</span>    }<a name="line.149"></a>
+<span class="sourceLineNo">150</span><a name="line.150"></a>
+<span class="sourceLineNo">151</span>    public Effect setVisible(boolean visible) {<a name="line.151"></a>
+<span class="sourceLineNo">152</span>        this.show = visible;<a name="line.152"></a>
+<span class="sourceLineNo">153</span>        return this;<a name="line.153"></a>
+<span class="sourceLineNo">154</span>    }<a name="line.154"></a>
+<span class="sourceLineNo">155</span><a name="line.155"></a>
+<span class="sourceLineNo">156</span>    public int getAmplifier() {<a name="line.156"></a>
+<span class="sourceLineNo">157</span>        return amplifier;<a name="line.157"></a>
+<span class="sourceLineNo">158</span>    }<a name="line.158"></a>
+<span class="sourceLineNo">159</span><a name="line.159"></a>
+<span class="sourceLineNo">160</span>    public Effect setAmplifier(int amplifier) {<a name="line.160"></a>
+<span class="sourceLineNo">161</span>        this.amplifier = amplifier;<a name="line.161"></a>
+<span class="sourceLineNo">162</span>        return this;<a name="line.162"></a>
+<span class="sourceLineNo">163</span>    }<a name="line.163"></a>
+<span class="sourceLineNo">164</span><a name="line.164"></a>
+<span class="sourceLineNo">165</span>    public boolean isAmbient() {<a name="line.165"></a>
+<span class="sourceLineNo">166</span>        return ambient;<a name="line.166"></a>
+<span class="sourceLineNo">167</span>    }<a name="line.167"></a>
+<span class="sourceLineNo">168</span><a name="line.168"></a>
+<span class="sourceLineNo">169</span>    public Effect setAmbient(boolean ambient) {<a name="line.169"></a>
+<span class="sourceLineNo">170</span>        this.ambient = ambient;<a name="line.170"></a>
+<span class="sourceLineNo">171</span>        return this;<a name="line.171"></a>
+<span class="sourceLineNo">172</span>    }<a name="line.172"></a>
+<span class="sourceLineNo">173</span><a name="line.173"></a>
+<span class="sourceLineNo">174</span>    public boolean isBad() {<a name="line.174"></a>
+<span class="sourceLineNo">175</span>        return bad;<a name="line.175"></a>
+<span class="sourceLineNo">176</span>    }<a name="line.176"></a>
+<span class="sourceLineNo">177</span><a name="line.177"></a>
+<span class="sourceLineNo">178</span>    public boolean canTick() {<a name="line.178"></a>
+<span class="sourceLineNo">179</span>        int interval;<a name="line.179"></a>
+<span class="sourceLineNo">180</span>        switch (this.id) {<a name="line.180"></a>
+<span class="sourceLineNo">181</span>            case Effect.POISON: //POISON<a name="line.181"></a>
+<span class="sourceLineNo">182</span>                if ((interval = (25 &gt;&gt; this.amplifier)) &gt; 0) {<a name="line.182"></a>
+<span class="sourceLineNo">183</span>                    return (this.duration % interval) == 0;<a name="line.183"></a>
+<span class="sourceLineNo">184</span>                }<a name="line.184"></a>
+<span class="sourceLineNo">185</span>                return true;<a name="line.185"></a>
+<span class="sourceLineNo">186</span>            case Effect.WITHER: //WITHER<a name="line.186"></a>
+<span class="sourceLineNo">187</span>                if ((interval = (50 &gt;&gt; this.amplifier)) &gt; 0) {<a name="line.187"></a>
+<span class="sourceLineNo">188</span>                    return (this.duration % interval) == 0;<a name="line.188"></a>
+<span class="sourceLineNo">189</span>                }<a name="line.189"></a>
+<span class="sourceLineNo">190</span>                return true;<a name="line.190"></a>
+<span class="sourceLineNo">191</span>            case Effect.REGENERATION: //REGENERATION<a name="line.191"></a>
+<span class="sourceLineNo">192</span>                if ((interval = (40 &gt;&gt; this.amplifier)) &gt; 0) {<a name="line.192"></a>
+<span class="sourceLineNo">193</span>                    return (this.duration % interval) == 0;<a name="line.193"></a>
+<span class="sourceLineNo">194</span>                }<a name="line.194"></a>
+<span class="sourceLineNo">195</span>                return true;<a name="line.195"></a>
+<span class="sourceLineNo">196</span>        }<a name="line.196"></a>
+<span class="sourceLineNo">197</span>        return false;<a name="line.197"></a>
+<span class="sourceLineNo">198</span>    }<a name="line.198"></a>
+<span class="sourceLineNo">199</span><a name="line.199"></a>
+<span class="sourceLineNo">200</span>    public void applyEffect(Entity entity) {<a name="line.200"></a>
+<span class="sourceLineNo">201</span>        switch (this.id) {<a name="line.201"></a>
+<span class="sourceLineNo">202</span>            case Effect.POISON: //POISON<a name="line.202"></a>
+<span class="sourceLineNo">203</span>                if (entity.getHealth() &gt; 1) {<a name="line.203"></a>
+<span class="sourceLineNo">204</span>                    entity.attack(new EntityDamageEvent(entity, DamageCause.MAGIC, 1));<a name="line.204"></a>
+<span class="sourceLineNo">205</span>                }<a name="line.205"></a>
+<span class="sourceLineNo">206</span>                break;<a name="line.206"></a>
+<span class="sourceLineNo">207</span>            case Effect.WITHER: //WITHER<a name="line.207"></a>
+<span class="sourceLineNo">208</span>                entity.attack(new EntityDamageEvent(entity, DamageCause.MAGIC, 1));<a name="line.208"></a>
+<span class="sourceLineNo">209</span>                break;<a name="line.209"></a>
+<span class="sourceLineNo">210</span>            case Effect.REGENERATION: //REGENERATION<a name="line.210"></a>
+<span class="sourceLineNo">211</span>                if (entity.getHealth() &lt; entity.getMaxHealth()) {<a name="line.211"></a>
+<span class="sourceLineNo">212</span>                    entity.heal(new EntityRegainHealthEvent(entity, 1, EntityRegainHealthEvent.CAUSE_MAGIC));<a name="line.212"></a>
+<span class="sourceLineNo">213</span>                }<a name="line.213"></a>
+<span class="sourceLineNo">214</span>                break;<a name="line.214"></a>
+<span class="sourceLineNo">215</span>        }<a name="line.215"></a>
+<span class="sourceLineNo">216</span>    }<a name="line.216"></a>
+<span class="sourceLineNo">217</span><a name="line.217"></a>
+<span class="sourceLineNo">218</span>    public int[] getColor() {<a name="line.218"></a>
+<span class="sourceLineNo">219</span>        return new int[]{this.color &gt;&gt; 16, (this.color &gt;&gt; 8) &amp; 0xff, this.color &amp; 0xff};<a name="line.219"></a>
+<span class="sourceLineNo">220</span>    }<a name="line.220"></a>
+<span class="sourceLineNo">221</span><a name="line.221"></a>
+<span class="sourceLineNo">222</span>    public void setColor(int r, int g, int b) {<a name="line.222"></a>
+<span class="sourceLineNo">223</span>        this.color = ((r &amp; 0xff) &lt;&lt; 16) + ((g &amp; 0xff) &lt;&lt; 8) + (b &amp; 0xff);<a name="line.223"></a>
+<span class="sourceLineNo">224</span>    }<a name="line.224"></a>
+<span class="sourceLineNo">225</span><a name="line.225"></a>
+<span class="sourceLineNo">226</span>    public void add(Entity entity) {<a name="line.226"></a>
+<span class="sourceLineNo">227</span>        Effect oldEffect = entity.getEffect(getId());<a name="line.227"></a>
+<span class="sourceLineNo">228</span>        if (oldEffect != null &amp;&amp; (Math.abs(this.getAmplifier()) &lt; Math.abs(oldEffect.getAmplifier()) ||<a name="line.228"></a>
+<span class="sourceLineNo">229</span>                Math.abs(this.getAmplifier()) == Math.abs(oldEffect.getAmplifier())<a name="line.229"></a>
+<span class="sourceLineNo">230</span>                        &amp;&amp; this.getDuration() &lt; oldEffect.getDuration())) {<a name="line.230"></a>
+<span class="sourceLineNo">231</span>            return;<a name="line.231"></a>
+<span class="sourceLineNo">232</span>        }<a name="line.232"></a>
+<span class="sourceLineNo">233</span>        if (entity instanceof Player) {<a name="line.233"></a>
+<span class="sourceLineNo">234</span>            Player player = (Player) entity;<a name="line.234"></a>
+<span class="sourceLineNo">235</span><a name="line.235"></a>
+<span class="sourceLineNo">236</span>            MobEffectPacket pk = new MobEffectPacket();<a name="line.236"></a>
+<span class="sourceLineNo">237</span>            pk.eid = entity.getId();<a name="line.237"></a>
+<span class="sourceLineNo">238</span>            pk.effectId = this.getId();<a name="line.238"></a>
+<span class="sourceLineNo">239</span>            pk.amplifier = this.getAmplifier();<a name="line.239"></a>
+<span class="sourceLineNo">240</span>            pk.particles = this.isVisible();<a name="line.240"></a>
+<span class="sourceLineNo">241</span>            pk.duration = this.getDuration();<a name="line.241"></a>
+<span class="sourceLineNo">242</span>            if (oldEffect != null) {<a name="line.242"></a>
+<span class="sourceLineNo">243</span>                pk.eventId = MobEffectPacket.EVENT_MODIFY;<a name="line.243"></a>
+<span class="sourceLineNo">244</span>            } else {<a name="line.244"></a>
+<span class="sourceLineNo">245</span>                pk.eventId = MobEffectPacket.EVENT_ADD;<a name="line.245"></a>
+<span class="sourceLineNo">246</span>            }<a name="line.246"></a>
+<span class="sourceLineNo">247</span><a name="line.247"></a>
+<span class="sourceLineNo">248</span>            player.dataPacket(pk);<a name="line.248"></a>
+<span class="sourceLineNo">249</span><a name="line.249"></a>
+<span class="sourceLineNo">250</span>            if (this.id == Effect.SPEED) {<a name="line.250"></a>
+<span class="sourceLineNo">251</span>                if (oldEffect != null) {<a name="line.251"></a>
+<span class="sourceLineNo">252</span>                    player.setMovementSpeed(player.getMovementSpeed() / (1 + 0.2f * (oldEffect.amplifier + 1)), false);<a name="line.252"></a>
+<span class="sourceLineNo">253</span>                }<a name="line.253"></a>
+<span class="sourceLineNo">254</span>                player.setMovementSpeed(player.getMovementSpeed() * (1 + 0.2f * (this.amplifier + 1)));<a name="line.254"></a>
+<span class="sourceLineNo">255</span>            }<a name="line.255"></a>
+<span class="sourceLineNo">256</span><a name="line.256"></a>
+<span class="sourceLineNo">257</span>            if (this.id == Effect.SLOWNESS) {<a name="line.257"></a>
+<span class="sourceLineNo">258</span>                if (oldEffect != null) {<a name="line.258"></a>
+<span class="sourceLineNo">259</span>                    player.setMovementSpeed(player.getMovementSpeed() / (1 - 0.15f * (oldEffect.amplifier + 1)), false);<a name="line.259"></a>
+<span class="sourceLineNo">260</span>                }<a name="line.260"></a>
+<span class="sourceLineNo">261</span>                player.setMovementSpeed(player.getMovementSpeed() * (1 - 0.15f * (this.amplifier + 1)));<a name="line.261"></a>
+<span class="sourceLineNo">262</span>            }<a name="line.262"></a>
+<span class="sourceLineNo">263</span>        }<a name="line.263"></a>
+<span class="sourceLineNo">264</span><a name="line.264"></a>
+<span class="sourceLineNo">265</span>        if (this.id == Effect.INVISIBILITY) {<a name="line.265"></a>
+<span class="sourceLineNo">266</span>            entity.setDataFlag(Entity.DATA_FLAGS, Entity.DATA_FLAG_INVISIBLE, true);<a name="line.266"></a>
+<span class="sourceLineNo">267</span>            entity.setNameTagVisible(false);<a name="line.267"></a>
+<span class="sourceLineNo">268</span>        }<a name="line.268"></a>
+<span class="sourceLineNo">269</span><a name="line.269"></a>
+<span class="sourceLineNo">270</span>        if (this.id == Effect.ABSORPTION) {<a name="line.270"></a>
+<span class="sourceLineNo">271</span>            int add = (this.amplifier + 1) * 4;<a name="line.271"></a>
+<span class="sourceLineNo">272</span>            if (add &gt; entity.getAbsorption()) entity.setAbsorption(add);<a name="line.272"></a>
+<span class="sourceLineNo">273</span>        }<a name="line.273"></a>
+<span class="sourceLineNo">274</span>    }<a name="line.274"></a>
+<span class="sourceLineNo">275</span><a name="line.275"></a>
+<span class="sourceLineNo">276</span>    public void remove(Entity entity) {<a name="line.276"></a>
+<span class="sourceLineNo">277</span>        if (entity instanceof Player) {<a name="line.277"></a>
+<span class="sourceLineNo">278</span>            MobEffectPacket pk = new MobEffectPacket();<a name="line.278"></a>
+<span class="sourceLineNo">279</span>            pk.eid = entity.getId();<a name="line.279"></a>
+<span class="sourceLineNo">280</span>            pk.effectId = this.getId();<a name="line.280"></a>
+<span class="sourceLineNo">281</span>            pk.eventId = MobEffectPacket.EVENT_REMOVE;<a name="line.281"></a>
+<span class="sourceLineNo">282</span><a name="line.282"></a>
+<span class="sourceLineNo">283</span>            ((Player) entity).dataPacket(pk);<a name="line.283"></a>
+<span class="sourceLineNo">284</span><a name="line.284"></a>
+<span class="sourceLineNo">285</span>            if (this.id == Effect.SPEED) {<a name="line.285"></a>
+<span class="sourceLineNo">286</span>                ((Player) entity).setMovementSpeed(((Player) entity).getMovementSpeed() / (1 + 0.2f * (this.amplifier + 1)));<a name="line.286"></a>
+<span class="sourceLineNo">287</span>            }<a name="line.287"></a>
+<span class="sourceLineNo">288</span>            if (this.id == Effect.SLOWNESS) {<a name="line.288"></a>
+<span class="sourceLineNo">289</span>                ((Player) entity).setMovementSpeed(((Player) entity).getMovementSpeed() / (1 - 0.15f * (this.amplifier + 1)));<a name="line.289"></a>
+<span class="sourceLineNo">290</span>            }<a name="line.290"></a>
+<span class="sourceLineNo">291</span>        }<a name="line.291"></a>
+<span class="sourceLineNo">292</span><a name="line.292"></a>
+<span class="sourceLineNo">293</span>        if (this.id == Effect.INVISIBILITY) {<a name="line.293"></a>
+<span class="sourceLineNo">294</span>            entity.setDataFlag(Entity.DATA_FLAGS, Entity.DATA_FLAG_INVISIBLE, false);<a name="line.294"></a>
+<span class="sourceLineNo">295</span>            entity.setNameTagVisible(true);<a name="line.295"></a>
+<span class="sourceLineNo">296</span>        }<a name="line.296"></a>
+<span class="sourceLineNo">297</span><a name="line.297"></a>
+<span class="sourceLineNo">298</span>        if (this.id == Effect.ABSORPTION) {<a name="line.298"></a>
+<span class="sourceLineNo">299</span>            entity.setAbsorption(0);<a name="line.299"></a>
+<span class="sourceLineNo">300</span>        }<a name="line.300"></a>
+<span class="sourceLineNo">301</span>    }<a name="line.301"></a>
+<span class="sourceLineNo">302</span><a name="line.302"></a>
+<span class="sourceLineNo">303</span>    @Override<a name="line.303"></a>
+<span class="sourceLineNo">304</span>    public Effect clone() {<a name="line.304"></a>
+<span class="sourceLineNo">305</span>        try {<a name="line.305"></a>
+<span class="sourceLineNo">306</span>            return (Effect) super.clone();<a name="line.306"></a>
+<span class="sourceLineNo">307</span>        } catch (CloneNotSupportedException e) {<a name="line.307"></a>
+<span class="sourceLineNo">308</span>            return null;<a name="line.308"></a>
+<span class="sourceLineNo">309</span>        }<a name="line.309"></a>
+<span class="sourceLineNo">310</span>    }<a name="line.310"></a>
+<span class="sourceLineNo">311</span>}<a name="line.311"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package cn.nukkit.level.generator.object.tree;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>import cn.nukkit.block.Block;<a name="line.3"></a>
+<span class="sourceLineNo">004</span>import cn.nukkit.block.BlockID;<a name="line.4"></a>
+<span class="sourceLineNo">005</span>import cn.nukkit.level.ChunkManager;<a name="line.5"></a>
+<span class="sourceLineNo">006</span>import cn.nukkit.math.BlockVector3;<a name="line.6"></a>
+<span class="sourceLineNo">007</span>import cn.nukkit.math.MathHelper;<a name="line.7"></a>
+<span class="sourceLineNo">008</span>import cn.nukkit.math.NukkitRandom;<a name="line.8"></a>
+<span class="sourceLineNo">009</span>import cn.nukkit.math.Vector3;<a name="line.9"></a>
+<span class="sourceLineNo">010</span><a name="line.10"></a>
+<span class="sourceLineNo">011</span>public class ObjectJungleBigTree extends HugeTreesGenerator {<a name="line.11"></a>
+<span class="sourceLineNo">012</span>    public ObjectJungleBigTree(int baseHeightIn, int extraRandomHeight, Block woodMetadata, Block leavesMetadata) {<a name="line.12"></a>
+<span class="sourceLineNo">013</span>        super(baseHeightIn, extraRandomHeight, woodMetadata, leavesMetadata);<a name="line.13"></a>
+<span class="sourceLineNo">014</span>    }<a name="line.14"></a>
+<span class="sourceLineNo">015</span><a name="line.15"></a>
+<span class="sourceLineNo">016</span>    public boolean generate(ChunkManager level, NukkitRandom rand, Vector3 position) {<a name="line.16"></a>
+<span class="sourceLineNo">017</span>        int height = this.getHeight(rand);<a name="line.17"></a>
+<span class="sourceLineNo">018</span><a name="line.18"></a>
+<span class="sourceLineNo">019</span>        if (!this.ensureGrowable(level, rand, position, height)) {<a name="line.19"></a>
+<span class="sourceLineNo">020</span>            return false;<a name="line.20"></a>
+<span class="sourceLineNo">021</span>        } else {<a name="line.21"></a>
+<span class="sourceLineNo">022</span>            this.createCrown(level, position.up(height), 2);<a name="line.22"></a>
+<span class="sourceLineNo">023</span><a name="line.23"></a>
+<span class="sourceLineNo">024</span>            for (int j = (int) position.getY() + height - 2 - rand.nextBoundedInt(4); j &gt; position.getY() + height / 2; j -= 2 + rand.nextBoundedInt(4)) {<a name="line.24"></a>
+<span class="sourceLineNo">025</span>                float f = rand.nextFloat() * ((float) Math.PI * 2F);<a name="line.25"></a>
+<span class="sourceLineNo">026</span>                int k = (int) (position.getX() + (0.5F + MathHelper.cos(f) * 4.0F));<a name="line.26"></a>
+<span class="sourceLineNo">027</span>                int l = (int) (position.getZ() + (0.5F + MathHelper.sin(f) * 4.0F));<a name="line.27"></a>
+<span class="sourceLineNo">028</span><a name="line.28"></a>
+<span class="sourceLineNo">029</span>                for (int i1 = 0; i1 &lt; 5; ++i1) {<a name="line.29"></a>
+<span class="sourceLineNo">030</span>                    k = (int) (position.getX() + (1.5F + MathHelper.cos(f) * (float) i1));<a name="line.30"></a>
+<span class="sourceLineNo">031</span>                    l = (int) (position.getZ() + (1.5F + MathHelper.sin(f) * (float) i1));<a name="line.31"></a>
+<span class="sourceLineNo">032</span>                    this.setBlockAndNotifyAdequately(level, new BlockVector3(k, j - 3 + i1 / 2, l), this.woodMetadata);<a name="line.32"></a>
+<span class="sourceLineNo">033</span>                }<a name="line.33"></a>
+<span class="sourceLineNo">034</span><a name="line.34"></a>
+<span class="sourceLineNo">035</span>                int j2 = 1 + rand.nextBoundedInt(2);<a name="line.35"></a>
+<span class="sourceLineNo">036</span><a name="line.36"></a>
+<span class="sourceLineNo">037</span>                for (int k1 = j - j2; k1 &lt;= j; ++k1) {<a name="line.37"></a>
+<span class="sourceLineNo">038</span>                    int l1 = k1 - j;<a name="line.38"></a>
+<span class="sourceLineNo">039</span>                    this.growLeavesLayer(level, new Vector3(k, k1, l), 1 - l1);<a name="line.39"></a>
+<span class="sourceLineNo">040</span>                }<a name="line.40"></a>
+<span class="sourceLineNo">041</span>            }<a name="line.41"></a>
+<span class="sourceLineNo">042</span><a name="line.42"></a>
+<span class="sourceLineNo">043</span>            for (int i2 = 0; i2 &lt; height; ++i2) {<a name="line.43"></a>
+<span class="sourceLineNo">044</span>                Vector3 blockpos = position.up(i2);<a name="line.44"></a>
+<span class="sourceLineNo">045</span><a name="line.45"></a>
+<span class="sourceLineNo">046</span>                if (this.canGrowInto(level.getBlockIdAt((int) blockpos.x, (int) blockpos.y, (int) blockpos.z))) {<a name="line.46"></a>
+<span class="sourceLineNo">047</span>                    this.setBlockAndNotifyAdequately(level, blockpos, this.woodMetadata);<a name="line.47"></a>
+<span class="sourceLineNo">048</span><a name="line.48"></a>
+<span class="sourceLineNo">049</span>                    if (i2 &gt; 0) {<a name="line.49"></a>
+<span class="sourceLineNo">050</span>                        this.placeVine(level, rand, blockpos.west(), 8);<a name="line.50"></a>
+<span class="sourceLineNo">051</span>                        this.placeVine(level, rand, blockpos.north(), 1);<a name="line.51"></a>
+<span class="sourceLineNo">052</span>                    }<a name="line.52"></a>
+<span class="sourceLineNo">053</span>                }<a name="line.53"></a>
+<span class="sourceLineNo">054</span><a name="line.54"></a>
+<span class="sourceLineNo">055</span>                if (i2 &lt; height - 1) {<a name="line.55"></a>
+<span class="sourceLineNo">056</span>                    Vector3 blockpos1 = blockpos.east();<a name="line.56"></a>
+<span class="sourceLineNo">057</span><a name="line.57"></a>
+<span class="sourceLineNo">058</span>                    if (this.canGrowInto(level.getBlockIdAt((int) blockpos1.x, (int) blockpos1.y, (int) blockpos1.z))) {<a name="line.58"></a>
+<span class="sourceLineNo">059</span>                        this.setBlockAndNotifyAdequately(level, blockpos1, this.woodMetadata);<a name="line.59"></a>
+<span class="sourceLineNo">060</span><a name="line.60"></a>
+<span class="sourceLineNo">061</span>                        if (i2 &gt; 0) {<a name="line.61"></a>
+<span class="sourceLineNo">062</span>                            this.placeVine(level, rand, blockpos1.east(), 2);<a name="line.62"></a>
+<span class="sourceLineNo">063</span>                            this.placeVine(level, rand, blockpos1.north(), 1);<a name="line.63"></a>
+<span class="sourceLineNo">064</span>                        }<a name="line.64"></a>
+<span class="sourceLineNo">065</span>                    }<a name="line.65"></a>
+<span class="sourceLineNo">066</span><a name="line.66"></a>
+<span class="sourceLineNo">067</span>                    Vector3 blockpos2 = blockpos.south().east();<a name="line.67"></a>
+<span class="sourceLineNo">068</span><a name="line.68"></a>
+<span class="sourceLineNo">069</span>                    if (this.canGrowInto(level.getBlockIdAt((int) blockpos2.x, (int) blockpos2.y, (int) blockpos2.z))) {<a name="line.69"></a>
+<span class="sourceLineNo">070</span>                        this.setBlockAndNotifyAdequately(level, blockpos2, this.woodMetadata);<a name="line.70"></a>
+<span class="sourceLineNo">071</span><a name="line.71"></a>
+<span class="sourceLineNo">072</span>                        if (i2 &gt; 0) {<a name="line.72"></a>
+<span class="sourceLineNo">073</span>                            this.placeVine(level, rand, blockpos2.east(), 2);<a name="line.73"></a>
+<span class="sourceLineNo">074</span>                            this.placeVine(level, rand, blockpos2.south(), 4);<a name="line.74"></a>
+<span class="sourceLineNo">075</span>                        }<a name="line.75"></a>
+<span class="sourceLineNo">076</span>                    }<a name="line.76"></a>
+<span class="sourceLineNo">077</span><a name="line.77"></a>
+<span class="sourceLineNo">078</span>                    Vector3 blockpos3 = blockpos.south();<a name="line.78"></a>
+<span class="sourceLineNo">079</span><a name="line.79"></a>
+<span class="sourceLineNo">080</span>                    if (this.canGrowInto(level.getBlockIdAt((int) blockpos3.x, (int) blockpos3.y, (int) blockpos3.z))) {<a name="line.80"></a>
+<span class="sourceLineNo">081</span>                        this.setBlockAndNotifyAdequately(level, blockpos3, this.woodMetadata);<a name="line.81"></a>
+<span class="sourceLineNo">082</span><a name="line.82"></a>
+<span class="sourceLineNo">083</span>                        if (i2 &gt; 0) {<a name="line.83"></a>
+<span class="sourceLineNo">084</span>                            this.placeVine(level, rand, blockpos3.west(), 8);<a name="line.84"></a>
+<span class="sourceLineNo">085</span>                            this.placeVine(level, rand, blockpos3.south(), 4);<a name="line.85"></a>
+<span class="sourceLineNo">086</span>                        }<a name="line.86"></a>
+<span class="sourceLineNo">087</span>                    }<a name="line.87"></a>
+<span class="sourceLineNo">088</span>                }<a name="line.88"></a>
+<span class="sourceLineNo">089</span>            }<a name="line.89"></a>
+<span class="sourceLineNo">090</span><a name="line.90"></a>
+<span class="sourceLineNo">091</span>            return true;<a name="line.91"></a>
+<span class="sourceLineNo">092</span>        }<a name="line.92"></a>
+<span class="sourceLineNo">093</span>    }<a name="line.93"></a>
+<span class="sourceLineNo">094</span><a name="line.94"></a>
+<span class="sourceLineNo">095</span>    private void placeVine(ChunkManager level, NukkitRandom random, Vector3 pos, int meta) {<a name="line.95"></a>
+<span class="sourceLineNo">096</span>        if (random.nextBoundedInt(3) &gt; 0 &amp;&amp; level.getBlockIdAt((int) pos.x, (int) pos.y, (int) pos.z) == 0) {<a name="line.96"></a>
+<span class="sourceLineNo">097</span>            this.setBlockAndNotifyAdequately(level, pos, Block.get(BlockID.VINE, meta));<a name="line.97"></a>
+<span class="sourceLineNo">098</span>        }<a name="line.98"></a>
+<span class="sourceLineNo">099</span>    }<a name="line.99"></a>
+<span class="sourceLineNo">100</span><a name="line.100"></a>
+<span class="sourceLineNo">101</span>    private void createCrown(ChunkManager level, Vector3 pos, int i1) {<a name="line.101"></a>
+<span class="sourceLineNo">102</span>        for (int j = -2; j &lt;= 0; ++j) {<a name="line.102"></a>
+<span class="sourceLineNo">103</span>            this.growLeavesLayerStrict(level, pos.up(j), i1 + 1 - j);<a name="line.103"></a>
+<span class="sourceLineNo">104</span>        }<a name="line.104"></a>
+<span class="sourceLineNo">105</span>    }<a name="line.105"></a>
+<span class="sourceLineNo">106</span>}<a name="line.106"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>

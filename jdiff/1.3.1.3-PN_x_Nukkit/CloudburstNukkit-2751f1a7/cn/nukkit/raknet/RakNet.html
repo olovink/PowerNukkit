@@ -1,0 +1,565 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="pt">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RakNet</title>
+<meta name="date" content="2021-11-26">
+<link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
+<script type="text/javascript" src="../../../script.js"></script>
+</head>
+<body>
+<script type="text/javascript"><!--
+    try {
+        if (location.href.indexOf('is-external=true') == -1) {
+            parent.document.title="RakNet";
+        }
+    }
+    catch(err) {
+    }
+//-->
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar.top">
+<!--   -->
+</a>
+<div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.top.firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev&nbsp;Class</li>
+<li>Next&nbsp;Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?cn/nukkit/raknet/RakNet.html" target="_top">Frames</a></li>
+<li><a href="RakNet.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#methods.inherited.from.class.java.lang.Object">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li>Method</li>
+</ul>
+</div>
+<a name="skip.navbar.top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">cn.nukkit.raknet</div>
+<h2 title="Class RakNet" class="title">Class RakNet</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li>java.lang.Object</li>
+<li>
+<ul class="inheritance">
+<li>cn.nukkit.raknet.RakNet</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<hr>
+<br>
+<pre>public abstract class <a href="../../../src-html/cn/nukkit/raknet/RakNet.html#line.9">RakNet</a>
+extends java.lang.Object</pre>
+<div class="block">author: MagicDroidX
+ Nukkit Project
+ UDP network library that follows the RakNet protocol for Nukkit Project
+ This is not affiliated with Jenkins Software LLC nor RakNet.</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static byte</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/raknet/RakNet.html#FLAG_NEED_ACK">FLAG_NEED_ACK</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static byte[]</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/raknet/RakNet.html#MAGIC">MAGIC</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static byte</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/raknet/RakNet.html#PACKET_ACK_NOTIFICATION">PACKET_ACK_NOTIFICATION</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static byte</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/raknet/RakNet.html#PACKET_BLOCK_ADDRESS">PACKET_BLOCK_ADDRESS</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static byte</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/raknet/RakNet.html#PACKET_CLOSE_SESSION">PACKET_CLOSE_SESSION</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static byte</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/raknet/RakNet.html#PACKET_EMERGENCY_SHUTDOWN">PACKET_EMERGENCY_SHUTDOWN</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static byte</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/raknet/RakNet.html#PACKET_ENCAPSULATED">PACKET_ENCAPSULATED</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static byte</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/raknet/RakNet.html#PACKET_INVALID_SESSION">PACKET_INVALID_SESSION</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static byte</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/raknet/RakNet.html#PACKET_OPEN_SESSION">PACKET_OPEN_SESSION</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static byte</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/raknet/RakNet.html#PACKET_RAW">PACKET_RAW</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static byte</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/raknet/RakNet.html#PACKET_SEND_QUEUE">PACKET_SEND_QUEUE</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static byte</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/raknet/RakNet.html#PACKET_SET_OPTION">PACKET_SET_OPTION</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static byte</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/raknet/RakNet.html#PACKET_SHUTDOWN">PACKET_SHUTDOWN</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static byte</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/raknet/RakNet.html#PACKET_UNBLOCK_ADDRESS">PACKET_UNBLOCK_ADDRESS</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static byte</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/raknet/RakNet.html#PRIORITY_IMMEDIATE">PRIORITY_IMMEDIATE</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static byte</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/raknet/RakNet.html#PRIORITY_NORMAL">PRIORITY_NORMAL</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static byte</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/raknet/RakNet.html#PROTOCOL">PROTOCOL</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/raknet/RakNet.html#VERSION">VERSION</a></span></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor.summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../cn/nukkit/raknet/RakNet.html#RakNet--">RakNet</a></span>()</code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method.summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.Object</h3>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="VERSION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>VERSION</h4>
+<pre>public static final&nbsp;java.lang.String <a href="../../../src-html/cn/nukkit/raknet/RakNet.html#line.11">VERSION</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#cn.nukkit.raknet.RakNet.VERSION">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="PROTOCOL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PROTOCOL</h4>
+<pre>public static final&nbsp;byte <a href="../../../src-html/cn/nukkit/raknet/RakNet.html#line.12">PROTOCOL</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#cn.nukkit.raknet.RakNet.PROTOCOL">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="MAGIC">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>MAGIC</h4>
+<pre>public static final&nbsp;byte[] <a href="../../../src-html/cn/nukkit/raknet/RakNet.html#line.13">MAGIC</a></pre>
+</li>
+</ul>
+<a name="PRIORITY_NORMAL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PRIORITY_NORMAL</h4>
+<pre>public static final&nbsp;byte <a href="../../../src-html/cn/nukkit/raknet/RakNet.html#line.20">PRIORITY_NORMAL</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#cn.nukkit.raknet.RakNet.PRIORITY_NORMAL">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="PRIORITY_IMMEDIATE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PRIORITY_IMMEDIATE</h4>
+<pre>public static final&nbsp;byte <a href="../../../src-html/cn/nukkit/raknet/RakNet.html#line.21">PRIORITY_IMMEDIATE</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#cn.nukkit.raknet.RakNet.PRIORITY_IMMEDIATE">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="FLAG_NEED_ACK">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FLAG_NEED_ACK</h4>
+<pre>public static final&nbsp;byte <a href="../../../src-html/cn/nukkit/raknet/RakNet.html#line.23">FLAG_NEED_ACK</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#cn.nukkit.raknet.RakNet.FLAG_NEED_ACK">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="PACKET_ENCAPSULATED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PACKET_ENCAPSULATED</h4>
+<pre>public static final&nbsp;byte <a href="../../../src-html/cn/nukkit/raknet/RakNet.html#line.32">PACKET_ENCAPSULATED</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#cn.nukkit.raknet.RakNet.PACKET_ENCAPSULATED">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="PACKET_OPEN_SESSION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PACKET_OPEN_SESSION</h4>
+<pre>public static final&nbsp;byte <a href="../../../src-html/cn/nukkit/raknet/RakNet.html#line.43">PACKET_OPEN_SESSION</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#cn.nukkit.raknet.RakNet.PACKET_OPEN_SESSION">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="PACKET_CLOSE_SESSION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PACKET_CLOSE_SESSION</h4>
+<pre>public static final&nbsp;byte <a href="../../../src-html/cn/nukkit/raknet/RakNet.html#line.51">PACKET_CLOSE_SESSION</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#cn.nukkit.raknet.RakNet.PACKET_CLOSE_SESSION">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="PACKET_INVALID_SESSION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PACKET_INVALID_SESSION</h4>
+<pre>public static final&nbsp;byte <a href="../../../src-html/cn/nukkit/raknet/RakNet.html#line.58">PACKET_INVALID_SESSION</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#cn.nukkit.raknet.RakNet.PACKET_INVALID_SESSION">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="PACKET_SEND_QUEUE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PACKET_SEND_QUEUE</h4>
+<pre>public static final&nbsp;byte <a href="../../../src-html/cn/nukkit/raknet/RakNet.html#line.64">PACKET_SEND_QUEUE</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#cn.nukkit.raknet.RakNet.PACKET_SEND_QUEUE">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="PACKET_ACK_NOTIFICATION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PACKET_ACK_NOTIFICATION</h4>
+<pre>public static final&nbsp;byte <a href="../../../src-html/cn/nukkit/raknet/RakNet.html#line.72">PACKET_ACK_NOTIFICATION</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#cn.nukkit.raknet.RakNet.PACKET_ACK_NOTIFICATION">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="PACKET_SET_OPTION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PACKET_SET_OPTION</h4>
+<pre>public static final&nbsp;byte <a href="../../../src-html/cn/nukkit/raknet/RakNet.html#line.80">PACKET_SET_OPTION</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#cn.nukkit.raknet.RakNet.PACKET_SET_OPTION">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="PACKET_RAW">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PACKET_RAW</h4>
+<pre>public static final&nbsp;byte <a href="../../../src-html/cn/nukkit/raknet/RakNet.html#line.89">PACKET_RAW</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#cn.nukkit.raknet.RakNet.PACKET_RAW">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="PACKET_BLOCK_ADDRESS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PACKET_BLOCK_ADDRESS</h4>
+<pre>public static final&nbsp;byte <a href="../../../src-html/cn/nukkit/raknet/RakNet.html#line.97">PACKET_BLOCK_ADDRESS</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#cn.nukkit.raknet.RakNet.PACKET_BLOCK_ADDRESS">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="PACKET_UNBLOCK_ADDRESS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PACKET_UNBLOCK_ADDRESS</h4>
+<pre>public static final&nbsp;byte <a href="../../../src-html/cn/nukkit/raknet/RakNet.html#line.104">PACKET_UNBLOCK_ADDRESS</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#cn.nukkit.raknet.RakNet.PACKET_UNBLOCK_ADDRESS">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="PACKET_SHUTDOWN">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>PACKET_SHUTDOWN</h4>
+<pre>public static final&nbsp;byte <a href="../../../src-html/cn/nukkit/raknet/RakNet.html#line.111">PACKET_SHUTDOWN</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#cn.nukkit.raknet.RakNet.PACKET_SHUTDOWN">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="PACKET_EMERGENCY_SHUTDOWN">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>PACKET_EMERGENCY_SHUTDOWN</h4>
+<pre>public static final&nbsp;byte <a href="../../../src-html/cn/nukkit/raknet/RakNet.html#line.118">PACKET_EMERGENCY_SHUTDOWN</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#cn.nukkit.raknet.RakNet.PACKET_EMERGENCY_SHUTDOWN">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor.detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="RakNet--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>RakNet</h4>
+<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/raknet/RakNet.html#line.9">RakNet</a>()</pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar.bottom">
+<!--   -->
+</a>
+<div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.bottom.firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev&nbsp;Class</li>
+<li>Next&nbsp;Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../index.html?cn/nukkit/raknet/RakNet.html" target="_top">Frames</a></li>
+<li><a href="RakNet.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#methods.inherited.from.class.java.lang.Object">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li>Method</li>
+</ul>
+</div>
+<a name="skip.navbar.bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+</body>
+</html>
