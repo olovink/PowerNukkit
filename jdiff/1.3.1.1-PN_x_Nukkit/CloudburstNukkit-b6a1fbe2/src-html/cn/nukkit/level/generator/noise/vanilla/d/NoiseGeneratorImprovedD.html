@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package cn.nukkit.level.generator.noise.vanilla.d;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>import cn.nukkit.math.NukkitRandom;<a name="line.3"></a>
+<span class="sourceLineNo">004</span><a name="line.4"></a>
+<span class="sourceLineNo">005</span>public class NoiseGeneratorImprovedD {<a name="line.5"></a>
+<span class="sourceLineNo">006</span>    private static final double[] GRAD_X = new double[]{1.0D, -1.0D, 1.0D, -1.0D, 1.0D, -1.0D, 1.0D, -1.0D, 0.0D, 0.0D, 0.0D, 0.0D, 1.0D, 0.0D, -1.0D, 0.0D};<a name="line.6"></a>
+<span class="sourceLineNo">007</span>    private static final double[] GRAD_Y = new double[]{1.0D, 1.0D, -1.0D, -1.0D, 0.0D, 0.0D, 0.0D, 0.0D, 1.0D, -1.0D, 1.0D, -1.0D, 1.0D, -1.0D, 1.0D, -1.0D};<a name="line.7"></a>
+<span class="sourceLineNo">008</span>    private static final double[] GRAD_Z = new double[]{0.0D, 0.0D, 0.0D, 0.0D, 1.0D, 1.0D, -1.0D, -1.0D, 1.0D, 1.0D, -1.0D, -1.0D, 0.0D, 1.0D, 0.0D, -1.0D};<a name="line.8"></a>
+<span class="sourceLineNo">009</span>    private static final double[] GRAD_2X = new double[]{1.0D, -1.0D, 1.0D, -1.0D, 1.0D, -1.0D, 1.0D, -1.0D, 0.0D, 0.0D, 0.0D, 0.0D, 1.0D, 0.0D, -1.0D, 0.0D};<a name="line.9"></a>
+<span class="sourceLineNo">010</span>    private static final double[] GRAD_2Z = new double[]{0.0D, 0.0D, 0.0D, 0.0D, 1.0D, 1.0D, -1.0D, -1.0D, 1.0D, 1.0D, -1.0D, -1.0D, 0.0D, 1.0D, 0.0D, -1.0D};<a name="line.10"></a>
+<span class="sourceLineNo">011</span>    private final int[] permutations;<a name="line.11"></a>
+<span class="sourceLineNo">012</span>    public double xCoord;<a name="line.12"></a>
+<span class="sourceLineNo">013</span>    public double yCoord;<a name="line.13"></a>
+<span class="sourceLineNo">014</span>    public double zCoord;<a name="line.14"></a>
+<span class="sourceLineNo">015</span><a name="line.15"></a>
+<span class="sourceLineNo">016</span>    public NoiseGeneratorImprovedD() {<a name="line.16"></a>
+<span class="sourceLineNo">017</span>        this(new NukkitRandom(System.currentTimeMillis()));<a name="line.17"></a>
+<span class="sourceLineNo">018</span>    }<a name="line.18"></a>
+<span class="sourceLineNo">019</span><a name="line.19"></a>
+<span class="sourceLineNo">020</span>    public NoiseGeneratorImprovedD(NukkitRandom random) {<a name="line.20"></a>
+<span class="sourceLineNo">021</span>        this.permutations = new int[512];<a name="line.21"></a>
+<span class="sourceLineNo">022</span>        this.xCoord = random.nextDouble() * 256.0D;<a name="line.22"></a>
+<span class="sourceLineNo">023</span>        this.yCoord = random.nextDouble() * 256.0D;<a name="line.23"></a>
+<span class="sourceLineNo">024</span>        this.zCoord = random.nextDouble() * 256.0D;<a name="line.24"></a>
+<span class="sourceLineNo">025</span><a name="line.25"></a>
+<span class="sourceLineNo">026</span>        int i = 0;<a name="line.26"></a>
+<span class="sourceLineNo">027</span>        while (i &lt; 256) {<a name="line.27"></a>
+<span class="sourceLineNo">028</span>            this.permutations[i] = i++;<a name="line.28"></a>
+<span class="sourceLineNo">029</span>        }<a name="line.29"></a>
+<span class="sourceLineNo">030</span><a name="line.30"></a>
+<span class="sourceLineNo">031</span>        for (int l = 0; l &lt; 256; ++l) {<a name="line.31"></a>
+<span class="sourceLineNo">032</span>            int j = random.nextBoundedInt(256 - l) + l;<a name="line.32"></a>
+<span class="sourceLineNo">033</span>            int k = this.permutations[l];<a name="line.33"></a>
+<span class="sourceLineNo">034</span>            this.permutations[l] = this.permutations[j];<a name="line.34"></a>
+<span class="sourceLineNo">035</span>            this.permutations[j] = k;<a name="line.35"></a>
+<span class="sourceLineNo">036</span>            this.permutations[l + 256] = this.permutations[l];<a name="line.36"></a>
+<span class="sourceLineNo">037</span>        }<a name="line.37"></a>
+<span class="sourceLineNo">038</span>    }<a name="line.38"></a>
+<span class="sourceLineNo">039</span><a name="line.39"></a>
+<span class="sourceLineNo">040</span>    public final double lerp(double p_76311_1_, double p_76311_3_, double p_76311_5_) {<a name="line.40"></a>
+<span class="sourceLineNo">041</span>        return p_76311_3_ + p_76311_1_ * (p_76311_5_ - p_76311_3_);<a name="line.41"></a>
+<span class="sourceLineNo">042</span>    }<a name="line.42"></a>
+<span class="sourceLineNo">043</span><a name="line.43"></a>
+<span class="sourceLineNo">044</span>    public final double grad2(int p_76309_1_, double p_76309_2_, double p_76309_4_) {<a name="line.44"></a>
+<span class="sourceLineNo">045</span>        int i = p_76309_1_ &amp; 15;<a name="line.45"></a>
+<span class="sourceLineNo">046</span>        return GRAD_2X[i] * p_76309_2_ + GRAD_2Z[i] * p_76309_4_;<a name="line.46"></a>
+<span class="sourceLineNo">047</span>    }<a name="line.47"></a>
+<span class="sourceLineNo">048</span><a name="line.48"></a>
+<span class="sourceLineNo">049</span>    public final double grad(int p_76310_1_, double p_76310_2_, double p_76310_4_, double p_76310_6_) {<a name="line.49"></a>
+<span class="sourceLineNo">050</span>        int i = p_76310_1_ &amp; 15;<a name="line.50"></a>
+<span class="sourceLineNo">051</span>        return GRAD_X[i] * p_76310_2_ + GRAD_Y[i] * p_76310_4_ + GRAD_Z[i] * p_76310_6_;<a name="line.51"></a>
+<span class="sourceLineNo">052</span>    }<a name="line.52"></a>
+<span class="sourceLineNo">053</span><a name="line.53"></a>
+<span class="sourceLineNo">054</span>    /*<a name="line.54"></a>
+<span class="sourceLineNo">055</span>     * noiseArray should be xSize*ySize*zSize in size<a name="line.55"></a>
+<span class="sourceLineNo">056</span>     */<a name="line.56"></a>
+<span class="sourceLineNo">057</span>    public void populateNoiseArray(double[] noiseArray, double xOffset, double yOffset, double zOffset, int xSize, int ySize, int zSize, double xScale, double yScale, double zScale, double noiseScale) {<a name="line.57"></a>
+<span class="sourceLineNo">058</span>        if (ySize == 1) {<a name="line.58"></a>
+<span class="sourceLineNo">059</span>            int i5 = 0;<a name="line.59"></a>
+<span class="sourceLineNo">060</span>            int j5 = 0;<a name="line.60"></a>
+<span class="sourceLineNo">061</span>            int j = 0;<a name="line.61"></a>
+<span class="sourceLineNo">062</span>            int k5 = 0;<a name="line.62"></a>
+<span class="sourceLineNo">063</span>            double d14 = 0.0D;<a name="line.63"></a>
+<span class="sourceLineNo">064</span>            double d15 = 0.0D;<a name="line.64"></a>
+<span class="sourceLineNo">065</span>            int l5 = 0;<a name="line.65"></a>
+<span class="sourceLineNo">066</span>            double d16 = 1.0D / noiseScale;<a name="line.66"></a>
+<span class="sourceLineNo">067</span><a name="line.67"></a>
+<span class="sourceLineNo">068</span>            for (int j2 = 0; j2 &lt; xSize; ++j2) {<a name="line.68"></a>
+<span class="sourceLineNo">069</span>                double d17 = xOffset + (double) j2 * xScale + this.xCoord;<a name="line.69"></a>
+<span class="sourceLineNo">070</span>                int i6 = (int) d17;<a name="line.70"></a>
+<span class="sourceLineNo">071</span><a name="line.71"></a>
+<span class="sourceLineNo">072</span>                if (d17 &lt; (double) i6) {<a name="line.72"></a>
+<span class="sourceLineNo">073</span>                    --i6;<a name="line.73"></a>
+<span class="sourceLineNo">074</span>                }<a name="line.74"></a>
+<span class="sourceLineNo">075</span><a name="line.75"></a>
+<span class="sourceLineNo">076</span>                int k2 = i6 &amp; 255;<a name="line.76"></a>
+<span class="sourceLineNo">077</span>                d17 = d17 - (double) i6;<a name="line.77"></a>
+<span class="sourceLineNo">078</span>                double d18 = d17 * d17 * d17 * (d17 * (d17 * 6.0D - 15.0D) + 10.0D);<a name="line.78"></a>
+<span class="sourceLineNo">079</span><a name="line.79"></a>
+<span class="sourceLineNo">080</span>                for (int j6 = 0; j6 &lt; zSize; ++j6) {<a name="line.80"></a>
+<span class="sourceLineNo">081</span>                    double d19 = zOffset + (double) j6 * zScale + this.zCoord;<a name="line.81"></a>
+<span class="sourceLineNo">082</span>                    int k6 = (int) d19;<a name="line.82"></a>
+<span class="sourceLineNo">083</span><a name="line.83"></a>
+<span class="sourceLineNo">084</span>                    if (d19 &lt; (double) k6) {<a name="line.84"></a>
+<span class="sourceLineNo">085</span>                        --k6;<a name="line.85"></a>
+<span class="sourceLineNo">086</span>                    }<a name="line.86"></a>
+<span class="sourceLineNo">087</span><a name="line.87"></a>
+<span class="sourceLineNo">088</span>                    int l6 = k6 &amp; 255;<a name="line.88"></a>
+<span class="sourceLineNo">089</span>                    d19 = d19 - (double) k6;<a name="line.89"></a>
+<span class="sourceLineNo">090</span>                    double d20 = d19 * d19 * d19 * (d19 * (d19 * 6.0D - 15.0D) + 10.0D);<a name="line.90"></a>
+<span class="sourceLineNo">091</span>                    i5 = this.permutations[k2];<a name="line.91"></a>
+<span class="sourceLineNo">092</span>                    j5 = this.permutations[i5] + l6;<a name="line.92"></a>
+<span class="sourceLineNo">093</span>                    j = this.permutations[k2 + 1];<a name="line.93"></a>
+<span class="sourceLineNo">094</span>                    k5 = this.permutations[j] + l6;<a name="line.94"></a>
+<span class="sourceLineNo">095</span>                    d14 = this.lerp(d18, this.grad2(this.permutations[j5], d17, d19), this.grad(this.permutations[k5], d17 - 1.0D, 0.0D, d19));<a name="line.95"></a>
+<span class="sourceLineNo">096</span>                    d15 = this.lerp(d18, this.grad(this.permutations[j5 + 1], d17, 0.0D, d19 - 1.0D), this.grad(this.permutations[k5 + 1], d17 - 1.0D, 0.0D, d19 - 1.0D));<a name="line.96"></a>
+<span class="sourceLineNo">097</span>                    double d21 = this.lerp(d20, d14, d15);<a name="line.97"></a>
+<span class="sourceLineNo">098</span>                    int i7 = l5++;<a name="line.98"></a>
+<span class="sourceLineNo">099</span>                    noiseArray[i7] += d21 * d16;<a name="line.99"></a>
+<span class="sourceLineNo">100</span>                }<a name="line.100"></a>
+<span class="sourceLineNo">101</span>            }<a name="line.101"></a>
+<span class="sourceLineNo">102</span>        } else {<a name="line.102"></a>
+<span class="sourceLineNo">103</span>            int i = 0;<a name="line.103"></a>
+<span class="sourceLineNo">104</span>            double d0 = 1.0D / noiseScale;<a name="line.104"></a>
+<span class="sourceLineNo">105</span>            int k = -1;<a name="line.105"></a>
+<span class="sourceLineNo">106</span>            int l = 0;<a name="line.106"></a>
+<span class="sourceLineNo">107</span>            int i1 = 0;<a name="line.107"></a>
+<span class="sourceLineNo">108</span>            int j1 = 0;<a name="line.108"></a>
+<span class="sourceLineNo">109</span>            int k1 = 0;<a name="line.109"></a>
+<span class="sourceLineNo">110</span>            int l1 = 0;<a name="line.110"></a>
+<span class="sourceLineNo">111</span>            int i2 = 0;<a name="line.111"></a>
+<span class="sourceLineNo">112</span>            double d1 = 0.0D;<a name="line.112"></a>
+<span class="sourceLineNo">113</span>            double d2 = 0.0D;<a name="line.113"></a>
+<span class="sourceLineNo">114</span>            double d3 = 0.0D;<a name="line.114"></a>
+<span class="sourceLineNo">115</span>            double d4 = 0.0D;<a name="line.115"></a>
+<span class="sourceLineNo">116</span><a name="line.116"></a>
+<span class="sourceLineNo">117</span>            for (int l2 = 0; l2 &lt; xSize; ++l2) {<a name="line.117"></a>
+<span class="sourceLineNo">118</span>                double d5 = xOffset + (double) l2 * xScale + this.xCoord;<a name="line.118"></a>
+<span class="sourceLineNo">119</span>                int i3 = (int) d5;<a name="line.119"></a>
+<span class="sourceLineNo">120</span><a name="line.120"></a>
+<span class="sourceLineNo">121</span>                if (d5 &lt; (double) i3) {<a name="line.121"></a>
+<span class="sourceLineNo">122</span>                    --i3;<a name="line.122"></a>
+<span class="sourceLineNo">123</span>                }<a name="line.123"></a>
+<span class="sourceLineNo">124</span><a name="line.124"></a>
+<span class="sourceLineNo">125</span>                int j3 = i3 &amp; 255;<a name="line.125"></a>
+<span class="sourceLineNo">126</span>                d5 = d5 - (double) i3;<a name="line.126"></a>
+<span class="sourceLineNo">127</span>                double d6 = d5 * d5 * d5 * (d5 * (d5 * 6.0D - 15.0D) + 10.0D);<a name="line.127"></a>
+<span class="sourceLineNo">128</span><a name="line.128"></a>
+<span class="sourceLineNo">129</span>                for (int k3 = 0; k3 &lt; zSize; ++k3) {<a name="line.129"></a>
+<span class="sourceLineNo">130</span>                    double d7 = zOffset + (double) k3 * zScale + this.zCoord;<a name="line.130"></a>
+<span class="sourceLineNo">131</span>                    int l3 = (int) d7;<a name="line.131"></a>
+<span class="sourceLineNo">132</span><a name="line.132"></a>
+<span class="sourceLineNo">133</span>                    if (d7 &lt; (double) l3) {<a name="line.133"></a>
+<span class="sourceLineNo">134</span>                        --l3;<a name="line.134"></a>
+<span class="sourceLineNo">135</span>                    }<a name="line.135"></a>
+<span class="sourceLineNo">136</span><a name="line.136"></a>
+<span class="sourceLineNo">137</span>                    int i4 = l3 &amp; 255;<a name="line.137"></a>
+<span class="sourceLineNo">138</span>                    d7 = d7 - (double) l3;<a name="line.138"></a>
+<span class="sourceLineNo">139</span>                    double d8 = d7 * d7 * d7 * (d7 * (d7 * 6.0D - 15.0D) + 10.0D);<a name="line.139"></a>
+<span class="sourceLineNo">140</span><a name="line.140"></a>
+<span class="sourceLineNo">141</span>                    for (int j4 = 0; j4 &lt; ySize; ++j4) {<a name="line.141"></a>
+<span class="sourceLineNo">142</span>                        double d9 = yOffset + (double) j4 * yScale + this.yCoord;<a name="line.142"></a>
+<span class="sourceLineNo">143</span>                        int k4 = (int) d9;<a name="line.143"></a>
+<span class="sourceLineNo">144</span><a name="line.144"></a>
+<span class="sourceLineNo">145</span>                        if (d9 &lt; (double) k4) {<a name="line.145"></a>
+<span class="sourceLineNo">146</span>                            --k4;<a name="line.146"></a>
+<span class="sourceLineNo">147</span>                        }<a name="line.147"></a>
+<span class="sourceLineNo">148</span><a name="line.148"></a>
+<span class="sourceLineNo">149</span>                        int l4 = k4 &amp; 255;<a name="line.149"></a>
+<span class="sourceLineNo">150</span>                        d9 = d9 - (double) k4;<a name="line.150"></a>
+<span class="sourceLineNo">151</span>                        double d10 = d9 * d9 * d9 * (d9 * (d9 * 6.0D - 15.0D) + 10.0D);<a name="line.151"></a>
+<span class="sourceLineNo">152</span><a name="line.152"></a>
+<span class="sourceLineNo">153</span>                        if (j4 == 0 || l4 != k) {<a name="line.153"></a>
+<span class="sourceLineNo">154</span>                            k = l4;<a name="line.154"></a>
+<span class="sourceLineNo">155</span>                            l = this.permutations[j3] + l4;<a name="line.155"></a>
+<span class="sourceLineNo">156</span>                            i1 = this.permutations[l] + i4;<a name="line.156"></a>
+<span class="sourceLineNo">157</span>                            j1 = this.permutations[l + 1] + i4;<a name="line.157"></a>
+<span class="sourceLineNo">158</span>                            k1 = this.permutations[j3 + 1] + l4;<a name="line.158"></a>
+<span class="sourceLineNo">159</span>                            l1 = this.permutations[k1] + i4;<a name="line.159"></a>
+<span class="sourceLineNo">160</span>                            i2 = this.permutations[k1 + 1] + i4;<a name="line.160"></a>
+<span class="sourceLineNo">161</span>                            d1 = this.lerp(d6, this.grad(this.permutations[i1], d5, d9, d7), this.grad(this.permutations[l1], d5 - 1.0D, d9, d7));<a name="line.161"></a>
+<span class="sourceLineNo">162</span>                            d2 = this.lerp(d6, this.grad(this.permutations[j1], d5, d9 - 1.0D, d7), this.grad(this.permutations[i2], d5 - 1.0D, d9 - 1.0D, d7));<a name="line.162"></a>
+<span class="sourceLineNo">163</span>                            d3 = this.lerp(d6, this.grad(this.permutations[i1 + 1], d5, d9, d7 - 1.0D), this.grad(this.permutations[l1 + 1], d5 - 1.0D, d9, d7 - 1.0D));<a name="line.163"></a>
+<span class="sourceLineNo">164</span>                            d4 = this.lerp(d6, this.grad(this.permutations[j1 + 1], d5, d9 - 1.0D, d7 - 1.0D), this.grad(this.permutations[i2 + 1], d5 - 1.0D, d9 - 1.0D, d7 - 1.0D));<a name="line.164"></a>
+<span class="sourceLineNo">165</span>                        }<a name="line.165"></a>
+<span class="sourceLineNo">166</span><a name="line.166"></a>
+<span class="sourceLineNo">167</span>                        double d11 = this.lerp(d10, d1, d2);<a name="line.167"></a>
+<span class="sourceLineNo">168</span>                        double d12 = this.lerp(d10, d3, d4);<a name="line.168"></a>
+<span class="sourceLineNo">169</span>                        double d13 = this.lerp(d8, d11, d12);<a name="line.169"></a>
+<span class="sourceLineNo">170</span>                        int j7 = i++;<a name="line.170"></a>
+<span class="sourceLineNo">171</span>                        noiseArray[j7] += d13 * d0;<a name="line.171"></a>
+<span class="sourceLineNo">172</span>                    }<a name="line.172"></a>
+<span class="sourceLineNo">173</span>                }<a name="line.173"></a>
+<span class="sourceLineNo">174</span>            }<a name="line.174"></a>
+<span class="sourceLineNo">175</span>        }<a name="line.175"></a>
+<span class="sourceLineNo">176</span>    }<a name="line.176"></a>
+<span class="sourceLineNo">177</span>}<a name="line.177"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>

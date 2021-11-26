@@ -1,0 +1,19 @@
+NO DOC BLOCK: cn.nukkit.inventory.transaction.action.EnchantingAction Class
+NO DOC BLOCK: cn.nukkit.event.inventory.EnchantItemEvent Class
+NO DOC BLOCK: cn.nukkit.inventory.transaction.EnchantTransaction Class
+MISSING @SINCE TAG: cn.nukkit.entity.mob.EntityHoglin Class
+MISSING @SINCE TAG: cn.nukkit.entity.mob.EntityPiglin Class
+MISSING @SINCE TAG: cn.nukkit.entity.passive.EntityStrider Class
+MISSING @SINCE TAG: cn.nukkit.entity.mob.EntityZoglin Class
+NO DOC BLOCK: cn.nukkit.level.format.generic.EmptyChunkSection Method getContentVersion()
+NO DOC BLOCK: cn.nukkit.inventory.EnchantInventory Method getInputSlot()
+NO DOC BLOCK: cn.nukkit.network.protocol.PlayerEnchantOptionsPacket.EnchantOptionData Method getMinLevel()
+NO DOC BLOCK: cn.nukkit.inventory.EnchantInventory Method getOutputSlot()
+NO DOC BLOCK: cn.nukkit.inventory.EnchantInventory Method getReagentSlot()
+NO DOC BLOCK: cn.nukkit.level.format.ChunkSection Method setContentVersion(int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Method setContentVersion(int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.EmptyChunkSection Method setContentVersion(int)
+NO DOC BLOCK: cn.nukkit.inventory.EnchantInventory Field ENCHANT_INPUT_ITEM_UI_SLOT
+NO DOC BLOCK: cn.nukkit.inventory.EnchantInventory Field ENCHANT_REAGENT_UI_SLOT
+NO DOC BLOCK: cn.nukkit.Player Field enchantTransaction
+NO DOC BLOCK: cn.nukkit.network.protocol.InventoryTransactionPacket Field isEnchantingPart

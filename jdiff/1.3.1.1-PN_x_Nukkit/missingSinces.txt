@@ -1,0 +1,948 @@
+NO DOC BLOCK: cn.nukkit.event.block.AnvilDamageEvent Class
+NO DOC BLOCK: cn.nukkit.event.block.AnvilDamageEvent.Cause Class
+NO DOC BLOCK: cn.nukkit.inventory.BarrelInventory Class
+NO DOC BLOCK: cn.nukkit.event.block.BellRingEvent Class
+NO DOC BLOCK: cn.nukkit.event.block.BellRingEvent.RingCause Class
+NO DOC BLOCK: cn.nukkit.inventory.BlastFurnaceRecipe Class
+NO DOC BLOCK: cn.nukkit.block.BlockAcaciaSignPost Class
+NO DOC BLOCK: cn.nukkit.block.BlockAcaciaWallSign Class
+NO DOC BLOCK: cn.nukkit.block.BlockBamboo Class
+NO DOC BLOCK: cn.nukkit.block.BlockBambooSapling Class
+NO DOC BLOCK: cn.nukkit.block.BlockBarrel Class
+MISSING @SINCE TAG: cn.nukkit.block.BlockBarrier Class
+NO DOC BLOCK: cn.nukkit.block.BlockBeehive Class
+NO DOC BLOCK: cn.nukkit.block.BlockBeeNest Class
+NO DOC BLOCK: cn.nukkit.block.BlockBell Class
+NO DOC BLOCK: cn.nukkit.block.BlockBirchSignPost Class
+NO DOC BLOCK: cn.nukkit.block.BlockBirchWallSign Class
+NO DOC BLOCK: cn.nukkit.block.BlockBlastFurnace Class
+NO DOC BLOCK: cn.nukkit.block.BlockBlastFurnaceBurning Class
+NO DOC BLOCK: cn.nukkit.block.BlockBlueIce Class
+NO DOC BLOCK: cn.nukkit.block.BlockBubbleColumn Class
+NO DOC BLOCK: cn.nukkit.block.BlockButtonAcacia Class
+NO DOC BLOCK: cn.nukkit.block.BlockButtonBirch Class
+NO DOC BLOCK: cn.nukkit.block.BlockButtonDarkOak Class
+NO DOC BLOCK: cn.nukkit.block.BlockButtonJungle Class
+NO DOC BLOCK: cn.nukkit.block.BlockButtonSpruce Class
+NO DOC BLOCK: cn.nukkit.block.BlockCampfire Class
+NO DOC BLOCK: cn.nukkit.block.BlockCartographyTable Class
+NO DOC BLOCK: cn.nukkit.block.BlockCarvedPumpkin Class
+NO DOC BLOCK: cn.nukkit.block.BlockCauldronLava Class
+NO DOC BLOCK: cn.nukkit.block.BlockComposter Class
+NO DOC BLOCK: cn.nukkit.block.BlockConduit Class
+NO DOC BLOCK: cn.nukkit.block.BlockConnectable Interface
+NO DOC BLOCK: cn.nukkit.block.BlockCoral Class
+NO DOC BLOCK: cn.nukkit.block.BlockCoralBlock Class
+NO DOC BLOCK: cn.nukkit.block.BlockCoralFan Class
+NO DOC BLOCK: cn.nukkit.block.BlockCoralFanDead Class
+NO DOC BLOCK: cn.nukkit.block.BlockCoralFanHang Class
+NO DOC BLOCK: cn.nukkit.block.BlockCoralFanHang2 Class
+NO DOC BLOCK: cn.nukkit.block.BlockCoralFanHang3 Class
+NO DOC BLOCK: cn.nukkit.block.BlockDarkOakSignPost Class
+NO DOC BLOCK: cn.nukkit.block.BlockDarkOakWallSign Class
+NO DOC BLOCK: cn.nukkit.block.BlockDoubleSlabStone3 Class
+NO DOC BLOCK: cn.nukkit.block.BlockDoubleSlabStone4 Class
+NO DOC BLOCK: cn.nukkit.block.BlockDriedKelpBlock Class
+NO DOC BLOCK: cn.nukkit.block.BlockDropper Class
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityBarrel Class
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityBeehive Class
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityBeehive.Occupant Class
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityBell Class
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityBlastFurnace Class
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityCampfire Class
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityConduit Class
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityDaylightDetector Class
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityDispenser Class
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityDropper Class
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityLectern Class
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntitySmoker Class
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntitySpawnableContainer Class
+NO DOC BLOCK: cn.nukkit.block.BlockFletchingTable Class
+NO DOC BLOCK: cn.nukkit.block.BlockGrindstone Class
+NO DOC BLOCK: cn.nukkit.event.block.BlockHarvestEvent Class
+NO DOC BLOCK: cn.nukkit.block.BlockHoney Class
+NO DOC BLOCK: cn.nukkit.block.BlockHoneycombBlock Class
+NO DOC BLOCK: cn.nukkit.block.BlockHyperMeta Interface
+NO DOC BLOCK: cn.nukkit.block.BlockIceFrosted Class
+NO DOC BLOCK: cn.nukkit.block.BlockJigsaw Class
+NO DOC BLOCK: cn.nukkit.block.BlockJungleSignPost Class
+NO DOC BLOCK: cn.nukkit.block.BlockJungleWallSign Class
+NO DOC BLOCK: cn.nukkit.block.BlockKelp Class
+NO DOC BLOCK: cn.nukkit.block.BlockLantern Class
+NO DOC BLOCK: cn.nukkit.block.BlockLectern Class
+NO DOC BLOCK: cn.nukkit.block.BlockLight Class
+NO DOC BLOCK: cn.nukkit.block.BlockLoom Class
+NO DOC BLOCK: cn.nukkit.block.BlockMoving Class
+NO DOC BLOCK: cn.nukkit.event.block.BlockPistonEvent Class
+NO DOC BLOCK: cn.nukkit.block.BlockPistonHeadSticky Class
+NO DOC BLOCK: cn.nukkit.block.BlockPressurePlateAcacia Class
+NO DOC BLOCK: cn.nukkit.block.BlockPressurePlateBirch Class
+NO DOC BLOCK: cn.nukkit.block.BlockPressurePlateDarkOak Class
+NO DOC BLOCK: cn.nukkit.block.BlockPressurePlateJungle Class
+NO DOC BLOCK: cn.nukkit.block.BlockPressurePlateSpruce Class
+NO DOC BLOCK: cn.nukkit.block.BlockScaffolding Class
+NO DOC BLOCK: cn.nukkit.block.BlockSeagrass Class
+NO DOC BLOCK: cn.nukkit.block.BlockSeaPickle Class
+NO DOC BLOCK: cn.nukkit.block.BlockSlabStone3 Class
+NO DOC BLOCK: cn.nukkit.block.BlockSlabStone4 Class
+NO DOC BLOCK: cn.nukkit.block.BlockSmithingTable Class
+NO DOC BLOCK: cn.nukkit.block.BlockSmoker Class
+NO DOC BLOCK: cn.nukkit.block.BlockSmokerBurning Class
+NO DOC BLOCK: cn.nukkit.block.BlockSmoothStone Class
+NO DOC BLOCK: cn.nukkit.block.BlockSpruceSignPost Class
+NO DOC BLOCK: cn.nukkit.block.BlockSpruceWallSign Class
+NO DOC BLOCK: cn.nukkit.block.BlockStairsAndesite Class
+NO DOC BLOCK: cn.nukkit.block.BlockStairsAndesitePolished Class
+NO DOC BLOCK: cn.nukkit.block.BlockStairsDarkPrismarine Class
+NO DOC BLOCK: cn.nukkit.block.BlockStairsDiorite Class
+NO DOC BLOCK: cn.nukkit.block.BlockStairsDioritePolished Class
+NO DOC BLOCK: cn.nukkit.block.BlockStairsEndBrick Class
+NO DOC BLOCK: cn.nukkit.block.BlockStairsGranite Class
+NO DOC BLOCK: cn.nukkit.block.BlockStairsGranitePolished Class
+NO DOC BLOCK: cn.nukkit.block.BlockStairsMossyCobblestone Class
+NO DOC BLOCK: cn.nukkit.block.BlockStairsMossyStoneBrick Class
+NO DOC BLOCK: cn.nukkit.block.BlockStairsPrismarine Class
+NO DOC BLOCK: cn.nukkit.block.BlockStairsPrismarineBrick Class
+NO DOC BLOCK: cn.nukkit.block.BlockStairsRedNetherBrick Class
+NO DOC BLOCK: cn.nukkit.block.BlockStairsSmoothQuartz Class
+NO DOC BLOCK: cn.nukkit.block.BlockStairsSmoothRedSandstone Class
+NO DOC BLOCK: cn.nukkit.block.BlockStairsSmoothSandstone Class
+NO DOC BLOCK: cn.nukkit.block.BlockStairsStone Class
+NO DOC BLOCK: cn.nukkit.block.BlockStonecutterBlock Class
+NO DOC BLOCK: cn.nukkit.block.BlockSweetBerryBush Class
+NO DOC BLOCK: cn.nukkit.block.BlockTransparentHyperMeta Class
+NO DOC BLOCK: cn.nukkit.block.BlockTrapdoorAcacia Class
+NO DOC BLOCK: cn.nukkit.block.BlockTrapdoorBirch Class
+NO DOC BLOCK: cn.nukkit.block.BlockTrapdoorDarkOak Class
+NO DOC BLOCK: cn.nukkit.block.BlockTrapdoorJungle Class
+NO DOC BLOCK: cn.nukkit.block.BlockTrapdoorSpruce Class
+NO DOC BLOCK: cn.nukkit.block.BlockTurtleEgg Class
+NO DOC BLOCK: cn.nukkit.block.BlockWall.WallConnectionType Class
+NO DOC BLOCK: cn.nukkit.block.BlockWall.WallType Class
+NO DOC BLOCK: cn.nukkit.block.BlockWitherRose Class
+NO DOC BLOCK: cn.nukkit.block.BlockWoodBark Class
+NO DOC BLOCK: cn.nukkit.block.BlockWoodStripped Class
+NO DOC BLOCK: cn.nukkit.block.BlockWoodStrippedAcacia Class
+NO DOC BLOCK: cn.nukkit.block.BlockWoodStrippedBirch Class
+NO DOC BLOCK: cn.nukkit.block.BlockWoodStrippedDarkOak Class
+NO DOC BLOCK: cn.nukkit.block.BlockWoodStrippedJungle Class
+NO DOC BLOCK: cn.nukkit.block.BlockWoodStrippedOak Class
+NO DOC BLOCK: cn.nukkit.block.BlockWoodStrippedSpruce Class
+NO DOC BLOCK: cn.nukkit.dispenser.BoatDispenseBehavior Class
+NO DOC BLOCK: cn.nukkit.inventory.CampfireInventory Class
+NO DOC BLOCK: cn.nukkit.inventory.CampfireRecipe Class
+MISSING @SINCE TAG: cn.nukkit.event.inventory.CampfireSmeltEvent Class
+OK: cn.nukkit.command.CapturingCommandSender Class
+NO DOC BLOCK: cn.nukkit.inventory.CartographyRecipe Class
+NO DOC BLOCK: cn.nukkit.level.particle.CloudParticle Class
+NO DOC BLOCK: cn.nukkit.event.block.ComposterEmptyEvent Class
+NO DOC BLOCK: cn.nukkit.event.block.ComposterFillEvent Class
+NO DOC BLOCK: cn.nukkit.event.block.ConduitActivateEvent Class
+NO DOC BLOCK: cn.nukkit.event.block.ConduitDeactivateEvent Class
+NO DOC BLOCK: cn.nukkit.inventory.transaction.action.DamageAnvilAction Class
+MISSING @SINCE TAG: cn.nukkit.api.DeprecationDetails Class
+NO DOC BLOCK: cn.nukkit.inventory.DispenserInventory Class
+NO DOC BLOCK: cn.nukkit.inventory.DropperInventory Class
+NO DOC BLOCK: cn.nukkit.dispenser.DyeDispenseBehavior Class
+NO DOC BLOCK: cn.nukkit.entity.item.EntityAreaEffectCloud Class
+NO DOC BLOCK: cn.nukkit.entity.passive.EntityBee Class
+NO DOC BLOCK: cn.nukkit.event.entity.EntityMoveByPistonEvent Class
+MISSING @SINCE TAG: cn.nukkit.entity.EntityNameable Interface
+NO DOC BLOCK: cn.nukkit.entity.item.EntityPotionLingering Class
+NO DOC BLOCK: cn.nukkit.dispenser.FireChargeDispenseBehavior Class
+NO DOC BLOCK: cn.nukkit.dispenser.FireworksDispenseBehavior Class
+NO DOC BLOCK: cn.nukkit.dispenser.FlintAndSteelDispenseBehavior Class
+NO DOC BLOCK: cn.nukkit.item.food.FoodEffectiveInBow Class
+NO DOC BLOCK: cn.nukkit.item.food.FoodHoney Class
+NO DOC BLOCK: cn.nukkit.inventory.GrindstoneInventory Class
+NO DOC BLOCK: cn.nukkit.utils.InvalidBlockDamageException Class
+NO DOC BLOCK: cn.nukkit.inventory.InventoryListener Interface
+NO DOC BLOCK: cn.nukkit.item.ItemAcaciaSign Class
+NO DOC BLOCK: cn.nukkit.item.ItemBannerPattern Class
+NO DOC BLOCK: cn.nukkit.item.ItemBirchSign Class
+NO DOC BLOCK: cn.nukkit.item.ItemCampfire Class
+NO DOC BLOCK: cn.nukkit.item.ItemDarkOakSign Class
+NO DOC BLOCK: cn.nukkit.item.ItemEmptyMap Class
+NO DOC BLOCK: cn.nukkit.item.ItemHoneyBottle Class
+NO DOC BLOCK: cn.nukkit.item.ItemHoneycomb Class
+NO DOC BLOCK: cn.nukkit.item.ItemJungleSign Class
+NO DOC BLOCK: cn.nukkit.item.ItemKelp Class
+NO DOC BLOCK: cn.nukkit.item.ItemNameTag Class
+NO DOC BLOCK: cn.nukkit.item.ItemShulkerShell Class
+NO DOC BLOCK: cn.nukkit.item.ItemSpruceSign Class
+NO DOC BLOCK: cn.nukkit.item.ItemSuspiciousStew Class
+NO DOC BLOCK: cn.nukkit.event.block.LecternDropBookEvent Class
+NO DOC BLOCK: cn.nukkit.event.block.LecternPageChangeEvent Class
+NO DOC BLOCK: cn.nukkit.event.block.LecternPlaceBookEvent Class
+MISSING @SINCE TAG: cn.nukkit.api.PowerNukkitDifference Class
+MISSING @SINCE TAG: cn.nukkit.api.PowerNukkitOnly Class
+NO DOC BLOCK: cn.nukkit.plugin.PowerNukkitPlugin Class
+NO DOC BLOCK: cn.nukkit.dispenser.PumpkinDispenseBehavior Class
+NO DOC BLOCK: cn.nukkit.inventory.RepairRecipe Class
+MISSING @SINCE TAG: cn.nukkit.event.server.ServerStopEvent Class
+NO DOC BLOCK: cn.nukkit.command.defaults.SetBlockCommand Class
+NO DOC BLOCK: cn.nukkit.dispenser.ShulkerBoxDispenseBehavior Class
+MISSING @SINCE TAG: cn.nukkit.api.Since Class
+NO DOC BLOCK: cn.nukkit.inventory.SmeltingRecipe Interface
+NO DOC BLOCK: cn.nukkit.inventory.SmokerRecipe Class
+NO DOC BLOCK: cn.nukkit.dispenser.SpawnEggDispenseBehavior Class
+NO DOC BLOCK: cn.nukkit.inventory.StonecutterInventory Class
+NO DOC BLOCK: cn.nukkit.inventory.StonecutterRecipe Class
+NO DOC BLOCK: cn.nukkit.inventory.transaction.action.TakeLevelAction Class
+NO DOC BLOCK: cn.nukkit.dispenser.TNTDispenseBehavior Class
+NO DOC BLOCK: cn.nukkit.event.block.TurtleEggHatchEvent Class
+OK: cn.nukkit.event.vehicle.VehicleDamageByEntityEvent Class
+OK: cn.nukkit.event.vehicle.VehicleDestroyByEntityEvent Class
+NO DOC BLOCK: cn.nukkit.event.block.WaterFrostEvent Class
+NO DOC BLOCK: cn.nukkit.nbt.tag.CompoundTag Constructor (java.lang.String, java.util.Map<java.lang.String, cn.nukkit.nbt.tag.Tag>)
+NO DOC BLOCK: cn.nukkit.nbt.tag.CompoundTag Constructor (java.util.Map<java.lang.String, cn.nukkit.nbt.tag.Tag>)
+NO DOC BLOCK: cn.nukkit.network.CompressBatchedPacket Constructor (byte[], java.util.List<java.net.InetSocketAddress>)
+NO DOC BLOCK: cn.nukkit.network.CompressBatchedPacket Constructor (byte[], java.util.List<java.net.InetSocketAddress>, int)
+NO DOC BLOCK: cn.nukkit.network.CompressBatchedPacket Constructor (byte[], java.util.List<java.net.InetSocketAddress>, int, int)
+NO DOC BLOCK: cn.nukkit.network.CompressBatchedTask Constructor (byte[][], java.util.List<java.net.InetSocketAddress>)
+NO DOC BLOCK: cn.nukkit.network.CompressBatchedTask Constructor (byte[][], java.util.List<java.net.InetSocketAddress>, int)
+NO DOC BLOCK: cn.nukkit.network.CompressBatchedTask Constructor (byte[][], java.util.List<java.net.InetSocketAddress>, int, int)
+NO DOC BLOCK: cn.nukkit.event.entity.CreatureSpawnEvent Constructor (int, cn.nukkit.level.Position, cn.nukkit.event.entity.CreatureSpawnEvent.SpawnReason)
+NO DOC BLOCK: cn.nukkit.network.protocol.types.EntityLink Constructor (long, long, byte, boolean)
+NO DOC BLOCK: cn.nukkit.inventory.FurnaceInventory Constructor (cn.nukkit.blockentity.BlockEntityFurnace, cn.nukkit.inventory.InventoryType)
+NO DOC BLOCK: cn.nukkit.item.ItemSign Constructor (int, java.lang.Integer, int, java.lang.String, cn.nukkit.block.BlockSignPost)
+NO DOC BLOCK: cn.nukkit.item.ItemTotem Constructor (void)
+NO DOC BLOCK: cn.nukkit.Player Constructor (cn.nukkit.network.SourceInterface, java.lang.Long, java.net.InetSocketAddress)
+NO DOC BLOCK: cn.nukkit.level.generator.populator.impl.PopulatorOre Constructor (int, cn.nukkit.level.generator.object.ore.OreType[])
+NO DOC BLOCK: cn.nukkit.network.protocol.CraftingDataPacket Method addBlastFurnaceRecipe(cn.nukkit.inventory.BlastFurnaceRecipe[])
+NO DOC BLOCK: cn.nukkit.network.protocol.CraftingDataPacket Method addCampfireRecipeRecipe(cn.nukkit.inventory.CampfireRecipe[])
+NO DOC BLOCK: cn.nukkit.network.protocol.CraftingDataPacket Method addCartographyRecipe(cn.nukkit.inventory.CartographyRecipe[])
+NO DOC BLOCK: cn.nukkit.Player Method addExperience(int, boolean)
+NO DOC BLOCK: cn.nukkit.entity.item.EntityExpBottle Method addHitEffect()
+NO DOC BLOCK: cn.nukkit.entity.projectile.EntityArrow Method addHitEffect()
+NO DOC BLOCK: cn.nukkit.entity.projectile.EntityEgg Method addHitEffect()
+NO DOC BLOCK: cn.nukkit.entity.projectile.EntityProjectile Method addHitEffect()
+NO DOC BLOCK: cn.nukkit.entity.projectile.EntitySnowball Method addHitEffect()
+NO DOC BLOCK: cn.nukkit.level.Level Method addLevelEvent(int, int)
+NO DOC BLOCK: cn.nukkit.level.Level Method addLevelEvent(int, int, cn.nukkit.math.Vector3)
+NO DOC BLOCK: cn.nukkit.level.Level Method addLevelEvent(int, int, float, float, float)
+NO DOC BLOCK: cn.nukkit.inventory.BaseInventory Method addListener(cn.nukkit.inventory.InventoryListener)
+NO DOC BLOCK: cn.nukkit.inventory.Inventory Method addListener(cn.nukkit.inventory.InventoryListener)
+NO DOC BLOCK: cn.nukkit.network.protocol.CraftingDataPacket Method addSmokerRecipe(cn.nukkit.inventory.SmokerRecipe[])
+NO DOC BLOCK: cn.nukkit.network.protocol.CraftingDataPacket Method addStonecutterRecipe(cn.nukkit.inventory.StonecutterRecipe[])
+NO DOC BLOCK: cn.nukkit.item.ProjectileItem Method addThrowSound(cn.nukkit.Player)
+NO DOC BLOCK: cn.nukkit.block.Block Method afterRemoval(cn.nukkit.block.Block, boolean)
+NO DOC BLOCK: cn.nukkit.block.BlockWater Method afterRemoval(cn.nukkit.block.Block, boolean)
+NO DOC BLOCK: cn.nukkit.block.BlockWall Method autoConfigureState()
+MISSING @SINCE TAG: cn.nukkit.block.BlockWall Method autoUpdatePostFlag()
+NO DOC BLOCK: cn.nukkit.level.format.generic.BaseChunk Method backwardCompatibilityUpdate(cn.nukkit.level.Level)
+NO DOC BLOCK: cn.nukkit.level.format.generic.BaseFullChunk Method backwardCompatibilityUpdate(cn.nukkit.level.Level)
+NO DOC BLOCK: cn.nukkit.network.AdvancedSourceInterface Method blockAddress(java.net.InetAddress)
+NO DOC BLOCK: cn.nukkit.network.AdvancedSourceInterface Method blockAddress(java.net.InetAddress, int)
+NO DOC BLOCK: cn.nukkit.network.Network Method blockAddress(java.net.InetAddress)
+NO DOC BLOCK: cn.nukkit.network.Network Method blockAddress(java.net.InetAddress, int)
+NO DOC BLOCK: cn.nukkit.network.RakNetInterface Method blockAddress(java.net.InetAddress)
+NO DOC BLOCK: cn.nukkit.network.RakNetInterface Method blockAddress(java.net.InetAddress, int)
+NO DOC BLOCK: cn.nukkit.block.Block Method breaksWhenMoved()
+NO DOC BLOCK: cn.nukkit.block.BlockBanner Method breaksWhenMoved()
+NO DOC BLOCK: cn.nukkit.block.BlockBed Method breaksWhenMoved()
+NO DOC BLOCK: cn.nukkit.block.BlockCactus Method breaksWhenMoved()
+NO DOC BLOCK: cn.nukkit.block.BlockCake Method breaksWhenMoved()
+NO DOC BLOCK: cn.nukkit.block.BlockChorusFlower Method breaksWhenMoved()
+NO DOC BLOCK: cn.nukkit.block.BlockChorusPlant Method breaksWhenMoved()
+NO DOC BLOCK: cn.nukkit.block.BlockCocoa Method breaksWhenMoved()
+NO DOC BLOCK: cn.nukkit.block.BlockDoor Method breaksWhenMoved()
+NO DOC BLOCK: cn.nukkit.block.BlockDragonEgg Method breaksWhenMoved()
+NO DOC BLOCK: cn.nukkit.block.BlockFlowable Method breaksWhenMoved()
+NO DOC BLOCK: cn.nukkit.block.BlockItemFrame Method breaksWhenMoved()
+NO DOC BLOCK: cn.nukkit.block.BlockLadder Method breaksWhenMoved()
+NO DOC BLOCK: cn.nukkit.block.BlockLeaves Method breaksWhenMoved()
+NO DOC BLOCK: cn.nukkit.block.BlockLiquid Method breaksWhenMoved()
+NO DOC BLOCK: cn.nukkit.block.BlockPumpkin Method breaksWhenMoved()
+NO DOC BLOCK: cn.nukkit.block.BlockSignPost Method breaksWhenMoved()
+NO DOC BLOCK: cn.nukkit.block.BlockSkull Method breaksWhenMoved()
+NO DOC BLOCK: cn.nukkit.block.BlockUndyedShulkerBox Method breaksWhenMoved()
+NO DOC BLOCK: cn.nukkit.block.BlockVine Method breaksWhenMoved()
+NO DOC BLOCK: cn.nukkit.block.Block Method canBePulled()
+NO DOC BLOCK: cn.nukkit.block.BlockBeacon Method canBePulled()
+NO DOC BLOCK: cn.nukkit.block.BlockBedrock Method canBePulled()
+NO DOC BLOCK: cn.nukkit.block.BlockBedrockInvisible Method canBePulled()
+NO DOC BLOCK: cn.nukkit.block.BlockEndPortalFrame Method canBePulled()
+NO DOC BLOCK: cn.nukkit.block.BlockEnderChest Method canBePulled()
+NO DOC BLOCK: cn.nukkit.block.BlockMobSpawner Method canBePulled()
+NO DOC BLOCK: cn.nukkit.block.BlockObsidian Method canBePulled()
+NO DOC BLOCK: cn.nukkit.block.BlockObsidianGlowing Method canBePulled()
+NO DOC BLOCK: cn.nukkit.block.BlockPistonHead Method canBePulled()
+NO DOC BLOCK: cn.nukkit.block.BlockRail Method canBePulled()
+NO DOC BLOCK: cn.nukkit.entity.Entity Method canBePushed()
+NO DOC BLOCK: cn.nukkit.block.BlockFlower Method canPlantOn(cn.nukkit.block.Block)
+NO DOC BLOCK: cn.nukkit.block.Block Method canWaterloggingFlowInto()
+NO DOC BLOCK: cn.nukkit.math.MathHelper Method clamp(float, float, float)
+NO DOC BLOCK: cn.nukkit.block.BlockWall Method clearConnections()
+NO DOC BLOCK: cn.nukkit.block.BlockCauldron Method clearWithFizz(cn.nukkit.blockentity.BlockEntityCauldron)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Method compressStorageLayers()
+NO DOC BLOCK: cn.nukkit.block.BlockWall Method connect(cn.nukkit.math.BlockFace)
+NO DOC BLOCK: cn.nukkit.block.BlockWall Method connect(cn.nukkit.math.BlockFace, boolean)
+NO DOC BLOCK: cn.nukkit.item.ItemPotionLingering Method correctNBT(cn.nukkit.nbt.tag.CompoundTag)
+NO DOC BLOCK: cn.nukkit.item.ItemEnderPearl Method correctProjectile(cn.nukkit.Player, cn.nukkit.entity.Entity)
+NO DOC BLOCK: cn.nukkit.item.ProjectileItem Method correctProjectile(cn.nukkit.Player, cn.nukkit.entity.Entity)
+NO DOC BLOCK: cn.nukkit.block.BlockDispenser Method createBlockEntity()
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntity Method createBlockEntity(java.lang.String, cn.nukkit.level.Position, cn.nukkit.nbt.tag.CompoundTag, java.lang.Object[])
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntity Method createBlockEntity(java.lang.String, cn.nukkit.level.Position, java.lang.Object[])
+NO DOC BLOCK: cn.nukkit.block.BlockFurnaceBurning Method createEntity(cn.nukkit.level.Position, cn.nukkit.nbt.tag.CompoundTag)
+NO DOC BLOCK: cn.nukkit.block.BlockFallable Method createFallingEntity(cn.nukkit.nbt.tag.CompoundTag)
+NO DOC BLOCK: cn.nukkit.block.BlockPistonBase Method createHead(int)
+NO DOC BLOCK: cn.nukkit.block.Block Method diffusesSkyLight()
+NO DOC BLOCK: cn.nukkit.block.BlockCobweb Method diffusesSkyLight()
+NO DOC BLOCK: cn.nukkit.block.BlockLeaves Method diffusesSkyLight()
+NO DOC BLOCK: cn.nukkit.block.BlockWall Method disconnect(cn.nukkit.math.BlockFace)
+NO DOC BLOCK: cn.nukkit.block.BlockDispenser Method dispense()
+NO DOC BLOCK: cn.nukkit.level.biome.type.CoveredBiome Method doCover(int, int, cn.nukkit.level.format.FullChunk)
+NO DOC BLOCK: cn.nukkit.block.Block Method down(int, int)
+NO DOC BLOCK: cn.nukkit.block.Block Method east(int, int)
+OK: cn.nukkit.item.Item Method equalsIgnoringEnchantmentOrder(cn.nukkit.item.Item, boolean)
+NO DOC BLOCK: cn.nukkit.block.Block Method firstInLayers(int, java.util.function.Predicate<cn.nukkit.block.Block>)
+NO DOC BLOCK: cn.nukkit.block.Block Method firstInLayers(java.util.function.Predicate<cn.nukkit.block.Block>)
+NO DOC BLOCK: cn.nukkit.block.Block Method get(int, cn.nukkit.level.Level, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.block.Block Method get(int, int, cn.nukkit.level.Level, int, int, int)
+NO DOC BLOCK: cn.nukkit.block.Block Method get(int, int, cn.nukkit.level.Level, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.block.Block Method get(int, java.lang.Integer, cn.nukkit.level.Position, int)
+NO DOC BLOCK: cn.nukkit.dispenser.ProjectileDispenseBehavior Method getAccuracy()
+NO DOC BLOCK: cn.nukkit.level.format.ChunkSection Method getAndSetBlock(int, int, int, int, cn.nukkit.block.Block)
+NO DOC BLOCK: cn.nukkit.level.format.FullChunk Method getAndSetBlock(int, int, int, int, cn.nukkit.block.Block)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Method getAndSetBlock(int, int, int, int, cn.nukkit.block.Block)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method getAndSetBlock(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.BaseChunk Method getAndSetBlock(int, int, int, int, cn.nukkit.block.Block)
+NO DOC BLOCK: cn.nukkit.level.format.generic.EmptyChunkSection Method getAndSetBlock(int, int, int, int, cn.nukkit.block.Block)
+NO DOC BLOCK: cn.nukkit.level.format.leveldb.Chunk Method getAndSetBlock(int, int, int, int, cn.nukkit.block.Block)
+NO DOC BLOCK: cn.nukkit.level.format.mcregion.Chunk Method getAndSetBlock(int, int, int, int, cn.nukkit.block.Block)
+NO DOC BLOCK: cn.nukkit.item.Item Method getBlock(int)
+NO DOC BLOCK: cn.nukkit.item.Item Method getBlock(int, java.lang.Integer)
+NO DOC BLOCK: cn.nukkit.item.Item Method getBlock(int, java.lang.Integer, int)
+NO DOC BLOCK: cn.nukkit.item.Item Method getBlock(int, java.lang.Integer, int, byte[])
+NO DOC BLOCK: cn.nukkit.level.Level Method getBlock(cn.nukkit.math.Vector3, int)
+NO DOC BLOCK: cn.nukkit.level.Level Method getBlock(cn.nukkit.math.Vector3, int, boolean)
+NO DOC BLOCK: cn.nukkit.level.Level Method getBlock(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.Level Method getBlock(int, int, int, int, boolean)
+NO DOC BLOCK: cn.nukkit.level.format.ChunkSection Method getBlockData(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.FullChunk Method getBlockData(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Method getBlockData(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.BaseChunk Method getBlockData(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.EmptyChunkSection Method getBlockData(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.leveldb.Chunk Method getBlockData(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.mcregion.Chunk Method getBlockData(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.FullChunk Method getBlockDataArray(int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.BaseChunk Method getBlockDataArray(int)
+NO DOC BLOCK: cn.nukkit.level.format.leveldb.Chunk Method getBlockDataArray(int)
+NO DOC BLOCK: cn.nukkit.level.format.mcregion.Chunk Method getBlockDataArray(int)
+NO DOC BLOCK: cn.nukkit.level.ChunkManager Method getBlockDataAt(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.Level Method getBlockDataAt(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.BaseFullChunk Method getBlockDataAt(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.leveldb.Chunk Method getBlockDataAt(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.mcregion.Chunk Method getBlockDataAt(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.generator.SimpleChunkManager Method getBlockDataAt(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method getBlockDataBase(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method getBlockDataExtended()
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method getBlockDataExtra()
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method getBlockDataExtra(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method getBlockDataHyperA()
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method getBlockDataHyperB()
+NO DOC BLOCK: cn.nukkit.block.BlockDispenser Method getBlockEntity()
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityMovingBlock Method getBlockEntity()
+NO DOC BLOCK: cn.nukkit.level.Level Method getBlockEntity(cn.nukkit.math.BlockVector3)
+NO DOC BLOCK: cn.nukkit.block.BlockPistonHead Method getBlockFace()
+NO DOC BLOCK: cn.nukkit.block.BlockStemMelon Method getBlockFace()
+NO DOC BLOCK: cn.nukkit.block.BlockStemPumpkin Method getBlockFace()
+NO DOC BLOCK: cn.nukkit.level.format.ChunkSection Method getBlockId(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.FullChunk Method getBlockId(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Method getBlockId(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.BaseChunk Method getBlockId(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.EmptyChunkSection Method getBlockId(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.leveldb.Chunk Method getBlockId(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.mcregion.Chunk Method getBlockId(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.FullChunk Method getBlockIdArray(int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.BaseChunk Method getBlockIdArray(int)
+NO DOC BLOCK: cn.nukkit.level.format.leveldb.Chunk Method getBlockIdArray(int)
+NO DOC BLOCK: cn.nukkit.level.format.mcregion.Chunk Method getBlockIdArray(int)
+NO DOC BLOCK: cn.nukkit.level.ChunkManager Method getBlockIdAt(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.Level Method getBlockIdAt(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.BaseFullChunk Method getBlockIdAt(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.leveldb.Chunk Method getBlockIdAt(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.mcregion.Chunk Method getBlockIdAt(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.generator.SimpleChunkManager Method getBlockIdAt(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method getBlockIdBase(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method getBlockIdExtra(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method getBlockIdsExtended()
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method getBlockIdsExtra()
+NO DOC BLOCK: cn.nukkit.level.Level Method getBlockRuntimeId(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.Level Method getBlockRuntimeId(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.FullChunk Method getBlockRuntimeId(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.FullChunk Method getBlockRuntimeId(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.ChunkSection Method getBlockState(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.ChunkSection Method getBlockState(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.FullChunk Method getBlockState(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.FullChunk Method getBlockState(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Method getBlockState(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method getBlockState(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.BaseChunk Method getBlockState(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.EmptyChunkSection Method getBlockState(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityFurnace Method getBurningBlockId()
+NO DOC BLOCK: cn.nukkit.level.format.ChunkSection Method getBytes()
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Method getBytes()
+NO DOC BLOCK: cn.nukkit.level.format.generic.EmptyChunkSection Method getBytes()
+NO DOC BLOCK: cn.nukkit.level.Level Method getCelestialAngle(float)
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityFurnace Method getClientName()
+NO DOC BLOCK: cn.nukkit.level.Level Method getCollisionBlocks(cn.nukkit.math.AxisAlignedBB, boolean, boolean)
+NO DOC BLOCK: cn.nukkit.level.Level Method getCollisionBlocks(cn.nukkit.math.AxisAlignedBB, boolean, boolean, java.util.function.Predicate<cn.nukkit.block.Block>)
+NO DOC BLOCK: cn.nukkit.block.BlockWall Method getConnectionType(cn.nukkit.math.BlockFace)
+NO DOC BLOCK: cn.nukkit.level.format.ChunkSection Method getContentVersion()
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Method getContentVersion()
+NO DOC BLOCK: cn.nukkit.level.format.generic.EmptyChunkSection Method getContentVersion()
+NO DOC BLOCK: cn.nukkit.network.protocol.PlayerEnchantOptionsPacket.EnchantOptionData Method getCost()
+NO DOC BLOCK: cn.nukkit.level.biome.impl.beach.ColdBeachBiome Method getCoverId(int, int)
+NO DOC BLOCK: cn.nukkit.level.biome.impl.mesa.MesaPlateauFBiome Method getCoverId(int, int)
+NO DOC BLOCK: cn.nukkit.level.biome.impl.taiga.ColdTaigaBiome Method getCoverId(int, int)
+NO DOC BLOCK: cn.nukkit.level.biome.type.CoveredBiome Method getCoverId(int, int)
+NO DOC BLOCK: cn.nukkit.level.biome.type.SnowyBiome Method getCoverId(int, int)
+NO DOC BLOCK: cn.nukkit.level.format.ChunkSection Method getDataArray(int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Method getDataArray(int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.EmptyChunkSection Method getDataArray(int)
+NO DOC BLOCK: cn.nukkit.level.format.ChunkSection Method getDataExtraArray(int)
+NO DOC BLOCK: cn.nukkit.level.format.ChunkSection Method getDataExtraArray()
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Method getDataExtraArray(int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.EmptyChunkSection Method getDataExtraArray(int)
+NO DOC BLOCK: cn.nukkit.block.BlockDispenser Method getDispenseBehavior(cn.nukkit.item.Item)
+NO DOC BLOCK: cn.nukkit.block.BlockFurnaceBurning Method getEntityName()
+NO DOC BLOCK: cn.nukkit.block.BlockCauldron Method getFillLevel()
+NO DOC BLOCK: cn.nukkit.inventory.AnvilInventory Method getFirstItem()
+NO DOC BLOCK: cn.nukkit.level.Level Method getFullBlock(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.ChunkSection Method getFullBlock(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.FullChunk Method getFullBlock(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Method getFullBlock(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.BaseChunk Method getFullBlock(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.EmptyChunkSection Method getFullBlock(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.leveldb.Chunk Method getFullBlock(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.mcregion.Chunk Method getFullBlock(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityFurnace Method getFurnaceName()
+NO DOC BLOCK: cn.nukkit.level.Level Method getFuzzySpawnLocation()
+NO DOC BLOCK: cn.nukkit.Server Method getGitCommit()
+NO DOC BLOCK: cn.nukkit.level.biome.impl.extremehills.StoneBeachBiome Method getGroundId(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.biome.impl.mesa.MesaBiome Method getGroundId(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.biome.impl.ocean.OceanBiome Method getGroundId(int)
+NO DOC BLOCK: cn.nukkit.level.biome.type.CoveredBiome Method getGroundId(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.biome.type.GrassyBiome Method getGroundId(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.biome.type.SandyBiome Method getGroundId(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.biome.type.WateryBiome Method getGroundId(int, int, int)
+MISSING @SINCE TAG: cn.nukkit.level.Level Method getHighestAdjacentBlockSkyLight(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method getHyperDataA(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.ChunkSection Method getHyperDataArray()
+NO DOC BLOCK: cn.nukkit.level.format.ChunkSection Method getHyperDataArray(int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Method getHyperDataArray(int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method getHyperDataB(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.ChunkSection Method getIdArray(int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Method getIdArray(int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.EmptyChunkSection Method getIdArray(int)
+NO DOC BLOCK: cn.nukkit.level.format.ChunkSection Method getIdExtraArray(int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Method getIdExtraArray(int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.EmptyChunkSection Method getIdExtraArray(int)
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityFurnace Method getIdleBlockId()
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityFurnace Method getInventoryType()
+NO DOC BLOCK: cn.nukkit.block.Block Method getItemId()
+NO DOC BLOCK: cn.nukkit.level.GlobalBlockPalette Method getLegacyId(int)
+NO DOC BLOCK: cn.nukkit.level.Position Method getLevelBlockAtLayer(int)
+NO DOC BLOCK: cn.nukkit.inventory.AnvilInventory Method getLevelCost()
+NO DOC BLOCK: cn.nukkit.level.format.ChunkSection Method getMaximumLayer()
+NO DOC BLOCK: cn.nukkit.level.format.LevelProvider Method getMaximumLayer()
+NO DOC BLOCK: cn.nukkit.level.format.anvil.Anvil Method getMaximumLayer()
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Method getMaximumLayer()
+NO DOC BLOCK: cn.nukkit.level.format.generic.EmptyChunkSection Method getMaximumLayer()
+NO DOC BLOCK: cn.nukkit.dispenser.ProjectileDispenseBehavior Method getMotion()
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityMovingBlock Method getMovingBlock()
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityMovingBlock Method getMovingBlockString()
+NO DOC BLOCK: cn.nukkit.level.GlobalBlockPalette Method getName(int)
+NO DOC BLOCK: cn.nukkit.inventory.AnvilInventory Method getNewItemName()
+NO DOC BLOCK: cn.nukkit.math.AxisAlignedBB Method getOffsetBoundingBox(cn.nukkit.math.BlockFace, double, double, double)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Method getOrSetStorage(int)
+NO DOC BLOCK: cn.nukkit.block.BlockPiston Method getPistonHeadBlockId()
+NO DOC BLOCK: cn.nukkit.block.BlockPistonBase Method getPistonHeadBlockId()
+NO DOC BLOCK: cn.nukkit.block.BlockPistonSticky Method getPistonHeadBlockId()
+NO DOC BLOCK: cn.nukkit.block.BlockSignPost Method getPostId()
+NO DOC BLOCK: cn.nukkit.block.BlockWallSign Method getPostId()
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityCauldron Method getPotionType()
+NO DOC BLOCK: cn.nukkit.item.ItemPotionLingering Method getProjectileEntityType()
+NO DOC BLOCK: cn.nukkit.level.Level Method getRainStrength(float)
+NO DOC BLOCK: cn.nukkit.inventory.AnvilInventory Method getResult()
+NO DOC BLOCK: cn.nukkit.block.Block Method getRuntimeId()
+NO DOC BLOCK: cn.nukkit.inventory.AnvilInventory Method getSecondItem()
+NO DOC BLOCK: cn.nukkit.block.Block Method getSideAtLayer(int, cn.nukkit.math.BlockFace)
+NO DOC BLOCK: cn.nukkit.block.Block Method getSideAtLayer(int, cn.nukkit.math.BlockFace, int)
+NO DOC BLOCK: cn.nukkit.Player Method getSocketAddress()
+NO DOC BLOCK: cn.nukkit.event.player.PlayerCreationEvent Method getSocketAddress()
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntitySpawnable Method getSpawnPacket()
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntitySpawnable Method getSpawnPacket(cn.nukkit.nbt.tag.CompoundTag)
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityFurnace Method getSpeedMultiplier()
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Method getStorageIfExists(int)
+NO DOC BLOCK: cn.nukkit.block.BlockWood Method getStrippedDamage()
+NO DOC BLOCK: cn.nukkit.block.BlockWood2 Method getStrippedDamage()
+NO DOC BLOCK: cn.nukkit.block.BlockWood Method getStrippedId()
+NO DOC BLOCK: cn.nukkit.block.BlockWood2 Method getStrippedId()
+NO DOC BLOCK: cn.nukkit.level.biome.impl.extremehills.ExtremeHillsMBiome Method getSurfaceId(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.biome.impl.extremehills.StoneBeachBiome Method getSurfaceId(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.biome.impl.iceplains.IcePlainsSpikesBiome Method getSurfaceId(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.biome.impl.mesa.MesaBiome Method getSurfaceId(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.biome.impl.mushroom.MushroomIslandBiome Method getSurfaceId(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.biome.type.CoveredBiome Method getSurfaceId(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.biome.type.GrassyBiome Method getSurfaceId(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.biome.type.SandyBiome Method getSurfaceId(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.biome.type.WateryBiome Method getSurfaceId(int, int, int)
+NO DOC BLOCK: cn.nukkit.item.ItemPotionLingering Method getThrowForce()
+NO DOC BLOCK: cn.nukkit.level.Level Method getThunderStrength(float)
+NO DOC BLOCK: cn.nukkit.network.query.QueryHandler Method getTokenString(byte[], java.net.InetAddress)
+NO DOC BLOCK: cn.nukkit.network.query.QueryHandler Method getTokenString(java.lang.String, java.net.InetAddress)
+NO DOC BLOCK: cn.nukkit.block.BlockWall Method getWallConnections()
+NO DOC BLOCK: cn.nukkit.block.BlockSignPost Method getWallId()
+NO DOC BLOCK: cn.nukkit.block.BlockWallSign Method getWallId()
+NO DOC BLOCK: cn.nukkit.block.BlockWall Method getWallType()
+NO DOC BLOCK: cn.nukkit.block.Block Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockAnvil Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockBanner Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockBeacon Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockBed Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockBedrockInvisible Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockBrewingStand Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockButton Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockCactus Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockCake Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockCarpet Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockChest Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockCobweb Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockCocoa Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockDaylightDetector Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockDeadBush Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockDoor Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockDragonEgg Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockEnchantingTable Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockEndPortalFrame Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockEndRod Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockEnderChest Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockFence Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockFenceGate Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockFlowerPot Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockGlassPane Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockHopper Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockIronBars Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockItemFrame Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockLadder Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockLeaves Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockLever Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockMobSpawner Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockPistonBase Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockPressurePlateBase Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockRedstoneDiode Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockSignPost Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockSkull Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockSlab Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockStairs Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockStonecutter Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockTrapdoor Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockTripWire Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockTripWireHook Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockUndyedShulkerBox Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockVine Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.block.BlockWall Method getWaterloggingLevel()
+NO DOC BLOCK: cn.nukkit.level.generator.object.ObjectTallGrass Method growGrass(cn.nukkit.level.ChunkManager, cn.nukkit.math.Vector3, cn.nukkit.math.NukkitRandom, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method hasBlockDataExtras()
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method hasBlockDataHyperA()
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method hasBlockDataHyperB()
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method hasBlockIdExtras()
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method hasBlockIds()
+OK: cn.nukkit.utils.Hash Method hashBlock(cn.nukkit.math.Vector3)
+NO DOC BLOCK: cn.nukkit.nbt.tag.ByteArrayTag Method hashCode()
+NO DOC BLOCK: cn.nukkit.nbt.tag.CompoundTag Method hashCode()
+NO DOC BLOCK: cn.nukkit.nbt.tag.IntArrayTag Method hashCode()
+NO DOC BLOCK: cn.nukkit.nbt.tag.ListTag Method hashCode()
+NO DOC BLOCK: cn.nukkit.nbt.tag.NumberTag Method hashCode()
+NO DOC BLOCK: cn.nukkit.nbt.tag.StringTag Method hashCode()
+NO DOC BLOCK: cn.nukkit.nbt.tag.Tag Method hashCode()
+NO DOC BLOCK: cn.nukkit.entity.projectile.EntityProjectile Method inaccurate(float)
+NO DOC BLOCK: cn.nukkit.dispenser.DispenseBehaviorRegister Method init()
+NO DOC BLOCK: cn.nukkit.block.BlockWall Method isConnected(cn.nukkit.math.BlockFace)
+NO DOC BLOCK: cn.nukkit.entity.Entity Method isInEndPortal()
+NO DOC BLOCK: cn.nukkit.block.Block Method isInitializing()
+NO DOC BLOCK: cn.nukkit.block.BlockDaylightDetector Method isInverted()
+NO DOC BLOCK: cn.nukkit.block.BlockDaylightDetectorInverted Method isInverted()
+MISSING @SINCE TAG: cn.nukkit.item.enchantment.Enchantment Method isItemAcceptable(cn.nukkit.item.Item)
+NO DOC BLOCK: cn.nukkit.item.enchantment.EnchantmentDurability Method isItemAcceptable(cn.nukkit.item.Item)
+NO DOC BLOCK: cn.nukkit.item.enchantment.EnchantmentEfficiency Method isItemAcceptable(cn.nukkit.item.Item)
+NO DOC BLOCK: cn.nukkit.item.enchantment.EnchantmentSilkTouch Method isItemAcceptable(cn.nukkit.item.Item)
+NO DOC BLOCK: cn.nukkit.item.enchantment.EnchantmentThorns Method isItemAcceptable(cn.nukkit.item.Item)
+NO DOC BLOCK: cn.nukkit.item.enchantment.damage.EnchantmentDamage Method isItemAcceptable(cn.nukkit.item.Item)
+NO DOC BLOCK: cn.nukkit.Server Method isRedstoneEnabled()
+NO DOC BLOCK: cn.nukkit.block.BlockWall Method isSameHeightStraight()
+NO DOC BLOCK: cn.nukkit.block.Block Method isSolid(cn.nukkit.math.BlockFace)
+NO DOC BLOCK: cn.nukkit.entity.Entity Method isTouchingWater()
+NO DOC BLOCK: cn.nukkit.entity.Entity Method isUndead()
+NO DOC BLOCK: cn.nukkit.entity.mob.EntityDrowned Method isUndead()
+NO DOC BLOCK: cn.nukkit.entity.mob.EntityHusk Method isUndead()
+NO DOC BLOCK: cn.nukkit.entity.mob.EntityPhantom Method isUndead()
+NO DOC BLOCK: cn.nukkit.entity.mob.EntitySkeleton Method isUndead()
+NO DOC BLOCK: cn.nukkit.entity.mob.EntityStray Method isUndead()
+NO DOC BLOCK: cn.nukkit.entity.mob.EntityWither Method isUndead()
+NO DOC BLOCK: cn.nukkit.entity.mob.EntityWitherSkeleton Method isUndead()
+NO DOC BLOCK: cn.nukkit.entity.mob.EntityZombie Method isUndead()
+NO DOC BLOCK: cn.nukkit.entity.mob.EntityZombiePigman Method isUndead()
+NO DOC BLOCK: cn.nukkit.entity.mob.EntityZombieVillager Method isUndead()
+NO DOC BLOCK: cn.nukkit.entity.mob.EntityZombieVillagerV1 Method isUndead()
+NO DOC BLOCK: cn.nukkit.entity.passive.EntitySkeletonHorse Method isUndead()
+NO DOC BLOCK: cn.nukkit.entity.passive.EntityZombieHorse Method isUndead()
+NO DOC BLOCK: cn.nukkit.block.BlockWall Method isWallPost()
+NO DOC BLOCK: cn.nukkit.plugin.PluginManager Method loadPowerNukkitPlugins()
+NO DOC BLOCK: cn.nukkit.inventory.CraftingManager Method matchBlastFurnaceRecipe(cn.nukkit.item.Item)
+NO DOC BLOCK: cn.nukkit.inventory.CraftingManager Method matchCampfireRecipe(cn.nukkit.item.Item)
+NO DOC BLOCK: cn.nukkit.inventory.CraftingManager Method matchCartographyRecipe(java.util.List<cn.nukkit.item.Item>, cn.nukkit.item.Item, java.util.List<cn.nukkit.item.Item>)
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityFurnace Method matchRecipe(cn.nukkit.item.Item)
+NO DOC BLOCK: cn.nukkit.inventory.CraftingManager Method matchSmokerRecipe(cn.nukkit.item.Item)
+NO DOC BLOCK: cn.nukkit.inventory.CraftingManager Method matchStonecutterRecipe(cn.nukkit.item.Item)
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityPistonArm Method move(boolean, java.util.List<cn.nukkit.math.BlockVector3>)
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityMovingBlock Method moveCollidedEntities(cn.nukkit.blockentity.BlockEntityPistonArm, cn.nukkit.math.BlockFace)
+NO DOC BLOCK: cn.nukkit.block.Block Method mustDrop(cn.nukkit.math.Vector3, int, cn.nukkit.math.BlockFace, cn.nukkit.item.Item, cn.nukkit.Player)
+NO DOC BLOCK: cn.nukkit.block.Block Method mustSilkTouch(cn.nukkit.math.Vector3, int, cn.nukkit.math.BlockFace, cn.nukkit.item.Item, cn.nukkit.Player)
+NO DOC BLOCK: cn.nukkit.block.Block Method north(int, int)
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntity Method onBreak(boolean)
+NO DOC BLOCK: cn.nukkit.entity.projectile.EntityArrow Method onCollideWithBlock(cn.nukkit.block.Block)
+NO DOC BLOCK: cn.nukkit.entity.projectile.EntityProjectile Method onCollideWithBlock(cn.nukkit.block.Block)
+NO DOC BLOCK: cn.nukkit.entity.projectile.EntityProjectile Method onCollideWithBlock()
+NO DOC BLOCK: cn.nukkit.network.RakNetInterface Method onConnectionRequest(java.net.InetSocketAddress)
+NO DOC BLOCK: cn.nukkit.entity.Entity Method onPushByPiston(cn.nukkit.blockentity.BlockEntityPistonArm)
+NO DOC BLOCK: cn.nukkit.entity.item.EntityPainting Method onPushByPiston(cn.nukkit.blockentity.BlockEntityPistonArm)
+NO DOC BLOCK: cn.nukkit.network.RakNetInterface Method onQuery(java.net.InetSocketAddress)
+NO DOC BLOCK: cn.nukkit.network.RakNetInterface Method onSessionCreation(com.nukkitx.network.raknet.RakNetServerSession)
+NO DOC BLOCK: cn.nukkit.inventory.PlayerUIInventory Method onSlotChangeBase(int, cn.nukkit.item.Item, boolean)
+NO DOC BLOCK: cn.nukkit.network.RakNetInterface Method onUnhandledDatagram(io.netty.channel.ChannelHandlerContext, io.netty.channel.socket.DatagramPacket)
+NO DOC BLOCK: cn.nukkit.command.Command Method parseTilde(java.lang.String, double)
+NO DOC BLOCK: cn.nukkit.level.format.FullChunk Method recalculateHeightMapColumn(int, int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.BaseFullChunk Method recalculateHeightMapColumn(int, int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method recheckBlocks()
+NO DOC BLOCK: cn.nukkit.inventory.CraftingManager Method registerBlastFurnaceRecipe(cn.nukkit.inventory.BlastFurnaceRecipe)
+NO DOC BLOCK: cn.nukkit.inventory.CraftingManager Method registerCampfireRecipe(cn.nukkit.inventory.CampfireRecipe)
+NO DOC BLOCK: cn.nukkit.inventory.CraftingManager Method registerCartographyRecipe(cn.nukkit.inventory.CartographyRecipe)
+NO DOC BLOCK: cn.nukkit.inventory.CraftingManager Method registerSmokerRecipe(cn.nukkit.inventory.SmokerRecipe)
+NO DOC BLOCK: cn.nukkit.inventory.CraftingManager Method registerStonecutterRecipe(cn.nukkit.inventory.StonecutterRecipe)
+NO DOC BLOCK: cn.nukkit.inventory.BaseInventory Method removeListener(cn.nukkit.inventory.InventoryListener)
+NO DOC BLOCK: cn.nukkit.inventory.Inventory Method removeListener(cn.nukkit.inventory.InventoryListener)
+NO DOC BLOCK: cn.nukkit.level.Level Method setBlock(cn.nukkit.math.Vector3, int, cn.nukkit.block.Block)
+NO DOC BLOCK: cn.nukkit.level.Level Method setBlock(cn.nukkit.math.Vector3, int, cn.nukkit.block.Block, boolean)
+NO DOC BLOCK: cn.nukkit.level.Level Method setBlock(cn.nukkit.math.Vector3, int, cn.nukkit.block.Block, boolean, boolean)
+NO DOC BLOCK: cn.nukkit.level.Level Method setBlock(int, int, int, int, cn.nukkit.block.Block, boolean, boolean)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method setBlock(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.ChunkManager Method setBlockAtLayer(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.ChunkManager Method setBlockAtLayer(int, int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.Level Method setBlockAtLayer(int, int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.ChunkSection Method setBlockAtLayer(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.ChunkSection Method setBlockAtLayer(int, int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.FullChunk Method setBlockAtLayer(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.FullChunk Method setBlockAtLayer(int, int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Method setBlockAtLayer(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Method setBlockAtLayer(int, int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.BaseChunk Method setBlockAtLayer(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.BaseChunk Method setBlockAtLayer(int, int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.BaseFullChunk Method setBlockAtLayer(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.BaseFullChunk Method setBlockAtLayer(int, int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.EmptyChunkSection Method setBlockAtLayer(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.EmptyChunkSection Method setBlockAtLayer(int, int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.generator.SimpleChunkManager Method setBlockAtLayer(int, int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.ChunkSection Method setBlockData(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.FullChunk Method setBlockData(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Method setBlockData(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.BaseChunk Method setBlockData(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.EmptyChunkSection Method setBlockData(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.leveldb.Chunk Method setBlockData(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.mcregion.Chunk Method setBlockData(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.ChunkManager Method setBlockDataAt(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.Level Method setBlockDataAt(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.BaseFullChunk Method setBlockDataAt(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.leveldb.Chunk Method setBlockDataAt(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.mcregion.Chunk Method setBlockDataAt(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.generator.SimpleChunkManager Method setBlockDataAt(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.block.BlockStemMelon Method setBlockFace(cn.nukkit.math.BlockFace)
+NO DOC BLOCK: cn.nukkit.block.BlockStemPumpkin Method setBlockFace(cn.nukkit.math.BlockFace)
+NO DOC BLOCK: cn.nukkit.utils.Faceable Method setBlockFace(cn.nukkit.math.BlockFace)
+NO DOC BLOCK: cn.nukkit.level.ChunkManager Method setBlockFullIdAt(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.Level Method setBlockFullIdAt(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.BaseFullChunk Method setBlockFullIdAt(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.generator.SimpleChunkManager Method setBlockFullIdAt(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.ChunkSection Method setBlockId(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.FullChunk Method setBlockId(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Method setBlockId(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.BaseChunk Method setBlockId(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.EmptyChunkSection Method setBlockId(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.leveldb.Chunk Method setBlockId(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.mcregion.Chunk Method setBlockId(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.ChunkManager Method setBlockIdAt(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.Level Method setBlockIdAt(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.BaseFullChunk Method setBlockIdAt(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.leveldb.Chunk Method setBlockIdAt(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.mcregion.Chunk Method setBlockIdAt(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.generator.SimpleChunkManager Method setBlockIdAt(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.entity.passive.EntityTurtle Method setBreedingAge(int)
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityFurnace Method setBurning(boolean)
+NO DOC BLOCK: cn.nukkit.block.BlockWall Method setConnection(cn.nukkit.math.BlockFace, cn.nukkit.block.BlockWall.WallConnectionType)
+NO DOC BLOCK: cn.nukkit.level.format.ChunkSection Method setContentVersion(int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Method setContentVersion(int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.EmptyChunkSection Method setContentVersion(int)
+NO DOC BLOCK: cn.nukkit.Player Method setExperience(int, int, boolean)
+NO DOC BLOCK: cn.nukkit.block.BlockCauldron Method setFillLevel(int)
+NO DOC BLOCK: cn.nukkit.inventory.AnvilInventory Method setFirstItem(cn.nukkit.item.Item)
+NO DOC BLOCK: cn.nukkit.inventory.AnvilInventory Method setFirstItem(cn.nukkit.item.Item, boolean)
+NO DOC BLOCK: cn.nukkit.level.format.ChunkSection Method setFullBlockId(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.FullChunk Method setFullBlockId(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Method setFullBlockId(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.BaseChunk Method setFullBlockId(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.EmptyChunkSection Method setFullBlockId(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.entity.passive.EntityTurtle Method setHomePos(cn.nukkit.math.Vector3)
+NO DOC BLOCK: cn.nukkit.inventory.AnvilInventory Method setLevelCost(int)
+NO DOC BLOCK: cn.nukkit.inventory.AnvilInventory Method setNewItemName(java.lang.String)
+NO DOC BLOCK: cn.nukkit.level.Location Method setPitch(double)
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityCauldron Method setPotionType(int)
+NO DOC BLOCK: cn.nukkit.Server Method setRedstoneEnabled(boolean)
+MISSING @SINCE TAG: cn.nukkit.inventory.AnvilInventory Method setResult(cn.nukkit.item.Item)
+MISSING @SINCE TAG: cn.nukkit.inventory.AnvilInventory Method setResult(cn.nukkit.item.Item, boolean)
+NO DOC BLOCK: cn.nukkit.inventory.AnvilInventory Method setSecondItem(cn.nukkit.item.Item)
+NO DOC BLOCK: cn.nukkit.inventory.AnvilInventory Method setSecondItem(cn.nukkit.item.Item, boolean)
+NO DOC BLOCK: cn.nukkit.block.BlockWall Method setWallPost(boolean)
+NO DOC BLOCK: cn.nukkit.block.BlockWall Method setWallType(cn.nukkit.block.BlockWall.WallType)
+NO DOC BLOCK: cn.nukkit.level.Location Method setYaw(double)
+NO DOC BLOCK: cn.nukkit.block.Block Method south(int, int)
+NO DOC BLOCK: cn.nukkit.entity.item.EntityPotion Method splash(cn.nukkit.entity.Entity)
+NO DOC BLOCK: cn.nukkit.block.Block Method sticksToPiston()
+NO DOC BLOCK: cn.nukkit.block.BlockBed Method sticksToPiston()
+NO DOC BLOCK: cn.nukkit.block.BlockCactus Method sticksToPiston()
+NO DOC BLOCK: cn.nukkit.block.BlockCake Method sticksToPiston()
+NO DOC BLOCK: cn.nukkit.block.BlockChorusFlower Method sticksToPiston()
+NO DOC BLOCK: cn.nukkit.block.BlockChorusPlant Method sticksToPiston()
+NO DOC BLOCK: cn.nukkit.block.BlockCocoa Method sticksToPiston()
+NO DOC BLOCK: cn.nukkit.block.BlockDoor Method sticksToPiston()
+NO DOC BLOCK: cn.nukkit.block.BlockDragonEgg Method sticksToPiston()
+NO DOC BLOCK: cn.nukkit.block.BlockFlowable Method sticksToPiston()
+NO DOC BLOCK: cn.nukkit.block.BlockItemFrame Method sticksToPiston()
+NO DOC BLOCK: cn.nukkit.block.BlockLadder Method sticksToPiston()
+NO DOC BLOCK: cn.nukkit.block.BlockLeaves Method sticksToPiston()
+NO DOC BLOCK: cn.nukkit.block.BlockLiquid Method sticksToPiston()
+NO DOC BLOCK: cn.nukkit.block.BlockPumpkin Method sticksToPiston()
+NO DOC BLOCK: cn.nukkit.block.BlockSkull Method sticksToPiston()
+NO DOC BLOCK: cn.nukkit.block.BlockUndyedShulkerBox Method sticksToPiston()
+NO DOC BLOCK: cn.nukkit.block.BlockVine Method sticksToPiston()
+NO DOC BLOCK: cn.nukkit.level.format.ChunkSection Method toNBT()
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Method toNBT()
+NO DOC BLOCK: cn.nukkit.level.format.generic.EmptyChunkSection Method toNBT()
+NO DOC BLOCK: cn.nukkit.inventory.transaction.data.UseItemOnEntityData Method toString()
+NO DOC BLOCK: cn.nukkit.level.MovingObjectPosition Method toString()
+NO DOC BLOCK: cn.nukkit.block.Block Method up(int, int)
+NO DOC BLOCK: cn.nukkit.block.BlockDaylightDetector Method updatePower()
+NO DOC BLOCK: cn.nukkit.inventory.AnvilInventory Method updateResult()
+NO DOC BLOCK: cn.nukkit.entity.projectile.EntityProjectile Method updateRotation()
+NO DOC BLOCK: cn.nukkit.level.Level Method useBreakOn(cn.nukkit.math.Vector3, cn.nukkit.math.BlockFace, cn.nukkit.item.Item, cn.nukkit.Player, boolean, boolean)
+NO DOC BLOCK: cn.nukkit.level.Level Method useBreakOn(cn.nukkit.math.Vector3, int, cn.nukkit.math.BlockFace, cn.nukkit.item.Item, cn.nukkit.Player, boolean, boolean)
+NO DOC BLOCK: cn.nukkit.block.BlockLiquid Method usesWaterLogging()
+NO DOC BLOCK: cn.nukkit.block.BlockWater Method usesWaterLogging()
+NO DOC BLOCK: cn.nukkit.block.Block Method west(int, int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Method writeToStream(cn.nukkit.utils.BinaryStream)
+NO DOC BLOCK: cn.nukkit.block.BlockID Field ACACIA_BUTTON
+NO DOC BLOCK: cn.nukkit.block.BlockID Field ACACIA_PRESSURE_PLATE
+NO DOC BLOCK: cn.nukkit.item.ItemID Field ACACIA_SIGN
+NO DOC BLOCK: cn.nukkit.block.BlockID Field ACACIA_STANDING_SIGN
+NO DOC BLOCK: cn.nukkit.block.BlockID Field ACACIA_TRAPDOOR
+NO DOC BLOCK: cn.nukkit.block.BlockID Field ACACIA_WALL_SIGN
+NO DOC BLOCK: cn.nukkit.network.protocol.PlayerActionPacket Field ACTION_INTERACT_BLOCK
+NO DOC BLOCK: cn.nukkit.block.BlockID Field ANDESITE_STAIRS
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityPistonArm Field attachedBlocks
+NO DOC BLOCK: cn.nukkit.block.BlockID Field BAMBOO
+NO DOC BLOCK: cn.nukkit.block.BlockID Field BAMBOO_SAPLING
+NO DOC BLOCK: cn.nukkit.item.ItemID Field BANNER_PATTERN
+NO DOC BLOCK: cn.nukkit.block.BlockID Field BARREL
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntity Field BARREL
+NO DOC BLOCK: cn.nukkit.block.BlockID Field BARRIER
+NO DOC BLOCK: cn.nukkit.block.BlockID Field BEE_NEST
+NO DOC BLOCK: cn.nukkit.block.BlockID Field BEEHIVE
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntity Field BEEHIVE
+NO DOC BLOCK: cn.nukkit.block.BlockID Field BELL
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntity Field BELL
+NO DOC BLOCK: cn.nukkit.block.BlockID Field BIRCH_BUTTON
+NO DOC BLOCK: cn.nukkit.block.BlockID Field BIRCH_PRESSURE_PLATE
+NO DOC BLOCK: cn.nukkit.item.ItemID Field BIRCH_SIGN
+NO DOC BLOCK: cn.nukkit.block.BlockID Field BIRCH_STANDING_SIGN
+NO DOC BLOCK: cn.nukkit.block.BlockID Field BIRCH_TRAPDOOR
+NO DOC BLOCK: cn.nukkit.block.BlockID Field BIRCH_WALL_SIGN
+NO DOC BLOCK: cn.nukkit.block.BlockID Field BLAST_FURNACE
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntity Field BLAST_FURNACE
+NO DOC BLOCK: cn.nukkit.inventory.CraftingManager Field blastFurnaceRecipes
+NO DOC BLOCK: cn.nukkit.block.BlockID Field BLOCK_KELP
+NO DOC BLOCK: cn.nukkit.level.generator.object.ore.OreType Field blockData
+NO DOC BLOCK: cn.nukkit.level.generator.object.ore.OreType Field blockId
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityMovingBlock Field blockString
+NO DOC BLOCK: cn.nukkit.block.BlockID Field BLUE_ICE
+NO DOC BLOCK: cn.nukkit.entity.item.EntityFallingBlock Field breakOnLava
+NO DOC BLOCK: cn.nukkit.block.BlockID Field BUBBLE_COLUMN
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntity Field CAMPFIRE
+NO DOC BLOCK: cn.nukkit.item.ItemID Field CAMPFIRE
+NO DOC BLOCK: cn.nukkit.block.BlockID Field CAMPFIRE_BLOCK
+NO DOC BLOCK: cn.nukkit.inventory.CraftingManager Field campfireRecipes
+NO DOC BLOCK: cn.nukkit.block.BlockID Field CARTOGRAPHY_TABLE
+NO DOC BLOCK: cn.nukkit.inventory.CraftingManager Field cartographyRecipes
+NO DOC BLOCK: cn.nukkit.block.BlockID Field CARVED_PUMPKIN
+NO DOC BLOCK: cn.nukkit.block.BlockID Field COMPOSTER
+NO DOC BLOCK: cn.nukkit.block.BlockID Field CONDUIT
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntity Field CONDUIT
+NO DOC BLOCK: cn.nukkit.potion.Effect Field CONDUIT_POWER
+NO DOC BLOCK: cn.nukkit.level.format.generic.BaseChunk Field CONTENT_VERSION
+NO DOC BLOCK: cn.nukkit.block.BlockID Field CORAL
+NO DOC BLOCK: cn.nukkit.block.BlockID Field CORAL_BLOCK
+NO DOC BLOCK: cn.nukkit.block.BlockID Field CORAL_FAN
+NO DOC BLOCK: cn.nukkit.block.BlockID Field CORAL_FAN_DEAD
+NO DOC BLOCK: cn.nukkit.block.BlockID Field CORAL_FAN_HANG
+NO DOC BLOCK: cn.nukkit.block.BlockID Field CORAL_FAN_HANG2
+NO DOC BLOCK: cn.nukkit.block.BlockID Field CORAL_FAN_HANG3
+NO DOC BLOCK: cn.nukkit.Player Field CRAFTING_CARTOGRAPHY
+NO DOC BLOCK: cn.nukkit.Player Field CRAFTING_GRINDSTONE
+NO DOC BLOCK: cn.nukkit.Player Field CRAFTING_STONECUTTER
+NO DOC BLOCK: cn.nukkit.inventory.transaction.CraftingTransaction Field craftingType
+NO DOC BLOCK: cn.nukkit.item.ItemID Field CROSSBOW
+NO DOC BLOCK: cn.nukkit.block.BlockID Field DARK_OAK_BUTTON
+NO DOC BLOCK: cn.nukkit.block.BlockID Field DARK_OAK_PRESSURE_PLATE
+NO DOC BLOCK: cn.nukkit.item.ItemID Field DARK_OAK_SIGN
+NO DOC BLOCK: cn.nukkit.block.BlockID Field DARK_OAK_STANDING_SIGN
+NO DOC BLOCK: cn.nukkit.block.BlockID Field DARK_OAK_TRAPDOOR
+NO DOC BLOCK: cn.nukkit.block.BlockID Field DARK_OAK_WALL_SIGN
+NO DOC BLOCK: cn.nukkit.block.BlockSlabRedSandstone Field DARK_PRISMARINE
+NO DOC BLOCK: cn.nukkit.block.BlockID Field DARK_PRISMARINE_STAIRS
+NO DOC BLOCK: cn.nukkit.item.ItemID Field DARKOAK_SIGN
+NO DOC BLOCK: cn.nukkit.block.BlockID Field DARKOAK_STANDING_SIGN
+NO DOC BLOCK: cn.nukkit.block.BlockID Field DARKOAK_WALL_SIGN
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_AGENT_ID
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_AREA_EFFECT_CLOUD_DURATION
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_AREA_EFFECT_CLOUD_PICKUP_COUNT
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_AREA_EFFECT_CLOUD_RADIUS_CHANGE_ON_PICKUP
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_AREA_EFFECT_CLOUD_RADIUS_PER_TICK
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_AREA_EFFECT_CLOUD_SPAWN_TIME
+NO DOC BLOCK: cn.nukkit.block.Block Field DATA_BITS
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_BOAT_BUBBLE_TIME
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_COMMAND_BLOCK_ENABLED
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_EVOKER_SPELL_COLOR
+MISSING @SINCE TAG: cn.nukkit.entity.Entity Field DATA_FLAG_DISABLED_BLOCKING
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FLAG_RIDER_CAN_PICKUP
+MISSING @SINCE TAG: cn.nukkit.entity.Entity Field DATA_FLAG_TRANSITION_SITTING
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_HAS_NPC_COMPONENT
+NO DOC BLOCK: cn.nukkit.block.Block Field DATA_MASK
+NO DOC BLOCK: cn.nukkit.block.Block Field DATA_SIZE
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_TRADE_XP
+NO DOC BLOCK: cn.nukkit.block.Block Field diffusesSkyLight
+NO DOC BLOCK: cn.nukkit.block.BlockID Field DIORITE_STAIRS
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntity Field DISPENSER
+NO DOC BLOCK: cn.nukkit.block.BlockID Field DOUBLE_STONE_SLAB3
+NO DOC BLOCK: cn.nukkit.block.BlockID Field DOUBLE_STONE_SLAB4
+NO DOC BLOCK: cn.nukkit.block.BlockID Field DRIED_KELP_BLOCK
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntity Field DROPPER
+NO DOC BLOCK: cn.nukkit.block.BlockID Field END_BRICK_STAIRS
+NO DOC BLOCK: cn.nukkit.block.BlockID Field FLETCHING_TABLE
+NO DOC BLOCK: cn.nukkit.block.Block Field fullLight
+NO DOC BLOCK: cn.nukkit.Nukkit Field GIT_COMMIT
+NO DOC BLOCK: cn.nukkit.block.BlockID Field GRANITE_STAIRS
+NO DOC BLOCK: cn.nukkit.block.BlockID Field GRINDSTONE
+NO DOC BLOCK: cn.nukkit.Player Field GRINDSTONE_WINDOW_ID
+MISSING @SINCE TAG: cn.nukkit.network.protocol.HurtArmorPacket Field health
+NO DOC BLOCK: cn.nukkit.item.food.Food Field honey
+NO DOC BLOCK: cn.nukkit.block.BlockID Field HONEY_BLOCK
+NO DOC BLOCK: cn.nukkit.item.ItemID Field HONEY_BOTTLE
+NO DOC BLOCK: cn.nukkit.item.ItemID Field HONEYCOMB
+NO DOC BLOCK: cn.nukkit.block.BlockID Field HONEYCOMB_BLOCK
+NO DOC BLOCK: cn.nukkit.entity.Entity Field inEndPortal
+NO DOC BLOCK: cn.nukkit.block.BlockID Field JIGSAW
+NO DOC BLOCK: cn.nukkit.block.BlockID Field JUNGLE_BUTTON
+NO DOC BLOCK: cn.nukkit.block.BlockID Field JUNGLE_PRESSURE_PLATE
+NO DOC BLOCK: cn.nukkit.item.ItemID Field JUNGLE_SIGN
+NO DOC BLOCK: cn.nukkit.block.BlockID Field JUNGLE_STANDING_SIGN
+NO DOC BLOCK: cn.nukkit.block.BlockID Field JUNGLE_TRAPDOOR
+NO DOC BLOCK: cn.nukkit.block.BlockID Field JUNGLE_WALL_SIGN
+NO DOC BLOCK: cn.nukkit.block.BlockID Field LANTERN
+NO DOC BLOCK: cn.nukkit.Player Field lastPlayerdLevelUpSoundTime
+NO DOC BLOCK: cn.nukkit.block.BlockID Field LAVA_CAULDRON
+NO DOC BLOCK: cn.nukkit.block.Block Field layer
+NO DOC BLOCK: cn.nukkit.block.BlockID Field LECTERN
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntity Field LECTERN
+NO DOC BLOCK: cn.nukkit.block.BlockID Field LIGHT_BLOCK
+NO DOC BLOCK: cn.nukkit.block.BlockID Field LIT_BLAST_FURNACE
+NO DOC BLOCK: cn.nukkit.block.BlockID Field LIT_SMOKER
+NO DOC BLOCK: cn.nukkit.block.BlockID Field LOOM
+NO DOC BLOCK: cn.nukkit.block.Block Field MAX_BLOCK_ID
+NO DOC BLOCK: cn.nukkit.block.BlockCrops Field MINIMUM_LIGHT_LEVEL
+NO DOC BLOCK: cn.nukkit.block.BlockSlabRedSandstone Field MOSSY_COBBLESTONE
+NO DOC BLOCK: cn.nukkit.block.BlockID Field MOSSY_COBBLESTONE_STAIRS
+NO DOC BLOCK: cn.nukkit.block.BlockID Field MOSSY_STONE_BRICK_STAIRS
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityPistonArm Field MOVE_STEP
+NO DOC BLOCK: cn.nukkit.block.BlockID Field MOVING_BLOCK
+NO DOC BLOCK: cn.nukkit.inventory.RecipeType Field networkType
+NO DOC BLOCK: cn.nukkit.block.BlockID Field NORMAL_STONE_STAIRS
+NO DOC BLOCK: cn.nukkit.inventory.AnvilInventory Field OFFSET
+NO DOC BLOCK: cn.nukkit.block.BlockID Field PISTON_HEAD_STICKY
+NO DOC BLOCK: cn.nukkit.inventory.PlayerUIComponent Field playerUI
+NO DOC BLOCK: cn.nukkit.block.BlockID Field POLISHED_ANDESITE_STAIRS
+NO DOC BLOCK: cn.nukkit.block.BlockID Field POLISHED_DIORITE_STAIRS
+NO DOC BLOCK: cn.nukkit.block.BlockID Field POLISHED_GRANITE_STAIRS
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityCauldron Field POTION_TYPE_EMPTY
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityCauldron Field POTION_TYPE_LAVA
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityCauldron Field POTION_TYPE_LINGERING
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityCauldron Field POTION_TYPE_NORMAL
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntityCauldron Field POTION_TYPE_SPLASH
+NO DOC BLOCK: cn.nukkit.block.BlockSlabRedSandstone Field PRISMARINE
+NO DOC BLOCK: cn.nukkit.block.BlockSlabRedSandstone Field PRISMARINE_BRICKS
+NO DOC BLOCK: cn.nukkit.block.BlockID Field PRISMARINE_BRICKS_STAIRS
+NO DOC BLOCK: cn.nukkit.block.BlockID Field PRISMARINE_STAIRS
+NO DOC BLOCK: cn.nukkit.block.BlockSlabRedSandstone Field RED_NETHER_BRICK
+NO DOC BLOCK: cn.nukkit.block.BlockID Field RED_NETHER_BRICK_STAIRS
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Field SAVE_STORAGE_VERSION
+NO DOC BLOCK: cn.nukkit.block.BlockID Field SCAFFOLDING
+NO DOC BLOCK: cn.nukkit.network.protocol.ResourcePacksInfoPacket Field scripting
+NO DOC BLOCK: cn.nukkit.block.BlockID Field SEA_PICKLE
+NO DOC BLOCK: cn.nukkit.block.BlockID Field SEAGRASS
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Field SECTION_SIZE
+NO DOC BLOCK: cn.nukkit.block.BlockID Field SMITHING_TABLE
+NO DOC BLOCK: cn.nukkit.block.BlockID Field SMOKER
+NO DOC BLOCK: cn.nukkit.blockentity.BlockEntity Field SMOKER
+NO DOC BLOCK: cn.nukkit.inventory.CraftingManager Field smokerRecipes
+NO DOC BLOCK: cn.nukkit.block.BlockID Field SMOOTH_QUARTZ_STAIRS
+NO DOC BLOCK: cn.nukkit.block.BlockID Field SMOOTH_RED_SANDSTONE_STAIRS
+NO DOC BLOCK: cn.nukkit.block.BlockSlabRedSandstone Field SMOOTH_SANDSTONE
+NO DOC BLOCK: cn.nukkit.block.BlockID Field SMOOTH_SANDSTONE_STAIRS
+NO DOC BLOCK: cn.nukkit.block.BlockID Field SMOOTH_STONE
+NO DOC BLOCK: cn.nukkit.Player Field socketAddress
+NO DOC BLOCK: cn.nukkit.network.protocol.SetSpawnPositionPacket Field spawnForced
+NO DOC BLOCK: cn.nukkit.block.BlockID Field SPRUCE_BUTTON
+NO DOC BLOCK: cn.nukkit.block.BlockID Field SPRUCE_PRESSURE_PLATE
+NO DOC BLOCK: cn.nukkit.item.ItemID Field SPRUCE_SIGN
+NO DOC BLOCK: cn.nukkit.block.BlockID Field SPRUCE_STANDING_SIGN
+NO DOC BLOCK: cn.nukkit.block.BlockID Field SPRUCE_TRAPDOOR
+NO DOC BLOCK: cn.nukkit.block.BlockID Field SPRUCE_WALL_SIGN
+NO DOC BLOCK: cn.nukkit.block.BlockID Field STICKYPISTONARMCOLLISION
+NO DOC BLOCK: cn.nukkit.block.BlockID Field STONE_SLAB3
+NO DOC BLOCK: cn.nukkit.block.BlockID Field STONE_SLAB4
+NO DOC BLOCK: cn.nukkit.block.BlockID Field STONECUTTER_BLOCK
+NO DOC BLOCK: cn.nukkit.inventory.CraftingManager Field stonecutterRecipes
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Field STREAM_STORAGE_VERSION
+NO DOC BLOCK: cn.nukkit.block.BlockID Field STRIPPED_ACACIA_LOG
+NO DOC BLOCK: cn.nukkit.block.BlockID Field STRIPPED_BIRCH_LOG
+NO DOC BLOCK: cn.nukkit.block.BlockID Field STRIPPED_DARK_OAK_LOG
+NO DOC BLOCK: cn.nukkit.block.BlockID Field STRIPPED_JUNGLE_LOG
+NO DOC BLOCK: cn.nukkit.block.BlockID Field STRIPPED_OAK_LOG
+NO DOC BLOCK: cn.nukkit.block.BlockID Field STRIPPED_SPRUCE_LOG
+NO DOC BLOCK: cn.nukkit.dispenser.DefaultDispenseBehavior Field success
+NO DOC BLOCK: cn.nukkit.item.ItemID Field SUSPICIOUS_STEW
+NO DOC BLOCK: cn.nukkit.item.food.Food Field suspicious_stew_blindness
+NO DOC BLOCK: cn.nukkit.item.food.Food Field suspicious_stew_fire_resistance
+NO DOC BLOCK: cn.nukkit.item.food.Food Field suspicious_stew_jump
+NO DOC BLOCK: cn.nukkit.item.food.Food Field suspicious_stew_night_vision
+NO DOC BLOCK: cn.nukkit.item.food.Food Field suspicious_stew_poison
+NO DOC BLOCK: cn.nukkit.item.food.Food Field suspicious_stew_regeneration
+NO DOC BLOCK: cn.nukkit.item.food.Food Field suspicious_stew_saturation
+NO DOC BLOCK: cn.nukkit.item.food.Food Field suspicious_stew_weakness
+NO DOC BLOCK: cn.nukkit.item.food.Food Field suspicious_stew_wither
+NO DOC BLOCK: cn.nukkit.block.BlockID Field SWEET_BERRY_BUSH
+NO DOC BLOCK: cn.nukkit.block.BlockID Field TURTLE_EGG
+MISSING @SINCE TAG: cn.nukkit.item.ItemTool Field TYPE_HANDS_ONLY
+NO DOC BLOCK: cn.nukkit.network.protocol.TextPacket Field TYPE_JSON
+NO DOC BLOCK: cn.nukkit.block.BlockID Field WITHER_ROSE
+NO DOC BLOCK: cn.nukkit.block.BlockID Field WOOD_BARK

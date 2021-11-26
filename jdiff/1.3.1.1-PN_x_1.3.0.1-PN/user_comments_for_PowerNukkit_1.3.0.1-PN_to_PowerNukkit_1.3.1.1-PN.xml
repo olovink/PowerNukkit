@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<comments
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xsi:noNamespaceSchemaLocation='comments.xsd'
+  name="PowerNukkit_1.3.0.1-PN_to_PowerNukkit_1.3.1.1-PN"
+  jdversion="2.0.0-PN">
+
+<!-- This file contains comments for a JDiff report. -->
+<!-- It is used only in generating the report, and does not need to ship with the final report. -->
+
+<!-- The id attribute in an identifier element identifies the change as noted in the report. -->
+<!-- An id has the form package[.class[.[ctor|method|field].signature]], where [] indicates optional text. -->
+<!-- A comment element can have multiple identifier elements, which will -->
+<!-- will cause the same text to appear at each place in the report, but -->
+<!-- will be converted to separate comments when the comments file is used. -->
+<!-- HTML tags in the text field will appear in the report. -->
+<!-- You also need to close p HTML elements, used for paragraphs - see the top-level documentation. -->
+<comment>
+  <identifier id="cn.nukkit"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.Player"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.Player.enchantTransaction"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityHoglin"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityPiglin"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityZoglin"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityStrider"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.event.inventory"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.event.inventory.EnchantItemEvent"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.EnchantInventory"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.EnchantInventory.ENCHANT_INPUT_ITEM_UI_SLOT"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.EnchantInventory.ENCHANT_REAGENT_UI_SLOT"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.EnchantInventory.getInputSlot_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.EnchantInventory.getOutputSlot_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.EnchantInventory.getReagentSlot_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.transaction"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.transaction.EnchantTransaction"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.transaction.action"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.transaction.action.EnchantingAction"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.ChunkSection"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.ChunkSection.setContentVersion_added(int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.anvil"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.anvil.ChunkSection"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.anvil.ChunkSection.setContentVersion_added(int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.generic"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.generic.EmptyChunkSection"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.generic.EmptyChunkSection.getContentVersion_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.generic.EmptyChunkSection.setContentVersion_added(int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.InventoryTransactionPacket"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.InventoryTransactionPacket.isCraftingPart"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.InventoryTransactionPacket.isEnchantingPart"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.PlayerEnchantOptionsPacket.EnchantOptionData"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.PlayerEnchantOptionsPacket.EnchantOptionData.getMinLevel_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+
+</comments>

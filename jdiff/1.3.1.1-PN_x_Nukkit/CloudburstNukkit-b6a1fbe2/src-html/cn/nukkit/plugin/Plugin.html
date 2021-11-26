@@ -1,0 +1,352 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package cn.nukkit.plugin;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>import cn.nukkit.Server;<a name="line.3"></a>
+<span class="sourceLineNo">004</span>import cn.nukkit.command.CommandExecutor;<a name="line.4"></a>
+<span class="sourceLineNo">005</span>import cn.nukkit.utils.Config;<a name="line.5"></a>
+<span class="sourceLineNo">006</span><a name="line.6"></a>
+<span class="sourceLineNo">007</span>import java.io.File;<a name="line.7"></a>
+<span class="sourceLineNo">008</span>import java.io.InputStream;<a name="line.8"></a>
+<span class="sourceLineNo">009</span><a name="line.9"></a>
+<span class="sourceLineNo">010</span>/**<a name="line.10"></a>
+<span class="sourceLineNo">011</span> * 所有Nukkit插件必须实现的接口。&lt;br&gt;<a name="line.11"></a>
+<span class="sourceLineNo">012</span> * An interface what must be implemented by all Nukkit plugins.<a name="line.12"></a>
+<span class="sourceLineNo">013</span> *<a name="line.13"></a>
+<span class="sourceLineNo">014</span> * &lt;p&gt;对于插件作者，我们建议让插件主类继承{@link cn.nukkit.plugin.PluginBase}类，而不是实现这个接口。&lt;br&gt;<a name="line.14"></a>
+<span class="sourceLineNo">015</span> * For plugin developers: it's recommended to use {@link cn.nukkit.plugin.PluginBase} for an actual plugin<a name="line.15"></a>
+<span class="sourceLineNo">016</span> * instead of implement this interface.&lt;/p&gt;<a name="line.16"></a>
+<span class="sourceLineNo">017</span> *<a name="line.17"></a>
+<span class="sourceLineNo">018</span> * @author MagicDroidX(code) @ Nukkit Project<a name="line.18"></a>
+<span class="sourceLineNo">019</span> * @author 粉鞋大妈(javadoc) @ Nukkit Project<a name="line.19"></a>
+<span class="sourceLineNo">020</span> * @see cn.nukkit.plugin.PluginBase<a name="line.20"></a>
+<span class="sourceLineNo">021</span> * @see cn.nukkit.plugin.PluginDescription<a name="line.21"></a>
+<span class="sourceLineNo">022</span> * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.22"></a>
+<span class="sourceLineNo">023</span> */<a name="line.23"></a>
+<span class="sourceLineNo">024</span>public interface Plugin extends CommandExecutor {<a name="line.24"></a>
+<span class="sourceLineNo">025</span>    /**<a name="line.25"></a>
+<span class="sourceLineNo">026</span>     * 在一个Nukkit插件被加载时调用的方法。这个方法会在{@link Plugin#onEnable()}之前调用。&lt;br&gt;<a name="line.26"></a>
+<span class="sourceLineNo">027</span>     * Called when a Nukkit plugin is loaded, before {@link Plugin#onEnable()} .<a name="line.27"></a>
+<span class="sourceLineNo">028</span>     *<a name="line.28"></a>
+<span class="sourceLineNo">029</span>     * &lt;p&gt;应该填写加载插件时需要作出的动作。例如：初始化数组、初始化数据库连接。&lt;br&gt;<a name="line.29"></a>
+<span class="sourceLineNo">030</span>     * Use this to init a Nukkit plugin, such as init arrays or init database connections.&lt;/p&gt;<a name="line.30"></a>
+<span class="sourceLineNo">031</span>     *<a name="line.31"></a>
+<span class="sourceLineNo">032</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.32"></a>
+<span class="sourceLineNo">033</span>     */<a name="line.33"></a>
+<span class="sourceLineNo">034</span>    void onLoad();<a name="line.34"></a>
+<span class="sourceLineNo">035</span><a name="line.35"></a>
+<span class="sourceLineNo">036</span>    /**<a name="line.36"></a>
+<span class="sourceLineNo">037</span>     * 在一个Nukkit插件被启用时调用的方法。&lt;br&gt;<a name="line.37"></a>
+<span class="sourceLineNo">038</span>     * Called when a Nukkit plugin is enabled.<a name="line.38"></a>
+<span class="sourceLineNo">039</span>     *<a name="line.39"></a>
+<span class="sourceLineNo">040</span>     * &lt;p&gt;应该填写插件启用时需要作出的动作。例如：读取配置文件、读取资源、连接数据库。&lt;br&gt;<a name="line.40"></a>
+<span class="sourceLineNo">041</span>     * Use this to open config files, open resources, connect databases.&lt;/p&gt;<a name="line.41"></a>
+<span class="sourceLineNo">042</span>     *<a name="line.42"></a>
+<span class="sourceLineNo">043</span>     * &lt;p&gt;注意到可能存在的插件管理器插件，这个方法在插件多次重启时可能被调用多次。&lt;br&gt;<a name="line.43"></a>
+<span class="sourceLineNo">044</span>     * Notes that there may be plugin manager plugins,<a name="line.44"></a>
+<span class="sourceLineNo">045</span>     * this method can be called many times when a plugin is restarted many times.&lt;/p&gt;<a name="line.45"></a>
+<span class="sourceLineNo">046</span>     *<a name="line.46"></a>
+<span class="sourceLineNo">047</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.47"></a>
+<span class="sourceLineNo">048</span>     */<a name="line.48"></a>
+<span class="sourceLineNo">049</span>    void onEnable();<a name="line.49"></a>
+<span class="sourceLineNo">050</span><a name="line.50"></a>
+<span class="sourceLineNo">051</span>    /**<a name="line.51"></a>
+<span class="sourceLineNo">052</span>     * 返回这个Nukkit插件是否已启用。&lt;br&gt;<a name="line.52"></a>
+<span class="sourceLineNo">053</span>     * Whether this Nukkit plugin is enabled.<a name="line.53"></a>
+<span class="sourceLineNo">054</span>     *<a name="line.54"></a>
+<span class="sourceLineNo">055</span>     * @return 这个插件是否已经启用。&lt;br&gt;Whether this plugin is enabled.<a name="line.55"></a>
+<span class="sourceLineNo">056</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.56"></a>
+<span class="sourceLineNo">057</span>     */<a name="line.57"></a>
+<span class="sourceLineNo">058</span>    boolean isEnabled();<a name="line.58"></a>
+<span class="sourceLineNo">059</span><a name="line.59"></a>
+<span class="sourceLineNo">060</span>    /**<a name="line.60"></a>
+<span class="sourceLineNo">061</span>     * 在一个Nukkit插件被停用时调用的方法。&lt;br&gt;<a name="line.61"></a>
+<span class="sourceLineNo">062</span>     * Called when a Nukkit plugin is disabled.<a name="line.62"></a>
+<span class="sourceLineNo">063</span>     *<a name="line.63"></a>
+<span class="sourceLineNo">064</span>     * &lt;p&gt;应该填写插件停用时需要作出的动作。例如：关闭数据库，断开资源。&lt;br&gt;<a name="line.64"></a>
+<span class="sourceLineNo">065</span>     * Use this to free open things and finish actions,<a name="line.65"></a>
+<span class="sourceLineNo">066</span>     * such as disconnecting databases and close resources.&lt;/p&gt;<a name="line.66"></a>
+<span class="sourceLineNo">067</span>     *<a name="line.67"></a>
+<span class="sourceLineNo">068</span>     * &lt;p&gt;注意到可能存在的插件管理器插件，这个方法在插件多次重启时可能被调用多次。&lt;br&gt;<a name="line.68"></a>
+<span class="sourceLineNo">069</span>     * Notes that there may be plugin manager plugins,<a name="line.69"></a>
+<span class="sourceLineNo">070</span>     * this method can be called many times when a plugin is restarted many times.&lt;/p&gt;<a name="line.70"></a>
+<span class="sourceLineNo">071</span>     *<a name="line.71"></a>
+<span class="sourceLineNo">072</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.72"></a>
+<span class="sourceLineNo">073</span>     */<a name="line.73"></a>
+<span class="sourceLineNo">074</span>    void onDisable();<a name="line.74"></a>
+<span class="sourceLineNo">075</span><a name="line.75"></a>
+<span class="sourceLineNo">076</span>    /**<a name="line.76"></a>
+<span class="sourceLineNo">077</span>     * 返回这个Nukkit插件是否已停用。&lt;br&gt;<a name="line.77"></a>
+<span class="sourceLineNo">078</span>     * Whether this Nukkit plugin is disabled.<a name="line.78"></a>
+<span class="sourceLineNo">079</span>     *<a name="line.79"></a>
+<span class="sourceLineNo">080</span>     * @return 这个插件是否已经停用。&lt;br&gt;Whether this plugin is disabled.<a name="line.80"></a>
+<span class="sourceLineNo">081</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.81"></a>
+<span class="sourceLineNo">082</span>     */<a name="line.82"></a>
+<span class="sourceLineNo">083</span>    boolean isDisabled();<a name="line.83"></a>
+<span class="sourceLineNo">084</span><a name="line.84"></a>
+<span class="sourceLineNo">085</span>    /**<a name="line.85"></a>
+<span class="sourceLineNo">086</span>     * 返回这个Nukkit插件的数据文件夹。&lt;br&gt;<a name="line.86"></a>
+<span class="sourceLineNo">087</span>     * The data folder of this Nukkit plugin.<a name="line.87"></a>
+<span class="sourceLineNo">088</span>     *<a name="line.88"></a>
+<span class="sourceLineNo">089</span>     * &lt;p&gt;一般情况下，数据文件夹名字与插件名字相同，而且都放在nukkit安装目录下的plugins文件夹里。&lt;br&gt;<a name="line.89"></a>
+<span class="sourceLineNo">090</span>     * Under normal circumstances, the data folder has the same name with the plugin,<a name="line.90"></a>
+<span class="sourceLineNo">091</span>     * and is placed in the 'plugins' folder inside the nukkit installation directory.&lt;/p&gt;<a name="line.91"></a>
+<span class="sourceLineNo">092</span>     *<a name="line.92"></a>
+<span class="sourceLineNo">093</span>     * @return 这个插件的数据文件夹。&lt;br&gt;The data folder of this plugin.<a name="line.93"></a>
+<span class="sourceLineNo">094</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.94"></a>
+<span class="sourceLineNo">095</span>     */<a name="line.95"></a>
+<span class="sourceLineNo">096</span>    File getDataFolder();<a name="line.96"></a>
+<span class="sourceLineNo">097</span><a name="line.97"></a>
+<span class="sourceLineNo">098</span>    /**<a name="line.98"></a>
+<span class="sourceLineNo">099</span>     * 返回描述这个Nukkit插件的{@link PluginDescription}对象。&lt;br&gt;<a name="line.99"></a>
+<span class="sourceLineNo">100</span>     * The description this Nukkit plugin as a {@link PluginDescription} object.<a name="line.100"></a>
+<span class="sourceLineNo">101</span>     *<a name="line.101"></a>
+<span class="sourceLineNo">102</span>     * &lt;p&gt;对于jar格式的Nukkit插件，插件的描述在plugin.yml文件内定义。&lt;br&gt;<a name="line.102"></a>
+<span class="sourceLineNo">103</span>     * For jar-packed Nukkit plugins, the description is defined in the 'plugin.yml' file.&lt;/p&gt;<a name="line.103"></a>
+<span class="sourceLineNo">104</span>     *<a name="line.104"></a>
+<span class="sourceLineNo">105</span>     * @return 这个插件的描述。&lt;br&gt;A description of this plugin.<a name="line.105"></a>
+<span class="sourceLineNo">106</span>     * @see cn.nukkit.plugin.PluginDescription<a name="line.106"></a>
+<span class="sourceLineNo">107</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.107"></a>
+<span class="sourceLineNo">108</span>     */<a name="line.108"></a>
+<span class="sourceLineNo">109</span>    PluginDescription getDescription();<a name="line.109"></a>
+<span class="sourceLineNo">110</span><a name="line.110"></a>
+<span class="sourceLineNo">111</span>    /**<a name="line.111"></a>
+<span class="sourceLineNo">112</span>     * 读取这个插件特定的资源文件，并返回为{@code InputStream}对象。&lt;br&gt;<a name="line.112"></a>
+<span class="sourceLineNo">113</span>     * Reads a resource of this plugin, and returns as an {@code InputStream} object.<a name="line.113"></a>
+<span class="sourceLineNo">114</span>     *<a name="line.114"></a>
+<span class="sourceLineNo">115</span>     * &lt;p&gt;对于jar格式的Nukkit插件，Nukkit会在jar包内的资源文件夹(一般为resources文件夹)寻找资源文件。&lt;br&gt;<a name="line.115"></a>
+<span class="sourceLineNo">116</span>     * For jar-packed Nukkit plugins, Nukkit will look for your resource file in the resources folder,<a name="line.116"></a>
+<span class="sourceLineNo">117</span>     * which is normally named 'resources' and placed in plugin jar file.&lt;/p&gt;<a name="line.117"></a>
+<span class="sourceLineNo">118</span>     *<a name="line.118"></a>
+<span class="sourceLineNo">119</span>     * &lt;p&gt;当你需要把一个文件的所有内容读取为字符串，可以使用{@link cn.nukkit.utils.Utils#readFile}函数，<a name="line.119"></a>
+<span class="sourceLineNo">120</span>     * 来从{@code InputStream}读取所有内容为字符串。例如：&lt;br&gt;<a name="line.120"></a>
+<span class="sourceLineNo">121</span>     * When you need to read the whole file content as a String, you can use {@link cn.nukkit.utils.Utils#readFile}<a name="line.121"></a>
+<span class="sourceLineNo">122</span>     * to read from a {@code InputStream} and get whole content as a String. For example:&lt;/p&gt;<a name="line.122"></a>
+<span class="sourceLineNo">123</span>     * &lt;p&gt;&lt;code&gt;String string = Utils.readFile(this.getResource("string.txt"));&lt;/code&gt;&lt;/p&gt;<a name="line.123"></a>
+<span class="sourceLineNo">124</span>     *<a name="line.124"></a>
+<span class="sourceLineNo">125</span>     * @param filename 要读取的资源文件名字。&lt;br&gt;The name of the resource file to read.<a name="line.125"></a>
+<span class="sourceLineNo">126</span>     * @return 读取的资源文件的 {@code InputStream}对象。若错误会返回{@code null}&lt;br&gt;<a name="line.126"></a>
+<span class="sourceLineNo">127</span>     * The resource as an {@code InputStream} object, or {@code null} when an error occurred.<a name="line.127"></a>
+<span class="sourceLineNo">128</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.128"></a>
+<span class="sourceLineNo">129</span>     */<a name="line.129"></a>
+<span class="sourceLineNo">130</span>    InputStream getResource(String filename);<a name="line.130"></a>
+<span class="sourceLineNo">131</span><a name="line.131"></a>
+<span class="sourceLineNo">132</span>    /**<a name="line.132"></a>
+<span class="sourceLineNo">133</span>     * 保存这个Nukkit插件的资源。&lt;br&gt;<a name="line.133"></a>
+<span class="sourceLineNo">134</span>     * Saves the resource of this plugin.<a name="line.134"></a>
+<span class="sourceLineNo">135</span>     *<a name="line.135"></a>
+<span class="sourceLineNo">136</span>     * &lt;p&gt;对于jar格式的Nukkit插件，Nukkit会在jar包内的资源文件夹寻找资源文件，然后保存到数据文件夹。&lt;br&gt;<a name="line.136"></a>
+<span class="sourceLineNo">137</span>     * For jar-packed Nukkit plugins, Nukkit will look for your resource file in the resources folder,<a name="line.137"></a>
+<span class="sourceLineNo">138</span>     * which is normally named 'resources' and placed in plugin jar file, and copy it into data folder.&lt;/p&gt;<a name="line.138"></a>
+<span class="sourceLineNo">139</span>     *<a name="line.139"></a>
+<span class="sourceLineNo">140</span>     * &lt;p&gt;这个函数通常用来在插件被加载(load)时，保存默认的资源文件。这样插件在启用(enable)时不会错误读取空的资源文件，<a name="line.140"></a>
+<span class="sourceLineNo">141</span>     * 用户也无需从开发者处手动下载资源文件后再使用插件。&lt;br&gt;<a name="line.141"></a>
+<span class="sourceLineNo">142</span>     * This is usually used to save the default plugin resource when the plugin is LOADED .If this is used,<a name="line.142"></a>
+<span class="sourceLineNo">143</span>     * it won't happen to load an empty resource when plugin is ENABLED, and plugin users are not required to get<a name="line.143"></a>
+<span class="sourceLineNo">144</span>     * default resources from the developer and place it manually. &lt;/p&gt;<a name="line.144"></a>
+<span class="sourceLineNo">145</span>     *<a name="line.145"></a>
+<span class="sourceLineNo">146</span>     * &lt;p&gt;如果需要替换已存在的资源文件，建议使用{@link cn.nukkit.plugin.Plugin#saveResource(String, boolean)}&lt;br&gt;<a name="line.146"></a>
+<span class="sourceLineNo">147</span>     * If you need to REPLACE an existing resource file, it's recommended<a name="line.147"></a>
+<span class="sourceLineNo">148</span>     * to use {@link cn.nukkit.plugin.Plugin#saveResource(String, boolean)}.&lt;/p&gt;<a name="line.148"></a>
+<span class="sourceLineNo">149</span>     *<a name="line.149"></a>
+<span class="sourceLineNo">150</span>     * @param filename 要保存的资源文件名字。&lt;br&gt;The name of the resource file to save.<a name="line.150"></a>
+<span class="sourceLineNo">151</span>     * @return 保存是否成功。&lt;br&gt;true if the saving action is successful.<a name="line.151"></a>
+<span class="sourceLineNo">152</span>     * @see cn.nukkit.plugin.Plugin#saveDefaultConfig<a name="line.152"></a>
+<span class="sourceLineNo">153</span>     * @see cn.nukkit.plugin.Plugin#saveResource(String, boolean)<a name="line.153"></a>
+<span class="sourceLineNo">154</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.154"></a>
+<span class="sourceLineNo">155</span>     */<a name="line.155"></a>
+<span class="sourceLineNo">156</span>    boolean saveResource(String filename);<a name="line.156"></a>
+<span class="sourceLineNo">157</span><a name="line.157"></a>
+<span class="sourceLineNo">158</span>    /**<a name="line.158"></a>
+<span class="sourceLineNo">159</span>     * 保存或替换这个Nukkit插件的资源。&lt;br&gt;<a name="line.159"></a>
+<span class="sourceLineNo">160</span>     * Saves or replaces the resource of this plugin.<a name="line.160"></a>
+<span class="sourceLineNo">161</span>     *<a name="line.161"></a>
+<span class="sourceLineNo">162</span>     * &lt;p&gt;对于jar格式的Nukkit插件，Nukkit会在jar包内的资源文件夹寻找资源文件，然后保存到数据文件夹。&lt;br&gt;<a name="line.162"></a>
+<span class="sourceLineNo">163</span>     * For jar-packed Nukkit plugins, Nukkit will look for your resource file in the resources folder,<a name="line.163"></a>
+<span class="sourceLineNo">164</span>     * which is normally named 'resources' and placed in plugin jar file, and copy it into data folder.&lt;/p&gt;<a name="line.164"></a>
+<span class="sourceLineNo">165</span>     *<a name="line.165"></a>
+<span class="sourceLineNo">166</span>     * &lt;p&gt;如果需要保存默认的资源文件，建议使用{@link cn.nukkit.plugin.Plugin#saveResource(String)}&lt;br&gt;<a name="line.166"></a>
+<span class="sourceLineNo">167</span>     * If you need to SAVE DEFAULT resource file, it's recommended<a name="line.167"></a>
+<span class="sourceLineNo">168</span>     * to use {@link cn.nukkit.plugin.Plugin#saveResource(String)}.&lt;/p&gt;<a name="line.168"></a>
+<span class="sourceLineNo">169</span>     *<a name="line.169"></a>
+<span class="sourceLineNo">170</span>     * @param filename 要保存的资源文件名字。&lt;br&gt;The name of the resource file to save.<a name="line.170"></a>
+<span class="sourceLineNo">171</span>     * @param replace  是否替换目标文件。&lt;br&gt;if true, Nukkit will replace the target resource file.<a name="line.171"></a>
+<span class="sourceLineNo">172</span>     * @return 保存是否成功。&lt;br&gt;true if the saving action is successful.<a name="line.172"></a>
+<span class="sourceLineNo">173</span>     * @see cn.nukkit.plugin.Plugin#saveResource(String)<a name="line.173"></a>
+<span class="sourceLineNo">174</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.174"></a>
+<span class="sourceLineNo">175</span>     */<a name="line.175"></a>
+<span class="sourceLineNo">176</span><a name="line.176"></a>
+<span class="sourceLineNo">177</span>    boolean saveResource(String filename, boolean replace);<a name="line.177"></a>
+<span class="sourceLineNo">178</span><a name="line.178"></a>
+<span class="sourceLineNo">179</span>    boolean saveResource(String filename, String outputName, boolean replace);<a name="line.179"></a>
+<span class="sourceLineNo">180</span><a name="line.180"></a>
+<span class="sourceLineNo">181</span>    /**<a name="line.181"></a>
+<span class="sourceLineNo">182</span>     * 返回这个Nukkit插件配置文件的{@link cn.nukkit.utils.Config}对象。&lt;br&gt;<a name="line.182"></a>
+<span class="sourceLineNo">183</span>     * The config file this Nukkit plugin as a {@link cn.nukkit.utils.Config} object.<a name="line.183"></a>
+<span class="sourceLineNo">184</span>     *<a name="line.184"></a>
+<span class="sourceLineNo">185</span>     * &lt;p&gt;一般地，插件的配置保存在数据文件夹下的config.yml文件。&lt;br&gt;<a name="line.185"></a>
+<span class="sourceLineNo">186</span>     * Normally, the plugin config is saved in the 'config.yml' file in its data folder.&lt;/p&gt;<a name="line.186"></a>
+<span class="sourceLineNo">187</span>     *<a name="line.187"></a>
+<span class="sourceLineNo">188</span>     * @return 插件的配置文件。&lt;br&gt;The configuration of this plugin.<a name="line.188"></a>
+<span class="sourceLineNo">189</span>     * @see cn.nukkit.plugin.Plugin#getDataFolder<a name="line.189"></a>
+<span class="sourceLineNo">190</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.190"></a>
+<span class="sourceLineNo">191</span>     */<a name="line.191"></a>
+<span class="sourceLineNo">192</span>    Config getConfig();<a name="line.192"></a>
+<span class="sourceLineNo">193</span><a name="line.193"></a>
+<span class="sourceLineNo">194</span>    /**<a name="line.194"></a>
+<span class="sourceLineNo">195</span>     * 保存这个Nukkit插件的配置文件。&lt;br&gt;<a name="line.195"></a>
+<span class="sourceLineNo">196</span>     * Saves the plugin config.<a name="line.196"></a>
+<span class="sourceLineNo">197</span>     *<a name="line.197"></a>
+<span class="sourceLineNo">198</span>     * @see cn.nukkit.plugin.Plugin#getDataFolder<a name="line.198"></a>
+<span class="sourceLineNo">199</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.199"></a>
+<span class="sourceLineNo">200</span>     */<a name="line.200"></a>
+<span class="sourceLineNo">201</span>    void saveConfig();<a name="line.201"></a>
+<span class="sourceLineNo">202</span><a name="line.202"></a>
+<span class="sourceLineNo">203</span>    /**<a name="line.203"></a>
+<span class="sourceLineNo">204</span>     * 保存这个Nukkit插件的默认配置文件。&lt;br&gt;<a name="line.204"></a>
+<span class="sourceLineNo">205</span>     * Saves the DEFAULT plugin config.<a name="line.205"></a>
+<span class="sourceLineNo">206</span>     *<a name="line.206"></a>
+<span class="sourceLineNo">207</span>     * &lt;p&gt;执行这个函数时，Nukkit会在资源文件夹内寻找开发者配置好的默认配置文件config.yml，然后保存在数据文件夹。<a name="line.207"></a>
+<span class="sourceLineNo">208</span>     * 如果数据文件夹已经有一个config.yml文件，Nukkit不会替换这个文件。&lt;br&gt;<a name="line.208"></a>
+<span class="sourceLineNo">209</span>     * When this is used, Nukkit will look for the default 'config.yml' file which is configured by plugin developer<a name="line.209"></a>
+<span class="sourceLineNo">210</span>     * and save it to the data folder. If a config.yml file exists in the data folder, Nukkit won't replace it.&lt;/p&gt;<a name="line.210"></a>
+<span class="sourceLineNo">211</span>     *<a name="line.211"></a>
+<span class="sourceLineNo">212</span>     * &lt;p&gt;这个函数通常用来在插件被加载(load)时，保存默认的配置文件。这样插件在启用(enable)时不会错误读取空的配置文件，<a name="line.212"></a>
+<span class="sourceLineNo">213</span>     * 用户也无需从开发者处手动下载配置文件保存后再使用插件。&lt;br&gt;<a name="line.213"></a>
+<span class="sourceLineNo">214</span>     * This is usually used to save the default plugin config when the plugin is LOADED .If this is used,<a name="line.214"></a>
+<span class="sourceLineNo">215</span>     * it won't happen to load an empty config when plugin is ENABLED, and plugin users are not required to get<a name="line.215"></a>
+<span class="sourceLineNo">216</span>     * default config from the developer and place it manually. &lt;/p&gt;<a name="line.216"></a>
+<span class="sourceLineNo">217</span>     *<a name="line.217"></a>
+<span class="sourceLineNo">218</span>     * @see cn.nukkit.plugin.Plugin#getDataFolder<a name="line.218"></a>
+<span class="sourceLineNo">219</span>     * @see cn.nukkit.plugin.Plugin#saveResource<a name="line.219"></a>
+<span class="sourceLineNo">220</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.220"></a>
+<span class="sourceLineNo">221</span>     */<a name="line.221"></a>
+<span class="sourceLineNo">222</span>    void saveDefaultConfig();<a name="line.222"></a>
+<span class="sourceLineNo">223</span><a name="line.223"></a>
+<span class="sourceLineNo">224</span>    /**<a name="line.224"></a>
+<span class="sourceLineNo">225</span>     * 重新读取这个Nukkit插件的默认配置文件。&lt;br&gt;<a name="line.225"></a>
+<span class="sourceLineNo">226</span>     * Reloads the plugin config.<a name="line.226"></a>
+<span class="sourceLineNo">227</span>     *<a name="line.227"></a>
+<span class="sourceLineNo">228</span>     * &lt;p&gt;执行这个函数时，Nukkit会从数据文件夹中的config.yml文件重新加载配置。<a name="line.228"></a>
+<span class="sourceLineNo">229</span>     * 这样用户在调整插件配置后，无需重启就可以马上使用新的配置。&lt;br&gt;<a name="line.229"></a>
+<span class="sourceLineNo">230</span>     * By using this, Nukkit will reload the config from 'config.yml' file, then it isn't necessary to restart<a name="line.230"></a>
+<span class="sourceLineNo">231</span>     * for plugin user who changes the config and needs to use new config at once.&lt;/p&gt;<a name="line.231"></a>
+<span class="sourceLineNo">232</span>     *<a name="line.232"></a>
+<span class="sourceLineNo">233</span>     * @see cn.nukkit.plugin.Plugin#getDataFolder<a name="line.233"></a>
+<span class="sourceLineNo">234</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.234"></a>
+<span class="sourceLineNo">235</span>     */<a name="line.235"></a>
+<span class="sourceLineNo">236</span>    void reloadConfig();<a name="line.236"></a>
+<span class="sourceLineNo">237</span><a name="line.237"></a>
+<span class="sourceLineNo">238</span>    /**<a name="line.238"></a>
+<span class="sourceLineNo">239</span>     * 返回运行这个插件的服务器的{@link cn.nukkit.Server}对象。&lt;br&gt;<a name="line.239"></a>
+<span class="sourceLineNo">240</span>     * Gets the server which is running this plugin, and returns as a {@link cn.nukkit.Server} object.<a name="line.240"></a>
+<span class="sourceLineNo">241</span>     *<a name="line.241"></a>
+<span class="sourceLineNo">242</span>     * @see cn.nukkit.Server<a name="line.242"></a>
+<span class="sourceLineNo">243</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.243"></a>
+<span class="sourceLineNo">244</span>     */<a name="line.244"></a>
+<span class="sourceLineNo">245</span>    Server getServer();<a name="line.245"></a>
+<span class="sourceLineNo">246</span><a name="line.246"></a>
+<span class="sourceLineNo">247</span>    /**<a name="line.247"></a>
+<span class="sourceLineNo">248</span>     * 返回这个插件的名字。&lt;br&gt;<a name="line.248"></a>
+<span class="sourceLineNo">249</span>     * Returns the name of this plugin.<a name="line.249"></a>
+<span class="sourceLineNo">250</span>     *<a name="line.250"></a>
+<span class="sourceLineNo">251</span>     * &lt;p&gt;Nukkit会从已经读取的插件描述中获取插件的名字。&lt;br&gt;<a name="line.251"></a>
+<span class="sourceLineNo">252</span>     * Nukkit will read plugin name from plugin description.&lt;/p&gt;<a name="line.252"></a>
+<span class="sourceLineNo">253</span>     *<a name="line.253"></a>
+<span class="sourceLineNo">254</span>     * @see cn.nukkit.plugin.Plugin#getDescription<a name="line.254"></a>
+<span class="sourceLineNo">255</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.255"></a>
+<span class="sourceLineNo">256</span>     */<a name="line.256"></a>
+<span class="sourceLineNo">257</span>    String getName();<a name="line.257"></a>
+<span class="sourceLineNo">258</span><a name="line.258"></a>
+<span class="sourceLineNo">259</span>    /**<a name="line.259"></a>
+<span class="sourceLineNo">260</span>     * 返回这个插件的日志记录器为{@link cn.nukkit.plugin.PluginLogger}对象。&lt;br&gt;<a name="line.260"></a>
+<span class="sourceLineNo">261</span>     * Returns the logger of this plugin as a {@link cn.nukkit.plugin.PluginLogger} object.<a name="line.261"></a>
+<span class="sourceLineNo">262</span>     *<a name="line.262"></a>
+<span class="sourceLineNo">263</span>     * &lt;p&gt;使用日志记录器，你可以在控制台和日志文件输出信息。&lt;br&gt;<a name="line.263"></a>
+<span class="sourceLineNo">264</span>     * You can use a plugin logger to output messages to the console and log file.&lt;/p&gt;<a name="line.264"></a>
+<span class="sourceLineNo">265</span>     *<a name="line.265"></a>
+<span class="sourceLineNo">266</span>     * @see cn.nukkit.plugin.PluginLogger<a name="line.266"></a>
+<span class="sourceLineNo">267</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.267"></a>
+<span class="sourceLineNo">268</span>     */<a name="line.268"></a>
+<span class="sourceLineNo">269</span>    PluginLogger getLogger();<a name="line.269"></a>
+<span class="sourceLineNo">270</span><a name="line.270"></a>
+<span class="sourceLineNo">271</span>    /**<a name="line.271"></a>
+<span class="sourceLineNo">272</span>     * 返回这个插件的加载器为{@link cn.nukkit.plugin.PluginLoader}对象。&lt;br&gt;<a name="line.272"></a>
+<span class="sourceLineNo">273</span>     * Returns the loader of this plugin as a {@link cn.nukkit.plugin.PluginLoader} object.<a name="line.273"></a>
+<span class="sourceLineNo">274</span>     *<a name="line.274"></a>
+<span class="sourceLineNo">275</span>     * @see cn.nukkit.plugin.PluginLoader<a name="line.275"></a>
+<span class="sourceLineNo">276</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.276"></a>
+<span class="sourceLineNo">277</span>     */<a name="line.277"></a>
+<span class="sourceLineNo">278</span>    PluginLoader getPluginLoader();<a name="line.278"></a>
+<span class="sourceLineNo">279</span><a name="line.279"></a>
+<span class="sourceLineNo">280</span>}<a name="line.280"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>
