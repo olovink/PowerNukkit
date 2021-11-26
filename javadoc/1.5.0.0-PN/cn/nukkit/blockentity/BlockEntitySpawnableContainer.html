@@ -1,11 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- NewPage -->
-<html lang="en">
+<html lang="pt">
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>BlockEntitySpawnableContainer (PowerNukkit 1.5.0.0-PN API)</title>
-<meta name="date" content="2021-06-26">
+<meta name="date" content="2021-11-26">
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
 </head>
@@ -143,7 +143,7 @@ var activeTableTab = "activeTableTab";
 </dl>
 <hr>
 <br>
-<pre>public abstract class <span class="typeNameLabel">BlockEntitySpawnableContainer</span>
+<pre>public abstract class <a href="../../../src-html/cn/nukkit/blockentity/BlockEntitySpawnableContainer.html#line.16">BlockEntitySpawnableContainer</a>
 extends <a href="../../../cn/nukkit/blockentity/BlockEntitySpawnable.html" title="class in cn.nukkit.blockentity">BlockEntitySpawnable</a>
 implements <a href="../../../cn/nukkit/inventory/InventoryHolder.html" title="interface in cn.nukkit.inventory">InventoryHolder</a>, <a href="../../../cn/nukkit/blockentity/BlockEntityContainer.html" title="interface in cn.nukkit.blockentity">BlockEntityContainer</a></pre>
 </li>
@@ -229,8 +229,7 @@ implements <a href="../../../cn/nukkit/inventory/InventoryHolder.html" title="in
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/blockentity/BlockEntitySpawnableContainer.html#getItem-int-">getItem</a></span>(int&nbsp;index)</code>
-<div class="block">返回一个存储在容器里的物品的<code>Item</code>对象。<br>
- Returns an item that stores in this container, as an <code>Item</code> object.</div>
+<div class="block">返回一个存储在容器里的物品的<code>Item</code>对象。</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -253,8 +252,7 @@ implements <a href="../../../cn/nukkit/inventory/InventoryHolder.html" title="in
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/blockentity/BlockEntitySpawnableContainer.html#setItem-int-cn.nukkit.item.Item-">setItem</a></span>(int&nbsp;index,
        <a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;item)</code>
-<div class="block">把一个物品存储进容器。<br>
- Sets or stores this item into this container.</div>
+<div class="block">把一个物品存储进容器。</div>
 </td>
 </tr>
 </table>
@@ -334,7 +332,7 @@ implements <a href="../../../cn/nukkit/inventory/InventoryHolder.html" title="in
 <ul class="blockListLast">
 <li class="blockList">
 <h4>inventory</h4>
-<pre>protected&nbsp;<a href="../../../cn/nukkit/inventory/ContainerInventory.html" title="class in cn.nukkit.inventory">ContainerInventory</a> inventory</pre>
+<pre>protected&nbsp;<a href="../../../cn/nukkit/inventory/ContainerInventory.html" title="class in cn.nukkit.inventory">ContainerInventory</a> <a href="../../../src-html/cn/nukkit/blockentity/BlockEntitySpawnableContainer.html#line.17">inventory</a></pre>
 </li>
 </ul>
 </li>
@@ -351,7 +349,7 @@ implements <a href="../../../cn/nukkit/inventory/InventoryHolder.html" title="in
 <ul class="blockListLast">
 <li class="blockList">
 <h4>BlockEntitySpawnableContainer</h4>
-<pre>public&nbsp;BlockEntitySpawnableContainer(<a href="../../../cn/nukkit/level/format/FullChunk.html" title="interface in cn.nukkit.level.format">FullChunk</a>&nbsp;chunk,
+<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/blockentity/BlockEntitySpawnableContainer.html#line.19">BlockEntitySpawnableContainer</a>(<a href="../../../cn/nukkit/level/format/FullChunk.html" title="interface in cn.nukkit.level.format">FullChunk</a>&nbsp;chunk,
                                      <a href="../../../cn/nukkit/nbt/tag/CompoundTag.html" title="class in cn.nukkit.nbt.tag">CompoundTag</a>&nbsp;nbt)</pre>
 </li>
 </ul>
@@ -369,7 +367,7 @@ implements <a href="../../../cn/nukkit/inventory/InventoryHolder.html" title="in
 <ul class="blockList">
 <li class="blockList">
 <h4>initBlockEntity</h4>
-<pre>protected&nbsp;void&nbsp;initBlockEntity()</pre>
+<pre>protected&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/blockentity/BlockEntitySpawnableContainer.html#line.24">initBlockEntity</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../cn/nukkit/blockentity/BlockEntitySpawnable.html#initBlockEntity--">initBlockEntity</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/blockentity/BlockEntitySpawnable.html" title="class in cn.nukkit.blockentity">BlockEntitySpawnable</a></code></dd>
@@ -382,7 +380,7 @@ implements <a href="../../../cn/nukkit/inventory/InventoryHolder.html" title="in
 <ul class="blockList">
 <li class="blockList">
 <h4>close</h4>
-<pre>public&nbsp;void&nbsp;close()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/blockentity/BlockEntitySpawnableContainer.html#line.39">close</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../cn/nukkit/blockentity/BlockEntity.html#close--">close</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/blockentity/BlockEntity.html" title="class in cn.nukkit.blockentity">BlockEntity</a></code></dd>
@@ -395,7 +393,7 @@ implements <a href="../../../cn/nukkit/inventory/InventoryHolder.html" title="in
 <ul class="blockList">
 <li class="blockList">
 <h4>onBreak</h4>
-<pre>public&nbsp;void&nbsp;onBreak()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/blockentity/BlockEntitySpawnableContainer.html#line.49">onBreak</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../cn/nukkit/blockentity/BlockEntity.html#onBreak--">onBreak</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/blockentity/BlockEntity.html" title="class in cn.nukkit.blockentity">BlockEntity</a></code></dd>
@@ -408,7 +406,7 @@ implements <a href="../../../cn/nukkit/inventory/InventoryHolder.html" title="in
 <ul class="blockList">
 <li class="blockList">
 <h4>saveNBT</h4>
-<pre>public&nbsp;void&nbsp;saveNBT()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/blockentity/BlockEntitySpawnableContainer.html#line.57">saveNBT</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../cn/nukkit/blockentity/BlockEntity.html#saveNBT--">saveNBT</a></code>&nbsp;in class&nbsp;<code><a href="../../../cn/nukkit/blockentity/BlockEntity.html" title="class in cn.nukkit.blockentity">BlockEntity</a></code></dd>
@@ -421,7 +419,7 @@ implements <a href="../../../cn/nukkit/inventory/InventoryHolder.html" title="in
 <ul class="blockList">
 <li class="blockList">
 <h4>getSlotIndex</h4>
-<pre>protected&nbsp;int&nbsp;getSlotIndex(int&nbsp;index)</pre>
+<pre>protected&nbsp;int&nbsp;<a href="../../../src-html/cn/nukkit/blockentity/BlockEntitySpawnableContainer.html#line.64">getSlotIndex</a>(int&nbsp;index)</pre>
 </li>
 </ul>
 <a name="getItem-int-">
@@ -430,7 +428,7 @@ implements <a href="../../../cn/nukkit/inventory/InventoryHolder.html" title="in
 <ul class="blockList">
 <li class="blockList">
 <h4>getItem</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;getItem(int&nbsp;index)</pre>
+<pre>public&nbsp;<a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;<a href="../../../src-html/cn/nukkit/blockentity/BlockEntitySpawnableContainer.html#line.76">getItem</a>(int&nbsp;index)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../cn/nukkit/blockentity/BlockEntityContainer.html#getItem-int-">BlockEntityContainer</a></code></span></div>
 <div class="block">返回一个存储在容器里的物品的<code>Item</code>对象。<br>
  Returns an item that stores in this container, as an <code>Item</code> object.</div>
@@ -450,7 +448,7 @@ implements <a href="../../../cn/nukkit/inventory/InventoryHolder.html" title="in
 <ul class="blockListLast">
 <li class="blockList">
 <h4>setItem</h4>
-<pre>public&nbsp;void&nbsp;setItem(int&nbsp;index,
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/blockentity/BlockEntitySpawnableContainer.html#line.87">setItem</a>(int&nbsp;index,
                     <a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;item)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../cn/nukkit/blockentity/BlockEntityContainer.html#setItem-int-cn.nukkit.item.Item-">BlockEntityContainer</a></code></span></div>
 <div class="block">把一个物品存储进容器。<br>

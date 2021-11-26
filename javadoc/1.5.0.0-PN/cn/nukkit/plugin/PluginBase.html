@@ -1,11 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- NewPage -->
-<html lang="en">
+<html lang="pt">
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>PluginBase (PowerNukkit 1.5.0.0-PN API)</title>
-<meta name="date" content="2021-06-26">
+<meta name="date" content="2021-11-26">
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
 </head>
@@ -118,7 +118,7 @@ var activeTableTab = "activeTableTab";
 </dl>
 <hr>
 <br>
-<pre>public abstract class <span class="typeNameLabel">PluginBase</span>
+<pre>public abstract class <a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.33">PluginBase</a>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
 implements <a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a></pre>
 <div class="block">一般的Nukkit插件需要继承的类。<br>
@@ -190,50 +190,43 @@ implements <a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in c
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/utils/Config.html" title="class in cn.nukkit.utils">Config</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/plugin/PluginBase.html#getConfig--">getConfig</a></span>()</code>
-<div class="block">返回这个Nukkit插件配置文件的<a href="../../../cn/nukkit/utils/Config.html" title="class in cn.nukkit.utils"><code>Config</code></a>对象。<br>
- The config file this Nukkit plugin as a <a href="../../../cn/nukkit/utils/Config.html" title="class in cn.nukkit.utils"><code>Config</code></a> object.</div>
+<div class="block">返回这个Nukkit插件配置文件的<a href="../../../cn/nukkit/utils/Config.html" title="class in cn.nukkit.utils"><code>Config</code></a>对象。</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/plugin/PluginBase.html#getDataFolder--">getDataFolder</a></span>()</code>
-<div class="block">返回这个Nukkit插件的数据文件夹。<br>
- The data folder of this Nukkit plugin.</div>
+<div class="block">返回这个Nukkit插件的数据文件夹。</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/plugin/PluginDescription.html" title="class in cn.nukkit.plugin">PluginDescription</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/plugin/PluginBase.html#getDescription--">getDescription</a></span>()</code>
-<div class="block">返回描述这个Nukkit插件的<a href="../../../cn/nukkit/plugin/PluginDescription.html" title="class in cn.nukkit.plugin"><code>PluginDescription</code></a>对象。<br>
- The description this Nukkit plugin as a <a href="../../../cn/nukkit/plugin/PluginDescription.html" title="class in cn.nukkit.plugin"><code>PluginDescription</code></a> object.</div>
+<div class="block">返回描述这个Nukkit插件的<a href="../../../cn/nukkit/plugin/PluginDescription.html" title="class in cn.nukkit.plugin"><code>PluginDescription</code></a>对象。</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/plugin/PluginBase.html#getFile--">getFile</a></span>()</code>
-<div class="block">返回这个插件的文件<code>File</code>对象。对于jar格式的插件，就是jar文件本身。<br>
- Returns the <code>File</code> object of this plugin itself.</div>
+<div class="block">返回这个插件的文件<code>File</code>对象。</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/plugin/PluginBase.html#getFullName--">getFullName</a></span>()</code>
-<div class="block">返回这个插件完整的名字。<br>
- Returns the full name of this plugin.</div>
+<div class="block">返回这个插件完整的名字。</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/plugin/PluginLogger.html" title="class in cn.nukkit.plugin">PluginLogger</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/plugin/PluginBase.html#getLogger--">getLogger</a></span>()</code>
-<div class="block">返回这个插件的日志记录器为<a href="../../../cn/nukkit/plugin/PluginLogger.html" title="class in cn.nukkit.plugin"><code>PluginLogger</code></a>对象。<br>
- Returns the logger of this plugin as a <a href="../../../cn/nukkit/plugin/PluginLogger.html" title="class in cn.nukkit.plugin"><code>PluginLogger</code></a> object.</div>
+<div class="block">返回这个插件的日志记录器为<a href="../../../cn/nukkit/plugin/PluginLogger.html" title="class in cn.nukkit.plugin"><code>PluginLogger</code></a>对象。</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/plugin/PluginBase.html#getName--">getName</a></span>()</code>
-<div class="block">返回这个插件的名字。<br>
- Returns the name of this plugin.</div>
+<div class="block">返回这个插件的名字。</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
@@ -243,22 +236,19 @@ implements <a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in c
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/plugin/PluginLoader.html" title="interface in cn.nukkit.plugin">PluginLoader</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/plugin/PluginBase.html#getPluginLoader--">getPluginLoader</a></span>()</code>
-<div class="block">返回这个插件的加载器为<a href="../../../cn/nukkit/plugin/PluginLoader.html" title="interface in cn.nukkit.plugin"><code>PluginLoader</code></a>对象。<br>
- Returns the loader of this plugin as a <a href="../../../cn/nukkit/plugin/PluginLoader.html" title="interface in cn.nukkit.plugin"><code>PluginLoader</code></a> object.</div>
+<div class="block">返回这个插件的加载器为<a href="../../../cn/nukkit/plugin/PluginLoader.html" title="interface in cn.nukkit.plugin"><code>PluginLoader</code></a>对象。</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/plugin/PluginBase.html#getResource-java.lang.String-">getResource</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename)</code>
-<div class="block">读取这个插件特定的资源文件，并返回为<code>InputStream</code>对象。<br>
- Reads a resource of this plugin, and returns as an <code>InputStream</code> object.</div>
+<div class="block">读取这个插件特定的资源文件，并返回为<code>InputStream</code>对象。</div>
 </td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/Server.html" title="class in cn.nukkit">Server</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/plugin/PluginBase.html#getServer--">getServer</a></span>()</code>
-<div class="block">返回运行这个插件的服务器的<a href="../../../cn/nukkit/Server.html" title="class in cn.nukkit"><code>Server</code></a>对象。<br>
- Gets the server which is running this plugin, and returns as a <a href="../../../cn/nukkit/Server.html" title="class in cn.nukkit"><code>Server</code></a> object.</div>
+<div class="block">返回运行这个插件的服务器的<a href="../../../cn/nukkit/Server.html" title="class in cn.nukkit"><code>Server</code></a>对象。</div>
 </td>
 </tr>
 <tr id="i12" class="altColor">
@@ -268,29 +258,25 @@ implements <a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in c
     <a href="../../../cn/nukkit/plugin/PluginDescription.html" title="class in cn.nukkit.plugin">PluginDescription</a>&nbsp;description,
     <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;dataFolder,
     <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</code>
-<div class="block">初始化这个插件。<br>
- Initialize the plugin.</div>
+<div class="block">初始化这个插件。</div>
 </td>
 </tr>
 <tr id="i13" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/plugin/PluginBase.html#isDisabled--">isDisabled</a></span>()</code>
-<div class="block">返回这个Nukkit插件是否已停用。<br>
- Whether this Nukkit plugin is disabled.</div>
+<div class="block">返回这个Nukkit插件是否已停用。</div>
 </td>
 </tr>
 <tr id="i14" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/plugin/PluginBase.html#isEnabled--">isEnabled</a></span>()</code>
-<div class="block">返回这个Nukkit插件是否已启用。<br>
- Whether this Nukkit plugin is enabled.</div>
+<div class="block">返回这个Nukkit插件是否已启用。</div>
 </td>
 </tr>
 <tr id="i15" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/plugin/PluginBase.html#isInitialized--">isInitialized</a></span>()</code>
-<div class="block">返回这个插件是否已经初始化。<br>
- Returns if this plugin is initialized.</div>
+<div class="block">返回这个插件是否已经初始化。</div>
 </td>
 </tr>
 <tr id="i16" class="altColor">
@@ -299,65 +285,56 @@ implements <a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in c
          <a href="../../../cn/nukkit/command/Command.html" title="class in cn.nukkit.command">Command</a>&nbsp;command,
          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;label,
          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)</code>
-<div class="block">在命令执行时会调用的方法。<br>
- Called when a command is executed.</div>
+<div class="block">在命令执行时会调用的方法。</div>
 </td>
 </tr>
 <tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/plugin/PluginBase.html#onDisable--">onDisable</a></span>()</code>
-<div class="block">在一个Nukkit插件被停用时调用的方法。<br>
- Called when a Nukkit plugin is disabled.</div>
+<div class="block">在一个Nukkit插件被停用时调用的方法。</div>
 </td>
 </tr>
 <tr id="i18" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/plugin/PluginBase.html#onEnable--">onEnable</a></span>()</code>
-<div class="block">在一个Nukkit插件被启用时调用的方法。<br>
- Called when a Nukkit plugin is enabled.</div>
+<div class="block">在一个Nukkit插件被启用时调用的方法。</div>
 </td>
 </tr>
 <tr id="i19" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/plugin/PluginBase.html#onLoad--">onLoad</a></span>()</code>
-<div class="block">在一个Nukkit插件被加载时调用的方法。这个方法会在<a href="../../../cn/nukkit/plugin/Plugin.html#onEnable--"><code>Plugin.onEnable()</code></a>之前调用。<br>
- Called when a Nukkit plugin is loaded, before <a href="../../../cn/nukkit/plugin/Plugin.html#onEnable--"><code>Plugin.onEnable()</code></a> .</div>
+<div class="block">在一个Nukkit插件被加载时调用的方法。</div>
 </td>
 </tr>
 <tr id="i20" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/plugin/PluginBase.html#reloadConfig--">reloadConfig</a></span>()</code>
-<div class="block">重新读取这个Nukkit插件的默认配置文件。<br>
- Reloads the plugin config.</div>
+<div class="block">重新读取这个Nukkit插件的默认配置文件。</div>
 </td>
 </tr>
 <tr id="i21" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/plugin/PluginBase.html#saveConfig--">saveConfig</a></span>()</code>
-<div class="block">保存这个Nukkit插件的配置文件。<br>
- Saves the plugin config.</div>
+<div class="block">保存这个Nukkit插件的配置文件。</div>
 </td>
 </tr>
 <tr id="i22" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/plugin/PluginBase.html#saveDefaultConfig--">saveDefaultConfig</a></span>()</code>
-<div class="block">保存这个Nukkit插件的默认配置文件。<br>
- Saves the DEFAULT plugin config.</div>
+<div class="block">保存这个Nukkit插件的默认配置文件。</div>
 </td>
 </tr>
 <tr id="i23" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/plugin/PluginBase.html#saveResource-java.lang.String-">saveResource</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename)</code>
-<div class="block">保存这个Nukkit插件的资源。<br>
- Saves the resource of this plugin.</div>
+<div class="block">保存这个Nukkit插件的资源。</div>
 </td>
 </tr>
 <tr id="i24" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/plugin/PluginBase.html#saveResource-java.lang.String-boolean-">saveResource</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename,
             boolean&nbsp;replace)</code>
-<div class="block">保存或替换这个Nukkit插件的资源。<br>
- Saves or replaces the resource of this plugin.</div>
+<div class="block">保存或替换这个Nukkit插件的资源。</div>
 </td>
 </tr>
 <tr id="i25" class="rowColor">
@@ -369,15 +346,13 @@ implements <a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in c
 <tr id="i26" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/plugin/PluginBase.html#setEnabled--">setEnabled</a></span>()</code>
-<div class="block">加载这个插件。<br>
- Enables this plugin.</div>
+<div class="block">加载这个插件。</div>
 </td>
 </tr>
 <tr id="i27" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/plugin/PluginBase.html#setEnabled-boolean-">setEnabled</a></span>(boolean&nbsp;value)</code>
-<div class="block">加载或卸载这个插件。<br>
- Enables or disables this plugin.</div>
+<div class="block">加载或卸载这个插件。</div>
 </td>
 </tr>
 </table>
@@ -408,7 +383,7 @@ implements <a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in c
 <ul class="blockListLast">
 <li class="blockList">
 <h4>PluginBase</h4>
-<pre>public&nbsp;PluginBase()</pre>
+<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.33">PluginBase</a>()</pre>
 </li>
 </ul>
 </li>
@@ -425,7 +400,7 @@ implements <a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in c
 <ul class="blockList">
 <li class="blockList">
 <h4>onLoad</h4>
-<pre>public&nbsp;void&nbsp;onLoad()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.47">onLoad</a>()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../cn/nukkit/plugin/Plugin.html#onLoad--">Plugin</a></code></span></div>
 <div class="block">在一个Nukkit插件被加载时调用的方法。这个方法会在<a href="../../../cn/nukkit/plugin/Plugin.html#onEnable--"><code>Plugin.onEnable()</code></a>之前调用。<br>
  Called when a Nukkit plugin is loaded, before <a href="../../../cn/nukkit/plugin/Plugin.html#onEnable--"><code>Plugin.onEnable()</code></a> .
@@ -444,7 +419,7 @@ implements <a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in c
 <ul class="blockList">
 <li class="blockList">
 <h4>onEnable</h4>
-<pre>public&nbsp;void&nbsp;onEnable()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.50">onEnable</a>()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../cn/nukkit/plugin/Plugin.html#onEnable--">Plugin</a></code></span></div>
 <div class="block">在一个Nukkit插件被启用时调用的方法。<br>
  Called when a Nukkit plugin is enabled.
@@ -467,7 +442,7 @@ implements <a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in c
 <ul class="blockList">
 <li class="blockList">
 <h4>onDisable</h4>
-<pre>public&nbsp;void&nbsp;onDisable()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.53">onDisable</a>()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../cn/nukkit/plugin/Plugin.html#onDisable--">Plugin</a></code></span></div>
 <div class="block">在一个Nukkit插件被停用时调用的方法。<br>
  Called when a Nukkit plugin is disabled.
@@ -491,7 +466,7 @@ implements <a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in c
 <ul class="blockList">
 <li class="blockList">
 <h4>isEnabled</h4>
-<pre>public final&nbsp;boolean&nbsp;isEnabled()</pre>
+<pre>public final&nbsp;boolean&nbsp;<a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.56">isEnabled</a>()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../cn/nukkit/plugin/Plugin.html#isEnabled--">Plugin</a></code></span></div>
 <div class="block">返回这个Nukkit插件是否已启用。<br>
  Whether this Nukkit plugin is enabled.</div>
@@ -509,7 +484,7 @@ implements <a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in c
 <ul class="blockList">
 <li class="blockList">
 <h4>setEnabled</h4>
-<pre>public final&nbsp;void&nbsp;setEnabled()</pre>
+<pre>public final&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.69">setEnabled</a>()</pre>
 <div class="block">加载这个插件。<br>
  Enables this plugin.
  <p>
@@ -529,7 +504,7 @@ implements <a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in c
 <h4>setEnabled</h4>
 <pre><a href="../../../cn/nukkit/api/PowerNukkitDifference.html" title="annotation in cn.nukkit.api">@PowerNukkitDifference</a>(<a href="../../../cn/nukkit/api/PowerNukkitDifference.html#info--">info</a>="Made impossible to disable special the PowerNukkitPlugin",
                        <a href="../../../cn/nukkit/api/PowerNukkitDifference.html#since--">since</a>="1.3.0.0-PN")
-public final&nbsp;void&nbsp;setEnabled(boolean&nbsp;value)</pre>
+public final&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.84">setEnabled</a>(boolean&nbsp;value)</pre>
 <div class="block">加载或卸载这个插件。<br>
  Enables or disables this plugin.
  <p>
@@ -549,7 +524,7 @@ public final&nbsp;void&nbsp;setEnabled(boolean&nbsp;value)</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>isDisabled</h4>
-<pre>public final&nbsp;boolean&nbsp;isDisabled()</pre>
+<pre>public final&nbsp;boolean&nbsp;<a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.98">isDisabled</a>()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../cn/nukkit/plugin/Plugin.html#isDisabled--">Plugin</a></code></span></div>
 <div class="block">返回这个Nukkit插件是否已停用。<br>
  Whether this Nukkit plugin is disabled.</div>
@@ -567,7 +542,7 @@ public final&nbsp;void&nbsp;setEnabled(boolean&nbsp;value)</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getDataFolder</h4>
-<pre>public final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;getDataFolder()</pre>
+<pre>public final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;<a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.102">getDataFolder</a>()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../cn/nukkit/plugin/Plugin.html#getDataFolder--">Plugin</a></code></span></div>
 <div class="block">返回这个Nukkit插件的数据文件夹。<br>
  The data folder of this Nukkit plugin.
@@ -589,7 +564,7 @@ public final&nbsp;void&nbsp;setEnabled(boolean&nbsp;value)</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getDescription</h4>
-<pre>public final&nbsp;<a href="../../../cn/nukkit/plugin/PluginDescription.html" title="class in cn.nukkit.plugin">PluginDescription</a>&nbsp;getDescription()</pre>
+<pre>public final&nbsp;<a href="../../../cn/nukkit/plugin/PluginDescription.html" title="class in cn.nukkit.plugin">PluginDescription</a>&nbsp;<a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.106">getDescription</a>()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../cn/nukkit/plugin/Plugin.html#getDescription--">Plugin</a></code></span></div>
 <div class="block">返回描述这个Nukkit插件的<a href="../../../cn/nukkit/plugin/PluginDescription.html" title="class in cn.nukkit.plugin"><code>PluginDescription</code></a>对象。<br>
  The description this Nukkit plugin as a <a href="../../../cn/nukkit/plugin/PluginDescription.html" title="class in cn.nukkit.plugin"><code>PluginDescription</code></a> object.
@@ -612,7 +587,7 @@ public final&nbsp;void&nbsp;setEnabled(boolean&nbsp;value)</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>init</h4>
-<pre>public final&nbsp;void&nbsp;init(<a href="../../../cn/nukkit/plugin/PluginLoader.html" title="interface in cn.nukkit.plugin">PluginLoader</a>&nbsp;loader,
+<pre>public final&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.129">init</a>(<a href="../../../cn/nukkit/plugin/PluginLoader.html" title="interface in cn.nukkit.plugin">PluginLoader</a>&nbsp;loader,
                        <a href="../../../cn/nukkit/Server.html" title="class in cn.nukkit">Server</a>&nbsp;server,
                        <a href="../../../cn/nukkit/plugin/PluginDescription.html" title="class in cn.nukkit.plugin">PluginDescription</a>&nbsp;description,
                        <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;dataFolder,
@@ -645,7 +620,7 @@ public final&nbsp;void&nbsp;setEnabled(boolean&nbsp;value)</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getLogger</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/plugin/PluginLogger.html" title="class in cn.nukkit.plugin">PluginLogger</a>&nbsp;getLogger()</pre>
+<pre>public&nbsp;<a href="../../../cn/nukkit/plugin/PluginLogger.html" title="class in cn.nukkit.plugin">PluginLogger</a>&nbsp;<a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.142">getLogger</a>()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../cn/nukkit/plugin/Plugin.html#getLogger--">Plugin</a></code></span></div>
 <div class="block">返回这个插件的日志记录器为<a href="../../../cn/nukkit/plugin/PluginLogger.html" title="class in cn.nukkit.plugin"><code>PluginLogger</code></a>对象。<br>
  Returns the logger of this plugin as a <a href="../../../cn/nukkit/plugin/PluginLogger.html" title="class in cn.nukkit.plugin"><code>PluginLogger</code></a> object.
@@ -666,7 +641,7 @@ public final&nbsp;void&nbsp;setEnabled(boolean&nbsp;value)</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>isInitialized</h4>
-<pre>public final&nbsp;boolean&nbsp;isInitialized()</pre>
+<pre>public final&nbsp;boolean&nbsp;<a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.153">isInitialized</a>()</pre>
 <div class="block">返回这个插件是否已经初始化。<br>
  Returns if this plugin is initialized.</div>
 <dl>
@@ -684,7 +659,7 @@ public final&nbsp;void&nbsp;setEnabled(boolean&nbsp;value)</pre>
 <li class="blockList">
 <h4>getCommand</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
-public&nbsp;<a href="../../../cn/nukkit/command/PluginIdentifiableCommand.html" title="interface in cn.nukkit.command">PluginIdentifiableCommand</a>&nbsp;getCommand(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
+public&nbsp;<a href="../../../cn/nukkit/command/PluginIdentifiableCommand.html" title="interface in cn.nukkit.command">PluginIdentifiableCommand</a>&nbsp;<a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.161">getCommand</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
 <div class="block">TODO: FINISH JAVADOC</div>
 </li>
 </ul>
@@ -697,7 +672,7 @@ public&nbsp;<a href="../../../cn/nukkit/command/PluginIdentifiableCommand.html" 
 <pre><a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
  <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
-public&nbsp;<a href="../../../cn/nukkit/command/PluginCommand.html" title="class in cn.nukkit.command">PluginCommand</a>&lt;?&gt;&nbsp;getPluginCommand(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
+public&nbsp;<a href="../../../cn/nukkit/command/PluginCommand.html" title="class in cn.nukkit.command">PluginCommand</a>&lt;?&gt;&nbsp;<a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.176">getPluginCommand</a>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
                                                                                                  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
 </li>
 </ul>
@@ -707,7 +682,7 @@ public&nbsp;<a href="../../../cn/nukkit/command/PluginCommand.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>onCommand</h4>
-<pre>public&nbsp;boolean&nbsp;onCommand(<a href="../../../cn/nukkit/command/CommandSender.html" title="interface in cn.nukkit.command">CommandSender</a>&nbsp;sender,
+<pre>public&nbsp;boolean&nbsp;<a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.185">onCommand</a>(<a href="../../../cn/nukkit/command/CommandSender.html" title="interface in cn.nukkit.command">CommandSender</a>&nbsp;sender,
                          <a href="../../../cn/nukkit/command/Command.html" title="class in cn.nukkit.command">Command</a>&nbsp;command,
                          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;label,
                          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)</pre>
@@ -756,7 +731,7 @@ public&nbsp;<a href="../../../cn/nukkit/command/PluginCommand.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>getResource</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;getResource(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename)</pre>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;<a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.190">getResource</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../cn/nukkit/plugin/Plugin.html#getResource-java.lang.String-">Plugin</a></code></span></div>
 <div class="block">读取这个插件特定的资源文件，并返回为<code>InputStream</code>对象。<br>
  Reads a resource of this plugin, and returns as an <code>InputStream</code> object.
@@ -787,7 +762,7 @@ public&nbsp;<a href="../../../cn/nukkit/command/PluginCommand.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>saveResource</h4>
-<pre>public&nbsp;boolean&nbsp;saveResource(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename)</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.195">saveResource</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../cn/nukkit/plugin/Plugin.html#saveResource-java.lang.String-">Plugin</a></code></span></div>
 <div class="block">保存这个Nukkit插件的资源。<br>
  Saves the resource of this plugin.
@@ -824,7 +799,7 @@ public&nbsp;<a href="../../../cn/nukkit/command/PluginCommand.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>saveResource</h4>
-<pre>public&nbsp;boolean&nbsp;saveResource(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename,
+<pre>public&nbsp;boolean&nbsp;<a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.200">saveResource</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename,
                             boolean&nbsp;replace)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../cn/nukkit/plugin/Plugin.html#saveResource-java.lang.String-boolean-">Plugin</a></code></span></div>
 <div class="block">保存或替换这个Nukkit插件的资源。<br>
@@ -856,7 +831,7 @@ public&nbsp;<a href="../../../cn/nukkit/command/PluginCommand.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>saveResource</h4>
-<pre>public&nbsp;boolean&nbsp;saveResource(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename,
+<pre>public&nbsp;boolean&nbsp;<a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.205">saveResource</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename,
                             <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;outputName,
                             boolean&nbsp;replace)</pre>
 <dl>
@@ -871,7 +846,7 @@ public&nbsp;<a href="../../../cn/nukkit/command/PluginCommand.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>getConfig</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/utils/Config.html" title="class in cn.nukkit.utils">Config</a>&nbsp;getConfig()</pre>
+<pre>public&nbsp;<a href="../../../cn/nukkit/utils/Config.html" title="class in cn.nukkit.utils">Config</a>&nbsp;<a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.227">getConfig</a>()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../cn/nukkit/plugin/Plugin.html#getConfig--">Plugin</a></code></span></div>
 <div class="block">返回这个Nukkit插件配置文件的<a href="../../../cn/nukkit/utils/Config.html" title="class in cn.nukkit.utils"><code>Config</code></a>对象。<br>
  The config file this Nukkit plugin as a <a href="../../../cn/nukkit/utils/Config.html" title="class in cn.nukkit.utils"><code>Config</code></a> object.
@@ -894,7 +869,7 @@ public&nbsp;<a href="../../../cn/nukkit/command/PluginCommand.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>saveConfig</h4>
-<pre>public&nbsp;void&nbsp;saveConfig()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.235">saveConfig</a>()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../cn/nukkit/plugin/Plugin.html#saveConfig--">Plugin</a></code></span></div>
 <div class="block">保存这个Nukkit插件的配置文件。<br>
  Saves the plugin config.</div>
@@ -912,7 +887,7 @@ public&nbsp;<a href="../../../cn/nukkit/command/PluginCommand.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>saveDefaultConfig</h4>
-<pre>public&nbsp;void&nbsp;saveDefaultConfig()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.242">saveDefaultConfig</a>()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../cn/nukkit/plugin/Plugin.html#saveDefaultConfig--">Plugin</a></code></span></div>
 <div class="block">保存这个Nukkit插件的默认配置文件。<br>
  Saves the DEFAULT plugin config.
@@ -942,7 +917,7 @@ public&nbsp;<a href="../../../cn/nukkit/command/PluginCommand.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>reloadConfig</h4>
-<pre>public&nbsp;void&nbsp;reloadConfig()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.249">reloadConfig</a>()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../cn/nukkit/plugin/Plugin.html#reloadConfig--">Plugin</a></code></span></div>
 <div class="block">重新读取这个Nukkit插件的默认配置文件。<br>
  Reloads the plugin config.
@@ -965,7 +940,7 @@ public&nbsp;<a href="../../../cn/nukkit/command/PluginCommand.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>getServer</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/Server.html" title="class in cn.nukkit">Server</a>&nbsp;getServer()</pre>
+<pre>public&nbsp;<a href="../../../cn/nukkit/Server.html" title="class in cn.nukkit">Server</a>&nbsp;<a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.265">getServer</a>()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../cn/nukkit/plugin/Plugin.html#getServer--">Plugin</a></code></span></div>
 <div class="block">返回运行这个插件的服务器的<a href="../../../cn/nukkit/Server.html" title="class in cn.nukkit"><code>Server</code></a>对象。<br>
  Gets the server which is running this plugin, and returns as a <a href="../../../cn/nukkit/Server.html" title="class in cn.nukkit"><code>Server</code></a> object.</div>
@@ -983,7 +958,7 @@ public&nbsp;<a href="../../../cn/nukkit/command/PluginCommand.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>getName</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getName()</pre>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.270">getName</a>()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../cn/nukkit/plugin/Plugin.html#getName--">Plugin</a></code></span></div>
 <div class="block">返回这个插件的名字。<br>
  Returns the name of this plugin.
@@ -1004,7 +979,7 @@ public&nbsp;<a href="../../../cn/nukkit/command/PluginCommand.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>getFullName</h4>
-<pre>public final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getFullName()</pre>
+<pre>public final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.286">getFullName</a>()</pre>
 <div class="block">返回这个插件完整的名字。<br>
  Returns the full name of this plugin.
  <p>
@@ -1027,7 +1002,7 @@ public&nbsp;<a href="../../../cn/nukkit/command/PluginCommand.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>getFile</h4>
-<pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;getFile()</pre>
+<pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;<a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.297">getFile</a>()</pre>
 <div class="block">返回这个插件的文件<code>File</code>对象。对于jar格式的插件，就是jar文件本身。<br>
  Returns the <code>File</code> object of this plugin itself. For jar-packed plugins, it is the jar file itself.</div>
 <dl>
@@ -1044,7 +1019,7 @@ public&nbsp;<a href="../../../cn/nukkit/command/PluginCommand.html" title="class
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getPluginLoader</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/plugin/PluginLoader.html" title="interface in cn.nukkit.plugin">PluginLoader</a>&nbsp;getPluginLoader()</pre>
+<pre>public&nbsp;<a href="../../../cn/nukkit/plugin/PluginLoader.html" title="interface in cn.nukkit.plugin">PluginLoader</a>&nbsp;<a href="../../../src-html/cn/nukkit/plugin/PluginBase.html#line.302">getPluginLoader</a>()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../cn/nukkit/plugin/Plugin.html#getPluginLoader--">Plugin</a></code></span></div>
 <div class="block">返回这个插件的加载器为<a href="../../../cn/nukkit/plugin/PluginLoader.html" title="interface in cn.nukkit.plugin"><code>PluginLoader</code></a>对象。<br>
  Returns the loader of this plugin as a <a href="../../../cn/nukkit/plugin/PluginLoader.html" title="interface in cn.nukkit.plugin"><code>PluginLoader</code></a> object.</div>

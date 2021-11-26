@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package cn.nukkit.level.biome;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>import cn.nukkit.level.biome.impl.HellBiome;<a name="line.3"></a>
+<span class="sourceLineNo">004</span>import cn.nukkit.level.biome.impl.beach.BeachBiome;<a name="line.4"></a>
+<span class="sourceLineNo">005</span>import cn.nukkit.level.biome.impl.beach.ColdBeachBiome;<a name="line.5"></a>
+<span class="sourceLineNo">006</span>import cn.nukkit.level.biome.impl.desert.DesertBiome;<a name="line.6"></a>
+<span class="sourceLineNo">007</span>import cn.nukkit.level.biome.impl.desert.DesertHillsBiome;<a name="line.7"></a>
+<span class="sourceLineNo">008</span>import cn.nukkit.level.biome.impl.desert.DesertMBiome;<a name="line.8"></a>
+<span class="sourceLineNo">009</span>import cn.nukkit.level.biome.impl.extremehills.*;<a name="line.9"></a>
+<span class="sourceLineNo">010</span>import cn.nukkit.level.biome.impl.forest.FlowerForestBiome;<a name="line.10"></a>
+<span class="sourceLineNo">011</span>import cn.nukkit.level.biome.impl.forest.ForestBiome;<a name="line.11"></a>
+<span class="sourceLineNo">012</span>import cn.nukkit.level.biome.impl.forest.ForestHillsBiome;<a name="line.12"></a>
+<span class="sourceLineNo">013</span>import cn.nukkit.level.biome.impl.iceplains.IcePlainsBiome;<a name="line.13"></a>
+<span class="sourceLineNo">014</span>import cn.nukkit.level.biome.impl.iceplains.IcePlainsSpikesBiome;<a name="line.14"></a>
+<span class="sourceLineNo">015</span>import cn.nukkit.level.biome.impl.jungle.*;<a name="line.15"></a>
+<span class="sourceLineNo">016</span>import cn.nukkit.level.biome.impl.mesa.*;<a name="line.16"></a>
+<span class="sourceLineNo">017</span>import cn.nukkit.level.biome.impl.mushroom.MushroomIslandBiome;<a name="line.17"></a>
+<span class="sourceLineNo">018</span>import cn.nukkit.level.biome.impl.mushroom.MushroomIslandShoreBiome;<a name="line.18"></a>
+<span class="sourceLineNo">019</span>import cn.nukkit.level.biome.impl.ocean.DeepOceanBiome;<a name="line.19"></a>
+<span class="sourceLineNo">020</span>import cn.nukkit.level.biome.impl.ocean.FrozenOceanBiome;<a name="line.20"></a>
+<span class="sourceLineNo">021</span>import cn.nukkit.level.biome.impl.ocean.OceanBiome;<a name="line.21"></a>
+<span class="sourceLineNo">022</span>import cn.nukkit.level.biome.impl.plains.PlainsBiome;<a name="line.22"></a>
+<span class="sourceLineNo">023</span>import cn.nukkit.level.biome.impl.plains.SunflowerPlainsBiome;<a name="line.23"></a>
+<span class="sourceLineNo">024</span>import cn.nukkit.level.biome.impl.river.FrozenRiverBiome;<a name="line.24"></a>
+<span class="sourceLineNo">025</span>import cn.nukkit.level.biome.impl.river.RiverBiome;<a name="line.25"></a>
+<span class="sourceLineNo">026</span>import cn.nukkit.level.biome.impl.roofedforest.RoofedForestBiome;<a name="line.26"></a>
+<span class="sourceLineNo">027</span>import cn.nukkit.level.biome.impl.roofedforest.RoofedForestMBiome;<a name="line.27"></a>
+<span class="sourceLineNo">028</span>import cn.nukkit.level.biome.impl.savanna.SavannaBiome;<a name="line.28"></a>
+<span class="sourceLineNo">029</span>import cn.nukkit.level.biome.impl.savanna.SavannaMBiome;<a name="line.29"></a>
+<span class="sourceLineNo">030</span>import cn.nukkit.level.biome.impl.savanna.SavannaPlateauBiome;<a name="line.30"></a>
+<span class="sourceLineNo">031</span>import cn.nukkit.level.biome.impl.savanna.SavannaPlateauMBiome;<a name="line.31"></a>
+<span class="sourceLineNo">032</span>import cn.nukkit.level.biome.impl.swamp.SwampBiome;<a name="line.32"></a>
+<span class="sourceLineNo">033</span>import cn.nukkit.level.biome.impl.swamp.SwamplandMBiome;<a name="line.33"></a>
+<span class="sourceLineNo">034</span>import cn.nukkit.level.biome.impl.taiga.*;<a name="line.34"></a>
+<span class="sourceLineNo">035</span><a name="line.35"></a>
+<span class="sourceLineNo">036</span>/**<a name="line.36"></a>
+<span class="sourceLineNo">037</span> * @author DaPorkchop_<a name="line.37"></a>
+<span class="sourceLineNo">038</span> * &lt;p&gt;<a name="line.38"></a>
+<span class="sourceLineNo">039</span> * A more effective way of accessing specific biomes (to prevent Biome.getBiome(Biome.OCEAN) and such)<a name="line.39"></a>
+<span class="sourceLineNo">040</span> * Also just looks cleaner than listing everything as static final in {@link Biome}<a name="line.40"></a>
+<span class="sourceLineNo">041</span> * &lt;/p&gt;<a name="line.41"></a>
+<span class="sourceLineNo">042</span> */<a name="line.42"></a>
+<span class="sourceLineNo">043</span>public enum EnumBiome {<a name="line.43"></a>
+<span class="sourceLineNo">044</span>    OCEAN(0, new OceanBiome()),//<a name="line.44"></a>
+<span class="sourceLineNo">045</span>    PLAINS(1, new PlainsBiome()),<a name="line.45"></a>
+<span class="sourceLineNo">046</span>    DESERT(2, new DesertBiome()),<a name="line.46"></a>
+<span class="sourceLineNo">047</span>    EXTREME_HILLS(3, new ExtremeHillsBiome()),<a name="line.47"></a>
+<span class="sourceLineNo">048</span>    FOREST(4, new ForestBiome()),<a name="line.48"></a>
+<span class="sourceLineNo">049</span>    TAIGA(5, new TaigaBiome()),<a name="line.49"></a>
+<span class="sourceLineNo">050</span>    SWAMP(6, new SwampBiome()),<a name="line.50"></a>
+<span class="sourceLineNo">051</span>    RIVER(7, new RiverBiome()),//<a name="line.51"></a>
+<span class="sourceLineNo">052</span>    HELL(8, new HellBiome()),<a name="line.52"></a>
+<span class="sourceLineNo">053</span>    FROZEN_OCEAN(10, new FrozenOceanBiome()), //DOES NOT GENERATE NATUALLY<a name="line.53"></a>
+<span class="sourceLineNo">054</span>    FROZEN_RIVER(11, new FrozenRiverBiome()),<a name="line.54"></a>
+<span class="sourceLineNo">055</span>    ICE_PLAINS(12, new IcePlainsBiome()),<a name="line.55"></a>
+<span class="sourceLineNo">056</span>    MUSHROOM_ISLAND(14, new MushroomIslandBiome()),//<a name="line.56"></a>
+<span class="sourceLineNo">057</span>    MUSHROOM_ISLAND_SHORE(15, new MushroomIslandShoreBiome()),<a name="line.57"></a>
+<span class="sourceLineNo">058</span>    BEACH(16, new BeachBiome()),<a name="line.58"></a>
+<span class="sourceLineNo">059</span>    DESERT_HILLS(17, new DesertHillsBiome()),<a name="line.59"></a>
+<span class="sourceLineNo">060</span>    FOREST_HILLS(18, new ForestHillsBiome()),<a name="line.60"></a>
+<span class="sourceLineNo">061</span>    TAIGA_HILLS(19, new TaigaHillsBiome()),<a name="line.61"></a>
+<span class="sourceLineNo">062</span>    EXTREME_HILLS_EDGE(20, new ExtremeHillsEdgeBiome()), //DOES NOT GENERATE NATUALLY<a name="line.62"></a>
+<span class="sourceLineNo">063</span>    JUNGLE(21, new JungleBiome()),<a name="line.63"></a>
+<span class="sourceLineNo">064</span>    JUNGLE_HILLS(22, new JungleHillsBiome()),<a name="line.64"></a>
+<span class="sourceLineNo">065</span>    JUNGLE_EDGE(23, new JungleEdgeBiome()),<a name="line.65"></a>
+<span class="sourceLineNo">066</span>    DEEP_OCEAN(24, new DeepOceanBiome()),<a name="line.66"></a>
+<span class="sourceLineNo">067</span>    STONE_BEACH(25, new StoneBeachBiome()),<a name="line.67"></a>
+<span class="sourceLineNo">068</span>    COLD_BEACH(26, new ColdBeachBiome()),<a name="line.68"></a>
+<span class="sourceLineNo">069</span>    BIRCH_FOREST(27, new ForestBiome(ForestBiome.TYPE_BIRCH)),<a name="line.69"></a>
+<span class="sourceLineNo">070</span>    BIRCH_FOREST_HILLS(28, new ForestHillsBiome(ForestHillsBiome.TYPE_BIRCH)),<a name="line.70"></a>
+<span class="sourceLineNo">071</span>    ROOFED_FOREST(29, new RoofedForestBiome()),<a name="line.71"></a>
+<span class="sourceLineNo">072</span>    COLD_TAIGA(30, new ColdTaigaBiome()),<a name="line.72"></a>
+<span class="sourceLineNo">073</span>    COLD_TAIGA_HILLS(31, new ColdTaigaHillsBiome()),<a name="line.73"></a>
+<span class="sourceLineNo">074</span>    MEGA_TAIGA(32, new MegaTaigaBiome()),<a name="line.74"></a>
+<span class="sourceLineNo">075</span>    MEGA_TAIGA_HILLS(33, new MegaTaigaHillsBiome()),<a name="line.75"></a>
+<span class="sourceLineNo">076</span>    EXTREME_HILLS_PLUS(34, new ExtremeHillsPlusBiome()),<a name="line.76"></a>
+<span class="sourceLineNo">077</span>    SAVANNA(35, new SavannaBiome()),<a name="line.77"></a>
+<span class="sourceLineNo">078</span>    SAVANNA_PLATEAU(36, new SavannaPlateauBiome()),<a name="line.78"></a>
+<span class="sourceLineNo">079</span>    MESA(37, new MesaBiome()),<a name="line.79"></a>
+<span class="sourceLineNo">080</span>    MESA_PLATEAU_F(38, new MesaPlateauFBiome()),<a name="line.80"></a>
+<span class="sourceLineNo">081</span>    MESA_PLATEAU(39, new MesaPlateauBiome()),<a name="line.81"></a>
+<span class="sourceLineNo">082</span>    //    All biomes below this comment are mutated variants of existing biomes<a name="line.82"></a>
+<span class="sourceLineNo">083</span>    SUNFLOWER_PLAINS(129, new SunflowerPlainsBiome()),<a name="line.83"></a>
+<span class="sourceLineNo">084</span>    DESERT_M(130, new DesertMBiome()),<a name="line.84"></a>
+<span class="sourceLineNo">085</span>    EXTREME_HILLS_M(131, new ExtremeHillsMBiome()),<a name="line.85"></a>
+<span class="sourceLineNo">086</span>    FLOWER_FOREST(132, new FlowerForestBiome()),<a name="line.86"></a>
+<span class="sourceLineNo">087</span>    TAIGA_M(133, new TaigaMBiome()),<a name="line.87"></a>
+<span class="sourceLineNo">088</span>    SWAMPLAND_M(134, new SwamplandMBiome()),<a name="line.88"></a>
+<span class="sourceLineNo">089</span>    //no, the following jumps in IDs are NOT mistakes<a name="line.89"></a>
+<span class="sourceLineNo">090</span>    ICE_PLAINS_SPIKES(140, new IcePlainsSpikesBiome()),<a name="line.90"></a>
+<span class="sourceLineNo">091</span>    JUNGLE_M(149, new JungleMBiome()),<a name="line.91"></a>
+<span class="sourceLineNo">092</span>    JUNGLE_EDGE_M(151, new JungleEdgeMBiome()),<a name="line.92"></a>
+<span class="sourceLineNo">093</span>    BIRCH_FOREST_M(155, new ForestBiome(ForestBiome.TYPE_BIRCH_TALL)),<a name="line.93"></a>
+<span class="sourceLineNo">094</span>    BIRCH_FOREST_HILLS_M(156, new ForestHillsBiome(ForestBiome.TYPE_BIRCH_TALL)),<a name="line.94"></a>
+<span class="sourceLineNo">095</span>    ROOFED_FOREST_M(157, new RoofedForestMBiome()),<a name="line.95"></a>
+<span class="sourceLineNo">096</span>    COLD_TAIGA_M(158, new ColdTaigaMBiome()),<a name="line.96"></a>
+<span class="sourceLineNo">097</span>    MEGA_SPRUCE_TAIGA(160, new MegaSpruceTaigaBiome()),<a name="line.97"></a>
+<span class="sourceLineNo">098</span>    EXTREME_HILLS_PLUS_M(162, new ExtremeHillsPlusMBiome()),<a name="line.98"></a>
+<span class="sourceLineNo">099</span>    SAVANNA_M(163, new SavannaMBiome()),<a name="line.99"></a>
+<span class="sourceLineNo">100</span>    SAVANNA_PLATEAU_M(164, new SavannaPlateauMBiome()),<a name="line.100"></a>
+<span class="sourceLineNo">101</span>    MESA_BRYCE(165, new MesaBryceBiome()),<a name="line.101"></a>
+<span class="sourceLineNo">102</span>    MESA_PLATEAU_F_M(166, new MesaPlateauFMBiome()),<a name="line.102"></a>
+<span class="sourceLineNo">103</span>    MESA_PLATEAU_M(167, new MesaPlateauMBiome());<a name="line.103"></a>
+<span class="sourceLineNo">104</span><a name="line.104"></a>
+<span class="sourceLineNo">105</span>    public final int id;<a name="line.105"></a>
+<span class="sourceLineNo">106</span>    public final Biome biome;<a name="line.106"></a>
+<span class="sourceLineNo">107</span><a name="line.107"></a>
+<span class="sourceLineNo">108</span>    EnumBiome(int id, Biome biome) {<a name="line.108"></a>
+<span class="sourceLineNo">109</span>        Biome.register(id, biome);<a name="line.109"></a>
+<span class="sourceLineNo">110</span>        this.id = id;<a name="line.110"></a>
+<span class="sourceLineNo">111</span>        this.biome = biome;<a name="line.111"></a>
+<span class="sourceLineNo">112</span>    }<a name="line.112"></a>
+<span class="sourceLineNo">113</span><a name="line.113"></a>
+<span class="sourceLineNo">114</span>    /**<a name="line.114"></a>
+<span class="sourceLineNo">115</span>     * You really shouldn't use this method if you can help it, reference the biomes directly!<a name="line.115"></a>
+<span class="sourceLineNo">116</span>     *<a name="line.116"></a>
+<span class="sourceLineNo">117</span>     * @param id biome id<a name="line.117"></a>
+<span class="sourceLineNo">118</span>     * @return biome<a name="line.118"></a>
+<span class="sourceLineNo">119</span>     */<a name="line.119"></a>
+<span class="sourceLineNo">120</span>    @Deprecated<a name="line.120"></a>
+<span class="sourceLineNo">121</span>    public static Biome getBiome(int id) {<a name="line.121"></a>
+<span class="sourceLineNo">122</span>        return Biome.getBiome(id);<a name="line.122"></a>
+<span class="sourceLineNo">123</span>    }<a name="line.123"></a>
+<span class="sourceLineNo">124</span><a name="line.124"></a>
+<span class="sourceLineNo">125</span>    /**<a name="line.125"></a>
+<span class="sourceLineNo">126</span>     * You really shouldn't use this method if you can help it, reference the biomes directly!<a name="line.126"></a>
+<span class="sourceLineNo">127</span>     *<a name="line.127"></a>
+<span class="sourceLineNo">128</span>     * @param name biome name<a name="line.128"></a>
+<span class="sourceLineNo">129</span>     * @return biome<a name="line.129"></a>
+<span class="sourceLineNo">130</span>     */<a name="line.130"></a>
+<span class="sourceLineNo">131</span>    @Deprecated<a name="line.131"></a>
+<span class="sourceLineNo">132</span>    public static Biome getBiome(String name) {<a name="line.132"></a>
+<span class="sourceLineNo">133</span>        return Biome.getBiome(name);<a name="line.133"></a>
+<span class="sourceLineNo">134</span>    }<a name="line.134"></a>
+<span class="sourceLineNo">135</span>}<a name="line.135"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>

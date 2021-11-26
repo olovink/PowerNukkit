@@ -1,11 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- NewPage -->
-<html lang="en">
+<html lang="pt">
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>CapturingCommandSender (PowerNukkit 1.5.0.0-PN API)</title>
-<meta name="date" content="2021-06-26">
+<meta name="date" content="2021-11-26">
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
 </head>
@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -114,7 +114,7 @@ var activeTableTab = "activeTableTab";
 </dl>
 <hr>
 <br>
-<pre>public class <span class="typeNameLabel">CapturingCommandSender</span>
+<pre>public class <a href="../../../src-html/cn/nukkit/command/CapturingCommandSender.html#line.16">CapturingCommandSender</a>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
 implements <a href="../../../cn/nukkit/command/CommandSender.html" title="interface in cn.nukkit.command">CommandSender</a></pre>
 <dl>
@@ -152,6 +152,11 @@ implements <a href="../../../cn/nukkit/command/CommandSender.html" title="interf
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#CapturingCommandSender-java.lang.String-boolean-java.util.function.Function-">CapturingCommandSender</a></span>(@NonNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                       boolean&nbsp;isOp,
                       @NonNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="../../../cn/nukkit/permission/ServerOperator.html" title="interface in cn.nukkit.permission">ServerOperator</a>,<a href="../../../cn/nukkit/permission/Permissible.html" title="interface in cn.nukkit.permission">Permissible</a>&gt;&nbsp;permissibleFactory)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#CapturingCommandSender-java.lang.String-boolean-cn.nukkit.permission.Permissible-">CapturingCommandSender</a></span>(@NonNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                      boolean&nbsp;isOp,
+                      @NonNull <a href="../../../cn/nukkit/permission/Permissible.html" title="interface in cn.nukkit.permission">Permissible</a>&nbsp;perms)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -192,63 +197,82 @@ implements <a href="../../../cn/nukkit/command/CommandSender.html" title="interf
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#getEffectivePermissions--">getEffectivePermissions</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i5" class="rowColor">
+<td class="colFirst"><code>@NonNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#getName--">getName</a></span>()</code>
+<div class="block">返回命令发送者的名称。</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#getRawCapture--">getRawCapture</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/Server.html" title="class in cn.nukkit">Server</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#getServer--">getServer</a></span>()</code>
-<div class="block">返回命令发送者所在的服务器。<br>
- Returns the server of the command sender.</div>
+<div class="block">返回命令发送者所在的服务器。</div>
 </td>
-</tr>
-<tr id="i7" class="rowColor">
-<td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#hasPermission-cn.nukkit.permission.Permission-">hasPermission</a></span>(<a href="../../../cn/nukkit/permission/Permission.html" title="class in cn.nukkit.permission">Permission</a>&nbsp;permission)</code>&nbsp;</td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#hasPermission-java.lang.String-">hasPermission</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#hasPermission-cn.nukkit.permission.Permission-">hasPermission</a></span>(<a href="../../../cn/nukkit/permission/Permission.html" title="class in cn.nukkit.permission">Permission</a>&nbsp;permission)</code>&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#isPermissionSet-cn.nukkit.permission.Permission-">isPermissionSet</a></span>(<a href="../../../cn/nukkit/permission/Permission.html" title="class in cn.nukkit.permission">Permission</a>&nbsp;permission)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#hasPermission-java.lang.String-">hasPermission</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#isPermissionSet-java.lang.String-">isPermissionSet</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#isOp--">isOp</a></span>()</code>
+<div class="block">返回这个对象是不是服务器管理员。</div>
+</td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#isPlayer--">isPlayer</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#isPermissionSet-cn.nukkit.permission.Permission-">isPermissionSet</a></span>(<a href="../../../cn/nukkit/permission/Permission.html" title="class in cn.nukkit.permission">Permission</a>&nbsp;permission)</code>&nbsp;</td>
 </tr>
 <tr id="i12" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#recalculatePermissions--">recalculatePermissions</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#isPermissionSet-java.lang.String-">isPermissionSet</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
 </tr>
 <tr id="i13" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#removeAttachment-cn.nukkit.permission.PermissionAttachment-">removeAttachment</a></span>(<a href="../../../cn/nukkit/permission/PermissionAttachment.html" title="class in cn.nukkit.permission">PermissionAttachment</a>&nbsp;attachment)</code>&nbsp;</td>
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#isPlayer--">isPlayer</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#resetCapture--">resetCapture</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#recalculatePermissions--">recalculatePermissions</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#sendMessage-java.lang.String-">sendMessage</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message)</code>
-<div class="block">给命令发送者返回信息。<br>
- Sends a message to the command sender.</div>
-</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#removeAttachment-cn.nukkit.permission.PermissionAttachment-">removeAttachment</a></span>(<a href="../../../cn/nukkit/permission/PermissionAttachment.html" title="class in cn.nukkit.permission">PermissionAttachment</a>&nbsp;attachment)</code>&nbsp;</td>
 </tr>
 <tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#sendMessage-cn.nukkit.lang.TextContainer-">sendMessage</a></span>(<a href="../../../cn/nukkit/lang/TextContainer.html" title="class in cn.nukkit.lang">TextContainer</a>&nbsp;message)</code>
-<div class="block">给命令发送者返回信息。<br>
- Sends a message to the command sender.</div>
-</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#resetCapture--">resetCapture</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i17" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#sendMessage-java.lang.String-">sendMessage</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message)</code>
+<div class="block">给命令发送者返回信息。</div>
+</td>
+</tr>
+<tr id="i18" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#sendMessage-cn.nukkit.lang.TextContainer-">sendMessage</a></span>(<a href="../../../cn/nukkit/lang/TextContainer.html" title="class in cn.nukkit.lang">TextContainer</a>&nbsp;message)</code>
+<div class="block">给命令发送者返回信息。</div>
+</td>
+</tr>
+<tr id="i19" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#setName-java.lang.String-">setName</a></span>(@NonNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+</tr>
+<tr id="i20" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#setOp-boolean-">setOp</a></span>(boolean&nbsp;isOp)</code>
+<div class="block">把这个对象设置成服务器管理员。</div>
+</td>
+</tr>
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/command/CapturingCommandSender.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
@@ -259,20 +283,6 @@ implements <a href="../../../cn/nukkit/command/CommandSender.html" title="interf
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
 <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
-</ul>
-<ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.cn.nukkit.command.CommandSender">
-<!--   -->
-</a>
-<h3>Methods inherited from interface&nbsp;cn.nukkit.command.<a href="../../../cn/nukkit/command/CommandSender.html" title="interface in cn.nukkit.command">CommandSender</a></h3>
-<code><a href="../../../cn/nukkit/command/CommandSender.html#getName--">getName</a></code></li>
-</ul>
-<ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.cn.nukkit.permission.ServerOperator">
-<!--   -->
-</a>
-<h3>Methods inherited from interface&nbsp;cn.nukkit.permission.<a href="../../../cn/nukkit/permission/ServerOperator.html" title="interface in cn.nukkit.permission">ServerOperator</a></h3>
-<code><a href="../../../cn/nukkit/permission/ServerOperator.html#isOp--">isOp</a>, <a href="../../../cn/nukkit/permission/ServerOperator.html#setOp-boolean-">setOp</a></code></li>
 </ul>
 </li>
 </ul>
@@ -294,7 +304,7 @@ implements <a href="../../../cn/nukkit/command/CommandSender.html" title="interf
 <ul class="blockList">
 <li class="blockList">
 <h4>CapturingCommandSender</h4>
-<pre>public&nbsp;CapturingCommandSender()</pre>
+<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/command/CapturingCommandSender.html#line.24">CapturingCommandSender</a>()</pre>
 </li>
 </ul>
 <a name="CapturingCommandSender-java.lang.String-">
@@ -303,7 +313,7 @@ implements <a href="../../../cn/nukkit/command/CommandSender.html" title="interf
 <ul class="blockList">
 <li class="blockList">
 <h4>CapturingCommandSender</h4>
-<pre>public&nbsp;CapturingCommandSender(@NonNull
+<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/command/CapturingCommandSender.html#line.28">CapturingCommandSender</a>(@NonNull
                               @NonNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
 </li>
 </ul>
@@ -313,7 +323,7 @@ implements <a href="../../../cn/nukkit/command/CommandSender.html" title="interf
 <ul class="blockList">
 <li class="blockList">
 <h4>CapturingCommandSender</h4>
-<pre>public&nbsp;CapturingCommandSender(@NonNull
+<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/command/CapturingCommandSender.html#line.36">CapturingCommandSender</a>(@NonNull
                               @NonNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                               boolean&nbsp;isOp)</pre>
 </li>
@@ -321,14 +331,27 @@ implements <a href="../../../cn/nukkit/command/CommandSender.html" title="interf
 <a name="CapturingCommandSender-java.lang.String-boolean-java.util.function.Function-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>CapturingCommandSender</h4>
-<pre>public&nbsp;CapturingCommandSender(@NonNull
+<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/command/CapturingCommandSender.html#line.45">CapturingCommandSender</a>(@NonNull
                               @NonNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                               boolean&nbsp;isOp,
                               @NonNull
                               @NonNull <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html?is-external=true" title="class or interface in java.util.function">Function</a>&lt;<a href="../../../cn/nukkit/permission/ServerOperator.html" title="interface in cn.nukkit.permission">ServerOperator</a>,<a href="../../../cn/nukkit/permission/Permissible.html" title="interface in cn.nukkit.permission">Permissible</a>&gt;&nbsp;permissibleFactory)</pre>
+</li>
+</ul>
+<a name="CapturingCommandSender-java.lang.String-boolean-cn.nukkit.permission.Permissible-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>CapturingCommandSender</h4>
+<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/command/CapturingCommandSender.html#line.145">CapturingCommandSender</a>(@NonNull
+                              @NonNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                              boolean&nbsp;isOp,
+                              @NonNull
+                              @NonNull <a href="../../../cn/nukkit/permission/Permissible.html" title="interface in cn.nukkit.permission">Permissible</a>&nbsp;perms)</pre>
 </li>
 </ul>
 </li>
@@ -345,7 +368,7 @@ implements <a href="../../../cn/nukkit/command/CommandSender.html" title="interf
 <ul class="blockList">
 <li class="blockList">
 <h4>resetCapture</h4>
-<pre>public&nbsp;void&nbsp;resetCapture()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/command/CapturingCommandSender.html#line.57">resetCapture</a>()</pre>
 </li>
 </ul>
 <a name="getRawCapture--">
@@ -354,7 +377,7 @@ implements <a href="../../../cn/nukkit/command/CommandSender.html" title="interf
 <ul class="blockList">
 <li class="blockList">
 <h4>getRawCapture</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getRawCapture()</pre>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../src-html/cn/nukkit/command/CapturingCommandSender.html#line.61">getRawCapture</a>()</pre>
 </li>
 </ul>
 <a name="getCleanCapture--">
@@ -363,7 +386,7 @@ implements <a href="../../../cn/nukkit/command/CommandSender.html" title="interf
 <ul class="blockList">
 <li class="blockList">
 <h4>getCleanCapture</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getCleanCapture()</pre>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../src-html/cn/nukkit/command/CapturingCommandSender.html#line.65">getCleanCapture</a>()</pre>
 </li>
 </ul>
 <a name="toString--">
@@ -372,7 +395,7 @@ implements <a href="../../../cn/nukkit/command/CommandSender.html" title="interf
 <ul class="blockList">
 <li class="blockList">
 <h4>toString</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;toString()</pre>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../src-html/cn/nukkit/command/CapturingCommandSender.html#line.70">toString</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
@@ -385,7 +408,7 @@ implements <a href="../../../cn/nukkit/command/CommandSender.html" title="interf
 <ul class="blockList">
 <li class="blockList">
 <h4>sendMessage</h4>
-<pre>public&nbsp;void&nbsp;sendMessage(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/command/CapturingCommandSender.html#line.75">sendMessage</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../cn/nukkit/command/CommandSender.html#sendMessage-java.lang.String-">CommandSender</a></code></span></div>
 <div class="block">给命令发送者返回信息。<br>
  Sends a message to the command sender.</div>
@@ -405,7 +428,7 @@ implements <a href="../../../cn/nukkit/command/CommandSender.html" title="interf
 <ul class="blockList">
 <li class="blockList">
 <h4>sendMessage</h4>
-<pre>public&nbsp;void&nbsp;sendMessage(<a href="../../../cn/nukkit/lang/TextContainer.html" title="class in cn.nukkit.lang">TextContainer</a>&nbsp;message)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/command/CapturingCommandSender.html#line.80">sendMessage</a>(<a href="../../../cn/nukkit/lang/TextContainer.html" title="class in cn.nukkit.lang">TextContainer</a>&nbsp;message)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../cn/nukkit/command/CommandSender.html#sendMessage-cn.nukkit.lang.TextContainer-">CommandSender</a></code></span></div>
 <div class="block">给命令发送者返回信息。<br>
  Sends a message to the command sender.</div>
@@ -423,7 +446,7 @@ implements <a href="../../../cn/nukkit/command/CommandSender.html" title="interf
 <ul class="blockList">
 <li class="blockList">
 <h4>getServer</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/Server.html" title="class in cn.nukkit">Server</a>&nbsp;getServer()</pre>
+<pre>public&nbsp;<a href="../../../cn/nukkit/Server.html" title="class in cn.nukkit">Server</a>&nbsp;<a href="../../../src-html/cn/nukkit/command/CapturingCommandSender.html#line.85">getServer</a>()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../cn/nukkit/command/CommandSender.html#getServer--">CommandSender</a></code></span></div>
 <div class="block">返回命令发送者所在的服务器。<br>
  Returns the server of the command sender.</div>
@@ -441,7 +464,7 @@ implements <a href="../../../cn/nukkit/command/CommandSender.html" title="interf
 <ul class="blockList">
 <li class="blockList">
 <h4>isPlayer</h4>
-<pre>public&nbsp;boolean&nbsp;isPlayer()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../src-html/cn/nukkit/command/CapturingCommandSender.html#line.90">isPlayer</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../cn/nukkit/command/CommandSender.html#isPlayer--">isPlayer</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/command/CommandSender.html" title="interface in cn.nukkit.command">CommandSender</a></code></dd>
@@ -454,7 +477,7 @@ implements <a href="../../../cn/nukkit/command/CommandSender.html" title="interf
 <ul class="blockList">
 <li class="blockList">
 <h4>isPermissionSet</h4>
-<pre>public&nbsp;boolean&nbsp;isPermissionSet(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../src-html/cn/nukkit/command/CapturingCommandSender.html#line.95">isPermissionSet</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../cn/nukkit/permission/Permissible.html#isPermissionSet-java.lang.String-">isPermissionSet</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/permission/Permissible.html" title="interface in cn.nukkit.permission">Permissible</a></code></dd>
@@ -467,7 +490,7 @@ implements <a href="../../../cn/nukkit/command/CommandSender.html" title="interf
 <ul class="blockList">
 <li class="blockList">
 <h4>isPermissionSet</h4>
-<pre>public&nbsp;boolean&nbsp;isPermissionSet(<a href="../../../cn/nukkit/permission/Permission.html" title="class in cn.nukkit.permission">Permission</a>&nbsp;permission)</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../src-html/cn/nukkit/command/CapturingCommandSender.html#line.100">isPermissionSet</a>(<a href="../../../cn/nukkit/permission/Permission.html" title="class in cn.nukkit.permission">Permission</a>&nbsp;permission)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../cn/nukkit/permission/Permissible.html#isPermissionSet-cn.nukkit.permission.Permission-">isPermissionSet</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/permission/Permissible.html" title="interface in cn.nukkit.permission">Permissible</a></code></dd>
@@ -480,7 +503,7 @@ implements <a href="../../../cn/nukkit/command/CommandSender.html" title="interf
 <ul class="blockList">
 <li class="blockList">
 <h4>hasPermission</h4>
-<pre>public&nbsp;boolean&nbsp;hasPermission(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../src-html/cn/nukkit/command/CapturingCommandSender.html#line.105">hasPermission</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../cn/nukkit/permission/Permissible.html#hasPermission-java.lang.String-">hasPermission</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/permission/Permissible.html" title="interface in cn.nukkit.permission">Permissible</a></code></dd>
@@ -493,7 +516,7 @@ implements <a href="../../../cn/nukkit/command/CommandSender.html" title="interf
 <ul class="blockList">
 <li class="blockList">
 <h4>hasPermission</h4>
-<pre>public&nbsp;boolean&nbsp;hasPermission(<a href="../../../cn/nukkit/permission/Permission.html" title="class in cn.nukkit.permission">Permission</a>&nbsp;permission)</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../src-html/cn/nukkit/command/CapturingCommandSender.html#line.110">hasPermission</a>(<a href="../../../cn/nukkit/permission/Permission.html" title="class in cn.nukkit.permission">Permission</a>&nbsp;permission)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../cn/nukkit/permission/Permissible.html#hasPermission-cn.nukkit.permission.Permission-">hasPermission</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/permission/Permissible.html" title="interface in cn.nukkit.permission">Permissible</a></code></dd>
@@ -506,7 +529,7 @@ implements <a href="../../../cn/nukkit/command/CommandSender.html" title="interf
 <ul class="blockList">
 <li class="blockList">
 <h4>addAttachment</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/permission/PermissionAttachment.html" title="class in cn.nukkit.permission">PermissionAttachment</a>&nbsp;addAttachment(<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;plugin)</pre>
+<pre>public&nbsp;<a href="../../../cn/nukkit/permission/PermissionAttachment.html" title="class in cn.nukkit.permission">PermissionAttachment</a>&nbsp;<a href="../../../src-html/cn/nukkit/command/CapturingCommandSender.html#line.115">addAttachment</a>(<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;plugin)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../cn/nukkit/permission/Permissible.html#addAttachment-cn.nukkit.plugin.Plugin-">addAttachment</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/permission/Permissible.html" title="interface in cn.nukkit.permission">Permissible</a></code></dd>
@@ -519,7 +542,7 @@ implements <a href="../../../cn/nukkit/command/CommandSender.html" title="interf
 <ul class="blockList">
 <li class="blockList">
 <h4>addAttachment</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/permission/PermissionAttachment.html" title="class in cn.nukkit.permission">PermissionAttachment</a>&nbsp;addAttachment(<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;plugin,
+<pre>public&nbsp;<a href="../../../cn/nukkit/permission/PermissionAttachment.html" title="class in cn.nukkit.permission">PermissionAttachment</a>&nbsp;<a href="../../../src-html/cn/nukkit/command/CapturingCommandSender.html#line.120">addAttachment</a>(<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;plugin,
                                           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -533,7 +556,7 @@ implements <a href="../../../cn/nukkit/command/CommandSender.html" title="interf
 <ul class="blockList">
 <li class="blockList">
 <h4>addAttachment</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/permission/PermissionAttachment.html" title="class in cn.nukkit.permission">PermissionAttachment</a>&nbsp;addAttachment(<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;plugin,
+<pre>public&nbsp;<a href="../../../cn/nukkit/permission/PermissionAttachment.html" title="class in cn.nukkit.permission">PermissionAttachment</a>&nbsp;<a href="../../../src-html/cn/nukkit/command/CapturingCommandSender.html#line.125">addAttachment</a>(<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;plugin,
                                           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                                           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&nbsp;value)</pre>
 <dl>
@@ -548,7 +571,7 @@ implements <a href="../../../cn/nukkit/command/CommandSender.html" title="interf
 <ul class="blockList">
 <li class="blockList">
 <h4>removeAttachment</h4>
-<pre>public&nbsp;void&nbsp;removeAttachment(<a href="../../../cn/nukkit/permission/PermissionAttachment.html" title="class in cn.nukkit.permission">PermissionAttachment</a>&nbsp;attachment)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/command/CapturingCommandSender.html#line.130">removeAttachment</a>(<a href="../../../cn/nukkit/permission/PermissionAttachment.html" title="class in cn.nukkit.permission">PermissionAttachment</a>&nbsp;attachment)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../cn/nukkit/permission/Permissible.html#removeAttachment-cn.nukkit.permission.PermissionAttachment-">removeAttachment</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/permission/Permissible.html" title="interface in cn.nukkit.permission">Permissible</a></code></dd>
@@ -561,7 +584,7 @@ implements <a href="../../../cn/nukkit/command/CommandSender.html" title="interf
 <ul class="blockList">
 <li class="blockList">
 <h4>recalculatePermissions</h4>
-<pre>public&nbsp;void&nbsp;recalculatePermissions()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/command/CapturingCommandSender.html#line.135">recalculatePermissions</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../cn/nukkit/permission/Permissible.html#recalculatePermissions--">recalculatePermissions</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/permission/Permissible.html" title="interface in cn.nukkit.permission">Permissible</a></code></dd>
@@ -571,13 +594,91 @@ implements <a href="../../../cn/nukkit/command/CommandSender.html" title="interf
 <a name="getEffectivePermissions--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getEffectivePermissions</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../cn/nukkit/permission/PermissionAttachmentInfo.html" title="class in cn.nukkit.permission">PermissionAttachmentInfo</a>&gt;&nbsp;getEffectivePermissions()</pre>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="../../../cn/nukkit/permission/PermissionAttachmentInfo.html" title="class in cn.nukkit.permission">PermissionAttachmentInfo</a>&gt;&nbsp;<a href="../../../src-html/cn/nukkit/command/CapturingCommandSender.html#line.140">getEffectivePermissions</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../cn/nukkit/permission/Permissible.html#getEffectivePermissions--">getEffectivePermissions</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/permission/Permissible.html" title="interface in cn.nukkit.permission">Permissible</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="getName--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getName</h4>
+<pre>@NonNull
+public&nbsp;@NonNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../src-html/cn/nukkit/command/CapturingCommandSender.html#line.159">getName</a>()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../cn/nukkit/command/CommandSender.html#getName--">CommandSender</a></code></span></div>
+<div class="block">返回命令发送者的名称。<br>
+ Returns the name of the command sender.
+
+ <p>如果命令发送者是一个玩家，将会返回他的玩家名字(name)不是显示名字(display name)。
+ 如果命令发送者是控制台，将会返回<code>"CONSOLE"</code>。<br>
+ If this command sender is a player, will return his/her player name(not display name).
+ If it is a console, will return <code>"CONSOLE"</code>.</p>
+ <p>当你需要判断命令的执行者是不是控制台时，可以用这个：<br>
+ When you need to determine if the sender is a console, use this:<br>
+ <code>if(sender instanceof ConsoleCommandSender) .....;</code></p></div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../cn/nukkit/command/CommandSender.html#getName--">getName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/command/CommandSender.html" title="interface in cn.nukkit.command">CommandSender</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>命令发送者的名称。<br>the name of the command sender.</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../cn/nukkit/Player.html#getName--"><code>Player.getName()</code></a>, 
+<a href="../../../cn/nukkit/command/ConsoleCommandSender.html#getName--"><code>ConsoleCommandSender.getName()</code></a>, 
+<a href="../../../cn/nukkit/plugin/PluginDescription.html" title="class in cn.nukkit.plugin"><code>PluginDescription</code></a></dd>
+</dl>
+</li>
+</ul>
+<a name="setName-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setName</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/command/CapturingCommandSender.html#line.164">setName</a>(@NonNull
+                    @NonNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
+</li>
+</ul>
+<a name="isOp--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isOp</h4>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../src-html/cn/nukkit/command/CapturingCommandSender.html#line.172">isOp</a>()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../cn/nukkit/permission/ServerOperator.html#isOp--">ServerOperator</a></code></span></div>
+<div class="block">返回这个对象是不是服务器管理员。<br>
+ Returns if this object is an operator.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../cn/nukkit/permission/ServerOperator.html#isOp--">isOp</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/permission/ServerOperator.html" title="interface in cn.nukkit.permission">ServerOperator</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>这个对象是不是服务器管理员。<br>if this object is an operator.</dd>
+</dl>
+</li>
+</ul>
+<a name="setOp-boolean-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>setOp</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/command/CapturingCommandSender.html#line.177">setOp</a>(boolean&nbsp;isOp)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../cn/nukkit/permission/ServerOperator.html#setOp-boolean-">ServerOperator</a></code></span></div>
+<div class="block">把这个对象设置成服务器管理员。<br>
+ Sets this object to be an operator or not to be.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../cn/nukkit/permission/ServerOperator.html#setOp-boolean-">setOp</a></code>&nbsp;in interface&nbsp;<code><a href="../../../cn/nukkit/permission/ServerOperator.html" title="interface in cn.nukkit.permission">ServerOperator</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>isOp</code> - <code>true</code>为授予管理员，<code>false</code>为取消管理员。<br>
+              <code>true</code> for giving this operator or <code>false</code> for cancelling.</dd>
 </dl>
 </li>
 </ul>

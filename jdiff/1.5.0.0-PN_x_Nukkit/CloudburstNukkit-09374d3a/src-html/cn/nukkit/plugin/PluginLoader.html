@@ -1,0 +1,210 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package cn.nukkit.plugin;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>import java.io.File;<a name="line.3"></a>
+<span class="sourceLineNo">004</span>import java.util.regex.Pattern;<a name="line.4"></a>
+<span class="sourceLineNo">005</span><a name="line.5"></a>
+<span class="sourceLineNo">006</span>/**<a name="line.6"></a>
+<span class="sourceLineNo">007</span> * 描述一个插件加载器的接口。&lt;br&gt;<a name="line.7"></a>
+<span class="sourceLineNo">008</span> * An interface to describe a plugin loader.<a name="line.8"></a>
+<span class="sourceLineNo">009</span> *<a name="line.9"></a>
+<span class="sourceLineNo">010</span> * @author iNevet(code) @ Nukkit Project<a name="line.10"></a>
+<span class="sourceLineNo">011</span> * @author 粉鞋大妈(javadoc) @ Nukkit Project<a name="line.11"></a>
+<span class="sourceLineNo">012</span> * @see JavaPluginLoader<a name="line.12"></a>
+<span class="sourceLineNo">013</span> * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.13"></a>
+<span class="sourceLineNo">014</span> */<a name="line.14"></a>
+<span class="sourceLineNo">015</span>public interface PluginLoader {<a name="line.15"></a>
+<span class="sourceLineNo">016</span><a name="line.16"></a>
+<span class="sourceLineNo">017</span>    /**<a name="line.17"></a>
+<span class="sourceLineNo">018</span>     * 通过文件名字的字符串，来加载和初始化一个插件。&lt;br&gt;<a name="line.18"></a>
+<span class="sourceLineNo">019</span>     * Loads and initializes a plugin by its file name.<a name="line.19"></a>
+<span class="sourceLineNo">020</span>     *<a name="line.20"></a>
+<span class="sourceLineNo">021</span>     * &lt;p&gt;这个方法应该设置好插件的相关属性。比如，插件所在的服务器对象，插件的加载器对象，插件的描述对象，插件的数据文件夹。&lt;br&gt;<a name="line.21"></a>
+<span class="sourceLineNo">022</span>     * Properties for loaded plugin should be set in this method. Such as, the {@code Server} object for which this<a name="line.22"></a>
+<span class="sourceLineNo">023</span>     * plugin is running in, the {@code PluginLoader} object for its loader, and the {@code File} object for its<a name="line.23"></a>
+<span class="sourceLineNo">024</span>     * data folder.&lt;/p&gt;<a name="line.24"></a>
+<span class="sourceLineNo">025</span>     *<a name="line.25"></a>
+<span class="sourceLineNo">026</span>     * &lt;p&gt;如果插件加载失败，这个方法应该返回{@code null}，或者抛出异常。&lt;br&gt;<a name="line.26"></a>
+<span class="sourceLineNo">027</span>     * If the plugin loader does not load this plugin successfully, a {@code null} should be returned,<a name="line.27"></a>
+<span class="sourceLineNo">028</span>     * or an exception should be thrown.&lt;/p&gt;<a name="line.28"></a>
+<span class="sourceLineNo">029</span>     *<a name="line.29"></a>
+<span class="sourceLineNo">030</span>     * @param filename 这个插件的文件名字字符串。&lt;br&gt;A string of its file name.<a name="line.30"></a>
+<span class="sourceLineNo">031</span>     * @return 加载完毕的插件的 {@code Plugin}对象。&lt;br&gt;The loaded plugin as a {@code Plugin} object.<a name="line.31"></a>
+<span class="sourceLineNo">032</span>     * @throws java.lang.Exception 插件加载失败所抛出的异常。&lt;br&gt;Thrown when an error occurred.<a name="line.32"></a>
+<span class="sourceLineNo">033</span>     * @see #loadPlugin(File)<a name="line.33"></a>
+<span class="sourceLineNo">034</span>     * @see cn.nukkit.plugin.PluginBase#init(PluginLoader, cn.nukkit.Server, PluginDescription, File, File)<a name="line.34"></a>
+<span class="sourceLineNo">035</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.35"></a>
+<span class="sourceLineNo">036</span>     */<a name="line.36"></a>
+<span class="sourceLineNo">037</span>    Plugin loadPlugin(String filename) throws Exception;<a name="line.37"></a>
+<span class="sourceLineNo">038</span><a name="line.38"></a>
+<span class="sourceLineNo">039</span>    /**<a name="line.39"></a>
+<span class="sourceLineNo">040</span>     * 通过插件的 {@code File}对象，来加载和初始化一个插件。&lt;br&gt;<a name="line.40"></a>
+<span class="sourceLineNo">041</span>     * Loads and initializes a plugin by a {@code File} object describes the file.<a name="line.41"></a>
+<span class="sourceLineNo">042</span>     *<a name="line.42"></a>
+<span class="sourceLineNo">043</span>     * &lt;p&gt;这个方法应该设置好插件的相关属性。比如，插件所在的服务器对象，插件的加载器对象，插件的描述对象，插件的数据文件夹。&lt;br&gt;<a name="line.43"></a>
+<span class="sourceLineNo">044</span>     * Properties for loaded plugin should be set in this method. Such as, the {@code Server} object for which this<a name="line.44"></a>
+<span class="sourceLineNo">045</span>     * plugin is running in, the {@code PluginLoader} object for its loader, and the {@code File} object for its<a name="line.45"></a>
+<span class="sourceLineNo">046</span>     * data folder.&lt;/p&gt;<a name="line.46"></a>
+<span class="sourceLineNo">047</span>     *<a name="line.47"></a>
+<span class="sourceLineNo">048</span>     * &lt;p&gt;如果插件加载失败，这个方法应该返回{@code null}，或者抛出异常。&lt;br&gt;<a name="line.48"></a>
+<span class="sourceLineNo">049</span>     * If the plugin loader does not load this plugin successfully, a {@code null} should be returned,<a name="line.49"></a>
+<span class="sourceLineNo">050</span>     * or an exception should be thrown.&lt;/p&gt;<a name="line.50"></a>
+<span class="sourceLineNo">051</span>     *<a name="line.51"></a>
+<span class="sourceLineNo">052</span>     * @param file 这个插件的文件的 {@code File}对象。&lt;br&gt;A {@code File} object for this plugin.<a name="line.52"></a>
+<span class="sourceLineNo">053</span>     * @return 加载完毕的插件的 {@code Plugin}对象。&lt;br&gt;The loaded plugin as a {@code Plugin} object.<a name="line.53"></a>
+<span class="sourceLineNo">054</span>     * @throws java.lang.Exception 插件加载失败所抛出的异常。&lt;br&gt;Thrown when an error occurred.<a name="line.54"></a>
+<span class="sourceLineNo">055</span>     * @see #loadPlugin(String)<a name="line.55"></a>
+<span class="sourceLineNo">056</span>     * @see cn.nukkit.plugin.PluginBase#init(PluginLoader, cn.nukkit.Server, PluginDescription, File, File)<a name="line.56"></a>
+<span class="sourceLineNo">057</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.57"></a>
+<span class="sourceLineNo">058</span>     */<a name="line.58"></a>
+<span class="sourceLineNo">059</span>    Plugin loadPlugin(File file) throws Exception;<a name="line.59"></a>
+<span class="sourceLineNo">060</span><a name="line.60"></a>
+<span class="sourceLineNo">061</span>    /**<a name="line.61"></a>
+<span class="sourceLineNo">062</span>     * 通过插件文件名的字符串，来获得描述这个插件的 {@code PluginDescription}对象。&lt;br&gt;<a name="line.62"></a>
+<span class="sourceLineNo">063</span>     * Gets a {@code PluginDescription} object describes the plugin by its file name.<a name="line.63"></a>
+<span class="sourceLineNo">064</span>     *<a name="line.64"></a>
+<span class="sourceLineNo">065</span>     * &lt;p&gt;如果插件的描述对象获取失败，这个方法应该返回{@code null}。&lt;br&gt;<a name="line.65"></a>
+<span class="sourceLineNo">066</span>     * If the plugin loader does not get its description successfully, a {@code null} should be returned.&lt;/p&gt;<a name="line.66"></a>
+<span class="sourceLineNo">067</span>     *<a name="line.67"></a>
+<span class="sourceLineNo">068</span>     * @param filename 这个插件的文件名字。&lt;br&gt;A string of its file name.<a name="line.68"></a>
+<span class="sourceLineNo">069</span>     * @return 描述这个插件的 {@code PluginDescription}对象。&lt;br&gt;<a name="line.69"></a>
+<span class="sourceLineNo">070</span>     * A {@code PluginDescription} object describes the plugin.<a name="line.70"></a>
+<span class="sourceLineNo">071</span>     * @see #getPluginDescription(File)<a name="line.71"></a>
+<span class="sourceLineNo">072</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.72"></a>
+<span class="sourceLineNo">073</span>     */<a name="line.73"></a>
+<span class="sourceLineNo">074</span>    PluginDescription getPluginDescription(String filename);<a name="line.74"></a>
+<span class="sourceLineNo">075</span><a name="line.75"></a>
+<span class="sourceLineNo">076</span>    /**<a name="line.76"></a>
+<span class="sourceLineNo">077</span>     * 通过插件的 {@code File}对象，来获得描述这个插件的 {@code PluginDescription}对象。&lt;br&gt;<a name="line.77"></a>
+<span class="sourceLineNo">078</span>     * Gets a {@code PluginDescription} object describes the plugin by a {@code File} object describes the plugin file.<a name="line.78"></a>
+<span class="sourceLineNo">079</span>     *<a name="line.79"></a>
+<span class="sourceLineNo">080</span>     * &lt;p&gt;如果插件的描述对象获取失败，这个方法应该返回{@code null}。&lt;br&gt;<a name="line.80"></a>
+<span class="sourceLineNo">081</span>     * If the plugin loader does not get its description successfully, a {@code null} should be returned.&lt;/p&gt;<a name="line.81"></a>
+<span class="sourceLineNo">082</span>     *<a name="line.82"></a>
+<span class="sourceLineNo">083</span>     * @param file 这个插件的文件的 {@code File}对象。&lt;br&gt;A {@code File} object for this plugin.<a name="line.83"></a>
+<span class="sourceLineNo">084</span>     * @return 描述这个插件的 {@code PluginDescription}对象。&lt;br&gt;<a name="line.84"></a>
+<span class="sourceLineNo">085</span>     * A {@code PluginDescription} object describes the plugin.<a name="line.85"></a>
+<span class="sourceLineNo">086</span>     * @see #getPluginDescription(String)<a name="line.86"></a>
+<span class="sourceLineNo">087</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.87"></a>
+<span class="sourceLineNo">088</span>     */<a name="line.88"></a>
+<span class="sourceLineNo">089</span>    PluginDescription getPluginDescription(File file);<a name="line.89"></a>
+<span class="sourceLineNo">090</span><a name="line.90"></a>
+<span class="sourceLineNo">091</span>    /**<a name="line.91"></a>
+<span class="sourceLineNo">092</span>     * 返回这个插件加载器支持的文件类型。&lt;br&gt;<a name="line.92"></a>
+<span class="sourceLineNo">093</span>     * Returns the file types this plugin loader supports.<a name="line.93"></a>
+<span class="sourceLineNo">094</span>     *<a name="line.94"></a>
+<span class="sourceLineNo">095</span>     * &lt;p&gt;在Nukkit读取所有插件时，插件管理器会查找所有已经安装的插件加载器，通过识别这个插件是否满足下面的条件，<a name="line.95"></a>
+<span class="sourceLineNo">096</span>     * 来选择对应的插件加载器。&lt;br&gt;<a name="line.96"></a>
+<span class="sourceLineNo">097</span>     * When Nukkit is trying to load all its plugins, the plugin manager will look for all installed plugin loader,<a name="line.97"></a>
+<span class="sourceLineNo">098</span>     * and choose the correct one by checking if this plugin matches the filters given below.&lt;/p&gt;<a name="line.98"></a>
+<span class="sourceLineNo">099</span>     *<a name="line.99"></a>
+<span class="sourceLineNo">100</span>     * &lt;p&gt;举个例子，识别这个文件是否以jar为扩展名，它的正则表达式是：&lt;br&gt;<a name="line.100"></a>
+<span class="sourceLineNo">101</span>     * For example, to check if this file is has a "jar" extension, the regular expression should be:&lt;br&gt;<a name="line.101"></a>
+<span class="sourceLineNo">102</span>     * {@code ^.+\\.jar$}&lt;br&gt;<a name="line.102"></a>
+<span class="sourceLineNo">103</span>     * 所以只读取jar扩展名的插件加载器，这个函数应该写成：&lt;br&gt;<a name="line.103"></a>
+<span class="sourceLineNo">104</span>     * So, for a jar-extension-only file plugin loader, this method should be:<a name="line.104"></a>
+<span class="sourceLineNo">105</span>     * &lt;/p&gt;<a name="line.105"></a>
+<span class="sourceLineNo">106</span>     * &lt;pre&gt; {@code           @Override}<a name="line.106"></a>
+<span class="sourceLineNo">107</span>     *      public Pattern[] getPluginFilters() {<a name="line.107"></a>
+<span class="sourceLineNo">108</span>     *          return new Pattern[]{Pattern.compile("^.+\\.jar$")};<a name="line.108"></a>
+<span class="sourceLineNo">109</span>     *      }<a name="line.109"></a>
+<span class="sourceLineNo">110</span>     * &lt;/pre&gt;<a name="line.110"></a>
+<span class="sourceLineNo">111</span>     *<a name="line.111"></a>
+<span class="sourceLineNo">112</span>     * @return 表达这个插件加载器支持的文件类型的正则表达式数组。&lt;br&gt;<a name="line.112"></a>
+<span class="sourceLineNo">113</span>     * An array of regular expressions, that describes what kind of file this plugin loader supports.<a name="line.113"></a>
+<span class="sourceLineNo">114</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.114"></a>
+<span class="sourceLineNo">115</span>     */<a name="line.115"></a>
+<span class="sourceLineNo">116</span>    Pattern[] getPluginFilters();<a name="line.116"></a>
+<span class="sourceLineNo">117</span><a name="line.117"></a>
+<span class="sourceLineNo">118</span>    /**<a name="line.118"></a>
+<span class="sourceLineNo">119</span>     * 启用一个插件。&lt;br&gt;<a name="line.119"></a>
+<span class="sourceLineNo">120</span>     * Enables a plugin.<a name="line.120"></a>
+<span class="sourceLineNo">121</span>     *<a name="line.121"></a>
+<span class="sourceLineNo">122</span>     * @param plugin 要被启用的插件。&lt;br&gt;The plugin to enable.<a name="line.122"></a>
+<span class="sourceLineNo">123</span>     * @see #disablePlugin<a name="line.123"></a>
+<span class="sourceLineNo">124</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.124"></a>
+<span class="sourceLineNo">125</span>     */<a name="line.125"></a>
+<span class="sourceLineNo">126</span>    void enablePlugin(Plugin plugin);<a name="line.126"></a>
+<span class="sourceLineNo">127</span><a name="line.127"></a>
+<span class="sourceLineNo">128</span>    /**<a name="line.128"></a>
+<span class="sourceLineNo">129</span>     * 停用一个插件。&lt;br&gt;<a name="line.129"></a>
+<span class="sourceLineNo">130</span>     * Disables a plugin.<a name="line.130"></a>
+<span class="sourceLineNo">131</span>     *<a name="line.131"></a>
+<span class="sourceLineNo">132</span>     * @param plugin 要被停用的插件。&lt;br&gt;The plugin to disable.<a name="line.132"></a>
+<span class="sourceLineNo">133</span>     * @see #enablePlugin<a name="line.133"></a>
+<span class="sourceLineNo">134</span>     * @since Nukkit 1.0 | Nukkit API 1.0.0<a name="line.134"></a>
+<span class="sourceLineNo">135</span>     */<a name="line.135"></a>
+<span class="sourceLineNo">136</span>    void disablePlugin(Plugin plugin);<a name="line.136"></a>
+<span class="sourceLineNo">137</span><a name="line.137"></a>
+<span class="sourceLineNo">138</span>}<a name="line.138"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>

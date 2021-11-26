@@ -1,11 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- NewPage -->
-<html lang="en">
+<html lang="pt">
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>InventoryAction (PowerNukkit 1.5.0.0-PN API)</title>
-<meta name="date" content="2021-06-26">
+<meta name="date" content="2021-11-26">
 <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../../../script.js"></script>
 </head>
@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":10,"i2":10,"i3":10,"i4":6,"i5":10,"i6":6,"i7":6,"i8":10};
+var methods = {"i0":6,"i1":10,"i2":10,"i3":10,"i4":6,"i5":10,"i6":6,"i7":6,"i8":10,"i9":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -114,7 +114,7 @@ var activeTableTab = "activeTableTab";
 </dl>
 <hr>
 <br>
-<pre>public abstract class <span class="typeNameLabel">InventoryAction</span>
+<pre>public abstract class <a href="../../../../../src-html/cn/nukkit/inventory/transaction/action/InventoryAction.html#line.11">InventoryAction</a>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <dl>
 <dt><span class="simpleTagLabel">Author:</span></dt>
@@ -231,13 +231,17 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Called by inventory transactions before any actions are processed.</div>
 </td>
 </tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/inventory/transaction/action/InventoryAction.html#toString--">toString</a></span>()</code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
 </ul>
 </li>
 </ul>
@@ -259,7 +263,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>sourceItem</h4>
-<pre>protected&nbsp;<a href="../../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a> sourceItem</pre>
+<pre>protected&nbsp;<a href="../../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a> <a href="../../../../../src-html/cn/nukkit/inventory/transaction/action/InventoryAction.html#line.13">sourceItem</a></pre>
 </li>
 </ul>
 <a name="targetItem">
@@ -268,7 +272,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockListLast">
 <li class="blockList">
 <h4>targetItem</h4>
-<pre>protected&nbsp;<a href="../../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a> targetItem</pre>
+<pre>protected&nbsp;<a href="../../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a> <a href="../../../../../src-html/cn/nukkit/inventory/transaction/action/InventoryAction.html#line.14">targetItem</a></pre>
 </li>
 </ul>
 </li>
@@ -285,7 +289,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockListLast">
 <li class="blockList">
 <h4>InventoryAction</h4>
-<pre>public&nbsp;InventoryAction(<a href="../../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;sourceItem,
+<pre>public&nbsp;<a href="../../../../../src-html/cn/nukkit/inventory/transaction/action/InventoryAction.html#line.16">InventoryAction</a>(<a href="../../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;sourceItem,
                        <a href="../../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;targetItem)</pre>
 </li>
 </ul>
@@ -303,7 +307,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>getCreationTime</h4>
-<pre>public&nbsp;long&nbsp;getCreationTime()</pre>
+<pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/cn/nukkit/inventory/transaction/action/InventoryAction.html#line.22">getCreationTime</a>()</pre>
 </li>
 </ul>
 <a name="getSourceItem--">
@@ -312,7 +316,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>getSourceItem</h4>
-<pre>public&nbsp;<a href="../../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;getSourceItem()</pre>
+<pre>public&nbsp;<a href="../../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;<a href="../../../../../src-html/cn/nukkit/inventory/transaction/action/InventoryAction.html#line.31">getSourceItem</a>()</pre>
 <div class="block">Returns the item that was present before the action took place.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -326,7 +330,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>getTargetItem</h4>
-<pre>public&nbsp;<a href="../../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;getTargetItem()</pre>
+<pre>public&nbsp;<a href="../../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;<a href="../../../../../src-html/cn/nukkit/inventory/transaction/action/InventoryAction.html#line.40">getTargetItem</a>()</pre>
 <div class="block">Returns the item that the action attempted to replace the source item with.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -340,7 +344,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>onPreExecute</h4>
-<pre>public&nbsp;boolean&nbsp;onPreExecute(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;source)</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/cn/nukkit/inventory/transaction/action/InventoryAction.html#line.51">onPreExecute</a>(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;source)</pre>
 <div class="block">Called by inventory transactions before any actions are processed. If this returns false, the transaction will
  be cancelled.</div>
 <dl>
@@ -357,7 +361,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>isValid</h4>
-<pre>public abstract&nbsp;boolean&nbsp;isValid(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;source)</pre>
+<pre>public abstract&nbsp;boolean&nbsp;<a href="../../../../../src-html/cn/nukkit/inventory/transaction/action/InventoryAction.html#line.61">isValid</a>(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;source)</pre>
 <div class="block">Returns whether this action is currently valid. This should perform any necessary sanity checks.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -373,7 +377,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>onAddToTransaction</h4>
-<pre>public&nbsp;void&nbsp;onAddToTransaction(<a href="../../../../../cn/nukkit/inventory/transaction/InventoryTransaction.html" title="class in cn.nukkit.inventory.transaction">InventoryTransaction</a>&nbsp;transaction)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/cn/nukkit/inventory/transaction/action/InventoryAction.html#line.68">onAddToTransaction</a>(<a href="../../../../../cn/nukkit/inventory/transaction/InventoryTransaction.html" title="class in cn.nukkit.inventory.transaction">InventoryTransaction</a>&nbsp;transaction)</pre>
 <div class="block">Called when the action is added to the specified InventoryTransaction.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -387,7 +391,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>execute</h4>
-<pre>public abstract&nbsp;boolean&nbsp;execute(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;source)</pre>
+<pre>public abstract&nbsp;boolean&nbsp;<a href="../../../../../src-html/cn/nukkit/inventory/transaction/action/InventoryAction.html#line.79">execute</a>(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;source)</pre>
 <div class="block">Performs actions needed to complete the inventory-action server-side. Returns if it was successful. Will return
  false if plugins cancelled events. This will only be called if the transaction which it is part of is considered
  valid.</div>
@@ -405,7 +409,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>onExecuteSuccess</h4>
-<pre>public abstract&nbsp;void&nbsp;onExecuteSuccess(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;source)</pre>
+<pre>public abstract&nbsp;void&nbsp;<a href="../../../../../src-html/cn/nukkit/inventory/transaction/action/InventoryAction.html#line.86">onExecuteSuccess</a>(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;source)</pre>
 <div class="block">Performs additional actions when this inventory-action completed successfully.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -416,14 +420,27 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <a name="onExecuteFail-cn.nukkit.Player-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>onExecuteFail</h4>
-<pre>public abstract&nbsp;void&nbsp;onExecuteFail(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;source)</pre>
+<pre>public abstract&nbsp;void&nbsp;<a href="../../../../../src-html/cn/nukkit/inventory/transaction/action/InventoryAction.html#line.93">onExecuteFail</a>(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;source)</pre>
 <div class="block">Performs additional actions when this inventory-action did not complete successfully.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - player</dd>
+</dl>
+</li>
+</ul>
+<a name="toString--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>toString</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/cn/nukkit/inventory/transaction/action/InventoryAction.html#line.97">toString</a>()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
 </dl>
 </li>
 </ul>

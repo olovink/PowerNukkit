@@ -1,11 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- NewPage -->
-<html lang="en">
+<html lang="pt">
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>DataPacket (PowerNukkit 1.5.0.0-PN API)</title>
-<meta name="date" content="2021-06-26">
+<meta name="date" content="2021-11-26">
 <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../../script.js"></script>
 </head>
@@ -123,7 +123,7 @@ var activeTableTab = "activeTableTab";
 </dl>
 <hr>
 <br>
-<pre>public abstract class <span class="typeNameLabel">DataPacket</span>
+<pre>public abstract class <a href="../../../../src-html/cn/nukkit/network/protocol/DataPacket.html#line.12">DataPacket</a>
 extends <a href="../../../../cn/nukkit/utils/BinaryStream.html" title="class in cn.nukkit.utils">BinaryStream</a>
 implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.html?is-external=true" title="class or interface in java.lang">Cloneable</a></pre>
 <dl>
@@ -278,7 +278,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <ul class="blockList">
 <li class="blockList">
 <h4>EMPTY_ARRAY</h4>
-<pre>public static final&nbsp;<a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>[] EMPTY_ARRAY</pre>
+<pre>public static final&nbsp;<a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>[] <a href="../../../../src-html/cn/nukkit/network/protocol/DataPacket.html#line.13">EMPTY_ARRAY</a></pre>
 </li>
 </ul>
 <a name="isEncoded">
@@ -287,7 +287,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <ul class="blockList">
 <li class="blockList">
 <h4>isEncoded</h4>
-<pre>public volatile&nbsp;boolean isEncoded</pre>
+<pre>public volatile&nbsp;boolean <a href="../../../../src-html/cn/nukkit/network/protocol/DataPacket.html#line.15">isEncoded</a></pre>
 </li>
 </ul>
 <a name="reliability">
@@ -296,7 +296,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <ul class="blockListLast">
 <li class="blockList">
 <h4>reliability</h4>
-<pre>public&nbsp;com.nukkitx.network.raknet.RakNetReliability reliability</pre>
+<pre>public&nbsp;com.nukkitx.network.raknet.RakNetReliability <a href="../../../../src-html/cn/nukkit/network/protocol/DataPacket.html#line.18">reliability</a></pre>
 </li>
 </ul>
 </li>
@@ -313,7 +313,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <ul class="blockListLast">
 <li class="blockList">
 <h4>DataPacket</h4>
-<pre>public&nbsp;DataPacket()</pre>
+<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/DataPacket.html#line.12">DataPacket</a>()</pre>
 </li>
 </ul>
 </li>
@@ -330,7 +330,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <ul class="blockList">
 <li class="blockList">
 <h4>pid</h4>
-<pre>public abstract&nbsp;byte&nbsp;pid()</pre>
+<pre>public abstract&nbsp;byte&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/DataPacket.html#line.20">pid</a>()</pre>
 </li>
 </ul>
 <a name="decode--">
@@ -339,7 +339,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <ul class="blockList">
 <li class="blockList">
 <h4>decode</h4>
-<pre>public abstract&nbsp;void&nbsp;decode()</pre>
+<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/DataPacket.html#line.22">decode</a>()</pre>
 </li>
 </ul>
 <a name="encode--">
@@ -348,7 +348,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <ul class="blockList">
 <li class="blockList">
 <h4>encode</h4>
-<pre>public abstract&nbsp;void&nbsp;encode()</pre>
+<pre>public abstract&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/DataPacket.html#line.24">encode</a>()</pre>
 </li>
 </ul>
 <a name="tryEncode--">
@@ -357,7 +357,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <ul class="blockList">
 <li class="blockList">
 <h4>tryEncode</h4>
-<pre>public final&nbsp;void&nbsp;tryEncode()</pre>
+<pre>public final&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/DataPacket.html#line.26">tryEncode</a>()</pre>
 </li>
 </ul>
 <a name="reset--">
@@ -366,7 +366,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <ul class="blockList">
 <li class="blockList">
 <h4>reset</h4>
-<pre>public&nbsp;<a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;reset()</pre>
+<pre>public&nbsp;<a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/DataPacket.html#line.34">reset</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../cn/nukkit/utils/BinaryStream.html#reset--">reset</a></code>&nbsp;in class&nbsp;<code><a href="../../../../cn/nukkit/utils/BinaryStream.html" title="class in cn.nukkit.utils">BinaryStream</a></code></dd>
@@ -379,7 +379,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <ul class="blockList">
 <li class="blockList">
 <h4>setChannel</h4>
-<pre>public&nbsp;void&nbsp;setChannel(int&nbsp;channel)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/DataPacket.html#line.40">setChannel</a>(int&nbsp;channel)</pre>
 </li>
 </ul>
 <a name="getChannel--">
@@ -388,7 +388,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <ul class="blockList">
 <li class="blockList">
 <h4>getChannel</h4>
-<pre>public&nbsp;int&nbsp;getChannel()</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/DataPacket.html#line.44">getChannel</a>()</pre>
 </li>
 </ul>
 <a name="clean--">
@@ -397,7 +397,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <ul class="blockList">
 <li class="blockList">
 <h4>clean</h4>
-<pre>public&nbsp;<a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;clean()</pre>
+<pre>public&nbsp;<a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/DataPacket.html#line.48">clean</a>()</pre>
 </li>
 </ul>
 <a name="clone--">
@@ -406,7 +406,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <ul class="blockList">
 <li class="blockList">
 <h4>clone</h4>
-<pre>public&nbsp;<a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;clone()</pre>
+<pre>public&nbsp;<a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/DataPacket.html#line.56">clone</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
@@ -419,7 +419,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <ul class="blockList">
 <li class="blockList">
 <h4>compress</h4>
-<pre>public&nbsp;<a href="../../../../cn/nukkit/network/protocol/BatchPacket.html" title="class in cn.nukkit.network.protocol">BatchPacket</a>&nbsp;compress()</pre>
+<pre>public&nbsp;<a href="../../../../cn/nukkit/network/protocol/BatchPacket.html" title="class in cn.nukkit.network.protocol">BatchPacket</a>&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/DataPacket.html#line.64">compress</a>()</pre>
 </li>
 </ul>
 <a name="compress-int-">
@@ -428,7 +428,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <ul class="blockListLast">
 <li class="blockList">
 <h4>compress</h4>
-<pre>public&nbsp;<a href="../../../../cn/nukkit/network/protocol/BatchPacket.html" title="class in cn.nukkit.network.protocol">BatchPacket</a>&nbsp;compress(int&nbsp;level)</pre>
+<pre>public&nbsp;<a href="../../../../cn/nukkit/network/protocol/BatchPacket.html" title="class in cn.nukkit.network.protocol">BatchPacket</a>&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/DataPacket.html#line.68">compress</a>(int&nbsp;level)</pre>
 </li>
 </ul>
 </li>

@@ -1,11 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- NewPage -->
-<html lang="en">
+<html lang="pt">
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>CoveredBiome (PowerNukkit 1.5.0.0-PN API)</title>
-<meta name="date" content="2021-06-26">
+<meta name="date" content="2021-11-26">
 <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../../../script.js"></script>
 </head>
@@ -123,7 +123,7 @@ var activeTableTab = "activeTableTab";
 </dl>
 <hr>
 <br>
-<pre>public abstract class <span class="typeNameLabel">CoveredBiome</span>
+<pre>public abstract class <a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.19">CoveredBiome</a>
 extends <a href="../../../../../cn/nukkit/level/biome/Biome.html" title="class in cn.nukkit.level.biome">Biome</a></pre>
 <dl>
 <dt><span class="simpleTagLabel">Author:</span></dt>
@@ -263,7 +263,9 @@ extends <a href="../../../../../cn/nukkit/level/biome/Biome.html" title="class i
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/level/biome/type/CoveredBiome.html#getGroundDepth-int-">getGroundDepth</a></span>(int&nbsp;y)</code>
-<div class="block">The amount of times the ground block should be used</div>
+<div class="block">The amount of times the ground block should be used     
+        
+ If &lt; 0 bad things will happen!</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
@@ -305,7 +307,9 @@ extends <a href="../../../../../cn/nukkit/level/biome/Biome.html" title="class i
 <tr id="i13" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/level/biome/type/CoveredBiome.html#getSurfaceDepth-int-">getSurfaceDepth</a></span>(int&nbsp;y)</code>
-<div class="block">The amount of times the surface block should be used</div>
+<div class="block">The amount of times the surface block should be used    
+        
+ If &lt; 0 bad things will happen!</div>
 </td>
 </tr>
 <tr id="i14" class="altColor">
@@ -396,7 +400,7 @@ extends <a href="../../../../../cn/nukkit/level/biome/Biome.html" title="class i
 <h4>useNewRakNetCover</h4>
 <pre><a href="../../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a> useNewRakNetCover</pre>
+protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a> <a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.24">useNewRakNetCover</a></pre>
 </li>
 </ul>
 <a name="useNewRakNetSurfaceDepth">
@@ -407,7 +411,7 @@ protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Bool
 <h4>useNewRakNetSurfaceDepth</h4>
 <pre><a href="../../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a> useNewRakNetSurfaceDepth</pre>
+protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a> <a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.28">useNewRakNetSurfaceDepth</a></pre>
 </li>
 </ul>
 <a name="useNewRakNetSurface">
@@ -418,7 +422,7 @@ protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Bool
 <h4>useNewRakNetSurface</h4>
 <pre><a href="../../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a> useNewRakNetSurface</pre>
+protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a> <a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.32">useNewRakNetSurface</a></pre>
 </li>
 </ul>
 <a name="useNewRakNetGroundDepth">
@@ -429,7 +433,7 @@ protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Bool
 <h4>useNewRakNetGroundDepth</h4>
 <pre><a href="../../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a> useNewRakNetGroundDepth</pre>
+protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a> <a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.36">useNewRakNetGroundDepth</a></pre>
 </li>
 </ul>
 <a name="useNewRakNetGroundBlock">
@@ -440,7 +444,7 @@ protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Bool
 <h4>useNewRakNetGroundBlock</h4>
 <pre><a href="../../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a> useNewRakNetGroundBlock</pre>
+protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a> <a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.40">useNewRakNetGroundBlock</a></pre>
 </li>
 </ul>
 <a name="synchronizeCover">
@@ -454,7 +458,7 @@ protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Bool
                     <a href="../../../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="Exposed lock object and removed from new-raknet and not used by PowerNukkit")
  <a href="../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
  <a href="../../../../../cn/nukkit/api/RemovedFromNewRakNet.html" title="annotation in cn.nukkit.api">@RemovedFromNewRakNet</a>
-public final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> synchronizeCover</pre>
+public final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> <a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.46">synchronizeCover</a></pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </li>
 </ul>
@@ -472,7 +476,7 @@ public final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/O
 <ul class="blockListLast">
 <li class="blockList">
 <h4>CoveredBiome</h4>
-<pre>public&nbsp;CoveredBiome()</pre>
+<pre>public&nbsp;<a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.19">CoveredBiome</a>()</pre>
 </li>
 </ul>
 </li>
@@ -490,7 +494,7 @@ public final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/O
 <li class="blockList">
 <h4>getCoverId</h4>
 <pre><a href="../../../../../cn/nukkit/api/NewRakNetOnly.html" title="annotation in cn.nukkit.api">@NewRakNetOnly</a>
-public&nbsp;int&nbsp;getCoverId(int&nbsp;x,
+public&nbsp;int&nbsp;<a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.54">getCoverId</a>(int&nbsp;x,
                                      int&nbsp;z)</pre>
 <div class="block">A single block placed on top of the surface blocks</div>
 <dl>
@@ -507,7 +511,7 @@ public&nbsp;int&nbsp;getCoverId(int&nbsp;x,
 <h4>getCoverBlock</h4>
 <pre><a href="../../../../../cn/nukkit/api/RemovedFromNewRakNet.html" title="annotation in cn.nukkit.api">@RemovedFromNewRakNet</a>
  <a href="../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-public&nbsp;int&nbsp;getCoverBlock()</pre>
+public&nbsp;int&nbsp;<a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.68">getCoverBlock</a>()</pre>
 <div class="block">A single block placed on top of the surface blocks</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -524,7 +528,7 @@ public&nbsp;int&nbsp;getCoverBlock()</pre>
 <pre><a href="../../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
  <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
-public&nbsp;<a href="../../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;getCoverState(int&nbsp;x,
+public&nbsp;<a href="../../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;<a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.84">getCoverState</a>(int&nbsp;x,
                                                                                        int&nbsp;z)</pre>
 <div class="block">A single block placed on top of the surface blocks</div>
 <dl>
@@ -540,7 +544,7 @@ public&nbsp;<a href="../../../../../cn/nukkit/blockstate/BlockState.html" title=
 <li class="blockList">
 <h4>getSurfaceDepth</h4>
 <pre><a href="../../../../../cn/nukkit/api/NewRakNetOnly.html" title="annotation in cn.nukkit.api">@NewRakNetOnly</a>
-public&nbsp;int&nbsp;getSurfaceDepth(int&nbsp;x,
+public&nbsp;int&nbsp;<a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.96">getSurfaceDepth</a>(int&nbsp;x,
                                           int&nbsp;y,
                                           int&nbsp;z)</pre>
 </li>
@@ -553,7 +557,7 @@ public&nbsp;int&nbsp;getSurfaceDepth(int&nbsp;x,
 <h4>getSurfaceDepth</h4>
 <pre><a href="../../../../../cn/nukkit/api/RemovedFromNewRakNet.html" title="annotation in cn.nukkit.api">@RemovedFromNewRakNet</a>
  <a href="../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-public&nbsp;int&nbsp;getSurfaceDepth(int&nbsp;y)</pre>
+public&nbsp;int&nbsp;<a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.114">getSurfaceDepth</a>(int&nbsp;y)</pre>
 <div class="block">The amount of times the surface block should be used    
  <p>    
  If &lt; 0 bad things will happen!      
@@ -573,7 +577,7 @@ public&nbsp;int&nbsp;getSurfaceDepth(int&nbsp;y)</pre>
 <li class="blockList">
 <h4>getSurfaceId</h4>
 <pre><a href="../../../../../cn/nukkit/api/NewRakNetOnly.html" title="annotation in cn.nukkit.api">@NewRakNetOnly</a>
-public&nbsp;int&nbsp;getSurfaceId(int&nbsp;x,
+public&nbsp;int&nbsp;<a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.123">getSurfaceId</a>(int&nbsp;x,
                                        int&nbsp;y,
                                        int&nbsp;z)</pre>
 </li>
@@ -586,7 +590,7 @@ public&nbsp;int&nbsp;getSurfaceId(int&nbsp;x,
 <h4>getSurfaceBlock</h4>
 <pre><a href="../../../../../cn/nukkit/api/RemovedFromNewRakNet.html" title="annotation in cn.nukkit.api">@RemovedFromNewRakNet</a>
  <a href="../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-public&nbsp;int&nbsp;getSurfaceBlock(int&nbsp;y)</pre>
+public&nbsp;int&nbsp;<a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.138">getSurfaceBlock</a>(int&nbsp;y)</pre>
 <div class="block">Between cover and ground</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -604,7 +608,7 @@ public&nbsp;int&nbsp;getSurfaceBlock(int&nbsp;y)</pre>
 <h4>getSurfaceMeta</h4>
 <pre><a href="../../../../../cn/nukkit/api/RemovedFromNewRakNet.html" title="annotation in cn.nukkit.api">@RemovedFromNewRakNet</a>
  <a href="../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-public&nbsp;int&nbsp;getSurfaceMeta(int&nbsp;y)</pre>
+public&nbsp;int&nbsp;<a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.157">getSurfaceMeta</a>(int&nbsp;y)</pre>
 <div class="block">The metadata of the surface block</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -622,7 +626,7 @@ public&nbsp;int&nbsp;getSurfaceMeta(int&nbsp;y)</pre>
 <h4>getSurfaceState</h4>
 <pre><a href="../../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-public&nbsp;<a href="../../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;getSurfaceState(int&nbsp;x,
+public&nbsp;<a href="../../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;<a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.167">getSurfaceState</a>(int&nbsp;x,
                                                                                int&nbsp;y,
                                                                                int&nbsp;z)</pre>
 </li>
@@ -634,7 +638,7 @@ public&nbsp;<a href="../../../../../cn/nukkit/blockstate/BlockState.html" title=
 <li class="blockList">
 <h4>getGroundDepth</h4>
 <pre><a href="../../../../../cn/nukkit/api/NewRakNetOnly.html" title="annotation in cn.nukkit.api">@NewRakNetOnly</a>
-public&nbsp;int&nbsp;getGroundDepth(int&nbsp;x,
+public&nbsp;int&nbsp;<a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.179">getGroundDepth</a>(int&nbsp;x,
                                          int&nbsp;y,
                                          int&nbsp;z)</pre>
 </li>
@@ -647,7 +651,7 @@ public&nbsp;int&nbsp;getGroundDepth(int&nbsp;x,
 <h4>getGroundDepth</h4>
 <pre><a href="../../../../../cn/nukkit/api/RemovedFromNewRakNet.html" title="annotation in cn.nukkit.api">@RemovedFromNewRakNet</a>
  <a href="../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-public&nbsp;int&nbsp;getGroundDepth(int&nbsp;y)</pre>
+public&nbsp;int&nbsp;<a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.196">getGroundDepth</a>(int&nbsp;y)</pre>
 <div class="block">The amount of times the ground block should be used     
  <p>    
  If &lt; 0 bad things will happen!</div>
@@ -666,7 +670,7 @@ public&nbsp;int&nbsp;getGroundDepth(int&nbsp;y)</pre>
 <li class="blockList">
 <h4>getGroundId</h4>
 <pre><a href="../../../../../cn/nukkit/api/NewRakNetOnly.html" title="annotation in cn.nukkit.api">@NewRakNetOnly</a>
-public&nbsp;int&nbsp;getGroundId(int&nbsp;x,
+public&nbsp;int&nbsp;<a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.205">getGroundId</a>(int&nbsp;x,
                                       int&nbsp;y,
                                       int&nbsp;z)</pre>
 </li>
@@ -679,7 +683,7 @@ public&nbsp;int&nbsp;getGroundId(int&nbsp;x,
 <h4>getGroundBlock</h4>
 <pre><a href="../../../../../cn/nukkit/api/RemovedFromNewRakNet.html" title="annotation in cn.nukkit.api">@RemovedFromNewRakNet</a>
  <a href="../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-public&nbsp;int&nbsp;getGroundBlock(int&nbsp;y)</pre>
+public&nbsp;int&nbsp;<a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.220">getGroundBlock</a>(int&nbsp;y)</pre>
 <div class="block">Between surface and stone</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -697,7 +701,7 @@ public&nbsp;int&nbsp;getGroundBlock(int&nbsp;y)</pre>
 <h4>getGroundMeta</h4>
 <pre><a href="../../../../../cn/nukkit/api/RemovedFromNewRakNet.html" title="annotation in cn.nukkit.api">@RemovedFromNewRakNet</a>
  <a href="../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-public&nbsp;int&nbsp;getGroundMeta(int&nbsp;y)</pre>
+public&nbsp;int&nbsp;<a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.237">getGroundMeta</a>(int&nbsp;y)</pre>
 <div class="block">The metadata of the ground block</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -715,7 +719,7 @@ public&nbsp;int&nbsp;getGroundMeta(int&nbsp;y)</pre>
 <h4>getGroundState</h4>
 <pre><a href="../../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-public&nbsp;<a href="../../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;getGroundState(int&nbsp;x,
+public&nbsp;<a href="../../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;<a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.247">getGroundState</a>(int&nbsp;x,
                                                                               int&nbsp;y,
                                                                               int&nbsp;z)</pre>
 </li>
@@ -728,7 +732,7 @@ public&nbsp;<a href="../../../../../cn/nukkit/blockstate/BlockState.html" title=
 <h4>getStoneBlock</h4>
 <pre><a href="../../../../../cn/nukkit/api/RemovedFromNewRakNet.html" title="annotation in cn.nukkit.api">@RemovedFromNewRakNet</a>
  <a href="../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-public&nbsp;int&nbsp;getStoneBlock()</pre>
+public&nbsp;int&nbsp;<a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.267">getStoneBlock</a>()</pre>
 <div class="block">The block used as stone/below all other surface blocks</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -744,7 +748,7 @@ public&nbsp;int&nbsp;getStoneBlock()</pre>
 <h4>preCover</h4>
 <pre><a href="../../../../../cn/nukkit/api/RemovedFromNewRakNet.html" title="annotation in cn.nukkit.api">@RemovedFromNewRakNet</a>
  <a href="../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-public&nbsp;void&nbsp;preCover(int&nbsp;x,
+public&nbsp;void&nbsp;<a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.284">preCover</a>(int&nbsp;x,
                                                                        int&nbsp;z)</pre>
 <div class="block">Called before a new block column is covered. Biomes can update any relevant variables here before covering.
  <p>
@@ -764,7 +768,7 @@ public&nbsp;void&nbsp;preCover(int&nbsp;x,
 <li class="blockList">
 <h4>doCover</h4>
 <pre><a href="../../../../../cn/nukkit/api/NewRakNetOnly.html" title="annotation in cn.nukkit.api">@NewRakNetOnly</a>
-public&nbsp;void&nbsp;doCover(int&nbsp;x,
+public&nbsp;void&nbsp;<a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.289">doCover</a>(int&nbsp;x,
                                    int&nbsp;z,
                                    <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
                                    <a href="../../../../../cn/nukkit/level/format/FullChunk.html" title="interface in cn.nukkit.level.format">FullChunk</a>&nbsp;chunk)</pre>
@@ -778,7 +782,7 @@ public&nbsp;void&nbsp;doCover(int&nbsp;x,
 <h4>useNewRakNetCover</h4>
 <pre><a href="../../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-protected&nbsp;boolean&nbsp;useNewRakNetCover()</pre>
+protected&nbsp;boolean&nbsp;<a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.336">useNewRakNetCover</a>()</pre>
 </li>
 </ul>
 <a name="useNewRakNetSurfaceDepth--">
@@ -789,7 +793,7 @@ protected&nbsp;boolean&nbsp;useNewRakNetCover()</pre>
 <h4>useNewRakNetSurfaceDepth</h4>
 <pre><a href="../../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-protected&nbsp;boolean&nbsp;useNewRakNetSurfaceDepth()</pre>
+protected&nbsp;boolean&nbsp;<a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.350">useNewRakNetSurfaceDepth</a>()</pre>
 </li>
 </ul>
 <a name="useNewRakNetSurface--">
@@ -800,7 +804,7 @@ protected&nbsp;boolean&nbsp;useNewRakNetSurfaceDepth()</pre>
 <h4>useNewRakNetSurface</h4>
 <pre><a href="../../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-protected&nbsp;boolean&nbsp;useNewRakNetSurface()</pre>
+protected&nbsp;boolean&nbsp;<a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.364">useNewRakNetSurface</a>()</pre>
 </li>
 </ul>
 <a name="useNewRakNetGroundDepth--">
@@ -811,7 +815,7 @@ protected&nbsp;boolean&nbsp;useNewRakNetSurface()</pre>
 <h4>useNewRakNetGroundDepth</h4>
 <pre><a href="../../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-protected&nbsp;boolean&nbsp;useNewRakNetGroundDepth()</pre>
+protected&nbsp;boolean&nbsp;<a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.378">useNewRakNetGroundDepth</a>()</pre>
 </li>
 </ul>
 <a name="useNewRakNetGround--">
@@ -822,7 +826,7 @@ protected&nbsp;boolean&nbsp;useNewRakNetGroundDepth()</pre>
 <h4>useNewRakNetGround</h4>
 <pre><a href="../../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-protected&nbsp;boolean&nbsp;useNewRakNetGround()</pre>
+protected&nbsp;boolean&nbsp;<a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.392">useNewRakNetGround</a>()</pre>
 </li>
 </ul>
 <a name="attemptToUseNewRakNet-java.lang.Runnable-java.util.function.Supplier-java.util.function.Consumer-">
@@ -833,7 +837,7 @@ protected&nbsp;boolean&nbsp;useNewRakNetGround()</pre>
 <h4>attemptToUseNewRakNet</h4>
 <pre><a href="../../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-protected&nbsp;boolean&nbsp;attemptToUseNewRakNet(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;method,
+protected&nbsp;boolean&nbsp;<a href="../../../../../src-html/cn/nukkit/level/biome/type/CoveredBiome.html#line.406">attemptToUseNewRakNet</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;method,
                                                                                      <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function">Supplier</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;flagGetter,
                                                                                      <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function">Consumer</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang">Boolean</a>&gt;&nbsp;flagSetter)</pre>
 </li>

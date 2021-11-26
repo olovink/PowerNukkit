@@ -1,11 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- NewPage -->
-<html lang="en">
+<html lang="pt">
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>PlayerChatEvent (PowerNukkit 1.5.0.0-PN API)</title>
-<meta name="date" content="2021-06-26">
+<meta name="date" content="2021-11-26">
 <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../../script.js"></script>
 </head>
@@ -129,7 +129,7 @@ var activeTableTab = "activeTableTab";
 </dl>
 <hr>
 <br>
-<pre>public class <span class="typeNameLabel">PlayerChatEvent</span>
+<pre>public class <a href="../../../../src-html/cn/nukkit/event/player/PlayerChatEvent.html#line.13">PlayerChatEvent</a>
 extends <a href="../../../../cn/nukkit/event/player/PlayerMessageEvent.html" title="class in cn.nukkit.event.player">PlayerMessageEvent</a>
 implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interface in cn.nukkit.event">Cancellable</a></pre>
 </li>
@@ -300,7 +300,7 @@ implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interfa
 <ul class="blockList">
 <li class="blockList">
 <h4>format</h4>
-<pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> format</pre>
+<pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../src-html/cn/nukkit/event/player/PlayerChatEvent.html#line.20">format</a></pre>
 </li>
 </ul>
 <a name="recipients">
@@ -309,7 +309,7 @@ implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interfa
 <ul class="blockListLast">
 <li class="blockList">
 <h4>recipients</h4>
-<pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../cn/nukkit/command/CommandSender.html" title="interface in cn.nukkit.command">CommandSender</a>&gt; recipients</pre>
+<pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../cn/nukkit/command/CommandSender.html" title="interface in cn.nukkit.command">CommandSender</a>&gt; <a href="../../../../src-html/cn/nukkit/event/player/PlayerChatEvent.html#line.22">recipients</a></pre>
 </li>
 </ul>
 </li>
@@ -326,7 +326,7 @@ implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interfa
 <ul class="blockList">
 <li class="blockList">
 <h4>PlayerChatEvent</h4>
-<pre>public&nbsp;PlayerChatEvent(<a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
+<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerChatEvent.html#line.24">PlayerChatEvent</a>(<a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
                        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message)</pre>
 </li>
 </ul>
@@ -336,7 +336,7 @@ implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interfa
 <ul class="blockListLast">
 <li class="blockList">
 <h4>PlayerChatEvent</h4>
-<pre>public&nbsp;PlayerChatEvent(<a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
+<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerChatEvent.html#line.28">PlayerChatEvent</a>(<a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
                        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message,
                        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;format,
                        <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../cn/nukkit/command/CommandSender.html" title="interface in cn.nukkit.command">CommandSender</a>&gt;&nbsp;recipients)</pre>
@@ -356,7 +356,7 @@ implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interfa
 <ul class="blockList">
 <li class="blockList">
 <h4>getHandlers</h4>
-<pre>public static&nbsp;<a href="../../../../cn/nukkit/event/HandlerList.html" title="class in cn.nukkit.event">HandlerList</a>&nbsp;getHandlers()</pre>
+<pre>public static&nbsp;<a href="../../../../cn/nukkit/event/HandlerList.html" title="class in cn.nukkit.event">HandlerList</a>&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerChatEvent.html#line.16">getHandlers</a>()</pre>
 </li>
 </ul>
 <a name="setPlayer-cn.nukkit.Player-">
@@ -365,7 +365,7 @@ implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interfa
 <ul class="blockList">
 <li class="blockList">
 <h4>setPlayer</h4>
-<pre>public&nbsp;void&nbsp;setPlayer(<a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerChatEvent.html#line.51">setPlayer</a>(<a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player)</pre>
 <div class="block">Changes the player that is sending the message</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -379,7 +379,7 @@ implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interfa
 <ul class="blockList">
 <li class="blockList">
 <h4>getFormat</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getFormat()</pre>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerChatEvent.html#line.55">getFormat</a>()</pre>
 </li>
 </ul>
 <a name="setFormat-java.lang.String-">
@@ -388,7 +388,7 @@ implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interfa
 <ul class="blockList">
 <li class="blockList">
 <h4>setFormat</h4>
-<pre>public&nbsp;void&nbsp;setFormat(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;format)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerChatEvent.html#line.59">setFormat</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;format)</pre>
 </li>
 </ul>
 <a name="getRecipients--">
@@ -397,7 +397,7 @@ implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interfa
 <ul class="blockList">
 <li class="blockList">
 <h4>getRecipients</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../cn/nukkit/command/CommandSender.html" title="interface in cn.nukkit.command">CommandSender</a>&gt;&nbsp;getRecipients()</pre>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../cn/nukkit/command/CommandSender.html" title="interface in cn.nukkit.command">CommandSender</a>&gt;&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerChatEvent.html#line.63">getRecipients</a>()</pre>
 </li>
 </ul>
 <a name="setRecipients-java.util.Set-">
@@ -406,7 +406,7 @@ implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interfa
 <ul class="blockListLast">
 <li class="blockList">
 <h4>setRecipients</h4>
-<pre>public&nbsp;void&nbsp;setRecipients(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../cn/nukkit/command/CommandSender.html" title="interface in cn.nukkit.command">CommandSender</a>&gt;&nbsp;recipients)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/event/player/PlayerChatEvent.html#line.67">setRecipients</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../../../cn/nukkit/command/CommandSender.html" title="interface in cn.nukkit.command">CommandSender</a>&gt;&nbsp;recipients)</pre>
 </li>
 </ul>
 </li>
