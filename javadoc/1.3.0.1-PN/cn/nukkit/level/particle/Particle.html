@@ -1,0 +1,1438 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="pt">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Particle (PowerNukkit 1.3.0.1-PN API)</title>
+<meta name="date" content="2021-11-25">
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+<script type="text/javascript" src="../../../../script.js"></script>
+</head>
+<body>
+<script type="text/javascript"><!--
+    try {
+        if (location.href.indexOf('is-external=true') == -1) {
+            parent.document.title="Particle (PowerNukkit 1.3.0.1-PN API)";
+        }
+    }
+    catch(err) {
+    }
+//-->
+var methods = {"i0":6};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
+var altColor = "altColor";
+var rowColor = "rowColor";
+var tableTab = "tableTab";
+var activeTableTab = "activeTableTab";
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar.top">
+<!--   -->
+</a>
+<div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.top.firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/Particle.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../cn/nukkit/level/particle/MobSpawnParticle.html" title="class in cn.nukkit.level.particle"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../cn/nukkit/level/particle/PortalParticle.html" title="class in cn.nukkit.level.particle"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?cn/nukkit/level/particle/Particle.html" target="_top">Frames</a></li>
+<li><a href="Particle.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">cn.nukkit.level.particle</div>
+<h2 title="Class Particle" class="title">Class Particle</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">cn.nukkit.math.Vector3</a></li>
+<li>
+<ul class="inheritance">
+<li>cn.nukkit.level.particle.Particle</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.html?is-external=true" title="class or interface in java.lang">Cloneable</a></dd>
+</dl>
+<dl>
+<dt>Direct Known Subclasses:</dt>
+<dd><a href="../../../../cn/nukkit/level/particle/BoneMealParticle.html" title="class in cn.nukkit.level.particle">BoneMealParticle</a>, <a href="../../../../cn/nukkit/level/particle/DestroyBlockParticle.html" title="class in cn.nukkit.level.particle">DestroyBlockParticle</a>, <a href="../../../../cn/nukkit/level/particle/FloatingTextParticle.html" title="class in cn.nukkit.level.particle">FloatingTextParticle</a>, <a href="../../../../cn/nukkit/level/particle/GenericParticle.html" title="class in cn.nukkit.level.particle">GenericParticle</a>, <a href="../../../../cn/nukkit/level/particle/MobSpawnParticle.html" title="class in cn.nukkit.level.particle">MobSpawnParticle</a>, <a href="../../../../cn/nukkit/level/particle/PunchBlockParticle.html" title="class in cn.nukkit.level.particle">PunchBlockParticle</a>, <a href="../../../../cn/nukkit/level/particle/SpellParticle.html" title="class in cn.nukkit.level.particle">SpellParticle</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public abstract class <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.10">Particle</a>
+extends <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></pre>
+<div class="block">author: MagicDroidX
+ Nukkit Project</div>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_BALLOON_GAS">TYPE_BALLOON_GAS</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_BLOCK_FORCE_FIELD">TYPE_BLOCK_FORCE_FIELD</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_BUBBLE">TYPE_BUBBLE</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_BUBBLE_COLUMN_DOWN">TYPE_BUBBLE_COLUMN_DOWN</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_BUBBLE_COLUMN_UP">TYPE_BUBBLE_COLUMN_UP</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_CAMPFIRE_SMOKE">TYPE_CAMPFIRE_SMOKE</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_CARROT">TYPE_CARROT</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_COLORED_FLAME">TYPE_COLORED_FLAME</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_CONDUIT">TYPE_CONDUIT</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_CRITICAL">TYPE_CRITICAL</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_DRAGONS_BREATH">TYPE_DRAGONS_BREATH</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_DRIP_HONEY">TYPE_DRIP_HONEY</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_DRIP_LAVA">TYPE_DRIP_LAVA</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_DRIP_WATER">TYPE_DRIP_WATER</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_DUST">TYPE_DUST</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_ENCHANTMENT_TABLE">TYPE_ENCHANTMENT_TABLE</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_END_ROD">TYPE_END_ROD</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_EVAPORATION">TYPE_EVAPORATION</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_EXPLODE">TYPE_EXPLODE</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_FALLING_DRAGONS_BREATH">TYPE_FALLING_DRAGONS_BREATH</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_FALLING_DUST">TYPE_FALLING_DUST</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_FALLING_RED_DUST">TYPE_FALLING_RED_DUST</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_FIREWORKS_OVERLAY">TYPE_FIREWORKS_OVERLAY</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_FIREWORKS_SPARK">TYPE_FIREWORKS_SPARK</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_FIREWORKS_STARTER">TYPE_FIREWORKS_STARTER</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_FLAME">TYPE_FLAME</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_FOOD">TYPE_FOOD</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_HEART">TYPE_HEART</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_HUGE_EXPLODE">TYPE_HUGE_EXPLODE</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_HUGE_EXPLODE_SEED">TYPE_HUGE_EXPLODE_SEED</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_INK">TYPE_INK</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_ITEM_BREAK">TYPE_ITEM_BREAK</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_LARGE_EXPLOSION">TYPE_LARGE_EXPLOSION</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_LARGE_SMOKE">TYPE_LARGE_SMOKE</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_LAVA">TYPE_LAVA</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_MOB_FLAME">TYPE_MOB_FLAME</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_MOB_SPELL">TYPE_MOB_SPELL</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_MOB_SPELL_AMBIENT">TYPE_MOB_SPELL_AMBIENT</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_MOB_SPELL_INSTANTANEOUS">TYPE_MOB_SPELL_INSTANTANEOUS</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_NOTE">TYPE_NOTE</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_NOTE_AND_DUST">TYPE_NOTE_AND_DUST</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_PORTAL">TYPE_PORTAL</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_RAIN_SPLASH">TYPE_RAIN_SPLASH</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_REDSTONE">TYPE_REDSTONE</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_RISING_DRAGONS_BREATH">TYPE_RISING_DRAGONS_BREATH</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_RISING_RED_DUST">TYPE_RISING_RED_DUST</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_SLIME">TYPE_SLIME</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_SMOKE">TYPE_SMOKE</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_SNEEZE">TYPE_SNEEZE</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_SNOWBALL_POOF">TYPE_SNOWBALL_POOF</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_SPARKLER">TYPE_SPARKLER</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_SPIT">TYPE_SPIT</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_SPLASH">TYPE_SPLASH</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_SUSPENDED_TOWN">TYPE_SUSPENDED_TOWN</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_TERRAIN">TYPE_TERRAIN</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_TOTEM">TYPE_TOTEM</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_TOWN_AURA">TYPE_TOWN_AURA</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_TRACKING_EMITTER">TYPE_TRACKING_EMITTER</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_VILLAGER_ANGRY">TYPE_VILLAGER_ANGRY</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_VILLAGER_HAPPY">TYPE_VILLAGER_HAPPY</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_WATER_SPLASH">TYPE_WATER_SPLASH</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_WATER_WAKE">TYPE_WATER_WAKE</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#TYPE_WITCH_SPELL">TYPE_WITCH_SPELL</a></span></code>&nbsp;</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="fields.inherited.from.class.cn.nukkit.math.Vector3">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;cn.nukkit.math.<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></h3>
+<code><a href="../../../../cn/nukkit/math/Vector3.html#x">x</a>, <a href="../../../../cn/nukkit/math/Vector3.html#y">y</a>, <a href="../../../../cn/nukkit/math/Vector3.html#z">z</a></code></li>
+</ul>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor.summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#Particle--">Particle</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#Particle-double-">Particle</a></span>(double&nbsp;x)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#Particle-double-double-">Particle</a></span>(double&nbsp;x,
+        double&nbsp;y)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#Particle-double-double-double-">Particle</a></span>(double&nbsp;x,
+        double&nbsp;y,
+        double&nbsp;z)</code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method.summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr id="i0" class="altColor">
+<td class="colFirst"><code>abstract <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>[]</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/particle/Particle.html#encode--">encode</a></span>()</code>&nbsp;</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.cn.nukkit.math.Vector3">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;cn.nukkit.math.<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></h3>
+<code><a href="../../../../cn/nukkit/math/Vector3.html#abs--">abs</a>, <a href="../../../../cn/nukkit/math/Vector3.html#add-double-">add</a>, <a href="../../../../cn/nukkit/math/Vector3.html#add-double-double-">add</a>, <a href="../../../../cn/nukkit/math/Vector3.html#add-double-double-double-">add</a>, <a href="../../../../cn/nukkit/math/Vector3.html#add-cn.nukkit.math.Vector3-">add</a>, <a href="../../../../cn/nukkit/math/Vector3.html#asBlockVector3--">asBlockVector3</a>, <a href="../../../../cn/nukkit/math/Vector3.html#asVector3f--">asVector3f</a>, <a href="../../../../cn/nukkit/math/Vector3.html#ceil--">ceil</a>, <a href="../../../../cn/nukkit/math/Vector3.html#clone--">clone</a>, <a href="../../../../cn/nukkit/math/Vector3.html#cross-cn.nukkit.math.Vector3-">cross</a>, <a href="../../../../cn/nukkit/math/Vector3.html#distance-cn.nukkit.math.Vector3-">distance</a>, <a href="../../../../cn/nukkit/math/Vector3.html#distanceSquared-cn.nukkit.math.Vector3-">distanceSquared</a>, <a href="../../../../cn/nukkit/math/Vector3.html#divide-double-">divide</a>, <a href="../../../../cn/nukkit/math/Vector3.html#dot-cn.nukkit.math.Vector3-">dot</a>, <a href="../../../../cn/nukkit/math/Vector3.html#down--">down</a>, <a href="../../../../cn/nukkit/math/Vector3.html#down-int-">down</a>, <a href="../../../../cn/nukkit/math/Vector3.html#east--">east</a>, <a href="../../../../cn/nukkit/math/Vector3.html#east-int-">east</a>, <a href="../../../../cn/nukkit/math/Vector3.html#equals-java.lang.Object-">equals</a>, <a href="../../../../cn/nukkit/math/Vector3.html#floor--">floor</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getChunkX--">getChunkX</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getChunkZ--">getChunkZ</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getFloorX--">getFloorX</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getFloorY--">getFloorY</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getFloorZ--">getFloorZ</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getForward--">getForward</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getIntermediateWithXValue-cn.nukkit.math.Vector3-double-">getIntermediateWithXValue</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getIntermediateWithYValue-cn.nukkit.math.Vector3-double-">getIntermediateWithYValue</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getIntermediateWithZValue-cn.nukkit.math.Vector3-double-">getIntermediateWithZValue</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getRight--">getRight</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getSide-cn.nukkit.math.BlockFace-">getSide</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getSide-cn.nukkit.math.BlockFace-int-">getSide</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getSouth--">getSouth</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getUp--">getUp</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getWest--">getWest</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getX--">getX</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getY--">getY</a>, <a href="../../../../cn/nukkit/math/Vector3.html#getZ--">getZ</a>, <a href="../../../../cn/nukkit/math/Vector3.html#hashCode--">hashCode</a>, <a href="../../../../cn/nukkit/math/Vector3.html#length--">length</a>, <a href="../../../../cn/nukkit/math/Vector3.html#lengthSquared--">lengthSquared</a>, <a href="../../../../cn/nukkit/math/Vector3.html#maxPlainDistance--">maxPlainDistance</a>, <a href="../../../../cn/nukkit/math/Vector3.html#maxPlainDistance-double-">maxPlainDistance</a>, <a href="../../../../cn/nukkit/math/Vector3.html#maxPlainDistance-double-double-">maxPlainDistance</a>, <a href="../../../../cn/nukkit/math/Vector3.html#maxPlainDistance-cn.nukkit.math.Vector2-">maxPlainDistance</a>, <a href="../../../../cn/nukkit/math/Vector3.html#maxPlainDistance-cn.nukkit.math.Vector3-">maxPlainDistance</a>, <a href="../../../../cn/nukkit/math/Vector3.html#multiply-double-">multiply</a>, <a href="../../../../cn/nukkit/math/Vector3.html#normalize--">normalize</a>, <a href="../../../../cn/nukkit/math/Vector3.html#north--">north</a>, <a href="../../../../cn/nukkit/math/Vector3.html#north-int-">north</a>, <a href="../../../../cn/nukkit/math/Vector3.html#rawHashCode--">rawHashCode</a>, <a href="../../../../cn/nukkit/math/Vector3.html#round--">round</a>, <a href="../../../../cn/nukkit/math/Vector3.html#setComponents-double-double-double-">setComponents</a>, <a href="../../../../cn/nukkit/math/Vector3.html#south--">south</a>, <a href="../../../../cn/nukkit/math/Vector3.html#south-int-">south</a>, <a href="../../../../cn/nukkit/math/Vector3.html#subtract--">subtract</a>, <a href="../../../../cn/nukkit/math/Vector3.html#subtract-double-">subtract</a>, <a href="../../../../cn/nukkit/math/Vector3.html#subtract-double-double-">subtract</a>, <a href="../../../../cn/nukkit/math/Vector3.html#subtract-double-double-double-">subtract</a>, <a href="../../../../cn/nukkit/math/Vector3.html#subtract-cn.nukkit.math.Vector3-">subtract</a>, <a href="../../../../cn/nukkit/math/Vector3.html#toString--">toString</a>, <a href="../../../../cn/nukkit/math/Vector3.html#up--">up</a>, <a href="../../../../cn/nukkit/math/Vector3.html#up-int-">up</a>, <a href="../../../../cn/nukkit/math/Vector3.html#west--">west</a>, <a href="../../../../cn/nukkit/math/Vector3.html#west-int-">west</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="TYPE_BUBBLE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_BUBBLE</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.12">TYPE_BUBBLE</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_BUBBLE">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_CRITICAL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_CRITICAL</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.14">TYPE_CRITICAL</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_CRITICAL">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_BLOCK_FORCE_FIELD">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_BLOCK_FORCE_FIELD</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.15">TYPE_BLOCK_FORCE_FIELD</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_BLOCK_FORCE_FIELD">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_SMOKE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_SMOKE</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.16">TYPE_SMOKE</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_SMOKE">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_EXPLODE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_EXPLODE</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.17">TYPE_EXPLODE</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_EXPLODE">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_EVAPORATION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_EVAPORATION</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.18">TYPE_EVAPORATION</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_EVAPORATION">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_FLAME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_FLAME</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.19">TYPE_FLAME</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_FLAME">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_LAVA">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_LAVA</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.20">TYPE_LAVA</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_LAVA">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_LARGE_SMOKE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_LARGE_SMOKE</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.21">TYPE_LARGE_SMOKE</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_LARGE_SMOKE">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_REDSTONE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_REDSTONE</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.22">TYPE_REDSTONE</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_REDSTONE">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_RISING_RED_DUST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_RISING_RED_DUST</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.23">TYPE_RISING_RED_DUST</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_RISING_RED_DUST">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_ITEM_BREAK">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_ITEM_BREAK</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.25">TYPE_ITEM_BREAK</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_ITEM_BREAK">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_SNOWBALL_POOF">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_SNOWBALL_POOF</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.26">TYPE_SNOWBALL_POOF</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_SNOWBALL_POOF">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_HUGE_EXPLODE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_HUGE_EXPLODE</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.27">TYPE_HUGE_EXPLODE</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_HUGE_EXPLODE">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_HUGE_EXPLODE_SEED">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_HUGE_EXPLODE_SEED</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.28">TYPE_HUGE_EXPLODE_SEED</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_HUGE_EXPLODE_SEED">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_MOB_FLAME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_MOB_FLAME</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.29">TYPE_MOB_FLAME</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_MOB_FLAME">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_HEART">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_HEART</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.30">TYPE_HEART</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_HEART">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_TERRAIN">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_TERRAIN</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.31">TYPE_TERRAIN</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_TERRAIN">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_SUSPENDED_TOWN">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_SUSPENDED_TOWN</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.32">TYPE_SUSPENDED_TOWN</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_SUSPENDED_TOWN">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_TOWN_AURA">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_TOWN_AURA</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.32">TYPE_TOWN_AURA</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_TOWN_AURA">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_PORTAL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_PORTAL</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.34">TYPE_PORTAL</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_PORTAL">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_SPLASH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_SPLASH</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.36">TYPE_SPLASH</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_SPLASH">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_WATER_SPLASH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_WATER_SPLASH</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.36">TYPE_WATER_SPLASH</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_WATER_SPLASH">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_WATER_WAKE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_WATER_WAKE</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.38">TYPE_WATER_WAKE</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_WATER_WAKE">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_DRIP_WATER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_DRIP_WATER</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.39">TYPE_DRIP_WATER</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_DRIP_WATER">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_DRIP_LAVA">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_DRIP_LAVA</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.40">TYPE_DRIP_LAVA</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_DRIP_LAVA">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_DRIP_HONEY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_DRIP_HONEY</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.41">TYPE_DRIP_HONEY</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_DRIP_HONEY">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_FALLING_DUST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_FALLING_DUST</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.42">TYPE_FALLING_DUST</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_FALLING_DUST">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_DUST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_DUST</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.42">TYPE_DUST</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_DUST">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_MOB_SPELL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_MOB_SPELL</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.43">TYPE_MOB_SPELL</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_MOB_SPELL">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_MOB_SPELL_AMBIENT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_MOB_SPELL_AMBIENT</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.44">TYPE_MOB_SPELL_AMBIENT</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_MOB_SPELL_AMBIENT">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_MOB_SPELL_INSTANTANEOUS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_MOB_SPELL_INSTANTANEOUS</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.45">TYPE_MOB_SPELL_INSTANTANEOUS</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_MOB_SPELL_INSTANTANEOUS">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_NOTE_AND_DUST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NOTE_AND_DUST</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.46">TYPE_NOTE_AND_DUST</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_NOTE_AND_DUST">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_SLIME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_SLIME</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.48">TYPE_SLIME</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_SLIME">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_RAIN_SPLASH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_RAIN_SPLASH</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.49">TYPE_RAIN_SPLASH</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_RAIN_SPLASH">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_VILLAGER_ANGRY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_VILLAGER_ANGRY</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.50">TYPE_VILLAGER_ANGRY</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_VILLAGER_ANGRY">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_VILLAGER_HAPPY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_VILLAGER_HAPPY</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.52">TYPE_VILLAGER_HAPPY</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_VILLAGER_HAPPY">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_ENCHANTMENT_TABLE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_ENCHANTMENT_TABLE</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.53">TYPE_ENCHANTMENT_TABLE</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_ENCHANTMENT_TABLE">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_TRACKING_EMITTER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_TRACKING_EMITTER</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.54">TYPE_TRACKING_EMITTER</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_TRACKING_EMITTER">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_NOTE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_NOTE</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.55">TYPE_NOTE</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_NOTE">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_WITCH_SPELL">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_WITCH_SPELL</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.56">TYPE_WITCH_SPELL</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_WITCH_SPELL">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_CARROT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_CARROT</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.57">TYPE_CARROT</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_CARROT">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_END_ROD">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_END_ROD</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.59">TYPE_END_ROD</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_END_ROD">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_RISING_DRAGONS_BREATH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_RISING_DRAGONS_BREATH</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.61">TYPE_RISING_DRAGONS_BREATH</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_RISING_DRAGONS_BREATH">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_SPIT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_SPIT</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.62">TYPE_SPIT</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_SPIT">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_TOTEM">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_TOTEM</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.63">TYPE_TOTEM</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_TOTEM">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_FOOD">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_FOOD</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.64">TYPE_FOOD</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_FOOD">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_FIREWORKS_STARTER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_FIREWORKS_STARTER</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.65">TYPE_FIREWORKS_STARTER</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_FIREWORKS_STARTER">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_FIREWORKS_SPARK">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_FIREWORKS_SPARK</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.66">TYPE_FIREWORKS_SPARK</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_FIREWORKS_SPARK">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_FIREWORKS_OVERLAY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_FIREWORKS_OVERLAY</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.67">TYPE_FIREWORKS_OVERLAY</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_FIREWORKS_OVERLAY">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_BALLOON_GAS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_BALLOON_GAS</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.68">TYPE_BALLOON_GAS</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_BALLOON_GAS">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_COLORED_FLAME">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_COLORED_FLAME</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.69">TYPE_COLORED_FLAME</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_COLORED_FLAME">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_SPARKLER">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_SPARKLER</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.70">TYPE_SPARKLER</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_SPARKLER">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_CONDUIT">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_CONDUIT</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.71">TYPE_CONDUIT</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_CONDUIT">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_BUBBLE_COLUMN_UP">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_BUBBLE_COLUMN_UP</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.72">TYPE_BUBBLE_COLUMN_UP</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_BUBBLE_COLUMN_UP">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_BUBBLE_COLUMN_DOWN">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_BUBBLE_COLUMN_DOWN</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.73">TYPE_BUBBLE_COLUMN_DOWN</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_BUBBLE_COLUMN_DOWN">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_SNEEZE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_SNEEZE</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.74">TYPE_SNEEZE</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_SNEEZE">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_LARGE_EXPLOSION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_LARGE_EXPLOSION</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.76">TYPE_LARGE_EXPLOSION</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_LARGE_EXPLOSION">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_INK">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_INK</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.77">TYPE_INK</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_INK">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_FALLING_RED_DUST">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_FALLING_RED_DUST</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.78">TYPE_FALLING_RED_DUST</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_FALLING_RED_DUST">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_CAMPFIRE_SMOKE">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_CAMPFIRE_SMOKE</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.79">TYPE_CAMPFIRE_SMOKE</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_CAMPFIRE_SMOKE">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_FALLING_DRAGONS_BREATH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>TYPE_FALLING_DRAGONS_BREATH</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.81">TYPE_FALLING_DRAGONS_BREATH</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_FALLING_DRAGONS_BREATH">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="TYPE_DRAGONS_BREATH">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>TYPE_DRAGONS_BREATH</h4>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.82">TYPE_DRAGONS_BREATH</a></pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.level.particle.Particle.TYPE_DRAGONS_BREATH">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor.detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="Particle--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>Particle</h4>
+<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.84">Particle</a>()</pre>
+</li>
+</ul>
+<a name="Particle-double-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>Particle</h4>
+<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.88">Particle</a>(double&nbsp;x)</pre>
+</li>
+</ul>
+<a name="Particle-double-double-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>Particle</h4>
+<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.92">Particle</a>(double&nbsp;x,
+                double&nbsp;y)</pre>
+</li>
+</ul>
+<a name="Particle-double-double-double-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>Particle</h4>
+<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.96">Particle</a>(double&nbsp;x,
+                double&nbsp;y,
+                double&nbsp;z)</pre>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method.detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="encode--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>encode</h4>
+<pre>public abstract&nbsp;<a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>[]&nbsp;<a href="../../../../src-html/cn/nukkit/level/particle/Particle.html#line.100">encode</a>()</pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar.bottom">
+<!--   -->
+</a>
+<div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.bottom.firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/Particle.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../cn/nukkit/level/particle/MobSpawnParticle.html" title="class in cn.nukkit.level.particle"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../cn/nukkit/level/particle/PortalParticle.html" title="class in cn.nukkit.level.particle"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?cn/nukkit/level/particle/Particle.html" target="_top">Frames</a></li>
+<li><a href="Particle.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2020&#x2013;2021 <a href="https://powernukkit.org">PowerNukkit</a>. All rights reserved.</small></p>
+</body>
+</html>

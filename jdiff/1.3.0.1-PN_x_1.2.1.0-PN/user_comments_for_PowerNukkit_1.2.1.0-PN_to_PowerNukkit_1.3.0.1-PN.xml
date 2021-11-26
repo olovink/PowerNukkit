@@ -1,0 +1,1297 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<comments
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xsi:noNamespaceSchemaLocation='comments.xsd'
+  name="PowerNukkit_1.2.1.0-PN_to_PowerNukkit_1.3.0.1-PN"
+  jdversion="2.0.0-PN">
+
+<!-- This file contains comments for a JDiff report. -->
+<!-- It is used only in generating the report, and does not need to ship with the final report. -->
+
+<!-- The id attribute in an identifier element identifies the change as noted in the report. -->
+<!-- An id has the form package[.class[.[ctor|method|field].signature]], where [] indicates optional text. -->
+<!-- A comment element can have multiple identifier elements, which will -->
+<!-- will cause the same text to appear at each place in the report, but -->
+<!-- will be converted to separate comments when the comments file is used. -->
+<!-- HTML tags in the text field will appear in the report. -->
+<!-- You also need to close p HTML elements, used for paragraphs - see the top-level documentation. -->
+<comment>
+  <identifier id="cn.nukkit"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.Player"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.Player.ctor_added(cn.nukkit.network.SourceInterface, java.lang.Long, java.lang.String, int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.Server"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.Server.isIgnoredPacket_added(java.lang.Class&lt;? extends cn.nukkit.network.protocol.DataPacket&gt;)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.api"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.api.PowerNukkitDifference"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.Block"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.Block.getFullId_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.Block.getRuntimeId_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.Block.get_added(int, int, cn.nukkit.level.Level, int, int, int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.Block.get_added(int, int, cn.nukkit.level.Level, int, int, int, int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.Block.isInitializing_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.Block.isSolid_added(cn.nukkit.math.BlockFace)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockConnectable"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockEndPortalFrame"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockEndPortalFrame.createPortal_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockFence"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockHyperMeta"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockStemMelon"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockStemMelon.getBlockFace_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockStemMelon.setBlockFace_added(cn.nukkit.math.BlockFace)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockStemPumpkin"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockStemPumpkin.getBlockFace_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockStemPumpkin.setBlockFace_added(cn.nukkit.math.BlockFace)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockThin"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockTransparentHyperMeta"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockWall"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockWall.WallConnectionType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockWall.WallType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockWall.autoConfigureState_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockWall.autoUpdatePostFlag_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockWall.clearConnections_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockWall.connect_added(cn.nukkit.math.BlockFace)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockWall.connect_added(cn.nukkit.math.BlockFace, boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockWall.disconnect_added(cn.nukkit.math.BlockFace)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockWall.getConnectionType_added(cn.nukkit.math.BlockFace)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockWall.getWallConnections_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockWall.getWallType_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockWall.isConnected_added(cn.nukkit.math.BlockFace)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockWall.isSameHeightStraight_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockWall.isWallPost_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockWall.setConnection_added(cn.nukkit.math.BlockFace, cn.nukkit.block.BlockWall.WallConnectionType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockWall.setWallPost_added(boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockWall.setWallType_added(cn.nukkit.block.BlockWall.WallType)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.DATA_AGENT_ID"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.DATA_AMBIENT_SOUND_INTERVAL_RANGE"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.DATA_AREA_EFFECT_CLOUD_DURATION"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.DATA_AREA_EFFECT_CLOUD_PICKUP_COUNT"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.DATA_AREA_EFFECT_CLOUD_RADIUS_CHANGE_ON_PICKUP"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.DATA_AREA_EFFECT_CLOUD_RADIUS_PER_TICK"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.DATA_AREA_EFFECT_CLOUD_SPAWN_TIME"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.DATA_BOAT_BUBBLE_TIME"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.DATA_BUOYANCY_DATA"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.DATA_FLAG_ADMIRING"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.DATA_FLAG_CELEBRATING_SPECIAL"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.DATA_FLAG_IS_AVOIDING_BLOCKS"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.DATA_FLAG_RIDER_CAN_PICKUP"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.DATA_HIGH_TIER_CURED_DISCOUNT"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.DATA_HITBOX"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.DATA_INTERACTIVE_TAG"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.DATA_IS_BUOYANT"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.DATA_LOW_TIER_CURED_DISCOUNT"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.DATA_NEARBY_CURED_DISCOUNT"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.DATA_NEARBY_CURED_DISCOUNT_TIMESTAMP"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.DATA_TRADE_XP"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.CraftingManager"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.CraftingManager.matchCartographyRecipe_changed(java.util.List&lt;cn.nukkit.item.Item&gt;, cn.nukkit.item.Item, java.util.List&lt;cn.nukkit.item.Item&gt;)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.CraftingManager.matchRecipe_changed(java.util.List&lt;cn.nukkit.item.Item&gt;, cn.nukkit.item.Item, java.util.List&lt;cn.nukkit.item.Item&gt;)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.CraftingRecipe"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.CraftingRecipe.getIngredientsAggregate_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.CraftingRecipe.matchItems_added(java.util.List&lt;cn.nukkit.item.Item&gt;, java.util.List&lt;cn.nukkit.item.Item&gt;)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.CraftingRecipe.matchItems_added(java.util.List&lt;cn.nukkit.item.Item&gt;, java.util.List&lt;cn.nukkit.item.Item&gt;, int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.CraftingRecipe.matchItems_removed(cn.nukkit.item.Item[][], cn.nukkit.item.Item[][])"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.FakeBlockUIComponent"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.FakeBlockUIComponent.close_changed(cn.nukkit.Player)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.ShapedRecipe"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.ShapedRecipe.getIngredientsAggregate_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.ShapedRecipe.matchItems_added(java.util.List&lt;cn.nukkit.item.Item&gt;, java.util.List&lt;cn.nukkit.item.Item&gt;)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.ShapedRecipe.matchItems_added(java.util.List&lt;cn.nukkit.item.Item&gt;, java.util.List&lt;cn.nukkit.item.Item&gt;, int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.ShapedRecipe.matchItems_removed(cn.nukkit.item.Item[][], cn.nukkit.item.Item[][])"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.ShapelessRecipe"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.ShapelessRecipe.getIngredientsAggregate_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.ShapelessRecipe.matchItems_added(java.util.List&lt;cn.nukkit.item.Item&gt;, java.util.List&lt;cn.nukkit.item.Item&gt;)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.ShapelessRecipe.matchItems_added(java.util.List&lt;cn.nukkit.item.Item&gt;, java.util.List&lt;cn.nukkit.item.Item&gt;, int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.ShapelessRecipe.matchItems_removed(cn.nukkit.item.Item[][], cn.nukkit.item.Item[][])"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.transaction"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.transaction.CraftingTransaction"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.transaction.CraftingTransaction.checkForCraftingPart_added(java.util.List&lt;cn.nukkit.inventory.transaction.action.InventoryAction&gt;)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.transaction.CraftingTransaction.getInputList_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.transaction.CraftingTransaction.getInputMap_removed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.transaction.CraftingTransaction.inputs"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.transaction.CraftingTransaction.secondaryOutputs"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.transaction.CraftingTransaction.setExtraOutput_changed(cn.nukkit.item.Item)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.transaction.CraftingTransaction.setInput_changed(cn.nukkit.item.Item)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.transaction.InventoryTransaction"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.transaction.InventoryTransaction.actions"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.transaction.InventoryTransaction.getActionList_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.inventory.transaction.InventoryTransaction.squashDuplicateSlotChanges_removed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.Level"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.Level.getBlockRuntimeId_added(int, int, int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.Level.getBlockRuntimeId_added(int, int, int, int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.ChunkSection"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.ChunkSection.getBlockState_added(int, int, int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.ChunkSection.getBlockState_added(int, int, int, int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.ChunkSection.getContentVersion_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.ChunkSection.getHyperDataArray_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.ChunkSection.getHyperDataArray_added(int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.FullChunk"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.FullChunk.getBlockRuntimeId_added(int, int, int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.FullChunk.getBlockRuntimeId_added(int, int, int, int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.FullChunk.getBlockState_added(int, int, int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.FullChunk.getBlockState_added(int, int, int, int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.anvil"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.anvil.ChunkSection"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.anvil.ChunkSection.getBlockState_added(int, int, int, int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.anvil.ChunkSection.getContentVersion_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.anvil.ChunkSection.getHyperDataArray_added(int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.anvil.util"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.anvil.util.BlockStorage"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.anvil.util.BlockStorage.getAndSetBlock_added(int, int, int, int, int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.anvil.util.BlockStorage.getBlockDataHyperA_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.anvil.util.BlockStorage.getBlockDataHyperB_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.anvil.util.BlockStorage.getBlockState_added(int, int, int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.anvil.util.BlockStorage.getHyperDataA_added(int, int, int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.anvil.util.BlockStorage.getHyperDataB_added(int, int, int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.anvil.util.BlockStorage.hasBlockDataHyperA_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.anvil.util.BlockStorage.hasBlockDataHyperB_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.anvil.util.BlockStorage.setBlock_added(int, int, int, int, int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.generic"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.generic.BaseChunk"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.generic.BaseChunk.CONTENT_VERSION"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.generic.BaseChunk.backwardCompatibilityUpdate_added(cn.nukkit.level.Level)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.generic.BaseChunk.getBlockState_added(int, int, int, int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.generic.BaseFullChunk"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.generic.BaseFullChunk.backwardCompatibilityUpdate_added(cn.nukkit.level.Level)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.generic.EmptyChunkSection"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.format.generic.EmptyChunkSection.getBlockState_added(int, int, int, int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.generator.object.ore"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.generator.object.ore.OreType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.generator.object.ore.OreType.blockData"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.generator.object.ore.OreType.blockId"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.Network"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.Network.deflateRaw_added(byte[], int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.Network.deflateRaw_added(byte[][], int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.Network.inflateRaw_added(byte[])"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.CodeBuilderPacket"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.CreativeContentPacket"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.DebugInfoPacket"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.EmoteListPacket"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.EmotePacket"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.HurtArmorPacket"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.HurtArmorPacket.cause"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.HurtArmorPacket.damage"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.HurtArmorPacket.health"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.InventoryTransactionPacket"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.InventoryTransactionPacket.hasNetworkIds"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.InventoryTransactionPacket.legacyRequestId"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.PacketViolationWarningPacket"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.PacketViolationWarningPacket.PacketViolationSeverity"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.PacketViolationWarningPacket.PacketViolationType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.PlayerArmorDamagePacket"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.PlayerArmorDamagePacket.PlayerArmorDamageFlag"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.PlayerEnchantOptionsPacket"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.PlayerEnchantOptionsPacket.EnchantData"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.PlayerEnchantOptionsPacket.EnchantOptionData"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.ProtocolInfo"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.ProtocolInfo.CODE_BUILDER_PACKET"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.ProtocolInfo.CREATIVE_CONTENT_PACKET"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.ProtocolInfo.DEBUG_INFO_PACKET"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.ProtocolInfo.EMOTE_LIST_PACKET"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.ProtocolInfo.ITEM_STACK_REQUEST_PACKET"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.ProtocolInfo.ITEM_STACK_RESPONSE_PACKET"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.ProtocolInfo.PACKET_VIOLATION_WARNING_PACKET"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.ProtocolInfo.PLAYER_ARMOR_DAMAGE_PACKET"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.ProtocolInfo.PLAYER_ENCHANT_OPTIONS_PACKET"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.ProtocolInfo.POS_TRACKING_CLIENT_REQUEST_PACKET"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.ProtocolInfo.POS_TRACKING_SERVER_BROADCAST_PACKET"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.ProtocolInfo.UPDATE_PLAYER_GAME_TYPE_PACKET"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.SetEntityLinkPacket"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.SetEntityLinkPacket.riderInitiated"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.SetSpawnPositionPacket"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.SetSpawnPositionPacket.dimension"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.StartGamePacket"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.StartGamePacket.isInventoryServerAuthoritative"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.StartGamePacket.trustingPlayers"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.TextPacket"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.TextPacket.TYPE_OBJECT"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.TextPacket.TYPE_OBJECT_WHISPER"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.UpdatePlayerGameTypePacket"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.UpdatePlayerGameTypePacket.GameType"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.types"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.types.EntityLink"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.types.EntityLink.ctor_added(long, long, byte, boolean, boolean)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.types.EntityLink.riderInitiated"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.types.NetworkInventoryAction"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.types.NetworkInventoryAction.stackNetworkId"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.plugin"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.plugin.PluginManager"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.plugin.PluginManager.loadPowerNukkitPlugins_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.plugin.PowerNukkitPlugin"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.utils"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.utils.Faceable"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.utils.Faceable.setBlockFace_added(cn.nukkit.math.BlockFace)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.utils.InvalidBlockDamageException"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+
+</comments>

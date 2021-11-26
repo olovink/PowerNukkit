@@ -1,0 +1,133 @@
+NO DOC BLOCK: cn.nukkit.block.BlockConnectable Interface
+NO DOC BLOCK: cn.nukkit.block.BlockHyperMeta Interface
+NO DOC BLOCK: cn.nukkit.block.BlockTransparentHyperMeta Class
+NO DOC BLOCK: cn.nukkit.block.BlockWall.WallConnectionType Class
+NO DOC BLOCK: cn.nukkit.block.BlockWall.WallType Class
+NO DOC BLOCK: cn.nukkit.network.protocol.CodeBuilderPacket Class
+NO DOC BLOCK: cn.nukkit.network.protocol.CreativeContentPacket Class
+NO DOC BLOCK: cn.nukkit.network.protocol.DebugInfoPacket Class
+NO DOC BLOCK: cn.nukkit.network.protocol.EmoteListPacket Class
+NO DOC BLOCK: cn.nukkit.network.protocol.EmotePacket Class
+NO DOC BLOCK: cn.nukkit.utils.InvalidBlockDamageException Class
+NO DOC BLOCK: cn.nukkit.network.protocol.PacketViolationWarningPacket Class
+NO DOC BLOCK: cn.nukkit.network.protocol.PacketViolationWarningPacket.PacketViolationSeverity Class
+NO DOC BLOCK: cn.nukkit.network.protocol.PacketViolationWarningPacket.PacketViolationType Class
+NO DOC BLOCK: cn.nukkit.network.protocol.PlayerArmorDamagePacket Class
+NO DOC BLOCK: cn.nukkit.network.protocol.PlayerArmorDamagePacket.PlayerArmorDamageFlag Class
+NO DOC BLOCK: cn.nukkit.network.protocol.PlayerEnchantOptionsPacket Class
+NO DOC BLOCK: cn.nukkit.network.protocol.PlayerEnchantOptionsPacket.EnchantData Class
+NO DOC BLOCK: cn.nukkit.network.protocol.PlayerEnchantOptionsPacket.EnchantOptionData Class
+MISSING @SINCE TAG: cn.nukkit.api.PowerNukkitDifference Class
+NO DOC BLOCK: cn.nukkit.plugin.PowerNukkitPlugin Class
+NO DOC BLOCK: cn.nukkit.network.protocol.UpdatePlayerGameTypePacket Class
+NO DOC BLOCK: cn.nukkit.network.protocol.UpdatePlayerGameTypePacket.GameType Class
+NO DOC BLOCK: cn.nukkit.network.protocol.types.EntityLink Constructor (long, long, byte, boolean, boolean)
+NO DOC BLOCK: cn.nukkit.Player Constructor (cn.nukkit.network.SourceInterface, java.lang.Long, java.lang.String, int)
+NO DOC BLOCK: cn.nukkit.block.BlockWall Method autoConfigureState()
+MISSING @SINCE TAG: cn.nukkit.block.BlockWall Method autoUpdatePostFlag()
+NO DOC BLOCK: cn.nukkit.level.format.generic.BaseChunk Method backwardCompatibilityUpdate(cn.nukkit.level.Level)
+NO DOC BLOCK: cn.nukkit.level.format.generic.BaseFullChunk Method backwardCompatibilityUpdate(cn.nukkit.level.Level)
+NO DOC BLOCK: cn.nukkit.inventory.transaction.CraftingTransaction Method checkForCraftingPart(java.util.List<cn.nukkit.inventory.transaction.action.InventoryAction>)
+NO DOC BLOCK: cn.nukkit.block.BlockWall Method clearConnections()
+NO DOC BLOCK: cn.nukkit.block.BlockWall Method connect(cn.nukkit.math.BlockFace)
+NO DOC BLOCK: cn.nukkit.block.BlockWall Method connect(cn.nukkit.math.BlockFace, boolean)
+NO DOC BLOCK: cn.nukkit.block.BlockEndPortalFrame Method createPortal()
+NO DOC BLOCK: cn.nukkit.network.Network Method deflateRaw(byte[], int)
+NO DOC BLOCK: cn.nukkit.network.Network Method deflateRaw(byte[][], int)
+NO DOC BLOCK: cn.nukkit.block.BlockWall Method disconnect(cn.nukkit.math.BlockFace)
+NO DOC BLOCK: cn.nukkit.block.Block Method get(int, int, cn.nukkit.level.Level, int, int, int)
+NO DOC BLOCK: cn.nukkit.block.Block Method get(int, int, cn.nukkit.level.Level, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.inventory.transaction.InventoryTransaction Method getActionList()
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method getAndSetBlock(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method getBlockDataHyperA()
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method getBlockDataHyperB()
+NO DOC BLOCK: cn.nukkit.block.BlockStemMelon Method getBlockFace()
+NO DOC BLOCK: cn.nukkit.block.BlockStemPumpkin Method getBlockFace()
+NO DOC BLOCK: cn.nukkit.level.Level Method getBlockRuntimeId(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.Level Method getBlockRuntimeId(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.FullChunk Method getBlockRuntimeId(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.FullChunk Method getBlockRuntimeId(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.ChunkSection Method getBlockState(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.ChunkSection Method getBlockState(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.FullChunk Method getBlockState(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.FullChunk Method getBlockState(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Method getBlockState(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method getBlockState(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.BaseChunk Method getBlockState(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.generic.EmptyChunkSection Method getBlockState(int, int, int, int)
+NO DOC BLOCK: cn.nukkit.block.BlockWall Method getConnectionType(cn.nukkit.math.BlockFace)
+NO DOC BLOCK: cn.nukkit.level.format.ChunkSection Method getContentVersion()
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Method getContentVersion()
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method getHyperDataA(int, int, int)
+NO DOC BLOCK: cn.nukkit.level.format.ChunkSection Method getHyperDataArray()
+NO DOC BLOCK: cn.nukkit.level.format.ChunkSection Method getHyperDataArray(int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.ChunkSection Method getHyperDataArray(int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method getHyperDataB(int, int, int)
+NO DOC BLOCK: cn.nukkit.inventory.CraftingRecipe Method getIngredientsAggregate()
+NO DOC BLOCK: cn.nukkit.inventory.ShapedRecipe Method getIngredientsAggregate()
+NO DOC BLOCK: cn.nukkit.inventory.ShapelessRecipe Method getIngredientsAggregate()
+NO DOC BLOCK: cn.nukkit.inventory.transaction.CraftingTransaction Method getInputList()
+NO DOC BLOCK: cn.nukkit.block.Block Method getRuntimeId()
+NO DOC BLOCK: cn.nukkit.block.BlockWall Method getWallConnections()
+NO DOC BLOCK: cn.nukkit.block.BlockWall Method getWallType()
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method hasBlockDataHyperA()
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method hasBlockDataHyperB()
+NO DOC BLOCK: cn.nukkit.network.Network Method inflateRaw(byte[])
+NO DOC BLOCK: cn.nukkit.block.BlockWall Method isConnected(cn.nukkit.math.BlockFace)
+NO DOC BLOCK: cn.nukkit.Server Method isIgnoredPacket(java.lang.Class<? extends cn.nukkit.network.protocol.DataPacket>)
+NO DOC BLOCK: cn.nukkit.block.Block Method isInitializing()
+NO DOC BLOCK: cn.nukkit.block.BlockWall Method isSameHeightStraight()
+NO DOC BLOCK: cn.nukkit.block.Block Method isSolid(cn.nukkit.math.BlockFace)
+NO DOC BLOCK: cn.nukkit.block.BlockWall Method isWallPost()
+NO DOC BLOCK: cn.nukkit.plugin.PluginManager Method loadPowerNukkitPlugins()
+MISSING @SINCE TAG: cn.nukkit.inventory.CraftingRecipe Method matchItems(java.util.List<cn.nukkit.item.Item>, java.util.List<cn.nukkit.item.Item>)
+NO DOC BLOCK: cn.nukkit.inventory.CraftingRecipe Method matchItems(java.util.List<cn.nukkit.item.Item>, java.util.List<cn.nukkit.item.Item>, int)
+MISSING @SINCE TAG: cn.nukkit.inventory.ShapedRecipe Method matchItems(java.util.List<cn.nukkit.item.Item>, java.util.List<cn.nukkit.item.Item>)
+NO DOC BLOCK: cn.nukkit.inventory.ShapedRecipe Method matchItems(java.util.List<cn.nukkit.item.Item>, java.util.List<cn.nukkit.item.Item>, int)
+MISSING @SINCE TAG: cn.nukkit.inventory.ShapelessRecipe Method matchItems(java.util.List<cn.nukkit.item.Item>, java.util.List<cn.nukkit.item.Item>)
+NO DOC BLOCK: cn.nukkit.inventory.ShapelessRecipe Method matchItems(java.util.List<cn.nukkit.item.Item>, java.util.List<cn.nukkit.item.Item>, int)
+NO DOC BLOCK: cn.nukkit.level.format.anvil.util.BlockStorage Method setBlock(int, int, int, int, int)
+NO DOC BLOCK: cn.nukkit.block.BlockStemMelon Method setBlockFace(cn.nukkit.math.BlockFace)
+NO DOC BLOCK: cn.nukkit.block.BlockStemPumpkin Method setBlockFace(cn.nukkit.math.BlockFace)
+NO DOC BLOCK: cn.nukkit.utils.Faceable Method setBlockFace(cn.nukkit.math.BlockFace)
+NO DOC BLOCK: cn.nukkit.block.BlockWall Method setConnection(cn.nukkit.math.BlockFace, cn.nukkit.block.BlockWall.WallConnectionType)
+NO DOC BLOCK: cn.nukkit.block.BlockWall Method setWallPost(boolean)
+NO DOC BLOCK: cn.nukkit.block.BlockWall Method setWallType(cn.nukkit.block.BlockWall.WallType)
+NO DOC BLOCK: cn.nukkit.level.generator.object.ore.OreType Field blockData
+NO DOC BLOCK: cn.nukkit.level.generator.object.ore.OreType Field blockId
+NO DOC BLOCK: cn.nukkit.network.protocol.HurtArmorPacket Field cause
+NO DOC BLOCK: cn.nukkit.network.protocol.ProtocolInfo Field CODE_BUILDER_PACKET
+NO DOC BLOCK: cn.nukkit.level.format.generic.BaseChunk Field CONTENT_VERSION
+NO DOC BLOCK: cn.nukkit.network.protocol.ProtocolInfo Field CREATIVE_CONTENT_PACKET
+NO DOC BLOCK: cn.nukkit.network.protocol.HurtArmorPacket Field damage
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_AMBIENT_SOUND_INTERVAL_RANGE
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_BUOYANCY_DATA
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FLAG_ADMIRING
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FLAG_CELEBRATING_SPECIAL
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_FLAG_IS_AVOIDING_BLOCKS
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_HIGH_TIER_CURED_DISCOUNT
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_HITBOX
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_IS_BUOYANT
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_LOW_TIER_CURED_DISCOUNT
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_NEARBY_CURED_DISCOUNT
+NO DOC BLOCK: cn.nukkit.entity.Entity Field DATA_NEARBY_CURED_DISCOUNT_TIMESTAMP
+NO DOC BLOCK: cn.nukkit.network.protocol.ProtocolInfo Field DEBUG_INFO_PACKET
+NO DOC BLOCK: cn.nukkit.network.protocol.SetSpawnPositionPacket Field dimension
+NO DOC BLOCK: cn.nukkit.network.protocol.ProtocolInfo Field EMOTE_LIST_PACKET
+NO DOC BLOCK: cn.nukkit.network.protocol.InventoryTransactionPacket Field hasNetworkIds
+NO DOC BLOCK: cn.nukkit.network.protocol.StartGamePacket Field isInventoryServerAuthoritative
+NO DOC BLOCK: cn.nukkit.network.protocol.ProtocolInfo Field ITEM_STACK_REQUEST_PACKET
+NO DOC BLOCK: cn.nukkit.network.protocol.ProtocolInfo Field ITEM_STACK_RESPONSE_PACKET
+NO DOC BLOCK: cn.nukkit.network.protocol.InventoryTransactionPacket Field legacyRequestId
+NO DOC BLOCK: cn.nukkit.network.protocol.ProtocolInfo Field PACKET_VIOLATION_WARNING_PACKET
+NO DOC BLOCK: cn.nukkit.network.protocol.ProtocolInfo Field PLAYER_ARMOR_DAMAGE_PACKET
+NO DOC BLOCK: cn.nukkit.network.protocol.ProtocolInfo Field PLAYER_ENCHANT_OPTIONS_PACKET
+NO DOC BLOCK: cn.nukkit.network.protocol.ProtocolInfo Field POS_TRACKING_CLIENT_REQUEST_PACKET
+NO DOC BLOCK: cn.nukkit.network.protocol.ProtocolInfo Field POS_TRACKING_SERVER_BROADCAST_PACKET
+NO DOC BLOCK: cn.nukkit.network.protocol.SetEntityLinkPacket Field riderInitiated
+NO DOC BLOCK: cn.nukkit.network.protocol.types.EntityLink Field riderInitiated
+NO DOC BLOCK: cn.nukkit.network.protocol.types.NetworkInventoryAction Field stackNetworkId
+NO DOC BLOCK: cn.nukkit.network.protocol.StartGamePacket Field trustingPlayers
+NO DOC BLOCK: cn.nukkit.network.protocol.TextPacket Field TYPE_OBJECT
+NO DOC BLOCK: cn.nukkit.network.protocol.TextPacket Field TYPE_OBJECT_WHISPER
+NO DOC BLOCK: cn.nukkit.network.protocol.ProtocolInfo Field UPDATE_PLAYER_GAME_TYPE_PACKET
