@@ -1,0 +1,264 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>/*<a name="line.1"></a>
+<span class="sourceLineNo">002</span> * https://PowerNukkit.org - The Nukkit you know but Powerful!<a name="line.2"></a>
+<span class="sourceLineNo">003</span> * Copyright (C) 2020  José Roberto de Araújo Júnior<a name="line.3"></a>
+<span class="sourceLineNo">004</span> *<a name="line.4"></a>
+<span class="sourceLineNo">005</span> * This program is free software: you can redistribute it and/or modify<a name="line.5"></a>
+<span class="sourceLineNo">006</span> * it under the terms of the GNU General Public License as published by<a name="line.6"></a>
+<span class="sourceLineNo">007</span> * the Free Software Foundation, either version 3 of the License, or<a name="line.7"></a>
+<span class="sourceLineNo">008</span> * (at your option) any later version.<a name="line.8"></a>
+<span class="sourceLineNo">009</span> *<a name="line.9"></a>
+<span class="sourceLineNo">010</span> * This program is distributed in the hope that it will be useful,<a name="line.10"></a>
+<span class="sourceLineNo">011</span> * but WITHOUT ANY WARRANTY; without even the implied warranty of<a name="line.11"></a>
+<span class="sourceLineNo">012</span> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the<a name="line.12"></a>
+<span class="sourceLineNo">013</span> * GNU General Public License for more details.<a name="line.13"></a>
+<span class="sourceLineNo">014</span> *<a name="line.14"></a>
+<span class="sourceLineNo">015</span> * You should have received a copy of the GNU General Public License<a name="line.15"></a>
+<span class="sourceLineNo">016</span> * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.<a name="line.16"></a>
+<span class="sourceLineNo">017</span> */<a name="line.17"></a>
+<span class="sourceLineNo">018</span><a name="line.18"></a>
+<span class="sourceLineNo">019</span>package cn.nukkit.utils.collection;<a name="line.19"></a>
+<span class="sourceLineNo">020</span><a name="line.20"></a>
+<span class="sourceLineNo">021</span>import cn.nukkit.api.PowerNukkitOnly;<a name="line.21"></a>
+<span class="sourceLineNo">022</span>import cn.nukkit.api.Since;<a name="line.22"></a>
+<span class="sourceLineNo">023</span><a name="line.23"></a>
+<span class="sourceLineNo">024</span>import java.util.AbstractMap;<a name="line.24"></a>
+<span class="sourceLineNo">025</span>import java.util.Map;<a name="line.25"></a>
+<span class="sourceLineNo">026</span>import java.util.Objects;<a name="line.26"></a>
+<span class="sourceLineNo">027</span>import java.util.Set;<a name="line.27"></a>
+<span class="sourceLineNo">028</span>import java.util.function.Function;<a name="line.28"></a>
+<span class="sourceLineNo">029</span><a name="line.29"></a>
+<span class="sourceLineNo">030</span>/**<a name="line.30"></a>
+<span class="sourceLineNo">031</span> * @author joserobjr<a name="line.31"></a>
+<span class="sourceLineNo">032</span> * @since 2020-10-05<a name="line.32"></a>
+<span class="sourceLineNo">033</span> */<a name="line.33"></a>
+<span class="sourceLineNo">034</span>@PowerNukkitOnly<a name="line.34"></a>
+<span class="sourceLineNo">035</span>@Since("1.4.0.0-PN")<a name="line.35"></a>
+<span class="sourceLineNo">036</span>public class ConvertingMapWrapper&lt;K, V1, V2&gt; extends AbstractMap&lt;K, V1&gt; {<a name="line.36"></a>
+<span class="sourceLineNo">037</span>    private final Function&lt;V1, V2&gt; converter;<a name="line.37"></a>
+<span class="sourceLineNo">038</span>    private final Function&lt;V2, V1&gt; reverseConverter;<a name="line.38"></a>
+<span class="sourceLineNo">039</span>    private final Map&lt;K, V2&gt; proxied;<a name="line.39"></a>
+<span class="sourceLineNo">040</span>    private final ConvertingSetWrapper&lt;Entry&lt;K, V1&gt;, Entry&lt;K, V2&gt;&gt; entrySet;<a name="line.40"></a>
+<span class="sourceLineNo">041</span>    private final boolean convertReturnedNulls;<a name="line.41"></a>
+<span class="sourceLineNo">042</span><a name="line.42"></a>
+<span class="sourceLineNo">043</span>    @PowerNukkitOnly<a name="line.43"></a>
+<span class="sourceLineNo">044</span>    @Since("1.4.0.0-PN")<a name="line.44"></a>
+<span class="sourceLineNo">045</span>    public ConvertingMapWrapper(Map&lt;K, V2&gt; proxied, Function&lt;V1, V2&gt; converter, Function&lt;V2, V1&gt; reverseConverter, boolean convertReturnedNulls) {<a name="line.45"></a>
+<span class="sourceLineNo">046</span>        this.proxied = proxied;<a name="line.46"></a>
+<span class="sourceLineNo">047</span>        this.converter = converter;<a name="line.47"></a>
+<span class="sourceLineNo">048</span>        this.reverseConverter = reverseConverter;<a name="line.48"></a>
+<span class="sourceLineNo">049</span>        this.convertReturnedNulls = convertReturnedNulls;<a name="line.49"></a>
+<span class="sourceLineNo">050</span>        entrySet = new ConvertingSetWrapper&lt;&gt;(<a name="line.50"></a>
+<span class="sourceLineNo">051</span>                proxied.entrySet(),<a name="line.51"></a>
+<span class="sourceLineNo">052</span>                entry -&gt; new EntryWrapper&lt;&gt;(entry, reverseConverter, converter),<a name="line.52"></a>
+<span class="sourceLineNo">053</span>                entry -&gt; new EntryWrapper&lt;&gt;(entry, converter, reverseConverter)<a name="line.53"></a>
+<span class="sourceLineNo">054</span>        );<a name="line.54"></a>
+<span class="sourceLineNo">055</span>    }<a name="line.55"></a>
+<span class="sourceLineNo">056</span><a name="line.56"></a>
+<span class="sourceLineNo">057</span>    @PowerNukkitOnly<a name="line.57"></a>
+<span class="sourceLineNo">058</span>    @Since("1.4.0.0-PN")<a name="line.58"></a>
+<span class="sourceLineNo">059</span>    public ConvertingMapWrapper(Map&lt;K, V2&gt; proxied, Function&lt;V1, V2&gt; converter, Function&lt;V2, V1&gt; reverseConverter) {<a name="line.59"></a>
+<span class="sourceLineNo">060</span>        this(proxied, converter, reverseConverter, false);<a name="line.60"></a>
+<span class="sourceLineNo">061</span>    }<a name="line.61"></a>
+<span class="sourceLineNo">062</span>    <a name="line.62"></a>
+<span class="sourceLineNo">063</span><a name="line.63"></a>
+<span class="sourceLineNo">064</span>    @Override<a name="line.64"></a>
+<span class="sourceLineNo">065</span>    public Set&lt;Entry&lt;K, V1&gt;&gt; entrySet() {<a name="line.65"></a>
+<span class="sourceLineNo">066</span>        return entrySet;<a name="line.66"></a>
+<span class="sourceLineNo">067</span>    }<a name="line.67"></a>
+<span class="sourceLineNo">068</span><a name="line.68"></a>
+<span class="sourceLineNo">069</span>    @Override<a name="line.69"></a>
+<span class="sourceLineNo">070</span>    public int size() {<a name="line.70"></a>
+<span class="sourceLineNo">071</span>        return proxied.size();<a name="line.71"></a>
+<span class="sourceLineNo">072</span>    }<a name="line.72"></a>
+<span class="sourceLineNo">073</span><a name="line.73"></a>
+<span class="sourceLineNo">074</span>    @Override<a name="line.74"></a>
+<span class="sourceLineNo">075</span>    public boolean isEmpty() {<a name="line.75"></a>
+<span class="sourceLineNo">076</span>        return proxied.isEmpty();<a name="line.76"></a>
+<span class="sourceLineNo">077</span>    }<a name="line.77"></a>
+<span class="sourceLineNo">078</span><a name="line.78"></a>
+<span class="sourceLineNo">079</span>    @Override<a name="line.79"></a>
+<span class="sourceLineNo">080</span>    public boolean containsValue(Object value) {<a name="line.80"></a>
+<span class="sourceLineNo">081</span>        Function uncheckedConverter = converter;<a name="line.81"></a>
+<span class="sourceLineNo">082</span>        Object converted = uncheckedConverter.apply(value);<a name="line.82"></a>
+<span class="sourceLineNo">083</span>        return proxied.containsValue(converted);<a name="line.83"></a>
+<span class="sourceLineNo">084</span>    }<a name="line.84"></a>
+<span class="sourceLineNo">085</span><a name="line.85"></a>
+<span class="sourceLineNo">086</span>    @Override<a name="line.86"></a>
+<span class="sourceLineNo">087</span>    public boolean containsKey(Object key) {<a name="line.87"></a>
+<span class="sourceLineNo">088</span>        return proxied.containsKey(key);<a name="line.88"></a>
+<span class="sourceLineNo">089</span>    }<a name="line.89"></a>
+<span class="sourceLineNo">090</span><a name="line.90"></a>
+<span class="sourceLineNo">091</span>    @Override<a name="line.91"></a>
+<span class="sourceLineNo">092</span>    public V1 get(Object key) {<a name="line.92"></a>
+<span class="sourceLineNo">093</span>        V2 found = proxied.get(key);<a name="line.93"></a>
+<span class="sourceLineNo">094</span>        if (found == null &amp;&amp; !convertReturnedNulls) {<a name="line.94"></a>
+<span class="sourceLineNo">095</span>            return null;<a name="line.95"></a>
+<span class="sourceLineNo">096</span>        }<a name="line.96"></a>
+<span class="sourceLineNo">097</span>        return reverseConverter.apply(found);<a name="line.97"></a>
+<span class="sourceLineNo">098</span>    }<a name="line.98"></a>
+<span class="sourceLineNo">099</span><a name="line.99"></a>
+<span class="sourceLineNo">100</span>    @Override<a name="line.100"></a>
+<span class="sourceLineNo">101</span>    public V1 put(K key, V1 value) {<a name="line.101"></a>
+<span class="sourceLineNo">102</span>        V2 removed = proxied.put(key, converter.apply(value));<a name="line.102"></a>
+<span class="sourceLineNo">103</span>        if (removed == null &amp;&amp; !convertReturnedNulls) {<a name="line.103"></a>
+<span class="sourceLineNo">104</span>            return null;<a name="line.104"></a>
+<span class="sourceLineNo">105</span>        }<a name="line.105"></a>
+<span class="sourceLineNo">106</span>        return reverseConverter.apply(removed);<a name="line.106"></a>
+<span class="sourceLineNo">107</span>    }<a name="line.107"></a>
+<span class="sourceLineNo">108</span><a name="line.108"></a>
+<span class="sourceLineNo">109</span>    @Override<a name="line.109"></a>
+<span class="sourceLineNo">110</span>    public V1 remove(Object key) {<a name="line.110"></a>
+<span class="sourceLineNo">111</span>        V2 removed = proxied.remove(key);<a name="line.111"></a>
+<span class="sourceLineNo">112</span>        if (removed == null &amp;&amp; !convertReturnedNulls) {<a name="line.112"></a>
+<span class="sourceLineNo">113</span>            return null;<a name="line.113"></a>
+<span class="sourceLineNo">114</span>        }<a name="line.114"></a>
+<span class="sourceLineNo">115</span>        return reverseConverter.apply(removed);<a name="line.115"></a>
+<span class="sourceLineNo">116</span>    }<a name="line.116"></a>
+<span class="sourceLineNo">117</span><a name="line.117"></a>
+<span class="sourceLineNo">118</span>    @Override<a name="line.118"></a>
+<span class="sourceLineNo">119</span>    public boolean remove(Object key, Object value) {<a name="line.119"></a>
+<span class="sourceLineNo">120</span>        Function uncheckedConverter = converter;<a name="line.120"></a>
+<span class="sourceLineNo">121</span>        Object converted = uncheckedConverter.apply(value);<a name="line.121"></a>
+<span class="sourceLineNo">122</span>        return proxied.remove(key, converted);<a name="line.122"></a>
+<span class="sourceLineNo">123</span>    }<a name="line.123"></a>
+<span class="sourceLineNo">124</span><a name="line.124"></a>
+<span class="sourceLineNo">125</span>    @Override<a name="line.125"></a>
+<span class="sourceLineNo">126</span>    public void clear() {<a name="line.126"></a>
+<span class="sourceLineNo">127</span>        proxied.clear();<a name="line.127"></a>
+<span class="sourceLineNo">128</span>    }<a name="line.128"></a>
+<span class="sourceLineNo">129</span><a name="line.129"></a>
+<span class="sourceLineNo">130</span>    @Override<a name="line.130"></a>
+<span class="sourceLineNo">131</span>    public Set&lt;K&gt; keySet() {<a name="line.131"></a>
+<span class="sourceLineNo">132</span>        return proxied.keySet();<a name="line.132"></a>
+<span class="sourceLineNo">133</span>    }<a name="line.133"></a>
+<span class="sourceLineNo">134</span><a name="line.134"></a>
+<span class="sourceLineNo">135</span>    private class EntryWrapper&lt;E1, E2&gt; implements Map.Entry&lt;K, E1&gt; {<a name="line.135"></a>
+<span class="sourceLineNo">136</span>        private final Function&lt;E1, E2&gt; entryConverter;<a name="line.136"></a>
+<span class="sourceLineNo">137</span>        private final Function&lt;E2, E1&gt; entryReverseConverter;<a name="line.137"></a>
+<span class="sourceLineNo">138</span>        private final Map.Entry&lt;K, E2&gt; entryProxied;<a name="line.138"></a>
+<span class="sourceLineNo">139</span><a name="line.139"></a>
+<span class="sourceLineNo">140</span>        public EntryWrapper(Entry&lt;K, E2&gt; entryProxied, Function&lt;E1, E2&gt; entryConverter, Function&lt;E2, E1&gt; entryReverseConverter) {<a name="line.140"></a>
+<span class="sourceLineNo">141</span>            this.entryConverter = entryConverter;<a name="line.141"></a>
+<span class="sourceLineNo">142</span>            this.entryReverseConverter = entryReverseConverter;<a name="line.142"></a>
+<span class="sourceLineNo">143</span>            this.entryProxied = entryProxied;<a name="line.143"></a>
+<span class="sourceLineNo">144</span>        }<a name="line.144"></a>
+<span class="sourceLineNo">145</span><a name="line.145"></a>
+<span class="sourceLineNo">146</span>        @Override<a name="line.146"></a>
+<span class="sourceLineNo">147</span>        public K getKey() {<a name="line.147"></a>
+<span class="sourceLineNo">148</span>            return entryProxied.getKey();<a name="line.148"></a>
+<span class="sourceLineNo">149</span>        }<a name="line.149"></a>
+<span class="sourceLineNo">150</span><a name="line.150"></a>
+<span class="sourceLineNo">151</span>        @Override<a name="line.151"></a>
+<span class="sourceLineNo">152</span>        public E1 getValue() {<a name="line.152"></a>
+<span class="sourceLineNo">153</span>            E2 value = entryProxied.getValue();<a name="line.153"></a>
+<span class="sourceLineNo">154</span>            if (value == null &amp;&amp; !convertReturnedNulls) {<a name="line.154"></a>
+<span class="sourceLineNo">155</span>                return null;<a name="line.155"></a>
+<span class="sourceLineNo">156</span>            }<a name="line.156"></a>
+<span class="sourceLineNo">157</span>            return entryReverseConverter.apply(value);<a name="line.157"></a>
+<span class="sourceLineNo">158</span>        }<a name="line.158"></a>
+<span class="sourceLineNo">159</span><a name="line.159"></a>
+<span class="sourceLineNo">160</span>        @Override<a name="line.160"></a>
+<span class="sourceLineNo">161</span>        public E1 setValue(E1 value) {<a name="line.161"></a>
+<span class="sourceLineNo">162</span>            E2 newValue = entryConverter.apply(value);<a name="line.162"></a>
+<span class="sourceLineNo">163</span>            E2 oldValue = entryProxied.setValue(newValue);<a name="line.163"></a>
+<span class="sourceLineNo">164</span>            if (oldValue == null &amp;&amp; !convertReturnedNulls) {<a name="line.164"></a>
+<span class="sourceLineNo">165</span>                return null;<a name="line.165"></a>
+<span class="sourceLineNo">166</span>            }<a name="line.166"></a>
+<span class="sourceLineNo">167</span>            return entryReverseConverter.apply(oldValue);<a name="line.167"></a>
+<span class="sourceLineNo">168</span>        }<a name="line.168"></a>
+<span class="sourceLineNo">169</span><a name="line.169"></a>
+<span class="sourceLineNo">170</span>        @Override<a name="line.170"></a>
+<span class="sourceLineNo">171</span>        public String toString() {<a name="line.171"></a>
+<span class="sourceLineNo">172</span>            return entryProxied.getKey()+"="+getValue();<a name="line.172"></a>
+<span class="sourceLineNo">173</span>        }<a name="line.173"></a>
+<span class="sourceLineNo">174</span><a name="line.174"></a>
+<span class="sourceLineNo">175</span>        @Override<a name="line.175"></a>
+<span class="sourceLineNo">176</span>        public boolean equals(Object o) {<a name="line.176"></a>
+<span class="sourceLineNo">177</span>            if (o == this) {<a name="line.177"></a>
+<span class="sourceLineNo">178</span>                return true;<a name="line.178"></a>
+<span class="sourceLineNo">179</span>            }<a name="line.179"></a>
+<span class="sourceLineNo">180</span>            if (o instanceof Map.Entry) {<a name="line.180"></a>
+<span class="sourceLineNo">181</span>                Map.Entry&lt;?,?&gt; e = (Map.Entry&lt;?,?&gt;)o;<a name="line.181"></a>
+<span class="sourceLineNo">182</span>                return Objects.equals(entryProxied.getKey(), e.getKey()) &amp;&amp; Objects.equals(getValue(), e.getValue());<a name="line.182"></a>
+<span class="sourceLineNo">183</span>            }<a name="line.183"></a>
+<span class="sourceLineNo">184</span>            return false;<a name="line.184"></a>
+<span class="sourceLineNo">185</span>        }<a name="line.185"></a>
+<span class="sourceLineNo">186</span><a name="line.186"></a>
+<span class="sourceLineNo">187</span>        @Override<a name="line.187"></a>
+<span class="sourceLineNo">188</span>        public int hashCode() {<a name="line.188"></a>
+<span class="sourceLineNo">189</span>            return Objects.hashCode(entryProxied.getKey()) ^ Objects.hashCode(getValue());<a name="line.189"></a>
+<span class="sourceLineNo">190</span>        }<a name="line.190"></a>
+<span class="sourceLineNo">191</span>    }<a name="line.191"></a>
+<span class="sourceLineNo">192</span>}<a name="line.192"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>

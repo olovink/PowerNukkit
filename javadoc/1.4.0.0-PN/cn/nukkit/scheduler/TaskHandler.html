@@ -1,11 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- NewPage -->
-<html lang="en">
+<html lang="pt">
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>TaskHandler (PowerNukkit 1.4.0.0-PN API)</title>
-<meta name="date" content="2021-05-31">
+<meta name="date" content="2021-11-26">
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
 </head>
@@ -110,7 +110,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <hr>
 <br>
-<pre>public class <span class="typeNameLabel">TaskHandler</span>
+<pre>public class <a href="../../../src-html/cn/nukkit/scheduler/TaskHandler.html#line.11">TaskHandler</a>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <dl>
 <dt><span class="simpleTagLabel">Author:</span></dt>
@@ -281,7 +281,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockListLast">
 <li class="blockList">
 <h4>timing</h4>
-<pre>public final&nbsp;<a href="../../../co/aikar/timings/Timing.html" title="class in co.aikar.timings">Timing</a> timing</pre>
+<pre>public final&nbsp;<a href="../../../co/aikar/timings/Timing.html" title="class in co.aikar.timings">Timing</a> <a href="../../../src-html/cn/nukkit/scheduler/TaskHandler.html#line.23">timing</a></pre>
 </li>
 </ul>
 </li>
@@ -298,7 +298,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockListLast">
 <li class="blockList">
 <h4>TaskHandler</h4>
-<pre>public&nbsp;TaskHandler(<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;plugin,
+<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/TaskHandler.html#line.25">TaskHandler</a>(<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;plugin,
                    <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task,
                    int&nbsp;taskId,
                    boolean&nbsp;asynchronous)</pre>
@@ -318,7 +318,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>isCancelled</h4>
-<pre>public&nbsp;boolean&nbsp;isCancelled()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/TaskHandler.html#line.33">isCancelled</a>()</pre>
 </li>
 </ul>
 <a name="getNextRunTick--">
@@ -327,7 +327,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>getNextRunTick</h4>
-<pre>public&nbsp;int&nbsp;getNextRunTick()</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/TaskHandler.html#line.37">getNextRunTick</a>()</pre>
 </li>
 </ul>
 <a name="setNextRunTick-int-">
@@ -336,7 +336,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>setNextRunTick</h4>
-<pre>public&nbsp;void&nbsp;setNextRunTick(int&nbsp;nextRunTick)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/TaskHandler.html#line.41">setNextRunTick</a>(int&nbsp;nextRunTick)</pre>
 </li>
 </ul>
 <a name="getTaskId--">
@@ -345,7 +345,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>getTaskId</h4>
-<pre>public&nbsp;int&nbsp;getTaskId()</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/TaskHandler.html#line.45">getTaskId</a>()</pre>
 </li>
 </ul>
 <a name="getTask--">
@@ -354,7 +354,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>getTask</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;getTask()</pre>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/TaskHandler.html#line.49">getTask</a>()</pre>
 </li>
 </ul>
 <a name="getDelay--">
@@ -363,7 +363,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>getDelay</h4>
-<pre>public&nbsp;int&nbsp;getDelay()</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/TaskHandler.html#line.53">getDelay</a>()</pre>
 </li>
 </ul>
 <a name="isDelayed--">
@@ -372,7 +372,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>isDelayed</h4>
-<pre>public&nbsp;boolean&nbsp;isDelayed()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/TaskHandler.html#line.57">isDelayed</a>()</pre>
 </li>
 </ul>
 <a name="isRepeating--">
@@ -381,7 +381,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>isRepeating</h4>
-<pre>public&nbsp;boolean&nbsp;isRepeating()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/TaskHandler.html#line.61">isRepeating</a>()</pre>
 </li>
 </ul>
 <a name="getPeriod--">
@@ -390,7 +390,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>getPeriod</h4>
-<pre>public&nbsp;int&nbsp;getPeriod()</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/TaskHandler.html#line.65">getPeriod</a>()</pre>
 </li>
 </ul>
 <a name="getPlugin--">
@@ -399,7 +399,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>getPlugin</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;getPlugin()</pre>
+<pre>public&nbsp;<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/TaskHandler.html#line.69">getPlugin</a>()</pre>
 </li>
 </ul>
 <a name="getLastRunTick--">
@@ -408,7 +408,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>getLastRunTick</h4>
-<pre>public&nbsp;int&nbsp;getLastRunTick()</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/TaskHandler.html#line.73">getLastRunTick</a>()</pre>
 </li>
 </ul>
 <a name="setLastRunTick-int-">
@@ -417,7 +417,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>setLastRunTick</h4>
-<pre>public&nbsp;void&nbsp;setLastRunTick(int&nbsp;lastRunTick)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/TaskHandler.html#line.77">setLastRunTick</a>(int&nbsp;lastRunTick)</pre>
 </li>
 </ul>
 <a name="cancel--">
@@ -426,7 +426,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>cancel</h4>
-<pre>public&nbsp;void&nbsp;cancel()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/TaskHandler.html#line.81">cancel</a>()</pre>
 </li>
 </ul>
 <a name="remove--">
@@ -436,7 +436,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>remove</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
-public&nbsp;void&nbsp;remove()</pre>
+public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/TaskHandler.html#line.89">remove</a>()</pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </li>
 </ul>
@@ -446,7 +446,7 @@ public&nbsp;void&nbsp;remove()</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>run</h4>
-<pre>public&nbsp;void&nbsp;run(int&nbsp;currentTick)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/TaskHandler.html#line.93">run</a>(int&nbsp;currentTick)</pre>
 </li>
 </ul>
 <a name="getTaskName--">
@@ -456,7 +456,7 @@ public&nbsp;void&nbsp;remove()</pre>
 <li class="blockList">
 <h4>getTaskName</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
-public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getTaskName()</pre>
+public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/TaskHandler.html#line.103">getTaskName</a>()</pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </li>
 </ul>
@@ -466,7 +466,7 @@ public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.
 <ul class="blockList">
 <li class="blockList">
 <h4>isAsynchronous</h4>
-<pre>public&nbsp;boolean&nbsp;isAsynchronous()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/TaskHandler.html#line.107">isAsynchronous</a>()</pre>
 </li>
 </ul>
 <a name="setDelay-int-">
@@ -475,7 +475,7 @@ public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.
 <ul class="blockList">
 <li class="blockList">
 <h4>setDelay</h4>
-<pre>public&nbsp;void&nbsp;setDelay(int&nbsp;delay)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/TaskHandler.html#line.111">setDelay</a>(int&nbsp;delay)</pre>
 </li>
 </ul>
 <a name="setPeriod-int-">
@@ -484,7 +484,7 @@ public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.
 <ul class="blockListLast">
 <li class="blockList">
 <h4>setPeriod</h4>
-<pre>public&nbsp;void&nbsp;setPeriod(int&nbsp;period)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/TaskHandler.html#line.115">setPeriod</a>(int&nbsp;period)</pre>
 </li>
 </ul>
 </li>

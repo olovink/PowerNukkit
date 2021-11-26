@@ -1,0 +1,344 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package cn.nukkit.utils;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>import cn.nukkit.block.Block;<a name="line.3"></a>
+<span class="sourceLineNo">004</span>import cn.nukkit.level.Level;<a name="line.4"></a>
+<span class="sourceLineNo">005</span>import cn.nukkit.math.BlockFace;<a name="line.5"></a>
+<span class="sourceLineNo">006</span>import cn.nukkit.math.Vector3;<a name="line.6"></a>
+<span class="sourceLineNo">007</span><a name="line.7"></a>
+<span class="sourceLineNo">008</span>import java.util.Iterator;<a name="line.8"></a>
+<span class="sourceLineNo">009</span><a name="line.9"></a>
+<span class="sourceLineNo">010</span>/**<a name="line.10"></a>
+<span class="sourceLineNo">011</span> * @author MagicDroidX (Nukkit Project)<a name="line.11"></a>
+<span class="sourceLineNo">012</span> */<a name="line.12"></a>
+<span class="sourceLineNo">013</span>public class BlockIterator implements Iterator&lt;Block&gt; {<a name="line.13"></a>
+<span class="sourceLineNo">014</span>    private final Level level;<a name="line.14"></a>
+<span class="sourceLineNo">015</span>    private final int maxDistance;<a name="line.15"></a>
+<span class="sourceLineNo">016</span><a name="line.16"></a>
+<span class="sourceLineNo">017</span>    private static final int gridSize = 1 &lt;&lt; 24;<a name="line.17"></a>
+<span class="sourceLineNo">018</span><a name="line.18"></a>
+<span class="sourceLineNo">019</span>    private boolean end = false;<a name="line.19"></a>
+<span class="sourceLineNo">020</span><a name="line.20"></a>
+<span class="sourceLineNo">021</span>    private final Block[] blockQueue;<a name="line.21"></a>
+<span class="sourceLineNo">022</span>    private int currentBlock = 0;<a name="line.22"></a>
+<span class="sourceLineNo">023</span><a name="line.23"></a>
+<span class="sourceLineNo">024</span>    private Block currentBlockObject = null;<a name="line.24"></a>
+<span class="sourceLineNo">025</span>    private int currentDistance;<a name="line.25"></a>
+<span class="sourceLineNo">026</span>    private int maxDistanceInt = 0;<a name="line.26"></a>
+<span class="sourceLineNo">027</span><a name="line.27"></a>
+<span class="sourceLineNo">028</span>    private int secondError;<a name="line.28"></a>
+<span class="sourceLineNo">029</span>    private int thirdError;<a name="line.29"></a>
+<span class="sourceLineNo">030</span><a name="line.30"></a>
+<span class="sourceLineNo">031</span>    private final int secondStep;<a name="line.31"></a>
+<span class="sourceLineNo">032</span>    private final int thirdStep;<a name="line.32"></a>
+<span class="sourceLineNo">033</span><a name="line.33"></a>
+<span class="sourceLineNo">034</span>    private BlockFace mainFace;<a name="line.34"></a>
+<span class="sourceLineNo">035</span>    private BlockFace secondFace;<a name="line.35"></a>
+<span class="sourceLineNo">036</span>    private BlockFace thirdFace;<a name="line.36"></a>
+<span class="sourceLineNo">037</span><a name="line.37"></a>
+<span class="sourceLineNo">038</span>    public BlockIterator(Level level, Vector3 start, Vector3 direction) {<a name="line.38"></a>
+<span class="sourceLineNo">039</span>        this(level, start, direction, 0);<a name="line.39"></a>
+<span class="sourceLineNo">040</span>    }<a name="line.40"></a>
+<span class="sourceLineNo">041</span><a name="line.41"></a>
+<span class="sourceLineNo">042</span>    public BlockIterator(Level level, Vector3 start, Vector3 direction, double yOffset) {<a name="line.42"></a>
+<span class="sourceLineNo">043</span>        this(level, start, direction, yOffset, 0);<a name="line.43"></a>
+<span class="sourceLineNo">044</span>    }<a name="line.44"></a>
+<span class="sourceLineNo">045</span><a name="line.45"></a>
+<span class="sourceLineNo">046</span>    public BlockIterator(Level level, Vector3 start, Vector3 direction, double yOffset, int maxDistance) {<a name="line.46"></a>
+<span class="sourceLineNo">047</span>        this.level = level;<a name="line.47"></a>
+<span class="sourceLineNo">048</span>        this.maxDistance = maxDistance;<a name="line.48"></a>
+<span class="sourceLineNo">049</span>        this.blockQueue = new Block[3];<a name="line.49"></a>
+<span class="sourceLineNo">050</span><a name="line.50"></a>
+<span class="sourceLineNo">051</span>        Vector3 startClone = new Vector3(start.x, start.y, start.z);<a name="line.51"></a>
+<span class="sourceLineNo">052</span>        startClone.y += yOffset;<a name="line.52"></a>
+<span class="sourceLineNo">053</span><a name="line.53"></a>
+<span class="sourceLineNo">054</span>        this.currentDistance = 0;<a name="line.54"></a>
+<span class="sourceLineNo">055</span><a name="line.55"></a>
+<span class="sourceLineNo">056</span>        double mainDirection = 0;<a name="line.56"></a>
+<span class="sourceLineNo">057</span>        double secondDirection = 0;<a name="line.57"></a>
+<span class="sourceLineNo">058</span>        double thirdDirection = 0;<a name="line.58"></a>
+<span class="sourceLineNo">059</span><a name="line.59"></a>
+<span class="sourceLineNo">060</span>        double mainPosition = 0;<a name="line.60"></a>
+<span class="sourceLineNo">061</span>        double secondPosition = 0;<a name="line.61"></a>
+<span class="sourceLineNo">062</span>        double thirdPosition = 0;<a name="line.62"></a>
+<span class="sourceLineNo">063</span><a name="line.63"></a>
+<span class="sourceLineNo">064</span>        Vector3 pos = new Vector3(startClone.x, startClone.y, startClone.z);<a name="line.64"></a>
+<span class="sourceLineNo">065</span>        Block startBlock = this.level.getBlock(new Vector3(Math.floor(pos.x), Math.floor(pos.y), Math.floor(pos.z)));<a name="line.65"></a>
+<span class="sourceLineNo">066</span><a name="line.66"></a>
+<span class="sourceLineNo">067</span>        if (this.getXLength(direction) &gt; mainDirection) {<a name="line.67"></a>
+<span class="sourceLineNo">068</span>            this.mainFace = this.getXFace(direction);<a name="line.68"></a>
+<span class="sourceLineNo">069</span>            mainDirection = this.getXLength(direction);<a name="line.69"></a>
+<span class="sourceLineNo">070</span>            mainPosition = this.getXPosition(direction, startClone, startBlock);<a name="line.70"></a>
+<span class="sourceLineNo">071</span><a name="line.71"></a>
+<span class="sourceLineNo">072</span>            this.secondFace = this.getYFace(direction);<a name="line.72"></a>
+<span class="sourceLineNo">073</span>            secondDirection = this.getYLength(direction);<a name="line.73"></a>
+<span class="sourceLineNo">074</span>            secondPosition = this.getYPosition(direction, startClone, startBlock);<a name="line.74"></a>
+<span class="sourceLineNo">075</span><a name="line.75"></a>
+<span class="sourceLineNo">076</span>            this.thirdFace = this.getZFace(direction);<a name="line.76"></a>
+<span class="sourceLineNo">077</span>            thirdDirection = this.getZLength(direction);<a name="line.77"></a>
+<span class="sourceLineNo">078</span>            thirdPosition = this.getZPosition(direction, startClone, startBlock);<a name="line.78"></a>
+<span class="sourceLineNo">079</span>        }<a name="line.79"></a>
+<span class="sourceLineNo">080</span>        if (this.getYLength(direction) &gt; mainDirection) {<a name="line.80"></a>
+<span class="sourceLineNo">081</span>            this.mainFace = this.getYFace(direction);<a name="line.81"></a>
+<span class="sourceLineNo">082</span>            mainDirection = this.getYLength(direction);<a name="line.82"></a>
+<span class="sourceLineNo">083</span>            mainPosition = this.getYPosition(direction, startClone, startBlock);<a name="line.83"></a>
+<span class="sourceLineNo">084</span><a name="line.84"></a>
+<span class="sourceLineNo">085</span>            this.secondFace = this.getZFace(direction);<a name="line.85"></a>
+<span class="sourceLineNo">086</span>            secondDirection = this.getZLength(direction);<a name="line.86"></a>
+<span class="sourceLineNo">087</span>            secondPosition = this.getZPosition(direction, startClone, startBlock);<a name="line.87"></a>
+<span class="sourceLineNo">088</span><a name="line.88"></a>
+<span class="sourceLineNo">089</span>            this.thirdFace = this.getXFace(direction);<a name="line.89"></a>
+<span class="sourceLineNo">090</span>            thirdDirection = this.getXLength(direction);<a name="line.90"></a>
+<span class="sourceLineNo">091</span>            thirdPosition = this.getXPosition(direction, startClone, startBlock);<a name="line.91"></a>
+<span class="sourceLineNo">092</span>        }<a name="line.92"></a>
+<span class="sourceLineNo">093</span>        if (this.getZLength(direction) &gt; mainDirection) {<a name="line.93"></a>
+<span class="sourceLineNo">094</span>            this.mainFace = this.getZFace(direction);<a name="line.94"></a>
+<span class="sourceLineNo">095</span>            mainDirection = this.getZLength(direction);<a name="line.95"></a>
+<span class="sourceLineNo">096</span>            mainPosition = this.getZPosition(direction, startClone, startBlock);<a name="line.96"></a>
+<span class="sourceLineNo">097</span><a name="line.97"></a>
+<span class="sourceLineNo">098</span>            this.secondFace = this.getXFace(direction);<a name="line.98"></a>
+<span class="sourceLineNo">099</span>            secondDirection = this.getXLength(direction);<a name="line.99"></a>
+<span class="sourceLineNo">100</span>            secondPosition = this.getXPosition(direction, startClone, startBlock);<a name="line.100"></a>
+<span class="sourceLineNo">101</span><a name="line.101"></a>
+<span class="sourceLineNo">102</span>            this.thirdFace = this.getYFace(direction);<a name="line.102"></a>
+<span class="sourceLineNo">103</span>            thirdDirection = this.getYLength(direction);<a name="line.103"></a>
+<span class="sourceLineNo">104</span>            thirdPosition = this.getYPosition(direction, startClone, startBlock);<a name="line.104"></a>
+<span class="sourceLineNo">105</span>        }<a name="line.105"></a>
+<span class="sourceLineNo">106</span><a name="line.106"></a>
+<span class="sourceLineNo">107</span>        double d = mainPosition / mainDirection;<a name="line.107"></a>
+<span class="sourceLineNo">108</span>        double secondd = secondPosition - secondDirection * d;<a name="line.108"></a>
+<span class="sourceLineNo">109</span>        double thirdd = thirdPosition - thirdDirection * d;<a name="line.109"></a>
+<span class="sourceLineNo">110</span><a name="line.110"></a>
+<span class="sourceLineNo">111</span>        this.secondError = (int) Math.floor(secondd * gridSize);<a name="line.111"></a>
+<span class="sourceLineNo">112</span>        this.secondStep = (int) Math.round(secondDirection / mainDirection * gridSize);<a name="line.112"></a>
+<span class="sourceLineNo">113</span>        this.thirdError = (int) Math.floor(thirdd * gridSize);<a name="line.113"></a>
+<span class="sourceLineNo">114</span>        this.thirdStep = (int) Math.round(thirdDirection / mainDirection * gridSize);<a name="line.114"></a>
+<span class="sourceLineNo">115</span><a name="line.115"></a>
+<span class="sourceLineNo">116</span>        if (this.secondError + this.secondStep &lt;= 0) {<a name="line.116"></a>
+<span class="sourceLineNo">117</span>            this.secondError = -this.secondStep + 1;<a name="line.117"></a>
+<span class="sourceLineNo">118</span>        }<a name="line.118"></a>
+<span class="sourceLineNo">119</span><a name="line.119"></a>
+<span class="sourceLineNo">120</span>        if (this.thirdError + this.thirdStep &lt;= 0) {<a name="line.120"></a>
+<span class="sourceLineNo">121</span>            this.thirdError = -this.thirdStep + 1;<a name="line.121"></a>
+<span class="sourceLineNo">122</span>        }<a name="line.122"></a>
+<span class="sourceLineNo">123</span><a name="line.123"></a>
+<span class="sourceLineNo">124</span>        Block lastBlock = startBlock.getSide(this.mainFace.getOpposite());<a name="line.124"></a>
+<span class="sourceLineNo">125</span><a name="line.125"></a>
+<span class="sourceLineNo">126</span>        if (this.secondError &lt; 0) {<a name="line.126"></a>
+<span class="sourceLineNo">127</span>            this.secondError += gridSize;<a name="line.127"></a>
+<span class="sourceLineNo">128</span>            lastBlock = lastBlock.getSide(this.secondFace.getOpposite());<a name="line.128"></a>
+<span class="sourceLineNo">129</span>        }<a name="line.129"></a>
+<span class="sourceLineNo">130</span><a name="line.130"></a>
+<span class="sourceLineNo">131</span>        if (this.thirdError &lt; 0) {<a name="line.131"></a>
+<span class="sourceLineNo">132</span>            this.thirdError += gridSize;<a name="line.132"></a>
+<span class="sourceLineNo">133</span>            lastBlock = lastBlock.getSide(this.thirdFace.getOpposite());<a name="line.133"></a>
+<span class="sourceLineNo">134</span>        }<a name="line.134"></a>
+<span class="sourceLineNo">135</span><a name="line.135"></a>
+<span class="sourceLineNo">136</span>        this.secondError -= gridSize;<a name="line.136"></a>
+<span class="sourceLineNo">137</span>        this.thirdError -= gridSize;<a name="line.137"></a>
+<span class="sourceLineNo">138</span><a name="line.138"></a>
+<span class="sourceLineNo">139</span>        this.blockQueue[0] = lastBlock;<a name="line.139"></a>
+<span class="sourceLineNo">140</span><a name="line.140"></a>
+<span class="sourceLineNo">141</span>        this.currentBlock = -1;<a name="line.141"></a>
+<span class="sourceLineNo">142</span><a name="line.142"></a>
+<span class="sourceLineNo">143</span>        this.scan();<a name="line.143"></a>
+<span class="sourceLineNo">144</span><a name="line.144"></a>
+<span class="sourceLineNo">145</span>        boolean startBlockFound = false;<a name="line.145"></a>
+<span class="sourceLineNo">146</span><a name="line.146"></a>
+<span class="sourceLineNo">147</span>        for (int cnt = this.currentBlock; cnt &gt;= 0; --cnt) {<a name="line.147"></a>
+<span class="sourceLineNo">148</span>            if (this.blockEquals(this.blockQueue[cnt], startBlock)) {<a name="line.148"></a>
+<span class="sourceLineNo">149</span>                this.currentBlock = cnt;<a name="line.149"></a>
+<span class="sourceLineNo">150</span>                startBlockFound = true;<a name="line.150"></a>
+<span class="sourceLineNo">151</span>                break;<a name="line.151"></a>
+<span class="sourceLineNo">152</span>            }<a name="line.152"></a>
+<span class="sourceLineNo">153</span>        }<a name="line.153"></a>
+<span class="sourceLineNo">154</span><a name="line.154"></a>
+<span class="sourceLineNo">155</span>        if (!startBlockFound) {<a name="line.155"></a>
+<span class="sourceLineNo">156</span>            throw new IllegalStateException("Start block missed in BlockIterator");<a name="line.156"></a>
+<span class="sourceLineNo">157</span>        }<a name="line.157"></a>
+<span class="sourceLineNo">158</span><a name="line.158"></a>
+<span class="sourceLineNo">159</span>        this.maxDistanceInt = (int) Math.round(maxDistance / (Math.sqrt(mainDirection * mainDirection + secondDirection * secondDirection + thirdDirection * thirdDirection) / mainDirection));<a name="line.159"></a>
+<span class="sourceLineNo">160</span>    }<a name="line.160"></a>
+<span class="sourceLineNo">161</span><a name="line.161"></a>
+<span class="sourceLineNo">162</span>    private boolean blockEquals(Block a, Block b) {<a name="line.162"></a>
+<span class="sourceLineNo">163</span>        return a.x == b.x &amp;&amp; a.y == b.y &amp;&amp; a.z == b.z;<a name="line.163"></a>
+<span class="sourceLineNo">164</span>    }<a name="line.164"></a>
+<span class="sourceLineNo">165</span><a name="line.165"></a>
+<span class="sourceLineNo">166</span>    private BlockFace getXFace(Vector3 direction) {<a name="line.166"></a>
+<span class="sourceLineNo">167</span>        return ((direction.x) &gt; 0) ? BlockFace.EAST : BlockFace.WEST;<a name="line.167"></a>
+<span class="sourceLineNo">168</span>    }<a name="line.168"></a>
+<span class="sourceLineNo">169</span><a name="line.169"></a>
+<span class="sourceLineNo">170</span>    private BlockFace getYFace(Vector3 direction) {<a name="line.170"></a>
+<span class="sourceLineNo">171</span>        return ((direction.y) &gt; 0) ? BlockFace.UP : BlockFace.DOWN;<a name="line.171"></a>
+<span class="sourceLineNo">172</span>    }<a name="line.172"></a>
+<span class="sourceLineNo">173</span><a name="line.173"></a>
+<span class="sourceLineNo">174</span>    private BlockFace getZFace(Vector3 direction) {<a name="line.174"></a>
+<span class="sourceLineNo">175</span>        return ((direction.z) &gt; 0) ? BlockFace.SOUTH : BlockFace.NORTH;<a name="line.175"></a>
+<span class="sourceLineNo">176</span>    }<a name="line.176"></a>
+<span class="sourceLineNo">177</span><a name="line.177"></a>
+<span class="sourceLineNo">178</span>    private double getXLength(Vector3 direction) {<a name="line.178"></a>
+<span class="sourceLineNo">179</span>        return Math.abs(direction.x);<a name="line.179"></a>
+<span class="sourceLineNo">180</span>    }<a name="line.180"></a>
+<span class="sourceLineNo">181</span><a name="line.181"></a>
+<span class="sourceLineNo">182</span>    private double getYLength(Vector3 direction) {<a name="line.182"></a>
+<span class="sourceLineNo">183</span>        return Math.abs(direction.y);<a name="line.183"></a>
+<span class="sourceLineNo">184</span>    }<a name="line.184"></a>
+<span class="sourceLineNo">185</span><a name="line.185"></a>
+<span class="sourceLineNo">186</span>    private double getZLength(Vector3 direction) {<a name="line.186"></a>
+<span class="sourceLineNo">187</span>        return Math.abs(direction.z);<a name="line.187"></a>
+<span class="sourceLineNo">188</span>    }<a name="line.188"></a>
+<span class="sourceLineNo">189</span><a name="line.189"></a>
+<span class="sourceLineNo">190</span>    private double getPosition(double direction, double position, double blockPosition) {<a name="line.190"></a>
+<span class="sourceLineNo">191</span>        return direction &gt; 0 ? (position - blockPosition) : (blockPosition + 1 - position);<a name="line.191"></a>
+<span class="sourceLineNo">192</span>    }<a name="line.192"></a>
+<span class="sourceLineNo">193</span><a name="line.193"></a>
+<span class="sourceLineNo">194</span>    private double getXPosition(Vector3 direction, Vector3 position, Block block) {<a name="line.194"></a>
+<span class="sourceLineNo">195</span>        return this.getPosition(direction.x, position.x, block.x);<a name="line.195"></a>
+<span class="sourceLineNo">196</span>    }<a name="line.196"></a>
+<span class="sourceLineNo">197</span><a name="line.197"></a>
+<span class="sourceLineNo">198</span>    private double getYPosition(Vector3 direction, Vector3 position, Block block) {<a name="line.198"></a>
+<span class="sourceLineNo">199</span>        return this.getPosition(direction.y, position.y, block.y);<a name="line.199"></a>
+<span class="sourceLineNo">200</span>    }<a name="line.200"></a>
+<span class="sourceLineNo">201</span><a name="line.201"></a>
+<span class="sourceLineNo">202</span>    private double getZPosition(Vector3 direction, Vector3 position, Block block) {<a name="line.202"></a>
+<span class="sourceLineNo">203</span>        return this.getPosition(direction.z, position.z, block.z);<a name="line.203"></a>
+<span class="sourceLineNo">204</span>    }<a name="line.204"></a>
+<span class="sourceLineNo">205</span><a name="line.205"></a>
+<span class="sourceLineNo">206</span>    @Override<a name="line.206"></a>
+<span class="sourceLineNo">207</span>    public Block next() {<a name="line.207"></a>
+<span class="sourceLineNo">208</span>        this.scan();<a name="line.208"></a>
+<span class="sourceLineNo">209</span><a name="line.209"></a>
+<span class="sourceLineNo">210</span>        if (this.currentBlock &lt;= -1) {<a name="line.210"></a>
+<span class="sourceLineNo">211</span>            throw new IndexOutOfBoundsException();<a name="line.211"></a>
+<span class="sourceLineNo">212</span>        } else {<a name="line.212"></a>
+<span class="sourceLineNo">213</span>            this.currentBlockObject = this.blockQueue[this.currentBlock--];<a name="line.213"></a>
+<span class="sourceLineNo">214</span>        }<a name="line.214"></a>
+<span class="sourceLineNo">215</span>        return this.currentBlockObject;<a name="line.215"></a>
+<span class="sourceLineNo">216</span>    }<a name="line.216"></a>
+<span class="sourceLineNo">217</span><a name="line.217"></a>
+<span class="sourceLineNo">218</span>    @Override<a name="line.218"></a>
+<span class="sourceLineNo">219</span>    public boolean hasNext() {<a name="line.219"></a>
+<span class="sourceLineNo">220</span>        this.scan();<a name="line.220"></a>
+<span class="sourceLineNo">221</span>        return this.currentBlock != -1;<a name="line.221"></a>
+<span class="sourceLineNo">222</span>    }<a name="line.222"></a>
+<span class="sourceLineNo">223</span><a name="line.223"></a>
+<span class="sourceLineNo">224</span>    private void scan() {<a name="line.224"></a>
+<span class="sourceLineNo">225</span>        if (this.currentBlock &gt;= 0) {<a name="line.225"></a>
+<span class="sourceLineNo">226</span>            return;<a name="line.226"></a>
+<span class="sourceLineNo">227</span>        }<a name="line.227"></a>
+<span class="sourceLineNo">228</span><a name="line.228"></a>
+<span class="sourceLineNo">229</span>        if (this.maxDistance != 0 &amp;&amp; this.currentDistance &gt; this.maxDistanceInt) {<a name="line.229"></a>
+<span class="sourceLineNo">230</span>            this.end = true;<a name="line.230"></a>
+<span class="sourceLineNo">231</span>            return;<a name="line.231"></a>
+<span class="sourceLineNo">232</span>        }<a name="line.232"></a>
+<span class="sourceLineNo">233</span><a name="line.233"></a>
+<span class="sourceLineNo">234</span>        if (this.end) {<a name="line.234"></a>
+<span class="sourceLineNo">235</span>            return;<a name="line.235"></a>
+<span class="sourceLineNo">236</span>        }<a name="line.236"></a>
+<span class="sourceLineNo">237</span><a name="line.237"></a>
+<span class="sourceLineNo">238</span>        ++this.currentDistance;<a name="line.238"></a>
+<span class="sourceLineNo">239</span><a name="line.239"></a>
+<span class="sourceLineNo">240</span>        this.secondError += this.secondStep;<a name="line.240"></a>
+<span class="sourceLineNo">241</span>        this.thirdError += this.thirdStep;<a name="line.241"></a>
+<span class="sourceLineNo">242</span><a name="line.242"></a>
+<span class="sourceLineNo">243</span>        if (this.secondError &gt; 0 &amp;&amp; this.thirdError &gt; 0) {<a name="line.243"></a>
+<span class="sourceLineNo">244</span>            this.blockQueue[2] = this.blockQueue[0].getSide(this.mainFace);<a name="line.244"></a>
+<span class="sourceLineNo">245</span><a name="line.245"></a>
+<span class="sourceLineNo">246</span>            if ((this.secondStep * this.thirdError) &lt; (this.thirdStep * this.secondError)) {<a name="line.246"></a>
+<span class="sourceLineNo">247</span>                this.blockQueue[1] = this.blockQueue[2].getSide(this.secondFace);<a name="line.247"></a>
+<span class="sourceLineNo">248</span>                this.blockQueue[0] = this.blockQueue[1].getSide(this.thirdFace);<a name="line.248"></a>
+<span class="sourceLineNo">249</span>            } else {<a name="line.249"></a>
+<span class="sourceLineNo">250</span>                this.blockQueue[1] = this.blockQueue[2].getSide(this.thirdFace);<a name="line.250"></a>
+<span class="sourceLineNo">251</span>                this.blockQueue[0] = this.blockQueue[1].getSide(this.secondFace);<a name="line.251"></a>
+<span class="sourceLineNo">252</span>            }<a name="line.252"></a>
+<span class="sourceLineNo">253</span><a name="line.253"></a>
+<span class="sourceLineNo">254</span>            this.thirdError -= gridSize;<a name="line.254"></a>
+<span class="sourceLineNo">255</span>            this.secondError -= gridSize;<a name="line.255"></a>
+<span class="sourceLineNo">256</span>            this.currentBlock = 2;<a name="line.256"></a>
+<span class="sourceLineNo">257</span>        } else if (this.secondError &gt; 0) {<a name="line.257"></a>
+<span class="sourceLineNo">258</span>            this.blockQueue[1] = this.blockQueue[0].getSide(this.mainFace);<a name="line.258"></a>
+<span class="sourceLineNo">259</span>            this.blockQueue[0] = this.blockQueue[1].getSide(this.secondFace);<a name="line.259"></a>
+<span class="sourceLineNo">260</span>            this.secondError -= gridSize;<a name="line.260"></a>
+<span class="sourceLineNo">261</span>            this.currentBlock = 1;<a name="line.261"></a>
+<span class="sourceLineNo">262</span>        } else if (this.thirdError &gt; 0) {<a name="line.262"></a>
+<span class="sourceLineNo">263</span>            this.blockQueue[1] = this.blockQueue[0].getSide(this.mainFace);<a name="line.263"></a>
+<span class="sourceLineNo">264</span>            this.blockQueue[0] = this.blockQueue[1].getSide(this.thirdFace);<a name="line.264"></a>
+<span class="sourceLineNo">265</span>            this.thirdError -= gridSize;<a name="line.265"></a>
+<span class="sourceLineNo">266</span>            this.currentBlock = 1;<a name="line.266"></a>
+<span class="sourceLineNo">267</span>        } else {<a name="line.267"></a>
+<span class="sourceLineNo">268</span>            this.blockQueue[0] = this.blockQueue[0].getSide(this.mainFace);<a name="line.268"></a>
+<span class="sourceLineNo">269</span>            this.currentBlock = 0;<a name="line.269"></a>
+<span class="sourceLineNo">270</span>        }<a name="line.270"></a>
+<span class="sourceLineNo">271</span>    }<a name="line.271"></a>
+<span class="sourceLineNo">272</span>}<a name="line.272"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>

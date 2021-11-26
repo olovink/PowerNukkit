@@ -1,11 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- NewPage -->
-<html lang="en">
+<html lang="pt">
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>InventoryTransactionPacket (PowerNukkit 1.4.0.0-PN API)</title>
-<meta name="date" content="2021-05-31">
+<meta name="date" content="2021-11-26">
 <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../../script.js"></script>
 </head>
@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -124,7 +124,7 @@ var activeTableTab = "activeTableTab";
 </dl>
 <hr>
 <br>
-<pre>public class <span class="typeNameLabel">InventoryTransactionPacket</span>
+<pre>public class <a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.15">InventoryTransactionPacket</a>
 extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a></pre>
 </li>
 </ul>
@@ -303,6 +303,10 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <td class="colFirst"><code>byte</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/InventoryTransactionPacket.html#pid--">pid</a></span>()</code>&nbsp;</td>
 </tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/InventoryTransactionPacket.html#toString--">toString</a></span>()</code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.cn.nukkit.network.protocol.DataPacket">
@@ -323,7 +327,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
 </ul>
 </li>
 </ul>
@@ -345,7 +349,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_NORMAL</h4>
-<pre>public static final&nbsp;int TYPE_NORMAL</pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.16">TYPE_NORMAL</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.network.protocol.InventoryTransactionPacket.TYPE_NORMAL">Constant Field Values</a></dd>
@@ -358,7 +362,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_MISMATCH</h4>
-<pre>public static final&nbsp;int TYPE_MISMATCH</pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.17">TYPE_MISMATCH</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.network.protocol.InventoryTransactionPacket.TYPE_MISMATCH">Constant Field Values</a></dd>
@@ -371,7 +375,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_USE_ITEM</h4>
-<pre>public static final&nbsp;int TYPE_USE_ITEM</pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.18">TYPE_USE_ITEM</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.network.protocol.InventoryTransactionPacket.TYPE_USE_ITEM">Constant Field Values</a></dd>
@@ -384,7 +388,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_USE_ITEM_ON_ENTITY</h4>
-<pre>public static final&nbsp;int TYPE_USE_ITEM_ON_ENTITY</pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.19">TYPE_USE_ITEM_ON_ENTITY</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.network.protocol.InventoryTransactionPacket.TYPE_USE_ITEM_ON_ENTITY">Constant Field Values</a></dd>
@@ -397,7 +401,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>TYPE_RELEASE_ITEM</h4>
-<pre>public static final&nbsp;int TYPE_RELEASE_ITEM</pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.20">TYPE_RELEASE_ITEM</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.network.protocol.InventoryTransactionPacket.TYPE_RELEASE_ITEM">Constant Field Values</a></dd>
@@ -410,7 +414,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>USE_ITEM_ACTION_CLICK_BLOCK</h4>
-<pre>public static final&nbsp;int USE_ITEM_ACTION_CLICK_BLOCK</pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.21">USE_ITEM_ACTION_CLICK_BLOCK</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.network.protocol.InventoryTransactionPacket.USE_ITEM_ACTION_CLICK_BLOCK">Constant Field Values</a></dd>
@@ -423,7 +427,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>USE_ITEM_ACTION_CLICK_AIR</h4>
-<pre>public static final&nbsp;int USE_ITEM_ACTION_CLICK_AIR</pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.22">USE_ITEM_ACTION_CLICK_AIR</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.network.protocol.InventoryTransactionPacket.USE_ITEM_ACTION_CLICK_AIR">Constant Field Values</a></dd>
@@ -436,7 +440,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>USE_ITEM_ACTION_BREAK_BLOCK</h4>
-<pre>public static final&nbsp;int USE_ITEM_ACTION_BREAK_BLOCK</pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.23">USE_ITEM_ACTION_BREAK_BLOCK</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.network.protocol.InventoryTransactionPacket.USE_ITEM_ACTION_BREAK_BLOCK">Constant Field Values</a></dd>
@@ -449,7 +453,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>RELEASE_ITEM_ACTION_RELEASE</h4>
-<pre>public static final&nbsp;int RELEASE_ITEM_ACTION_RELEASE</pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.24">RELEASE_ITEM_ACTION_RELEASE</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.network.protocol.InventoryTransactionPacket.RELEASE_ITEM_ACTION_RELEASE">Constant Field Values</a></dd>
@@ -462,7 +466,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>RELEASE_ITEM_ACTION_CONSUME</h4>
-<pre>public static final&nbsp;int RELEASE_ITEM_ACTION_CONSUME</pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.25">RELEASE_ITEM_ACTION_CONSUME</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.network.protocol.InventoryTransactionPacket.RELEASE_ITEM_ACTION_CONSUME">Constant Field Values</a></dd>
@@ -475,7 +479,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>USE_ITEM_ON_ENTITY_ACTION_INTERACT</h4>
-<pre>public static final&nbsp;int USE_ITEM_ON_ENTITY_ACTION_INTERACT</pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.26">USE_ITEM_ON_ENTITY_ACTION_INTERACT</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.network.protocol.InventoryTransactionPacket.USE_ITEM_ON_ENTITY_ACTION_INTERACT">Constant Field Values</a></dd>
@@ -488,7 +492,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>USE_ITEM_ON_ENTITY_ACTION_ATTACK</h4>
-<pre>public static final&nbsp;int USE_ITEM_ON_ENTITY_ACTION_ATTACK</pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.27">USE_ITEM_ON_ENTITY_ACTION_ATTACK</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.network.protocol.InventoryTransactionPacket.USE_ITEM_ON_ENTITY_ACTION_ATTACK">Constant Field Values</a></dd>
@@ -501,7 +505,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>ACTION_MAGIC_SLOT_DROP_ITEM</h4>
-<pre>public static final&nbsp;int ACTION_MAGIC_SLOT_DROP_ITEM</pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.28">ACTION_MAGIC_SLOT_DROP_ITEM</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.network.protocol.InventoryTransactionPacket.ACTION_MAGIC_SLOT_DROP_ITEM">Constant Field Values</a></dd>
@@ -514,7 +518,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>ACTION_MAGIC_SLOT_PICKUP_ITEM</h4>
-<pre>public static final&nbsp;int ACTION_MAGIC_SLOT_PICKUP_ITEM</pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.29">ACTION_MAGIC_SLOT_PICKUP_ITEM</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.network.protocol.InventoryTransactionPacket.ACTION_MAGIC_SLOT_PICKUP_ITEM">Constant Field Values</a></dd>
@@ -527,7 +531,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>ACTION_MAGIC_SLOT_CREATIVE_DELETE_ITEM</h4>
-<pre>public static final&nbsp;int ACTION_MAGIC_SLOT_CREATIVE_DELETE_ITEM</pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.30">ACTION_MAGIC_SLOT_CREATIVE_DELETE_ITEM</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.network.protocol.InventoryTransactionPacket.ACTION_MAGIC_SLOT_CREATIVE_DELETE_ITEM">Constant Field Values</a></dd>
@@ -540,7 +544,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>ACTION_MAGIC_SLOT_CREATIVE_CREATE_ITEM</h4>
-<pre>public static final&nbsp;int ACTION_MAGIC_SLOT_CREATIVE_CREATE_ITEM</pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.31">ACTION_MAGIC_SLOT_CREATIVE_CREATE_ITEM</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.network.protocol.InventoryTransactionPacket.ACTION_MAGIC_SLOT_CREATIVE_CREATE_ITEM">Constant Field Values</a></dd>
@@ -553,7 +557,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>transactionType</h4>
-<pre>public&nbsp;int transactionType</pre>
+<pre>public&nbsp;int <a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.32">transactionType</a></pre>
 </li>
 </ul>
 <a name="actions">
@@ -562,7 +566,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>actions</h4>
-<pre>public&nbsp;<a href="../../../../cn/nukkit/network/protocol/types/NetworkInventoryAction.html" title="class in cn.nukkit.network.protocol.types">NetworkInventoryAction</a>[] actions</pre>
+<pre>public&nbsp;<a href="../../../../cn/nukkit/network/protocol/types/NetworkInventoryAction.html" title="class in cn.nukkit.network.protocol.types">NetworkInventoryAction</a>[] <a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.33">actions</a></pre>
 </li>
 </ul>
 <a name="transactionData">
@@ -571,7 +575,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>transactionData</h4>
-<pre>public&nbsp;<a href="../../../../cn/nukkit/inventory/transaction/data/TransactionData.html" title="interface in cn.nukkit.inventory.transaction.data">TransactionData</a> transactionData</pre>
+<pre>public&nbsp;<a href="../../../../cn/nukkit/inventory/transaction/data/TransactionData.html" title="interface in cn.nukkit.inventory.transaction.data">TransactionData</a> <a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.34">transactionData</a></pre>
 </li>
 </ul>
 <a name="hasNetworkIds">
@@ -586,7 +590,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
  <a href="../../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.4.0.0-PN",
                     <a href="../../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="Removed from NukkitX",
                     <a href="../../../../cn/nukkit/api/DeprecationDetails.html#toBeRemovedAt--">toBeRemovedAt</a>="1.5.0.0-PN")
-public&nbsp;boolean hasNetworkIds</pre>
+public&nbsp;boolean <a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.39">hasNetworkIds</a></pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </li>
 </ul>
@@ -597,7 +601,7 @@ public&nbsp;boolean hasNetworkIds</pre>
 <li class="blockList">
 <h4>legacyRequestId</h4>
 <pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.3.0.0-PN")
-public&nbsp;int legacyRequestId</pre>
+public&nbsp;int <a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.41">legacyRequestId</a></pre>
 </li>
 </ul>
 <a name="isCraftingPart">
@@ -606,7 +610,7 @@ public&nbsp;int legacyRequestId</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>isCraftingPart</h4>
-<pre>public&nbsp;boolean isCraftingPart</pre>
+<pre>public&nbsp;boolean <a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.46">isCraftingPart</a></pre>
 <div class="block">NOTE: THESE FIELDS DO NOT EXIST IN THE PROTOCOL, it's merely used for convenience for us to easily
  determine whether we're doing a crafting or enchanting transaction.</div>
 </li>
@@ -618,7 +622,7 @@ public&nbsp;int legacyRequestId</pre>
 <li class="blockList">
 <h4>isEnchantingPart</h4>
 <pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.3.1.0-PN")
-public&nbsp;boolean isEnchantingPart</pre>
+public&nbsp;boolean <a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.48">isEnchantingPart</a></pre>
 </li>
 </ul>
 <a name="isRepairItemPart">
@@ -628,7 +632,7 @@ public&nbsp;boolean isEnchantingPart</pre>
 <li class="blockList">
 <h4>isRepairItemPart</h4>
 <pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-public&nbsp;boolean isRepairItemPart</pre>
+public&nbsp;boolean <a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.50">isRepairItemPart</a></pre>
 </li>
 </ul>
 </li>
@@ -645,7 +649,7 @@ public&nbsp;boolean isRepairItemPart</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>InventoryTransactionPacket</h4>
-<pre>public&nbsp;InventoryTransactionPacket()</pre>
+<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.15">InventoryTransactionPacket</a>()</pre>
 </li>
 </ul>
 </li>
@@ -662,7 +666,7 @@ public&nbsp;boolean isRepairItemPart</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>pid</h4>
-<pre>public&nbsp;byte&nbsp;pid()</pre>
+<pre>public&nbsp;byte&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.53">pid</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../cn/nukkit/network/protocol/DataPacket.html#pid--">pid</a></code>&nbsp;in class&nbsp;<code><a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a></code></dd>
@@ -675,7 +679,7 @@ public&nbsp;boolean isRepairItemPart</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>encode</h4>
-<pre>public&nbsp;void&nbsp;encode()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.58">encode</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../cn/nukkit/network/protocol/DataPacket.html#encode--">encode</a></code>&nbsp;in class&nbsp;<code><a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a></code></dd>
@@ -685,13 +689,26 @@ public&nbsp;boolean isRepairItemPart</pre>
 <a name="decode--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>decode</h4>
-<pre>public&nbsp;void&nbsp;decode()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.104">decode</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../cn/nukkit/network/protocol/DataPacket.html#decode--">decode</a></code>&nbsp;in class&nbsp;<code><a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="toString--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>toString</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/InventoryTransactionPacket.html#line.163">toString</a>()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
 </dl>
 </li>
 </ul>

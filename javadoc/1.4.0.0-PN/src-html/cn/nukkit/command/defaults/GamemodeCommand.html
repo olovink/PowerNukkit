@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package cn.nukkit.command.defaults;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>import cn.nukkit.Player;<a name="line.3"></a>
+<span class="sourceLineNo">004</span>import cn.nukkit.Server;<a name="line.4"></a>
+<span class="sourceLineNo">005</span>import cn.nukkit.command.Command;<a name="line.5"></a>
+<span class="sourceLineNo">006</span>import cn.nukkit.command.CommandSender;<a name="line.6"></a>
+<span class="sourceLineNo">007</span>import cn.nukkit.command.data.CommandEnum;<a name="line.7"></a>
+<span class="sourceLineNo">008</span>import cn.nukkit.command.data.CommandParamType;<a name="line.8"></a>
+<span class="sourceLineNo">009</span>import cn.nukkit.command.data.CommandParameter;<a name="line.9"></a>
+<span class="sourceLineNo">010</span>import cn.nukkit.lang.TranslationContainer;<a name="line.10"></a>
+<span class="sourceLineNo">011</span>import cn.nukkit.utils.TextFormat;<a name="line.11"></a>
+<span class="sourceLineNo">012</span><a name="line.12"></a>
+<span class="sourceLineNo">013</span>/**<a name="line.13"></a>
+<span class="sourceLineNo">014</span> * @author xtypr<a name="line.14"></a>
+<span class="sourceLineNo">015</span> * @since 2015/11/13<a name="line.15"></a>
+<span class="sourceLineNo">016</span> */<a name="line.16"></a>
+<span class="sourceLineNo">017</span>public class GamemodeCommand extends VanillaCommand {<a name="line.17"></a>
+<span class="sourceLineNo">018</span><a name="line.18"></a>
+<span class="sourceLineNo">019</span>    public GamemodeCommand(String name) {<a name="line.19"></a>
+<span class="sourceLineNo">020</span>        super(name, "%nukkit.command.gamemode.description", "%commands.gamemode.usage",<a name="line.20"></a>
+<span class="sourceLineNo">021</span>                new String[]{"gm"});<a name="line.21"></a>
+<span class="sourceLineNo">022</span>        this.setPermission("nukkit.command.gamemode.survival;" +<a name="line.22"></a>
+<span class="sourceLineNo">023</span>                "nukkit.command.gamemode.creative;" +<a name="line.23"></a>
+<span class="sourceLineNo">024</span>                "nukkit.command.gamemode.adventure;" +<a name="line.24"></a>
+<span class="sourceLineNo">025</span>                "nukkit.command.gamemode.spectator;" +<a name="line.25"></a>
+<span class="sourceLineNo">026</span>                "nukkit.command.gamemode.other");<a name="line.26"></a>
+<span class="sourceLineNo">027</span>        this.commandParameters.clear();<a name="line.27"></a>
+<span class="sourceLineNo">028</span>        this.commandParameters.put("default", new CommandParameter[]{<a name="line.28"></a>
+<span class="sourceLineNo">029</span>                CommandParameter.newType("gameMode", CommandParamType.INT),<a name="line.29"></a>
+<span class="sourceLineNo">030</span>                CommandParameter.newType("player", true, CommandParamType.TARGET)<a name="line.30"></a>
+<span class="sourceLineNo">031</span>        });<a name="line.31"></a>
+<span class="sourceLineNo">032</span>        this.commandParameters.put("byString", new CommandParameter[]{<a name="line.32"></a>
+<span class="sourceLineNo">033</span>                CommandParameter.newEnum("gameMode", CommandEnum.ENUM_GAMEMODE),<a name="line.33"></a>
+<span class="sourceLineNo">034</span>                CommandParameter.newType("player", true, CommandParamType.TARGET)<a name="line.34"></a>
+<span class="sourceLineNo">035</span>        });<a name="line.35"></a>
+<span class="sourceLineNo">036</span>    }<a name="line.36"></a>
+<span class="sourceLineNo">037</span><a name="line.37"></a>
+<span class="sourceLineNo">038</span>    @Override<a name="line.38"></a>
+<span class="sourceLineNo">039</span>    public boolean execute(CommandSender sender, String commandLabel, String[] args) {<a name="line.39"></a>
+<span class="sourceLineNo">040</span>        if (args.length == 0) {<a name="line.40"></a>
+<span class="sourceLineNo">041</span>            sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));<a name="line.41"></a>
+<span class="sourceLineNo">042</span>            return false;<a name="line.42"></a>
+<span class="sourceLineNo">043</span>        }<a name="line.43"></a>
+<span class="sourceLineNo">044</span><a name="line.44"></a>
+<span class="sourceLineNo">045</span>        int gameMode = Server.getGamemodeFromString(args[0]);<a name="line.45"></a>
+<span class="sourceLineNo">046</span>        if (gameMode == -1) {<a name="line.46"></a>
+<span class="sourceLineNo">047</span>            sender.sendMessage("Unknown game mode");<a name="line.47"></a>
+<span class="sourceLineNo">048</span>            return true;<a name="line.48"></a>
+<span class="sourceLineNo">049</span>        }<a name="line.49"></a>
+<span class="sourceLineNo">050</span><a name="line.50"></a>
+<span class="sourceLineNo">051</span>        CommandSender target = sender;<a name="line.51"></a>
+<span class="sourceLineNo">052</span>        if (args.length &gt; 1) {<a name="line.52"></a>
+<span class="sourceLineNo">053</span>            if (sender.hasPermission("nukkit.command.gamemode.other")) {<a name="line.53"></a>
+<span class="sourceLineNo">054</span>                target = sender.getServer().getPlayer(args[1]);<a name="line.54"></a>
+<span class="sourceLineNo">055</span>                if (target == null) {<a name="line.55"></a>
+<span class="sourceLineNo">056</span>                    sender.sendMessage(new TranslationContainer(TextFormat.RED + "%commands.generic.player.notFound"));<a name="line.56"></a>
+<span class="sourceLineNo">057</span>                    return true;<a name="line.57"></a>
+<span class="sourceLineNo">058</span>                }<a name="line.58"></a>
+<span class="sourceLineNo">059</span>            } else {<a name="line.59"></a>
+<span class="sourceLineNo">060</span>                sender.sendMessage(new TranslationContainer(TextFormat.RED + "%commands.generic.permission"));<a name="line.60"></a>
+<span class="sourceLineNo">061</span>                return true;<a name="line.61"></a>
+<span class="sourceLineNo">062</span>            }<a name="line.62"></a>
+<span class="sourceLineNo">063</span>        } else if (!(sender instanceof Player)) {<a name="line.63"></a>
+<span class="sourceLineNo">064</span>            sender.sendMessage(new TranslationContainer("commands.generic.usage", this.usageMessage));<a name="line.64"></a>
+<span class="sourceLineNo">065</span>            return true;<a name="line.65"></a>
+<span class="sourceLineNo">066</span>        }<a name="line.66"></a>
+<span class="sourceLineNo">067</span><a name="line.67"></a>
+<span class="sourceLineNo">068</span>        if ((gameMode == 0 &amp;&amp; !sender.hasPermission("nukkit.command.gamemode.survival")) ||<a name="line.68"></a>
+<span class="sourceLineNo">069</span>                (gameMode == 1 &amp;&amp; !sender.hasPermission("nukkit.command.gamemode.creative")) ||<a name="line.69"></a>
+<span class="sourceLineNo">070</span>                (gameMode == 2 &amp;&amp; !sender.hasPermission("nukkit.command.gamemode.adventure")) ||<a name="line.70"></a>
+<span class="sourceLineNo">071</span>                (gameMode == 3 &amp;&amp; !sender.hasPermission("nukkit.command.gamemode.spectator"))) {<a name="line.71"></a>
+<span class="sourceLineNo">072</span>            sender.sendMessage(new TranslationContainer(TextFormat.RED + "%commands.generic.permission"));<a name="line.72"></a>
+<span class="sourceLineNo">073</span>            return true;<a name="line.73"></a>
+<span class="sourceLineNo">074</span>        }<a name="line.74"></a>
+<span class="sourceLineNo">075</span><a name="line.75"></a>
+<span class="sourceLineNo">076</span>        if (!((Player) target).setGamemode(gameMode)) {<a name="line.76"></a>
+<span class="sourceLineNo">077</span>            sender.sendMessage("Game mode update for " + target.getName() + " failed");<a name="line.77"></a>
+<span class="sourceLineNo">078</span>        } else {<a name="line.78"></a>
+<span class="sourceLineNo">079</span>            if (target.equals(sender)) {<a name="line.79"></a>
+<span class="sourceLineNo">080</span>                Command.broadcastCommandMessage(sender, new TranslationContainer("commands.gamemode.success.self", Server.getGamemodeString(gameMode)));<a name="line.80"></a>
+<span class="sourceLineNo">081</span>            } else {<a name="line.81"></a>
+<span class="sourceLineNo">082</span>                target.sendMessage(new TranslationContainer("gameMode.changed", Server.getGamemodeString(gameMode)));<a name="line.82"></a>
+<span class="sourceLineNo">083</span>                Command.broadcastCommandMessage(sender, new TranslationContainer("commands.gamemode.success.other", target.getName(), Server.getGamemodeString(gameMode)));<a name="line.83"></a>
+<span class="sourceLineNo">084</span>            }<a name="line.84"></a>
+<span class="sourceLineNo">085</span>        }<a name="line.85"></a>
+<span class="sourceLineNo">086</span><a name="line.86"></a>
+<span class="sourceLineNo">087</span>        return true;<a name="line.87"></a>
+<span class="sourceLineNo">088</span>    }<a name="line.88"></a>
+<span class="sourceLineNo">089</span>}<a name="line.89"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>

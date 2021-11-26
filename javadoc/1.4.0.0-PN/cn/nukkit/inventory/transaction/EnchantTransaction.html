@@ -1,11 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- NewPage -->
-<html lang="en">
+<html lang="pt">
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>EnchantTransaction (PowerNukkit 1.4.0.0-PN API)</title>
-<meta name="date" content="2021-05-31">
+<meta name="date" content="2021-11-26">
 <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../../script.js"></script>
 </head>
@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -116,7 +116,7 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.3.1.0-PN")
-public class <span class="typeNameLabel">EnchantTransaction</span>
+public class <a href="../../../../src-html/cn/nukkit/inventory/transaction/EnchantTransaction.html#line.17">EnchantTransaction</a>
 extends <a href="../../../../cn/nukkit/inventory/transaction/InventoryTransaction.html" title="class in cn.nukkit.inventory.transaction">InventoryTransaction</a></pre>
 </li>
 </ul>
@@ -185,6 +185,30 @@ extends <a href="../../../../cn/nukkit/inventory/transaction/InventoryTransactio
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/EnchantTransaction.html#execute--">execute</a></span>()</code>&nbsp;</td>
 </tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/EnchantTransaction.html#getCost--">getCost</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/EnchantTransaction.html#getInputItem--">getInputItem</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/EnchantTransaction.html#getOutputItem--">getOutputItem</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/EnchantTransaction.html#setCost-int-">setCost</a></span>(int&nbsp;cost)</code>&nbsp;</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/EnchantTransaction.html#setInputItem-cn.nukkit.item.Item-">setInputItem</a></span>(<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;inputItem)</code>&nbsp;</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/inventory/transaction/EnchantTransaction.html#setOutputItem-cn.nukkit.item.Item-">setOutputItem</a></span>(<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;outputItem)</code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.cn.nukkit.inventory.transaction.InventoryTransaction">
@@ -221,7 +245,7 @@ extends <a href="../../../../cn/nukkit/inventory/transaction/InventoryTransactio
 <li class="blockList">
 <h4>EnchantTransaction</h4>
 <pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.3.1.0-PN")
-public&nbsp;EnchantTransaction(<a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;source,
+public&nbsp;<a href="../../../../src-html/cn/nukkit/inventory/transaction/EnchantTransaction.html#line.23">EnchantTransaction</a>(<a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;source,
                                                      <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/inventory/transaction/action/InventoryAction.html" title="class in cn.nukkit.inventory.transaction.action">InventoryAction</a>&gt;&nbsp;actions)</pre>
 </li>
 </ul>
@@ -239,7 +263,7 @@ public&nbsp;EnchantTransaction(<a href="../../../../cn/nukkit/Player.html" title
 <ul class="blockList">
 <li class="blockList">
 <h4>canExecute</h4>
-<pre>public&nbsp;boolean&nbsp;canExecute()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../src-html/cn/nukkit/inventory/transaction/EnchantTransaction.html#line.28">canExecute</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../cn/nukkit/inventory/transaction/InventoryTransaction.html#canExecute--">canExecute</a></code>&nbsp;in class&nbsp;<code><a href="../../../../cn/nukkit/inventory/transaction/InventoryTransaction.html" title="class in cn.nukkit.inventory.transaction">InventoryTransaction</a></code></dd>
@@ -252,7 +276,7 @@ public&nbsp;EnchantTransaction(<a href="../../../../cn/nukkit/Player.html" title
 <ul class="blockList">
 <li class="blockList">
 <h4>execute</h4>
-<pre>public&nbsp;boolean&nbsp;execute()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../src-html/cn/nukkit/inventory/transaction/EnchantTransaction.html#line.43">execute</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../cn/nukkit/inventory/transaction/InventoryTransaction.html#execute--">execute</a></code>&nbsp;in class&nbsp;<code><a href="../../../../cn/nukkit/inventory/transaction/InventoryTransaction.html" title="class in cn.nukkit.inventory.transaction">InventoryTransaction</a></code></dd>
@@ -265,7 +289,7 @@ public&nbsp;EnchantTransaction(<a href="../../../../cn/nukkit/Player.html" title
 <ul class="blockList">
 <li class="blockList">
 <h4>addAction</h4>
-<pre>public&nbsp;void&nbsp;addAction(<a href="../../../../cn/nukkit/inventory/transaction/action/InventoryAction.html" title="class in cn.nukkit.inventory.transaction.action">InventoryAction</a>&nbsp;action)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/inventory/transaction/EnchantTransaction.html#line.79">addAction</a>(<a href="../../../../cn/nukkit/inventory/transaction/action/InventoryAction.html" title="class in cn.nukkit.inventory.transaction.action">InventoryAction</a>&nbsp;action)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../cn/nukkit/inventory/transaction/InventoryTransaction.html#addAction-cn.nukkit.inventory.transaction.action.InventoryAction-">addAction</a></code>&nbsp;in class&nbsp;<code><a href="../../../../cn/nukkit/inventory/transaction/InventoryTransaction.html" title="class in cn.nukkit.inventory.transaction">InventoryTransaction</a></code></dd>
@@ -275,11 +299,65 @@ public&nbsp;EnchantTransaction(<a href="../../../../cn/nukkit/Player.html" title
 <a name="checkForEnchantPart-java.util.List-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>checkForEnchantPart</h4>
 <pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.3.1.0-PN")
-public&nbsp;boolean&nbsp;checkForEnchantPart(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/inventory/transaction/action/InventoryAction.html" title="class in cn.nukkit.inventory.transaction.action">InventoryAction</a>&gt;&nbsp;actions)</pre>
+public&nbsp;boolean&nbsp;<a href="../../../../src-html/cn/nukkit/inventory/transaction/EnchantTransaction.html#line.101">checkForEnchantPart</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/inventory/transaction/action/InventoryAction.html" title="class in cn.nukkit.inventory.transaction.action">InventoryAction</a>&gt;&nbsp;actions)</pre>
+</li>
+</ul>
+<a name="getInputItem--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getInputItem</h4>
+<pre>public&nbsp;<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;<a href="../../../../src-html/cn/nukkit/inventory/transaction/EnchantTransaction.html#line.109">getInputItem</a>()</pre>
+</li>
+</ul>
+<a name="getOutputItem--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOutputItem</h4>
+<pre>public&nbsp;<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;<a href="../../../../src-html/cn/nukkit/inventory/transaction/EnchantTransaction.html#line.114">getOutputItem</a>()</pre>
+</li>
+</ul>
+<a name="getCost--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCost</h4>
+<pre>public&nbsp;int&nbsp;<a href="../../../../src-html/cn/nukkit/inventory/transaction/EnchantTransaction.html#line.119">getCost</a>()</pre>
+</li>
+</ul>
+<a name="setInputItem-cn.nukkit.item.Item-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setInputItem</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/inventory/transaction/EnchantTransaction.html#line.124">setInputItem</a>(<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;inputItem)</pre>
+</li>
+</ul>
+<a name="setOutputItem-cn.nukkit.item.Item-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setOutputItem</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/inventory/transaction/EnchantTransaction.html#line.129">setOutputItem</a>(<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;outputItem)</pre>
+</li>
+</ul>
+<a name="setCost-int-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>setCost</h4>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/inventory/transaction/EnchantTransaction.html#line.134">setCost</a>(int&nbsp;cost)</pre>
 </li>
 </ul>
 </li>

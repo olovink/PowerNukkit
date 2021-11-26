@@ -1,11 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- NewPage -->
-<html lang="en">
+<html lang="pt">
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>MovePlayerPacket (PowerNukkit 1.4.0.0-PN API)</title>
-<meta name="date" content="2021-05-31">
+<meta name="date" content="2021-11-26">
 <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../../script.js"></script>
 </head>
@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -124,7 +124,7 @@ var activeTableTab = "activeTableTab";
 </dl>
 <hr>
 <br>
-<pre>public class <span class="typeNameLabel">MovePlayerPacket</span>
+<pre>public class <a href="../../../../src-html/cn/nukkit/network/protocol/MovePlayerPacket.html#line.10">MovePlayerPacket</a>
 extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a></pre>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
@@ -278,6 +278,10 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <td class="colFirst"><code>byte</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MovePlayerPacket.html#pid--">pid</a></span>()</code>&nbsp;</td>
 </tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MovePlayerPacket.html#toString--">toString</a></span>()</code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.cn.nukkit.network.protocol.DataPacket">
@@ -298,7 +302,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
 </ul>
 </li>
 </ul>
@@ -320,7 +324,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>NETWORK_ID</h4>
-<pre>public static final&nbsp;byte NETWORK_ID</pre>
+<pre>public static final&nbsp;byte <a href="../../../../src-html/cn/nukkit/network/protocol/MovePlayerPacket.html#line.11">NETWORK_ID</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.network.protocol.MovePlayerPacket.NETWORK_ID">Constant Field Values</a></dd>
@@ -333,7 +337,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>MODE_NORMAL</h4>
-<pre>public static final&nbsp;int MODE_NORMAL</pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/network/protocol/MovePlayerPacket.html#line.12">MODE_NORMAL</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.network.protocol.MovePlayerPacket.MODE_NORMAL">Constant Field Values</a></dd>
@@ -346,7 +350,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>MODE_RESET</h4>
-<pre>public static final&nbsp;int MODE_RESET</pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/network/protocol/MovePlayerPacket.html#line.13">MODE_RESET</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.network.protocol.MovePlayerPacket.MODE_RESET">Constant Field Values</a></dd>
@@ -359,7 +363,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>MODE_TELEPORT</h4>
-<pre>public static final&nbsp;int MODE_TELEPORT</pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/network/protocol/MovePlayerPacket.html#line.14">MODE_TELEPORT</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.network.protocol.MovePlayerPacket.MODE_TELEPORT">Constant Field Values</a></dd>
@@ -372,7 +376,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>MODE_PITCH</h4>
-<pre>public static final&nbsp;int MODE_PITCH</pre>
+<pre>public static final&nbsp;int <a href="../../../../src-html/cn/nukkit/network/protocol/MovePlayerPacket.html#line.15">MODE_PITCH</a></pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#cn.nukkit.network.protocol.MovePlayerPacket.MODE_PITCH">Constant Field Values</a></dd>
@@ -385,7 +389,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>eid</h4>
-<pre>public&nbsp;long eid</pre>
+<pre>public&nbsp;long <a href="../../../../src-html/cn/nukkit/network/protocol/MovePlayerPacket.html#line.16">eid</a></pre>
 </li>
 </ul>
 <a name="x">
@@ -394,7 +398,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>x</h4>
-<pre>public&nbsp;float x</pre>
+<pre>public&nbsp;float <a href="../../../../src-html/cn/nukkit/network/protocol/MovePlayerPacket.html#line.17">x</a></pre>
 </li>
 </ul>
 <a name="y">
@@ -403,7 +407,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>y</h4>
-<pre>public&nbsp;float y</pre>
+<pre>public&nbsp;float <a href="../../../../src-html/cn/nukkit/network/protocol/MovePlayerPacket.html#line.18">y</a></pre>
 </li>
 </ul>
 <a name="z">
@@ -412,7 +416,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>z</h4>
-<pre>public&nbsp;float z</pre>
+<pre>public&nbsp;float <a href="../../../../src-html/cn/nukkit/network/protocol/MovePlayerPacket.html#line.19">z</a></pre>
 </li>
 </ul>
 <a name="yaw">
@@ -421,7 +425,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>yaw</h4>
-<pre>public&nbsp;float yaw</pre>
+<pre>public&nbsp;float <a href="../../../../src-html/cn/nukkit/network/protocol/MovePlayerPacket.html#line.20">yaw</a></pre>
 </li>
 </ul>
 <a name="headYaw">
@@ -430,7 +434,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>headYaw</h4>
-<pre>public&nbsp;float headYaw</pre>
+<pre>public&nbsp;float <a href="../../../../src-html/cn/nukkit/network/protocol/MovePlayerPacket.html#line.21">headYaw</a></pre>
 </li>
 </ul>
 <a name="pitch">
@@ -439,7 +443,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>pitch</h4>
-<pre>public&nbsp;float pitch</pre>
+<pre>public&nbsp;float <a href="../../../../src-html/cn/nukkit/network/protocol/MovePlayerPacket.html#line.22">pitch</a></pre>
 </li>
 </ul>
 <a name="mode">
@@ -448,7 +452,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>mode</h4>
-<pre>public&nbsp;int mode</pre>
+<pre>public&nbsp;int <a href="../../../../src-html/cn/nukkit/network/protocol/MovePlayerPacket.html#line.23">mode</a></pre>
 </li>
 </ul>
 <a name="onGround">
@@ -457,7 +461,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>onGround</h4>
-<pre>public&nbsp;boolean onGround</pre>
+<pre>public&nbsp;boolean <a href="../../../../src-html/cn/nukkit/network/protocol/MovePlayerPacket.html#line.24">onGround</a></pre>
 </li>
 </ul>
 <a name="ridingEid">
@@ -466,7 +470,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>ridingEid</h4>
-<pre>public&nbsp;long ridingEid</pre>
+<pre>public&nbsp;long <a href="../../../../src-html/cn/nukkit/network/protocol/MovePlayerPacket.html#line.25">ridingEid</a></pre>
 </li>
 </ul>
 <a name="int1">
@@ -475,7 +479,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>int1</h4>
-<pre>public&nbsp;int int1</pre>
+<pre>public&nbsp;int <a href="../../../../src-html/cn/nukkit/network/protocol/MovePlayerPacket.html#line.26">int1</a></pre>
 </li>
 </ul>
 <a name="int2">
@@ -484,7 +488,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <ul class="blockList">
 <li class="blockList">
 <h4>int2</h4>
-<pre>public&nbsp;int int2</pre>
+<pre>public&nbsp;int <a href="../../../../src-html/cn/nukkit/network/protocol/MovePlayerPacket.html#line.27">int2</a></pre>
 </li>
 </ul>
 <a name="frame">
@@ -494,7 +498,7 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <li class="blockList">
 <h4>frame</h4>
 <pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-public&nbsp;long frame</pre>
+public&nbsp;long <a href="../../../../src-html/cn/nukkit/network/protocol/MovePlayerPacket.html#line.29">frame</a></pre>
 </li>
 </ul>
 </li>
@@ -511,7 +515,7 @@ public&nbsp;long frame</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>MovePlayerPacket</h4>
-<pre>public&nbsp;MovePlayerPacket()</pre>
+<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/MovePlayerPacket.html#line.10">MovePlayerPacket</a>()</pre>
 </li>
 </ul>
 </li>
@@ -528,7 +532,7 @@ public&nbsp;long frame</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>decode</h4>
-<pre>public&nbsp;void&nbsp;decode()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/MovePlayerPacket.html#line.32">decode</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../cn/nukkit/network/protocol/DataPacket.html#decode--">decode</a></code>&nbsp;in class&nbsp;<code><a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a></code></dd>
@@ -541,7 +545,7 @@ public&nbsp;long frame</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>encode</h4>
-<pre>public&nbsp;void&nbsp;encode()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/MovePlayerPacket.html#line.52">encode</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../cn/nukkit/network/protocol/DataPacket.html#encode--">encode</a></code>&nbsp;in class&nbsp;<code><a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a></code></dd>
@@ -551,13 +555,26 @@ public&nbsp;long frame</pre>
 <a name="pid--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>pid</h4>
-<pre>public&nbsp;byte&nbsp;pid()</pre>
+<pre>public&nbsp;byte&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/MovePlayerPacket.html#line.70">pid</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../cn/nukkit/network/protocol/DataPacket.html#pid--">pid</a></code>&nbsp;in class&nbsp;<code><a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="toString--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>toString</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/MovePlayerPacket.html#line.76">toString</a>()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
 </dl>
 </li>
 </ul>

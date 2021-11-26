@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package cn.nukkit.block;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>import cn.nukkit.api.PowerNukkitOnly;<a name="line.3"></a>
+<span class="sourceLineNo">004</span>import cn.nukkit.api.Since;<a name="line.4"></a>
+<span class="sourceLineNo">005</span>import cn.nukkit.blockproperty.ArrayBlockProperty;<a name="line.5"></a>
+<span class="sourceLineNo">006</span>import cn.nukkit.blockproperty.BlockProperties;<a name="line.6"></a>
+<span class="sourceLineNo">007</span>import cn.nukkit.blockproperty.BlockProperty;<a name="line.7"></a>
+<span class="sourceLineNo">008</span>import cn.nukkit.blockproperty.value.WoodType;<a name="line.8"></a>
+<span class="sourceLineNo">009</span><a name="line.9"></a>
+<span class="sourceLineNo">010</span>import javax.annotation.Nonnull;<a name="line.10"></a>
+<span class="sourceLineNo">011</span><a name="line.11"></a>
+<span class="sourceLineNo">012</span>import static cn.nukkit.blockproperty.CommonBlockProperties.PILLAR_AXIS;<a name="line.12"></a>
+<span class="sourceLineNo">013</span><a name="line.13"></a>
+<span class="sourceLineNo">014</span>/**<a name="line.14"></a>
+<span class="sourceLineNo">015</span> * @author MagicDroidX (Nukkit Project)<a name="line.15"></a>
+<span class="sourceLineNo">016</span> */<a name="line.16"></a>
+<span class="sourceLineNo">017</span>public class BlockWood2 extends BlockWood {<a name="line.17"></a>
+<span class="sourceLineNo">018</span>    @PowerNukkitOnly<a name="line.18"></a>
+<span class="sourceLineNo">019</span>    @Since("1.4.0.0-PN")<a name="line.19"></a>
+<span class="sourceLineNo">020</span>    public static final BlockProperty&lt;WoodType&gt; NEW_LOG_TYPE = new ArrayBlockProperty&lt;&gt;("new_log_type", true, new WoodType[]{<a name="line.20"></a>
+<span class="sourceLineNo">021</span>            WoodType.ACACIA, WoodType.DARK_OAK<a name="line.21"></a>
+<span class="sourceLineNo">022</span>    }, 2);<a name="line.22"></a>
+<span class="sourceLineNo">023</span><a name="line.23"></a>
+<span class="sourceLineNo">024</span>    @PowerNukkitOnly<a name="line.24"></a>
+<span class="sourceLineNo">025</span>    @Since("1.4.0.0-PN")<a name="line.25"></a>
+<span class="sourceLineNo">026</span>    public static final BlockProperties PROPERTIES = new BlockProperties(NEW_LOG_TYPE, PILLAR_AXIS);<a name="line.26"></a>
+<span class="sourceLineNo">027</span><a name="line.27"></a>
+<span class="sourceLineNo">028</span>    public static final int ACACIA = 0;<a name="line.28"></a>
+<span class="sourceLineNo">029</span>    public static final int DARK_OAK = 1;<a name="line.29"></a>
+<span class="sourceLineNo">030</span><a name="line.30"></a>
+<span class="sourceLineNo">031</span>    public BlockWood2() {<a name="line.31"></a>
+<span class="sourceLineNo">032</span>        this(0);<a name="line.32"></a>
+<span class="sourceLineNo">033</span>    }<a name="line.33"></a>
+<span class="sourceLineNo">034</span><a name="line.34"></a>
+<span class="sourceLineNo">035</span>    public BlockWood2(int meta) {<a name="line.35"></a>
+<span class="sourceLineNo">036</span>        super(meta);<a name="line.36"></a>
+<span class="sourceLineNo">037</span>    }<a name="line.37"></a>
+<span class="sourceLineNo">038</span><a name="line.38"></a>
+<span class="sourceLineNo">039</span>    @Override<a name="line.39"></a>
+<span class="sourceLineNo">040</span>    public int getId() {<a name="line.40"></a>
+<span class="sourceLineNo">041</span>        return WOOD2;<a name="line.41"></a>
+<span class="sourceLineNo">042</span>    }<a name="line.42"></a>
+<span class="sourceLineNo">043</span><a name="line.43"></a>
+<span class="sourceLineNo">044</span>    @Since("1.4.0.0-PN")<a name="line.44"></a>
+<span class="sourceLineNo">045</span>    @PowerNukkitOnly<a name="line.45"></a>
+<span class="sourceLineNo">046</span>    @Nonnull<a name="line.46"></a>
+<span class="sourceLineNo">047</span>    @Override<a name="line.47"></a>
+<span class="sourceLineNo">048</span>    public BlockProperties getProperties() {<a name="line.48"></a>
+<span class="sourceLineNo">049</span>        return PROPERTIES;<a name="line.49"></a>
+<span class="sourceLineNo">050</span>    }<a name="line.50"></a>
+<span class="sourceLineNo">051</span><a name="line.51"></a>
+<span class="sourceLineNo">052</span>    @Override<a name="line.52"></a>
+<span class="sourceLineNo">053</span>    public WoodType getWoodType() {<a name="line.53"></a>
+<span class="sourceLineNo">054</span>        return getPropertyValue(NEW_LOG_TYPE);<a name="line.54"></a>
+<span class="sourceLineNo">055</span>    }<a name="line.55"></a>
+<span class="sourceLineNo">056</span><a name="line.56"></a>
+<span class="sourceLineNo">057</span>    @Override<a name="line.57"></a>
+<span class="sourceLineNo">058</span>    public void setWoodType(WoodType woodType) {<a name="line.58"></a>
+<span class="sourceLineNo">059</span>        setPropertyValue(NEW_LOG_TYPE, woodType);<a name="line.59"></a>
+<span class="sourceLineNo">060</span>    }<a name="line.60"></a>
+<span class="sourceLineNo">061</span>}<a name="line.61"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>
