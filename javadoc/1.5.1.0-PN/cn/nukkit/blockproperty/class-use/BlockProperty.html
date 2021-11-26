@@ -1,11 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- NewPage -->
-<html lang="en">
+<html lang="pt">
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Uses of Class cn.nukkit.blockproperty.BlockProperty (PowerNukkit 1.5.1.0-PN API)</title>
-<meta name="date" content="2021-07-14">
+<meta name="date" content="2021-11-26">
 <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../../script.js"></script>
 </head>
@@ -36,7 +36,7 @@
 <li><a href="../package-summary.html">Package</a></li>
 <li><a href="../../../../cn/nukkit/blockproperty/BlockProperty.html" title="class in cn.nukkit.blockproperty">Class</a></li>
 <li class="navBarCell1Rev">Use</li>
-<li><a href="../package-tree.html">Tree</a></li>
+<li><a href="../../../../overview-tree.html">Tree</a></li>
 <li><a href="../../../../deprecated-list.html">Deprecated</a></li>
 <li><a href="../../../../index-all.html">Index</a></li>
 <li><a href="../../../../help-doc.html">Help</a></li>
@@ -305,6 +305,10 @@
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperty.html" title="class in cn.nukkit.blockproperty">BlockProperty</a>&lt;?&gt;</code></td>
 <td class="colLast"><span class="typeNameLabel">BlockProperties.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html#getBlockProperty-java.lang.String-">getBlockProperty</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName)</code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperty.html" title="class in cn.nukkit.blockproperty">BlockProperty</a>&lt;?&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">BlockProperties.RegisteredBlockProperty.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/blockproperty/BlockProperties.RegisteredBlockProperty.html#getProperty--">getProperty</a></span>()</code>&nbsp;</td>
+</tr>
 </tbody>
 </table>
 <table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
@@ -379,6 +383,10 @@
 </tr>
 <tr class="rowColor">
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/blockproperty/BlockProperties.html#BlockProperties-cn.nukkit.blockproperty.BlockProperty...-">BlockProperties</a></span>(<a href="../../../../cn/nukkit/blockproperty/BlockProperty.html" title="class in cn.nukkit.blockproperty">BlockProperty</a>&lt;?&gt;...&nbsp;properties)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/blockproperty/BlockProperties.RegisteredBlockProperty.html#RegisteredBlockProperty-cn.nukkit.blockproperty.BlockProperty-int-">RegisteredBlockProperty</a></span>(<a href="../../../../cn/nukkit/blockproperty/BlockProperty.html" title="class in cn.nukkit.blockproperty">BlockProperty</a>&lt;?&gt;&nbsp;property,
+                       int&nbsp;offset)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -523,6 +531,13 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/BlockProperty.html" title="class in cn.nukkit.blockproperty">BlockProperty</a>&lt;?&gt;</code></td>
+<td class="colLast"><span class="typeNameLabel">BlockStateRepair.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/blockstate/BlockStateRepair.html#getProperty--">getProperty</a></span>()</code>
+<div class="block">The property that reported the invalid state, <code>null</code> if all the properties
+ was validated but the state have more bits to validate.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>default <a href="../../../../cn/nukkit/blockproperty/BlockProperty.html" title="class in cn.nukkit.blockproperty">BlockProperty</a></code></td>
 <td class="colLast"><span class="typeNameLabel">IBlockState.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/blockstate/IBlockState.html#getProperty-java.lang.String-">getProperty</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;propertyName)</code>&nbsp;</td>
 </tr>
@@ -594,6 +609,28 @@
 </tr>
 </tbody>
 </table>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing constructors, and an explanation">
+<caption><span>Constructors in <a href="../../../../cn/nukkit/blockstate/package-summary.html">cn.nukkit.blockstate</a> with parameters of type <a href="../../../../cn/nukkit/blockproperty/BlockProperty.html" title="class in cn.nukkit.blockproperty">BlockProperty</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/blockstate/BlockStateRepair.html#BlockStateRepair-int-cn.nukkit.blockproperty.BlockProperties-java.lang.Number-java.lang.Number-java.lang.Number-int-cn.nukkit.blockproperty.BlockProperty-int-int-java.io.Serializable-java.io.Serializable-cn.nukkit.blockproperty.exception.InvalidBlockPropertyException-">BlockStateRepair</a></span>(int&nbsp;blockId,
+                <a href="../../../../cn/nukkit/blockproperty/BlockProperties.html" title="class in cn.nukkit.blockproperty">BlockProperties</a>&nbsp;properties,
+                <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html?is-external=true" title="class or interface in java.lang">Number</a>&nbsp;originalState,
+                <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html?is-external=true" title="class or interface in java.lang">Number</a>&nbsp;currentState,
+                <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html?is-external=true" title="class or interface in java.lang">Number</a>&nbsp;nextState,
+                int&nbsp;repairs,
+                <a href="../../../../cn/nukkit/blockproperty/BlockProperty.html" title="class in cn.nukkit.blockproperty">BlockProperty</a>&lt;?&gt;&nbsp;property,
+                int&nbsp;propertyOffset,
+                int&nbsp;brokenPropertyMeta,
+                <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>&nbsp;fixedPropertyValue,
+                <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>&nbsp;proposedPropertyValue,
+                <a href="../../../../cn/nukkit/blockproperty/exception/InvalidBlockPropertyException.html" title="class in cn.nukkit.blockproperty.exception">InvalidBlockPropertyException</a>&nbsp;validationException)</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 </li>
 </ul>
 </li>
@@ -612,7 +649,7 @@
 <li><a href="../package-summary.html">Package</a></li>
 <li><a href="../../../../cn/nukkit/blockproperty/BlockProperty.html" title="class in cn.nukkit.blockproperty">Class</a></li>
 <li class="navBarCell1Rev">Use</li>
-<li><a href="../package-tree.html">Tree</a></li>
+<li><a href="../../../../overview-tree.html">Tree</a></li>
 <li><a href="../../../../deprecated-list.html">Deprecated</a></li>
 <li><a href="../../../../index-all.html">Index</a></li>
 <li><a href="../../../../help-doc.html">Help</a></li>

@@ -1,0 +1,382 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package cn.nukkit.block;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>public interface BlockID {<a name="line.3"></a>
+<span class="sourceLineNo">004</span>    int AIR = 0;<a name="line.4"></a>
+<span class="sourceLineNo">005</span>    int STONE = 1;<a name="line.5"></a>
+<span class="sourceLineNo">006</span>    int GRASS = 2;<a name="line.6"></a>
+<span class="sourceLineNo">007</span>    int DIRT = 3;<a name="line.7"></a>
+<span class="sourceLineNo">008</span>    int COBBLESTONE = 4;<a name="line.8"></a>
+<span class="sourceLineNo">009</span>    int COBBLE = 4;<a name="line.9"></a>
+<span class="sourceLineNo">010</span>    int PLANK = 5;<a name="line.10"></a>
+<span class="sourceLineNo">011</span>    int PLANKS = 5;<a name="line.11"></a>
+<span class="sourceLineNo">012</span>    int WOODEN_PLANK = 5;<a name="line.12"></a>
+<span class="sourceLineNo">013</span>    int WOODEN_PLANKS = 5;<a name="line.13"></a>
+<span class="sourceLineNo">014</span>    int SAPLING = 6;<a name="line.14"></a>
+<span class="sourceLineNo">015</span>    int SAPLINGS = 6;<a name="line.15"></a>
+<span class="sourceLineNo">016</span>    int BEDROCK = 7;<a name="line.16"></a>
+<span class="sourceLineNo">017</span>    int WATER = 8;<a name="line.17"></a>
+<span class="sourceLineNo">018</span>    int STILL_WATER = 9;<a name="line.18"></a>
+<span class="sourceLineNo">019</span>    int LAVA = 10;<a name="line.19"></a>
+<span class="sourceLineNo">020</span>    int STILL_LAVA = 11;<a name="line.20"></a>
+<span class="sourceLineNo">021</span>    int SAND = 12;<a name="line.21"></a>
+<span class="sourceLineNo">022</span>    int GRAVEL = 13;<a name="line.22"></a>
+<span class="sourceLineNo">023</span>    int GOLD_ORE = 14;<a name="line.23"></a>
+<span class="sourceLineNo">024</span>    int IRON_ORE = 15;<a name="line.24"></a>
+<span class="sourceLineNo">025</span>    int COAL_ORE = 16;<a name="line.25"></a>
+<span class="sourceLineNo">026</span>    int LOG = 17;<a name="line.26"></a>
+<span class="sourceLineNo">027</span>    int WOOD = 17;<a name="line.27"></a>
+<span class="sourceLineNo">028</span>    int TRUNK = 17;<a name="line.28"></a>
+<span class="sourceLineNo">029</span>    int LEAVES = 18;<a name="line.29"></a>
+<span class="sourceLineNo">030</span>    int LEAVE = 18;<a name="line.30"></a>
+<span class="sourceLineNo">031</span>    int SPONGE = 19;<a name="line.31"></a>
+<span class="sourceLineNo">032</span>    int GLASS = 20;<a name="line.32"></a>
+<span class="sourceLineNo">033</span>    int LAPIS_ORE = 21;<a name="line.33"></a>
+<span class="sourceLineNo">034</span>    int LAPIS_BLOCK = 22;<a name="line.34"></a>
+<span class="sourceLineNo">035</span>    int DISPENSER = 23;<a name="line.35"></a>
+<span class="sourceLineNo">036</span>    int SANDSTONE = 24;<a name="line.36"></a>
+<span class="sourceLineNo">037</span>    int NOTEBLOCK = 25;<a name="line.37"></a>
+<span class="sourceLineNo">038</span>    int BED_BLOCK = 26;<a name="line.38"></a>
+<span class="sourceLineNo">039</span>    int POWERED_RAIL = 27;<a name="line.39"></a>
+<span class="sourceLineNo">040</span>    int DETECTOR_RAIL = 28;<a name="line.40"></a>
+<span class="sourceLineNo">041</span>    int STICKY_PISTON = 29;<a name="line.41"></a>
+<span class="sourceLineNo">042</span>    int COBWEB = 30;<a name="line.42"></a>
+<span class="sourceLineNo">043</span>    int TALL_GRASS = 31;<a name="line.43"></a>
+<span class="sourceLineNo">044</span>    int BUSH = 32;<a name="line.44"></a>
+<span class="sourceLineNo">045</span>    int DEAD_BUSH = 32;<a name="line.45"></a>
+<span class="sourceLineNo">046</span>    int PISTON = 33;<a name="line.46"></a>
+<span class="sourceLineNo">047</span>    int PISTON_HEAD = 34;<a name="line.47"></a>
+<span class="sourceLineNo">048</span>    int WOOL = 35;<a name="line.48"></a>
+<span class="sourceLineNo">049</span>    int DANDELION = 37;<a name="line.49"></a>
+<span class="sourceLineNo">050</span>    int POPPY = 38;<a name="line.50"></a>
+<span class="sourceLineNo">051</span>    int ROSE = 38;<a name="line.51"></a>
+<span class="sourceLineNo">052</span>    int FLOWER = 38;<a name="line.52"></a>
+<span class="sourceLineNo">053</span>    int RED_FLOWER = 38;<a name="line.53"></a>
+<span class="sourceLineNo">054</span>    int BROWN_MUSHROOM = 39;<a name="line.54"></a>
+<span class="sourceLineNo">055</span>    int RED_MUSHROOM = 40;<a name="line.55"></a>
+<span class="sourceLineNo">056</span>    int GOLD_BLOCK = 41;<a name="line.56"></a>
+<span class="sourceLineNo">057</span>    int IRON_BLOCK = 42;<a name="line.57"></a>
+<span class="sourceLineNo">058</span>    int DOUBLE_SLAB = 43;<a name="line.58"></a>
+<span class="sourceLineNo">059</span>    int DOUBLE_STONE_SLAB = 43;<a name="line.59"></a>
+<span class="sourceLineNo">060</span>    int DOUBLE_SLABS = 43;<a name="line.60"></a>
+<span class="sourceLineNo">061</span>    int SLAB = 44;<a name="line.61"></a>
+<span class="sourceLineNo">062</span>    int STONE_SLAB = 44;<a name="line.62"></a>
+<span class="sourceLineNo">063</span>    int SLABS = 44;<a name="line.63"></a>
+<span class="sourceLineNo">064</span>    int BRICKS = 45;<a name="line.64"></a>
+<span class="sourceLineNo">065</span>    int BRICKS_BLOCK = 45;<a name="line.65"></a>
+<span class="sourceLineNo">066</span>    int TNT = 46;<a name="line.66"></a>
+<span class="sourceLineNo">067</span>    int BOOKSHELF = 47;<a name="line.67"></a>
+<span class="sourceLineNo">068</span>    int MOSS_STONE = 48;<a name="line.68"></a>
+<span class="sourceLineNo">069</span>    int MOSSY_STONE = 48;<a name="line.69"></a>
+<span class="sourceLineNo">070</span>    int OBSIDIAN = 49;<a name="line.70"></a>
+<span class="sourceLineNo">071</span>    int TORCH = 50;<a name="line.71"></a>
+<span class="sourceLineNo">072</span>    int FIRE = 51;<a name="line.72"></a>
+<span class="sourceLineNo">073</span>    int MONSTER_SPAWNER = 52;<a name="line.73"></a>
+<span class="sourceLineNo">074</span>    int WOOD_STAIRS = 53;<a name="line.74"></a>
+<span class="sourceLineNo">075</span>    int WOODEN_STAIRS = 53;<a name="line.75"></a>
+<span class="sourceLineNo">076</span>    int OAK_WOOD_STAIRS = 53;<a name="line.76"></a>
+<span class="sourceLineNo">077</span>    int OAK_WOODEN_STAIRS = 53;<a name="line.77"></a>
+<span class="sourceLineNo">078</span>    int CHEST = 54;<a name="line.78"></a>
+<span class="sourceLineNo">079</span>    int REDSTONE_WIRE = 55;<a name="line.79"></a>
+<span class="sourceLineNo">080</span>    int DIAMOND_ORE = 56;<a name="line.80"></a>
+<span class="sourceLineNo">081</span>    int DIAMOND_BLOCK = 57;<a name="line.81"></a>
+<span class="sourceLineNo">082</span>    int CRAFTING_TABLE = 58;<a name="line.82"></a>
+<span class="sourceLineNo">083</span>    int WORKBENCH = 58;<a name="line.83"></a>
+<span class="sourceLineNo">084</span>    int WHEAT_BLOCK = 59;<a name="line.84"></a>
+<span class="sourceLineNo">085</span>    int FARMLAND = 60;<a name="line.85"></a>
+<span class="sourceLineNo">086</span>    int FURNACE = 61;<a name="line.86"></a>
+<span class="sourceLineNo">087</span>    int BURNING_FURNACE = 62;<a name="line.87"></a>
+<span class="sourceLineNo">088</span>    int LIT_FURNACE = 62;<a name="line.88"></a>
+<span class="sourceLineNo">089</span>    int SIGN_POST = 63;<a name="line.89"></a>
+<span class="sourceLineNo">090</span>    int DOOR_BLOCK = 64;<a name="line.90"></a>
+<span class="sourceLineNo">091</span>    int WOODEN_DOOR_BLOCK = 64;<a name="line.91"></a>
+<span class="sourceLineNo">092</span>    int WOOD_DOOR_BLOCK = 64;<a name="line.92"></a>
+<span class="sourceLineNo">093</span>    int LADDER = 65;<a name="line.93"></a>
+<span class="sourceLineNo">094</span>    int RAIL = 66;<a name="line.94"></a>
+<span class="sourceLineNo">095</span>    int COBBLE_STAIRS = 67;<a name="line.95"></a>
+<span class="sourceLineNo">096</span>    int COBBLESTONE_STAIRS = 67;<a name="line.96"></a>
+<span class="sourceLineNo">097</span>    int WALL_SIGN = 68;<a name="line.97"></a>
+<span class="sourceLineNo">098</span>    int LEVER = 69;<a name="line.98"></a>
+<span class="sourceLineNo">099</span>    int STONE_PRESSURE_PLATE = 70;<a name="line.99"></a>
+<span class="sourceLineNo">100</span>    int IRON_DOOR_BLOCK = 71;<a name="line.100"></a>
+<span class="sourceLineNo">101</span>    int WOODEN_PRESSURE_PLATE = 72;<a name="line.101"></a>
+<span class="sourceLineNo">102</span><a name="line.102"></a>
+<span class="sourceLineNo">103</span>    int REDSTONE_ORE = 73;<a name="line.103"></a>
+<span class="sourceLineNo">104</span>    int GLOWING_REDSTONE_ORE = 74;<a name="line.104"></a>
+<span class="sourceLineNo">105</span>    int LIT_REDSTONE_ORE = 74;<a name="line.105"></a>
+<span class="sourceLineNo">106</span>    int UNLIT_REDSTONE_TORCH = 75;<a name="line.106"></a>
+<span class="sourceLineNo">107</span>    int REDSTONE_TORCH = 76;<a name="line.107"></a>
+<span class="sourceLineNo">108</span>    int STONE_BUTTON = 77;<a name="line.108"></a>
+<span class="sourceLineNo">109</span>    int SNOW = 78;<a name="line.109"></a>
+<span class="sourceLineNo">110</span>    int SNOW_LAYER = 78;<a name="line.110"></a>
+<span class="sourceLineNo">111</span>    int ICE = 79;<a name="line.111"></a>
+<span class="sourceLineNo">112</span>    int SNOW_BLOCK = 80;<a name="line.112"></a>
+<span class="sourceLineNo">113</span>    int CACTUS = 81;<a name="line.113"></a>
+<span class="sourceLineNo">114</span>    int CLAY_BLOCK = 82;<a name="line.114"></a>
+<span class="sourceLineNo">115</span>    int REEDS = 83;<a name="line.115"></a>
+<span class="sourceLineNo">116</span>    int SUGARCANE_BLOCK = 83;<a name="line.116"></a>
+<span class="sourceLineNo">117</span>    int JUKEBOX = 84;<a name="line.117"></a>
+<span class="sourceLineNo">118</span>    int FENCE = 85;<a name="line.118"></a>
+<span class="sourceLineNo">119</span>    int PUMPKIN = 86;<a name="line.119"></a>
+<span class="sourceLineNo">120</span>    int NETHERRACK = 87;<a name="line.120"></a>
+<span class="sourceLineNo">121</span>    int SOUL_SAND = 88;<a name="line.121"></a>
+<span class="sourceLineNo">122</span>    int GLOWSTONE = 89;<a name="line.122"></a>
+<span class="sourceLineNo">123</span>    int GLOWSTONE_BLOCK = 89;<a name="line.123"></a>
+<span class="sourceLineNo">124</span>    int NETHER_PORTAL = 90;<a name="line.124"></a>
+<span class="sourceLineNo">125</span>    int LIT_PUMPKIN = 91;<a name="line.125"></a>
+<span class="sourceLineNo">126</span>    int JACK_O_LANTERN = 91;<a name="line.126"></a>
+<span class="sourceLineNo">127</span>    int CAKE_BLOCK = 92;<a name="line.127"></a>
+<span class="sourceLineNo">128</span>    int UNPOWERED_REPEATER = 93;<a name="line.128"></a>
+<span class="sourceLineNo">129</span>    int POWERED_REPEATER = 94;<a name="line.129"></a>
+<span class="sourceLineNo">130</span>    int INVISIBLE_BEDROCK = 95;<a name="line.130"></a>
+<span class="sourceLineNo">131</span>    int TRAPDOOR = 96;<a name="line.131"></a>
+<span class="sourceLineNo">132</span>    int MONSTER_EGG = 97;<a name="line.132"></a>
+<span class="sourceLineNo">133</span>    int STONE_BRICKS = 98;<a name="line.133"></a>
+<span class="sourceLineNo">134</span>    int STONE_BRICK = 98;<a name="line.134"></a>
+<span class="sourceLineNo">135</span>    int BROWN_MUSHROOM_BLOCK = 99;<a name="line.135"></a>
+<span class="sourceLineNo">136</span>    int RED_MUSHROOM_BLOCK = 100;<a name="line.136"></a>
+<span class="sourceLineNo">137</span>    int IRON_BAR = 101;<a name="line.137"></a>
+<span class="sourceLineNo">138</span>    int IRON_BARS = 101;<a name="line.138"></a>
+<span class="sourceLineNo">139</span>    int GLASS_PANE = 102;<a name="line.139"></a>
+<span class="sourceLineNo">140</span>    int GLASS_PANEL = 102;<a name="line.140"></a>
+<span class="sourceLineNo">141</span>    int MELON_BLOCK = 103;<a name="line.141"></a>
+<span class="sourceLineNo">142</span>    int PUMPKIN_STEM = 104;<a name="line.142"></a>
+<span class="sourceLineNo">143</span>    int MELON_STEM = 105;<a name="line.143"></a>
+<span class="sourceLineNo">144</span>    int VINE = 106;<a name="line.144"></a>
+<span class="sourceLineNo">145</span>    int VINES = 106;<a name="line.145"></a>
+<span class="sourceLineNo">146</span>    int FENCE_GATE = 107;<a name="line.146"></a>
+<span class="sourceLineNo">147</span>    int FENCE_GATE_OAK = 107;<a name="line.147"></a>
+<span class="sourceLineNo">148</span>    int BRICK_STAIRS = 108;<a name="line.148"></a>
+<span class="sourceLineNo">149</span>    int STONE_BRICK_STAIRS = 109;<a name="line.149"></a>
+<span class="sourceLineNo">150</span>    int MYCELIUM = 110;<a name="line.150"></a>
+<span class="sourceLineNo">151</span>    int WATER_LILY = 111;<a name="line.151"></a>
+<span class="sourceLineNo">152</span>    int LILY_PAD = 111;<a name="line.152"></a>
+<span class="sourceLineNo">153</span>    int NETHER_BRICKS = 112;<a name="line.153"></a>
+<span class="sourceLineNo">154</span>    int NETHER_BRICK_BLOCK = 112;<a name="line.154"></a>
+<span class="sourceLineNo">155</span>    int NETHER_BRICK_FENCE = 113;<a name="line.155"></a>
+<span class="sourceLineNo">156</span>    int NETHER_BRICKS_STAIRS = 114;<a name="line.156"></a>
+<span class="sourceLineNo">157</span>    int NETHER_WART_BLOCK = 115;<a name="line.157"></a>
+<span class="sourceLineNo">158</span>    int ENCHANTING_TABLE = 116;<a name="line.158"></a>
+<span class="sourceLineNo">159</span>    int ENCHANT_TABLE = 116;<a name="line.159"></a>
+<span class="sourceLineNo">160</span>    int ENCHANTMENT_TABLE = 116;<a name="line.160"></a>
+<span class="sourceLineNo">161</span>    int BREWING_STAND_BLOCK = 117;<a name="line.161"></a>
+<span class="sourceLineNo">162</span>    int BREWING_BLOCK = 117;<a name="line.162"></a>
+<span class="sourceLineNo">163</span>    int CAULDRON_BLOCK = 118;<a name="line.163"></a>
+<span class="sourceLineNo">164</span>    int END_PORTAL = 119;<a name="line.164"></a>
+<span class="sourceLineNo">165</span>    int END_PORTAL_FRAME = 120;<a name="line.165"></a>
+<span class="sourceLineNo">166</span>    int END_STONE = 121;<a name="line.166"></a>
+<span class="sourceLineNo">167</span>    int DRAGON_EGG = 122;<a name="line.167"></a>
+<span class="sourceLineNo">168</span>    int REDSTONE_LAMP = 123;<a name="line.168"></a>
+<span class="sourceLineNo">169</span>    int LIT_REDSTONE_LAMP = 124;<a name="line.169"></a>
+<span class="sourceLineNo">170</span>    //Note: dropper CAN NOT BE HARVESTED WITH HAND -- canHarvestWithHand method should be overridden FALSE.<a name="line.170"></a>
+<span class="sourceLineNo">171</span>    int DROPPER = 125;<a name="line.171"></a>
+<span class="sourceLineNo">172</span>    int ACTIVATOR_RAIL = 126;<a name="line.172"></a>
+<span class="sourceLineNo">173</span>    int COCOA = 127;<a name="line.173"></a>
+<span class="sourceLineNo">174</span>    int COCOA_BLOCK = 127;<a name="line.174"></a>
+<span class="sourceLineNo">175</span>    int SANDSTONE_STAIRS = 128;<a name="line.175"></a>
+<span class="sourceLineNo">176</span>    int EMERALD_ORE = 129;<a name="line.176"></a>
+<span class="sourceLineNo">177</span>    int ENDER_CHEST = 130;<a name="line.177"></a>
+<span class="sourceLineNo">178</span>    int TRIPWIRE_HOOK = 131;<a name="line.178"></a>
+<span class="sourceLineNo">179</span>    int TRIPWIRE = 132;<a name="line.179"></a>
+<span class="sourceLineNo">180</span>    int EMERALD_BLOCK = 133;<a name="line.180"></a>
+<span class="sourceLineNo">181</span>    int SPRUCE_WOOD_STAIRS = 134;<a name="line.181"></a>
+<span class="sourceLineNo">182</span>    int SPRUCE_WOODEN_STAIRS = 134;<a name="line.182"></a>
+<span class="sourceLineNo">183</span>    int BIRCH_WOOD_STAIRS = 135;<a name="line.183"></a>
+<span class="sourceLineNo">184</span>    int BIRCH_WOODEN_STAIRS = 135;<a name="line.184"></a>
+<span class="sourceLineNo">185</span>    int JUNGLE_WOOD_STAIRS = 136;<a name="line.185"></a>
+<span class="sourceLineNo">186</span>    int JUNGLE_WOODEN_STAIRS = 136;<a name="line.186"></a>
+<span class="sourceLineNo">187</span><a name="line.187"></a>
+<span class="sourceLineNo">188</span>    int BEACON = 138;<a name="line.188"></a>
+<span class="sourceLineNo">189</span>    int COBBLE_WALL = 139;<a name="line.189"></a>
+<span class="sourceLineNo">190</span>    int STONE_WALL = 139;<a name="line.190"></a>
+<span class="sourceLineNo">191</span>    int COBBLESTONE_WALL = 139;<a name="line.191"></a>
+<span class="sourceLineNo">192</span>    int FLOWER_POT_BLOCK = 140;<a name="line.192"></a>
+<span class="sourceLineNo">193</span>    int CARROT_BLOCK = 141;<a name="line.193"></a>
+<span class="sourceLineNo">194</span>    int POTATO_BLOCK = 142;<a name="line.194"></a>
+<span class="sourceLineNo">195</span>    int WOODEN_BUTTON = 143;<a name="line.195"></a>
+<span class="sourceLineNo">196</span>    int SKULL_BLOCK = 144;<a name="line.196"></a>
+<span class="sourceLineNo">197</span>    int ANVIL = 145;<a name="line.197"></a>
+<span class="sourceLineNo">198</span>    int TRAPPED_CHEST = 146;<a name="line.198"></a>
+<span class="sourceLineNo">199</span>    int LIGHT_WEIGHTED_PRESSURE_PLATE = 147;<a name="line.199"></a>
+<span class="sourceLineNo">200</span>    int HEAVY_WEIGHTED_PRESSURE_PLATE = 148;<a name="line.200"></a>
+<span class="sourceLineNo">201</span>    int UNPOWERED_COMPARATOR = 149;<a name="line.201"></a>
+<span class="sourceLineNo">202</span>    int POWERED_COMPARATOR = 150;<a name="line.202"></a>
+<span class="sourceLineNo">203</span>    int DAYLIGHT_DETECTOR = 151;<a name="line.203"></a>
+<span class="sourceLineNo">204</span>    int REDSTONE_BLOCK = 152;<a name="line.204"></a>
+<span class="sourceLineNo">205</span>    int QUARTZ_ORE = 153;<a name="line.205"></a>
+<span class="sourceLineNo">206</span>    int HOPPER_BLOCK = 154;<a name="line.206"></a>
+<span class="sourceLineNo">207</span>    int QUARTZ_BLOCK = 155;<a name="line.207"></a>
+<span class="sourceLineNo">208</span>    int QUARTZ_STAIRS = 156;<a name="line.208"></a>
+<span class="sourceLineNo">209</span>    int DOUBLE_WOOD_SLAB = 157;<a name="line.209"></a>
+<span class="sourceLineNo">210</span>    int DOUBLE_WOODEN_SLAB = 157;<a name="line.210"></a>
+<span class="sourceLineNo">211</span>    int DOUBLE_WOOD_SLABS = 157;<a name="line.211"></a>
+<span class="sourceLineNo">212</span>    int DOUBLE_WOODEN_SLABS = 157;<a name="line.212"></a>
+<span class="sourceLineNo">213</span>    int WOOD_SLAB = 158;<a name="line.213"></a>
+<span class="sourceLineNo">214</span>    int WOODEN_SLAB = 158;<a name="line.214"></a>
+<span class="sourceLineNo">215</span>    int WOOD_SLABS = 158;<a name="line.215"></a>
+<span class="sourceLineNo">216</span>    int WOODEN_SLABS = 158;<a name="line.216"></a>
+<span class="sourceLineNo">217</span>    int STAINED_TERRACOTTA = 159;<a name="line.217"></a>
+<span class="sourceLineNo">218</span>    int STAINED_HARDENED_CLAY = 159;<a name="line.218"></a>
+<span class="sourceLineNo">219</span>    int STAINED_GLASS_PANE = 160;<a name="line.219"></a>
+<span class="sourceLineNo">220</span>    int LEAVES2 = 161;<a name="line.220"></a>
+<span class="sourceLineNo">221</span>    int LEAVE2 = 161;<a name="line.221"></a>
+<span class="sourceLineNo">222</span>    int WOOD2 = 162;<a name="line.222"></a>
+<span class="sourceLineNo">223</span>    int TRUNK2 = 162;<a name="line.223"></a>
+<span class="sourceLineNo">224</span>    int LOG2 = 162;<a name="line.224"></a>
+<span class="sourceLineNo">225</span>    int ACACIA_WOOD_STAIRS = 163;<a name="line.225"></a>
+<span class="sourceLineNo">226</span>    int ACACIA_WOODEN_STAIRS = 163;<a name="line.226"></a>
+<span class="sourceLineNo">227</span>    int DARK_OAK_WOOD_STAIRS = 164;<a name="line.227"></a>
+<span class="sourceLineNo">228</span>    int DARK_OAK_WOODEN_STAIRS = 164;<a name="line.228"></a>
+<span class="sourceLineNo">229</span>    int SLIME_BLOCK = 165;<a name="line.229"></a>
+<span class="sourceLineNo">230</span><a name="line.230"></a>
+<span class="sourceLineNo">231</span>    int IRON_TRAPDOOR = 167;<a name="line.231"></a>
+<span class="sourceLineNo">232</span>    int PRISMARINE = 168;<a name="line.232"></a>
+<span class="sourceLineNo">233</span>    int SEA_LANTERN = 169;<a name="line.233"></a>
+<span class="sourceLineNo">234</span>    int HAY_BALE = 170;<a name="line.234"></a>
+<span class="sourceLineNo">235</span>    int CARPET = 171;<a name="line.235"></a>
+<span class="sourceLineNo">236</span>    int TERRACOTTA = 172;<a name="line.236"></a>
+<span class="sourceLineNo">237</span>    int COAL_BLOCK = 173;<a name="line.237"></a>
+<span class="sourceLineNo">238</span>    int PACKED_ICE = 174;<a name="line.238"></a>
+<span class="sourceLineNo">239</span>    int DOUBLE_PLANT = 175;<a name="line.239"></a>
+<span class="sourceLineNo">240</span>    int STANDING_BANNER = 176;<a name="line.240"></a>
+<span class="sourceLineNo">241</span>    int WALL_BANNER = 177;<a name="line.241"></a>
+<span class="sourceLineNo">242</span>    int DAYLIGHT_DETECTOR_INVERTED = 178;<a name="line.242"></a>
+<span class="sourceLineNo">243</span>    int RED_SANDSTONE = 179;<a name="line.243"></a>
+<span class="sourceLineNo">244</span>    int RED_SANDSTONE_STAIRS = 180;<a name="line.244"></a>
+<span class="sourceLineNo">245</span>    int DOUBLE_RED_SANDSTONE_SLAB = 181;<a name="line.245"></a>
+<span class="sourceLineNo">246</span>    int RED_SANDSTONE_SLAB = 182;<a name="line.246"></a>
+<span class="sourceLineNo">247</span>    int FENCE_GATE_SPRUCE = 183;<a name="line.247"></a>
+<span class="sourceLineNo">248</span>    int FENCE_GATE_BIRCH = 184;<a name="line.248"></a>
+<span class="sourceLineNo">249</span>    int FENCE_GATE_JUNGLE = 185;<a name="line.249"></a>
+<span class="sourceLineNo">250</span>    int FENCE_GATE_DARK_OAK = 186;<a name="line.250"></a>
+<span class="sourceLineNo">251</span>    int FENCE_GATE_ACACIA = 187;<a name="line.251"></a>
+<span class="sourceLineNo">252</span><a name="line.252"></a>
+<span class="sourceLineNo">253</span>    int SPRUCE_DOOR_BLOCK = 193;<a name="line.253"></a>
+<span class="sourceLineNo">254</span>    int BIRCH_DOOR_BLOCK = 194;<a name="line.254"></a>
+<span class="sourceLineNo">255</span>    int JUNGLE_DOOR_BLOCK = 195;<a name="line.255"></a>
+<span class="sourceLineNo">256</span>    int ACACIA_DOOR_BLOCK = 196;<a name="line.256"></a>
+<span class="sourceLineNo">257</span>    int DARK_OAK_DOOR_BLOCK = 197;<a name="line.257"></a>
+<span class="sourceLineNo">258</span>    int GRASS_PATH = 198;<a name="line.258"></a>
+<span class="sourceLineNo">259</span>    int ITEM_FRAME_BLOCK = 199;<a name="line.259"></a>
+<span class="sourceLineNo">260</span>    int CHORUS_FLOWER = 200;<a name="line.260"></a>
+<span class="sourceLineNo">261</span>    int PURPUR_BLOCK = 201;<a name="line.261"></a>
+<span class="sourceLineNo">262</span><a name="line.262"></a>
+<span class="sourceLineNo">263</span>    int PURPUR_STAIRS = 203;<a name="line.263"></a>
+<span class="sourceLineNo">264</span>    //int DOUBLE_PURPUR_SLAB = 204;<a name="line.264"></a>
+<span class="sourceLineNo">265</span>    int UNDYED_SHULKER_BOX = 205;<a name="line.265"></a>
+<span class="sourceLineNo">266</span>    int END_BRICKS = 206;<a name="line.266"></a>
+<span class="sourceLineNo">267</span>    //Note: frosted ice CAN NOT BE HARVESTED WITH HAND -- canHarvestWithHand method should be overridden FALSE.<a name="line.267"></a>
+<span class="sourceLineNo">268</span>    int ICE_FROSTED = 207;<a name="line.268"></a>
+<span class="sourceLineNo">269</span>    int END_ROD = 208;<a name="line.269"></a>
+<span class="sourceLineNo">270</span>    int END_GATEWAY = 209;<a name="line.270"></a>
+<span class="sourceLineNo">271</span><a name="line.271"></a>
+<span class="sourceLineNo">272</span>    int MAGMA = 213;<a name="line.272"></a>
+<span class="sourceLineNo">273</span>    int BLOCK_NETHER_WART_BLOCK = 214;<a name="line.273"></a>
+<span class="sourceLineNo">274</span>    int RED_NETHER_BRICK = 215;<a name="line.274"></a>
+<span class="sourceLineNo">275</span>    int BONE_BLOCK = 216;<a name="line.275"></a>
+<span class="sourceLineNo">276</span><a name="line.276"></a>
+<span class="sourceLineNo">277</span>    int SHULKER_BOX = 218;<a name="line.277"></a>
+<span class="sourceLineNo">278</span>    int PURPLE_GLAZED_TERRACOTTA = 219;<a name="line.278"></a>
+<span class="sourceLineNo">279</span>    int WHITE_GLAZED_TERRACOTTA = 220;<a name="line.279"></a>
+<span class="sourceLineNo">280</span>    int ORANGE_GLAZED_TERRACOTTA = 221;<a name="line.280"></a>
+<span class="sourceLineNo">281</span>    int MAGENTA_GLAZED_TERRACOTTA = 222;<a name="line.281"></a>
+<span class="sourceLineNo">282</span>    int LIGHT_BLUE_GLAZED_TERRACOTTA = 223;<a name="line.282"></a>
+<span class="sourceLineNo">283</span>    int YELLOW_GLAZED_TERRACOTTA = 224;<a name="line.283"></a>
+<span class="sourceLineNo">284</span>    int LIME_GLAZED_TERRACOTTA = 225;<a name="line.284"></a>
+<span class="sourceLineNo">285</span>    int PINK_GLAZED_TERRACOTTA = 226;<a name="line.285"></a>
+<span class="sourceLineNo">286</span>    int GRAY_GLAZED_TERRACOTTA = 227;<a name="line.286"></a>
+<span class="sourceLineNo">287</span>    int SILVER_GLAZED_TERRACOTTA = 228;<a name="line.287"></a>
+<span class="sourceLineNo">288</span>    int CYAN_GLAZED_TERRACOTTA = 229;<a name="line.288"></a>
+<span class="sourceLineNo">289</span>    int BLUE_GLAZED_TERRACOTTA = 231;<a name="line.289"></a>
+<span class="sourceLineNo">290</span>    int BROWN_GLAZED_TERRACOTTA = 232;<a name="line.290"></a>
+<span class="sourceLineNo">291</span>    int GREEN_GLAZED_TERRACOTTA = 233;<a name="line.291"></a>
+<span class="sourceLineNo">292</span>    int RED_GLAZED_TERRACOTTA = 234;<a name="line.292"></a>
+<span class="sourceLineNo">293</span>    int BLACK_GLAZED_TERRACOTTA = 235;<a name="line.293"></a>
+<span class="sourceLineNo">294</span>    int CONCRETE = 236;<a name="line.294"></a>
+<span class="sourceLineNo">295</span>    int CONCRETE_POWDER = 237;<a name="line.295"></a>
+<span class="sourceLineNo">296</span><a name="line.296"></a>
+<span class="sourceLineNo">297</span>    int CHORUS_PLANT = 240;<a name="line.297"></a>
+<span class="sourceLineNo">298</span>    int STAINED_GLASS = 241;<a name="line.298"></a>
+<span class="sourceLineNo">299</span>    int PODZOL = 243;<a name="line.299"></a>
+<span class="sourceLineNo">300</span>    int BEETROOT_BLOCK = 244;<a name="line.300"></a>
+<span class="sourceLineNo">301</span>    int STONECUTTER = 245;<a name="line.301"></a>
+<span class="sourceLineNo">302</span>    int GLOWING_OBSIDIAN = 246;<a name="line.302"></a>
+<span class="sourceLineNo">303</span>    int NETHER_REACTOR = 247; //Should not be removed<a name="line.303"></a>
+<span class="sourceLineNo">304</span>    int INFO_UPDATE = 248;<a name="line.304"></a>
+<span class="sourceLineNo">305</span>    int INFO_UPDATE2 = 249;<a name="line.305"></a>
+<span class="sourceLineNo">306</span><a name="line.306"></a>
+<span class="sourceLineNo">307</span>    int PISTON_EXTENSION = 250;<a name="line.307"></a>
+<span class="sourceLineNo">308</span><a name="line.308"></a>
+<span class="sourceLineNo">309</span>    int OBSERVER = 251;<a name="line.309"></a>
+<span class="sourceLineNo">310</span>}<a name="line.310"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>

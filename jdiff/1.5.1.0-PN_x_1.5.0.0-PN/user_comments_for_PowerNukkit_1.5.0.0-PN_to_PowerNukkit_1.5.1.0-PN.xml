@@ -1,0 +1,1951 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<comments
+  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+  xsi:noNamespaceSchemaLocation='comments.xsd'
+  name="PowerNukkit_1.5.0.0-PN_to_PowerNukkit_1.5.1.0-PN"
+  jdversion="2.0.0-PN">
+
+<!-- This file contains comments for a JDiff report. -->
+<!-- It is used only in generating the report, and does not need to ship with the final report. -->
+
+<!-- The id attribute in an identifier element identifies the change as noted in the report. -->
+<!-- An id has the form package[.class[.[ctor|method|field].signature]], where [] indicates optional text. -->
+<!-- A comment element can have multiple identifier elements, which will -->
+<!-- will cause the same text to appear at each place in the report, but -->
+<!-- will be converted to separate comments when the comments file is used. -->
+<!-- HTML tags in the text field will appear in the report. -->
+<!-- You also need to close p HTML elements, used for paragraphs - see the top-level documentation. -->
+<comment>
+  <identifier id="cn.nukkit"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.Player"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.Player.completeUsingItem_added(int, int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.Player.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.Block"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.Block.forState_added(cn.nukkit.blockstate.IBlockState)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockCampfire"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockCampfire.getDamageEvent_added(cn.nukkit.entity.Entity)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockCampfireSoul"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockCampfireSoul.getDamageEvent_added(cn.nukkit.entity.Entity)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockNetherBrick"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockWood"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.block.BlockWood.forState_added(cn.nukkit.blockstate.IBlockState)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.blockstate"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.blockstate.IMutableBlockState"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.blockstate.IMutableBlockState.forState_added(cn.nukkit.blockstate.IBlockState)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.getCurrentHeight_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.getKnownEntityIds_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.getSaveId_added(int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.getSaveId_added(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.getSaveIds_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.getSwimmingHeight_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.Entity.getVisibleName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.EntityHuman"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.EntityHuman.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.EntityHuman.getSwimmingHeight_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityAreaEffectCloud"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityAreaEffectCloud.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityArmorStand"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityArmorStand.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityArmorStand.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityBoat"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityBoat.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityEndCrystal"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityEndCrystal.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityExpBottle"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityExpBottle.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityFallingBlock"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityFallingBlock.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityFirework"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityFirework.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityFishingHook"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityFishingHook.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityItem"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityItem.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityMinecartChest"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityMinecartChest.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityMinecartChest.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityMinecartEmpty"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityMinecartEmpty.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityMinecartEmpty.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityMinecartHopper"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityMinecartHopper.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityMinecartHopper.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityMinecartTNT"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityMinecartTNT.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityMinecartTNT.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityPainting"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityPainting.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityPotion"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityPotion.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityPotionLingering"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityPotionLingering.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityPrimedTNT"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityPrimedTNT.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityXPOrb"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.item.EntityXPOrb.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityBlaze"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityBlaze.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityBlaze.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityCaveSpider"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityCaveSpider.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityCaveSpider.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityCreeper"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityCreeper.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityCreeper.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityDrowned"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityDrowned.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityDrowned.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityElderGuardian"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityElderGuardian.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityElderGuardian.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityEnderDragon"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityEnderDragon.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityEnderDragon.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityEnderman"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityEnderman.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityEnderman.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityEndermite"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityEndermite.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityEndermite.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityEvoker"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityEvoker.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityEvoker.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityGhast"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityGhast.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityGhast.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityGuardian"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityGuardian.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityGuardian.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityHoglin"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityHoglin.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityHoglin.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityHusk"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityHusk.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityHusk.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityIronGolem"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityIronGolem.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityIronGolem.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityMagmaCube"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityMagmaCube.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityMagmaCube.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityPhantom"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityPhantom.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityPhantom.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityPiglin"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityPiglin.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityPiglin.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityPiglinBrute"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityPiglinBrute.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityPiglinBrute.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityPillager"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityPillager.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityPillager.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityRavager"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityRavager.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityRavager.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityShulker"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityShulker.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityShulker.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntitySilverfish"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntitySilverfish.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntitySilverfish.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntitySkeleton"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntitySkeleton.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntitySkeleton.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntitySlime"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntitySlime.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntitySlime.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntitySnowGolem"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntitySnowGolem.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntitySnowGolem.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntitySpider"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntitySpider.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntitySpider.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityStray"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityStray.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityStray.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityVex"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityVex.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityVex.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityVindicator"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityVindicator.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityVindicator.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityWitch"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityWitch.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityWitch.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityWither"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityWither.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityWither.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityWitherSkeleton"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityWitherSkeleton.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityWitherSkeleton.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityZoglin"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityZoglin.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityZoglin.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityZombie"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityZombie.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityZombie.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityZombiePigman"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityZombiePigman.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityZombiePigman.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityZombieVillager"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityZombieVillager.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityZombieVillager.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityZombieVillagerV1"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityZombieVillagerV1.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.mob.EntityZombieVillagerV1.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityBat"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityBat.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityBee"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityBee.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityCat"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityCat.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityChicken"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityChicken.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityChicken.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityCod"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityCod.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityCod.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityCow"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityCow.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityCow.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityDolphin"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityDolphin.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityDolphin.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityDonkey"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityDonkey.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityFox"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityFox.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityFox.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityHorse"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityHorse.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityLlama"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityLlama.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityMooshroom"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityMooshroom.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityMooshroom.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityMule"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityMule.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityNPCEntity"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityNPCEntity.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityNPCEntity.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityOcelot"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityOcelot.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityOcelot.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityPanda"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityPanda.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityParrot"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityParrot.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityParrot.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityPig"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityPig.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityPig.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityPolarBear"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityPolarBear.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityPufferfish"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityPufferfish.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityPufferfish.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityRabbit"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityRabbit.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityRabbit.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntitySalmon"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntitySalmon.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntitySalmon.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntitySheep"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntitySheep.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntitySheep.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntitySkeletonHorse"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntitySkeletonHorse.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntitySquid"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntitySquid.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityStrider"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityStrider.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityStrider.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityTameable"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityTameable.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityTropicalFish"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityTropicalFish.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityTropicalFish.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityTurtle"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityTurtle.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityTurtle.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityVillager"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityVillager.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityVillager.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityVillagerV1"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityVillagerV1.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityVillagerV1.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityWanderingTrader"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityWanderingTrader.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityWanderingTrader.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityWolf"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityWolf.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityWolf.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityZombieHorse"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.passive.EntityZombieHorse.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.projectile"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.projectile.EntityArrow"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.projectile.EntityArrow.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.projectile.EntityEgg"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.projectile.EntityEgg.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.projectile.EntityEnderPearl"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.projectile.EntityEnderPearl.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.projectile.EntitySnowball"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.projectile.EntitySnowball.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.projectile.EntityThrownTrident"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.projectile.EntityThrownTrident.getName_changed()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.projectile.EntityThrownTrident.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.weather"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.weather.EntityLightning"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.entity.weather.EntityLightning.getOriginalName_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.event.entity"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.event.entity.EntityDamageEvent"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.event.entity.EntityDamageEvent.addSideEffects_added(cn.nukkit.item.enchantment.sideeffect.SideEffect[])"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.event.entity.EntityDamageEvent.addSideEffects_added(java.util.Collection&lt;cn.nukkit.item.enchantment.sideeffect.SideEffect&gt;)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.event.entity.EntityDamageEvent.getSideEffects_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.event.entity.EntityDamageEvent.setSideEffects_added(cn.nukkit.item.enchantment.sideeffect.SideEffect[])"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.event.entity.EntityDamageEvent.setSideEffects_added(java.util.Collection&lt;cn.nukkit.item.enchantment.sideeffect.SideEffect&gt;)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.Item"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.Item.getAttackSideEffects_added(cn.nukkit.entity.Entity, cn.nukkit.entity.Entity)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.enchantment"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.enchantment.Enchantment"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.enchantment.Enchantment.getAttackSideEffects_added(cn.nukkit.entity.Entity, cn.nukkit.entity.Entity)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.enchantment.EnchantmentFireAspect"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.enchantment.EnchantmentFireAspect.getAttackSideEffects_added(cn.nukkit.entity.Entity, cn.nukkit.entity.Entity)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.enchantment.sideeffect"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.food"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.food.Food"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.food.Food.eatingTick"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.food.Food.getEatingTick_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.item.food.Food.setEatingTick_added(int)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.GameRule"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.level.GameRule.isDeprecated_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.network.protocol.AnimateEntityPacket"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.utils"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.utils.Utils"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="cn.nukkit.utils.Utils.isInteger_added(java.lang.String)"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="co.aikar.timings"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="co.aikar.timings.Timings"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+<comment>
+  <identifier id="co.aikar.timings.Timings.init_added()"/>
+  <text>
+    InsertCommentsHere
+  </text>
+</comment>
+
+</comments>

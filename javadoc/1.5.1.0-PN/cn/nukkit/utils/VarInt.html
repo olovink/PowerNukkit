@@ -1,11 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- NewPage -->
-<html lang="en">
+<html lang="pt">
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>VarInt (PowerNukkit 1.5.1.0-PN API)</title>
-<meta name="date" content="2021-07-14">
+<meta name="date" content="2021-11-26">
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
 </head>
@@ -110,7 +110,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <hr>
 <br>
-<pre>public final class <span class="typeNameLabel">VarInt</span>
+<pre>public final class <a href="../../../src-html/cn/nukkit/utils/VarInt.html#line.21">VarInt</a>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">Tool class for VarInt or VarLong operations.
  <p>
@@ -253,7 +253,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>encodeZigZag32</h4>
-<pre>public static&nbsp;long&nbsp;encodeZigZag32(int&nbsp;v)</pre>
+<pre>public static&nbsp;long&nbsp;<a href="../../../src-html/cn/nukkit/utils/VarInt.html#line.31">encodeZigZag32</a>(int&nbsp;v)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>v</code> - Signed int</dd>
@@ -268,7 +268,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>decodeZigZag32</h4>
-<pre>public static&nbsp;int&nbsp;decodeZigZag32(long&nbsp;v)</pre>
+<pre>public static&nbsp;int&nbsp;<a href="../../../src-html/cn/nukkit/utils/VarInt.html#line.40">decodeZigZag32</a>(long&nbsp;v)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>v</code> - Unsigned encoded int</dd>
@@ -283,7 +283,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>encodeZigZag64</h4>
-<pre>public static&nbsp;long&nbsp;encodeZigZag64(long&nbsp;v)</pre>
+<pre>public static&nbsp;long&nbsp;<a href="../../../src-html/cn/nukkit/utils/VarInt.html#line.48">encodeZigZag64</a>(long&nbsp;v)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>v</code> - Signed long</dd>
@@ -298,7 +298,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>decodeZigZag64</h4>
-<pre>public static&nbsp;long&nbsp;decodeZigZag64(long&nbsp;v)</pre>
+<pre>public static&nbsp;long&nbsp;<a href="../../../src-html/cn/nukkit/utils/VarInt.html#line.56">decodeZigZag64</a>(long&nbsp;v)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>v</code> - Signed encoded long</dd>
@@ -313,7 +313,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>readVarInt</h4>
-<pre>public static&nbsp;int&nbsp;readVarInt(<a href="../../../cn/nukkit/utils/BinaryStream.html" title="class in cn.nukkit.utils">BinaryStream</a>&nbsp;stream)</pre>
+<pre>public static&nbsp;int&nbsp;<a href="../../../src-html/cn/nukkit/utils/VarInt.html#line.92">readVarInt</a>(<a href="../../../cn/nukkit/utils/BinaryStream.html" title="class in cn.nukkit.utils">BinaryStream</a>&nbsp;stream)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>stream</code> - BinaryStream</dd>
@@ -328,7 +328,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>readVarInt</h4>
-<pre>public static&nbsp;int&nbsp;readVarInt(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;stream)
+<pre>public static&nbsp;int&nbsp;<a href="../../../src-html/cn/nukkit/utils/VarInt.html#line.100">readVarInt</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;stream)
                       throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -346,7 +346,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>readUnsignedVarInt</h4>
-<pre>public static&nbsp;long&nbsp;readUnsignedVarInt(<a href="../../../cn/nukkit/utils/BinaryStream.html" title="class in cn.nukkit.utils">BinaryStream</a>&nbsp;stream)</pre>
+<pre>public static&nbsp;long&nbsp;<a href="../../../src-html/cn/nukkit/utils/VarInt.html#line.108">readUnsignedVarInt</a>(<a href="../../../cn/nukkit/utils/BinaryStream.html" title="class in cn.nukkit.utils">BinaryStream</a>&nbsp;stream)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>stream</code> - BinaryStream</dd>
@@ -361,7 +361,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>readUnsignedVarInt</h4>
-<pre>public static&nbsp;long&nbsp;readUnsignedVarInt(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;stream)
+<pre>public static&nbsp;long&nbsp;<a href="../../../src-html/cn/nukkit/utils/VarInt.html#line.116">readUnsignedVarInt</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;stream)
                                throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -379,7 +379,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>readVarLong</h4>
-<pre>public static&nbsp;long&nbsp;readVarLong(<a href="../../../cn/nukkit/utils/BinaryStream.html" title="class in cn.nukkit.utils">BinaryStream</a>&nbsp;stream)</pre>
+<pre>public static&nbsp;long&nbsp;<a href="../../../src-html/cn/nukkit/utils/VarInt.html#line.124">readVarLong</a>(<a href="../../../cn/nukkit/utils/BinaryStream.html" title="class in cn.nukkit.utils">BinaryStream</a>&nbsp;stream)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>stream</code> - BinaryStream</dd>
@@ -394,7 +394,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>readVarLong</h4>
-<pre>public static&nbsp;long&nbsp;readVarLong(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;stream)
+<pre>public static&nbsp;long&nbsp;<a href="../../../src-html/cn/nukkit/utils/VarInt.html#line.132">readVarLong</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;stream)
                         throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -412,7 +412,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>readUnsignedVarLong</h4>
-<pre>public static&nbsp;long&nbsp;readUnsignedVarLong(<a href="../../../cn/nukkit/utils/BinaryStream.html" title="class in cn.nukkit.utils">BinaryStream</a>&nbsp;stream)</pre>
+<pre>public static&nbsp;long&nbsp;<a href="../../../src-html/cn/nukkit/utils/VarInt.html#line.140">readUnsignedVarLong</a>(<a href="../../../cn/nukkit/utils/BinaryStream.html" title="class in cn.nukkit.utils">BinaryStream</a>&nbsp;stream)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>stream</code> - BinaryStream</dd>
@@ -427,7 +427,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>readUnsignedVarLong</h4>
-<pre>public static&nbsp;long&nbsp;readUnsignedVarLong(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;stream)
+<pre>public static&nbsp;long&nbsp;<a href="../../../src-html/cn/nukkit/utils/VarInt.html#line.148">readUnsignedVarLong</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;stream)
                                 throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -445,7 +445,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>writeVarInt</h4>
-<pre>public static&nbsp;void&nbsp;writeVarInt(<a href="../../../cn/nukkit/utils/BinaryStream.html" title="class in cn.nukkit.utils">BinaryStream</a>&nbsp;stream,
+<pre>public static&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/utils/VarInt.html#line.180">writeVarInt</a>(<a href="../../../cn/nukkit/utils/BinaryStream.html" title="class in cn.nukkit.utils">BinaryStream</a>&nbsp;stream,
                                int&nbsp;value)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -460,7 +460,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>writeVarInt</h4>
-<pre>public static&nbsp;void&nbsp;writeVarInt(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;stream,
+<pre>public static&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/utils/VarInt.html#line.188">writeVarInt</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;stream,
                                int&nbsp;value)
                         throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
@@ -478,7 +478,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>writeUnsignedVarInt</h4>
-<pre>public static&nbsp;void&nbsp;writeUnsignedVarInt(<a href="../../../cn/nukkit/utils/BinaryStream.html" title="class in cn.nukkit.utils">BinaryStream</a>&nbsp;stream,
+<pre>public static&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/utils/VarInt.html#line.196">writeUnsignedVarInt</a>(<a href="../../../cn/nukkit/utils/BinaryStream.html" title="class in cn.nukkit.utils">BinaryStream</a>&nbsp;stream,
                                        long&nbsp;value)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -493,7 +493,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>writeUnsignedVarInt</h4>
-<pre>public static&nbsp;void&nbsp;writeUnsignedVarInt(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;stream,
+<pre>public static&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/utils/VarInt.html#line.204">writeUnsignedVarInt</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;stream,
                                        long&nbsp;value)
                                 throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
@@ -511,7 +511,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>writeVarLong</h4>
-<pre>public static&nbsp;void&nbsp;writeVarLong(<a href="../../../cn/nukkit/utils/BinaryStream.html" title="class in cn.nukkit.utils">BinaryStream</a>&nbsp;stream,
+<pre>public static&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/utils/VarInt.html#line.212">writeVarLong</a>(<a href="../../../cn/nukkit/utils/BinaryStream.html" title="class in cn.nukkit.utils">BinaryStream</a>&nbsp;stream,
                                 long&nbsp;value)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -526,7 +526,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>writeVarLong</h4>
-<pre>public static&nbsp;void&nbsp;writeVarLong(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;stream,
+<pre>public static&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/utils/VarInt.html#line.220">writeVarLong</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;stream,
                                 long&nbsp;value)
                          throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
@@ -544,7 +544,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>writeUnsignedVarLong</h4>
-<pre>public static&nbsp;void&nbsp;writeUnsignedVarLong(<a href="../../../cn/nukkit/utils/BinaryStream.html" title="class in cn.nukkit.utils">BinaryStream</a>&nbsp;stream,
+<pre>public static&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/utils/VarInt.html#line.228">writeUnsignedVarLong</a>(<a href="../../../cn/nukkit/utils/BinaryStream.html" title="class in cn.nukkit.utils">BinaryStream</a>&nbsp;stream,
                                         long&nbsp;value)</pre>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -559,7 +559,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockListLast">
 <li class="blockList">
 <h4>writeUnsignedVarLong</h4>
-<pre>public static&nbsp;void&nbsp;writeUnsignedVarLong(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;stream,
+<pre>public static&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/utils/VarInt.html#line.236">writeUnsignedVarLong</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;stream,
                                         long&nbsp;value)
                                  throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>

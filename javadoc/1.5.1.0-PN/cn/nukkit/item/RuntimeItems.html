@@ -1,11 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- NewPage -->
-<html lang="en">
+<html lang="pt">
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>RuntimeItems (PowerNukkit 1.5.1.0-PN API)</title>
-<meta name="date" content="2021-07-14">
+<meta name="date" content="2021-11-26">
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
 </head>
@@ -77,13 +77,13 @@ var activeTableTab = "activeTableTab";
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
@@ -111,7 +111,7 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-public class <span class="typeNameLabel">RuntimeItems</span>
+public final class <a href="../../../src-html/cn/nukkit/item/RuntimeItems.html#line.25">RuntimeItems</a>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 </li>
 </ul>
@@ -119,23 +119,6 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
-<!-- ======== CONSTRUCTOR SUMMARY ======== -->
-<ul class="blockList">
-<li class="blockList"><a name="constructor.summary">
-<!--   -->
-</a>
-<h3>Constructor Summary</h3>
-<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
-<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colOne" scope="col">Constructor and Description</th>
-</tr>
-<tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../cn/nukkit/item/RuntimeItems.html#RuntimeItems--">RuntimeItems</a></span>()</code>&nbsp;</td>
-</tr>
-</table>
-</li>
-</ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.summary">
@@ -189,23 +172,6 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
-<!-- ========= CONSTRUCTOR DETAIL ======== -->
-<ul class="blockList">
-<li class="blockList"><a name="constructor.detail">
-<!--   -->
-</a>
-<h3>Constructor Detail</h3>
-<a name="RuntimeItems--">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>RuntimeItems</h4>
-<pre>public&nbsp;RuntimeItems()</pre>
-</li>
-</ul>
-</li>
-</ul>
 <!-- ============ METHOD DETAIL ========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.detail">
@@ -219,7 +185,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getRuntimeMapping</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-public static&nbsp;<a href="../../../cn/nukkit/item/RuntimeItemMapping.html" title="class in cn.nukkit.item">RuntimeItemMapping</a>&nbsp;getRuntimeMapping()</pre>
+public static&nbsp;<a href="../../../cn/nukkit/item/RuntimeItemMapping.html" title="class in cn.nukkit.item">RuntimeItemMapping</a>&nbsp;<a href="../../../src-html/cn/nukkit/item/RuntimeItems.html#line.67">getRuntimeMapping</a>()</pre>
 </li>
 </ul>
 <a name="getId-int-">
@@ -229,7 +195,7 @@ public static&nbsp;<a href="../../../cn/nukkit/item/RuntimeItemMapping.html" tit
 <li class="blockList">
 <h4>getId</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-public static&nbsp;int&nbsp;getId(int&nbsp;fullId)</pre>
+public static&nbsp;int&nbsp;<a href="../../../src-html/cn/nukkit/item/RuntimeItems.html#line.72">getId</a>(int&nbsp;fullId)</pre>
 </li>
 </ul>
 <a name="getData-int-">
@@ -239,7 +205,7 @@ public static&nbsp;int&nbsp;getId(int&nbsp;fullId)</pre>
 <li class="blockList">
 <h4>getData</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-public static&nbsp;int&nbsp;getData(int&nbsp;fullId)</pre>
+public static&nbsp;int&nbsp;<a href="../../../src-html/cn/nukkit/item/RuntimeItems.html#line.77">getData</a>(int&nbsp;fullId)</pre>
 </li>
 </ul>
 <a name="getFullId-int-int-">
@@ -249,7 +215,7 @@ public static&nbsp;int&nbsp;getData(int&nbsp;fullId)</pre>
 <li class="blockList">
 <h4>getFullId</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-public static&nbsp;int&nbsp;getFullId(int&nbsp;id,
+public static&nbsp;int&nbsp;<a href="../../../src-html/cn/nukkit/item/RuntimeItems.html#line.82">getFullId</a>(int&nbsp;id,
                                                        int&nbsp;data)</pre>
 </li>
 </ul>
@@ -260,7 +226,7 @@ public static&nbsp;int&nbsp;getFullId(int&nbsp;id,
 <li class="blockList">
 <h4>getNetworkId</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-public static&nbsp;int&nbsp;getNetworkId(int&nbsp;networkFullId)</pre>
+public static&nbsp;int&nbsp;<a href="../../../src-html/cn/nukkit/item/RuntimeItems.html#line.87">getNetworkId</a>(int&nbsp;networkFullId)</pre>
 </li>
 </ul>
 <a name="hasData-int-">
@@ -270,7 +236,7 @@ public static&nbsp;int&nbsp;getNetworkId(int&nbsp;networkFullId)</pre>
 <li class="blockList">
 <h4>hasData</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-public static&nbsp;boolean&nbsp;hasData(int&nbsp;id)</pre>
+public static&nbsp;boolean&nbsp;<a href="../../../src-html/cn/nukkit/item/RuntimeItems.html#line.92">hasData</a>(int&nbsp;id)</pre>
 </li>
 </ul>
 </li>
@@ -328,13 +294,13 @@ public static&nbsp;boolean&nbsp;hasData(int&nbsp;id)</pre>
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
-<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>

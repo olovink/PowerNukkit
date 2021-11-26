@@ -1,0 +1,606 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package cn.nukkit.entity.item;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>import cn.nukkit.Player;<a name="line.3"></a>
+<span class="sourceLineNo">004</span>import cn.nukkit.Server;<a name="line.4"></a>
+<span class="sourceLineNo">005</span>import cn.nukkit.api.PowerNukkitOnly;<a name="line.5"></a>
+<span class="sourceLineNo">006</span>import cn.nukkit.api.Since;<a name="line.6"></a>
+<span class="sourceLineNo">007</span>import cn.nukkit.block.Block;<a name="line.7"></a>
+<span class="sourceLineNo">008</span>import cn.nukkit.block.BlockID;<a name="line.8"></a>
+<span class="sourceLineNo">009</span>import cn.nukkit.entity.Entity;<a name="line.9"></a>
+<span class="sourceLineNo">010</span>import cn.nukkit.entity.EntityInteractable;<a name="line.10"></a>
+<span class="sourceLineNo">011</span>import cn.nukkit.entity.EntityNameable;<a name="line.11"></a>
+<span class="sourceLineNo">012</span>import cn.nukkit.entity.data.IntEntityData;<a name="line.12"></a>
+<span class="sourceLineNo">013</span>import cn.nukkit.event.entity.EntityDamageByEntityEvent;<a name="line.13"></a>
+<span class="sourceLineNo">014</span>import cn.nukkit.event.entity.EntityDamageEvent;<a name="line.14"></a>
+<span class="sourceLineNo">015</span>import cn.nukkit.inventory.BaseInventory;<a name="line.15"></a>
+<span class="sourceLineNo">016</span>import cn.nukkit.inventory.EntityArmorInventory;<a name="line.16"></a>
+<span class="sourceLineNo">017</span>import cn.nukkit.inventory.EntityEquipmentInventory;<a name="line.17"></a>
+<span class="sourceLineNo">018</span>import cn.nukkit.inventory.InventoryHolder;<a name="line.18"></a>
+<span class="sourceLineNo">019</span>import cn.nukkit.item.Item;<a name="line.19"></a>
+<span class="sourceLineNo">020</span>import cn.nukkit.item.ItemArmor;<a name="line.20"></a>
+<span class="sourceLineNo">021</span>import cn.nukkit.item.ItemID;<a name="line.21"></a>
+<span class="sourceLineNo">022</span>import cn.nukkit.level.Sound;<a name="line.22"></a>
+<span class="sourceLineNo">023</span>import cn.nukkit.level.format.FullChunk;<a name="line.23"></a>
+<span class="sourceLineNo">024</span>import cn.nukkit.level.particle.DestroyBlockParticle;<a name="line.24"></a>
+<span class="sourceLineNo">025</span>import cn.nukkit.math.Vector3;<a name="line.25"></a>
+<span class="sourceLineNo">026</span>import cn.nukkit.nbt.NBTIO;<a name="line.26"></a>
+<span class="sourceLineNo">027</span>import cn.nukkit.nbt.tag.CompoundTag;<a name="line.27"></a>
+<span class="sourceLineNo">028</span>import cn.nukkit.nbt.tag.ListTag;<a name="line.28"></a>
+<span class="sourceLineNo">029</span>import cn.nukkit.network.protocol.SetEntityDataPacket;<a name="line.29"></a>
+<span class="sourceLineNo">030</span>import cn.nukkit.potion.Effect;<a name="line.30"></a>
+<span class="sourceLineNo">031</span><a name="line.31"></a>
+<span class="sourceLineNo">032</span>import java.util.Collection;<a name="line.32"></a>
+<span class="sourceLineNo">033</span><a name="line.33"></a>
+<span class="sourceLineNo">034</span>@PowerNukkitOnly<a name="line.34"></a>
+<span class="sourceLineNo">035</span>@Since("1.4.0.0-PN")<a name="line.35"></a>
+<span class="sourceLineNo">036</span>public class EntityArmorStand extends Entity implements InventoryHolder, EntityInteractable, EntityNameable {<a name="line.36"></a>
+<span class="sourceLineNo">037</span><a name="line.37"></a>
+<span class="sourceLineNo">038</span>    @PowerNukkitOnly<a name="line.38"></a>
+<span class="sourceLineNo">039</span>    @Since("1.4.0.0-PN")<a name="line.39"></a>
+<span class="sourceLineNo">040</span>    public static final int NETWORK_ID = 61;<a name="line.40"></a>
+<span class="sourceLineNo">041</span><a name="line.41"></a>
+<span class="sourceLineNo">042</span>    private static final String TAG_MAINHAND = "Mainhand";<a name="line.42"></a>
+<span class="sourceLineNo">043</span>    private static final String TAG_POSE_INDEX = "PoseIndex";<a name="line.43"></a>
+<span class="sourceLineNo">044</span>    private static final String TAG_OFFHAND = "Offhand";<a name="line.44"></a>
+<span class="sourceLineNo">045</span>    private static final String TAG_ARMOR = "Armor";<a name="line.45"></a>
+<span class="sourceLineNo">046</span><a name="line.46"></a>
+<span class="sourceLineNo">047</span>    private EntityEquipmentInventory equipmentInventory;<a name="line.47"></a>
+<span class="sourceLineNo">048</span>    private EntityArmorInventory armorInventory;<a name="line.48"></a>
+<span class="sourceLineNo">049</span><a name="line.49"></a>
+<span class="sourceLineNo">050</span>    @PowerNukkitOnly<a name="line.50"></a>
+<span class="sourceLineNo">051</span>    @Since("1.4.0.0-PN")<a name="line.51"></a>
+<span class="sourceLineNo">052</span>    public EntityArmorStand(FullChunk chunk, CompoundTag nbt) {<a name="line.52"></a>
+<span class="sourceLineNo">053</span>        super(chunk, nbt);<a name="line.53"></a>
+<span class="sourceLineNo">054</span>        setMaxHealth(6);<a name="line.54"></a>
+<span class="sourceLineNo">055</span>        setHealth(6);<a name="line.55"></a>
+<span class="sourceLineNo">056</span><a name="line.56"></a>
+<span class="sourceLineNo">057</span>        if (nbt.contains(TAG_POSE_INDEX)) {<a name="line.57"></a>
+<span class="sourceLineNo">058</span>            this.setPose(nbt.getInt(TAG_POSE_INDEX));<a name="line.58"></a>
+<span class="sourceLineNo">059</span>        }<a name="line.59"></a>
+<span class="sourceLineNo">060</span>    }<a name="line.60"></a>
+<span class="sourceLineNo">061</span><a name="line.61"></a>
+<span class="sourceLineNo">062</span>    private static int getArmorSlot(ItemArmor armorItem) {<a name="line.62"></a>
+<span class="sourceLineNo">063</span>        if (armorItem.isHelmet()) {<a name="line.63"></a>
+<span class="sourceLineNo">064</span>            return EntityArmorInventory.SLOT_HEAD;<a name="line.64"></a>
+<span class="sourceLineNo">065</span>        } else if (armorItem.isChestplate()) {<a name="line.65"></a>
+<span class="sourceLineNo">066</span>            return EntityArmorInventory.SLOT_CHEST;<a name="line.66"></a>
+<span class="sourceLineNo">067</span>        } else if (armorItem.isLeggings()) {<a name="line.67"></a>
+<span class="sourceLineNo">068</span>            return EntityArmorInventory.SLOT_LEGS;<a name="line.68"></a>
+<span class="sourceLineNo">069</span>        } else {<a name="line.69"></a>
+<span class="sourceLineNo">070</span>            return EntityArmorInventory.SLOT_FEET;<a name="line.70"></a>
+<span class="sourceLineNo">071</span>        }<a name="line.71"></a>
+<span class="sourceLineNo">072</span>    }<a name="line.72"></a>
+<span class="sourceLineNo">073</span><a name="line.73"></a>
+<span class="sourceLineNo">074</span>    @Override<a name="line.74"></a>
+<span class="sourceLineNo">075</span>    public int getNetworkId() {<a name="line.75"></a>
+<span class="sourceLineNo">076</span>        return NETWORK_ID;<a name="line.76"></a>
+<span class="sourceLineNo">077</span>    }<a name="line.77"></a>
+<span class="sourceLineNo">078</span><a name="line.78"></a>
+<span class="sourceLineNo">079</span>    @Override<a name="line.79"></a>
+<span class="sourceLineNo">080</span>    public float getHeight() {<a name="line.80"></a>
+<span class="sourceLineNo">081</span>        return 1.975f;<a name="line.81"></a>
+<span class="sourceLineNo">082</span>    }<a name="line.82"></a>
+<span class="sourceLineNo">083</span><a name="line.83"></a>
+<span class="sourceLineNo">084</span>    @Override<a name="line.84"></a>
+<span class="sourceLineNo">085</span>    public float getWidth() {<a name="line.85"></a>
+<span class="sourceLineNo">086</span>        return 0.5f;<a name="line.86"></a>
+<span class="sourceLineNo">087</span>    }<a name="line.87"></a>
+<span class="sourceLineNo">088</span><a name="line.88"></a>
+<span class="sourceLineNo">089</span>    @Override<a name="line.89"></a>
+<span class="sourceLineNo">090</span>    protected float getGravity() {<a name="line.90"></a>
+<span class="sourceLineNo">091</span>        return 0.04f;<a name="line.91"></a>
+<span class="sourceLineNo">092</span>    }<a name="line.92"></a>
+<span class="sourceLineNo">093</span><a name="line.93"></a>
+<span class="sourceLineNo">094</span>    @Override<a name="line.94"></a>
+<span class="sourceLineNo">095</span>    protected void initEntity() {<a name="line.95"></a>
+<span class="sourceLineNo">096</span><a name="line.96"></a>
+<span class="sourceLineNo">097</span>        this.setHealth(6);<a name="line.97"></a>
+<span class="sourceLineNo">098</span>        this.setMaxHealth(6);<a name="line.98"></a>
+<span class="sourceLineNo">099</span>        this.setImmobile(true);<a name="line.99"></a>
+<span class="sourceLineNo">100</span><a name="line.100"></a>
+<span class="sourceLineNo">101</span>        super.initEntity();<a name="line.101"></a>
+<span class="sourceLineNo">102</span><a name="line.102"></a>
+<span class="sourceLineNo">103</span>        this.equipmentInventory = new EntityEquipmentInventory(this);<a name="line.103"></a>
+<span class="sourceLineNo">104</span>        this.armorInventory = new EntityArmorInventory(this);<a name="line.104"></a>
+<span class="sourceLineNo">105</span><a name="line.105"></a>
+<span class="sourceLineNo">106</span>        if (this.namedTag.contains(TAG_MAINHAND)) {<a name="line.106"></a>
+<span class="sourceLineNo">107</span>            this.equipmentInventory.setItemInHand(NBTIO.getItemHelper(this.namedTag.getCompound(TAG_MAINHAND)), true);<a name="line.107"></a>
+<span class="sourceLineNo">108</span>        }<a name="line.108"></a>
+<span class="sourceLineNo">109</span><a name="line.109"></a>
+<span class="sourceLineNo">110</span>        if (this.namedTag.contains(TAG_OFFHAND)) {<a name="line.110"></a>
+<span class="sourceLineNo">111</span>            this.equipmentInventory.setItemInOffhand(NBTIO.getItemHelper(this.namedTag.getCompound(TAG_OFFHAND)), true);<a name="line.111"></a>
+<span class="sourceLineNo">112</span>        }<a name="line.112"></a>
+<span class="sourceLineNo">113</span><a name="line.113"></a>
+<span class="sourceLineNo">114</span>        if (this.namedTag.contains(TAG_ARMOR)) {<a name="line.114"></a>
+<span class="sourceLineNo">115</span>            ListTag&lt;CompoundTag&gt; armorList = this.namedTag.getList(TAG_ARMOR, CompoundTag.class);<a name="line.115"></a>
+<span class="sourceLineNo">116</span>            for (CompoundTag armorTag : armorList.getAll()) {<a name="line.116"></a>
+<span class="sourceLineNo">117</span>                this.armorInventory.setItem(armorTag.getByte("Slot"), NBTIO.getItemHelper(armorTag));<a name="line.117"></a>
+<span class="sourceLineNo">118</span>            }<a name="line.118"></a>
+<span class="sourceLineNo">119</span>        }<a name="line.119"></a>
+<span class="sourceLineNo">120</span><a name="line.120"></a>
+<span class="sourceLineNo">121</span>        if (this.namedTag.contains(TAG_POSE_INDEX)) {<a name="line.121"></a>
+<span class="sourceLineNo">122</span>            this.setPose(this.namedTag.getInt(TAG_POSE_INDEX));<a name="line.122"></a>
+<span class="sourceLineNo">123</span>        }<a name="line.123"></a>
+<span class="sourceLineNo">124</span>    }<a name="line.124"></a>
+<span class="sourceLineNo">125</span><a name="line.125"></a>
+<span class="sourceLineNo">126</span>    @PowerNukkitOnly<a name="line.126"></a>
+<span class="sourceLineNo">127</span>    @Override<a name="line.127"></a>
+<span class="sourceLineNo">128</span>    public boolean isPersistent() {<a name="line.128"></a>
+<span class="sourceLineNo">129</span>        return true;<a name="line.129"></a>
+<span class="sourceLineNo">130</span>    }<a name="line.130"></a>
+<span class="sourceLineNo">131</span><a name="line.131"></a>
+<span class="sourceLineNo">132</span>    @PowerNukkitOnly<a name="line.132"></a>
+<span class="sourceLineNo">133</span>    @Override<a name="line.133"></a>
+<span class="sourceLineNo">134</span>    public void setPersistent(boolean persistent) {<a name="line.134"></a>
+<span class="sourceLineNo">135</span>        // Armor stands are always persistent<a name="line.135"></a>
+<span class="sourceLineNo">136</span>    }<a name="line.136"></a>
+<span class="sourceLineNo">137</span><a name="line.137"></a>
+<span class="sourceLineNo">138</span>    @Override<a name="line.138"></a>
+<span class="sourceLineNo">139</span>    public boolean onInteract(Player player, Item item, Vector3 clickedPos) {<a name="line.139"></a>
+<span class="sourceLineNo">140</span>        if (player.isSpectator() || !isValid()) {<a name="line.140"></a>
+<span class="sourceLineNo">141</span>            return false;<a name="line.141"></a>
+<span class="sourceLineNo">142</span>        }<a name="line.142"></a>
+<span class="sourceLineNo">143</span>        <a name="line.143"></a>
+<span class="sourceLineNo">144</span>        // Name tag<a name="line.144"></a>
+<span class="sourceLineNo">145</span>        if (!item.isNull() &amp;&amp; item.getId() == ItemID.NAME_TAG &amp;&amp; playerApplyNameTag(player, item, false)) {<a name="line.145"></a>
+<span class="sourceLineNo">146</span>            return true;<a name="line.146"></a>
+<span class="sourceLineNo">147</span>        }<a name="line.147"></a>
+<span class="sourceLineNo">148</span>        <a name="line.148"></a>
+<span class="sourceLineNo">149</span>        //Pose<a name="line.149"></a>
+<span class="sourceLineNo">150</span>        if (player.isSneaking()) {<a name="line.150"></a>
+<span class="sourceLineNo">151</span>            if (this.getPose() &gt;= 12) {<a name="line.151"></a>
+<span class="sourceLineNo">152</span>                this.setPose(0);<a name="line.152"></a>
+<span class="sourceLineNo">153</span>            } else {<a name="line.153"></a>
+<span class="sourceLineNo">154</span>                this.setPose(this.getPose() + 1);<a name="line.154"></a>
+<span class="sourceLineNo">155</span>            }<a name="line.155"></a>
+<span class="sourceLineNo">156</span>            return false; // Returning true would consume the item<a name="line.156"></a>
+<span class="sourceLineNo">157</span>        }<a name="line.157"></a>
+<span class="sourceLineNo">158</span>        <a name="line.158"></a>
+<span class="sourceLineNo">159</span>        //Inventory<a name="line.159"></a>
+<span class="sourceLineNo">160</span>        boolean isArmor;<a name="line.160"></a>
+<span class="sourceLineNo">161</span>        <a name="line.161"></a>
+<span class="sourceLineNo">162</span>        boolean hasItemInHand = !item.isNull();<a name="line.162"></a>
+<span class="sourceLineNo">163</span>        int slot;<a name="line.163"></a>
+<span class="sourceLineNo">164</span>        <a name="line.164"></a>
+<span class="sourceLineNo">165</span>        if (hasItemInHand &amp;&amp; item instanceof ItemArmor) {<a name="line.165"></a>
+<span class="sourceLineNo">166</span>            ItemArmor itemArmor = (ItemArmor) item;<a name="line.166"></a>
+<span class="sourceLineNo">167</span>            isArmor = true;<a name="line.167"></a>
+<span class="sourceLineNo">168</span>            slot = getArmorSlot(itemArmor);<a name="line.168"></a>
+<span class="sourceLineNo">169</span>        } else if (hasItemInHand &amp;&amp; (item.getId() == ItemID.SKULL) || item.getBlockId() == BlockID.CARVED_PUMPKIN) {<a name="line.169"></a>
+<span class="sourceLineNo">170</span>            isArmor = true;<a name="line.170"></a>
+<span class="sourceLineNo">171</span>            slot = EntityArmorInventory.SLOT_HEAD;<a name="line.171"></a>
+<span class="sourceLineNo">172</span>        } else if (hasItemInHand) {<a name="line.172"></a>
+<span class="sourceLineNo">173</span>            isArmor = false;<a name="line.173"></a>
+<span class="sourceLineNo">174</span>            if (item.getId() == ItemID.SHIELD) {<a name="line.174"></a>
+<span class="sourceLineNo">175</span>                slot = EntityEquipmentInventory.OFFHAND;<a name="line.175"></a>
+<span class="sourceLineNo">176</span>            } else {<a name="line.176"></a>
+<span class="sourceLineNo">177</span>                slot = EntityEquipmentInventory.MAIN_HAND;<a name="line.177"></a>
+<span class="sourceLineNo">178</span>            }<a name="line.178"></a>
+<span class="sourceLineNo">179</span>        } else {<a name="line.179"></a>
+<span class="sourceLineNo">180</span>            double clickHeight = clickedPos.y - this.y;<a name="line.180"></a>
+<span class="sourceLineNo">181</span>            if (clickHeight &gt;= 0.1 &amp;&amp; clickHeight &lt; 0.55 &amp;&amp; !armorInventory.getBoots().isNull()) {<a name="line.181"></a>
+<span class="sourceLineNo">182</span>                isArmor = true;<a name="line.182"></a>
+<span class="sourceLineNo">183</span>                slot = EntityArmorInventory.SLOT_FEET;<a name="line.183"></a>
+<span class="sourceLineNo">184</span>            } else if (clickHeight &gt;= 0.9 &amp;&amp; clickHeight &lt; 1.6) {<a name="line.184"></a>
+<span class="sourceLineNo">185</span>                if (!equipmentInventory.getItemInOffhand().isNull()) {<a name="line.185"></a>
+<span class="sourceLineNo">186</span>                    isArmor = false;<a name="line.186"></a>
+<span class="sourceLineNo">187</span>                    slot = EntityEquipmentInventory.OFFHAND;<a name="line.187"></a>
+<span class="sourceLineNo">188</span>                } else if (!equipmentInventory.getItemInHand().isNull()) {<a name="line.188"></a>
+<span class="sourceLineNo">189</span>                    isArmor = false;<a name="line.189"></a>
+<span class="sourceLineNo">190</span>                    slot = EntityEquipmentInventory.MAIN_HAND;<a name="line.190"></a>
+<span class="sourceLineNo">191</span>                } else if (!armorInventory.getChestplate().isNull()) {<a name="line.191"></a>
+<span class="sourceLineNo">192</span>                    isArmor = true;<a name="line.192"></a>
+<span class="sourceLineNo">193</span>                    slot = EntityArmorInventory.SLOT_CHEST;<a name="line.193"></a>
+<span class="sourceLineNo">194</span>                } else {<a name="line.194"></a>
+<span class="sourceLineNo">195</span>                    return false;<a name="line.195"></a>
+<span class="sourceLineNo">196</span>                }<a name="line.196"></a>
+<span class="sourceLineNo">197</span>            } else if (clickHeight &gt;= 0.4 &amp;&amp; clickHeight &lt; 1.2 &amp;&amp; !armorInventory.getLeggings().isNull()) {<a name="line.197"></a>
+<span class="sourceLineNo">198</span>                isArmor = true;<a name="line.198"></a>
+<span class="sourceLineNo">199</span>                slot = EntityArmorInventory.SLOT_LEGS;<a name="line.199"></a>
+<span class="sourceLineNo">200</span>            } else if (clickHeight &gt;= 1.6 &amp;&amp; !armorInventory.getHelmet().isNull()) {<a name="line.200"></a>
+<span class="sourceLineNo">201</span>                isArmor = true;<a name="line.201"></a>
+<span class="sourceLineNo">202</span>                slot = EntityArmorInventory.SLOT_HEAD;<a name="line.202"></a>
+<span class="sourceLineNo">203</span>            } else if (!equipmentInventory.getItemInOffhand().isNull()) {<a name="line.203"></a>
+<span class="sourceLineNo">204</span>                isArmor = false;<a name="line.204"></a>
+<span class="sourceLineNo">205</span>                slot = EntityEquipmentInventory.OFFHAND;<a name="line.205"></a>
+<span class="sourceLineNo">206</span>            } else if (!equipmentInventory.getItemInHand().isNull()) {<a name="line.206"></a>
+<span class="sourceLineNo">207</span>                isArmor = false;<a name="line.207"></a>
+<span class="sourceLineNo">208</span>                slot = EntityEquipmentInventory.MAIN_HAND;<a name="line.208"></a>
+<span class="sourceLineNo">209</span>            } else {<a name="line.209"></a>
+<span class="sourceLineNo">210</span>                return false;<a name="line.210"></a>
+<span class="sourceLineNo">211</span>            }<a name="line.211"></a>
+<span class="sourceLineNo">212</span>        }<a name="line.212"></a>
+<span class="sourceLineNo">213</span><a name="line.213"></a>
+<span class="sourceLineNo">214</span>        boolean changed = false;<a name="line.214"></a>
+<span class="sourceLineNo">215</span>        if (isArmor) {<a name="line.215"></a>
+<span class="sourceLineNo">216</span>            changed = this.tryChangeEquipment(player, item, slot, true);<a name="line.216"></a>
+<span class="sourceLineNo">217</span>            slot = EntityEquipmentInventory.MAIN_HAND;<a name="line.217"></a>
+<span class="sourceLineNo">218</span>        }<a name="line.218"></a>
+<span class="sourceLineNo">219</span>        <a name="line.219"></a>
+<span class="sourceLineNo">220</span>        if (!changed) {<a name="line.220"></a>
+<span class="sourceLineNo">221</span>            changed = this.tryChangeEquipment(player, item, slot, false);<a name="line.221"></a>
+<span class="sourceLineNo">222</span>        }<a name="line.222"></a>
+<span class="sourceLineNo">223</span>        <a name="line.223"></a>
+<span class="sourceLineNo">224</span>        if (changed) {<a name="line.224"></a>
+<span class="sourceLineNo">225</span>            level.addSound(this, Sound.MOB_ARMOR_STAND_PLACE);<a name="line.225"></a>
+<span class="sourceLineNo">226</span>        }<a name="line.226"></a>
+<span class="sourceLineNo">227</span><a name="line.227"></a>
+<span class="sourceLineNo">228</span>        return false; // Returning true would consume the item but tryChangeEquipment already manages the inventory<a name="line.228"></a>
+<span class="sourceLineNo">229</span>    }<a name="line.229"></a>
+<span class="sourceLineNo">230</span><a name="line.230"></a>
+<span class="sourceLineNo">231</span>    private boolean tryChangeEquipment(Player player, Item handItem, int slot, boolean isArmorSlot) {<a name="line.231"></a>
+<span class="sourceLineNo">232</span>        BaseInventory inventory = isArmorSlot? armorInventory : equipmentInventory;<a name="line.232"></a>
+<span class="sourceLineNo">233</span>        Item item = inventory.getItem(slot);<a name="line.233"></a>
+<span class="sourceLineNo">234</span>        <a name="line.234"></a>
+<span class="sourceLineNo">235</span>        if (item.isNull() &amp;&amp; !handItem.isNull()) {<a name="line.235"></a>
+<span class="sourceLineNo">236</span>            // Adding item to the armor stand<a name="line.236"></a>
+<span class="sourceLineNo">237</span>            Item itemClone = handItem.clone();<a name="line.237"></a>
+<span class="sourceLineNo">238</span>            itemClone.setCount(1);<a name="line.238"></a>
+<span class="sourceLineNo">239</span>            inventory.setItem(slot, itemClone);<a name="line.239"></a>
+<span class="sourceLineNo">240</span>            if (!player.isCreative()) {<a name="line.240"></a>
+<span class="sourceLineNo">241</span>                handItem.count--;<a name="line.241"></a>
+<span class="sourceLineNo">242</span>                player.getInventory().setItem(player.getInventory().getHeldItemIndex(), handItem);<a name="line.242"></a>
+<span class="sourceLineNo">243</span>            }<a name="line.243"></a>
+<span class="sourceLineNo">244</span>            return true;<a name="line.244"></a>
+<span class="sourceLineNo">245</span>        } else if (!item.isNull()) {<a name="line.245"></a>
+<span class="sourceLineNo">246</span>            Item itemtoAddToArmorStand = Item.getBlock(BlockID.AIR);<a name="line.246"></a>
+<span class="sourceLineNo">247</span>            if (!handItem.isNull()) {<a name="line.247"></a>
+<span class="sourceLineNo">248</span>                if (handItem.equals(item, true, true)) {<a name="line.248"></a>
+<span class="sourceLineNo">249</span>                    // Attempted to replace with the same item type<a name="line.249"></a>
+<span class="sourceLineNo">250</span>                    return false;<a name="line.250"></a>
+<span class="sourceLineNo">251</span>                }<a name="line.251"></a>
+<span class="sourceLineNo">252</span>                <a name="line.252"></a>
+<span class="sourceLineNo">253</span>                if (item.count &gt; 1) {<a name="line.253"></a>
+<span class="sourceLineNo">254</span>                    // The armor stand have more items than 1, item swapping is not supported in this situation<a name="line.254"></a>
+<span class="sourceLineNo">255</span>                    return false;<a name="line.255"></a>
+<span class="sourceLineNo">256</span>                }<a name="line.256"></a>
+<span class="sourceLineNo">257</span>                <a name="line.257"></a>
+<span class="sourceLineNo">258</span>                Item itemToSetToPlayerInv;<a name="line.258"></a>
+<span class="sourceLineNo">259</span>                if (handItem.count &gt; 1) {<a name="line.259"></a>
+<span class="sourceLineNo">260</span>                    itemtoAddToArmorStand = handItem.clone();<a name="line.260"></a>
+<span class="sourceLineNo">261</span>                    itemtoAddToArmorStand.setCount(1);<a name="line.261"></a>
+<span class="sourceLineNo">262</span>                    <a name="line.262"></a>
+<span class="sourceLineNo">263</span>                    itemToSetToPlayerInv = handItem.clone();<a name="line.263"></a>
+<span class="sourceLineNo">264</span>                    itemToSetToPlayerInv.count--;<a name="line.264"></a>
+<span class="sourceLineNo">265</span>                } else {<a name="line.265"></a>
+<span class="sourceLineNo">266</span>                    itemtoAddToArmorStand = handItem.clone();<a name="line.266"></a>
+<span class="sourceLineNo">267</span>                    itemToSetToPlayerInv = Item.getBlock(BlockID.AIR);<a name="line.267"></a>
+<span class="sourceLineNo">268</span>                }<a name="line.268"></a>
+<span class="sourceLineNo">269</span>                player.getInventory().setItem(player.getInventory().getHeldItemIndex(), itemToSetToPlayerInv);<a name="line.269"></a>
+<span class="sourceLineNo">270</span>            }<a name="line.270"></a>
+<span class="sourceLineNo">271</span>            <a name="line.271"></a>
+<span class="sourceLineNo">272</span>            // Removing item from the armor stand<a name="line.272"></a>
+<span class="sourceLineNo">273</span>            Item[] notAdded = player.getInventory().addItem(item);<a name="line.273"></a>
+<span class="sourceLineNo">274</span>            if (notAdded.length &gt; 0) {<a name="line.274"></a>
+<span class="sourceLineNo">275</span>                if (notAdded[0].count == item.count) {<a name="line.275"></a>
+<span class="sourceLineNo">276</span>                    if (!handItem.isNull()) {<a name="line.276"></a>
+<span class="sourceLineNo">277</span>                        player.getInventory().setItem(player.getInventory().getHeldItemIndex(), handItem);<a name="line.277"></a>
+<span class="sourceLineNo">278</span>                    }<a name="line.278"></a>
+<span class="sourceLineNo">279</span>                    return false;<a name="line.279"></a>
+<span class="sourceLineNo">280</span>                }<a name="line.280"></a>
+<span class="sourceLineNo">281</span>                <a name="line.281"></a>
+<span class="sourceLineNo">282</span>                Item itemClone = item.clone();<a name="line.282"></a>
+<span class="sourceLineNo">283</span>                itemClone.count -= notAdded[0].count;<a name="line.283"></a>
+<span class="sourceLineNo">284</span>                inventory.setItem(slot, itemClone);<a name="line.284"></a>
+<span class="sourceLineNo">285</span>            } else {<a name="line.285"></a>
+<span class="sourceLineNo">286</span>                inventory.setItem(slot, itemtoAddToArmorStand);<a name="line.286"></a>
+<span class="sourceLineNo">287</span>            }<a name="line.287"></a>
+<span class="sourceLineNo">288</span>            return true;<a name="line.288"></a>
+<span class="sourceLineNo">289</span>        }<a name="line.289"></a>
+<span class="sourceLineNo">290</span>        return false;<a name="line.290"></a>
+<span class="sourceLineNo">291</span>    }<a name="line.291"></a>
+<span class="sourceLineNo">292</span><a name="line.292"></a>
+<span class="sourceLineNo">293</span><a name="line.293"></a>
+<span class="sourceLineNo">294</span>    private int getPose() {<a name="line.294"></a>
+<span class="sourceLineNo">295</span>        return this.dataProperties.getInt(Entity.DATA_ARMOR_STAND_POSE_INDEX);<a name="line.295"></a>
+<span class="sourceLineNo">296</span>    }<a name="line.296"></a>
+<span class="sourceLineNo">297</span><a name="line.297"></a>
+<span class="sourceLineNo">298</span>    private void setPose(int pose) {<a name="line.298"></a>
+<span class="sourceLineNo">299</span>        this.dataProperties.putInt(Entity.DATA_ARMOR_STAND_POSE_INDEX, pose);<a name="line.299"></a>
+<span class="sourceLineNo">300</span>        SetEntityDataPacket setEntityDataPacket = new SetEntityDataPacket();<a name="line.300"></a>
+<span class="sourceLineNo">301</span>        setEntityDataPacket.eid = this.getId();<a name="line.301"></a>
+<span class="sourceLineNo">302</span>        setEntityDataPacket.metadata = this.getDataProperties();<a name="line.302"></a>
+<span class="sourceLineNo">303</span>        Server.getInstance().getOnlinePlayers().values().forEach(all -&gt; all.dataPacket(setEntityDataPacket));<a name="line.303"></a>
+<span class="sourceLineNo">304</span>    }<a name="line.304"></a>
+<span class="sourceLineNo">305</span><a name="line.305"></a>
+<span class="sourceLineNo">306</span>    @Override<a name="line.306"></a>
+<span class="sourceLineNo">307</span>    public void saveNBT() {<a name="line.307"></a>
+<span class="sourceLineNo">308</span>        super.saveNBT();<a name="line.308"></a>
+<span class="sourceLineNo">309</span><a name="line.309"></a>
+<span class="sourceLineNo">310</span>        this.namedTag.put(TAG_MAINHAND, NBTIO.putItemHelper(this.equipmentInventory.getItemInHand()));<a name="line.310"></a>
+<span class="sourceLineNo">311</span>        this.namedTag.put(TAG_OFFHAND, NBTIO.putItemHelper(this.equipmentInventory.getItemInOffhand()));<a name="line.311"></a>
+<span class="sourceLineNo">312</span><a name="line.312"></a>
+<span class="sourceLineNo">313</span>        if (this.armorInventory != null) {<a name="line.313"></a>
+<span class="sourceLineNo">314</span>            ListTag&lt;CompoundTag&gt; armorTag = new ListTag&lt;&gt;(TAG_ARMOR);<a name="line.314"></a>
+<span class="sourceLineNo">315</span>            for (int i = 0; i &lt; 4; i++) {<a name="line.315"></a>
+<span class="sourceLineNo">316</span>                armorTag.add(NBTIO.putItemHelper(this.armorInventory.getItem(i), i));<a name="line.316"></a>
+<span class="sourceLineNo">317</span>            }<a name="line.317"></a>
+<span class="sourceLineNo">318</span>            this.namedTag.putList(armorTag);<a name="line.318"></a>
+<span class="sourceLineNo">319</span>        }<a name="line.319"></a>
+<span class="sourceLineNo">320</span><a name="line.320"></a>
+<span class="sourceLineNo">321</span>        this.namedTag.putInt(TAG_POSE_INDEX, this.getPose());<a name="line.321"></a>
+<span class="sourceLineNo">322</span>    }<a name="line.322"></a>
+<span class="sourceLineNo">323</span><a name="line.323"></a>
+<span class="sourceLineNo">324</span>    @Override<a name="line.324"></a>
+<span class="sourceLineNo">325</span>    public void spawnTo(Player player) {<a name="line.325"></a>
+<span class="sourceLineNo">326</span>        super.spawnTo(player);<a name="line.326"></a>
+<span class="sourceLineNo">327</span>        this.equipmentInventory.sendContents(player);<a name="line.327"></a>
+<span class="sourceLineNo">328</span>        this.armorInventory.sendContents(player);<a name="line.328"></a>
+<span class="sourceLineNo">329</span>    }<a name="line.329"></a>
+<span class="sourceLineNo">330</span><a name="line.330"></a>
+<span class="sourceLineNo">331</span>    @Override<a name="line.331"></a>
+<span class="sourceLineNo">332</span>    public void spawnToAll() {<a name="line.332"></a>
+<span class="sourceLineNo">333</span>        if (this.chunk != null &amp;&amp; !this.closed) {<a name="line.333"></a>
+<span class="sourceLineNo">334</span>            Collection&lt;Player&gt; chunkPlayers = this.level.getChunkPlayers(this.chunk.getX(), this.chunk.getZ()).values();<a name="line.334"></a>
+<span class="sourceLineNo">335</span>            for (Player chunkPlayer : chunkPlayers) {<a name="line.335"></a>
+<span class="sourceLineNo">336</span>                this.spawnTo(chunkPlayer);<a name="line.336"></a>
+<span class="sourceLineNo">337</span>            }<a name="line.337"></a>
+<span class="sourceLineNo">338</span>        }<a name="line.338"></a>
+<span class="sourceLineNo">339</span>    }<a name="line.339"></a>
+<span class="sourceLineNo">340</span><a name="line.340"></a>
+<span class="sourceLineNo">341</span>    @Override<a name="line.341"></a>
+<span class="sourceLineNo">342</span>    public void fall(float fallDistance) {<a name="line.342"></a>
+<span class="sourceLineNo">343</span>        super.fall(fallDistance);<a name="line.343"></a>
+<span class="sourceLineNo">344</span><a name="line.344"></a>
+<span class="sourceLineNo">345</span>        this.getLevel().addSound(this, Sound.MOB_ARMOR_STAND_LAND);<a name="line.345"></a>
+<span class="sourceLineNo">346</span>    }<a name="line.346"></a>
+<span class="sourceLineNo">347</span><a name="line.347"></a>
+<span class="sourceLineNo">348</span>    @Override<a name="line.348"></a>
+<span class="sourceLineNo">349</span>    public void kill() {<a name="line.349"></a>
+<span class="sourceLineNo">350</span>        super.kill();<a name="line.350"></a>
+<span class="sourceLineNo">351</span>        EntityDamageEvent lastDamageCause = this.lastDamageCause;<a name="line.351"></a>
+<span class="sourceLineNo">352</span>        boolean byAttack = lastDamageCause != null &amp;&amp; lastDamageCause.getCause() == EntityDamageEvent.DamageCause.ENTITY_ATTACK;<a name="line.352"></a>
+<span class="sourceLineNo">353</span>        <a name="line.353"></a>
+<span class="sourceLineNo">354</span>        Vector3 pos = getPosition();<a name="line.354"></a>
+<span class="sourceLineNo">355</span>        <a name="line.355"></a>
+<span class="sourceLineNo">356</span>        pos.y += 0.2;<a name="line.356"></a>
+<span class="sourceLineNo">357</span>        level.dropItem(pos, armorInventory.getBoots());<a name="line.357"></a>
+<span class="sourceLineNo">358</span>        <a name="line.358"></a>
+<span class="sourceLineNo">359</span>        pos.y = y + 0.6;<a name="line.359"></a>
+<span class="sourceLineNo">360</span>        level.dropItem(pos, armorInventory.getLeggings());<a name="line.360"></a>
+<span class="sourceLineNo">361</span>        <a name="line.361"></a>
+<span class="sourceLineNo">362</span>        pos.y = y + 1.4;<a name="line.362"></a>
+<span class="sourceLineNo">363</span>        level.dropItem(byAttack? pos : this, Item.get(ItemID.ARMOR_STAND));<a name="line.363"></a>
+<span class="sourceLineNo">364</span>        level.dropItem(pos, armorInventory.getChestplate());<a name="line.364"></a>
+<span class="sourceLineNo">365</span>        equipmentInventory.getContents().values().forEach(items -&gt; this.level.dropItem(this, items));<a name="line.365"></a>
+<span class="sourceLineNo">366</span>        equipmentInventory.clearAll();<a name="line.366"></a>
+<span class="sourceLineNo">367</span>        <a name="line.367"></a>
+<span class="sourceLineNo">368</span>        pos.y = y + 1.8;<a name="line.368"></a>
+<span class="sourceLineNo">369</span>        level.dropItem(pos, armorInventory.getHelmet());<a name="line.369"></a>
+<span class="sourceLineNo">370</span>        armorInventory.clearAll();<a name="line.370"></a>
+<span class="sourceLineNo">371</span><a name="line.371"></a>
+<span class="sourceLineNo">372</span>        level.addSound(this, Sound.MOB_ARMOR_STAND_BREAK);<a name="line.372"></a>
+<span class="sourceLineNo">373</span>    }<a name="line.373"></a>
+<span class="sourceLineNo">374</span><a name="line.374"></a>
+<span class="sourceLineNo">375</span>    @Override<a name="line.375"></a>
+<span class="sourceLineNo">376</span>    public boolean attack(EntityDamageEvent source) {<a name="line.376"></a>
+<span class="sourceLineNo">377</span><a name="line.377"></a>
+<span class="sourceLineNo">378</span>        switch (source.getCause()) {<a name="line.378"></a>
+<span class="sourceLineNo">379</span>            case FALL:<a name="line.379"></a>
+<span class="sourceLineNo">380</span>                source.setCancelled(true);<a name="line.380"></a>
+<span class="sourceLineNo">381</span>                level.addSound(this, Sound.MOB_ARMOR_STAND_LAND);<a name="line.381"></a>
+<span class="sourceLineNo">382</span>                break;<a name="line.382"></a>
+<span class="sourceLineNo">383</span>            case CONTACT:<a name="line.383"></a>
+<span class="sourceLineNo">384</span>            case HUNGER:<a name="line.384"></a>
+<span class="sourceLineNo">385</span>            case MAGIC:<a name="line.385"></a>
+<span class="sourceLineNo">386</span>            case DROWNING:<a name="line.386"></a>
+<span class="sourceLineNo">387</span>            case SUFFOCATION:<a name="line.387"></a>
+<span class="sourceLineNo">388</span>            case PROJECTILE:<a name="line.388"></a>
+<span class="sourceLineNo">389</span>                source.setCancelled(true);<a name="line.389"></a>
+<span class="sourceLineNo">390</span>                break;<a name="line.390"></a>
+<span class="sourceLineNo">391</span>            case FIRE:<a name="line.391"></a>
+<span class="sourceLineNo">392</span>            case FIRE_TICK:<a name="line.392"></a>
+<span class="sourceLineNo">393</span>            case LAVA:<a name="line.393"></a>
+<span class="sourceLineNo">394</span>                if (hasEffect(Effect.FIRE_RESISTANCE)) {<a name="line.394"></a>
+<span class="sourceLineNo">395</span>                    return false;<a name="line.395"></a>
+<span class="sourceLineNo">396</span>                }<a name="line.396"></a>
+<span class="sourceLineNo">397</span>            default:<a name="line.397"></a>
+<span class="sourceLineNo">398</span>        }<a name="line.398"></a>
+<span class="sourceLineNo">399</span>        <a name="line.399"></a>
+<span class="sourceLineNo">400</span>        if (source.getCause() != EntityDamageEvent.DamageCause.ENTITY_ATTACK) {<a name="line.400"></a>
+<span class="sourceLineNo">401</span>            if (namedTag.getByte("InvulnerableTimer") &gt; 0) {<a name="line.401"></a>
+<span class="sourceLineNo">402</span>                source.setCancelled(true);<a name="line.402"></a>
+<span class="sourceLineNo">403</span>            }<a name="line.403"></a>
+<span class="sourceLineNo">404</span>            if (super.attack(source)) {<a name="line.404"></a>
+<span class="sourceLineNo">405</span>                namedTag.putByte("InvulnerableTimer", 9);<a name="line.405"></a>
+<span class="sourceLineNo">406</span>                return true;<a name="line.406"></a>
+<span class="sourceLineNo">407</span>            }<a name="line.407"></a>
+<span class="sourceLineNo">408</span>            return false;<a name="line.408"></a>
+<span class="sourceLineNo">409</span>        }<a name="line.409"></a>
+<span class="sourceLineNo">410</span>        <a name="line.410"></a>
+<span class="sourceLineNo">411</span>        getServer().getPluginManager().callEvent(source);<a name="line.411"></a>
+<span class="sourceLineNo">412</span>        if (source.isCancelled()) {<a name="line.412"></a>
+<span class="sourceLineNo">413</span>            return false;<a name="line.413"></a>
+<span class="sourceLineNo">414</span>        }<a name="line.414"></a>
+<span class="sourceLineNo">415</span>        setLastDamageCause(source);<a name="line.415"></a>
+<span class="sourceLineNo">416</span><a name="line.416"></a>
+<span class="sourceLineNo">417</span>        if (getDataPropertyInt(DATA_HURT_TIME) &gt; 0) {<a name="line.417"></a>
+<span class="sourceLineNo">418</span>            setHealth(0);<a name="line.418"></a>
+<span class="sourceLineNo">419</span>            return true;<a name="line.419"></a>
+<span class="sourceLineNo">420</span>        }<a name="line.420"></a>
+<span class="sourceLineNo">421</span>        <a name="line.421"></a>
+<span class="sourceLineNo">422</span>        if (source instanceof EntityDamageByEntityEvent) {<a name="line.422"></a>
+<span class="sourceLineNo">423</span>            EntityDamageByEntityEvent event = (EntityDamageByEntityEvent) source;<a name="line.423"></a>
+<span class="sourceLineNo">424</span>            if (event.getDamager() instanceof Player){<a name="line.424"></a>
+<span class="sourceLineNo">425</span>                Player player = (Player) event.getDamager();<a name="line.425"></a>
+<span class="sourceLineNo">426</span>                if (player.isCreative()) {<a name="line.426"></a>
+<span class="sourceLineNo">427</span>                    this.level.addParticle(new DestroyBlockParticle(this, Block.get(BlockID.WOODEN_PLANKS)));<a name="line.427"></a>
+<span class="sourceLineNo">428</span>                    this.close();<a name="line.428"></a>
+<span class="sourceLineNo">429</span>                    return true;<a name="line.429"></a>
+<span class="sourceLineNo">430</span>                }<a name="line.430"></a>
+<span class="sourceLineNo">431</span>            }<a name="line.431"></a>
+<span class="sourceLineNo">432</span>        }<a name="line.432"></a>
+<span class="sourceLineNo">433</span><a name="line.433"></a>
+<span class="sourceLineNo">434</span>        setDataProperty(new IntEntityData(DATA_HURT_TIME, 9), true);<a name="line.434"></a>
+<span class="sourceLineNo">435</span>        level.addSound(this, Sound.MOB_ARMOR_STAND_HIT);<a name="line.435"></a>
+<span class="sourceLineNo">436</span>        <a name="line.436"></a>
+<span class="sourceLineNo">437</span>        return true;<a name="line.437"></a>
+<span class="sourceLineNo">438</span>    }<a name="line.438"></a>
+<span class="sourceLineNo">439</span><a name="line.439"></a>
+<span class="sourceLineNo">440</span>    @Since("1.5.1.0-PN")<a name="line.440"></a>
+<span class="sourceLineNo">441</span>    @PowerNukkitOnly<a name="line.441"></a>
+<span class="sourceLineNo">442</span>    @Override<a name="line.442"></a>
+<span class="sourceLineNo">443</span>    public String getOriginalName() {<a name="line.443"></a>
+<span class="sourceLineNo">444</span>        return "Armor Stand";<a name="line.444"></a>
+<span class="sourceLineNo">445</span>    }<a name="line.445"></a>
+<span class="sourceLineNo">446</span><a name="line.446"></a>
+<span class="sourceLineNo">447</span>    @Override<a name="line.447"></a>
+<span class="sourceLineNo">448</span>    public boolean entityBaseTick(int tickDiff) {<a name="line.448"></a>
+<span class="sourceLineNo">449</span>        boolean hasUpdate = super.entityBaseTick(tickDiff);<a name="line.449"></a>
+<span class="sourceLineNo">450</span><a name="line.450"></a>
+<span class="sourceLineNo">451</span>        int hurtTime = getDataPropertyInt(DATA_HURT_TIME);<a name="line.451"></a>
+<span class="sourceLineNo">452</span>        if (hurtTime &gt; 0 &amp;&amp; age % 2 == 0) {<a name="line.452"></a>
+<span class="sourceLineNo">453</span>            setDataProperty(new IntEntityData(DATA_HURT_TIME, hurtTime - 1), true);<a name="line.453"></a>
+<span class="sourceLineNo">454</span>            hasUpdate = true;<a name="line.454"></a>
+<span class="sourceLineNo">455</span>        }<a name="line.455"></a>
+<span class="sourceLineNo">456</span>        hurtTime = namedTag.getByte("InvulnerableTimer");<a name="line.456"></a>
+<span class="sourceLineNo">457</span>        if (hurtTime &gt; 0 &amp;&amp; age % 2 == 0) {<a name="line.457"></a>
+<span class="sourceLineNo">458</span>            namedTag.putByte("InvulnerableTimer", hurtTime - 1);<a name="line.458"></a>
+<span class="sourceLineNo">459</span>        }<a name="line.459"></a>
+<span class="sourceLineNo">460</span><a name="line.460"></a>
+<span class="sourceLineNo">461</span>        return hasUpdate;<a name="line.461"></a>
+<span class="sourceLineNo">462</span>    }<a name="line.462"></a>
+<span class="sourceLineNo">463</span><a name="line.463"></a>
+<span class="sourceLineNo">464</span>    @PowerNukkitOnly<a name="line.464"></a>
+<span class="sourceLineNo">465</span>    @Since("1.4.0.0-PN")<a name="line.465"></a>
+<span class="sourceLineNo">466</span>    public EntityEquipmentInventory getEquipmentInventory() {<a name="line.466"></a>
+<span class="sourceLineNo">467</span>        return this.equipmentInventory;<a name="line.467"></a>
+<span class="sourceLineNo">468</span>    }<a name="line.468"></a>
+<span class="sourceLineNo">469</span><a name="line.469"></a>
+<span class="sourceLineNo">470</span>    @Override<a name="line.470"></a>
+<span class="sourceLineNo">471</span>    public EntityArmorInventory getInventory() {<a name="line.471"></a>
+<span class="sourceLineNo">472</span>        return this.armorInventory;<a name="line.472"></a>
+<span class="sourceLineNo">473</span>    }<a name="line.473"></a>
+<span class="sourceLineNo">474</span><a name="line.474"></a>
+<span class="sourceLineNo">475</span>    @Override<a name="line.475"></a>
+<span class="sourceLineNo">476</span>    public boolean onUpdate(int currentTick) {<a name="line.476"></a>
+<span class="sourceLineNo">477</span>        int tickDiff = currentTick - lastUpdate;<a name="line.477"></a>
+<span class="sourceLineNo">478</span>        boolean hasUpdated = super.onUpdate(currentTick);<a name="line.478"></a>
+<span class="sourceLineNo">479</span><a name="line.479"></a>
+<span class="sourceLineNo">480</span>        if (closed || tickDiff &lt;= 0 &amp;&amp; !justCreated) {<a name="line.480"></a>
+<span class="sourceLineNo">481</span>            return hasUpdated;<a name="line.481"></a>
+<span class="sourceLineNo">482</span>        }<a name="line.482"></a>
+<span class="sourceLineNo">483</span><a name="line.483"></a>
+<span class="sourceLineNo">484</span>        this.timing.startTiming();<a name="line.484"></a>
+<span class="sourceLineNo">485</span><a name="line.485"></a>
+<span class="sourceLineNo">486</span>        lastUpdate = currentTick;<a name="line.486"></a>
+<span class="sourceLineNo">487</span><a name="line.487"></a>
+<span class="sourceLineNo">488</span>        boolean hasUpdate = entityBaseTick(tickDiff);<a name="line.488"></a>
+<span class="sourceLineNo">489</span><a name="line.489"></a>
+<span class="sourceLineNo">490</span>        if (isAlive()) {<a name="line.490"></a>
+<span class="sourceLineNo">491</span>            if (getHealth() &lt; getMaxHealth()) {<a name="line.491"></a>
+<span class="sourceLineNo">492</span>                setHealth(getHealth() + 0.001f);<a name="line.492"></a>
+<span class="sourceLineNo">493</span>            }<a name="line.493"></a>
+<span class="sourceLineNo">494</span>            motionY -= getGravity();<a name="line.494"></a>
+<span class="sourceLineNo">495</span>            <a name="line.495"></a>
+<span class="sourceLineNo">496</span>            double highestPosition = this.highestPosition;<a name="line.496"></a>
+<span class="sourceLineNo">497</span>            move(motionX, motionY, motionZ);<a name="line.497"></a>
+<span class="sourceLineNo">498</span><a name="line.498"></a>
+<span class="sourceLineNo">499</span>            float friction = 1 - getDrag();<a name="line.499"></a>
+<span class="sourceLineNo">500</span><a name="line.500"></a>
+<span class="sourceLineNo">501</span>            motionX *= friction;<a name="line.501"></a>
+<span class="sourceLineNo">502</span>            motionY *= 1 - getDrag();<a name="line.502"></a>
+<span class="sourceLineNo">503</span>            motionZ *= friction;<a name="line.503"></a>
+<span class="sourceLineNo">504</span><a name="line.504"></a>
+<span class="sourceLineNo">505</span>            updateMovement();<a name="line.505"></a>
+<span class="sourceLineNo">506</span>            hasUpdate = true;<a name="line.506"></a>
+<span class="sourceLineNo">507</span>            if (onGround &amp;&amp; (highestPosition - y) &gt;= 3) {<a name="line.507"></a>
+<span class="sourceLineNo">508</span>                level.addSound(this, Sound.MOB_ARMOR_STAND_LAND);<a name="line.508"></a>
+<span class="sourceLineNo">509</span>            }<a name="line.509"></a>
+<span class="sourceLineNo">510</span>        }<a name="line.510"></a>
+<span class="sourceLineNo">511</span><a name="line.511"></a>
+<span class="sourceLineNo">512</span>        this.timing.stopTiming();<a name="line.512"></a>
+<span class="sourceLineNo">513</span><a name="line.513"></a>
+<span class="sourceLineNo">514</span>        return hasUpdate || !onGround || Math.abs(motionX) &gt; 0.00001 || Math.abs(motionY) &gt; 0.00001 || Math.abs(motionZ) &gt; 0.00001;<a name="line.514"></a>
+<span class="sourceLineNo">515</span>    }<a name="line.515"></a>
+<span class="sourceLineNo">516</span><a name="line.516"></a>
+<span class="sourceLineNo">517</span>    @Override<a name="line.517"></a>
+<span class="sourceLineNo">518</span>    protected float getDrag() {<a name="line.518"></a>
+<span class="sourceLineNo">519</span>        if (hasWaterAt(getHeight() / 2f)) {<a name="line.519"></a>
+<span class="sourceLineNo">520</span>            return 0.25f;<a name="line.520"></a>
+<span class="sourceLineNo">521</span>        }<a name="line.521"></a>
+<span class="sourceLineNo">522</span>        return 0f;<a name="line.522"></a>
+<span class="sourceLineNo">523</span>    }<a name="line.523"></a>
+<span class="sourceLineNo">524</span><a name="line.524"></a>
+<span class="sourceLineNo">525</span>    @Override<a name="line.525"></a>
+<span class="sourceLineNo">526</span>    public String getInteractButtonText() {<a name="line.526"></a>
+<span class="sourceLineNo">527</span>        return "action.interact.armorstand.equip";<a name="line.527"></a>
+<span class="sourceLineNo">528</span>    }<a name="line.528"></a>
+<span class="sourceLineNo">529</span><a name="line.529"></a>
+<span class="sourceLineNo">530</span>    @Override<a name="line.530"></a>
+<span class="sourceLineNo">531</span>    public boolean canDoInteraction() {<a name="line.531"></a>
+<span class="sourceLineNo">532</span>        return true;<a name="line.532"></a>
+<span class="sourceLineNo">533</span>    }<a name="line.533"></a>
+<span class="sourceLineNo">534</span>}<a name="line.534"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>

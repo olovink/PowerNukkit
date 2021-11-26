@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package cn.nukkit.permission;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>import cn.nukkit.Server;<a name="line.3"></a>
+<span class="sourceLineNo">004</span><a name="line.4"></a>
+<span class="sourceLineNo">005</span>/**<a name="line.5"></a>
+<span class="sourceLineNo">006</span> * @author MagicDroidX (Nukkit Project)<a name="line.6"></a>
+<span class="sourceLineNo">007</span> */<a name="line.7"></a>
+<span class="sourceLineNo">008</span>public abstract class DefaultPermissions {<a name="line.8"></a>
+<span class="sourceLineNo">009</span>    public static final String ROOT = "nukkit";<a name="line.9"></a>
+<span class="sourceLineNo">010</span><a name="line.10"></a>
+<span class="sourceLineNo">011</span>    public static Permission registerPermission(Permission perm) {<a name="line.11"></a>
+<span class="sourceLineNo">012</span>        return registerPermission(perm, null);<a name="line.12"></a>
+<span class="sourceLineNo">013</span>    }<a name="line.13"></a>
+<span class="sourceLineNo">014</span><a name="line.14"></a>
+<span class="sourceLineNo">015</span>    public static Permission registerPermission(Permission perm, Permission parent) {<a name="line.15"></a>
+<span class="sourceLineNo">016</span>        if (parent != null) {<a name="line.16"></a>
+<span class="sourceLineNo">017</span>            parent.getChildren().put(perm.getName(), true);<a name="line.17"></a>
+<span class="sourceLineNo">018</span>        }<a name="line.18"></a>
+<span class="sourceLineNo">019</span>        Server.getInstance().getPluginManager().addPermission(perm);<a name="line.19"></a>
+<span class="sourceLineNo">020</span><a name="line.20"></a>
+<span class="sourceLineNo">021</span>        return Server.getInstance().getPluginManager().getPermission(perm.getName());<a name="line.21"></a>
+<span class="sourceLineNo">022</span>    }<a name="line.22"></a>
+<span class="sourceLineNo">023</span><a name="line.23"></a>
+<span class="sourceLineNo">024</span>    public static void registerCorePermissions() {<a name="line.24"></a>
+<span class="sourceLineNo">025</span>        Permission parent = registerPermission(new Permission(ROOT, "Allows using all Nukkit commands and utilities"));<a name="line.25"></a>
+<span class="sourceLineNo">026</span><a name="line.26"></a>
+<span class="sourceLineNo">027</span>        Permission broadcasts = registerPermission(new Permission(ROOT + ".broadcast", "Allows the user to receive all broadcast messages"), parent);<a name="line.27"></a>
+<span class="sourceLineNo">028</span><a name="line.28"></a>
+<span class="sourceLineNo">029</span>        registerPermission(new Permission(ROOT + ".broadcast.admin", "Allows the user to receive administrative broadcasts", Permission.DEFAULT_OP), broadcasts);<a name="line.29"></a>
+<span class="sourceLineNo">030</span>        registerPermission(new Permission(ROOT + ".broadcast.user", "Allows the user to receive user broadcasts", Permission.DEFAULT_TRUE), broadcasts);<a name="line.30"></a>
+<span class="sourceLineNo">031</span><a name="line.31"></a>
+<span class="sourceLineNo">032</span>        broadcasts.recalculatePermissibles();<a name="line.32"></a>
+<span class="sourceLineNo">033</span><a name="line.33"></a>
+<span class="sourceLineNo">034</span>        Permission commands = registerPermission(new Permission(ROOT + ".command", "Allows using all Nukkit commands"), parent);<a name="line.34"></a>
+<span class="sourceLineNo">035</span><a name="line.35"></a>
+<span class="sourceLineNo">036</span>        Permission whitelist = registerPermission(new Permission(ROOT + ".command.whitelist", "Allows the user to modify the server whitelist", Permission.DEFAULT_OP), commands);<a name="line.36"></a>
+<span class="sourceLineNo">037</span>        registerPermission(new Permission(ROOT + ".command.whitelist.add", "Allows the user to add a player to the server whitelist"), whitelist);<a name="line.37"></a>
+<span class="sourceLineNo">038</span>        registerPermission(new Permission(ROOT + ".command.whitelist.remove", "Allows the user to remove a player to the server whitelist"), whitelist);<a name="line.38"></a>
+<span class="sourceLineNo">039</span>        registerPermission(new Permission(ROOT + ".command.whitelist.reload", "Allows the user to reload the server whitelist"), whitelist);<a name="line.39"></a>
+<span class="sourceLineNo">040</span>        registerPermission(new Permission(ROOT + ".command.whitelist.enable", "Allows the user to enable the server whitelist"), whitelist);<a name="line.40"></a>
+<span class="sourceLineNo">041</span>        registerPermission(new Permission(ROOT + ".command.whitelist.disable", "Allows the user to disable the server whitelist"), whitelist);<a name="line.41"></a>
+<span class="sourceLineNo">042</span>        registerPermission(new Permission(ROOT + ".command.whitelist.list", "Allows the user to list all the players on the server whitelist"), whitelist);<a name="line.42"></a>
+<span class="sourceLineNo">043</span>        whitelist.recalculatePermissibles();<a name="line.43"></a>
+<span class="sourceLineNo">044</span><a name="line.44"></a>
+<span class="sourceLineNo">045</span>        Permission ban = registerPermission(new Permission(ROOT + ".command.ban", "Allows the user to ban people", Permission.DEFAULT_OP), commands);<a name="line.45"></a>
+<span class="sourceLineNo">046</span>        registerPermission(new Permission(ROOT + ".command.ban.player", "Allows the user to ban players"), ban);<a name="line.46"></a>
+<span class="sourceLineNo">047</span>        registerPermission(new Permission(ROOT + ".command.ban.ip", "Allows the user to ban IP addresses"), ban);<a name="line.47"></a>
+<span class="sourceLineNo">048</span>        registerPermission(new Permission(ROOT + ".command.ban.list", "Allows the user to list all the banned ips or players"), ban);<a name="line.48"></a>
+<span class="sourceLineNo">049</span>        ban.recalculatePermissibles();<a name="line.49"></a>
+<span class="sourceLineNo">050</span><a name="line.50"></a>
+<span class="sourceLineNo">051</span>        Permission unban = registerPermission(new Permission(ROOT + ".command.unban", "Allows the user to unban people", Permission.DEFAULT_OP), commands);<a name="line.51"></a>
+<span class="sourceLineNo">052</span>        registerPermission(new Permission(ROOT + ".command.unban.player", "Allows the user to unban players"), unban);<a name="line.52"></a>
+<span class="sourceLineNo">053</span>        registerPermission(new Permission(ROOT + ".command.unban.ip", "Allows the user to unban IP addresses"), unban);<a name="line.53"></a>
+<span class="sourceLineNo">054</span>        unban.recalculatePermissibles();<a name="line.54"></a>
+<span class="sourceLineNo">055</span><a name="line.55"></a>
+<span class="sourceLineNo">056</span>        Permission op = registerPermission(new Permission(ROOT + ".command.op", "Allows the user to change operators", Permission.DEFAULT_OP), commands);<a name="line.56"></a>
+<span class="sourceLineNo">057</span>        registerPermission(new Permission(ROOT + ".command.op.give", "Allows the user to give a player operator status"), op);<a name="line.57"></a>
+<span class="sourceLineNo">058</span>        registerPermission(new Permission(ROOT + ".command.op.take", "Allows the user to take a players operator status"), op);<a name="line.58"></a>
+<span class="sourceLineNo">059</span>        op.recalculatePermissibles();<a name="line.59"></a>
+<span class="sourceLineNo">060</span><a name="line.60"></a>
+<span class="sourceLineNo">061</span>        Permission save = registerPermission(new Permission(ROOT + ".command.save", "Allows the user to save the worlds", Permission.DEFAULT_OP), commands);<a name="line.61"></a>
+<span class="sourceLineNo">062</span>        registerPermission(new Permission(ROOT + ".command.save.enable", "Allows the user to enable automatic saving"), save);<a name="line.62"></a>
+<span class="sourceLineNo">063</span>        registerPermission(new Permission(ROOT + ".command.save.disable", "Allows the user to disable automatic saving"), save);<a name="line.63"></a>
+<span class="sourceLineNo">064</span>        registerPermission(new Permission(ROOT + ".command.save.perform", "Allows the user to perform a manual save"), save);<a name="line.64"></a>
+<span class="sourceLineNo">065</span>        save.recalculatePermissibles();<a name="line.65"></a>
+<span class="sourceLineNo">066</span><a name="line.66"></a>
+<span class="sourceLineNo">067</span>        Permission time = registerPermission(new Permission(ROOT + ".command.time", "Allows the user to alter the time", Permission.DEFAULT_OP), commands);<a name="line.67"></a>
+<span class="sourceLineNo">068</span>        registerPermission(new Permission(ROOT + ".command.time.add", "Allows the user to fast-forward time"), time);<a name="line.68"></a>
+<span class="sourceLineNo">069</span>        registerPermission(new Permission(ROOT + ".command.time.set", "Allows the user to change the time"), time);<a name="line.69"></a>
+<span class="sourceLineNo">070</span>        registerPermission(new Permission(ROOT + ".command.time.start", "Allows the user to restart the time"), time);<a name="line.70"></a>
+<span class="sourceLineNo">071</span>        registerPermission(new Permission(ROOT + ".command.time.stop", "Allows the user to stop the time"), time);<a name="line.71"></a>
+<span class="sourceLineNo">072</span>        registerPermission(new Permission(ROOT + ".command.time.query", "Allows the user query the time"), time);<a name="line.72"></a>
+<span class="sourceLineNo">073</span>        time.recalculatePermissibles();<a name="line.73"></a>
+<span class="sourceLineNo">074</span><a name="line.74"></a>
+<span class="sourceLineNo">075</span>        Permission kill = registerPermission(new Permission(ROOT + ".command.kill", "Allows the user to kill players", Permission.DEFAULT_OP), commands);<a name="line.75"></a>
+<span class="sourceLineNo">076</span>        registerPermission(new Permission(ROOT + ".command.kill.self", "Allows the user to commit suicide", Permission.DEFAULT_TRUE), kill);<a name="line.76"></a>
+<span class="sourceLineNo">077</span>        registerPermission(new Permission(ROOT + ".command.kill.other", "Allows the user to kill other players"), kill);<a name="line.77"></a>
+<span class="sourceLineNo">078</span>        kill.recalculatePermissibles();<a name="line.78"></a>
+<span class="sourceLineNo">079</span><a name="line.79"></a>
+<span class="sourceLineNo">080</span>        Permission gamemode = registerPermission(new Permission(ROOT + ".command.gamemode", "Allows the user to change the gamemode of players", Permission.DEFAULT_OP), commands);<a name="line.80"></a>
+<span class="sourceLineNo">081</span>        registerPermission(new Permission(ROOT + ".command.gamemode.survival", "Allows the user to change the gamemode to survival", Permission.DEFAULT_OP), gamemode);<a name="line.81"></a>
+<span class="sourceLineNo">082</span>        registerPermission(new Permission(ROOT + ".command.gamemode.creative", "Allows the user to change the gamemode to creative", Permission.DEFAULT_OP), gamemode);<a name="line.82"></a>
+<span class="sourceLineNo">083</span>        registerPermission(new Permission(ROOT + ".command.gamemode.adventure", "Allows the user to change the gamemode to adventure", Permission.DEFAULT_OP), gamemode);<a name="line.83"></a>
+<span class="sourceLineNo">084</span>        registerPermission(new Permission(ROOT + ".command.gamemode.spectator", "Allows the user to change the gamemode to spectator", Permission.DEFAULT_OP), gamemode);<a name="line.84"></a>
+<span class="sourceLineNo">085</span>        registerPermission(new Permission(ROOT + ".command.gamemode.other", "Allows the user to change the gamemode of other players", Permission.DEFAULT_OP), gamemode);<a name="line.85"></a>
+<span class="sourceLineNo">086</span>        gamemode.recalculatePermissibles();<a name="line.86"></a>
+<span class="sourceLineNo">087</span><a name="line.87"></a>
+<span class="sourceLineNo">088</span>        registerPermission(new Permission(ROOT + ".command.me", "Allows the user to perform a chat action", Permission.DEFAULT_TRUE), commands);<a name="line.88"></a>
+<span class="sourceLineNo">089</span>        registerPermission(new Permission(ROOT + ".command.tell", "Allows the user to privately message another player", Permission.DEFAULT_TRUE), commands);<a name="line.89"></a>
+<span class="sourceLineNo">090</span>        registerPermission(new Permission(ROOT + ".command.say", "Allows the user to talk as the console", Permission.DEFAULT_OP), commands);<a name="line.90"></a>
+<span class="sourceLineNo">091</span>        registerPermission(new Permission(ROOT + ".command.give", "Allows the user to give items to players", Permission.DEFAULT_OP), commands);<a name="line.91"></a>
+<span class="sourceLineNo">092</span>        registerPermission(new Permission(ROOT + ".command.effect", "Allows the user to give/take potion effects", Permission.DEFAULT_OP), commands);<a name="line.92"></a>
+<span class="sourceLineNo">093</span>        registerPermission(new Permission(ROOT + ".command.particle", "Allows the user to create particle effects", Permission.DEFAULT_OP), commands);<a name="line.93"></a>
+<span class="sourceLineNo">094</span>        registerPermission(new Permission(ROOT + ".command.teleport", "Allows the user to teleport players", Permission.DEFAULT_OP), commands);<a name="line.94"></a>
+<span class="sourceLineNo">095</span>        registerPermission(new Permission(ROOT + ".command.kick", "Allows the user to kick players", Permission.DEFAULT_OP), commands);<a name="line.95"></a>
+<span class="sourceLineNo">096</span>        registerPermission(new Permission(ROOT + ".command.stop", "Allows the user to stop the server", Permission.DEFAULT_OP), commands);<a name="line.96"></a>
+<span class="sourceLineNo">097</span>        registerPermission(new Permission(ROOT + ".command.list", "Allows the user to list all online players", Permission.DEFAULT_OP), commands);<a name="line.97"></a>
+<span class="sourceLineNo">098</span>        registerPermission(new Permission(ROOT + ".command.help", "Allows the user to view the help menu", Permission.DEFAULT_TRUE), commands);<a name="line.98"></a>
+<span class="sourceLineNo">099</span>        registerPermission(new Permission(ROOT + ".command.plugins", "Allows the user to view the list of plugins", Permission.DEFAULT_OP), commands);<a name="line.99"></a>
+<span class="sourceLineNo">100</span>        registerPermission(new Permission(ROOT + ".command.reload", "Allows the user to reload the server settings", Permission.DEFAULT_OP), commands);<a name="line.100"></a>
+<span class="sourceLineNo">101</span>        registerPermission(new Permission(ROOT + ".command.version", "Allows the user to view the version of the server", Permission.DEFAULT_TRUE), commands);<a name="line.101"></a>
+<span class="sourceLineNo">102</span>        registerPermission(new Permission(ROOT + ".command.defaultgamemode", "Allows the user to change the default gamemode", Permission.DEFAULT_OP), commands);<a name="line.102"></a>
+<span class="sourceLineNo">103</span>        registerPermission(new Permission(ROOT + ".command.seed", "Allows the user to view the seed of the world", Permission.DEFAULT_OP), commands);<a name="line.103"></a>
+<span class="sourceLineNo">104</span>        registerPermission(new Permission(ROOT + ".command.status", "Allows the user to view the server performance", Permission.DEFAULT_OP), commands);<a name="line.104"></a>
+<span class="sourceLineNo">105</span>        registerPermission(new Permission(ROOT + ".command.gc", "Allows the user to fire garbage collection tasks", Permission.DEFAULT_OP), commands);<a name="line.105"></a>
+<span class="sourceLineNo">106</span>        //registerPermission(new Permission(ROOT + ".command.dumpmemory", "Allows the user to dump memory contents", Permission.DEFAULT_OP), commands); // this command is not implemented<a name="line.106"></a>
+<span class="sourceLineNo">107</span>        registerPermission(new Permission(ROOT + ".command.gamerule", "Sets or queries a game rule value", Permission.DEFAULT_OP), commands);<a name="line.107"></a>
+<span class="sourceLineNo">108</span>        registerPermission(new Permission(ROOT + ".command.timings", "Allows the user to records timings for all plugin events", Permission.DEFAULT_OP), commands);<a name="line.108"></a>
+<span class="sourceLineNo">109</span>        registerPermission(new Permission(ROOT + ".command.title", "Allows the user to send titles to players", Permission.DEFAULT_OP), commands);<a name="line.109"></a>
+<span class="sourceLineNo">110</span>        registerPermission(new Permission(ROOT + ".command.spawnpoint", "Allows the user to change player's spawnpoint", Permission.DEFAULT_OP), commands);<a name="line.110"></a>
+<span class="sourceLineNo">111</span>        registerPermission(new Permission(ROOT + ".command.setworldspawn", "Allows the user to change the world spawn", Permission.DEFAULT_OP), commands);<a name="line.111"></a>
+<span class="sourceLineNo">112</span>        registerPermission(new Permission(ROOT + ".command.weather", "Allows the user to change the weather", Permission.DEFAULT_OP), commands);<a name="line.112"></a>
+<span class="sourceLineNo">113</span>        registerPermission(new Permission(ROOT + ".command.xp", "Allows the user to give experience", Permission.DEFAULT_OP), commands);<a name="line.113"></a>
+<span class="sourceLineNo">114</span>        registerPermission(new Permission(ROOT + ".command.enchant", "Allows the user to enchant items", Permission.DEFAULT_OP), commands);<a name="line.114"></a>
+<span class="sourceLineNo">115</span>        registerPermission(new Permission(ROOT + ".command.difficulty", "Allows the user to change the difficulty", Permission.DEFAULT_OP), commands);<a name="line.115"></a>
+<span class="sourceLineNo">116</span>        registerPermission(new Permission(ROOT + ".command.debug.perform", "Allows the user to use debugpaste command", Permission.DEFAULT_OP), commands);<a name="line.116"></a>
+<span class="sourceLineNo">117</span>        <a name="line.117"></a>
+<span class="sourceLineNo">118</span>        registerPermission(new Permission(ROOT + ".textcolor", "Allows the user to write colored text", Permission.DEFAULT_OP), commands);<a name="line.118"></a>
+<span class="sourceLineNo">119</span><a name="line.119"></a>
+<span class="sourceLineNo">120</span>        commands.recalculatePermissibles();<a name="line.120"></a>
+<span class="sourceLineNo">121</span><a name="line.121"></a>
+<span class="sourceLineNo">122</span>        parent.recalculatePermissibles();<a name="line.122"></a>
+<span class="sourceLineNo">123</span>    }<a name="line.123"></a>
+<span class="sourceLineNo">124</span><a name="line.124"></a>
+<span class="sourceLineNo">125</span>}<a name="line.125"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>

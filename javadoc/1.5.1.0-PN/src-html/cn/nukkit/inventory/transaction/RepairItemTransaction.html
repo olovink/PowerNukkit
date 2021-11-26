@@ -1,0 +1,476 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package cn.nukkit.inventory.transaction;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>import cn.nukkit.Player;<a name="line.3"></a>
+<span class="sourceLineNo">004</span>import cn.nukkit.api.Since;<a name="line.4"></a>
+<span class="sourceLineNo">005</span>import cn.nukkit.block.Block;<a name="line.5"></a>
+<span class="sourceLineNo">006</span>import cn.nukkit.event.block.AnvilDamageEvent;<a name="line.6"></a>
+<span class="sourceLineNo">007</span>import cn.nukkit.event.block.AnvilDamageEvent.DamageCause;<a name="line.7"></a>
+<span class="sourceLineNo">008</span>import cn.nukkit.event.inventory.RepairItemEvent;<a name="line.8"></a>
+<span class="sourceLineNo">009</span>import cn.nukkit.inventory.AnvilInventory;<a name="line.9"></a>
+<span class="sourceLineNo">010</span>import cn.nukkit.inventory.FakeBlockMenu;<a name="line.10"></a>
+<span class="sourceLineNo">011</span>import cn.nukkit.inventory.Inventory;<a name="line.11"></a>
+<span class="sourceLineNo">012</span>import cn.nukkit.inventory.transaction.action.InventoryAction;<a name="line.12"></a>
+<span class="sourceLineNo">013</span>import cn.nukkit.inventory.transaction.action.RepairItemAction;<a name="line.13"></a>
+<span class="sourceLineNo">014</span>import cn.nukkit.item.Item;<a name="line.14"></a>
+<span class="sourceLineNo">015</span>import cn.nukkit.item.enchantment.Enchantment;<a name="line.15"></a>
+<span class="sourceLineNo">016</span>import cn.nukkit.network.protocol.LevelEventPacket;<a name="line.16"></a>
+<span class="sourceLineNo">017</span>import cn.nukkit.network.protocol.types.NetworkInventoryAction;<a name="line.17"></a>
+<span class="sourceLineNo">018</span>import it.unimi.dsi.fastutil.ints.Int2IntMap;<a name="line.18"></a>
+<span class="sourceLineNo">019</span>import it.unimi.dsi.fastutil.ints.Int2IntOpenHashMap;<a name="line.19"></a>
+<span class="sourceLineNo">020</span><a name="line.20"></a>
+<span class="sourceLineNo">021</span>import java.util.List;<a name="line.21"></a>
+<span class="sourceLineNo">022</span>import java.util.concurrent.ThreadLocalRandom;<a name="line.22"></a>
+<span class="sourceLineNo">023</span><a name="line.23"></a>
+<span class="sourceLineNo">024</span>@Since("1.4.0.0-PN")<a name="line.24"></a>
+<span class="sourceLineNo">025</span>public class RepairItemTransaction extends InventoryTransaction {<a name="line.25"></a>
+<span class="sourceLineNo">026</span><a name="line.26"></a>
+<span class="sourceLineNo">027</span>    private Item inputItem;<a name="line.27"></a>
+<span class="sourceLineNo">028</span>    private Item materialItem;<a name="line.28"></a>
+<span class="sourceLineNo">029</span>    private Item outputItem;<a name="line.29"></a>
+<span class="sourceLineNo">030</span><a name="line.30"></a>
+<span class="sourceLineNo">031</span>    private int cost;<a name="line.31"></a>
+<span class="sourceLineNo">032</span><a name="line.32"></a>
+<span class="sourceLineNo">033</span>    @Since("1.4.0.0-PN")<a name="line.33"></a>
+<span class="sourceLineNo">034</span>    public RepairItemTransaction(Player source, List&lt;InventoryAction&gt; actions) {<a name="line.34"></a>
+<span class="sourceLineNo">035</span>        super(source, actions);<a name="line.35"></a>
+<span class="sourceLineNo">036</span>    }<a name="line.36"></a>
+<span class="sourceLineNo">037</span><a name="line.37"></a>
+<span class="sourceLineNo">038</span>    @Override<a name="line.38"></a>
+<span class="sourceLineNo">039</span>    public boolean canExecute() {<a name="line.39"></a>
+<span class="sourceLineNo">040</span>        Inventory inventory = getSource().getWindowById(Player.ANVIL_WINDOW_ID);<a name="line.40"></a>
+<span class="sourceLineNo">041</span>        if (inventory == null) {<a name="line.41"></a>
+<span class="sourceLineNo">042</span>            return false;<a name="line.42"></a>
+<span class="sourceLineNo">043</span>        }<a name="line.43"></a>
+<span class="sourceLineNo">044</span>        AnvilInventory anvilInventory = (AnvilInventory) inventory;<a name="line.44"></a>
+<span class="sourceLineNo">045</span>        return this.inputItem != null &amp;&amp; this.outputItem != null &amp;&amp; this.inputItem.equals(anvilInventory.getInputSlot(), true, true)<a name="line.45"></a>
+<span class="sourceLineNo">046</span>                &amp;&amp; (!this.hasMaterial() || this.materialItem.equals(anvilInventory.getMaterialSlot(), true, true))<a name="line.46"></a>
+<span class="sourceLineNo">047</span>                &amp;&amp; this.checkRecipeValid();<a name="line.47"></a>
+<span class="sourceLineNo">048</span>    }<a name="line.48"></a>
+<span class="sourceLineNo">049</span><a name="line.49"></a>
+<span class="sourceLineNo">050</span>    @Override<a name="line.50"></a>
+<span class="sourceLineNo">051</span>    public boolean execute() {<a name="line.51"></a>
+<span class="sourceLineNo">052</span>        if (this.hasExecuted() || !this.canExecute()) {<a name="line.52"></a>
+<span class="sourceLineNo">053</span>            this.source.removeAllWindows(false);<a name="line.53"></a>
+<span class="sourceLineNo">054</span>            this.sendInventories();<a name="line.54"></a>
+<span class="sourceLineNo">055</span>            return false;<a name="line.55"></a>
+<span class="sourceLineNo">056</span>        }<a name="line.56"></a>
+<span class="sourceLineNo">057</span>        AnvilInventory inventory = (AnvilInventory) getSource().getWindowById(Player.ANVIL_WINDOW_ID);<a name="line.57"></a>
+<span class="sourceLineNo">058</span><a name="line.58"></a>
+<span class="sourceLineNo">059</span>        if (inventory.getCost() != this.cost &amp;&amp; !this.source.isCreative()) {<a name="line.59"></a>
+<span class="sourceLineNo">060</span>            this.source.getServer().getLogger().debug("Got unexpected cost " + inventory.getCost() + " from " + this.source.getName() + "(expected " + this.cost + ")");<a name="line.60"></a>
+<span class="sourceLineNo">061</span>        }<a name="line.61"></a>
+<span class="sourceLineNo">062</span><a name="line.62"></a>
+<span class="sourceLineNo">063</span>        RepairItemEvent event = new RepairItemEvent(inventory, this.inputItem, this.outputItem, this.materialItem, this.cost, this.source);<a name="line.63"></a>
+<span class="sourceLineNo">064</span>        this.source.getServer().getPluginManager().callEvent(event);<a name="line.64"></a>
+<span class="sourceLineNo">065</span>        if (event.isCancelled()) {<a name="line.65"></a>
+<span class="sourceLineNo">066</span>            this.source.removeAllWindows(false);<a name="line.66"></a>
+<span class="sourceLineNo">067</span>            this.sendInventories();<a name="line.67"></a>
+<span class="sourceLineNo">068</span>            return true;<a name="line.68"></a>
+<span class="sourceLineNo">069</span>        }<a name="line.69"></a>
+<span class="sourceLineNo">070</span><a name="line.70"></a>
+<span class="sourceLineNo">071</span>        for (InventoryAction action : this.actions) {<a name="line.71"></a>
+<span class="sourceLineNo">072</span>            if (action.execute(this.source)) {<a name="line.72"></a>
+<span class="sourceLineNo">073</span>                action.onExecuteSuccess(this.source);<a name="line.73"></a>
+<span class="sourceLineNo">074</span>            } else {<a name="line.74"></a>
+<span class="sourceLineNo">075</span>                action.onExecuteFail(this.source);<a name="line.75"></a>
+<span class="sourceLineNo">076</span>            }<a name="line.76"></a>
+<span class="sourceLineNo">077</span>        }<a name="line.77"></a>
+<span class="sourceLineNo">078</span><a name="line.78"></a>
+<span class="sourceLineNo">079</span>        FakeBlockMenu holder = inventory.getHolder();<a name="line.79"></a>
+<span class="sourceLineNo">080</span>        Block block = this.source.level.getBlock(holder.getFloorX(), holder.getFloorY(), holder.getFloorZ());<a name="line.80"></a>
+<span class="sourceLineNo">081</span>        if (block.getId() == Block.ANVIL) {<a name="line.81"></a>
+<span class="sourceLineNo">082</span>            int oldDamage = block.getDamage() &gt;= 8 ? 2 : block.getDamage() &gt;= 4 ? 1 : 0;<a name="line.82"></a>
+<span class="sourceLineNo">083</span>            int newDamage = !this.source.isCreative() &amp;&amp; ThreadLocalRandom.current().nextInt(100) &lt; 12 ? oldDamage + 1 : oldDamage;<a name="line.83"></a>
+<span class="sourceLineNo">084</span><a name="line.84"></a>
+<span class="sourceLineNo">085</span>            AnvilDamageEvent ev = new AnvilDamageEvent(block, oldDamage, newDamage, DamageCause.USE, this.source);<a name="line.85"></a>
+<span class="sourceLineNo">086</span>            ev.setCancelled(oldDamage == newDamage);<a name="line.86"></a>
+<span class="sourceLineNo">087</span>            this.source.getServer().getPluginManager().callEvent(ev);<a name="line.87"></a>
+<span class="sourceLineNo">088</span>            if (!ev.isCancelled()) {<a name="line.88"></a>
+<span class="sourceLineNo">089</span>                newDamage = ev.getNewDamage();<a name="line.89"></a>
+<span class="sourceLineNo">090</span>                if (newDamage &gt; 2) {<a name="line.90"></a>
+<span class="sourceLineNo">091</span>                    this.source.level.setBlock(block, Block.get(Block.AIR), true);<a name="line.91"></a>
+<span class="sourceLineNo">092</span>                    this.source.level.addLevelEvent(block, LevelEventPacket.EVENT_SOUND_ANVIL_BREAK);<a name="line.92"></a>
+<span class="sourceLineNo">093</span>                } else {<a name="line.93"></a>
+<span class="sourceLineNo">094</span>                    if (newDamage &lt; 0) {<a name="line.94"></a>
+<span class="sourceLineNo">095</span>                        newDamage = 0;<a name="line.95"></a>
+<span class="sourceLineNo">096</span>                    }<a name="line.96"></a>
+<span class="sourceLineNo">097</span>                    if (newDamage != oldDamage) {<a name="line.97"></a>
+<span class="sourceLineNo">098</span>                        block.setDamage((newDamage &lt;&lt; 2) | (block.getDamage() &amp; 0x3));<a name="line.98"></a>
+<span class="sourceLineNo">099</span>                        this.source.level.setBlock(block, block, true);<a name="line.99"></a>
+<span class="sourceLineNo">100</span>                    }<a name="line.100"></a>
+<span class="sourceLineNo">101</span>                    this.source.level.addLevelEvent(block, LevelEventPacket.EVENT_SOUND_ANVIL_USE);<a name="line.101"></a>
+<span class="sourceLineNo">102</span>                }<a name="line.102"></a>
+<span class="sourceLineNo">103</span>            } else {<a name="line.103"></a>
+<span class="sourceLineNo">104</span>                this.source.level.addLevelEvent(block, LevelEventPacket.EVENT_SOUND_ANVIL_USE);<a name="line.104"></a>
+<span class="sourceLineNo">105</span>            }<a name="line.105"></a>
+<span class="sourceLineNo">106</span>        }<a name="line.106"></a>
+<span class="sourceLineNo">107</span><a name="line.107"></a>
+<span class="sourceLineNo">108</span>        if (!this.source.isCreative()) {<a name="line.108"></a>
+<span class="sourceLineNo">109</span>            this.source.setExperience(this.source.getExperience(), this.source.getExperienceLevel() - event.getCost());<a name="line.109"></a>
+<span class="sourceLineNo">110</span>        }<a name="line.110"></a>
+<span class="sourceLineNo">111</span>        return true;<a name="line.111"></a>
+<span class="sourceLineNo">112</span>    }<a name="line.112"></a>
+<span class="sourceLineNo">113</span><a name="line.113"></a>
+<span class="sourceLineNo">114</span>    @Override<a name="line.114"></a>
+<span class="sourceLineNo">115</span>    public void addAction(InventoryAction action) {<a name="line.115"></a>
+<span class="sourceLineNo">116</span>        super.addAction(action);<a name="line.116"></a>
+<span class="sourceLineNo">117</span>        if (action instanceof RepairItemAction) {<a name="line.117"></a>
+<span class="sourceLineNo">118</span>            switch (((RepairItemAction) action).getType()) {<a name="line.118"></a>
+<span class="sourceLineNo">119</span>                case NetworkInventoryAction.SOURCE_TYPE_ANVIL_INPUT:<a name="line.119"></a>
+<span class="sourceLineNo">120</span>                    this.inputItem = action.getTargetItem();<a name="line.120"></a>
+<span class="sourceLineNo">121</span>                    break;<a name="line.121"></a>
+<span class="sourceLineNo">122</span>                case NetworkInventoryAction.SOURCE_TYPE_ANVIL_RESULT:<a name="line.122"></a>
+<span class="sourceLineNo">123</span>                    this.outputItem = action.getSourceItem();<a name="line.123"></a>
+<span class="sourceLineNo">124</span>                    break;<a name="line.124"></a>
+<span class="sourceLineNo">125</span>                case NetworkInventoryAction.SOURCE_TYPE_ANVIL_MATERIAL:<a name="line.125"></a>
+<span class="sourceLineNo">126</span>                    this.materialItem = action.getTargetItem();<a name="line.126"></a>
+<span class="sourceLineNo">127</span>                    break;<a name="line.127"></a>
+<span class="sourceLineNo">128</span>            }<a name="line.128"></a>
+<span class="sourceLineNo">129</span>        }<a name="line.129"></a>
+<span class="sourceLineNo">130</span>    }<a name="line.130"></a>
+<span class="sourceLineNo">131</span><a name="line.131"></a>
+<span class="sourceLineNo">132</span>    private boolean checkRecipeValid() {<a name="line.132"></a>
+<span class="sourceLineNo">133</span>        int cost = 0;<a name="line.133"></a>
+<span class="sourceLineNo">134</span>        int baseRepairCost = this.inputItem.getRepairCost();<a name="line.134"></a>
+<span class="sourceLineNo">135</span><a name="line.135"></a>
+<span class="sourceLineNo">136</span>        if (this.isMapRecipe()) {<a name="line.136"></a>
+<span class="sourceLineNo">137</span>            if (!this.matchMapRecipe()) {<a name="line.137"></a>
+<span class="sourceLineNo">138</span>                return false;<a name="line.138"></a>
+<span class="sourceLineNo">139</span>            }<a name="line.139"></a>
+<span class="sourceLineNo">140</span>            baseRepairCost = 0;<a name="line.140"></a>
+<span class="sourceLineNo">141</span>        } else if (this.hasMaterial()) {<a name="line.141"></a>
+<span class="sourceLineNo">142</span>            baseRepairCost += this.materialItem.getRepairCost();<a name="line.142"></a>
+<span class="sourceLineNo">143</span><a name="line.143"></a>
+<span class="sourceLineNo">144</span>            if (this.inputItem.getMaxDurability() != -1 &amp;&amp; this.matchRepairItem()) {<a name="line.144"></a>
+<span class="sourceLineNo">145</span>                int maxRepairDamage = this.inputItem.getMaxDurability() / 4;<a name="line.145"></a>
+<span class="sourceLineNo">146</span>                int repairDamage = Math.min(this.inputItem.getDamage(), maxRepairDamage);<a name="line.146"></a>
+<span class="sourceLineNo">147</span>                if (repairDamage &lt;= 0) {<a name="line.147"></a>
+<span class="sourceLineNo">148</span>                    return false;<a name="line.148"></a>
+<span class="sourceLineNo">149</span>                }<a name="line.149"></a>
+<span class="sourceLineNo">150</span><a name="line.150"></a>
+<span class="sourceLineNo">151</span>                int damage = this.inputItem.getDamage();<a name="line.151"></a>
+<span class="sourceLineNo">152</span>                for (; repairDamage &gt; 0 &amp;&amp; cost &lt; this.materialItem.getCount(); cost++) {<a name="line.152"></a>
+<span class="sourceLineNo">153</span>                    damage = damage - repairDamage;<a name="line.153"></a>
+<span class="sourceLineNo">154</span>                    repairDamage = Math.min(damage, maxRepairDamage);<a name="line.154"></a>
+<span class="sourceLineNo">155</span>                }<a name="line.155"></a>
+<span class="sourceLineNo">156</span>                if (this.outputItem.getDamage() != damage) {<a name="line.156"></a>
+<span class="sourceLineNo">157</span>                    return false;<a name="line.157"></a>
+<span class="sourceLineNo">158</span>                }<a name="line.158"></a>
+<span class="sourceLineNo">159</span>            } else {<a name="line.159"></a>
+<span class="sourceLineNo">160</span>                boolean consumeEnchantedBook = this.materialItem.getId() == Item.ENCHANTED_BOOK &amp;&amp; this.materialItem.hasEnchantments();<a name="line.160"></a>
+<span class="sourceLineNo">161</span>                if (!consumeEnchantedBook &amp;&amp; (this.inputItem.getMaxDurability() == -1 || this.inputItem.getId() != this.materialItem.getId())) {<a name="line.161"></a>
+<span class="sourceLineNo">162</span>                    return false;<a name="line.162"></a>
+<span class="sourceLineNo">163</span>                }<a name="line.163"></a>
+<span class="sourceLineNo">164</span><a name="line.164"></a>
+<span class="sourceLineNo">165</span>                if (!consumeEnchantedBook &amp;&amp; this.inputItem.getMaxDurability() != -1) {<a name="line.165"></a>
+<span class="sourceLineNo">166</span>                    int damage = this.inputItem.getDamage() - this.inputItem.getMaxDurability() + this.materialItem.getDamage() - this.inputItem.getMaxDurability() * 12 / 100 + 1;<a name="line.166"></a>
+<span class="sourceLineNo">167</span>                    if (damage &lt; 0) {<a name="line.167"></a>
+<span class="sourceLineNo">168</span>                        damage = 0;<a name="line.168"></a>
+<span class="sourceLineNo">169</span>                    }<a name="line.169"></a>
+<span class="sourceLineNo">170</span><a name="line.170"></a>
+<span class="sourceLineNo">171</span>                    if (damage &lt; this.inputItem.getDamage()) {<a name="line.171"></a>
+<span class="sourceLineNo">172</span>                        if (this.outputItem.getDamage() != damage) {<a name="line.172"></a>
+<span class="sourceLineNo">173</span>                            return false;<a name="line.173"></a>
+<span class="sourceLineNo">174</span>                        }<a name="line.174"></a>
+<span class="sourceLineNo">175</span>                        cost += 2;<a name="line.175"></a>
+<span class="sourceLineNo">176</span>                    }<a name="line.176"></a>
+<span class="sourceLineNo">177</span>                }<a name="line.177"></a>
+<span class="sourceLineNo">178</span><a name="line.178"></a>
+<span class="sourceLineNo">179</span>                Int2IntMap enchantments = new Int2IntOpenHashMap();<a name="line.179"></a>
+<span class="sourceLineNo">180</span>                enchantments.defaultReturnValue(-1);<a name="line.180"></a>
+<span class="sourceLineNo">181</span>                for (Enchantment enchantment : this.inputItem.getEnchantments()) {<a name="line.181"></a>
+<span class="sourceLineNo">182</span>                    enchantments.put(enchantment.getId(), enchantment.getLevel());<a name="line.182"></a>
+<span class="sourceLineNo">183</span>                }<a name="line.183"></a>
+<span class="sourceLineNo">184</span><a name="line.184"></a>
+<span class="sourceLineNo">185</span>                boolean hasCompatibleEnchantments = false;<a name="line.185"></a>
+<span class="sourceLineNo">186</span>                boolean hasIncompatibleEnchantments = false;<a name="line.186"></a>
+<span class="sourceLineNo">187</span>                for (Enchantment materialEnchantment : this.materialItem.getEnchantments()) {<a name="line.187"></a>
+<span class="sourceLineNo">188</span>                    Enchantment enchantment = this.inputItem.getEnchantment(materialEnchantment.getId());<a name="line.188"></a>
+<span class="sourceLineNo">189</span>                    int inputLevel = enchantment != null ? enchantment.getLevel() : 0;<a name="line.189"></a>
+<span class="sourceLineNo">190</span>                    int materialLevel = materialEnchantment.getLevel();<a name="line.190"></a>
+<span class="sourceLineNo">191</span>                    int outputLevel = inputLevel == materialLevel ? materialLevel + 1 : Math.max(materialLevel, inputLevel);<a name="line.191"></a>
+<span class="sourceLineNo">192</span><a name="line.192"></a>
+<span class="sourceLineNo">193</span>                    boolean canEnchant = materialEnchantment.canEnchant(this.inputItem) || this.inputItem.getId() == Item.ENCHANTED_BOOK;<a name="line.193"></a>
+<span class="sourceLineNo">194</span>                    for (Enchantment inputEnchantment : this.inputItem.getEnchantments()) {<a name="line.194"></a>
+<span class="sourceLineNo">195</span>                        if (inputEnchantment.getId() != materialEnchantment.getId() &amp;&amp; !materialEnchantment.isCompatibleWith(inputEnchantment)) {<a name="line.195"></a>
+<span class="sourceLineNo">196</span>                            canEnchant = false;<a name="line.196"></a>
+<span class="sourceLineNo">197</span>                            cost++;<a name="line.197"></a>
+<span class="sourceLineNo">198</span>                        }<a name="line.198"></a>
+<span class="sourceLineNo">199</span>                    }<a name="line.199"></a>
+<span class="sourceLineNo">200</span><a name="line.200"></a>
+<span class="sourceLineNo">201</span>                    if (!canEnchant) {<a name="line.201"></a>
+<span class="sourceLineNo">202</span>                        hasIncompatibleEnchantments = true;<a name="line.202"></a>
+<span class="sourceLineNo">203</span>                    } else {<a name="line.203"></a>
+<span class="sourceLineNo">204</span>                        hasCompatibleEnchantments = true;<a name="line.204"></a>
+<span class="sourceLineNo">205</span>                        if (outputLevel &gt; materialEnchantment.getMaxLevel()) {<a name="line.205"></a>
+<span class="sourceLineNo">206</span>                            outputLevel = materialEnchantment.getMaxLevel();<a name="line.206"></a>
+<span class="sourceLineNo">207</span>                        }<a name="line.207"></a>
+<span class="sourceLineNo">208</span><a name="line.208"></a>
+<span class="sourceLineNo">209</span>                        enchantments.put(materialEnchantment.getId(), outputLevel);<a name="line.209"></a>
+<span class="sourceLineNo">210</span>                        int rarityFactor;<a name="line.210"></a>
+<span class="sourceLineNo">211</span>                        switch (materialEnchantment.getRarity()) {<a name="line.211"></a>
+<span class="sourceLineNo">212</span>                            case COMMON:<a name="line.212"></a>
+<span class="sourceLineNo">213</span>                                rarityFactor = 1;<a name="line.213"></a>
+<span class="sourceLineNo">214</span>                                break;<a name="line.214"></a>
+<span class="sourceLineNo">215</span>                            case UNCOMMON:<a name="line.215"></a>
+<span class="sourceLineNo">216</span>                                rarityFactor = 2;<a name="line.216"></a>
+<span class="sourceLineNo">217</span>                                break;<a name="line.217"></a>
+<span class="sourceLineNo">218</span>                            case RARE:<a name="line.218"></a>
+<span class="sourceLineNo">219</span>                                rarityFactor = 4;<a name="line.219"></a>
+<span class="sourceLineNo">220</span>                                break;<a name="line.220"></a>
+<span class="sourceLineNo">221</span>                            case VERY_RARE:<a name="line.221"></a>
+<span class="sourceLineNo">222</span>                            default:<a name="line.222"></a>
+<span class="sourceLineNo">223</span>                                rarityFactor = 8;<a name="line.223"></a>
+<span class="sourceLineNo">224</span>                                break;<a name="line.224"></a>
+<span class="sourceLineNo">225</span>                        }<a name="line.225"></a>
+<span class="sourceLineNo">226</span><a name="line.226"></a>
+<span class="sourceLineNo">227</span>                        if (consumeEnchantedBook) {<a name="line.227"></a>
+<span class="sourceLineNo">228</span>                            rarityFactor = Math.max(1, rarityFactor / 2);<a name="line.228"></a>
+<span class="sourceLineNo">229</span>                        }<a name="line.229"></a>
+<span class="sourceLineNo">230</span><a name="line.230"></a>
+<span class="sourceLineNo">231</span>                        cost += rarityFactor * Math.max(0, outputLevel - inputLevel);<a name="line.231"></a>
+<span class="sourceLineNo">232</span>                        if (this.inputItem.getCount() &gt; 1) {<a name="line.232"></a>
+<span class="sourceLineNo">233</span>                            cost = 40;<a name="line.233"></a>
+<span class="sourceLineNo">234</span>                        }<a name="line.234"></a>
+<span class="sourceLineNo">235</span>                    }<a name="line.235"></a>
+<span class="sourceLineNo">236</span>                }<a name="line.236"></a>
+<span class="sourceLineNo">237</span><a name="line.237"></a>
+<span class="sourceLineNo">238</span>                Enchantment[] outputEnchantments = this.outputItem.getEnchantments();<a name="line.238"></a>
+<span class="sourceLineNo">239</span>                if (hasIncompatibleEnchantments &amp;&amp; !hasCompatibleEnchantments || enchantments.size() != outputEnchantments.length) {<a name="line.239"></a>
+<span class="sourceLineNo">240</span>                    return false;<a name="line.240"></a>
+<span class="sourceLineNo">241</span>                }<a name="line.241"></a>
+<span class="sourceLineNo">242</span><a name="line.242"></a>
+<span class="sourceLineNo">243</span>                for (Enchantment enchantment : outputEnchantments) {<a name="line.243"></a>
+<span class="sourceLineNo">244</span>                    if (enchantments.get(enchantment.getId()) != enchantment.getLevel()) {<a name="line.244"></a>
+<span class="sourceLineNo">245</span>                        return false;<a name="line.245"></a>
+<span class="sourceLineNo">246</span>                    }<a name="line.246"></a>
+<span class="sourceLineNo">247</span>                }<a name="line.247"></a>
+<span class="sourceLineNo">248</span>            }<a name="line.248"></a>
+<span class="sourceLineNo">249</span>        }<a name="line.249"></a>
+<span class="sourceLineNo">250</span><a name="line.250"></a>
+<span class="sourceLineNo">251</span>        int renameCost = 0;<a name="line.251"></a>
+<span class="sourceLineNo">252</span>        if (!this.inputItem.getCustomName().equals(this.outputItem.getCustomName())) {<a name="line.252"></a>
+<span class="sourceLineNo">253</span>            if (this.outputItem.getCustomName().length() &gt; 30) {<a name="line.253"></a>
+<span class="sourceLineNo">254</span>                return false;<a name="line.254"></a>
+<span class="sourceLineNo">255</span>            }<a name="line.255"></a>
+<span class="sourceLineNo">256</span>            renameCost = 1;<a name="line.256"></a>
+<span class="sourceLineNo">257</span>            cost += renameCost;<a name="line.257"></a>
+<span class="sourceLineNo">258</span>        }<a name="line.258"></a>
+<span class="sourceLineNo">259</span><a name="line.259"></a>
+<span class="sourceLineNo">260</span>        this.cost = baseRepairCost + cost;<a name="line.260"></a>
+<span class="sourceLineNo">261</span>        if (renameCost == cost &amp;&amp; renameCost &gt; 0 &amp;&amp; this.cost &gt;= 40) {<a name="line.261"></a>
+<span class="sourceLineNo">262</span>            this.cost = 39;<a name="line.262"></a>
+<span class="sourceLineNo">263</span>        }<a name="line.263"></a>
+<span class="sourceLineNo">264</span>        if (baseRepairCost &lt; 0 || cost &lt; 0 || cost == 0 &amp;&amp; !this.isMapRecipe() || this.cost &gt; 39 &amp;&amp; !this.source.isCreative()) {<a name="line.264"></a>
+<span class="sourceLineNo">265</span>            return false;<a name="line.265"></a>
+<span class="sourceLineNo">266</span>        }<a name="line.266"></a>
+<span class="sourceLineNo">267</span><a name="line.267"></a>
+<span class="sourceLineNo">268</span>        int nextBaseRepairCost = this.inputItem.getRepairCost();<a name="line.268"></a>
+<span class="sourceLineNo">269</span>        if (!this.isMapRecipe()) {<a name="line.269"></a>
+<span class="sourceLineNo">270</span>            if (this.hasMaterial() &amp;&amp; nextBaseRepairCost &lt; this.materialItem.getRepairCost()) {<a name="line.270"></a>
+<span class="sourceLineNo">271</span>                nextBaseRepairCost = this.materialItem.getRepairCost();<a name="line.271"></a>
+<span class="sourceLineNo">272</span>            }<a name="line.272"></a>
+<span class="sourceLineNo">273</span>            if (renameCost == 0 || renameCost != cost) {<a name="line.273"></a>
+<span class="sourceLineNo">274</span>                nextBaseRepairCost = 2 * nextBaseRepairCost + 1;<a name="line.274"></a>
+<span class="sourceLineNo">275</span>            }<a name="line.275"></a>
+<span class="sourceLineNo">276</span>        }<a name="line.276"></a>
+<span class="sourceLineNo">277</span>        if (this.outputItem.getRepairCost() != nextBaseRepairCost) {<a name="line.277"></a>
+<span class="sourceLineNo">278</span>            this.source.getServer().getLogger().debug("Got unexpected base cost " + this.outputItem.getRepairCost() + " from " + this.source.getName() + "(expected " + nextBaseRepairCost + ")");<a name="line.278"></a>
+<span class="sourceLineNo">279</span>            return false;<a name="line.279"></a>
+<span class="sourceLineNo">280</span>        }<a name="line.280"></a>
+<span class="sourceLineNo">281</span><a name="line.281"></a>
+<span class="sourceLineNo">282</span>        return true;<a name="line.282"></a>
+<span class="sourceLineNo">283</span>    }<a name="line.283"></a>
+<span class="sourceLineNo">284</span><a name="line.284"></a>
+<span class="sourceLineNo">285</span>    private boolean hasMaterial() {<a name="line.285"></a>
+<span class="sourceLineNo">286</span>        return this.materialItem != null &amp;&amp; !this.materialItem.isNull();<a name="line.286"></a>
+<span class="sourceLineNo">287</span>    }<a name="line.287"></a>
+<span class="sourceLineNo">288</span><a name="line.288"></a>
+<span class="sourceLineNo">289</span>    private boolean isMapRecipe() {<a name="line.289"></a>
+<span class="sourceLineNo">290</span>        return this.hasMaterial() &amp;&amp; (this.inputItem.getId() == Item.MAP || this.inputItem.getId() == Item.EMPTY_MAP)<a name="line.290"></a>
+<span class="sourceLineNo">291</span>                &amp;&amp; (this.materialItem.getId() == Item.EMPTY_MAP || this.materialItem.getId() == Item.PAPER || this.materialItem.getId() == Item.COMPASS);<a name="line.291"></a>
+<span class="sourceLineNo">292</span>    }<a name="line.292"></a>
+<span class="sourceLineNo">293</span><a name="line.293"></a>
+<span class="sourceLineNo">294</span>    private boolean matchMapRecipe() {<a name="line.294"></a>
+<span class="sourceLineNo">295</span>        if (this.inputItem.getId() == Item.EMPTY_MAP) {<a name="line.295"></a>
+<span class="sourceLineNo">296</span>            return this.inputItem.getDamage() != 2 &amp;&amp; this.materialItem.getId() == Item.COMPASS // locator<a name="line.296"></a>
+<span class="sourceLineNo">297</span>                    &amp;&amp; this.outputItem.getId() == Item.EMPTY_MAP &amp;&amp; this.outputItem.getDamage() == 2 &amp;&amp; this.outputItem.getCount() == 1;<a name="line.297"></a>
+<span class="sourceLineNo">298</span>        } else if (this.inputItem.getId() == Item.MAP &amp;&amp; this.outputItem.getDamage() == this.inputItem.getDamage()) {<a name="line.298"></a>
+<span class="sourceLineNo">299</span>            if (this.materialItem.getId() == Item.COMPASS) { // locator<a name="line.299"></a>
+<span class="sourceLineNo">300</span>                return this.inputItem.getDamage() != 2 &amp;&amp; this.outputItem.getId() == Item.MAP &amp;&amp; this.outputItem.getCount() == 1;<a name="line.300"></a>
+<span class="sourceLineNo">301</span>            } else if (this.materialItem.getId() == Item.EMPTY_MAP) { // clone<a name="line.301"></a>
+<span class="sourceLineNo">302</span>                return this.outputItem.getId() == Item.MAP &amp;&amp; this.outputItem.getCount() == 2;<a name="line.302"></a>
+<span class="sourceLineNo">303</span>            } else if (this.materialItem.getId() == Item.PAPER &amp;&amp; this.materialItem.getCount() &gt;= 8) { // zoom out<a name="line.303"></a>
+<span class="sourceLineNo">304</span>                return this.inputItem.getDamage() &lt; 3 &amp;&amp; this.outputItem.getId() == Item.MAP &amp;&amp; this.outputItem.getCount() == 1;<a name="line.304"></a>
+<span class="sourceLineNo">305</span>            }<a name="line.305"></a>
+<span class="sourceLineNo">306</span>        }<a name="line.306"></a>
+<span class="sourceLineNo">307</span>        return false;<a name="line.307"></a>
+<span class="sourceLineNo">308</span>    }<a name="line.308"></a>
+<span class="sourceLineNo">309</span><a name="line.309"></a>
+<span class="sourceLineNo">310</span>    private boolean matchRepairItem() {<a name="line.310"></a>
+<span class="sourceLineNo">311</span>        switch (this.inputItem.getId()) {<a name="line.311"></a>
+<span class="sourceLineNo">312</span>            case Item.LEATHER_CAP:<a name="line.312"></a>
+<span class="sourceLineNo">313</span>            case Item.LEATHER_TUNIC:<a name="line.313"></a>
+<span class="sourceLineNo">314</span>            case Item.LEATHER_PANTS:<a name="line.314"></a>
+<span class="sourceLineNo">315</span>            case Item.LEATHER_BOOTS:<a name="line.315"></a>
+<span class="sourceLineNo">316</span>                return this.materialItem.getId() == Item.LEATHER;<a name="line.316"></a>
+<span class="sourceLineNo">317</span>            case Item.WOODEN_SWORD:<a name="line.317"></a>
+<span class="sourceLineNo">318</span>            case Item.WOODEN_PICKAXE:<a name="line.318"></a>
+<span class="sourceLineNo">319</span>            case Item.WOODEN_SHOVEL:<a name="line.319"></a>
+<span class="sourceLineNo">320</span>            case Item.WOODEN_AXE:<a name="line.320"></a>
+<span class="sourceLineNo">321</span>            case Item.WOODEN_HOE:<a name="line.321"></a>
+<span class="sourceLineNo">322</span>                return this.materialItem.getId() == Item.PLANKS;<a name="line.322"></a>
+<span class="sourceLineNo">323</span>            case Item.IRON_SWORD:<a name="line.323"></a>
+<span class="sourceLineNo">324</span>            case Item.IRON_PICKAXE:<a name="line.324"></a>
+<span class="sourceLineNo">325</span>            case Item.IRON_SHOVEL:<a name="line.325"></a>
+<span class="sourceLineNo">326</span>            case Item.IRON_AXE:<a name="line.326"></a>
+<span class="sourceLineNo">327</span>            case Item.IRON_HOE:<a name="line.327"></a>
+<span class="sourceLineNo">328</span>            case Item.IRON_HELMET:<a name="line.328"></a>
+<span class="sourceLineNo">329</span>            case Item.IRON_CHESTPLATE:<a name="line.329"></a>
+<span class="sourceLineNo">330</span>            case Item.IRON_LEGGINGS:<a name="line.330"></a>
+<span class="sourceLineNo">331</span>            case Item.IRON_BOOTS:<a name="line.331"></a>
+<span class="sourceLineNo">332</span>            case Item.CHAIN_HELMET:<a name="line.332"></a>
+<span class="sourceLineNo">333</span>            case Item.CHAIN_CHESTPLATE:<a name="line.333"></a>
+<span class="sourceLineNo">334</span>            case Item.CHAIN_LEGGINGS:<a name="line.334"></a>
+<span class="sourceLineNo">335</span>            case Item.CHAIN_BOOTS:<a name="line.335"></a>
+<span class="sourceLineNo">336</span>                return this.materialItem.getId() == Item.IRON_INGOT;<a name="line.336"></a>
+<span class="sourceLineNo">337</span>            case Item.GOLD_SWORD:<a name="line.337"></a>
+<span class="sourceLineNo">338</span>            case Item.GOLD_PICKAXE:<a name="line.338"></a>
+<span class="sourceLineNo">339</span>            case Item.GOLD_SHOVEL:<a name="line.339"></a>
+<span class="sourceLineNo">340</span>            case Item.GOLD_AXE:<a name="line.340"></a>
+<span class="sourceLineNo">341</span>            case Item.GOLD_HOE:<a name="line.341"></a>
+<span class="sourceLineNo">342</span>            case Item.GOLD_HELMET:<a name="line.342"></a>
+<span class="sourceLineNo">343</span>            case Item.GOLD_CHESTPLATE:<a name="line.343"></a>
+<span class="sourceLineNo">344</span>            case Item.GOLD_LEGGINGS:<a name="line.344"></a>
+<span class="sourceLineNo">345</span>            case Item.GOLD_BOOTS:<a name="line.345"></a>
+<span class="sourceLineNo">346</span>                return this.materialItem.getId() == Item.GOLD_INGOT;<a name="line.346"></a>
+<span class="sourceLineNo">347</span>            case Item.DIAMOND_SWORD:<a name="line.347"></a>
+<span class="sourceLineNo">348</span>            case Item.DIAMOND_PICKAXE:<a name="line.348"></a>
+<span class="sourceLineNo">349</span>            case Item.DIAMOND_SHOVEL:<a name="line.349"></a>
+<span class="sourceLineNo">350</span>            case Item.DIAMOND_AXE:<a name="line.350"></a>
+<span class="sourceLineNo">351</span>            case Item.DIAMOND_HOE:<a name="line.351"></a>
+<span class="sourceLineNo">352</span>            case Item.DIAMOND_HELMET:<a name="line.352"></a>
+<span class="sourceLineNo">353</span>            case Item.DIAMOND_CHESTPLATE:<a name="line.353"></a>
+<span class="sourceLineNo">354</span>            case Item.DIAMOND_LEGGINGS:<a name="line.354"></a>
+<span class="sourceLineNo">355</span>            case Item.DIAMOND_BOOTS:<a name="line.355"></a>
+<span class="sourceLineNo">356</span>                return this.materialItem.getId() == Item.DIAMOND;<a name="line.356"></a>
+<span class="sourceLineNo">357</span>            case Item.NETHERITE_SWORD:<a name="line.357"></a>
+<span class="sourceLineNo">358</span>            case Item.NETHERITE_PICKAXE:<a name="line.358"></a>
+<span class="sourceLineNo">359</span>            case Item.NETHERITE_SHOVEL:<a name="line.359"></a>
+<span class="sourceLineNo">360</span>            case Item.NETHERITE_AXE:<a name="line.360"></a>
+<span class="sourceLineNo">361</span>            case Item.NETHERITE_HOE:<a name="line.361"></a>
+<span class="sourceLineNo">362</span>            case Item.NETHERITE_HELMET:<a name="line.362"></a>
+<span class="sourceLineNo">363</span>            case Item.NETHERITE_CHESTPLATE:<a name="line.363"></a>
+<span class="sourceLineNo">364</span>            case Item.NETHERITE_LEGGINGS:<a name="line.364"></a>
+<span class="sourceLineNo">365</span>            case Item.NETHERITE_BOOTS:<a name="line.365"></a>
+<span class="sourceLineNo">366</span>                return this.materialItem.getId() == Item.NETHERITE_INGOT;<a name="line.366"></a>
+<span class="sourceLineNo">367</span>            case Item.TURTLE_SHELL:<a name="line.367"></a>
+<span class="sourceLineNo">368</span>                return this.materialItem.getId() == Item.SCUTE;<a name="line.368"></a>
+<span class="sourceLineNo">369</span>            case Item.ELYTRA:<a name="line.369"></a>
+<span class="sourceLineNo">370</span>                return this.materialItem.getId() == Item.PHANTOM_MEMBRANE;<a name="line.370"></a>
+<span class="sourceLineNo">371</span>        }<a name="line.371"></a>
+<span class="sourceLineNo">372</span>        return false;<a name="line.372"></a>
+<span class="sourceLineNo">373</span>    }<a name="line.373"></a>
+<span class="sourceLineNo">374</span><a name="line.374"></a>
+<span class="sourceLineNo">375</span>    @Since("1.4.0.0-PN")<a name="line.375"></a>
+<span class="sourceLineNo">376</span>    public Item getInputItem() {<a name="line.376"></a>
+<span class="sourceLineNo">377</span>        return this.inputItem;<a name="line.377"></a>
+<span class="sourceLineNo">378</span>    }<a name="line.378"></a>
+<span class="sourceLineNo">379</span><a name="line.379"></a>
+<span class="sourceLineNo">380</span>    @Since("1.4.0.0-PN")<a name="line.380"></a>
+<span class="sourceLineNo">381</span>    public Item getMaterialItem() {<a name="line.381"></a>
+<span class="sourceLineNo">382</span>        return this.materialItem;<a name="line.382"></a>
+<span class="sourceLineNo">383</span>    }<a name="line.383"></a>
+<span class="sourceLineNo">384</span><a name="line.384"></a>
+<span class="sourceLineNo">385</span>    @Since("1.4.0.0-PN")<a name="line.385"></a>
+<span class="sourceLineNo">386</span>    public Item getOutputItem() {<a name="line.386"></a>
+<span class="sourceLineNo">387</span>        return this.outputItem;<a name="line.387"></a>
+<span class="sourceLineNo">388</span>    }<a name="line.388"></a>
+<span class="sourceLineNo">389</span><a name="line.389"></a>
+<span class="sourceLineNo">390</span>    @Since("1.4.0.0-PN")<a name="line.390"></a>
+<span class="sourceLineNo">391</span>    public int getCost() {<a name="line.391"></a>
+<span class="sourceLineNo">392</span>        return this.cost;<a name="line.392"></a>
+<span class="sourceLineNo">393</span>    }<a name="line.393"></a>
+<span class="sourceLineNo">394</span><a name="line.394"></a>
+<span class="sourceLineNo">395</span>    @Since("1.4.0.0-PN")<a name="line.395"></a>
+<span class="sourceLineNo">396</span>    public static boolean checkForRepairItemPart(List&lt;InventoryAction&gt; actions) {<a name="line.396"></a>
+<span class="sourceLineNo">397</span>        for (InventoryAction action : actions) {<a name="line.397"></a>
+<span class="sourceLineNo">398</span>            if (action instanceof RepairItemAction) {<a name="line.398"></a>
+<span class="sourceLineNo">399</span>                return true;<a name="line.399"></a>
+<span class="sourceLineNo">400</span>            }<a name="line.400"></a>
+<span class="sourceLineNo">401</span>        }<a name="line.401"></a>
+<span class="sourceLineNo">402</span>        return false;<a name="line.402"></a>
+<span class="sourceLineNo">403</span>    }<a name="line.403"></a>
+<span class="sourceLineNo">404</span>}<a name="line.404"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>

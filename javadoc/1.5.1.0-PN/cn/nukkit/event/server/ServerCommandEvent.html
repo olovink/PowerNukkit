@@ -1,11 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- NewPage -->
-<html lang="en">
+<html lang="pt">
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>ServerCommandEvent (PowerNukkit 1.5.1.0-PN API)</title>
-<meta name="date" content="2021-07-14">
+<meta name="date" content="2021-11-26">
 <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../../script.js"></script>
 </head>
@@ -128,7 +128,7 @@ var activeTableTab = "activeTableTab";
 </dl>
 <hr>
 <br>
-<pre>public class <span class="typeNameLabel">ServerCommandEvent</span>
+<pre>public class <a href="../../../../src-html/cn/nukkit/event/server/ServerCommandEvent.html#line.10">ServerCommandEvent</a>
 extends <a href="../../../../cn/nukkit/event/server/ServerEvent.html" title="class in cn.nukkit.event.server">ServerEvent</a>
 implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interface in cn.nukkit.event">Cancellable</a></pre>
 <dl>
@@ -259,7 +259,7 @@ implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interfa
 <ul class="blockList">
 <li class="blockList">
 <h4>command</h4>
-<pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> command</pre>
+<pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../src-html/cn/nukkit/event/server/ServerCommandEvent.html#line.14">command</a></pre>
 </li>
 </ul>
 <a name="sender">
@@ -268,7 +268,7 @@ implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interfa
 <ul class="blockListLast">
 <li class="blockList">
 <h4>sender</h4>
-<pre>protected final&nbsp;<a href="../../../../cn/nukkit/command/CommandSender.html" title="interface in cn.nukkit.command">CommandSender</a> sender</pre>
+<pre>protected final&nbsp;<a href="../../../../cn/nukkit/command/CommandSender.html" title="interface in cn.nukkit.command">CommandSender</a> <a href="../../../../src-html/cn/nukkit/event/server/ServerCommandEvent.html#line.16">sender</a></pre>
 </li>
 </ul>
 </li>
@@ -285,7 +285,7 @@ implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interfa
 <ul class="blockListLast">
 <li class="blockList">
 <h4>ServerCommandEvent</h4>
-<pre>public&nbsp;ServerCommandEvent(<a href="../../../../cn/nukkit/command/CommandSender.html" title="interface in cn.nukkit.command">CommandSender</a>&nbsp;sender,
+<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/event/server/ServerCommandEvent.html#line.18">ServerCommandEvent</a>(<a href="../../../../cn/nukkit/command/CommandSender.html" title="interface in cn.nukkit.command">CommandSender</a>&nbsp;sender,
                           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;command)</pre>
 </li>
 </ul>
@@ -303,7 +303,7 @@ implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interfa
 <ul class="blockList">
 <li class="blockList">
 <h4>getSender</h4>
-<pre>public&nbsp;<a href="../../../../cn/nukkit/command/CommandSender.html" title="interface in cn.nukkit.command">CommandSender</a>&nbsp;getSender()</pre>
+<pre>public&nbsp;<a href="../../../../cn/nukkit/command/CommandSender.html" title="interface in cn.nukkit.command">CommandSender</a>&nbsp;<a href="../../../../src-html/cn/nukkit/event/server/ServerCommandEvent.html#line.23">getSender</a>()</pre>
 </li>
 </ul>
 <a name="getCommand--">
@@ -312,7 +312,7 @@ implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interfa
 <ul class="blockList">
 <li class="blockList">
 <h4>getCommand</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getCommand()</pre>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/cn/nukkit/event/server/ServerCommandEvent.html#line.27">getCommand</a>()</pre>
 </li>
 </ul>
 <a name="setCommand-java.lang.String-">
@@ -321,7 +321,7 @@ implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interfa
 <ul class="blockList">
 <li class="blockList">
 <h4>setCommand</h4>
-<pre>public&nbsp;void&nbsp;setCommand(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;command)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/event/server/ServerCommandEvent.html#line.31">setCommand</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;command)</pre>
 </li>
 </ul>
 <a name="getHandlers--">
@@ -330,7 +330,7 @@ implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interfa
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getHandlers</h4>
-<pre>public static&nbsp;<a href="../../../../cn/nukkit/event/HandlerList.html" title="class in cn.nukkit.event">HandlerList</a>&nbsp;getHandlers()</pre>
+<pre>public static&nbsp;<a href="../../../../cn/nukkit/event/HandlerList.html" title="class in cn.nukkit.event">HandlerList</a>&nbsp;<a href="../../../../src-html/cn/nukkit/event/server/ServerCommandEvent.html#line.35">getHandlers</a>()</pre>
 </li>
 </ul>
 </li>
