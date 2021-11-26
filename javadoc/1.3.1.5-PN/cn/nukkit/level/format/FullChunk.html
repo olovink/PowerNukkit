@@ -1,11 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- NewPage -->
-<html lang="en">
+<html lang="pt">
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>FullChunk (PowerNukkit 1.3.1.5-PN API)</title>
-<meta name="date" content="2020-09-08">
+<meta name="date" content="2021-11-26">
 <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../../script.js"></script>
 </head>
@@ -110,11 +110,11 @@ var activeTableTab = "activeTableTab";
 </dl>
 <dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><a href="../../../../cn/nukkit/level/format/generic/BaseChunk.html" title="class in cn.nukkit.level.format.generic">BaseChunk</a>, <a href="../../../../cn/nukkit/level/format/generic/BaseFullChunk.html" title="class in cn.nukkit.level.format.generic">BaseFullChunk</a>, <a href="../../../../cn/nukkit/level/format/leveldb/Chunk.html" title="class in cn.nukkit.level.format.leveldb">Chunk</a>, <a href="../../../../cn/nukkit/level/format/mcregion/Chunk.html" title="class in cn.nukkit.level.format.mcregion">Chunk</a>, <a href="../../../../cn/nukkit/level/format/anvil/Chunk.html" title="class in cn.nukkit.level.format.anvil">Chunk</a></dd>
+<dd><a href="../../../../cn/nukkit/level/format/generic/BaseChunk.html" title="class in cn.nukkit.level.format.generic">BaseChunk</a>, <a href="../../../../cn/nukkit/level/format/generic/BaseFullChunk.html" title="class in cn.nukkit.level.format.generic">BaseFullChunk</a>, <a href="../../../../cn/nukkit/level/format/anvil/Chunk.html" title="class in cn.nukkit.level.format.anvil">Chunk</a>, <a href="../../../../cn/nukkit/level/format/leveldb/Chunk.html" title="class in cn.nukkit.level.format.leveldb">Chunk</a>, <a href="../../../../cn/nukkit/level/format/mcregion/Chunk.html" title="class in cn.nukkit.level.format.mcregion">Chunk</a></dd>
 </dl>
 <hr>
 <br>
-<pre>public interface <span class="typeNameLabel">FullChunk</span>
+<pre>public interface <a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.19">FullChunk</a>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.html?is-external=true" title="class or interface in java.lang">Cloneable</a></pre>
 <div class="block">author: MagicDroidX
  Nukkit Project</div>
@@ -603,7 +603,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>getX</h4>
-<pre>int&nbsp;getX()</pre>
+<pre>int&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.21">getX</a>()</pre>
 </li>
 </ul>
 <a name="getZ--">
@@ -612,7 +612,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>getZ</h4>
-<pre>int&nbsp;getZ()</pre>
+<pre>int&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.23">getZ</a>()</pre>
 </li>
 </ul>
 <a name="setPosition-int-int-">
@@ -621,7 +621,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>setPosition</h4>
-<pre>default&nbsp;void&nbsp;setPosition(int&nbsp;x,
+<pre>default&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.25">setPosition</a>(int&nbsp;x,
                          int&nbsp;z)</pre>
 </li>
 </ul>
@@ -631,7 +631,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>setX</h4>
-<pre>void&nbsp;setX(int&nbsp;x)</pre>
+<pre>void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.30">setX</a>(int&nbsp;x)</pre>
 </li>
 </ul>
 <a name="setZ-int-">
@@ -640,7 +640,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>setZ</h4>
-<pre>void&nbsp;setZ(int&nbsp;z)</pre>
+<pre>void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.32">setZ</a>(int&nbsp;z)</pre>
 </li>
 </ul>
 <a name="getIndex--">
@@ -649,7 +649,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>getIndex</h4>
-<pre>long&nbsp;getIndex()</pre>
+<pre>long&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.34">getIndex</a>()</pre>
 </li>
 </ul>
 <a name="getProvider--">
@@ -658,7 +658,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>getProvider</h4>
-<pre><a href="../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a>&nbsp;getProvider()</pre>
+<pre><a href="../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a>&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.36">getProvider</a>()</pre>
 </li>
 </ul>
 <a name="setProvider-cn.nukkit.level.format.LevelProvider-">
@@ -667,7 +667,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.h
 <ul class="blockList">
 <li class="blockList">
 <h4>setProvider</h4>
-<pre>void&nbsp;setProvider(<a href="../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a>&nbsp;provider)</pre>
+<pre>void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.38">setProvider</a>(<a href="../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a>&nbsp;provider)</pre>
 </li>
 </ul>
 <a name="getFullBlock-int-int-int-">
@@ -679,7 +679,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.h
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
  <a href="../../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="Does not support hyper ids",
                     <a href="../../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.3.0.0-PN")
-int&nbsp;getFullBlock(int&nbsp;x,
+int&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.42">getFullBlock</a>(int&nbsp;x,
                                                                                                                                int&nbsp;y,
                                                                                                                                int&nbsp;z)</pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
@@ -694,7 +694,7 @@ int&nbsp;getFullBlock(int&nbsp;x,
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
  <a href="../../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="Does not support hyper ids",
                     <a href="../../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.3.0.0-PN")
-int&nbsp;getFullBlock(int&nbsp;x,
+int&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.46">getFullBlock</a>(int&nbsp;x,
                                                                                                                                int&nbsp;y,
                                                                                                                                int&nbsp;z,
                                                                                                                                int&nbsp;layer)</pre>
@@ -709,7 +709,7 @@ int&nbsp;getFullBlock(int&nbsp;x,
 <h4>getBlockRuntimeId</h4>
 <pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.3.0.0-PN")
-default&nbsp;int&nbsp;getBlockRuntimeId(int&nbsp;x,
+default&nbsp;int&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.50">getBlockRuntimeId</a>(int&nbsp;x,
                                                                            int&nbsp;y,
                                                                            int&nbsp;z)</pre>
 </li>
@@ -722,7 +722,7 @@ default&nbsp;int&nbsp;getBlockRuntimeId(int&nbsp;x,
 <h4>getBlockRuntimeId</h4>
 <pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.3.0.0-PN")
-default&nbsp;int&nbsp;getBlockRuntimeId(int&nbsp;x,
+default&nbsp;int&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.56">getBlockRuntimeId</a>(int&nbsp;x,
                                                                            int&nbsp;y,
                                                                            int&nbsp;z,
                                                                            int&nbsp;layer)</pre>
@@ -736,7 +736,7 @@ default&nbsp;int&nbsp;getBlockRuntimeId(int&nbsp;x,
 <h4>getBlockState</h4>
 <pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.3.0.0-PN")
-default&nbsp;int[]&nbsp;getBlockState(int&nbsp;x,
+default&nbsp;int[]&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.62">getBlockState</a>(int&nbsp;x,
                                                                          int&nbsp;y,
                                                                          int&nbsp;z)</pre>
 </li>
@@ -749,7 +749,7 @@ default&nbsp;int[]&nbsp;getBlockState(int&nbsp;x,
 <h4>getBlockState</h4>
 <pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.3.0.0-PN")
-default&nbsp;int[]&nbsp;getBlockState(int&nbsp;x,
+default&nbsp;int[]&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.68">getBlockState</a>(int&nbsp;x,
                                                                          int&nbsp;y,
                                                                          int&nbsp;z,
                                                                          int&nbsp;layer)</pre>
@@ -761,7 +761,7 @@ default&nbsp;int[]&nbsp;getBlockState(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>getAndSetBlock</h4>
-<pre><a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;getAndSetBlock(int&nbsp;x,
+<pre><a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.73">getAndSetBlock</a>(int&nbsp;x,
                      int&nbsp;y,
                      int&nbsp;z,
                      <a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block)</pre>
@@ -773,7 +773,7 @@ default&nbsp;int[]&nbsp;getBlockState(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>getAndSetBlock</h4>
-<pre><a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;getAndSetBlock(int&nbsp;x,
+<pre><a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.74">getAndSetBlock</a>(int&nbsp;x,
                      int&nbsp;y,
                      int&nbsp;z,
                      int&nbsp;layer,
@@ -790,7 +790,7 @@ default&nbsp;int[]&nbsp;getBlockState(int&nbsp;x,
  <a href="../../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="Does not support hyper ids",
                     <a href="../../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.3.0.0-PN",
                     <a href="../../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="setBlock(int x, int y, int z, int  blockId, int  meta)")
-default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
+default&nbsp;boolean&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.78">setFullBlockId</a>(int&nbsp;x,
                                                                                                                                                                                                                                        int&nbsp;y,
                                                                                                                                                                                                                                        int&nbsp;z,
                                                                                                                                                                                                                                        int&nbsp;fullId)</pre>
@@ -807,7 +807,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
  <a href="../../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="Does not support hyper ids",
                     <a href="../../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.3.0.0-PN",
                     <a href="../../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="setBlockAtLayer(int x, int y, int z, int layer, int  blockId)")
-default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
+default&nbsp;boolean&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.84">setFullBlockId</a>(int&nbsp;x,
                                                                                                                                                                                                                                               int&nbsp;y,
                                                                                                                                                                                                                                               int&nbsp;z,
                                                                                                                                                                                                                                               int&nbsp;layer,
@@ -821,7 +821,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>setBlock</h4>
-<pre>boolean&nbsp;setBlock(int&nbsp;x,
+<pre>boolean&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.88">setBlock</a>(int&nbsp;x,
                  int&nbsp;y,
                  int&nbsp;z,
                  int&nbsp;blockId)</pre>
@@ -833,7 +833,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>setBlockAtLayer</h4>
-<pre>boolean&nbsp;setBlockAtLayer(int&nbsp;x,
+<pre>boolean&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.89">setBlockAtLayer</a>(int&nbsp;x,
                         int&nbsp;y,
                         int&nbsp;z,
                         int&nbsp;layer,
@@ -846,7 +846,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>setBlock</h4>
-<pre>boolean&nbsp;setBlock(int&nbsp;x,
+<pre>boolean&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.91">setBlock</a>(int&nbsp;x,
                  int&nbsp;y,
                  int&nbsp;z,
                  int&nbsp;blockId,
@@ -859,7 +859,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>setBlockAtLayer</h4>
-<pre>boolean&nbsp;setBlockAtLayer(int&nbsp;x,
+<pre>boolean&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.92">setBlockAtLayer</a>(int&nbsp;x,
                         int&nbsp;y,
                         int&nbsp;z,
                         int&nbsp;layer,
@@ -873,7 +873,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>getBlockId</h4>
-<pre>int&nbsp;getBlockId(int&nbsp;x,
+<pre>int&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.94">getBlockId</a>(int&nbsp;x,
                int&nbsp;y,
                int&nbsp;z)</pre>
 </li>
@@ -884,7 +884,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>getBlockId</h4>
-<pre>int&nbsp;getBlockId(int&nbsp;x,
+<pre>int&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.95">getBlockId</a>(int&nbsp;x,
                int&nbsp;y,
                int&nbsp;z,
                int&nbsp;layer)</pre>
@@ -896,7 +896,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>setBlockId</h4>
-<pre>void&nbsp;setBlockId(int&nbsp;x,
+<pre>void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.97">setBlockId</a>(int&nbsp;x,
                 int&nbsp;y,
                 int&nbsp;z,
                 int&nbsp;id)</pre>
@@ -908,7 +908,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>setBlockId</h4>
-<pre>void&nbsp;setBlockId(int&nbsp;x,
+<pre>void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.98">setBlockId</a>(int&nbsp;x,
                 int&nbsp;y,
                 int&nbsp;z,
                 int&nbsp;layer,
@@ -921,7 +921,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>getBlockData</h4>
-<pre>int&nbsp;getBlockData(int&nbsp;x,
+<pre>int&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.100">getBlockData</a>(int&nbsp;x,
                  int&nbsp;y,
                  int&nbsp;z)</pre>
 </li>
@@ -932,7 +932,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>getBlockData</h4>
-<pre>int&nbsp;getBlockData(int&nbsp;x,
+<pre>int&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.101">getBlockData</a>(int&nbsp;x,
                  int&nbsp;y,
                  int&nbsp;z,
                  int&nbsp;layer)</pre>
@@ -944,7 +944,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>setBlockData</h4>
-<pre>void&nbsp;setBlockData(int&nbsp;x,
+<pre>void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.103">setBlockData</a>(int&nbsp;x,
                   int&nbsp;y,
                   int&nbsp;z,
                   int&nbsp;data)</pre>
@@ -956,7 +956,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>setBlockData</h4>
-<pre>void&nbsp;setBlockData(int&nbsp;x,
+<pre>void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.104">setBlockData</a>(int&nbsp;x,
                   int&nbsp;y,
                   int&nbsp;z,
                   int&nbsp;layer,
@@ -969,7 +969,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>getBlockExtraData</h4>
-<pre>int&nbsp;getBlockExtraData(int&nbsp;x,
+<pre>int&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.106">getBlockExtraData</a>(int&nbsp;x,
                       int&nbsp;y,
                       int&nbsp;z)</pre>
 </li>
@@ -980,7 +980,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>setBlockExtraData</h4>
-<pre>void&nbsp;setBlockExtraData(int&nbsp;x,
+<pre>void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.108">setBlockExtraData</a>(int&nbsp;x,
                        int&nbsp;y,
                        int&nbsp;z,
                        int&nbsp;data)</pre>
@@ -992,7 +992,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>getBlockSkyLight</h4>
-<pre>int&nbsp;getBlockSkyLight(int&nbsp;x,
+<pre>int&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.110">getBlockSkyLight</a>(int&nbsp;x,
                      int&nbsp;y,
                      int&nbsp;z)</pre>
 </li>
@@ -1003,7 +1003,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>setBlockSkyLight</h4>
-<pre>void&nbsp;setBlockSkyLight(int&nbsp;x,
+<pre>void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.112">setBlockSkyLight</a>(int&nbsp;x,
                       int&nbsp;y,
                       int&nbsp;z,
                       int&nbsp;level)</pre>
@@ -1015,7 +1015,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>getBlockLight</h4>
-<pre>int&nbsp;getBlockLight(int&nbsp;x,
+<pre>int&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.114">getBlockLight</a>(int&nbsp;x,
                   int&nbsp;y,
                   int&nbsp;z)</pre>
 </li>
@@ -1026,7 +1026,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>setBlockLight</h4>
-<pre>void&nbsp;setBlockLight(int&nbsp;x,
+<pre>void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.116">setBlockLight</a>(int&nbsp;x,
                    int&nbsp;y,
                    int&nbsp;z,
                    int&nbsp;level)</pre>
@@ -1038,7 +1038,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>getHighestBlockAt</h4>
-<pre>int&nbsp;getHighestBlockAt(int&nbsp;x,
+<pre>int&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.118">getHighestBlockAt</a>(int&nbsp;x,
                       int&nbsp;z)</pre>
 </li>
 </ul>
@@ -1048,7 +1048,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>getHighestBlockAt</h4>
-<pre>int&nbsp;getHighestBlockAt(int&nbsp;x,
+<pre>int&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.120">getHighestBlockAt</a>(int&nbsp;x,
                       int&nbsp;z,
                       boolean&nbsp;cache)</pre>
 </li>
@@ -1059,7 +1059,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>getHeightMap</h4>
-<pre>int&nbsp;getHeightMap(int&nbsp;x,
+<pre>int&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.122">getHeightMap</a>(int&nbsp;x,
                  int&nbsp;z)</pre>
 </li>
 </ul>
@@ -1069,7 +1069,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>setHeightMap</h4>
-<pre>void&nbsp;setHeightMap(int&nbsp;x,
+<pre>void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.124">setHeightMap</a>(int&nbsp;x,
                   int&nbsp;z,
                   int&nbsp;value)</pre>
 </li>
@@ -1080,7 +1080,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>recalculateHeightMap</h4>
-<pre>void&nbsp;recalculateHeightMap()</pre>
+<pre>void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.126">recalculateHeightMap</a>()</pre>
 </li>
 </ul>
 <a name="recalculateHeightMapColumn-int-int-">
@@ -1089,7 +1089,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>recalculateHeightMapColumn</h4>
-<pre>int&nbsp;recalculateHeightMapColumn(int&nbsp;chunkX,
+<pre>int&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.128">recalculateHeightMapColumn</a>(int&nbsp;chunkX,
                                int&nbsp;chunkZ)</pre>
 </li>
 </ul>
@@ -1099,7 +1099,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>populateSkyLight</h4>
-<pre>void&nbsp;populateSkyLight()</pre>
+<pre>void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.130">populateSkyLight</a>()</pre>
 </li>
 </ul>
 <a name="getBiomeId-int-int-">
@@ -1108,7 +1108,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>getBiomeId</h4>
-<pre>int&nbsp;getBiomeId(int&nbsp;x,
+<pre>int&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.132">getBiomeId</a>(int&nbsp;x,
                int&nbsp;z)</pre>
 </li>
 </ul>
@@ -1118,7 +1118,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>setBiomeId</h4>
-<pre>void&nbsp;setBiomeId(int&nbsp;x,
+<pre>void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.134">setBiomeId</a>(int&nbsp;x,
                 int&nbsp;z,
                 byte&nbsp;biomeId)</pre>
 </li>
@@ -1129,7 +1129,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>setBiomeId</h4>
-<pre>default&nbsp;void&nbsp;setBiomeId(int&nbsp;x,
+<pre>default&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.136">setBiomeId</a>(int&nbsp;x,
                         int&nbsp;z,
                         int&nbsp;biomeId)</pre>
 </li>
@@ -1140,7 +1140,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>setBiome</h4>
-<pre>default&nbsp;void&nbsp;setBiome(int&nbsp;x,
+<pre>default&nbsp;void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.140">setBiome</a>(int&nbsp;x,
                       int&nbsp;z,
                       <a href="../../../../cn/nukkit/level/biome/Biome.html" title="class in cn.nukkit.level.biome">Biome</a>&nbsp;biome)</pre>
 </li>
@@ -1151,7 +1151,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>isLightPopulated</h4>
-<pre>boolean&nbsp;isLightPopulated()</pre>
+<pre>boolean&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.144">isLightPopulated</a>()</pre>
 </li>
 </ul>
 <a name="setLightPopulated--">
@@ -1160,7 +1160,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>setLightPopulated</h4>
-<pre>void&nbsp;setLightPopulated()</pre>
+<pre>void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.146">setLightPopulated</a>()</pre>
 </li>
 </ul>
 <a name="setLightPopulated-boolean-">
@@ -1169,7 +1169,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>setLightPopulated</h4>
-<pre>void&nbsp;setLightPopulated(boolean&nbsp;value)</pre>
+<pre>void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.148">setLightPopulated</a>(boolean&nbsp;value)</pre>
 </li>
 </ul>
 <a name="isPopulated--">
@@ -1178,7 +1178,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>isPopulated</h4>
-<pre>boolean&nbsp;isPopulated()</pre>
+<pre>boolean&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.150">isPopulated</a>()</pre>
 </li>
 </ul>
 <a name="setPopulated--">
@@ -1187,7 +1187,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>setPopulated</h4>
-<pre>void&nbsp;setPopulated()</pre>
+<pre>void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.152">setPopulated</a>()</pre>
 </li>
 </ul>
 <a name="setPopulated-boolean-">
@@ -1196,7 +1196,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>setPopulated</h4>
-<pre>void&nbsp;setPopulated(boolean&nbsp;value)</pre>
+<pre>void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.154">setPopulated</a>(boolean&nbsp;value)</pre>
 </li>
 </ul>
 <a name="isGenerated--">
@@ -1205,7 +1205,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>isGenerated</h4>
-<pre>boolean&nbsp;isGenerated()</pre>
+<pre>boolean&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.156">isGenerated</a>()</pre>
 </li>
 </ul>
 <a name="setGenerated--">
@@ -1214,7 +1214,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>setGenerated</h4>
-<pre>void&nbsp;setGenerated()</pre>
+<pre>void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.158">setGenerated</a>()</pre>
 </li>
 </ul>
 <a name="setGenerated-boolean-">
@@ -1223,7 +1223,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>setGenerated</h4>
-<pre>void&nbsp;setGenerated(boolean&nbsp;value)</pre>
+<pre>void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.160">setGenerated</a>(boolean&nbsp;value)</pre>
 </li>
 </ul>
 <a name="addEntity-cn.nukkit.entity.Entity-">
@@ -1232,7 +1232,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>addEntity</h4>
-<pre>void&nbsp;addEntity(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity)</pre>
+<pre>void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.162">addEntity</a>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity)</pre>
 </li>
 </ul>
 <a name="removeEntity-cn.nukkit.entity.Entity-">
@@ -1241,7 +1241,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>removeEntity</h4>
-<pre>void&nbsp;removeEntity(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity)</pre>
+<pre>void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.164">removeEntity</a>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity)</pre>
 </li>
 </ul>
 <a name="addBlockEntity-cn.nukkit.blockentity.BlockEntity-">
@@ -1250,7 +1250,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>addBlockEntity</h4>
-<pre>void&nbsp;addBlockEntity(<a href="../../../../cn/nukkit/blockentity/BlockEntity.html" title="class in cn.nukkit.blockentity">BlockEntity</a>&nbsp;blockEntity)</pre>
+<pre>void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.166">addBlockEntity</a>(<a href="../../../../cn/nukkit/blockentity/BlockEntity.html" title="class in cn.nukkit.blockentity">BlockEntity</a>&nbsp;blockEntity)</pre>
 </li>
 </ul>
 <a name="removeBlockEntity-cn.nukkit.blockentity.BlockEntity-">
@@ -1259,7 +1259,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>removeBlockEntity</h4>
-<pre>void&nbsp;removeBlockEntity(<a href="../../../../cn/nukkit/blockentity/BlockEntity.html" title="class in cn.nukkit.blockentity">BlockEntity</a>&nbsp;blockEntity)</pre>
+<pre>void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.168">removeBlockEntity</a>(<a href="../../../../cn/nukkit/blockentity/BlockEntity.html" title="class in cn.nukkit.blockentity">BlockEntity</a>&nbsp;blockEntity)</pre>
 </li>
 </ul>
 <a name="getEntities--">
@@ -1268,7 +1268,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>getEntities</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>,<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&gt;&nbsp;getEntities()</pre>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>,<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&gt;&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.170">getEntities</a>()</pre>
 </li>
 </ul>
 <a name="getBlockEntities--">
@@ -1277,7 +1277,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>getBlockEntities</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>,<a href="../../../../cn/nukkit/blockentity/BlockEntity.html" title="class in cn.nukkit.blockentity">BlockEntity</a>&gt;&nbsp;getBlockEntities()</pre>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>,<a href="../../../../cn/nukkit/blockentity/BlockEntity.html" title="class in cn.nukkit.blockentity">BlockEntity</a>&gt;&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.172">getBlockEntities</a>()</pre>
 </li>
 </ul>
 <a name="getTile-int-int-int-">
@@ -1286,7 +1286,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>getTile</h4>
-<pre><a href="../../../../cn/nukkit/blockentity/BlockEntity.html" title="class in cn.nukkit.blockentity">BlockEntity</a>&nbsp;getTile(int&nbsp;x,
+<pre><a href="../../../../cn/nukkit/blockentity/BlockEntity.html" title="class in cn.nukkit.blockentity">BlockEntity</a>&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.174">getTile</a>(int&nbsp;x,
                     int&nbsp;y,
                     int&nbsp;z)</pre>
 </li>
@@ -1297,7 +1297,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>isLoaded</h4>
-<pre>boolean&nbsp;isLoaded()</pre>
+<pre>boolean&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.176">isLoaded</a>()</pre>
 </li>
 </ul>
 <a name="load--">
@@ -1306,7 +1306,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>load</h4>
-<pre>boolean&nbsp;load()
+<pre>boolean&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.178">load</a>()
       throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -1320,7 +1320,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>load</h4>
-<pre>boolean&nbsp;load(boolean&nbsp;generate)
+<pre>boolean&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.180">load</a>(boolean&nbsp;generate)
       throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -1334,7 +1334,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>unload</h4>
-<pre>boolean&nbsp;unload()
+<pre>boolean&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.182">unload</a>()
         throws <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -1348,7 +1348,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>unload</h4>
-<pre>boolean&nbsp;unload(boolean&nbsp;save)
+<pre>boolean&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.184">unload</a>(boolean&nbsp;save)
         throws <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -1362,7 +1362,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>unload</h4>
-<pre>boolean&nbsp;unload(boolean&nbsp;save,
+<pre>boolean&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.186">unload</a>(boolean&nbsp;save,
                boolean&nbsp;safe)
         throws <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <dl>
@@ -1377,7 +1377,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>initChunk</h4>
-<pre>void&nbsp;initChunk()</pre>
+<pre>void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.188">initChunk</a>()</pre>
 </li>
 </ul>
 <a name="getBiomeIdArray--">
@@ -1386,7 +1386,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>getBiomeIdArray</h4>
-<pre>byte[]&nbsp;getBiomeIdArray()</pre>
+<pre>byte[]&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.190">getBiomeIdArray</a>()</pre>
 </li>
 </ul>
 <a name="getHeightMapArray--">
@@ -1395,7 +1395,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>getHeightMapArray</h4>
-<pre>byte[]&nbsp;getHeightMapArray()</pre>
+<pre>byte[]&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.192">getHeightMapArray</a>()</pre>
 </li>
 </ul>
 <a name="getBlockIdArray-int-">
@@ -1404,7 +1404,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>getBlockIdArray</h4>
-<pre>byte[]&nbsp;getBlockIdArray(int&nbsp;layer)</pre>
+<pre>byte[]&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.194">getBlockIdArray</a>(int&nbsp;layer)</pre>
 </li>
 </ul>
 <a name="getBlockIdArray--">
@@ -1413,7 +1413,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>getBlockIdArray</h4>
-<pre>default&nbsp;byte[]&nbsp;getBlockIdArray()</pre>
+<pre>default&nbsp;byte[]&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.195">getBlockIdArray</a>()</pre>
 </li>
 </ul>
 <a name="getBlockDataArray-int-">
@@ -1422,7 +1422,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>getBlockDataArray</h4>
-<pre>byte[]&nbsp;getBlockDataArray(int&nbsp;layer)</pre>
+<pre>byte[]&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.199">getBlockDataArray</a>(int&nbsp;layer)</pre>
 </li>
 </ul>
 <a name="getBlockDataArray--">
@@ -1431,7 +1431,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>getBlockDataArray</h4>
-<pre>default&nbsp;byte[]&nbsp;getBlockDataArray()</pre>
+<pre>default&nbsp;byte[]&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.200">getBlockDataArray</a>()</pre>
 </li>
 </ul>
 <a name="getBlockExtraDataArray--">
@@ -1440,7 +1440,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>getBlockExtraDataArray</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;&nbsp;getBlockExtraDataArray()</pre>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a>&gt;&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.204">getBlockExtraDataArray</a>()</pre>
 </li>
 </ul>
 <a name="getBlockSkyLightArray--">
@@ -1449,7 +1449,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>getBlockSkyLightArray</h4>
-<pre>byte[]&nbsp;getBlockSkyLightArray()</pre>
+<pre>byte[]&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.206">getBlockSkyLightArray</a>()</pre>
 </li>
 </ul>
 <a name="getBlockLightArray--">
@@ -1458,7 +1458,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>getBlockLightArray</h4>
-<pre>byte[]&nbsp;getBlockLightArray()</pre>
+<pre>byte[]&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.208">getBlockLightArray</a>()</pre>
 </li>
 </ul>
 <a name="toBinary--">
@@ -1467,7 +1467,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>toBinary</h4>
-<pre>byte[]&nbsp;toBinary()</pre>
+<pre>byte[]&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.210">toBinary</a>()</pre>
 </li>
 </ul>
 <a name="toFastBinary--">
@@ -1476,7 +1476,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>toFastBinary</h4>
-<pre>byte[]&nbsp;toFastBinary()</pre>
+<pre>byte[]&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.212">toFastBinary</a>()</pre>
 </li>
 </ul>
 <a name="hasChanged--">
@@ -1485,7 +1485,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>hasChanged</h4>
-<pre>boolean&nbsp;hasChanged()</pre>
+<pre>boolean&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.214">hasChanged</a>()</pre>
 </li>
 </ul>
 <a name="setChanged--">
@@ -1494,7 +1494,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockList">
 <li class="blockList">
 <h4>setChanged</h4>
-<pre>void&nbsp;setChanged()</pre>
+<pre>void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.216">setChanged</a>()</pre>
 </li>
 </ul>
 <a name="setChanged-boolean-">
@@ -1503,7 +1503,7 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <ul class="blockListLast">
 <li class="blockList">
 <h4>setChanged</h4>
-<pre>void&nbsp;setChanged(boolean&nbsp;changed)</pre>
+<pre>void&nbsp;<a href="../../../../src-html/cn/nukkit/level/format/FullChunk.html#line.218">setChanged</a>(boolean&nbsp;changed)</pre>
 </li>
 </ul>
 </li>
@@ -1575,6 +1575,6 @@ default&nbsp;boolean&nbsp;setFullBlockId(int&nbsp;x,
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2020 <a href="https://powernukkit.org">PowerNukkit</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2020&#x2013;2021 <a href="https://powernukkit.org">PowerNukkit</a>. All rights reserved.</small></p>
 </body>
 </html>

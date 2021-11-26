@@ -1,11 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- NewPage -->
-<html lang="en">
+<html lang="pt">
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>CommandMap (PowerNukkit 1.3.1.5-PN API)</title>
-<meta name="date" content="2020-09-08">
+<meta name="date" content="2021-11-26">
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
 </head>
@@ -106,7 +106,7 @@ var activeTableTab = "activeTableTab";
 </dl>
 <hr>
 <br>
-<pre>public interface <span class="typeNameLabel">CommandMap</span></pre>
+<pre>public interface <a href="../../../src-html/cn/nukkit/command/CommandMap.html#line.9">CommandMap</a></pre>
 <div class="block">author: MagicDroidX
  Nukkit Project</div>
 </li>
@@ -181,7 +181,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>registerAll</h4>
-<pre>void&nbsp;registerAll(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fallbackPrefix,
+<pre>void&nbsp;<a href="../../../src-html/cn/nukkit/command/CommandMap.html#line.11">registerAll</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fallbackPrefix,
                  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;? extends <a href="../../../cn/nukkit/command/Command.html" title="class in cn.nukkit.command">Command</a>&gt;&nbsp;commands)</pre>
 </li>
 </ul>
@@ -191,7 +191,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>register</h4>
-<pre>boolean&nbsp;register(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fallbackPrefix,
+<pre>boolean&nbsp;<a href="../../../src-html/cn/nukkit/command/CommandMap.html#line.13">register</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fallbackPrefix,
                  <a href="../../../cn/nukkit/command/Command.html" title="class in cn.nukkit.command">Command</a>&nbsp;command)</pre>
 </li>
 </ul>
@@ -201,7 +201,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>register</h4>
-<pre>boolean&nbsp;register(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fallbackPrefix,
+<pre>boolean&nbsp;<a href="../../../src-html/cn/nukkit/command/CommandMap.html#line.15">register</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fallbackPrefix,
                  <a href="../../../cn/nukkit/command/Command.html" title="class in cn.nukkit.command">Command</a>&nbsp;command,
                  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;label)</pre>
 </li>
@@ -212,7 +212,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>registerSimpleCommands</h4>
-<pre>void&nbsp;registerSimpleCommands(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object)</pre>
+<pre>void&nbsp;<a href="../../../src-html/cn/nukkit/command/CommandMap.html#line.17">registerSimpleCommands</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;object)</pre>
 </li>
 </ul>
 <a name="dispatch-cn.nukkit.command.CommandSender-java.lang.String-">
@@ -221,7 +221,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>dispatch</h4>
-<pre>boolean&nbsp;dispatch(<a href="../../../cn/nukkit/command/CommandSender.html" title="interface in cn.nukkit.command">CommandSender</a>&nbsp;sender,
+<pre>boolean&nbsp;<a href="../../../src-html/cn/nukkit/command/CommandMap.html#line.19">dispatch</a>(<a href="../../../cn/nukkit/command/CommandSender.html" title="interface in cn.nukkit.command">CommandSender</a>&nbsp;sender,
                  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;cmdLine)</pre>
 </li>
 </ul>
@@ -231,7 +231,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>clearCommands</h4>
-<pre>void&nbsp;clearCommands()</pre>
+<pre>void&nbsp;<a href="../../../src-html/cn/nukkit/command/CommandMap.html#line.21">clearCommands</a>()</pre>
 </li>
 </ul>
 <a name="getCommand-java.lang.String-">
@@ -240,7 +240,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getCommand</h4>
-<pre><a href="../../../cn/nukkit/command/Command.html" title="class in cn.nukkit.command">Command</a>&nbsp;getCommand(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
+<pre><a href="../../../cn/nukkit/command/Command.html" title="class in cn.nukkit.command">Command</a>&nbsp;<a href="../../../src-html/cn/nukkit/command/CommandMap.html#line.23">getCommand</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
 </li>
 </ul>
 </li>
@@ -312,6 +312,6 @@ var activeTableTab = "activeTableTab";
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2020 <a href="https://powernukkit.org">PowerNukkit</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2020&#x2013;2021 <a href="https://powernukkit.org">PowerNukkit</a>. All rights reserved.</small></p>
 </body>
 </html>

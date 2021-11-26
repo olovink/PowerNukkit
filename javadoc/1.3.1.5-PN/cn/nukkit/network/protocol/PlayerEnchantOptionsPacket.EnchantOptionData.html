@@ -1,11 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- NewPage -->
-<html lang="en">
+<html lang="pt">
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>PlayerEnchantOptionsPacket.EnchantOptionData (PowerNukkit 1.3.1.5-PN API)</title>
-<meta name="date" content="2020-09-08">
+<meta name="date" content="2021-11-26">
 <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../../script.js"></script>
 </head>
@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":42};
+var methods = {"i0":10,"i1":42,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -115,7 +115,7 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.3.0.0-PN")
-public class <span class="typeNameLabel">PlayerEnchantOptionsPacket.EnchantOptionData</span>
+public final class <a href="../../../../src-html/cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.html#line.81">PlayerEnchantOptionsPacket.EnchantOptionData</a>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 </li>
 </ul>
@@ -135,7 +135,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantOptionData.html#EnchantOptionData--">EnchantOptionData</a></span>()</code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantOptionData.html#EnchantOptionData-int-int-java.util.List-java.util.List-java.util.List-java.lang.String-int-">EnchantOptionData</a></span>(int&nbsp;minLevel,
+                 int&nbsp;primarySlot,
+                 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantData.html" title="class in cn.nukkit.network.protocol">PlayerEnchantOptionsPacket.EnchantData</a>&gt;&nbsp;enchants0,
+                 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantData.html" title="class in cn.nukkit.network.protocol">PlayerEnchantOptionsPacket.EnchantData</a>&gt;&nbsp;enchants1,
+                 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantData.html" title="class in cn.nukkit.network.protocol">PlayerEnchantOptionsPacket.EnchantData</a>&gt;&nbsp;enchants2,
+                 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;enchantName,
+                 int&nbsp;enchantNetId)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -153,10 +159,50 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantOptionData.html#equals-java.lang.Object-">equals</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o)</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantOptionData.html#getCost--">getCost</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantOptionData.html#getEnchantName--">getEnchantName</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantOptionData.html#getEnchantNetId--">getEnchantNetId</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantData.html" title="class in cn.nukkit.network.protocol">PlayerEnchantOptionsPacket.EnchantData</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantOptionData.html#getEnchants0--">getEnchants0</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantData.html" title="class in cn.nukkit.network.protocol">PlayerEnchantOptionsPacket.EnchantData</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantOptionData.html#getEnchants1--">getEnchants1</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantData.html" title="class in cn.nukkit.network.protocol">PlayerEnchantOptionsPacket.EnchantData</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantOptionData.html#getEnchants2--">getEnchants2</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantOptionData.html#getMinLevel--">getMinLevel</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantOptionData.html#getPrimarySlot--">getPrimarySlot</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantOptionData.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantOptionData.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -164,7 +210,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
 </ul>
 </li>
 </ul>
@@ -180,13 +226,19 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="EnchantOptionData--">
+<a name="EnchantOptionData-int-int-java.util.List-java.util.List-java.util.List-java.lang.String-int-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>EnchantOptionData</h4>
-<pre>public&nbsp;EnchantOptionData()</pre>
+<pre>public&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantOptionData.html#line.99">EnchantOptionData</a>(int&nbsp;minLevel,
+                         int&nbsp;primarySlot,
+                         <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantData.html" title="class in cn.nukkit.network.protocol">PlayerEnchantOptionsPacket.EnchantData</a>&gt;&nbsp;enchants0,
+                         <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantData.html" title="class in cn.nukkit.network.protocol">PlayerEnchantOptionsPacket.EnchantData</a>&gt;&nbsp;enchants1,
+                         <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantData.html" title="class in cn.nukkit.network.protocol">PlayerEnchantOptionsPacket.EnchantData</a>&gt;&nbsp;enchants2,
+                         <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;enchantName,
+                         int&nbsp;enchantNetId)</pre>
 </li>
 </ul>
 </li>
@@ -200,7 +252,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <a name="getCost--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getCost</h4>
 <pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>(<a href="../../../../cn/nukkit/api/PowerNukkitOnly.html#value--">value</a>="Does not exists in NukkitX anymore. Keeping for backward compatibility to allow smother version transition.")
@@ -209,8 +261,110 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                     <a href="../../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="Renamed to minLevel by NukkitX",
                     <a href="../../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="getMinLevel()",
                     <a href="../../../../cn/nukkit/api/DeprecationDetails.html#toBeRemovedAt--">toBeRemovedAt</a>="1.4.0.0-PN")
-public&nbsp;int&nbsp;getCost()</pre>
+public&nbsp;int&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantOptionData.html#line.94">getCost</a>()</pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+</li>
+</ul>
+<a name="getMinLevel--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMinLevel</h4>
+<pre>public&nbsp;int&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantOptionData.html#line.110">getMinLevel</a>()</pre>
+</li>
+</ul>
+<a name="getPrimarySlot--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPrimarySlot</h4>
+<pre>public&nbsp;int&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantOptionData.html#line.115">getPrimarySlot</a>()</pre>
+</li>
+</ul>
+<a name="getEnchants0--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEnchants0</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantData.html" title="class in cn.nukkit.network.protocol">PlayerEnchantOptionsPacket.EnchantData</a>&gt;&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantOptionData.html#line.120">getEnchants0</a>()</pre>
+</li>
+</ul>
+<a name="getEnchants1--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEnchants1</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantData.html" title="class in cn.nukkit.network.protocol">PlayerEnchantOptionsPacket.EnchantData</a>&gt;&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantOptionData.html#line.125">getEnchants1</a>()</pre>
+</li>
+</ul>
+<a name="getEnchants2--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEnchants2</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantData.html" title="class in cn.nukkit.network.protocol">PlayerEnchantOptionsPacket.EnchantData</a>&gt;&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantOptionData.html#line.130">getEnchants2</a>()</pre>
+</li>
+</ul>
+<a name="getEnchantName--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEnchantName</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantOptionData.html#line.135">getEnchantName</a>()</pre>
+</li>
+</ul>
+<a name="getEnchantNetId--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getEnchantNetId</h4>
+<pre>public&nbsp;int&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantOptionData.html#line.140">getEnchantNetId</a>()</pre>
+</li>
+</ul>
+<a name="equals-java.lang.Object-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>equals</h4>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantOptionData.html#line.146">equals</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="hashCode--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hashCode</h4>
+<pre>public&nbsp;int&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantOptionData.html#line.170">hashCode</a>()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="toString--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>toString</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../src-html/cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.EnchantOptionData.html#line.189">toString</a>()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+</dl>
 </li>
 </ul>
 </li>
@@ -282,6 +436,6 @@ public&nbsp;int&nbsp;getCost()</pre>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2020 <a href="https://powernukkit.org">PowerNukkit</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2020&#x2013;2021 <a href="https://powernukkit.org">PowerNukkit</a>. All rights reserved.</small></p>
 </body>
 </html>

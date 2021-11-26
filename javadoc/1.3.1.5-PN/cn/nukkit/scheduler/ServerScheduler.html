@@ -1,11 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- NewPage -->
-<html lang="en">
+<html lang="pt">
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>ServerScheduler (PowerNukkit 1.3.1.5-PN API)</title>
-<meta name="date" content="2020-09-08">
+<meta name="date" content="2021-11-26">
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
 </head>
@@ -110,7 +110,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <hr>
 <br>
-<pre>public class <span class="typeNameLabel">ServerScheduler</span>
+<pre>public class <a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.18">ServerScheduler</a>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <dl>
 <dt><span class="simpleTagLabel">Author:</span></dt>
@@ -417,7 +417,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockListLast">
 <li class="blockList">
 <h4>WORKERS</h4>
-<pre>public static&nbsp;int WORKERS</pre>
+<pre>public static&nbsp;int <a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.20">WORKERS</a></pre>
 </li>
 </ul>
 </li>
@@ -434,7 +434,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockListLast">
 <li class="blockList">
 <h4>ServerScheduler</h4>
-<pre>public&nbsp;ServerScheduler()</pre>
+<pre>public&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.31">ServerScheduler</a>()</pre>
 </li>
 </ul>
 </li>
@@ -451,7 +451,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>scheduleTask</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;scheduleTask(<a href="../../../cn/nukkit/scheduler/Task.html" title="class in cn.nukkit.scheduler">Task</a>&nbsp;task)</pre>
+<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.39">scheduleTask</a>(<a href="../../../cn/nukkit/scheduler/Task.html" title="class in cn.nukkit.scheduler">Task</a>&nbsp;task)</pre>
 </li>
 </ul>
 <a name="scheduleTask-java.lang.Runnable-">
@@ -461,7 +461,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>scheduleTask</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
-public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;scheduleTask(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task)</pre>
+public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.47">scheduleTask</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task)</pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">Use <a href="../../../cn/nukkit/scheduler/ServerScheduler.html#scheduleTask-cn.nukkit.plugin.Plugin-java.lang.Runnable-"><code>scheduleTask(Plugin, Runnable)</code></a></span></div>
 </li>
 </ul>
@@ -471,7 +471,7 @@ public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>scheduleTask</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;scheduleTask(<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;plugin,
+<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.51">scheduleTask</a>(<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;plugin,
                                 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task)</pre>
 </li>
 </ul>
@@ -482,7 +482,7 @@ public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class
 <li class="blockList">
 <h4>scheduleTask</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
-public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;scheduleTask(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task,
+public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.59">scheduleTask</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task,
                                             boolean&nbsp;asynchronous)</pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">Use <a href="../../../cn/nukkit/scheduler/ServerScheduler.html#scheduleTask-cn.nukkit.plugin.Plugin-java.lang.Runnable-boolean-"><code>scheduleTask(Plugin, Runnable, boolean)</code></a></span></div>
 </li>
@@ -493,7 +493,7 @@ public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>scheduleTask</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;scheduleTask(<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;plugin,
+<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.63">scheduleTask</a>(<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;plugin,
                                 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task,
                                 boolean&nbsp;asynchronous)</pre>
 </li>
@@ -505,7 +505,7 @@ public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class
 <li class="blockList">
 <h4>scheduleAsyncTask</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
-public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;scheduleAsyncTask(<a href="../../../cn/nukkit/scheduler/AsyncTask.html" title="class in cn.nukkit.scheduler">AsyncTask</a>&nbsp;task)</pre>
+public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.71">scheduleAsyncTask</a>(<a href="../../../cn/nukkit/scheduler/AsyncTask.html" title="class in cn.nukkit.scheduler">AsyncTask</a>&nbsp;task)</pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">Use <a href="../../../cn/nukkit/scheduler/ServerScheduler.html#scheduleAsyncTask-cn.nukkit.plugin.Plugin-cn.nukkit.scheduler.AsyncTask-"><code>scheduleAsyncTask(Plugin, AsyncTask)</code></a></span></div>
 </li>
 </ul>
@@ -515,7 +515,7 @@ public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>scheduleAsyncTask</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;scheduleAsyncTask(<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;plugin,
+<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.75">scheduleAsyncTask</a>(<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;plugin,
                                      <a href="../../../cn/nukkit/scheduler/AsyncTask.html" title="class in cn.nukkit.scheduler">AsyncTask</a>&nbsp;task)</pre>
 </li>
 </ul>
@@ -526,7 +526,7 @@ public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class
 <li class="blockList">
 <h4>scheduleAsyncTaskToWorker</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
-public&nbsp;void&nbsp;scheduleAsyncTaskToWorker(<a href="../../../cn/nukkit/scheduler/AsyncTask.html" title="class in cn.nukkit.scheduler">AsyncTask</a>&nbsp;task,
+public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.80">scheduleAsyncTaskToWorker</a>(<a href="../../../cn/nukkit/scheduler/AsyncTask.html" title="class in cn.nukkit.scheduler">AsyncTask</a>&nbsp;task,
                                                   int&nbsp;worker)</pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </li>
@@ -537,7 +537,7 @@ public&nbsp;void&nbsp;scheduleAsyncTaskToWorker(<a href="../../../cn/nukkit/sche
 <ul class="blockList">
 <li class="blockList">
 <h4>getAsyncTaskPoolSize</h4>
-<pre>public&nbsp;int&nbsp;getAsyncTaskPoolSize()</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.84">getAsyncTaskPoolSize</a>()</pre>
 </li>
 </ul>
 <a name="increaseAsyncTaskPoolSize-int-">
@@ -546,7 +546,7 @@ public&nbsp;void&nbsp;scheduleAsyncTaskToWorker(<a href="../../../cn/nukkit/sche
 <ul class="blockList">
 <li class="blockList">
 <h4>increaseAsyncTaskPoolSize</h4>
-<pre>public&nbsp;void&nbsp;increaseAsyncTaskPoolSize(int&nbsp;newSize)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.88">increaseAsyncTaskPoolSize</a>(int&nbsp;newSize)</pre>
 </li>
 </ul>
 <a name="scheduleDelayedTask-cn.nukkit.scheduler.Task-int-">
@@ -555,7 +555,7 @@ public&nbsp;void&nbsp;scheduleAsyncTaskToWorker(<a href="../../../cn/nukkit/sche
 <ul class="blockList">
 <li class="blockList">
 <h4>scheduleDelayedTask</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;scheduleDelayedTask(<a href="../../../cn/nukkit/scheduler/Task.html" title="class in cn.nukkit.scheduler">Task</a>&nbsp;task,
+<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.92">scheduleDelayedTask</a>(<a href="../../../cn/nukkit/scheduler/Task.html" title="class in cn.nukkit.scheduler">Task</a>&nbsp;task,
                                        int&nbsp;delay)</pre>
 </li>
 </ul>
@@ -565,7 +565,7 @@ public&nbsp;void&nbsp;scheduleAsyncTaskToWorker(<a href="../../../cn/nukkit/sche
 <ul class="blockList">
 <li class="blockList">
 <h4>scheduleDelayedTask</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;scheduleDelayedTask(<a href="../../../cn/nukkit/scheduler/Task.html" title="class in cn.nukkit.scheduler">Task</a>&nbsp;task,
+<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.96">scheduleDelayedTask</a>(<a href="../../../cn/nukkit/scheduler/Task.html" title="class in cn.nukkit.scheduler">Task</a>&nbsp;task,
                                        int&nbsp;delay,
                                        boolean&nbsp;asynchronous)</pre>
 </li>
@@ -577,7 +577,7 @@ public&nbsp;void&nbsp;scheduleAsyncTaskToWorker(<a href="../../../cn/nukkit/sche
 <li class="blockList">
 <h4>scheduleDelayedTask</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
-public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;scheduleDelayedTask(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task,
+public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.104">scheduleDelayedTask</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task,
                                                    int&nbsp;delay)</pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">Use <a href="../../../cn/nukkit/scheduler/ServerScheduler.html#scheduleDelayedTask-cn.nukkit.plugin.Plugin-java.lang.Runnable-int-"><code>scheduleDelayedTask(Plugin, Runnable, int)</code></a></span></div>
 </li>
@@ -588,7 +588,7 @@ public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>scheduleDelayedTask</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;scheduleDelayedTask(<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;plugin,
+<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.108">scheduleDelayedTask</a>(<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;plugin,
                                        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task,
                                        int&nbsp;delay)</pre>
 </li>
@@ -600,7 +600,7 @@ public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class
 <li class="blockList">
 <h4>scheduleDelayedTask</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
-public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;scheduleDelayedTask(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task,
+public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.116">scheduleDelayedTask</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task,
                                                    int&nbsp;delay,
                                                    boolean&nbsp;asynchronous)</pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">Use <a href="../../../cn/nukkit/scheduler/ServerScheduler.html#scheduleDelayedTask-cn.nukkit.plugin.Plugin-java.lang.Runnable-int-boolean-"><code>scheduleDelayedTask(Plugin, Runnable, int, boolean)</code></a></span></div>
@@ -612,7 +612,7 @@ public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>scheduleDelayedTask</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;scheduleDelayedTask(<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;plugin,
+<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.120">scheduleDelayedTask</a>(<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;plugin,
                                        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task,
                                        int&nbsp;delay,
                                        boolean&nbsp;asynchronous)</pre>
@@ -625,7 +625,7 @@ public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class
 <li class="blockList">
 <h4>scheduleRepeatingTask</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
-public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;scheduleRepeatingTask(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task,
+public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.128">scheduleRepeatingTask</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task,
                                                      int&nbsp;period)</pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">Use <a href="../../../cn/nukkit/scheduler/ServerScheduler.html#scheduleRepeatingTask-cn.nukkit.plugin.Plugin-java.lang.Runnable-int-"><code>scheduleRepeatingTask(Plugin, Runnable, int)</code></a></span></div>
 </li>
@@ -636,7 +636,7 @@ public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>scheduleRepeatingTask</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;scheduleRepeatingTask(<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;plugin,
+<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.132">scheduleRepeatingTask</a>(<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;plugin,
                                          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task,
                                          int&nbsp;period)</pre>
 </li>
@@ -648,7 +648,7 @@ public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class
 <li class="blockList">
 <h4>scheduleRepeatingTask</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
-public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;scheduleRepeatingTask(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task,
+public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.140">scheduleRepeatingTask</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task,
                                                      int&nbsp;period,
                                                      boolean&nbsp;asynchronous)</pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">Use <a href="../../../cn/nukkit/scheduler/ServerScheduler.html#scheduleRepeatingTask-cn.nukkit.plugin.Plugin-java.lang.Runnable-int-boolean-"><code>scheduleRepeatingTask(Plugin, Runnable, int, boolean)</code></a></span></div>
@@ -660,7 +660,7 @@ public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>scheduleRepeatingTask</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;scheduleRepeatingTask(<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;plugin,
+<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.144">scheduleRepeatingTask</a>(<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;plugin,
                                          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task,
                                          int&nbsp;period,
                                          boolean&nbsp;asynchronous)</pre>
@@ -672,7 +672,7 @@ public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>scheduleRepeatingTask</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;scheduleRepeatingTask(<a href="../../../cn/nukkit/scheduler/Task.html" title="class in cn.nukkit.scheduler">Task</a>&nbsp;task,
+<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.148">scheduleRepeatingTask</a>(<a href="../../../cn/nukkit/scheduler/Task.html" title="class in cn.nukkit.scheduler">Task</a>&nbsp;task,
                                          int&nbsp;period)</pre>
 </li>
 </ul>
@@ -682,7 +682,7 @@ public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>scheduleRepeatingTask</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;scheduleRepeatingTask(<a href="../../../cn/nukkit/scheduler/Task.html" title="class in cn.nukkit.scheduler">Task</a>&nbsp;task,
+<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.152">scheduleRepeatingTask</a>(<a href="../../../cn/nukkit/scheduler/Task.html" title="class in cn.nukkit.scheduler">Task</a>&nbsp;task,
                                          int&nbsp;period,
                                          boolean&nbsp;asynchronous)</pre>
 </li>
@@ -693,7 +693,7 @@ public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>scheduleDelayedRepeatingTask</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;scheduleDelayedRepeatingTask(<a href="../../../cn/nukkit/scheduler/Task.html" title="class in cn.nukkit.scheduler">Task</a>&nbsp;task,
+<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.156">scheduleDelayedRepeatingTask</a>(<a href="../../../cn/nukkit/scheduler/Task.html" title="class in cn.nukkit.scheduler">Task</a>&nbsp;task,
                                                 int&nbsp;delay,
                                                 int&nbsp;period)</pre>
 </li>
@@ -704,7 +704,7 @@ public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>scheduleDelayedRepeatingTask</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;scheduleDelayedRepeatingTask(<a href="../../../cn/nukkit/scheduler/Task.html" title="class in cn.nukkit.scheduler">Task</a>&nbsp;task,
+<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.160">scheduleDelayedRepeatingTask</a>(<a href="../../../cn/nukkit/scheduler/Task.html" title="class in cn.nukkit.scheduler">Task</a>&nbsp;task,
                                                 int&nbsp;delay,
                                                 int&nbsp;period,
                                                 boolean&nbsp;asynchronous)</pre>
@@ -717,7 +717,7 @@ public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class
 <li class="blockList">
 <h4>scheduleDelayedRepeatingTask</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
-public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;scheduleDelayedRepeatingTask(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task,
+public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.168">scheduleDelayedRepeatingTask</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task,
                                                             int&nbsp;delay,
                                                             int&nbsp;period)</pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;<span class="deprecationComment">Use <a href="../../../cn/nukkit/scheduler/ServerScheduler.html#scheduleDelayedRepeatingTask-cn.nukkit.plugin.Plugin-java.lang.Runnable-int-int-"><code>scheduleDelayedRepeatingTask(Plugin, Runnable, int, int)</code></a></span></div>
@@ -729,7 +729,7 @@ public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>scheduleDelayedRepeatingTask</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;scheduleDelayedRepeatingTask(<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;plugin,
+<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.172">scheduleDelayedRepeatingTask</a>(<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;plugin,
                                                 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task,
                                                 int&nbsp;delay,
                                                 int&nbsp;period)</pre>
@@ -742,7 +742,7 @@ public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class
 <li class="blockList">
 <h4>scheduleDelayedRepeatingTask</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
-public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;scheduleDelayedRepeatingTask(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task,
+public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.180">scheduleDelayedRepeatingTask</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task,
                                                             int&nbsp;delay,
                                                             int&nbsp;period,
                                                             boolean&nbsp;asynchronous)</pre>
@@ -755,7 +755,7 @@ public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>scheduleDelayedRepeatingTask</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;scheduleDelayedRepeatingTask(<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;plugin,
+<pre>public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class in cn.nukkit.scheduler">TaskHandler</a>&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.184">scheduleDelayedRepeatingTask</a>(<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;plugin,
                                                 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task,
                                                 int&nbsp;delay,
                                                 int&nbsp;period,
@@ -768,7 +768,7 @@ public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>cancelTask</h4>
-<pre>public&nbsp;void&nbsp;cancelTask(int&nbsp;taskId)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.188">cancelTask</a>(int&nbsp;taskId)</pre>
 </li>
 </ul>
 <a name="cancelTask-cn.nukkit.plugin.Plugin-">
@@ -777,7 +777,7 @@ public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>cancelTask</h4>
-<pre>public&nbsp;void&nbsp;cancelTask(<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;plugin)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.198">cancelTask</a>(<a href="../../../cn/nukkit/plugin/Plugin.html" title="interface in cn.nukkit.plugin">Plugin</a>&nbsp;plugin)</pre>
 </li>
 </ul>
 <a name="cancelAllTasks--">
@@ -786,7 +786,7 @@ public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>cancelAllTasks</h4>
-<pre>public&nbsp;void&nbsp;cancelAllTasks()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.216">cancelAllTasks</a>()</pre>
 </li>
 </ul>
 <a name="isQueued-int-">
@@ -795,7 +795,7 @@ public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>isQueued</h4>
-<pre>public&nbsp;boolean&nbsp;isQueued(int&nbsp;taskId)</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.229">isQueued</a>(int&nbsp;taskId)</pre>
 </li>
 </ul>
 <a name="mainThreadHeartbeat-int-">
@@ -804,7 +804,7 @@ public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class
 <ul class="blockList">
 <li class="blockList">
 <h4>mainThreadHeartbeat</h4>
-<pre>public&nbsp;void&nbsp;mainThreadHeartbeat(int&nbsp;currentTick)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.260">mainThreadHeartbeat</a>(int&nbsp;currentTick)</pre>
 </li>
 </ul>
 <a name="getQueueSize--">
@@ -813,7 +813,7 @@ public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getQueueSize</h4>
-<pre>public&nbsp;int&nbsp;getQueueSize()</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../src-html/cn/nukkit/scheduler/ServerScheduler.html#line.318">getQueueSize</a>()</pre>
 </li>
 </ul>
 </li>
@@ -885,6 +885,6 @@ public&nbsp;<a href="../../../cn/nukkit/scheduler/TaskHandler.html" title="class
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2020 <a href="https://powernukkit.org">PowerNukkit</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2020&#x2013;2021 <a href="https://powernukkit.org">PowerNukkit</a>. All rights reserved.</small></p>
 </body>
 </html>

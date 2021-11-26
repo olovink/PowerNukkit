@@ -1,11 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- NewPage -->
-<html lang="en">
+<html lang="pt">
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>LevelDB (PowerNukkit 1.3.1.5-PN API)</title>
-<meta name="date" content="2020-09-08">
+<meta name="date" content="2021-11-26">
 <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../../../script.js"></script>
 </head>
@@ -114,7 +114,7 @@ var activeTableTab = "activeTableTab";
 </dl>
 <hr>
 <br>
-<pre>public class <span class="typeNameLabel">LevelDB</span>
+<pre>public class <a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.34">LevelDB</a>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
 implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></pre>
 <div class="block">author: MagicDroidX
@@ -496,7 +496,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>chunks</h4>
-<pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>,<a href="../../../../../cn/nukkit/level/format/leveldb/Chunk.html" title="class in cn.nukkit.level.format.leveldb">Chunk</a>&gt; chunks</pre>
+<pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>,<a href="../../../../../cn/nukkit/level/format/leveldb/Chunk.html" title="class in cn.nukkit.level.format.leveldb">Chunk</a>&gt; <a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.36">chunks</a></pre>
 </li>
 </ul>
 <a name="db">
@@ -505,7 +505,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>db</h4>
-<pre>protected&nbsp;org.iq80.leveldb.DB db</pre>
+<pre>protected&nbsp;org.iq80.leveldb.DB <a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.38">db</a></pre>
 </li>
 </ul>
 <a name="level">
@@ -514,7 +514,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>level</h4>
-<pre>protected&nbsp;<a href="../../../../../cn/nukkit/level/Level.html" title="class in cn.nukkit.level">Level</a> level</pre>
+<pre>protected&nbsp;<a href="../../../../../cn/nukkit/level/Level.html" title="class in cn.nukkit.level">Level</a> <a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.40">level</a></pre>
 </li>
 </ul>
 <a name="path">
@@ -523,7 +523,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>path</h4>
-<pre>protected final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> path</pre>
+<pre>protected final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> <a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.42">path</a></pre>
 </li>
 </ul>
 <a name="levelData">
@@ -532,7 +532,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockListLast">
 <li class="blockList">
 <h4>levelData</h4>
-<pre>protected&nbsp;<a href="../../../../../cn/nukkit/nbt/tag/CompoundTag.html" title="class in cn.nukkit.nbt.tag">CompoundTag</a> levelData</pre>
+<pre>protected&nbsp;<a href="../../../../../cn/nukkit/nbt/tag/CompoundTag.html" title="class in cn.nukkit.nbt.tag">CompoundTag</a> <a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.44">levelData</a></pre>
 </li>
 </ul>
 </li>
@@ -549,7 +549,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockListLast">
 <li class="blockList">
 <h4>LevelDB</h4>
-<pre>public&nbsp;LevelDB(<a href="../../../../../cn/nukkit/level/Level.html" title="class in cn.nukkit.level">Level</a>&nbsp;level,
+<pre>public&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.46">LevelDB</a>(<a href="../../../../../cn/nukkit/level/Level.html" title="class in cn.nukkit.level">Level</a>&nbsp;level,
                <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;path)</pre>
 </li>
 </ul>
@@ -567,7 +567,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>getProviderName</h4>
-<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getProviderName()</pre>
+<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.81">getProviderName</a>()</pre>
 </li>
 </ul>
 <a name="getProviderOrder--">
@@ -576,7 +576,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>getProviderOrder</h4>
-<pre>public static&nbsp;byte&nbsp;getProviderOrder()</pre>
+<pre>public static&nbsp;byte&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.85">getProviderOrder</a>()</pre>
 </li>
 </ul>
 <a name="usesChunkSection--">
@@ -585,7 +585,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>usesChunkSection</h4>
-<pre>public static&nbsp;boolean&nbsp;usesChunkSection()</pre>
+<pre>public static&nbsp;boolean&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.89">usesChunkSection</a>()</pre>
 </li>
 </ul>
 <a name="isValid-java.lang.String-">
@@ -594,7 +594,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>isValid</h4>
-<pre>public static&nbsp;boolean&nbsp;isValid(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;path)</pre>
+<pre>public static&nbsp;boolean&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.93">isValid</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;path)</pre>
 </li>
 </ul>
 <a name="generate-java.lang.String-java.lang.String-long-java.lang.Class-">
@@ -603,7 +603,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>generate</h4>
-<pre>public static&nbsp;void&nbsp;generate(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;path,
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.97">generate</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;path,
                             <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                             long&nbsp;seed,
                             <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../cn/nukkit/level/generator/Generator.html" title="class in cn.nukkit.level.generator">Generator</a>&gt;&nbsp;generator)
@@ -620,7 +620,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>generate</h4>
-<pre>public static&nbsp;void&nbsp;generate(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;path,
+<pre>public static&nbsp;void&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.101">generate</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;path,
                             <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                             long&nbsp;seed,
                             <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? extends <a href="../../../../../cn/nukkit/level/generator/Generator.html" title="class in cn.nukkit.level.generator">Generator</a>&gt;&nbsp;generator,
@@ -638,7 +638,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>saveLevelData</h4>
-<pre>public&nbsp;void&nbsp;saveLevelData()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.144">saveLevelData</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#saveLevelData--">saveLevelData</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -651,7 +651,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>getEmptyChunk</h4>
-<pre>public&nbsp;<a href="../../../../../cn/nukkit/level/format/leveldb/Chunk.html" title="class in cn.nukkit.level.format.leveldb">Chunk</a>&nbsp;getEmptyChunk(int&nbsp;chunkX,
+<pre>public&nbsp;<a href="../../../../../cn/nukkit/level/format/leveldb/Chunk.html" title="class in cn.nukkit.level.format.leveldb">Chunk</a>&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.160">getEmptyChunk</a>(int&nbsp;chunkX,
                            int&nbsp;chunkZ)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -665,7 +665,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>requestChunkTask</h4>
-<pre>public&nbsp;<a href="../../../../../cn/nukkit/scheduler/AsyncTask.html" title="class in cn.nukkit.scheduler">AsyncTask</a>&nbsp;requestChunkTask(int&nbsp;x,
+<pre>public&nbsp;<a href="../../../../../cn/nukkit/scheduler/AsyncTask.html" title="class in cn.nukkit.scheduler">AsyncTask</a>&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.165">requestChunkTask</a>(int&nbsp;x,
                                   int&nbsp;z)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -679,7 +679,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>unloadChunks</h4>
-<pre>public&nbsp;void&nbsp;unloadChunks()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.214">unloadChunks</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#unloadChunks--">unloadChunks</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -692,7 +692,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>getGenerator</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getGenerator()</pre>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.222">getGenerator</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#getGenerator--">getGenerator</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -705,7 +705,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>getGeneratorOptions</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;getGeneratorOptions()</pre>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.227">getGeneratorOptions</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#getGeneratorOptions--">getGeneratorOptions</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -718,7 +718,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>getLoadedChunk</h4>
-<pre>public&nbsp;<a href="../../../../../cn/nukkit/level/format/generic/BaseFullChunk.html" title="class in cn.nukkit.level.format.generic">BaseFullChunk</a>&nbsp;getLoadedChunk(int&nbsp;X,
+<pre>public&nbsp;<a href="../../../../../cn/nukkit/level/format/generic/BaseFullChunk.html" title="class in cn.nukkit.level.format.generic">BaseFullChunk</a>&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.236">getLoadedChunk</a>(int&nbsp;X,
                                     int&nbsp;Z)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -732,7 +732,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>getLoadedChunk</h4>
-<pre>public&nbsp;<a href="../../../../../cn/nukkit/level/format/generic/BaseFullChunk.html" title="class in cn.nukkit.level.format.generic">BaseFullChunk</a>&nbsp;getLoadedChunk(long&nbsp;hash)</pre>
+<pre>public&nbsp;<a href="../../../../../cn/nukkit/level/format/generic/BaseFullChunk.html" title="class in cn.nukkit.level.format.generic">BaseFullChunk</a>&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.241">getLoadedChunk</a>(long&nbsp;hash)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#getLoadedChunk-long-">getLoadedChunk</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -745,7 +745,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>getLoadedChunks</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>,<a href="../../../../../cn/nukkit/level/format/leveldb/Chunk.html" title="class in cn.nukkit.level.format.leveldb">Chunk</a>&gt;&nbsp;getLoadedChunks()</pre>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>,<a href="../../../../../cn/nukkit/level/format/leveldb/Chunk.html" title="class in cn.nukkit.level.format.leveldb">Chunk</a>&gt;&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.246">getLoadedChunks</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#getLoadedChunks--">getLoadedChunks</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -758,7 +758,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>isChunkLoaded</h4>
-<pre>public&nbsp;boolean&nbsp;isChunkLoaded(int&nbsp;x,
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.251">isChunkLoaded</a>(int&nbsp;x,
                              int&nbsp;z)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -772,7 +772,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>isChunkLoaded</h4>
-<pre>public&nbsp;boolean&nbsp;isChunkLoaded(long&nbsp;hash)</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.256">isChunkLoaded</a>(long&nbsp;hash)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#isChunkLoaded-long-">isChunkLoaded</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -785,7 +785,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>saveChunks</h4>
-<pre>public&nbsp;void&nbsp;saveChunks()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.261">saveChunks</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#saveChunks--">saveChunks</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -798,7 +798,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>loadChunk</h4>
-<pre>public&nbsp;boolean&nbsp;loadChunk(int&nbsp;x,
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.268">loadChunk</a>(int&nbsp;x,
                          int&nbsp;z)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -812,7 +812,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>loadChunk</h4>
-<pre>public&nbsp;boolean&nbsp;loadChunk(int&nbsp;x,
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.273">loadChunk</a>(int&nbsp;x,
                          int&nbsp;z,
                          boolean&nbsp;create)</pre>
 <dl>
@@ -827,7 +827,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>readChunk</h4>
-<pre>public&nbsp;<a href="../../../../../cn/nukkit/level/format/leveldb/Chunk.html" title="class in cn.nukkit.level.format.leveldb">Chunk</a>&nbsp;readChunk(int&nbsp;chunkX,
+<pre>public&nbsp;<a href="../../../../../cn/nukkit/level/format/leveldb/Chunk.html" title="class in cn.nukkit.level.format.leveldb">Chunk</a>&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.293">readChunk</a>(int&nbsp;chunkX,
                        int&nbsp;chunkZ)</pre>
 </li>
 </ul>
@@ -837,7 +837,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>unloadChunk</h4>
-<pre>public&nbsp;boolean&nbsp;unloadChunk(int&nbsp;x,
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.321">unloadChunk</a>(int&nbsp;x,
                            int&nbsp;z)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -851,7 +851,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>unloadChunk</h4>
-<pre>public&nbsp;boolean&nbsp;unloadChunk(int&nbsp;x,
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.326">unloadChunk</a>(int&nbsp;x,
                            int&nbsp;z,
                            boolean&nbsp;safe)</pre>
 <dl>
@@ -866,7 +866,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>saveChunk</h4>
-<pre>public&nbsp;void&nbsp;saveChunk(int&nbsp;x,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.338">saveChunk</a>(int&nbsp;x,
                       int&nbsp;z)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -880,7 +880,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>saveChunk</h4>
-<pre>public&nbsp;void&nbsp;saveChunk(int&nbsp;x,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.345">saveChunk</a>(int&nbsp;x,
                       int&nbsp;z,
                       <a href="../../../../../cn/nukkit/level/format/FullChunk.html" title="interface in cn.nukkit.level.format">FullChunk</a>&nbsp;chunk)</pre>
 <dl>
@@ -895,7 +895,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>getChunk</h4>
-<pre>public&nbsp;<a href="../../../../../cn/nukkit/level/format/leveldb/Chunk.html" title="class in cn.nukkit.level.format.leveldb">Chunk</a>&nbsp;getChunk(int&nbsp;x,
+<pre>public&nbsp;<a href="../../../../../cn/nukkit/level/format/leveldb/Chunk.html" title="class in cn.nukkit.level.format.leveldb">Chunk</a>&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.353">getChunk</a>(int&nbsp;x,
                       int&nbsp;z)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -909,7 +909,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>getChunk</h4>
-<pre>public&nbsp;<a href="../../../../../cn/nukkit/level/format/leveldb/Chunk.html" title="class in cn.nukkit.level.format.leveldb">Chunk</a>&nbsp;getChunk(int&nbsp;x,
+<pre>public&nbsp;<a href="../../../../../cn/nukkit/level/format/leveldb/Chunk.html" title="class in cn.nukkit.level.format.leveldb">Chunk</a>&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.358">getChunk</a>(int&nbsp;x,
                       int&nbsp;z,
                       boolean&nbsp;create)</pre>
 <dl>
@@ -924,7 +924,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>getDatabase</h4>
-<pre>public&nbsp;org.iq80.leveldb.DB&nbsp;getDatabase()</pre>
+<pre>public&nbsp;org.iq80.leveldb.DB&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.368">getDatabase</a>()</pre>
 </li>
 </ul>
 <a name="setChunk-int-int-cn.nukkit.level.format.FullChunk-">
@@ -933,7 +933,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>setChunk</h4>
-<pre>public&nbsp;void&nbsp;setChunk(int&nbsp;chunkX,
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.373">setChunk</a>(int&nbsp;chunkX,
                      int&nbsp;chunkZ,
                      <a href="../../../../../cn/nukkit/level/format/FullChunk.html" title="interface in cn.nukkit.level.format">FullChunk</a>&nbsp;chunk)</pre>
 <dl>
@@ -948,7 +948,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>createChunkSection</h4>
-<pre>public static&nbsp;<a href="../../../../../cn/nukkit/level/format/ChunkSection.html" title="interface in cn.nukkit.level.format">ChunkSection</a>&nbsp;createChunkSection(int&nbsp;y)</pre>
+<pre>public static&nbsp;<a href="../../../../../cn/nukkit/level/format/ChunkSection.html" title="interface in cn.nukkit.level.format">ChunkSection</a>&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.389">createChunkSection</a>(int&nbsp;y)</pre>
 </li>
 </ul>
 <a name="isChunkGenerated-int-int-">
@@ -957,7 +957,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>isChunkGenerated</h4>
-<pre>public&nbsp;boolean&nbsp;isChunkGenerated(int&nbsp;x,
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.398">isChunkGenerated</a>(int&nbsp;x,
                                 int&nbsp;z)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -971,7 +971,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>isChunkPopulated</h4>
-<pre>public&nbsp;boolean&nbsp;isChunkPopulated(int&nbsp;x,
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.404">isChunkPopulated</a>(int&nbsp;x,
                                 int&nbsp;z)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -985,7 +985,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>close</h4>
-<pre>public&nbsp;void&nbsp;close()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.409">close</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#close--">close</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -998,7 +998,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>getPath</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getPath()</pre>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.420">getPath</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#getPath--">getPath</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -1011,7 +1011,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>getServer</h4>
-<pre>public&nbsp;<a href="../../../../../cn/nukkit/Server.html" title="class in cn.nukkit">Server</a>&nbsp;getServer()</pre>
+<pre>public&nbsp;<a href="../../../../../cn/nukkit/Server.html" title="class in cn.nukkit">Server</a>&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.424">getServer</a>()</pre>
 </li>
 </ul>
 <a name="getLevel--">
@@ -1020,7 +1020,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>getLevel</h4>
-<pre>public&nbsp;<a href="../../../../../cn/nukkit/level/Level.html" title="class in cn.nukkit.level">Level</a>&nbsp;getLevel()</pre>
+<pre>public&nbsp;<a href="../../../../../cn/nukkit/level/Level.html" title="class in cn.nukkit.level">Level</a>&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.429">getLevel</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#getLevel--">getLevel</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -1033,7 +1033,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>getName</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getName()</pre>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.434">getName</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#getName--">getName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -1046,7 +1046,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>isRaining</h4>
-<pre>public&nbsp;boolean&nbsp;isRaining()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.439">isRaining</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#isRaining--">isRaining</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -1059,7 +1059,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>setRaining</h4>
-<pre>public&nbsp;void&nbsp;setRaining(boolean&nbsp;raining)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.444">setRaining</a>(boolean&nbsp;raining)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#setRaining-boolean-">setRaining</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -1072,7 +1072,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>getRainTime</h4>
-<pre>public&nbsp;int&nbsp;getRainTime()</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.449">getRainTime</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#getRainTime--">getRainTime</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -1085,7 +1085,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>setRainTime</h4>
-<pre>public&nbsp;void&nbsp;setRainTime(int&nbsp;rainTime)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.454">setRainTime</a>(int&nbsp;rainTime)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#setRainTime-int-">setRainTime</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -1098,7 +1098,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>isThundering</h4>
-<pre>public&nbsp;boolean&nbsp;isThundering()</pre>
+<pre>public&nbsp;boolean&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.459">isThundering</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#isThundering--">isThundering</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -1111,7 +1111,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>setThundering</h4>
-<pre>public&nbsp;void&nbsp;setThundering(boolean&nbsp;thundering)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.464">setThundering</a>(boolean&nbsp;thundering)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#setThundering-boolean-">setThundering</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -1124,7 +1124,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>getThunderTime</h4>
-<pre>public&nbsp;int&nbsp;getThunderTime()</pre>
+<pre>public&nbsp;int&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.469">getThunderTime</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#getThunderTime--">getThunderTime</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -1137,7 +1137,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>setThunderTime</h4>
-<pre>public&nbsp;void&nbsp;setThunderTime(int&nbsp;thunderTime)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.474">setThunderTime</a>(int&nbsp;thunderTime)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#setThunderTime-int-">setThunderTime</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -1150,7 +1150,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>getCurrentTick</h4>
-<pre>public&nbsp;long&nbsp;getCurrentTick()</pre>
+<pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.479">getCurrentTick</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#getCurrentTick--">getCurrentTick</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -1163,7 +1163,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>setCurrentTick</h4>
-<pre>public&nbsp;void&nbsp;setCurrentTick(long&nbsp;currentTick)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.484">setCurrentTick</a>(long&nbsp;currentTick)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#setCurrentTick-long-">setCurrentTick</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -1176,7 +1176,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>getTime</h4>
-<pre>public&nbsp;long&nbsp;getTime()</pre>
+<pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.489">getTime</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#getTime--">getTime</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -1189,7 +1189,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>setTime</h4>
-<pre>public&nbsp;void&nbsp;setTime(long&nbsp;value)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.494">setTime</a>(long&nbsp;value)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#setTime-long-">setTime</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -1202,7 +1202,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>getSeed</h4>
-<pre>public&nbsp;long&nbsp;getSeed()</pre>
+<pre>public&nbsp;long&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.499">getSeed</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#getSeed--">getSeed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -1215,7 +1215,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>setSeed</h4>
-<pre>public&nbsp;void&nbsp;setSeed(long&nbsp;value)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.504">setSeed</a>(long&nbsp;value)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#setSeed-long-">setSeed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -1228,7 +1228,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>getSpawn</h4>
-<pre>public&nbsp;<a href="../../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;getSpawn()</pre>
+<pre>public&nbsp;<a href="../../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.509">getSpawn</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#getSpawn--">getSpawn</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -1241,7 +1241,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>setSpawn</h4>
-<pre>public&nbsp;void&nbsp;setSpawn(<a href="../../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.514">setSpawn</a>(<a href="../../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#setSpawn-cn.nukkit.math.Vector3-">setSpawn</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -1254,7 +1254,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>getGamerules</h4>
-<pre>public&nbsp;<a href="../../../../../cn/nukkit/level/GameRules.html" title="class in cn.nukkit.level">GameRules</a>&nbsp;getGamerules()</pre>
+<pre>public&nbsp;<a href="../../../../../cn/nukkit/level/GameRules.html" title="class in cn.nukkit.level">GameRules</a>&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.521">getGamerules</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#getGamerules--">getGamerules</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -1267,7 +1267,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>setGameRules</h4>
-<pre>public&nbsp;void&nbsp;setGameRules(<a href="../../../../../cn/nukkit/level/GameRules.html" title="class in cn.nukkit.level">GameRules</a>&nbsp;rules)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.531">setGameRules</a>(<a href="../../../../../cn/nukkit/level/GameRules.html" title="class in cn.nukkit.level">GameRules</a>&nbsp;rules)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#setGameRules-cn.nukkit.level.GameRules-">setGameRules</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -1280,7 +1280,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>doGarbageCollection</h4>
-<pre>public&nbsp;void&nbsp;doGarbageCollection()</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.536">doGarbageCollection</a>()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#doGarbageCollection--">doGarbageCollection</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -1293,7 +1293,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>getLevelData</h4>
-<pre>public&nbsp;<a href="../../../../../cn/nukkit/nbt/tag/CompoundTag.html" title="class in cn.nukkit.nbt.tag">CompoundTag</a>&nbsp;getLevelData()</pre>
+<pre>public&nbsp;<a href="../../../../../cn/nukkit/nbt/tag/CompoundTag.html" title="class in cn.nukkit.nbt.tag">CompoundTag</a>&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.540">getLevelData</a>()</pre>
 </li>
 </ul>
 <a name="updateLevelName-java.lang.String-">
@@ -1302,7 +1302,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockList">
 <li class="blockList">
 <h4>updateLevelName</h4>
-<pre>public&nbsp;void&nbsp;updateLevelName(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
+<pre>public&nbsp;void&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.544">updateLevelName</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html#updateLevelName-java.lang.String-">updateLevelName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../cn/nukkit/level/format/LevelProvider.html" title="interface in cn.nukkit.level.format">LevelProvider</a></code></dd>
@@ -1315,7 +1315,7 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getTerrainKeys</h4>
-<pre>public&nbsp;byte[][]&nbsp;getTerrainKeys()</pre>
+<pre>public&nbsp;byte[][]&nbsp;<a href="../../../../../src-html/cn/nukkit/level/format/leveldb/LevelDB.html#line.550">getTerrainKeys</a>()</pre>
 </li>
 </ul>
 </li>
@@ -1387,6 +1387,6 @@ implements <a href="../../../../../cn/nukkit/level/format/LevelProvider.html" ti
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2020 <a href="https://powernukkit.org">PowerNukkit</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2020&#x2013;2021 <a href="https://powernukkit.org">PowerNukkit</a>. All rights reserved.</small></p>
 </body>
 </html>
