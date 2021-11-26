@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt">
+<head>
+<title>Source code</title>
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+</head>
+<body>
+<div class="sourceContainer">
+<pre><span class="sourceLineNo">001</span>package cn.nukkit.item;<a name="line.1"></a>
+<span class="sourceLineNo">002</span><a name="line.2"></a>
+<span class="sourceLineNo">003</span>import cn.nukkit.nbt.tag.CompoundTag;<a name="line.3"></a>
+<span class="sourceLineNo">004</span>import cn.nukkit.nbt.tag.ListTag;<a name="line.4"></a>
+<span class="sourceLineNo">005</span><a name="line.5"></a>
+<span class="sourceLineNo">006</span>public class ItemBookWritten extends ItemBookWritable {<a name="line.6"></a>
+<span class="sourceLineNo">007</span><a name="line.7"></a>
+<span class="sourceLineNo">008</span>    public static final int GENERATION_ORIGINAL = 0;<a name="line.8"></a>
+<span class="sourceLineNo">009</span>    public static final int GENERATION_COPY = 1;<a name="line.9"></a>
+<span class="sourceLineNo">010</span>    public static final int GENERATION_COPY_OF_COPY = 2;<a name="line.10"></a>
+<span class="sourceLineNo">011</span>    public static final int GENERATION_TATTERED = 3;<a name="line.11"></a>
+<span class="sourceLineNo">012</span><a name="line.12"></a>
+<span class="sourceLineNo">013</span>    public ItemBookWritten() {<a name="line.13"></a>
+<span class="sourceLineNo">014</span>        this(0, 1);<a name="line.14"></a>
+<span class="sourceLineNo">015</span>    }<a name="line.15"></a>
+<span class="sourceLineNo">016</span><a name="line.16"></a>
+<span class="sourceLineNo">017</span>    public ItemBookWritten(Integer meta) {<a name="line.17"></a>
+<span class="sourceLineNo">018</span>        this(meta, 1);<a name="line.18"></a>
+<span class="sourceLineNo">019</span>    }<a name="line.19"></a>
+<span class="sourceLineNo">020</span><a name="line.20"></a>
+<span class="sourceLineNo">021</span>    public ItemBookWritten(Integer meta, int count) {<a name="line.21"></a>
+<span class="sourceLineNo">022</span>        super(Item.WRITTEN_BOOK, 0, count, "Written Book");<a name="line.22"></a>
+<span class="sourceLineNo">023</span>    }<a name="line.23"></a>
+<span class="sourceLineNo">024</span><a name="line.24"></a>
+<span class="sourceLineNo">025</span>    @Override<a name="line.25"></a>
+<span class="sourceLineNo">026</span>    public int getMaxStackSize() {<a name="line.26"></a>
+<span class="sourceLineNo">027</span>        return 16;<a name="line.27"></a>
+<span class="sourceLineNo">028</span>    }<a name="line.28"></a>
+<span class="sourceLineNo">029</span><a name="line.29"></a>
+<span class="sourceLineNo">030</span>    public Item writeBook(String author, String title, String[] pages) {<a name="line.30"></a>
+<span class="sourceLineNo">031</span>        ListTag&lt;CompoundTag&gt; pageList = new ListTag&lt;&gt;("pages");<a name="line.31"></a>
+<span class="sourceLineNo">032</span>        for (String page : pages) {<a name="line.32"></a>
+<span class="sourceLineNo">033</span>            pageList.add(createPageTag(page));<a name="line.33"></a>
+<span class="sourceLineNo">034</span>        }<a name="line.34"></a>
+<span class="sourceLineNo">035</span>        return writeBook(author, title, pageList);<a name="line.35"></a>
+<span class="sourceLineNo">036</span>    }<a name="line.36"></a>
+<span class="sourceLineNo">037</span><a name="line.37"></a>
+<span class="sourceLineNo">038</span>    public Item writeBook(String author, String title, ListTag&lt;CompoundTag&gt; pages) {<a name="line.38"></a>
+<span class="sourceLineNo">039</span>        if (pages.size() &gt; 50 || pages.size() &lt;= 0) return this; //Minecraft does not support more than 50 pages<a name="line.39"></a>
+<span class="sourceLineNo">040</span>        CompoundTag tag = this.hasCompoundTag() ? this.getNamedTag() : new CompoundTag();<a name="line.40"></a>
+<span class="sourceLineNo">041</span><a name="line.41"></a>
+<span class="sourceLineNo">042</span>        tag.putString("author", author);<a name="line.42"></a>
+<span class="sourceLineNo">043</span>        tag.putString("title", title);<a name="line.43"></a>
+<span class="sourceLineNo">044</span>        tag.putList(pages);<a name="line.44"></a>
+<span class="sourceLineNo">045</span><a name="line.45"></a>
+<span class="sourceLineNo">046</span>        tag.putInt("generation", GENERATION_ORIGINAL);<a name="line.46"></a>
+<span class="sourceLineNo">047</span>        tag.putString("xuid", "");<a name="line.47"></a>
+<span class="sourceLineNo">048</span><a name="line.48"></a>
+<span class="sourceLineNo">049</span>        return this.setNamedTag(tag);<a name="line.49"></a>
+<span class="sourceLineNo">050</span>    }<a name="line.50"></a>
+<span class="sourceLineNo">051</span><a name="line.51"></a>
+<span class="sourceLineNo">052</span>    public boolean signBook(String title, String author, String xuid, int generation) {<a name="line.52"></a>
+<span class="sourceLineNo">053</span>        this.setNamedTag((this.hasCompoundTag() ? this.getNamedTag() : new CompoundTag())<a name="line.53"></a>
+<span class="sourceLineNo">054</span>                .putString("title", title)<a name="line.54"></a>
+<span class="sourceLineNo">055</span>                .putString("author", author)<a name="line.55"></a>
+<span class="sourceLineNo">056</span>                .putInt("generation", generation)<a name="line.56"></a>
+<span class="sourceLineNo">057</span>                .putString("xuid", xuid));<a name="line.57"></a>
+<span class="sourceLineNo">058</span>        return true;<a name="line.58"></a>
+<span class="sourceLineNo">059</span>    }<a name="line.59"></a>
+<span class="sourceLineNo">060</span><a name="line.60"></a>
+<span class="sourceLineNo">061</span>    /**<a name="line.61"></a>
+<span class="sourceLineNo">062</span>     * Returns the generation of the book.<a name="line.62"></a>
+<span class="sourceLineNo">063</span>     * Generations higher than 1 can not be copied.<a name="line.63"></a>
+<span class="sourceLineNo">064</span>     */<a name="line.64"></a>
+<span class="sourceLineNo">065</span>    public int getGeneration() {<a name="line.65"></a>
+<span class="sourceLineNo">066</span>        return this.hasCompoundTag() ? this.getNamedTag().getInt("generation") : -1;<a name="line.66"></a>
+<span class="sourceLineNo">067</span>    }<a name="line.67"></a>
+<span class="sourceLineNo">068</span><a name="line.68"></a>
+<span class="sourceLineNo">069</span>    /**<a name="line.69"></a>
+<span class="sourceLineNo">070</span>     * Sets the generation of a book.<a name="line.70"></a>
+<span class="sourceLineNo">071</span>     */<a name="line.71"></a>
+<span class="sourceLineNo">072</span>    public void setGeneration(int generation) {<a name="line.72"></a>
+<span class="sourceLineNo">073</span>        this.setNamedTag((this.hasCompoundTag() ? this.getNamedTag() : new CompoundTag()).putInt("generation", generation));<a name="line.73"></a>
+<span class="sourceLineNo">074</span>    }<a name="line.74"></a>
+<span class="sourceLineNo">075</span><a name="line.75"></a>
+<span class="sourceLineNo">076</span>    /**<a name="line.76"></a>
+<span class="sourceLineNo">077</span>     * Returns the author of this book.<a name="line.77"></a>
+<span class="sourceLineNo">078</span>     * This is not a reliable way to get the name of the player who signed this book.<a name="line.78"></a>
+<span class="sourceLineNo">079</span>     * The author can be set to anything when signing a book.<a name="line.79"></a>
+<span class="sourceLineNo">080</span>     */<a name="line.80"></a>
+<span class="sourceLineNo">081</span>    public String getAuthor() {<a name="line.81"></a>
+<span class="sourceLineNo">082</span>        return this.hasCompoundTag() ? this.getNamedTag().getString("author") : "";<a name="line.82"></a>
+<span class="sourceLineNo">083</span>    }<a name="line.83"></a>
+<span class="sourceLineNo">084</span><a name="line.84"></a>
+<span class="sourceLineNo">085</span>    /**<a name="line.85"></a>
+<span class="sourceLineNo">086</span>     * Sets the author of this book.<a name="line.86"></a>
+<span class="sourceLineNo">087</span>     */<a name="line.87"></a>
+<span class="sourceLineNo">088</span>    public void setAuthor(String author) {<a name="line.88"></a>
+<span class="sourceLineNo">089</span>        this.setNamedTag((this.hasCompoundTag() ? this.getNamedTag() : new CompoundTag()).putString("author", author));<a name="line.89"></a>
+<span class="sourceLineNo">090</span>    }<a name="line.90"></a>
+<span class="sourceLineNo">091</span><a name="line.91"></a>
+<span class="sourceLineNo">092</span>    /**<a name="line.92"></a>
+<span class="sourceLineNo">093</span>     * Returns the title of this book.<a name="line.93"></a>
+<span class="sourceLineNo">094</span>     */<a name="line.94"></a>
+<span class="sourceLineNo">095</span>    public String getTitle() {<a name="line.95"></a>
+<span class="sourceLineNo">096</span>        return this.hasCompoundTag() ? this.getNamedTag().getString("title") : "Written Book";<a name="line.96"></a>
+<span class="sourceLineNo">097</span>    }<a name="line.97"></a>
+<span class="sourceLineNo">098</span><a name="line.98"></a>
+<span class="sourceLineNo">099</span>    /**<a name="line.99"></a>
+<span class="sourceLineNo">100</span>     * Sets the title of this book.<a name="line.100"></a>
+<span class="sourceLineNo">101</span>     */<a name="line.101"></a>
+<span class="sourceLineNo">102</span>    public void setTitle(String title) {<a name="line.102"></a>
+<span class="sourceLineNo">103</span>        this.setNamedTag((this.hasCompoundTag() ? this.getNamedTag() : new CompoundTag()).putString("title", title));<a name="line.103"></a>
+<span class="sourceLineNo">104</span>    }<a name="line.104"></a>
+<span class="sourceLineNo">105</span><a name="line.105"></a>
+<span class="sourceLineNo">106</span>    /**<a name="line.106"></a>
+<span class="sourceLineNo">107</span>     * Returns the author's XUID of this book.<a name="line.107"></a>
+<span class="sourceLineNo">108</span>     */<a name="line.108"></a>
+<span class="sourceLineNo">109</span>    public String getXUID() {<a name="line.109"></a>
+<span class="sourceLineNo">110</span>        return this.hasCompoundTag() ? this.getNamedTag().getString("xuid") : "";<a name="line.110"></a>
+<span class="sourceLineNo">111</span>    }<a name="line.111"></a>
+<span class="sourceLineNo">112</span><a name="line.112"></a>
+<span class="sourceLineNo">113</span>    /**<a name="line.113"></a>
+<span class="sourceLineNo">114</span>     * Sets the author's XUID of this book.<a name="line.114"></a>
+<span class="sourceLineNo">115</span>     */<a name="line.115"></a>
+<span class="sourceLineNo">116</span>    public void setXUID(String title) {<a name="line.116"></a>
+<span class="sourceLineNo">117</span>        this.setNamedTag((this.hasCompoundTag() ? this.getNamedTag() : new CompoundTag()).putString("xuid", title));<a name="line.117"></a>
+<span class="sourceLineNo">118</span>    }<a name="line.118"></a>
+<span class="sourceLineNo">119</span>}<a name="line.119"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</div>
+</body>
+</html>
