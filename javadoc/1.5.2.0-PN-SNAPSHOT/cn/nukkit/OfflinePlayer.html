@@ -1,11 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- NewPage -->
-<html lang="pt">
+<html lang="en">
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>OfflinePlayer (PowerNukkit 1.5.2.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2021-11-26">
+<meta name="date" content="2021-12-01">
 <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../script.js"></script>
 </head>
@@ -151,7 +151,8 @@ implements <a href="../../cn/nukkit/IPlayer.html" title="interface in cn.nukkit"
 <tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../cn/nukkit/OfflinePlayer.html#OfflinePlayer-cn.nukkit.Server-java.util.UUID-">OfflinePlayer</a></span>(<a href="../../cn/nukkit/Server.html" title="class in cn.nukkit">Server</a>&nbsp;server,
              <a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;uuid)</code>
-<div class="block">初始化这个<code>OfflinePlayer</code>对象。</div>
+<div class="block">初始化这个<code>OfflinePlayer</code>对象。<br>
+ Initializes the object <code>OfflinePlayer</code>.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -177,13 +178,15 @@ implements <a href="../../cn/nukkit/IPlayer.html" title="interface in cn.nukkit"
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../cn/nukkit/OfflinePlayer.html#getFirstPlayed--">getFirstPlayed</a></span>()</code>
-<div class="block">得到这个玩家第一次游戏的时间。</div>
+<div class="block">得到这个玩家第一次游戏的时间。<br>
+ Returns the time this player first played in this server.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../cn/nukkit/OfflinePlayer.html#getLastPlayed--">getLastPlayed</a></span>()</code>
-<div class="block">得到这个玩家上次加入游戏的时间。</div>
+<div class="block">得到这个玩家上次加入游戏的时间。<br>
+ Returns the time this player last joined in this server.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -193,19 +196,22 @@ implements <a href="../../cn/nukkit/IPlayer.html" title="interface in cn.nukkit"
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../cn/nukkit/OfflinePlayer.html#getName--">getName</a></span>()</code>
-<div class="block">返回这个玩家的名称。</div>
+<div class="block">返回这个玩家的名称。<br>
+ Returns the name of this player.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../cn/nukkit/OfflinePlayer.html#getPlayer--">getPlayer</a></span>()</code>
-<div class="block">得到这个接口的<code>Player</code>对象。</div>
+<div class="block">得到这个接口的<code>Player</code>对象。<br>
+ Returns a <code>Player</code> object for this interface.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../cn/nukkit/Server.html" title="class in cn.nukkit">Server</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../cn/nukkit/OfflinePlayer.html#getServer--">getServer</a></span>()</code>
-<div class="block">返回玩家所在的服务器。</div>
+<div class="block">返回玩家所在的服务器。<br>
+ Returns the server carrying this player.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -219,31 +225,36 @@ implements <a href="../../cn/nukkit/IPlayer.html" title="interface in cn.nukkit"
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../cn/nukkit/OfflinePlayer.html#hasPlayedBefore--">hasPlayedBefore</a></span>()</code>
-<div class="block">返回这个玩家以前是否来过服务器。</div>
+<div class="block">返回这个玩家以前是否来过服务器。<br>
+ Returns if this player has played in this server before.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../cn/nukkit/OfflinePlayer.html#isBanned--">isBanned</a></span>()</code>
-<div class="block">返回这个玩家是否被封禁(ban)。</div>
+<div class="block">返回这个玩家是否被封禁(ban)。<br>
+ Returns if this player is banned.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../cn/nukkit/OfflinePlayer.html#isOnline--">isOnline</a></span>()</code>
-<div class="block">返回这个玩家是否在线。</div>
+<div class="block">返回这个玩家是否在线。<br>
+ Returns if this player is online.</div>
 </td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../cn/nukkit/OfflinePlayer.html#isOp--">isOp</a></span>()</code>
-<div class="block">返回这个对象是不是服务器管理员。</div>
+<div class="block">返回这个对象是不是服务器管理员。<br>
+ Returns if this object is an operator.</div>
 </td>
 </tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../cn/nukkit/OfflinePlayer.html#isWhitelisted--">isWhitelisted</a></span>()</code>
-<div class="block">返回这个玩家是否已加入白名单。</div>
+<div class="block">返回这个玩家是否已加入白名单。<br>
+ Returns if this player is pardoned by whitelist.</div>
 </td>
 </tr>
 <tr id="i13" class="rowColor">
@@ -254,7 +265,8 @@ implements <a href="../../cn/nukkit/IPlayer.html" title="interface in cn.nukkit"
 <tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../cn/nukkit/OfflinePlayer.html#setBanned-boolean-">setBanned</a></span>(boolean&nbsp;value)</code>
-<div class="block">设置这个玩家是否被封禁(ban)。</div>
+<div class="block">设置这个玩家是否被封禁(ban)。<br>
+ Sets this player to be banned or to be pardoned.</div>
 </td>
 </tr>
 <tr id="i15" class="rowColor">
@@ -265,13 +277,15 @@ implements <a href="../../cn/nukkit/IPlayer.html" title="interface in cn.nukkit"
 <tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../cn/nukkit/OfflinePlayer.html#setOp-boolean-">setOp</a></span>(boolean&nbsp;value)</code>
-<div class="block">把这个对象设置成服务器管理员。</div>
+<div class="block">把这个对象设置成服务器管理员。<br>
+ Sets this object to be an operator or not to be.</div>
 </td>
 </tr>
 <tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../cn/nukkit/OfflinePlayer.html#setWhitelisted-boolean-">setWhitelisted</a></span>(boolean&nbsp;value)</code>
-<div class="block">把这个玩家加入白名单，或者取消这个玩家的白名单。</div>
+<div class="block">把这个玩家加入白名单，或者取消这个玩家的白名单。<br>
+ Adds this player to the white list, or removes it from the whitelist.</div>
 </td>
 </tr>
 </table>
