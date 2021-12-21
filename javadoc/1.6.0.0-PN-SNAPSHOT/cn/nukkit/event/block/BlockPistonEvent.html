@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>BlockPistonEvent (PowerNukkit 1.6.0.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2021-12-19">
+<meta name="date" content="2021-12-21">
 <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../../script.js"></script>
 </head>
@@ -124,7 +124,8 @@ var activeTableTab = "activeTableTab";
 </dl>
 <hr>
 <br>
-<pre>public class <span class="typeNameLabel">BlockPistonEvent</span>
+<pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+public class <span class="typeNameLabel">BlockPistonEvent</span>
 extends <a href="../../../../cn/nukkit/event/block/BlockEvent.html" title="class in cn.nukkit.event.block">BlockEvent</a>
 implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interface in cn.nukkit.event">Cancellable</a></pre>
 </li>
@@ -254,11 +255,12 @@ implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interfa
 <ul class="blockListLast">
 <li class="blockList">
 <h4>BlockPistonEvent</h4>
-<pre>public&nbsp;BlockPistonEvent(<a href="../../../../cn/nukkit/block/BlockPistonBase.html" title="class in cn.nukkit.block">BlockPistonBase</a>&nbsp;piston,
-                        <a href="../../../../cn/nukkit/math/BlockFace.html" title="enum in cn.nukkit.math">BlockFace</a>&nbsp;direction,
-                        <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&gt;&nbsp;blocks,
-                        <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&gt;&nbsp;destroyedBlocks,
-                        boolean&nbsp;extending)</pre>
+<pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+public&nbsp;BlockPistonEvent(<a href="../../../../cn/nukkit/block/BlockPistonBase.html" title="class in cn.nukkit.block">BlockPistonBase</a>&nbsp;piston,
+                                         <a href="../../../../cn/nukkit/math/BlockFace.html" title="enum in cn.nukkit.math">BlockFace</a>&nbsp;direction,
+                                         <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&gt;&nbsp;blocks,
+                                         <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&gt;&nbsp;destroyedBlocks,
+                                         boolean&nbsp;extending)</pre>
 </li>
 </ul>
 </li>
@@ -275,7 +277,8 @@ implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interfa
 <ul class="blockList">
 <li class="blockList">
 <h4>getHandlers</h4>
-<pre>public static&nbsp;<a href="../../../../cn/nukkit/event/HandlerList.html" title="class in cn.nukkit.event">HandlerList</a>&nbsp;getHandlers()</pre>
+<pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+public static&nbsp;<a href="../../../../cn/nukkit/event/HandlerList.html" title="class in cn.nukkit.event">HandlerList</a>&nbsp;getHandlers()</pre>
 </li>
 </ul>
 <a name="getDirection--">
@@ -284,7 +287,8 @@ implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interfa
 <ul class="blockList">
 <li class="blockList">
 <h4>getDirection</h4>
-<pre>public&nbsp;<a href="../../../../cn/nukkit/math/BlockFace.html" title="enum in cn.nukkit.math">BlockFace</a>&nbsp;getDirection()</pre>
+<pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+public&nbsp;<a href="../../../../cn/nukkit/math/BlockFace.html" title="enum in cn.nukkit.math">BlockFace</a>&nbsp;getDirection()</pre>
 </li>
 </ul>
 <a name="getBlocks--">
@@ -293,7 +297,8 @@ implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interfa
 <ul class="blockList">
 <li class="blockList">
 <h4>getBlocks</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&gt;&nbsp;getBlocks()</pre>
+<pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&gt;&nbsp;getBlocks()</pre>
 </li>
 </ul>
 <a name="getDestroyedBlocks--">
@@ -302,7 +307,8 @@ implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interfa
 <ul class="blockList">
 <li class="blockList">
 <h4>getDestroyedBlocks</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&gt;&nbsp;getDestroyedBlocks()</pre>
+<pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&gt;&nbsp;getDestroyedBlocks()</pre>
 </li>
 </ul>
 <a name="isExtending--">
@@ -311,7 +317,8 @@ implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interfa
 <ul class="blockList">
 <li class="blockList">
 <h4>isExtending</h4>
-<pre>public&nbsp;boolean&nbsp;isExtending()</pre>
+<pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+public&nbsp;boolean&nbsp;isExtending()</pre>
 </li>
 </ul>
 <a name="getBlock--">

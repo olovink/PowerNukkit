@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Enchantment (PowerNukkit 1.6.0.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2021-12-19">
+<meta name="date" content="2021-12-21">
 <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../../script.js"></script>
 </head>
@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":41,"i6":10,"i7":10,"i8":9,"i9":41,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":9,"i20":10,"i21":9,"i22":42,"i23":9,"i24":10,"i25":42,"i26":10,"i27":10,"i28":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":41,"i7":10,"i8":10,"i9":9,"i10":41,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":9,"i21":10,"i22":9,"i23":42,"i24":9,"i25":10,"i26":42,"i27":10,"i28":10,"i29":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -417,108 +417,113 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#doAttack-cn.nukkit.entity.Entity-cn.nukkit.entity.Entity-">doAttack</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;attacker,
+        <a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity)</code>&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#doPostAttack-cn.nukkit.entity.Entity-cn.nukkit.entity.Entity-">doPostAttack</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;attacker,
             <a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity)</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#doPostHurt-cn.nukkit.entity.Entity-cn.nukkit.entity.Entity-">doPostHurt</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;attacker,
           <a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity)</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/item/enchantment/Enchantment.html" title="class in cn.nukkit.item.enchantment">Enchantment</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#get-int-">get</a></span>(int&nbsp;id)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/enchantment/sideeffect/SideEffect.html" title="interface in cn.nukkit.item.enchantment.sideeffect">SideEffect</a>[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#getAttackSideEffects-cn.nukkit.entity.Entity-cn.nukkit.entity.Entity-">getAttackSideEffects</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;attacker,
                     <a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity)</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#getDamageBonus-cn.nukkit.entity.Entity-">getDamageBonus</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity)</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/item/enchantment/Enchantment.html" title="class in cn.nukkit.item.enchantment">Enchantment</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#getEnchantment-int-">getEnchantment</a></span>(int&nbsp;id)</code>
 <div class="block">The same as <a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#get-int-"><code>get(int)</code></a> but returns a safe copy of the enchantment.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/item/enchantment/Enchantment.html" title="class in cn.nukkit.item.enchantment">Enchantment</a>[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#getEnchantments--">getEnchantments</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#getId--">getId</a></span>()</code>
 <div class="block">The ID of this enchantment.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#getLevel--">getLevel</a></span>()</code>
 <div class="block">The current level of this enchantment.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#getMaxEnchantAbility-int-">getMaxEnchantAbility</a></span>(int&nbsp;level)</code>
 <div class="block">The maximum enchantability for the given level as described in https://minecraft.gamepedia.com/Enchanting/Levels</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#getMaxEnchantableLevel--">getMaxEnchantableLevel</a></span>()</code>
 <div class="block">The maximum level that can be obtained using an enchanting table.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#getMaxLevel--">getMaxLevel</a></span>()</code>
 <div class="block">The maximum safe level which is possible with this enchantment.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#getMinEnchantAbility-int-">getMinEnchantAbility</a></span>(int&nbsp;level)</code>
 <div class="block">The minimum enchantability for the given level as described in https://minecraft.gamepedia.com/Enchanting/Levels</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#getMinLevel--">getMinLevel</a></span>()</code>
 <div class="block">The minimum safe level which is possible with this enchantment.</div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#getName--">getName</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>float</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#getProtectionFactor-cn.nukkit.event.entity.EntityDamageEvent-">getProtectionFactor</a></span>(<a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.html" title="class in cn.nukkit.event.entity">EntityDamageEvent</a>&nbsp;event)</code>&nbsp;</td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#getRandomName--">getRandomName</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/enchantment/Enchantment.Rarity.html" title="enum in cn.nukkit.item.enchantment">Enchantment.Rarity</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#getRarity--">getRarity</a></span>()</code>
 <div class="block">How rare this enchantment is.</div>
 </td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../cn/nukkit/item/enchantment/Enchantment.html" title="class in cn.nukkit.item.enchantment">Enchantment</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#getRegisteredEnchantments--">getRegisteredEnchantments</a></span>()</code>
 <div class="block">Gets a collection with a safe copy of all enchantments that are currently registered.</div>
 </td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#getWeight--">getWeight</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
@@ -526,34 +531,34 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 </div>
 </td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#init--">init</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#isCompatibleWith-cn.nukkit.item.enchantment.Enchantment-">isCompatibleWith</a></span>(<a href="../../../../cn/nukkit/item/enchantment/Enchantment.html" title="class in cn.nukkit.item.enchantment">Enchantment</a>&nbsp;enchantment)</code>
 <div class="block">Returns true if and only if this enchantment is compatible with the other and 
  the other is also compatible with this enchantment.</div>
 </td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#isItemAcceptable-cn.nukkit.item.Item-">isItemAcceptable</a></span>(<a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;item)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </td>
 </tr>
-<tr id="i26" class="altColor">
+<tr id="i27" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#isMajor--">isMajor</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i27" class="rowColor">
+<tr id="i28" class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html" title="class in cn.nukkit.item.enchantment">Enchantment</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#setLevel-int-">setLevel</a></span>(int&nbsp;level)</code>
 <div class="block">Changes the level of this enchantment.</div>
 </td>
 </tr>
-<tr id="i28" class="altColor">
+<tr id="i29" class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html" title="class in cn.nukkit.item.enchantment">Enchantment</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#setLevel-int-boolean-">setLevel</a></span>(int&nbsp;level,
         boolean&nbsp;safe)</code>
@@ -1468,6 +1473,17 @@ public&nbsp;int&nbsp;getWeight()</pre>
 <h4>doPostAttack</h4>
 <pre>public&nbsp;void&nbsp;doPostAttack(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;attacker,
                          <a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity)</pre>
+</li>
+</ul>
+<a name="doAttack-cn.nukkit.entity.Entity-cn.nukkit.entity.Entity-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>doAttack</h4>
+<pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+public&nbsp;void&nbsp;doAttack(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;attacker,
+                                            <a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity)</pre>
 </li>
 </ul>
 <a name="doPostHurt-cn.nukkit.entity.Entity-cn.nukkit.entity.Entity-">

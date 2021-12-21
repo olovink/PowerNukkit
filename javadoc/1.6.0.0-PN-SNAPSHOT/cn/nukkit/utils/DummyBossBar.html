@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>DummyBossBar (PowerNukkit 1.6.0.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2021-12-19">
+<meta name="date" content="2021-12-21">
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
 </head>
@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -166,7 +166,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/DummyBossBar.html#getBossBarId--">getBossBarId</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code><a href="../../../cn/nukkit/utils/BlockColor.html" title="class in cn.nukkit.utils">BlockColor</a></code></td>
+<td class="colFirst"><code><a href="../../../cn/nukkit/utils/BossBarColor.html" title="enum in cn.nukkit.utils">BossBarColor</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/DummyBossBar.html#getColor--">getColor</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i4" class="altColor">
@@ -174,44 +174,32 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/DummyBossBar.html#getLength--">getLength</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/DummyBossBar.html#getMixedColor--">getMixedColor</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/DummyBossBar.html#getPlayer--">getPlayer</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/DummyBossBar.html#getText--">getText</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/DummyBossBar.html#reshow--">reshow</a></span>()</code>
 <div class="block">Once the player has teleported, resend Show BossBar</div>
 </td>
 </tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/DummyBossBar.html#setColor-cn.nukkit.utils.BossBarColor-">setColor</a></span>(<a href="../../../cn/nukkit/utils/BossBarColor.html" title="enum in cn.nukkit.utils">BossBarColor</a>&nbsp;color)</code>&nbsp;</td>
+</tr>
 <tr id="i9" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/DummyBossBar.html#setColor-cn.nukkit.utils.BlockColor-">setColor</a></span>(<a href="../../../cn/nukkit/utils/BlockColor.html" title="class in cn.nukkit.utils">BlockColor</a>&nbsp;color)</code>
-<div class="block">Color is not working in the current version.</div>
-</td>
-</tr>
-<tr id="i10" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/DummyBossBar.html#setColor-int-int-int-">setColor</a></span>(int&nbsp;red,
-        int&nbsp;green,
-        int&nbsp;blue)</code>&nbsp;</td>
-</tr>
-<tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/DummyBossBar.html#setLength-float-">setLength</a></span>(float&nbsp;length)</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/DummyBossBar.html#setText-java.lang.String-">setText</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;text)</code>&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/utils/DummyBossBar.html#updateBossEntityPosition--">updateBossEntityPosition</a></span>()</code>
 <div class="block">Don't let the entity go too far from the player, or the BossBar will disappear.</div>
@@ -293,38 +281,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public&nbsp;void&nbsp;setLength(float&nbsp;length)</pre>
 </li>
 </ul>
-<a name="setColor-cn.nukkit.utils.BlockColor-">
+<a name="setColor-cn.nukkit.utils.BossBarColor-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setColor</h4>
-<pre>public&nbsp;void&nbsp;setColor(<a href="../../../cn/nukkit/utils/BlockColor.html" title="class in cn.nukkit.utils">BlockColor</a>&nbsp;color)</pre>
-<div class="block">Color is not working in the current version. We are keep waiting for client support.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>color</code> - the boss bar color</dd>
-</dl>
-</li>
-</ul>
-<a name="setColor-int-int-int-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setColor</h4>
-<pre>public&nbsp;void&nbsp;setColor(int&nbsp;red,
-                     int&nbsp;green,
-                     int&nbsp;blue)</pre>
-</li>
-</ul>
-<a name="getMixedColor--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getMixedColor</h4>
-<pre>public&nbsp;int&nbsp;getMixedColor()</pre>
+<pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+public&nbsp;void&nbsp;setColor(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
+                                            <a href="../../../cn/nukkit/utils/BossBarColor.html" title="enum in cn.nukkit.utils">BossBarColor</a>&nbsp;color)</pre>
 </li>
 </ul>
 <a name="getColor--">
@@ -333,7 +298,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>getColor</h4>
-<pre>public&nbsp;<a href="../../../cn/nukkit/utils/BlockColor.html" title="class in cn.nukkit.utils">BlockColor</a>&nbsp;getColor()</pre>
+<pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+ <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
+public&nbsp;<a href="../../../cn/nukkit/utils/BossBarColor.html" title="enum in cn.nukkit.utils">BossBarColor</a>&nbsp;getColor()</pre>
 </li>
 </ul>
 <a name="updateBossEntityPosition--">

@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Uses of Class cn.nukkit.entity.Entity (PowerNukkit 1.6.0.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2021-12-19">
+<meta name="date" content="2021-12-21">
 <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../../script.js"></script>
 </head>
@@ -1475,7 +1475,9 @@
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/entity/projectile/EntityThrownTrident.html#EntityThrownTrident-cn.nukkit.level.format.FullChunk-cn.nukkit.nbt.tag.CompoundTag-cn.nukkit.entity.Entity-boolean-">EntityThrownTrident</a></span>(<a href="../../../../cn/nukkit/level/format/FullChunk.html" title="interface in cn.nukkit.level.format">FullChunk</a>&nbsp;chunk,
                    <a href="../../../../cn/nukkit/nbt/tag/CompoundTag.html" title="class in cn.nukkit.nbt.tag">CompoundTag</a>&nbsp;nbt,
                    <a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;shootingEntity,
-                   boolean&nbsp;critical)</code>&nbsp;</td>
+                   boolean&nbsp;critical)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -1712,77 +1714,85 @@
                          float&nbsp;knockBack)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageByEntityEvent.html#EntityDamageByEntityEvent-cn.nukkit.entity.Entity-cn.nukkit.entity.Entity-cn.nukkit.event.entity.EntityDamageEvent.DamageCause-java.util.Map-float-cn.nukkit.item.enchantment.Enchantment:A-">EntityDamageByEntityEvent</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;damager,
+                         <a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity,
+                         <a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageCause</a>&nbsp;cause,
+                         <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageModifier.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageModifier</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Float.html?is-external=true" title="class or interface in java.lang">Float</a>&gt;&nbsp;modifiers,
+                         float&nbsp;knockBack,
+                         <a href="../../../../cn/nukkit/item/enchantment/Enchantment.html" title="class in cn.nukkit.item.enchantment">Enchantment</a>[]&nbsp;enchantments)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.html#EntityDamageEvent-cn.nukkit.entity.Entity-cn.nukkit.event.entity.EntityDamageEvent.DamageCause-float-">EntityDamageEvent</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity,
                  <a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageCause</a>&nbsp;cause,
                  float&nbsp;damage)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.html#EntityDamageEvent-cn.nukkit.entity.Entity-cn.nukkit.event.entity.EntityDamageEvent.DamageCause-java.util.Map-">EntityDamageEvent</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity,
                  <a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageCause</a>&nbsp;cause,
                  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="../../../../cn/nukkit/event/entity/EntityDamageEvent.DamageModifier.html" title="enum in cn.nukkit.event.entity">EntityDamageEvent.DamageModifier</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Float.html?is-external=true" title="class or interface in java.lang">Float</a>&gt;&nbsp;modifiers)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityDespawnEvent.html#EntityDespawnEvent-cn.nukkit.entity.Entity-">EntityDespawnEvent</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityExplodeEvent.html#EntityExplodeEvent-cn.nukkit.entity.Entity-cn.nukkit.level.Position-java.util.List-double-">EntityExplodeEvent</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity,
                   <a href="../../../../cn/nukkit/level/Position.html" title="class in cn.nukkit.level">Position</a>&nbsp;position,
                   <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&gt;&nbsp;blocks,
                   double&nbsp;yield)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityExplosionPrimeEvent.html#EntityExplosionPrimeEvent-cn.nukkit.entity.Entity-double-">EntityExplosionPrimeEvent</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity,
                          double&nbsp;force)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityInteractEvent.html#EntityInteractEvent-cn.nukkit.entity.Entity-cn.nukkit.block.Block-">EntityInteractEvent</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity,
                    <a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityInventoryChangeEvent.html#EntityInventoryChangeEvent-cn.nukkit.entity.Entity-cn.nukkit.item.Item-cn.nukkit.item.Item-int-">EntityInventoryChangeEvent</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity,
                           <a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;oldItem,
                           <a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;newItem,
                           int&nbsp;slot)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityLevelChangeEvent.html#EntityLevelChangeEvent-cn.nukkit.entity.Entity-cn.nukkit.level.Level-cn.nukkit.level.Level-">EntityLevelChangeEvent</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity,
                       <a href="../../../../cn/nukkit/level/Level.html" title="class in cn.nukkit.level">Level</a>&nbsp;originLevel,
                       <a href="../../../../cn/nukkit/level/Level.html" title="class in cn.nukkit.level">Level</a>&nbsp;targetLevel)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityMotionEvent.html#EntityMotionEvent-cn.nukkit.entity.Entity-cn.nukkit.math.Vector3-">EntityMotionEvent</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity,
                  <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;motion)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityMoveByPistonEvent.html#EntityMoveByPistonEvent-cn.nukkit.entity.Entity-cn.nukkit.math.Vector3-">EntityMoveByPistonEvent</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity,
                        <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityPortalEnterEvent.html#EntityPortalEnterEvent-cn.nukkit.entity.Entity-cn.nukkit.event.entity.EntityPortalEnterEvent.PortalType-">EntityPortalEnterEvent</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity,
                       <a href="../../../../cn/nukkit/event/entity/EntityPortalEnterEvent.PortalType.html" title="enum in cn.nukkit.event.entity">EntityPortalEnterEvent.PortalType</a>&nbsp;type)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityRegainHealthEvent.html#EntityRegainHealthEvent-cn.nukkit.entity.Entity-float-int-">EntityRegainHealthEvent</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity,
                        float&nbsp;amount,
                        int&nbsp;regainReason)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntitySpawnEvent.html#EntitySpawnEvent-cn.nukkit.entity.Entity-">EntitySpawnEvent</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityTeleportEvent.html#EntityTeleportEvent-cn.nukkit.entity.Entity-cn.nukkit.level.Location-cn.nukkit.level.Location-">EntityTeleportEvent</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity,
                    <a href="../../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;from,
                    <a href="../../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a>&nbsp;to)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityVehicleEnterEvent.html#EntityVehicleEnterEvent-cn.nukkit.entity.Entity-cn.nukkit.entity.Entity-">EntityVehicleEnterEvent</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity,
                        <a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;vehicle)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/EntityVehicleExitEvent.html#EntityVehicleExitEvent-cn.nukkit.entity.Entity-cn.nukkit.entity.Entity-">EntityVehicleExitEvent</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity,
                       <a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;vehicle)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/entity/ExplosionPrimeEvent.html#ExplosionPrimeEvent-cn.nukkit.entity.Entity-double-">ExplosionPrimeEvent</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity,
                    double&nbsp;force)</code>&nbsp;</td>
 </tr>
@@ -2064,35 +2074,40 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">Enchantment.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#doAttack-cn.nukkit.entity.Entity-cn.nukkit.entity.Entity-">doAttack</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;attacker,
+        <a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">EnchantmentFireAspect.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/EnchantmentFireAspect.html#doPostAttack-cn.nukkit.entity.Entity-cn.nukkit.entity.Entity-">doPostAttack</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;attacker,
             <a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">EnchantmentThorns.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/EnchantmentThorns.html#doPostAttack-cn.nukkit.entity.Entity-cn.nukkit.entity.Entity-">doPostAttack</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;attacker,
             <a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Enchantment.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#doPostAttack-cn.nukkit.entity.Entity-cn.nukkit.entity.Entity-">doPostAttack</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;attacker,
             <a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Enchantment.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#doPostHurt-cn.nukkit.entity.Entity-cn.nukkit.entity.Entity-">doPostHurt</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;attacker,
           <a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/enchantment/sideeffect/SideEffect.html" title="interface in cn.nukkit.item.enchantment.sideeffect">SideEffect</a>[]</code></td>
 <td class="colLast"><span class="typeNameLabel">EnchantmentFireAspect.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/EnchantmentFireAspect.html#getAttackSideEffects-cn.nukkit.entity.Entity-cn.nukkit.entity.Entity-">getAttackSideEffects</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;attacker,
                     <a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/enchantment/sideeffect/SideEffect.html" title="interface in cn.nukkit.item.enchantment.sideeffect">SideEffect</a>[]</code></td>
 <td class="colLast"><span class="typeNameLabel">Enchantment.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#getAttackSideEffects-cn.nukkit.entity.Entity-cn.nukkit.entity.Entity-">getAttackSideEffects</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;attacker,
                     <a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><span class="typeNameLabel">Enchantment.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/item/enchantment/Enchantment.html#getDamageBonus-cn.nukkit.entity.Entity-">getDamageBonus</a></span>(<a href="../../../../cn/nukkit/entity/Entity.html" title="class in cn.nukkit.entity">Entity</a>&nbsp;entity)</code>&nbsp;</td>
 </tr>

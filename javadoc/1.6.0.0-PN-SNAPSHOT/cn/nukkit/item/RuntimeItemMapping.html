@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>RuntimeItemMapping (PowerNukkit 1.6.0.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2021-12-19">
+<meta name="date" content="2021-12-21">
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
 </head>
@@ -51,7 +51,7 @@ var activeTableTab = "activeTableTab";
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../cn/nukkit/item/ProjectileItem.html" title="class in cn.nukkit.item"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../cn/nukkit/item/RuntimeItems.html" title="class in cn.nukkit.item"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../cn/nukkit/item/RuntimeItemMapping.LegacyEntry.html" title="class in cn.nukkit.item"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../index.html?cn/nukkit/item/RuntimeItemMapping.html" target="_top">Frames</a></li>
@@ -75,7 +75,7 @@ var activeTableTab = "activeTableTab";
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
@@ -128,6 +128,29 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="nested.class.summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Class and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/item/RuntimeItemMapping.LegacyEntry.html" title="class in cn.nukkit.item">RuntimeItemMapping.LegacyEntry</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/item/RuntimeItemMapping.RuntimeEntry.html" title="class in cn.nukkit.item">RuntimeItemMapping.RuntimeEntry</a></span></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor.summary">
@@ -230,9 +253,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>RuntimeItemMapping</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+ <a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
 public&nbsp;RuntimeItemMapping(byte[]&nbsp;itemDataPalette,
-                                                     it.unimi.dsi.fastutil.ints.Int2IntMap&nbsp;legacyNetworkMap,
-                                                     it.unimi.dsi.fastutil.ints.Int2IntMap&nbsp;networkLegacyMap)</pre>
+                                                                       it.unimi.dsi.fastutil.ints.Int2IntMap&nbsp;legacyNetworkMap,
+                                                                       it.unimi.dsi.fastutil.ints.Int2IntMap&nbsp;networkLegacyMap)</pre>
 </li>
 </ul>
 <a name="RuntimeItemMapping-byte:A-it.unimi.dsi.fastutil.ints.Int2IntMap-it.unimi.dsi.fastutil.ints.Int2IntMap-java.util.Map-it.unimi.dsi.fastutil.ints.Int2ObjectMap-">
@@ -264,7 +288,8 @@ public&nbsp;RuntimeItemMapping(byte[]&nbsp;itemDataPalette,
 <ul class="blockList">
 <li class="blockList">
 <h4>getNetworkFullId</h4>
-<pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+<pre><a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
 public&nbsp;int&nbsp;getNetworkFullId(<a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;item)</pre>
 <div class="block">Returns the <b>network id</b> based on the <b>full id</b> of the given item.</div>
 <dl>
@@ -283,7 +308,8 @@ public&nbsp;int&nbsp;getNetworkFullId(<a href="../../../cn/nukkit/item/Item.html
 <ul class="blockList">
 <li class="blockList">
 <h4>getLegacyFullId</h4>
-<pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+<pre><a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
 public&nbsp;int&nbsp;getLegacyFullId(int&nbsp;networkId)</pre>
 <div class="block">Returns the <b>full id</b> of a given <b>network id</b>.</div>
 <dl>
@@ -302,7 +328,8 @@ public&nbsp;int&nbsp;getLegacyFullId(int&nbsp;networkId)</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getItemDataPalette</h4>
-<pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+<pre><a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
 public&nbsp;byte[]&nbsp;getItemDataPalette()</pre>
 </li>
 </ul>
@@ -398,7 +425,7 @@ public&nbsp;<a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukki
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../cn/nukkit/item/ProjectileItem.html" title="class in cn.nukkit.item"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../cn/nukkit/item/RuntimeItems.html" title="class in cn.nukkit.item"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../cn/nukkit/item/RuntimeItemMapping.LegacyEntry.html" title="class in cn.nukkit.item"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../index.html?cn/nukkit/item/RuntimeItemMapping.html" target="_top">Frames</a></li>
@@ -422,7 +449,7 @@ public&nbsp;<a href="../../../cn/nukkit/item/Item.html" title="class in cn.nukki
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>

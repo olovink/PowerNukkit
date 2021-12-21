@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Potion (PowerNukkit 1.6.0.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2021-12-19">
+<meta name="date" content="2021-12-21">
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
 </head>
@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":9,"i4":10,"i5":9,"i6":10,"i7":10,"i8":9,"i9":9,"i10":9,"i11":9,"i12":9,"i13":10,"i14":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":9,"i6":10,"i7":9,"i8":10,"i9":10,"i10":9,"i11":10,"i12":9,"i13":9,"i14":10,"i15":10,"i16":10,"i17":9,"i18":9,"i19":10,"i20":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -114,7 +114,9 @@ var activeTableTab = "activeTableTab";
 </dl>
 <hr>
 <br>
-<pre>public class <span class="typeNameLabel">Potion</span>
+<pre><a href="../../../cn/nukkit/api/PowerNukkitDifference.html" title="annotation in cn.nukkit.api">@PowerNukkitDifference</a>(<a href="../../../cn/nukkit/api/PowerNukkitDifference.html#since--">since</a>="FUTURE",
+                       <a href="../../../cn/nukkit/api/PowerNukkitDifference.html#info--">info</a>="Implements equals() and hashcode() only in PowerNukkit")
+public class <span class="typeNameLabel">Potion</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
 implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.html?is-external=true" title="class or interface in java.lang">Cloneable</a></pre>
 <dl>
@@ -265,7 +267,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/potion/Potion.html#SLOWNESS_LONG_II">SLOWNESS_LONG_II</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/potion/Potion.html#SLOWNESS_LONG_II">SLOWNESS_LONG_II</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
@@ -386,56 +390,80 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
            double&nbsp;health)</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/potion/Potion.html#canEqual-java.lang.Object-">canEqual</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;other)</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/potion/Potion.html" title="class in cn.nukkit.potion">Potion</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/potion/Potion.html#clone--">clone</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/potion/Potion.html#equals-java.lang.Object-">equals</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o)</code>&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/potion/Potion.html#getApplySeconds-int-boolean-">getApplySeconds</a></span>(int&nbsp;potionType,
                boolean&nbsp;isSplash)</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/potion/Effect.html" title="class in cn.nukkit.potion">Effect</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/potion/Potion.html#getEffect--">getEffect</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../cn/nukkit/potion/Effect.html" title="class in cn.nukkit.potion">Effect</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/potion/Potion.html#getEffect-int-boolean-">getEffect</a></span>(int&nbsp;potionType,
          boolean&nbsp;isSplash)</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/potion/Potion.html#getId--">getId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/potion/Potion.html#getLevel--">getLevel</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/potion/Potion.html#getLevel-int-">getLevel</a></span>(int&nbsp;potionType)</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/potion/Potion.html#getName--">getName</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>static <a href="../../../cn/nukkit/potion/Potion.html" title="class in cn.nukkit.potion">Potion</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/potion/Potion.html#getPotion-int-">getPotion</a></span>(int&nbsp;id)</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../cn/nukkit/potion/Potion.html" title="class in cn.nukkit.potion">Potion</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/potion/Potion.html#getPotionByName-java.lang.String-">getPotionByName</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i14" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/potion/Potion.html#getPotionTypeName--">getPotionTypeName</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i15" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/potion/Potion.html#getRomanLevel--">getRomanLevel</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i16" class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/potion/Potion.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/potion/Potion.html#init--">init</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>static boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/potion/Potion.html#isInstant-int-">isInstant</a></span>(int&nbsp;potionType)</code>&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/potion/Potion.html#isSplash--">isSplash</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/potion/Potion.html" title="class in cn.nukkit.potion">Potion</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/potion/Potion.html#setSplash-boolean-">setSplash</a></span>(boolean&nbsp;splash)</code>&nbsp;</td>
 </tr>
@@ -445,7 +473,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
 </ul>
 </li>
 </ul>
@@ -1020,20 +1048,6 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 </dl>
 </li>
 </ul>
-<a name="SLOWNESS_LONG_II">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>SLOWNESS_LONG_II</h4>
-<pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-public static final&nbsp;int SLOWNESS_LONG_II</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../constant-values.html#cn.nukkit.potion.Potion.SLOWNESS_LONG_II">Constant Field Values</a></dd>
-</dl>
-</li>
-</ul>
 <a name="SLOWNESS_IV">
 <!--   -->
 </a>
@@ -1041,10 +1055,31 @@ public static final&nbsp;int SLOWNESS_LONG_II</pre>
 <li class="blockList">
 <h4>SLOWNESS_IV</h4>
 <pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+ <a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
 public static final&nbsp;int SLOWNESS_IV</pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../constant-values.html#cn.nukkit.potion.Potion.SLOWNESS_IV">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="SLOWNESS_LONG_II">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SLOWNESS_LONG_II</h4>
+<pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+ <a href="../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="FUTURE",
+                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#by--">by</a>="PowerNukkit",
+                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="Incorrect name, there is vanilla potion with slowness long 2, the result of potion with slowness 1 + glowstone is slowness 4",
+                    <a href="../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="SLOWNESS_IV")
+public static final&nbsp;int SLOWNESS_LONG_II</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../constant-values.html#cn.nukkit.potion.Potion.SLOWNESS_LONG_II">Constant Field Values</a></dd>
 </dl>
 </li>
 </ul>
@@ -1265,11 +1300,82 @@ public static final&nbsp;int SLOWNESS_IV</pre>
 <a name="getApplySeconds-int-boolean-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getApplySeconds</h4>
 <pre>public static&nbsp;int&nbsp;getApplySeconds(int&nbsp;potionType,
                                   boolean&nbsp;isSplash)</pre>
+</li>
+</ul>
+<a name="getPotionTypeName--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPotionTypeName</h4>
+<pre><a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+ <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
+public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getPotionTypeName()</pre>
+</li>
+</ul>
+<a name="getName--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getName</h4>
+<pre><a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+ <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
+public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getName()</pre>
+</li>
+</ul>
+<a name="getRomanLevel--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRomanLevel</h4>
+<pre><a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+ <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
+public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getRomanLevel()</pre>
+</li>
+</ul>
+<a name="equals-java.lang.Object-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>equals</h4>
+<pre>public&nbsp;boolean&nbsp;equals(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="canEqual-java.lang.Object-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>canEqual</h4>
+<pre>protected&nbsp;boolean&nbsp;canEqual(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;other)</pre>
+</li>
+</ul>
+<a name="hashCode--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>hashCode</h4>
+<pre>public&nbsp;int&nbsp;hashCode()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
+</dl>
 </li>
 </ul>
 </li>

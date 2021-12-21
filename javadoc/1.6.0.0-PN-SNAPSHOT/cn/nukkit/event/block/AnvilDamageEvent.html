@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>AnvilDamageEvent (PowerNukkit 1.6.0.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2021-12-19">
+<meta name="date" content="2021-12-21">
 <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../../script.js"></script>
 </head>
@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":42,"i1":42,"i2":41,"i3":42,"i4":42,"i5":42,"i6":42,"i7":42};
+var methods = {"i0":10,"i1":10,"i2":9,"i3":10,"i4":42,"i5":10,"i6":10,"i7":10,"i8":42,"i9":10,"i10":10,"i11":10,"i12":42,"i13":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -51,7 +51,7 @@ var activeTableTab = "activeTableTab";
 <div class="subNav">
 <ul class="navList">
 <li>Prev&nbsp;Class</li>
-<li><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.Cause.html" title="enum in cn.nukkit.event.block"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.block"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?cn/nukkit/event/block/AnvilDamageEvent.html" target="_top">Frames</a></li>
@@ -107,12 +107,7 @@ var activeTableTab = "activeTableTab";
 <li><a href="../../../../cn/nukkit/event/block/BlockEvent.html" title="class in cn.nukkit.event.block">cn.nukkit.event.block.BlockEvent</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../../cn/nukkit/event/block/BlockFadeEvent.html" title="class in cn.nukkit.event.block">cn.nukkit.event.block.BlockFadeEvent</a></li>
-<li>
-<ul class="inheritance">
 <li>cn.nukkit.event.block.AnvilDamageEvent</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -128,16 +123,10 @@ var activeTableTab = "activeTableTab";
 <dd><a href="../../../../cn/nukkit/event/Cancellable.html" title="interface in cn.nukkit.event">Cancellable</a></dd>
 </dl>
 <hr>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span></div>
 <br>
-<pre><a href="../../../../cn/nukkit/api/PowerNukkitDifference.html" title="annotation in cn.nukkit.api">@PowerNukkitDifference</a>(<a href="../../../../cn/nukkit/api/PowerNukkitDifference.html#info--">info</a>="Extends BlockFadeEvent instead of BlockEvent only in PowerNukkit")
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
- <a href="../../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.4.0.0-PN",
-                    <a href="../../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="This is only a warning, this event will change in 1.5.0.0-PN, it will no longer extend BlockFadeEvent and the cause enum will be renamed!",
-                    <a href="../../../../cn/nukkit/api/DeprecationDetails.html#toBeRemovedAt--">toBeRemovedAt</a>="The class will have a breaking change in 1.5.0.0-PN")
- <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.1.1.0-PN")
+<pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.1.1.0-PN")
 public class <span class="typeNameLabel">AnvilDamageEvent</span>
-extends <a href="../../../../cn/nukkit/event/block/BlockFadeEvent.html" title="class in cn.nukkit.event.block">BlockFadeEvent</a>
+extends <a href="../../../../cn/nukkit/event/block/BlockEvent.html" title="class in cn.nukkit.event.block">BlockEvent</a>
 implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interface in cn.nukkit.event">Cancellable</a></pre>
 </li>
 </ul>
@@ -159,15 +148,7 @@ implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interfa
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.Cause.html" title="enum in cn.nukkit.event.block">AnvilDamageEvent.Cause</a></span></code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.block">AnvilDamageEvent.DamageCause</a></span></code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.block">AnvilDamageEvent.DamageCause</a></span></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -206,31 +187,25 @@ implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interfa
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.html#AnvilDamageEvent-cn.nukkit.block.Block-cn.nukkit.block.Block-cn.nukkit.Player-cn.nukkit.inventory.transaction.CraftingTransaction-cn.nukkit.event.block.AnvilDamageEvent.Cause-">AnvilDamageEvent</a></span>(<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block,
-                <a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;newState,
-                <a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
-                <a href="../../../../cn/nukkit/inventory/transaction/CraftingTransaction.html" title="class in cn.nukkit.inventory.transaction">CraftingTransaction</a>&nbsp;transaction,
-                <a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.Cause.html" title="enum in cn.nukkit.event.block">AnvilDamageEvent.Cause</a>&nbsp;cause)</code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.html#AnvilDamageEvent-cn.nukkit.block.Block-cn.nukkit.block.Block-cn.nukkit.Player-cn.nukkit.inventory.transaction.CraftingTransaction-cn.nukkit.event.block.AnvilDamageEvent.DamageCause-">AnvilDamageEvent</a></span>(<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block,
                 <a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;newState,
                 <a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
                 <a href="../../../../cn/nukkit/inventory/transaction/CraftingTransaction.html" title="class in cn.nukkit.inventory.transaction">CraftingTransaction</a>&nbsp;transaction,
-                <a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.block">AnvilDamageEvent.DamageCause</a>&nbsp;cause)</code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-&nbsp;</td>
+                <a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.block">AnvilDamageEvent.DamageCause</a>&nbsp;cause)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.html#AnvilDamageEvent-cn.nukkit.block.Block-cn.nukkit.blockstate.BlockState-cn.nukkit.Player-cn.nukkit.inventory.transaction.CraftingTransaction-cn.nukkit.event.block.AnvilDamageEvent.DamageCause-">AnvilDamageEvent</a></span>(<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block,
+                <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;newState,
+                <a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
+                <a href="../../../../cn/nukkit/inventory/transaction/CraftingTransaction.html" title="class in cn.nukkit.inventory.transaction">CraftingTransaction</a>&nbsp;transaction,
+                <a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.block">AnvilDamageEvent.DamageCause</a>&nbsp;cause)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.html#AnvilDamageEvent-cn.nukkit.block.Block-int-int-cn.nukkit.event.block.AnvilDamageEvent.DamageCause-cn.nukkit.Player-">AnvilDamageEvent</a></span>(<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block,
                 int&nbsp;oldDamage,
                 int&nbsp;newDamage,
                 <a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.block">AnvilDamageEvent.DamageCause</a>&nbsp;cause,
-                <a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player)</code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-&nbsp;</td>
+                <a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -248,61 +223,68 @@ implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interfa
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.Cause.html" title="enum in cn.nukkit.event.block">AnvilDamageEvent.Cause</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.html#getCause--">getCause</a></span>()</code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-</td>
+<td class="colFirst"><code><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.block">AnvilDamageEvent.DamageCause</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.html#getCause--">getCause</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.block">AnvilDamageEvent.DamageCause</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.html#getDamageCause--">getDamageCause</a></span>()</code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.html#getDamageCause--">getDamageCause</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../cn/nukkit/event/HandlerList.html" title="class in cn.nukkit.event">HandlerList</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.html#getHandlers--">getHandlers</a></span>()</code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.html#getHandlers--">getHandlers</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.html#getNewDamage--">getNewDamage</a></span>()</code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-&nbsp;</td>
+<td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.html#getNewBlockState--">getNewBlockState</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.html#getOldDamage--">getOldDamage</a></span>()</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.html#getNewDamage--">getNewDamage</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-&nbsp;</td>
+</td>
 </tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code><a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.html#getPlayer--">getPlayer</a></span>()</code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-&nbsp;</td>
+<td class="colFirst"><code><a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.html#getNewState--">getNewState</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i6" class="altColor">
-<td class="colFirst"><code><a href="../../../../cn/nukkit/inventory/transaction/CraftingTransaction.html" title="class in cn.nukkit.inventory.transaction">CraftingTransaction</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.html#getTransaction--">getTransaction</a></span>()</code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-&nbsp;</td>
+<td class="colFirst"><code><a href="../../../../cn/nukkit/blockproperty/value/AnvilDamage.html" title="enum in cn.nukkit.blockproperty.value">AnvilDamage</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.html#getOldAnvilDamage--">getOldAnvilDamage</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i7" class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.html#getOldBlockState--">getOldBlockState</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.html#getOldDamage--">getOldDamage</a></span>()</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.html#getPlayer--">getPlayer</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/inventory/transaction/CraftingTransaction.html" title="class in cn.nukkit.inventory.transaction">CraftingTransaction</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.html#getTransaction--">getTransaction</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.html#setNewBlockState-cn.nukkit.blockstate.BlockState-">setNewBlockState</a></span>(<a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;state)</code>&nbsp;</td>
+</tr>
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.html#setNewDamage-int-">setNewDamage</a></span>(int&nbsp;newDamage)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-&nbsp;</td>
+</td>
+</tr>
+<tr id="i13" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.html#setNewState-cn.nukkit.block.Block-">setNewState</a></span>(<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block)</code>&nbsp;</td>
 </tr>
 </table>
-<ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.cn.nukkit.event.block.BlockFadeEvent">
-<!--   -->
-</a>
-<h3>Methods inherited from class&nbsp;cn.nukkit.event.block.<a href="../../../../cn/nukkit/event/block/BlockFadeEvent.html" title="class in cn.nukkit.event.block">BlockFadeEvent</a></h3>
-<code><a href="../../../../cn/nukkit/event/block/BlockFadeEvent.html#getNewState--">getNewState</a></code></li>
-</ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.cn.nukkit.event.block.BlockEvent">
 <!--   -->
@@ -352,12 +334,14 @@ implements <a href="../../../../cn/nukkit/event/Cancellable.html" title="interfa
 <li class="blockList">
 <h4>AnvilDamageEvent</h4>
 <pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-public&nbsp;AnvilDamageEvent(<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block,
+public&nbsp;AnvilDamageEvent(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
+                                                   <a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block,
                                                    int&nbsp;oldDamage,
                                                    int&nbsp;newDamage,
+                                                   <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
                                                    <a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.block">AnvilDamageEvent.DamageCause</a>&nbsp;cause,
+                                                   <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
                                                    <a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player)</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </li>
 </ul>
 <a name="AnvilDamageEvent-cn.nukkit.block.Block-cn.nukkit.block.Block-cn.nukkit.Player-cn.nukkit.inventory.transaction.CraftingTransaction-cn.nukkit.event.block.AnvilDamageEvent.DamageCause-">
@@ -368,29 +352,36 @@ public&nbsp;AnvilDamageEvent(<a href="../../../../cn/nukkit/block/Block.html" ti
 <h4>AnvilDamageEvent</h4>
 <pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
-public&nbsp;AnvilDamageEvent(<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block,
+public&nbsp;AnvilDamageEvent(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
+                                                                     <a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block,
+                                                                     <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
                                                                      <a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;newState,
+                                                                     <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
                                                                      <a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
                                                                      <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
                                                                      <a href="../../../../cn/nukkit/inventory/transaction/CraftingTransaction.html" title="class in cn.nukkit.inventory.transaction">CraftingTransaction</a>&nbsp;transaction,
+                                                                     <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
                                                                      <a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.block">AnvilDamageEvent.DamageCause</a>&nbsp;cause)</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </li>
 </ul>
-<a name="AnvilDamageEvent-cn.nukkit.block.Block-cn.nukkit.block.Block-cn.nukkit.Player-cn.nukkit.inventory.transaction.CraftingTransaction-cn.nukkit.event.block.AnvilDamageEvent.Cause-">
+<a name="AnvilDamageEvent-cn.nukkit.block.Block-cn.nukkit.blockstate.BlockState-cn.nukkit.Player-cn.nukkit.inventory.transaction.CraftingTransaction-cn.nukkit.event.block.AnvilDamageEvent.DamageCause-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>AnvilDamageEvent</h4>
 <pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
- <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.1.1.0-PN")
-public&nbsp;AnvilDamageEvent(<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block,
-                                                                     <a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;newState,
-                                                                     <a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
-                                                                     <a href="../../../../cn/nukkit/inventory/transaction/CraftingTransaction.html" title="class in cn.nukkit.inventory.transaction">CraftingTransaction</a>&nbsp;transaction,
-                                                                     <a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.Cause.html" title="enum in cn.nukkit.event.block">AnvilDamageEvent.Cause</a>&nbsp;cause)</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+ <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+public&nbsp;AnvilDamageEvent(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
+                                                                 <a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block,
+                                                                 <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
+                                                                 <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;newState,
+                                                                 <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
+                                                                 <a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
+                                                                 <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
+                                                                 <a href="../../../../cn/nukkit/inventory/transaction/CraftingTransaction.html" title="class in cn.nukkit.inventory.transaction">CraftingTransaction</a>&nbsp;transaction,
+                                                                 <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
+                                                                 <a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.block">AnvilDamageEvent.DamageCause</a>&nbsp;cause)</pre>
 </li>
 </ul>
 </li>
@@ -409,18 +400,6 @@ public&nbsp;AnvilDamageEvent(<a href="../../../../cn/nukkit/block/Block.html" ti
 <h4>getHandlers</h4>
 <pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.1.1.0-PN")
 public static&nbsp;<a href="../../../../cn/nukkit/event/HandlerList.html" title="class in cn.nukkit.event">HandlerList</a>&nbsp;getHandlers()</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-</li>
-</ul>
-<a name="getPlayer--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getPlayer</h4>
-<pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.1.1.0-PN")
-public&nbsp;<a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;getPlayer()</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </li>
 </ul>
 <a name="getTransaction--">
@@ -431,8 +410,8 @@ public&nbsp;<a href="../../../../cn/nukkit/Player.html" title="class in cn.nukki
 <h4>getTransaction</h4>
 <pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.1.1.0-PN")
+ <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
 public&nbsp;<a href="../../../../cn/nukkit/inventory/transaction/CraftingTransaction.html" title="class in cn.nukkit.inventory.transaction">CraftingTransaction</a>&nbsp;getTransaction()</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </li>
 </ul>
 <a name="getDamageCause--">
@@ -443,8 +422,8 @@ public&nbsp;<a href="../../../../cn/nukkit/inventory/transaction/CraftingTransac
 <h4>getDamageCause</h4>
 <pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
  <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+ <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
 public&nbsp;<a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.block">AnvilDamageEvent.DamageCause</a>&nbsp;getDamageCause()</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </li>
 </ul>
 <a name="getOldDamage--">
@@ -453,9 +432,62 @@ public&nbsp;<a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.DamageCa
 <ul class="blockList">
 <li class="blockList">
 <h4>getOldDamage</h4>
-<pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+ <a href="../../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="FUTURE",
+                    <a href="../../../../cn/nukkit/api/DeprecationDetails.html#by--">by</a>="PowerNukkit",
+                    <a href="../../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="Unstable use of raw block state data",
+                    <a href="../../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="getOldAnvilDamage or getOldBlockState")
+ <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
 public&nbsp;int&nbsp;getOldDamage()</pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+</li>
+</ul>
+<a name="getOldAnvilDamage--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOldAnvilDamage</h4>
+<pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+ <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
+public&nbsp;<a href="../../../../cn/nukkit/blockproperty/value/AnvilDamage.html" title="enum in cn.nukkit.blockproperty.value">AnvilDamage</a>&nbsp;getOldAnvilDamage()</pre>
+</li>
+</ul>
+<a name="getOldBlockState--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOldBlockState</h4>
+<pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+ <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
+public&nbsp;<a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;getOldBlockState()</pre>
+</li>
+</ul>
+<a name="getNewBlockState--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getNewBlockState</h4>
+<pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+ <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
+public&nbsp;<a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;getNewBlockState()</pre>
+</li>
+</ul>
+<a name="getNewState--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getNewState</h4>
+<pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>(<a href="../../../../cn/nukkit/api/PowerNukkitOnly.html#value--">value</a>="Used to be inherited from BlockFadeEvent")
+ <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.1.1.0-PN")
+ <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
+public&nbsp;<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;getNewState()</pre>
 </li>
 </ul>
 <a name="getNewDamage--">
@@ -464,9 +496,26 @@ public&nbsp;int&nbsp;getOldDamage()</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getNewDamage</h4>
-<pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+ <a href="../../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="FUTURE",
+                    <a href="../../../../cn/nukkit/api/DeprecationDetails.html#by--">by</a>="PowerNukkit",
+                    <a href="../../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="Unstable use of raw block state data",
+                    <a href="../../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="getNewAnvilDamage or getNewBlockState")
+ <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
 public&nbsp;int&nbsp;getNewDamage()</pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+</li>
+</ul>
+<a name="setNewBlockState-cn.nukkit.blockstate.BlockState-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setNewBlockState</h4>
+<pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+public&nbsp;void&nbsp;setNewBlockState(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
+                                                                      <a href="../../../../cn/nukkit/blockstate/BlockState.html" title="class in cn.nukkit.blockstate">BlockState</a>&nbsp;state)</pre>
 </li>
 </ul>
 <a name="setNewDamage-int-">
@@ -475,27 +524,48 @@ public&nbsp;int&nbsp;getNewDamage()</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>setNewDamage</h4>
-<pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+ <a href="../../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="FUTURE",
+                    <a href="../../../../cn/nukkit/api/DeprecationDetails.html#by--">by</a>="PowerNukkit",
+                    <a href="../../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="Unstable use of raw block state data",
+                    <a href="../../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="setNewBlockState example: setNewBlockState(BlockState.of(BlockID.ANVIL).withProperty(BlockAnvil.DAMAGE, AnvilDamage.VERY_DAMAGED))")
+ <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.4.0.0-PN")
 public&nbsp;void&nbsp;setNewDamage(int&nbsp;newDamage)</pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+</li>
+</ul>
+<a name="setNewState-cn.nukkit.block.Block-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setNewState</h4>
+<pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
+ <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+public&nbsp;void&nbsp;setNewState(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
+                                                                 <a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block)</pre>
 </li>
 </ul>
 <a name="getCause--">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getCause</h4>
-<pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
- <a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.1.1.0-PN")
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
- <a href="../../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.4.0.0-PN",
-                    <a href="../../../../cn/nukkit/api/DeprecationDetails.html#by--">by</a>="PowerNukkit",
-                    <a href="../../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="NukkitX added the class and made getCause() return an enum with a different name.",
-                    <a href="../../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="getDamageCause()",
-                    <a href="../../../../cn/nukkit/api/DeprecationDetails.html#toBeRemovedAt--">toBeRemovedAt</a>="1.6.0.0-PN")
-public&nbsp;<a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.Cause.html" title="enum in cn.nukkit.event.block">AnvilDamageEvent.Cause</a>&nbsp;getCause()</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+ <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nonnull.html?is-external=true" title="class or interface in javax.annotation">@Nonnull</a>
+public&nbsp;<a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.block">AnvilDamageEvent.DamageCause</a>&nbsp;getCause()</pre>
+</li>
+</ul>
+<a name="getPlayer--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getPlayer</h4>
+<pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="1.1.1.0-PN")
+ <a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
+public&nbsp;<a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;getPlayer()</pre>
 </li>
 </ul>
 </li>
@@ -527,7 +597,7 @@ public&nbsp;<a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.Cause.ht
 <div class="subNav">
 <ul class="navList">
 <li>Prev&nbsp;Class</li>
-<li><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.Cause.html" title="enum in cn.nukkit.event.block"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../cn/nukkit/event/block/AnvilDamageEvent.DamageCause.html" title="enum in cn.nukkit.event.block"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../index.html?cn/nukkit/event/block/AnvilDamageEvent.html" target="_top">Frames</a></li>

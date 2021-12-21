@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Uses of Class cn.nukkit.math.Vector3 (PowerNukkit 1.6.0.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2021-12-19">
+<meta name="date" content="2021-12-21">
 <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../../script.js"></script>
 </head>
@@ -2741,9 +2741,16 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><span class="typeNameLabel">Entity.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/entity/Entity.html#teleport-cn.nukkit.math.Vector3-">teleport</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">Entity.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/entity/Entity.html#setPositionAndRotation-cn.nukkit.math.Vector3-double-double-double-">setPositionAndRotation</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos,
+                      double&nbsp;yaw,
+                      double&nbsp;pitch,
+                      double&nbsp;headYaw)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><span class="typeNameLabel">Entity.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/entity/Entity.html#teleport-cn.nukkit.math.Vector3-">teleport</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">Entity.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/entity/Entity.html#teleport-cn.nukkit.math.Vector3-cn.nukkit.event.player.PlayerTeleportEvent.TeleportCause-">teleport</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos,
         <a href="../../../../cn/nukkit/event/player/PlayerTeleportEvent.TeleportCause.html" title="enum in cn.nukkit.event.player">PlayerTeleportEvent.TeleportCause</a>&nbsp;cause)</code>&nbsp;</td>
@@ -4051,104 +4058,112 @@
           double&nbsp;pitch)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Location.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Location.html#fromObject-cn.nukkit.math.Vector3-cn.nukkit.level.Level-double-double-double-">fromObject</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos,
+          <a href="../../../../cn/nukkit/level/Level.html" title="class in cn.nukkit.level">Level</a>&nbsp;level,
+          double&nbsp;yaw,
+          double&nbsp;pitch,
+          double&nbsp;headYaw)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#getBlock-cn.nukkit.math.Vector3-">getBlock</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#getBlock-cn.nukkit.math.Vector3-boolean-">getBlock</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos,
         boolean&nbsp;load)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#getBlock-cn.nukkit.math.Vector3-int-">getBlock</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos,
         int&nbsp;layer)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#getBlock-cn.nukkit.math.Vector3-int-boolean-">getBlock</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos,
         int&nbsp;layer,
         boolean&nbsp;load)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockentity/BlockEntity.html" title="class in cn.nukkit.blockentity">BlockEntity</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#getBlockEntity-cn.nukkit.math.Vector3-">getBlockEntity</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/blockentity/BlockEntity.html" title="class in cn.nukkit.blockentity">BlockEntity</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#getBlockEntityIfLoaded-cn.nukkit.math.Vector3-">getBlockEntityIfLoaded</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#getFullLight-cn.nukkit.math.Vector3-">getFullLight</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#getRedstonePower-cn.nukkit.math.Vector3-cn.nukkit.math.BlockFace-">getRedstonePower</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos,
                 <a href="../../../../cn/nukkit/math/BlockFace.html" title="enum in cn.nukkit.math">BlockFace</a>&nbsp;face)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/level/Position.html" title="class in cn.nukkit.level">Position</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#getSafeSpawn-cn.nukkit.math.Vector3-">getSafeSpawn</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;spawn)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#getStrongPower-cn.nukkit.math.Vector3-">getStrongPower</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#getStrongPower-cn.nukkit.math.Vector3-cn.nukkit.math.BlockFace-">getStrongPower</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos,
               <a href="../../../../cn/nukkit/math/BlockFace.html" title="enum in cn.nukkit.math">BlockFace</a>&nbsp;direction)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#isBlockIndirectlyGettingPowered-cn.nukkit.math.Vector3-">isBlockIndirectlyGettingPowered</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#isBlockPowered-cn.nukkit.math.Vector3-">isBlockPowered</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#isBlockTickPending-cn.nukkit.math.Vector3-cn.nukkit.block.Block-">isBlockTickPending</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos,
                   <a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#isFullBlock-cn.nukkit.math.Vector3-">isFullBlock</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#isInSpawnRadius-cn.nukkit.math.Vector3-">isInSpawnRadius</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;vector3)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#isSidePowered-cn.nukkit.math.Vector3-cn.nukkit.math.BlockFace-">isSidePowered</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos,
              <a href="../../../../cn/nukkit/math/BlockFace.html" title="enum in cn.nukkit.math">BlockFace</a>&nbsp;face)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#isUpdateScheduled-cn.nukkit.math.Vector3-cn.nukkit.block.Block-">isUpdateScheduled</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos,
                  <a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">ChunkLoader.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/ChunkLoader.html#onBlockChanged-cn.nukkit.math.Vector3-">onBlockChanged</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;block)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#scheduleUpdate-cn.nukkit.block.Block-cn.nukkit.math.Vector3-int-">scheduleUpdate</a></span>(<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block,
               <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos,
               int&nbsp;delay)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#scheduleUpdate-cn.nukkit.block.Block-cn.nukkit.math.Vector3-int-int-">scheduleUpdate</a></span>(<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block,
               <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos,
               int&nbsp;delay,
               int&nbsp;priority)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#scheduleUpdate-cn.nukkit.block.Block-cn.nukkit.math.Vector3-int-int-boolean-">scheduleUpdate</a></span>(<a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block,
               <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos,
@@ -4156,32 +4171,32 @@
               int&nbsp;priority,
               boolean&nbsp;checkArea)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#sendBlocks-cn.nukkit.Player:A-cn.nukkit.math.Vector3:A-">sendBlocks</a></span>(<a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>[]&nbsp;target,
           <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>[]&nbsp;blocks)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#sendBlocks-cn.nukkit.Player:A-cn.nukkit.math.Vector3:A-int-">sendBlocks</a></span>(<a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>[]&nbsp;target,
           <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>[]&nbsp;blocks,
           int&nbsp;flags)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#sendBlocks-cn.nukkit.Player:A-cn.nukkit.math.Vector3:A-int-boolean-">sendBlocks</a></span>(<a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>[]&nbsp;target,
           <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>[]&nbsp;blocks,
           int&nbsp;flags,
           boolean&nbsp;optimizeRebuilds)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#sendBlocks-cn.nukkit.Player:A-cn.nukkit.math.Vector3:A-int-int-">sendBlocks</a></span>(<a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>[]&nbsp;target,
           <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>[]&nbsp;blocks,
           int&nbsp;flags,
           int&nbsp;dataLayer)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#sendBlocks-cn.nukkit.Player:A-cn.nukkit.math.Vector3:A-int-int-boolean-">sendBlocks</a></span>(<a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>[]&nbsp;target,
           <a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>[]&nbsp;blocks,
@@ -4189,38 +4204,38 @@
           int&nbsp;dataLayer,
           boolean&nbsp;optimizeRebuilds)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#setBlock-cn.nukkit.math.Vector3-cn.nukkit.block.Block-">setBlock</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos,
         <a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#setBlock-cn.nukkit.math.Vector3-cn.nukkit.block.Block-boolean-">setBlock</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos,
         <a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block,
         boolean&nbsp;direct)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#setBlock-cn.nukkit.math.Vector3-cn.nukkit.block.Block-boolean-boolean-">setBlock</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos,
         <a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block,
         boolean&nbsp;direct,
         boolean&nbsp;update)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#setBlock-cn.nukkit.math.Vector3-int-cn.nukkit.block.Block-">setBlock</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos,
         int&nbsp;layer,
         <a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#setBlock-cn.nukkit.math.Vector3-int-cn.nukkit.block.Block-boolean-">setBlock</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos,
         int&nbsp;layer,
         <a href="../../../../cn/nukkit/block/Block.html" title="class in cn.nukkit.block">Block</a>&nbsp;block,
         boolean&nbsp;direct)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#setBlock-cn.nukkit.math.Vector3-int-cn.nukkit.block.Block-boolean-boolean-">setBlock</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos,
         int&nbsp;layer,
@@ -4228,51 +4243,51 @@
         boolean&nbsp;direct,
         boolean&nbsp;update)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/level/Position.html" title="class in cn.nukkit.level">Position</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Position.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Position.html#setComponents-cn.nukkit.math.Vector3-">setComponents</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#setSpawnLocation-cn.nukkit.math.Vector3-">setSpawnLocation</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/level/Position.html" title="class in cn.nukkit.level">Position</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Position.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Position.html#subtract-cn.nukkit.math.Vector3-">subtract</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;x)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/level/Location.html" title="class in cn.nukkit.level">Location</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Location.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Location.html#subtract-cn.nukkit.math.Vector3-">subtract</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;x)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#updateAllLight-cn.nukkit.math.Vector3-">updateAllLight</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#updateAround-cn.nukkit.math.Vector3-">updateAround</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#updateAroundRedstone-cn.nukkit.math.Vector3-cn.nukkit.math.BlockFace-">updateAroundRedstone</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;pos,
                     <a href="../../../../cn/nukkit/math/BlockFace.html" title="enum in cn.nukkit.math">BlockFace</a>&nbsp;face)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#updateComparatorOutputLevel-cn.nukkit.math.Vector3-">updateComparatorOutputLevel</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;v)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#updateComparatorOutputLevelSelective-cn.nukkit.math.Vector3-boolean-">updateComparatorOutputLevelSelective</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;v,
                                     boolean&nbsp;observer)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#useBreakOn-cn.nukkit.math.Vector3-">useBreakOn</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;vector)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#useBreakOn-cn.nukkit.math.Vector3-cn.nukkit.math.BlockFace-cn.nukkit.item.Item-cn.nukkit.Player-boolean-">useBreakOn</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;vector,
           <a href="../../../../cn/nukkit/math/BlockFace.html" title="enum in cn.nukkit.math">BlockFace</a>&nbsp;face,
@@ -4280,7 +4295,7 @@
           <a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
           boolean&nbsp;createParticles)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#useBreakOn-cn.nukkit.math.Vector3-cn.nukkit.math.BlockFace-cn.nukkit.item.Item-cn.nukkit.Player-boolean-boolean-">useBreakOn</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;vector,
           <a href="../../../../cn/nukkit/math/BlockFace.html" title="enum in cn.nukkit.math">BlockFace</a>&nbsp;face,
@@ -4289,7 +4304,7 @@
           boolean&nbsp;createParticles,
           boolean&nbsp;setBlockDestroy)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#useBreakOn-cn.nukkit.math.Vector3-int-cn.nukkit.math.BlockFace-cn.nukkit.item.Item-cn.nukkit.Player-boolean-boolean-">useBreakOn</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;vector,
           int&nbsp;layer,
@@ -4299,25 +4314,25 @@
           boolean&nbsp;createParticles,
           boolean&nbsp;setBlockDestroy)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#useBreakOn-cn.nukkit.math.Vector3-cn.nukkit.item.Item-">useBreakOn</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;vector,
           <a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;item)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#useBreakOn-cn.nukkit.math.Vector3-cn.nukkit.item.Item-cn.nukkit.Player-">useBreakOn</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;vector,
           <a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;item,
           <a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#useBreakOn-cn.nukkit.math.Vector3-cn.nukkit.item.Item-cn.nukkit.Player-boolean-">useBreakOn</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;vector,
           <a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;item,
           <a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
           boolean&nbsp;createParticles)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#useItemOn-cn.nukkit.math.Vector3-cn.nukkit.item.Item-cn.nukkit.math.BlockFace-float-float-float-">useItemOn</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;vector,
          <a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;item,
@@ -4326,7 +4341,7 @@
          float&nbsp;fy,
          float&nbsp;fz)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#useItemOn-cn.nukkit.math.Vector3-cn.nukkit.item.Item-cn.nukkit.math.BlockFace-float-float-float-cn.nukkit.Player-">useItemOn</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;vector,
          <a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;item,
@@ -4336,7 +4351,7 @@
          float&nbsp;fz,
          <a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Level.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/Level.html#useItemOn-cn.nukkit.math.Vector3-cn.nukkit.item.Item-cn.nukkit.math.BlockFace-float-float-float-cn.nukkit.Player-boolean-">useItemOn</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;vector,
          <a href="../../../../cn/nukkit/item/Item.html" title="class in cn.nukkit.item">Item</a>&nbsp;item,
@@ -5071,7 +5086,9 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Vector3.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/math/Vector3.html#cross-cn.nukkit.math.Vector3-">cross</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;v)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">Vector3.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/math/Vector3.html#cross-cn.nukkit.math.Vector3-">cross</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;v)</code>
+<div class="block">Calculates the cross product of this Vector and the given Vector</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></code></td>
@@ -5182,69 +5199,81 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Vector3.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/math/Vector3.html#south--">south</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">Vector3.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/math/Vector3.html#setX-double-">setX</a></span>(double&nbsp;x)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Vector3.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/math/Vector3.html#south-int-">south</a></span>(int&nbsp;step)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">Vector3.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/math/Vector3.html#setY-double-">setY</a></span>(double&nbsp;y)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Vector3.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/math/Vector3.html#setZ-double-">setZ</a></span>(double&nbsp;z)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Vector3.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/math/Vector3.html#south--">south</a></span>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></code></td>
+<td class="colLast"><span class="typeNameLabel">Vector3.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/math/Vector3.html#south-int-">south</a></span>(int&nbsp;step)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Vector3.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/math/Vector3.html#subtract--">subtract</a></span>()</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Vector3.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/math/Vector3.html#subtract-double-">subtract</a></span>(double&nbsp;x)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockVector3.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/math/BlockVector3.html#subtract-double-">subtract</a></span>(double&nbsp;x)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Vector3.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/math/Vector3.html#subtract-double-double-">subtract</a></span>(double&nbsp;x,
         double&nbsp;y)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockVector3.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/math/BlockVector3.html#subtract-double-double-">subtract</a></span>(double&nbsp;x,
         double&nbsp;y)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Vector3.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/math/Vector3.html#subtract-double-double-double-">subtract</a></span>(double&nbsp;x,
         double&nbsp;y,
         double&nbsp;z)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockVector3.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/math/BlockVector3.html#subtract-double-double-double-">subtract</a></span>(double&nbsp;x,
         double&nbsp;y,
         double&nbsp;z)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Vector3.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/math/Vector3.html#subtract-cn.nukkit.math.Vector3-">subtract</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;x)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></code></td>
 <td class="colLast"><span class="typeNameLabel">BlockVector3.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/math/BlockVector3.html#subtract-cn.nukkit.math.Vector3-">subtract</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;x)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Vector3.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/math/Vector3.html#up--">up</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Vector3.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/math/Vector3.html#up-int-">up</a></span>(int&nbsp;step)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Vector3.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/math/Vector3.html#west--">west</a></span>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></code></td>
 <td class="colLast"><span class="typeNameLabel">Vector3.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/math/Vector3.html#west-int-">west</a></span>(int&nbsp;step)</code>&nbsp;</td>
 </tr>
@@ -5282,7 +5311,9 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></code></td>
-<td class="colLast"><span class="typeNameLabel">Vector3.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/math/Vector3.html#cross-cn.nukkit.math.Vector3-">cross</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;v)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">Vector3.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/math/Vector3.html#cross-cn.nukkit.math.Vector3-">cross</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;v)</code>
+<div class="block">Calculates the cross product of this Vector and the given Vector</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>double</code></td>
@@ -5302,7 +5333,9 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><span class="typeNameLabel">Vector3.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/math/Vector3.html#dot-cn.nukkit.math.Vector3-">dot</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;v)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">Vector3.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/math/Vector3.html#dot-cn.nukkit.math.Vector3-">dot</a></span>(<a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a>&nbsp;v)</code>
+<div class="block">Scalar Product of this Vector and the Vector supplied.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/math/Vector3.html" title="class in cn.nukkit.math">Vector3</a></code></td>

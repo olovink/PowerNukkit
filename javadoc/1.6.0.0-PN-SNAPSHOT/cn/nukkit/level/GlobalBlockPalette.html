@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>GlobalBlockPalette (PowerNukkit 1.6.0.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2021-12-19">
+<meta name="date" content="2021-12-21">
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
 </head>
@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":41,"i1":41,"i2":41};
+var methods = {"i0":41,"i1":41,"i2":41,"i3":41};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],8:["t4","Concrete Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -176,18 +176,24 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/GlobalBlockPalette.html#getLegacyFullId-int-">getLegacyFullId</a></span>(int&nbsp;runtimeId)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/GlobalBlockPalette.html#getName-int-">getName</a></span>(int&nbsp;blockId)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/GlobalBlockPalette.html#getOrCreateRuntimeId-int-">getOrCreateRuntimeId</a></span>(int&nbsp;legacyId)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/level/GlobalBlockPalette.html#getOrCreateRuntimeId-int-int-">getOrCreateRuntimeId</a></span>(int&nbsp;id,
                     int&nbsp;meta)</code>
@@ -226,6 +232,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <a href="../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="Public mutable array",
                     <a href="../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="BlockStateRegistry.getBlockPaletteBytes() or BlockStateRegistry.copyBlockPaletteBytes()",
                     <a href="../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.4.0.0-PN")
+ <a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
 public static final&nbsp;byte[] BLOCK_PALETTE</pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </li>
@@ -288,14 +295,26 @@ public static&nbsp;int&nbsp;getOrCreateRuntimeId(int&nbsp;legacyId)</pre>
 <a name="getName-int-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>getName</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
  <a href="../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="Moved to BlockStateRegistry",
                     <a href="../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="BlockStateRegistry.getPersistenceName(int)",
                     <a href="../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.3.0.0-PN")
+ <a href="../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>
 public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getName(int&nbsp;blockId)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+</li>
+</ul>
+<a name="getLegacyFullId-int-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getLegacyFullId</h4>
+<pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+public static&nbsp;int&nbsp;getLegacyFullId(int&nbsp;runtimeId)</pre>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </li>
 </ul>

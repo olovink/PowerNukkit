@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Vector3f (PowerNukkit 1.6.0.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2021-12-19">
+<meta name="date" content="2021-12-21">
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
 </head>
@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":9,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10,"i36":10,"i37":10,"i38":10,"i39":10,"i40":10,"i41":10,"i42":10,"i43":10,"i44":10,"i45":10,"i46":10,"i47":10,"i48":10,"i49":10,"i50":10,"i51":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":9,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10,"i36":10,"i37":10,"i38":10,"i39":10,"i40":10,"i41":10,"i42":10,"i43":10,"i44":10,"i45":10,"i46":10,"i47":10,"i48":10,"i49":10,"i50":10,"i51":10,"i52":10,"i53":10,"i54":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -256,7 +256,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/math/Vector3f.html#cross-cn.nukkit.math.Vector3f-">cross</a></span>(<a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a>&nbsp;v)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/math/Vector3f.html#cross-cn.nukkit.math.Vector3f-">cross</a></span>(<a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a>&nbsp;v)</code>
+<div class="block">Calculates the cross product of this Vector and the given Vector</div>
+</td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>double</code></td>
@@ -272,7 +274,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 </tr>
 <tr id="i13" class="rowColor">
 <td class="colFirst"><code>float</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/math/Vector3f.html#dot-cn.nukkit.math.Vector3f-">dot</a></span>(<a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a>&nbsp;v)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/math/Vector3f.html#dot-cn.nukkit.math.Vector3f-">dot</a></span>(<a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a>&nbsp;v)</code>
+<div class="block">Scalar Product of this Vector and the Vector supplied.</div>
+</td>
 </tr>
 <tr id="i14" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
@@ -305,17 +309,26 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <tr id="i21" class="rowColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/math/Vector3f.html#getIntermediateWithXValue-cn.nukkit.math.Vector3f-float-">getIntermediateWithXValue</a></span>(<a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a>&nbsp;v,
-                         float&nbsp;x)</code>&nbsp;</td>
+                         float&nbsp;x)</code>
+<div class="block">Returns a new vector with x value equal to the second parameter, along the line between this vector and the
+ passed in vector, or null if not possible.</div>
+</td>
 </tr>
 <tr id="i22" class="altColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/math/Vector3f.html#getIntermediateWithYValue-cn.nukkit.math.Vector3f-float-">getIntermediateWithYValue</a></span>(<a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a>&nbsp;v,
-                         float&nbsp;y)</code>&nbsp;</td>
+                         float&nbsp;y)</code>
+<div class="block">Returns a new vector with y value equal to the second parameter, along the line between this vector and the
+ passed in vector, or null if not possible.</div>
+</td>
 </tr>
 <tr id="i23" class="rowColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/math/Vector3f.html#getIntermediateWithZValue-cn.nukkit.math.Vector3f-float-">getIntermediateWithZValue</a></span>(<a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a>&nbsp;v,
-                         float&nbsp;z)</code>&nbsp;</td>
+                         float&nbsp;z)</code>
+<div class="block">Returns a new vector with z value equal to the second parameter, along the line between this vector and the
+ passed in vector, or null if not possible.</div>
+</td>
 </tr>
 <tr id="i24" class="altColor">
 <td class="colFirst"><code>static int</code></td>
@@ -360,7 +373,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 </tr>
 <tr id="i34" class="altColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/math/Vector3f.html#length--">length</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/math/Vector3f.html#length--">length</a></span>()</code>
+<div class="block">Calculates the Length of this Vector</div>
+</td>
 </tr>
 <tr id="i35" class="rowColor">
 <td class="colFirst"><code>float</code></td>
@@ -411,28 +426,40 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 </tr>
 <tr id="i46" class="altColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/math/Vector3f.html#subtract--">subtract</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/math/Vector3f.html#setX-float-">setX</a></span>(float&nbsp;x)</code>&nbsp;</td>
 </tr>
 <tr id="i47" class="rowColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/math/Vector3f.html#subtract-float-">subtract</a></span>(float&nbsp;x)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/math/Vector3f.html#setY-float-">setY</a></span>(float&nbsp;y)</code>&nbsp;</td>
 </tr>
 <tr id="i48" class="altColor">
+<td class="colFirst"><code><a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/math/Vector3f.html#setZ-float-">setZ</a></span>(float&nbsp;z)</code>&nbsp;</td>
+</tr>
+<tr id="i49" class="rowColor">
+<td class="colFirst"><code><a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/math/Vector3f.html#subtract--">subtract</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i50" class="altColor">
+<td class="colFirst"><code><a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/math/Vector3f.html#subtract-float-">subtract</a></span>(float&nbsp;x)</code>&nbsp;</td>
+</tr>
+<tr id="i51" class="rowColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/math/Vector3f.html#subtract-float-float-">subtract</a></span>(float&nbsp;x,
         float&nbsp;y)</code>&nbsp;</td>
 </tr>
-<tr id="i49" class="rowColor">
+<tr id="i52" class="altColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/math/Vector3f.html#subtract-float-float-float-">subtract</a></span>(float&nbsp;x,
         float&nbsp;y,
         float&nbsp;z)</code>&nbsp;</td>
 </tr>
-<tr id="i50" class="altColor">
+<tr id="i53" class="rowColor">
 <td class="colFirst"><code><a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/math/Vector3f.html#subtract-cn.nukkit.math.Vector3f-">subtract</a></span>(<a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a>&nbsp;x)</code>&nbsp;</td>
 </tr>
-<tr id="i51" class="rowColor">
+<tr id="i54" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../cn/nukkit/math/Vector3f.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
@@ -643,6 +670,36 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <li class="blockList">
 <h4>getZ</h4>
 <pre>public&nbsp;float&nbsp;getZ()</pre>
+</li>
+</ul>
+<a name="setX-float-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setX</h4>
+<pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+public&nbsp;<a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a>&nbsp;setX(float&nbsp;x)</pre>
+</li>
+</ul>
+<a name="setY-float-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setY</h4>
+<pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+public&nbsp;<a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a>&nbsp;setY(float&nbsp;y)</pre>
+</li>
+</ul>
+<a name="setZ-float-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setZ</h4>
+<pre><a href="../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+public&nbsp;<a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a>&nbsp;setZ(float&nbsp;z)</pre>
 </li>
 </ul>
 <a name="getFloorX--">
@@ -957,6 +1014,11 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <li class="blockList">
 <h4>length</h4>
 <pre>public&nbsp;double&nbsp;length()</pre>
+<div class="block">Calculates the Length of this Vector</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The Length of this Vector.</dd>
+</dl>
 </li>
 </ul>
 <a name="lengthSquared--">
@@ -984,6 +1046,13 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <li class="blockList">
 <h4>dot</h4>
 <pre>public&nbsp;float&nbsp;dot(<a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a>&nbsp;v)</pre>
+<div class="block">Scalar Product of this Vector and the Vector supplied.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>v</code> - Vector to calculate the scalar product to.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Scalar Product</dd>
+</dl>
 </li>
 </ul>
 <a name="cross-cn.nukkit.math.Vector3f-">
@@ -993,6 +1062,13 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <li class="blockList">
 <h4>cross</h4>
 <pre>public&nbsp;<a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a>&nbsp;cross(<a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a>&nbsp;v)</pre>
+<div class="block">Calculates the cross product of this Vector and the given Vector</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>v</code> - the vector to calculate the cross product with.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a Vector at right angle to this and other</dd>
+</dl>
 </li>
 </ul>
 <a name="getIntermediateWithXValue-cn.nukkit.math.Vector3f-float-">
@@ -1003,6 +1079,15 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <h4>getIntermediateWithXValue</h4>
 <pre>public&nbsp;<a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a>&nbsp;getIntermediateWithXValue(<a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a>&nbsp;v,
                                           float&nbsp;x)</pre>
+<div class="block">Returns a new vector with x value equal to the second parameter, along the line between this vector and the
+ passed in vector, or null if not possible.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>v</code> - vector</dd>
+<dd><code>x</code> - x value</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>intermediate vector</dd>
+</dl>
 </li>
 </ul>
 <a name="getIntermediateWithYValue-cn.nukkit.math.Vector3f-float-">
@@ -1013,6 +1098,15 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <h4>getIntermediateWithYValue</h4>
 <pre>public&nbsp;<a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a>&nbsp;getIntermediateWithYValue(<a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a>&nbsp;v,
                                           float&nbsp;y)</pre>
+<div class="block">Returns a new vector with y value equal to the second parameter, along the line between this vector and the
+ passed in vector, or null if not possible.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>v</code> - vector</dd>
+<dd><code>y</code> - y value</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>intermediate vector</dd>
+</dl>
 </li>
 </ul>
 <a name="getIntermediateWithZValue-cn.nukkit.math.Vector3f-float-">
@@ -1023,6 +1117,15 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <h4>getIntermediateWithZValue</h4>
 <pre>public&nbsp;<a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a>&nbsp;getIntermediateWithZValue(<a href="../../../cn/nukkit/math/Vector3f.html" title="class in cn.nukkit.math">Vector3f</a>&nbsp;v,
                                           float&nbsp;z)</pre>
+<div class="block">Returns a new vector with z value equal to the second parameter, along the line between this vector and the
+ passed in vector, or null if not possible.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>v</code> - vector</dd>
+<dd><code>z</code> - z value</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>intermediate vector</dd>
+</dl>
 </li>
 </ul>
 <a name="setComponents-float-float-float-">

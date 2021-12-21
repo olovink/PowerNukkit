@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>MoveEntityDeltaPacket (PowerNukkit 1.6.0.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2021-12-19">
+<meta name="date" content="2021-12-21">
 <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../../script.js"></script>
 </head>
@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -146,77 +146,75 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MoveEntityDeltaPacket.html#FLAG_HAS_HEAD_YAW">FLAG_HAS_HEAD_YAW</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MoveEntityDeltaPacket.html#FLAG_FORCE_MOVE_LOCAL_ENTITY">FLAG_FORCE_MOVE_LOCAL_ENTITY</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MoveEntityDeltaPacket.html#FLAG_HAS_HEAD_YAW">FLAG_HAS_HEAD_YAW</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MoveEntityDeltaPacket.html#FLAG_HAS_PITCH">FLAG_HAS_PITCH</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MoveEntityDeltaPacket.html#FLAG_HAS_X">FLAG_HAS_X</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MoveEntityDeltaPacket.html#FLAG_HAS_Y">FLAG_HAS_Y</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MoveEntityDeltaPacket.html#FLAG_HAS_YAW">FLAG_HAS_YAW</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MoveEntityDeltaPacket.html#FLAG_HAS_Z">FLAG_HAS_Z</a></span></code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MoveEntityDeltaPacket.html#FLAG_ON_GROUND">FLAG_ON_GROUND</a></span></code>&nbsp;</td>
+</tr>
 <tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MoveEntityDeltaPacket.html#FLAG_TELEPORTING">FLAG_TELEPORTING</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MoveEntityDeltaPacket.html#flags">flags</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>double</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MoveEntityDeltaPacket.html#headYawDelta">headYawDelta</a></span></code>&nbsp;</td>
-</tr>
 <tr class="altColor">
+<td class="colFirst"><code>float</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MoveEntityDeltaPacket.html#headYaw">headYaw</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static byte</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MoveEntityDeltaPacket.html#NETWORK_ID">NETWORK_ID</a></span></code>&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colFirst"><code>float</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MoveEntityDeltaPacket.html#pitch">pitch</a></span></code>&nbsp;</td>
+</tr>
 <tr class="rowColor">
-<td class="colFirst"><code>double</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MoveEntityDeltaPacket.html#pitchDelta">pitchDelta</a></span></code>&nbsp;</td>
+<td class="colFirst"><code>long</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MoveEntityDeltaPacket.html#runtimeEntityId">runtimeEntityId</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>float</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MoveEntityDeltaPacket.html#x">x</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MoveEntityDeltaPacket.html#xDelta">xDelta</a></span></code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>float</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MoveEntityDeltaPacket.html#y">y</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>double</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MoveEntityDeltaPacket.html#yawDelta">yawDelta</a></span></code>&nbsp;</td>
-</tr>
 <tr class="altColor">
-<td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MoveEntityDeltaPacket.html#yDelta">yDelta</a></span></code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-</td>
+<td class="colFirst"><code>float</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MoveEntityDeltaPacket.html#yaw">yaw</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>float</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MoveEntityDeltaPacket.html#z">z</a></span></code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MoveEntityDeltaPacket.html#zDelta">zDelta</a></span></code>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -273,10 +271,14 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MoveEntityDeltaPacket.html#encode--">encode</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MoveEntityDeltaPacket.html#hasFlag-int-">hasFlag</a></span>(int&nbsp;flag)</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>byte</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MoveEntityDeltaPacket.html#pid--">pid</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/MoveEntityDeltaPacket.html#toString--">toString</a></span>()</code>&nbsp;</td>
 </tr>
@@ -368,6 +370,19 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 </dl>
 </li>
 </ul>
+<a name="FLAG_HAS_PITCH">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FLAG_HAS_PITCH</h4>
+<pre>public static final&nbsp;int FLAG_HAS_PITCH</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.network.protocol.MoveEntityDeltaPacket.FLAG_HAS_PITCH">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
 <a name="FLAG_HAS_YAW">
 <!--   -->
 </a>
@@ -394,17 +409,56 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 </dl>
 </li>
 </ul>
-<a name="FLAG_HAS_PITCH">
+<a name="FLAG_ON_GROUND">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>FLAG_HAS_PITCH</h4>
-<pre>public static final&nbsp;int FLAG_HAS_PITCH</pre>
+<h4>FLAG_ON_GROUND</h4>
+<pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+public static final&nbsp;int FLAG_ON_GROUND</pre>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../../constant-values.html#cn.nukkit.network.protocol.MoveEntityDeltaPacket.FLAG_HAS_PITCH">Constant Field Values</a></dd>
+<dd><a href="../../../../constant-values.html#cn.nukkit.network.protocol.MoveEntityDeltaPacket.FLAG_ON_GROUND">Constant Field Values</a></dd>
 </dl>
+</li>
+</ul>
+<a name="FLAG_TELEPORTING">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FLAG_TELEPORTING</h4>
+<pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+public static final&nbsp;int FLAG_TELEPORTING</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.network.protocol.MoveEntityDeltaPacket.FLAG_TELEPORTING">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="FLAG_FORCE_MOVE_LOCAL_ENTITY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>FLAG_FORCE_MOVE_LOCAL_ENTITY</h4>
+<pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+public static final&nbsp;int FLAG_FORCE_MOVE_LOCAL_ENTITY</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../constant-values.html#cn.nukkit.network.protocol.MoveEntityDeltaPacket.FLAG_FORCE_MOVE_LOCAL_ENTITY">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+<a name="runtimeEntityId">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>runtimeEntityId</h4>
+<pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+public&nbsp;long runtimeEntityId</pre>
 </li>
 </ul>
 <a name="flags">
@@ -446,76 +500,34 @@ public&nbsp;float y</pre>
 public&nbsp;float z</pre>
 </li>
 </ul>
-<a name="xDelta">
+<a name="pitch">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>xDelta</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
- <a href="../../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.4.0.0-PN",
-                    <a href="../../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="Changed to float",
-                    <a href="../../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="x")
- <a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>(<a href="../../../../cn/nukkit/api/PowerNukkitOnly.html#value--">value</a>="Re-added for backward-compatibility")
-public&nbsp;int xDelta</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<h4>pitch</h4>
+<pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+public&nbsp;float pitch</pre>
 </li>
 </ul>
-<a name="yDelta">
+<a name="yaw">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>yDelta</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
- <a href="../../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.4.0.0-PN",
-                    <a href="../../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="Changed to float",
-                    <a href="../../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="y")
- <a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>(<a href="../../../../cn/nukkit/api/PowerNukkitOnly.html#value--">value</a>="Re-added for backward-compatibility")
-public&nbsp;int yDelta</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+<h4>yaw</h4>
+<pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+public&nbsp;float yaw</pre>
 </li>
 </ul>
-<a name="zDelta">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>zDelta</h4>
-<pre><a href="../../../../cn/nukkit/api/PowerNukkitOnly.html" title="annotation in cn.nukkit.api">@PowerNukkitOnly</a>(<a href="../../../../cn/nukkit/api/PowerNukkitOnly.html#value--">value</a>="Re-added for backward-compatibility")
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
- <a href="../../../../cn/nukkit/api/DeprecationDetails.html" title="annotation in cn.nukkit.api">@DeprecationDetails</a>(<a href="../../../../cn/nukkit/api/DeprecationDetails.html#since--">since</a>="1.4.0.0-PN",
-                    <a href="../../../../cn/nukkit/api/DeprecationDetails.html#reason--">reason</a>="Changed to float",
-                    <a href="../../../../cn/nukkit/api/DeprecationDetails.html#replaceWith--">replaceWith</a>="z")
-public&nbsp;int zDelta</pre>
-<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
-</li>
-</ul>
-<a name="yawDelta">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>yawDelta</h4>
-<pre>public&nbsp;double yawDelta</pre>
-</li>
-</ul>
-<a name="headYawDelta">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>headYawDelta</h4>
-<pre>public&nbsp;double headYawDelta</pre>
-</li>
-</ul>
-<a name="pitchDelta">
+<a name="headYaw">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>pitchDelta</h4>
-<pre>public&nbsp;double pitchDelta</pre>
+<h4>headYaw</h4>
+<pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+public&nbsp;float headYaw</pre>
 </li>
 </ul>
 </li>
@@ -580,6 +592,16 @@ public&nbsp;int zDelta</pre>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../cn/nukkit/network/protocol/DataPacket.html#encode--">encode</a></code>&nbsp;in class&nbsp;<code><a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a></code></dd>
 </dl>
+</li>
+</ul>
+<a name="hasFlag-int-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>hasFlag</h4>
+<pre><a href="../../../../cn/nukkit/api/Since.html" title="annotation in cn.nukkit.api">@Since</a>(<a href="../../../../cn/nukkit/api/Since.html#value--">value</a>="FUTURE")
+public&nbsp;boolean&nbsp;hasFlag(int&nbsp;flag)</pre>
 </li>
 </ul>
 <a name="toString--">
