@@ -74,13 +74,6 @@ public class ItemDye extends Item {
     protected ItemDye(int id, Integer meta, int count, String name) {
         super(id, meta, count, name);
     }
-
-    @Since("1.4.0.0-PN")
-    @PowerNukkitOnly
-    @Override
-    public boolean isFertilizer() {
-        return getId() == DYE && getDyeColor().equals(DyeColor.WHITE);
-    }
     
     @Since("1.4.0.0-PN")
     @PowerNukkitOnly
