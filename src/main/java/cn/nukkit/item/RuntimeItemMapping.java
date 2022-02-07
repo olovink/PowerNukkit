@@ -9,6 +9,9 @@ import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import lombok.SneakyThrows;
 import lombok.extern.log4j.Log4j2;
+import lombok.Data;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -42,6 +45,7 @@ public class RuntimeItemMapping {
     private final Map<String, Supplier<Item>> namespacedIdItem = new LinkedHashMap<>();
 
     @Since("1.4.0.0-PN")
+    @PowerNukkitOnly
     public RuntimeItemMapping(byte[] itemDataPalette, Int2IntMap legacyNetworkMap, Int2IntMap networkLegacyMap) {
         this.itemDataPalette = itemDataPalette;
         this.legacyNetworkMap = legacyNetworkMap;
@@ -76,6 +80,7 @@ public class RuntimeItemMapping {
      * @return The <b>network id</b>
      * @throws IllegalArgumentException If the mapping of the <b>full id</b> to the <b>network id</b> is unknown
      */
+    @PowerNukkitOnly
     @Since("1.4.0.0-PN")
     public int getNetworkFullId(Item item) {
         if (item instanceof StringItem) {
@@ -104,6 +109,7 @@ public class RuntimeItemMapping {
      * @return The <b>full id</b>
      * @throws IllegalArgumentException If the mapping of the <b>full id</b> to the <b>network id</b> is unknown
      */
+    @PowerNukkitOnly
     @Since("1.4.0.0-PN")
     public int getLegacyFullId(int networkId) {
         int fullId = networkLegacyMap.get(networkId);
@@ -113,6 +119,7 @@ public class RuntimeItemMapping {
         return fullId;
     }
 
+    @PowerNukkitOnly
     @Since("1.4.0.0-PN")
     public byte[] getItemDataPalette() {
         return this.itemDataPalette;
@@ -217,5 +224,29 @@ public class RuntimeItemMapping {
                 throw new UnsupportedOperationException(e);
             }
         };
+    }
+
+    @Data
+    @Getter(onMethod = @__(@Since("FUTURE")))
+    @RequiredArgsConstructor(onConstructor = @__(@Since("FUTURE")))
+    @Since("FUTURE")
+    public static class LegacyEntry {
+        private final int legacyId;
+        private final boolean hasDamage;
+        private final int damage;
+
+        public int getDamage() {
+            return this.hasDamage ? this.damage : 0;
+        }
+    }
+
+    @Data
+    @Getter(onMethod = @__(@Since("FUTURE")))
+    @RequiredArgsConstructor(onConstructor = @__(@Since("FUTURE")))
+    @Since("FUTURE")
+    public static class RuntimeEntry {
+        private final String identifier;
+        private final int runtimeId;
+        private final boolean hasDamage;
     }
 }

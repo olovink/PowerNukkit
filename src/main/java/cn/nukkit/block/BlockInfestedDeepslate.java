@@ -11,12 +11,11 @@ import cn.nukkit.utils.BlockColor;
  */
 @PowerNukkitOnly
 @Since("FUTURE")
-public class BlockInfestedDeepslate extends BlockSolid {
+public class BlockInfestedDeepslate extends BlockDeepslate {
 
     @PowerNukkitOnly
     @Since("FUTURE")
     public BlockInfestedDeepslate() {
-        // Does nothing
     }
     
     @Override
@@ -40,27 +39,12 @@ public class BlockInfestedDeepslate extends BlockSolid {
     }
     
     @Override
-    public boolean canHarvestWithHand() {
-        return false;
-    }
-    
-    @Override
-    public int getToolType() {
-        return ItemTool.TYPE_PICKAXE;
-    }
-    
-    @Override
-    public int getToolTier() {
-        return ItemTool.TIER_WOODEN;
-    }
-    
-    @Override
     public Item[] getDrops(Item item) {
         return Item.EMPTY_ARRAY;
     }
-    
+
     @Override
-    public BlockColor getColor() {
-        return BlockColor.DEEPSLATE_GRAY;
+    public boolean canSilkTouch() {
+        return true;
     }
 }
