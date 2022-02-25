@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Biome (PowerNukkit 1.6.0.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2022-02-14">
+<meta name="date" content="2022-02-25">
 <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../../script.js"></script>
 </head>
@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":9,"i7":9,"i8":10,"i9":10,"i10":10,"i11":6,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":9,"i18":10,"i19":10,"i20":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":9,"i7":9,"i8":9,"i9":9,"i10":10,"i11":10,"i12":10,"i13":6,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":9,"i20":10,"i21":10,"i22":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -233,61 +233,69 @@ implements <a href="../../../../cn/nukkit/block/BlockID.html" title="interface i
 </td>
 </tr>
 <tr id="i8" class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/biome/Biome.html#getBiomeIdOrCorrect-int-">getBiomeIdOrCorrect</a></span>(int&nbsp;biomeId)</code>&nbsp;</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/biome/Biome.html#getBiomeNameFromId-int-">getBiomeNameFromId</a></span>(int&nbsp;biomeId)</code>&nbsp;</td>
+</tr>
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/biome/Biome.html#getHeightOffset-int-int-">getHeightOffset</a></span>(int&nbsp;x,
                int&nbsp;z)</code>
 <div class="block">How much offset should be added to the min/max heights at this position</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>float</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/biome/Biome.html#getHeightVariation--">getHeightVariation</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/biome/Biome.html#getId--">getId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>abstract <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/biome/Biome.html#getName--">getName</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html?is-external=true" title="class or interface in java.util">ArrayList</a>&lt;<a href="../../../../cn/nukkit/level/generator/populator/type/Populator.html" title="class in cn.nukkit.level.generator.populator.type">Populator</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/biome/Biome.html#getPopulators--">getPopulators</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/biome/Biome.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/biome/Biome.html#isDry--">isDry</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/biome/Biome.html#isFreezing--">isFreezing</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/biome/Biome.html#populateChunk-cn.nukkit.level.ChunkManager-int-int-cn.nukkit.math.NukkitRandom-">populateChunk</a></span>(<a href="../../../../cn/nukkit/level/ChunkManager.html" title="interface in cn.nukkit.level">ChunkManager</a>&nbsp;level,
              int&nbsp;chunkX,
              int&nbsp;chunkZ,
              <a href="../../../../cn/nukkit/math/NukkitRandom.html" title="class in cn.nukkit.math">NukkitRandom</a>&nbsp;random)</code>&nbsp;</td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>protected static void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/biome/Biome.html#register-int-cn.nukkit.level.biome.Biome-">register</a></span>(int&nbsp;id,
         <a href="../../../../cn/nukkit/level/biome/Biome.html" title="class in cn.nukkit.level.biome">Biome</a>&nbsp;biome)</code>&nbsp;</td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/biome/Biome.html#setBaseHeight-float-">setBaseHeight</a></span>(float&nbsp;baseHeight)</code>&nbsp;</td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/biome/Biome.html#setHeightVariation-float-">setHeightVariation</a></span>(float&nbsp;heightVariation)</code>&nbsp;</td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/level/biome/Biome.html#setId-int-">setId</a></span>(int&nbsp;id)</code>&nbsp;</td>
 </tr>
@@ -369,6 +377,24 @@ implements <a href="../../../../cn/nukkit/block/BlockID.html" title="interface i
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="getBiomeNameFromId-int-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getBiomeNameFromId</h4>
+<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getBiomeNameFromId(int&nbsp;biomeId)</pre>
+</li>
+</ul>
+<a name="getBiomeIdOrCorrect-int-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getBiomeIdOrCorrect</h4>
+<pre>public static&nbsp;int&nbsp;getBiomeIdOrCorrect(int&nbsp;biomeId)</pre>
+</li>
+</ul>
 <a name="register-int-cn.nukkit.level.biome.Biome-">
 <!--   -->
 </a>
