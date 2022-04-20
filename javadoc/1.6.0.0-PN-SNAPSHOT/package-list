@@ -77,6 +77,7 @@ cn.nukkit.level.format.anvil
 cn.nukkit.level.format.anvil.palette
 cn.nukkit.level.format.anvil.util
 cn.nukkit.level.format.generic
+cn.nukkit.level.format.generic.serializer
 cn.nukkit.level.format.updater
 cn.nukkit.level.generator
 cn.nukkit.level.generator.noise.nukkit.d
