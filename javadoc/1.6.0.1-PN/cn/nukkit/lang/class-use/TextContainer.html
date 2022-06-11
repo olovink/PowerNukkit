@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Uses of Class cn.nukkit.lang.TextContainer (PowerNukkit 1.6.0.1-PN API)</title>
-<meta name="date" content="2022-04-21">
+<meta name="date" content="2022-06-11">
 <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../../script.js"></script>
 </head>
@@ -175,14 +175,6 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">CapturingCommandSender.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/command/CapturingCommandSender.html#sendMessage-cn.nukkit.lang.TextContainer-">sendMessage</a></span>(<a href="../../../../cn/nukkit/lang/TextContainer.html" title="class in cn.nukkit.lang">TextContainer</a>&nbsp;message)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">ConsoleCommandSender.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/command/ConsoleCommandSender.html#sendMessage-cn.nukkit.lang.TextContainer-">sendMessage</a></span>(<a href="../../../../cn/nukkit/lang/TextContainer.html" title="class in cn.nukkit.lang">TextContainer</a>&nbsp;message)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">RemoteConsoleCommandSender.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/command/RemoteConsoleCommandSender.html#sendMessage-cn.nukkit.lang.TextContainer-">sendMessage</a></span>(<a href="../../../../cn/nukkit/lang/TextContainer.html" title="class in cn.nukkit.lang">TextContainer</a>&nbsp;message)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -191,6 +183,14 @@
 <div class="block">给命令发送者返回信息。<br>
  Sends a message to the command sender.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">CapturingCommandSender.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/command/CapturingCommandSender.html#sendMessage-cn.nukkit.lang.TextContainer-">sendMessage</a></span>(<a href="../../../../cn/nukkit/lang/TextContainer.html" title="class in cn.nukkit.lang">TextContainer</a>&nbsp;message)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">ConsoleCommandSender.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/command/ConsoleCommandSender.html#sendMessage-cn.nukkit.lang.TextContainer-">sendMessage</a></span>(<a href="../../../../cn/nukkit/lang/TextContainer.html" title="class in cn.nukkit.lang">TextContainer</a>&nbsp;message)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -212,11 +212,11 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../cn/nukkit/lang/TextContainer.html" title="class in cn.nukkit.lang">TextContainer</a></code></td>
-<td class="colLast"><span class="typeNameLabel">PlayerKickEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerKickEvent.html#quitMessage">quitMessage</a></span></code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">PlayerQuitEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerQuitEvent.html#quitMessage">quitMessage</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../cn/nukkit/lang/TextContainer.html" title="class in cn.nukkit.lang">TextContainer</a></code></td>
-<td class="colLast"><span class="typeNameLabel">PlayerQuitEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerQuitEvent.html#quitMessage">quitMessage</a></span></code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">PlayerKickEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerKickEvent.html#quitMessage">quitMessage</a></span></code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -237,11 +237,11 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/lang/TextContainer.html" title="class in cn.nukkit.lang">TextContainer</a></code></td>
-<td class="colLast"><span class="typeNameLabel">PlayerKickEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerKickEvent.html#getQuitMessage--">getQuitMessage</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">PlayerQuitEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerQuitEvent.html#getQuitMessage--">getQuitMessage</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/lang/TextContainer.html" title="class in cn.nukkit.lang">TextContainer</a></code></td>
-<td class="colLast"><span class="typeNameLabel">PlayerQuitEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerQuitEvent.html#getQuitMessage--">getQuitMessage</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">PlayerKickEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerKickEvent.html#getQuitMessage--">getQuitMessage</a></span>()</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -262,11 +262,11 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">PlayerKickEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerKickEvent.html#setQuitMessage-cn.nukkit.lang.TextContainer-">setQuitMessage</a></span>(<a href="../../../../cn/nukkit/lang/TextContainer.html" title="class in cn.nukkit.lang">TextContainer</a>&nbsp;quitMessage)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">PlayerQuitEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerQuitEvent.html#setQuitMessage-cn.nukkit.lang.TextContainer-">setQuitMessage</a></span>(<a href="../../../../cn/nukkit/lang/TextContainer.html" title="class in cn.nukkit.lang">TextContainer</a>&nbsp;quitMessage)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">PlayerQuitEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerQuitEvent.html#setQuitMessage-cn.nukkit.lang.TextContainer-">setQuitMessage</a></span>(<a href="../../../../cn/nukkit/lang/TextContainer.html" title="class in cn.nukkit.lang">TextContainer</a>&nbsp;quitMessage)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">PlayerKickEvent.</span><code><span class="memberNameLink"><a href="../../../../cn/nukkit/event/player/PlayerKickEvent.html#setQuitMessage-cn.nukkit.lang.TextContainer-">setQuitMessage</a></span>(<a href="../../../../cn/nukkit/lang/TextContainer.html" title="class in cn.nukkit.lang">TextContainer</a>&nbsp;quitMessage)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
