@@ -34,7 +34,7 @@ public class BlockDoubleSlabStone extends BlockDoubleSlabBase {
 
     @Override
     public int getId() {
-        return DOUBLE_STONE_SLAB;
+        return DOUBLE_STONE_BLOCK_SLAB;
     }
 
     @Since("1.4.0.0-PN")
@@ -66,6 +66,7 @@ public class BlockDoubleSlabStone extends BlockDoubleSlabBase {
         return getPropertyValue(StoneSlab1Type.PROPERTY);
     }
 
+    @PowerNukkitOnly
     @Override
     public int getSingleSlabId() {
         return STONE_SLAB;
@@ -77,12 +78,14 @@ public class BlockDoubleSlabStone extends BlockDoubleSlabBase {
         setPropertyValue(StoneSlab1Type.PROPERTY, type);
     }
 
+    @PowerNukkitOnly
     @Override
     public String getSlabName() {
         return getSlabType().getEnglishName();
     }
 
     @Override
+    @PowerNukkitOnly
     public int getToolTier() {
         return ItemTool.TIER_WOODEN;
     }

@@ -6,6 +6,7 @@ import cn.nukkit.api.PowerNukkitOnly;
 import cn.nukkit.api.Since;
 import cn.nukkit.block.BlockID;
 import cn.nukkit.block.BlockUnknown;
+import cn.nukkit.blockproperty.UnknownRuntimeIdException;
 import cn.nukkit.blockproperty.exception.BlockPropertyNotFoundException;
 import cn.nukkit.blockstate.BlockState;
 import cn.nukkit.blockstate.BlockStateRegistry;
@@ -25,8 +26,11 @@ import lombok.var;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.UncheckedIOException;
 import java.util.*;
+import java.util.stream.Stream;
 import java.util.zip.Deflater;
 
 /**
@@ -110,6 +114,11 @@ public class CraftingManager {
     @DeprecationDetails(by = "PowerNukkit", since = "FUTURE", reason = "Direct access to fields are not future-proof.")
     @PowerNukkitOnly
     protected final Map<Integer, Map<UUID, CartographyRecipe>> cartographyRecipes = cartographyRecipeMap;
+
+    @Deprecated
+    @DeprecationDetails(by = "PowerNukkit", since = "FUTURE", reason = "Direct access to fields are not future-proof.")
+    @PowerNukkitOnly
+    protected final Int2ObjectOpenHashMap<Map<UUID, SmithingRecipe>> smithingRecipes = smithingRecipeMap;
     //</editor-fold>
 
     public static final Comparator<Item> recipeComparator = (i1, i2) -> {
@@ -218,15 +227,13 @@ public class CraftingManager {
 
     //<editor-fold desc="constructors and setup" defaultstate="collapsed">
     public CraftingManager() {
-        InputStream recipesStream = Server.class.getClassLoader().getResourceAsStream("recipes.json");
-        if (recipesStream == null) {
-            throw new AssertionError("Unable to find recipes.json");
+        Config recipesConfig = new Config(Config.JSON);
+        try (InputStream recipesStream = Server.class.getClassLoader().getResourceAsStream("recipes.json")) {
+            recipesConfig.load(Objects.requireNonNull(recipesStream, "Unable to find recipes.json"));
+        } catch (IOException e) {
+            throw new UncheckedIOException(e);
         }
 
-        registerSmithingRecipes();
-
-        Config recipesConfig = new Config(Config.JSON);
-        recipesConfig.load(recipesStream);
         this.loadRecipes(recipesConfig);
 
         String path = Server.getInstance().getDataPath() + "custom_recipes.json";
@@ -270,11 +277,18 @@ public class CraftingManager {
         toNextRecipe:
         for (Map<String, Object> recipe : recipes) {
             try {
-                switch (Utils.toInt(recipe.get("type"))) {
+                int type = Utils.toInt(recipe.get("type"));
+                switch (type) {
                     case 0:
+                    case 5:
                         String craftingBlock = (String) recipe.get("block");
-                        if (!"crafting_table".equals(craftingBlock) && !"stonecutter".equals(craftingBlock) && !"cartography_table".equalsIgnoreCase(craftingBlock)) {
-                            // Ignore other recipes than crafting table, stonecutter and cartography table
+                        if (type == 5) {
+                            craftingBlock = "shulker_box";
+                        }
+                        if (!"crafting_table".equals(craftingBlock) && !"stonecutter".equals(craftingBlock)
+                                && !"cartography_table".equalsIgnoreCase(craftingBlock) && !"shulker_box".equalsIgnoreCase(craftingBlock)
+                                && !"smithing_table".equalsIgnoreCase(craftingBlock)) {
+                            // Ignore other recipes than crafting table, stonecutter, smithing table and cartography table
                             continue;
                         }
                         // TODO: handle multiple result items
@@ -305,11 +319,17 @@ public class CraftingManager {
                             case "crafting_table":
                                 this.registerRecipe(new ShapelessRecipe(recipeId, priority, result, sorted));
                                 break;
+                            case "shulker_box":
+                                this.registerRecipe(new ShulkerBoxRecipe(recipeId, priority, result, sorted));
+                                break;
                             case "stonecutter":
                                 this.registerRecipe(new StonecutterRecipe(recipeId, priority, result, sorted.get(0)));
                                 break;
                             case "cartography_table":
                                 this.registerRecipe(new CartographyRecipe(recipeId, priority, result, sorted));
+                                break;
+                            case "smithing_table":
+                                this.registerRecipe(new SmithingRecipe(recipeId, priority, sorted, result));
                                 break;
                         }
                         break;
@@ -415,9 +435,9 @@ public class CraftingManager {
             int toPotionMeta = ((Number) potionMix.get("outputMeta")).intValue();
 
             registerBrewingRecipe(new BrewingRecipe(
-                    Item.fromString(fromPotionId+":"+fromPotionMeta),
-                    Item.fromString(ingredient+":"+ingredientMeta),
-                    Item.fromString(toPotionId+":"+toPotionMeta)
+                    Item.fromString(fromPotionId + ":" + fromPotionMeta),
+                    Item.fromString(ingredient + ":" + ingredientMeta),
+                    Item.fromString(toPotionId + ":" + toPotionMeta)
             ));
         }
 
@@ -430,7 +450,7 @@ public class CraftingManager {
 
             registerContainerRecipe(new ContainerRecipe(Item.fromString(fromItemId), Item.fromString(ingredient), Item.fromString(toItemId)));
         }
-        
+
         // Allow to rename without crafting 
         registerCartographyRecipe(new CartographyRecipe(Item.get(ItemID.EMPTY_MAP), Collections.singletonList(Item.get(ItemID.EMPTY_MAP))));
         registerCartographyRecipe(new CartographyRecipe(Item.get(ItemID.EMPTY_MAP, 2), Collections.singletonList(Item.get(ItemID.EMPTY_MAP, 2))));
@@ -442,15 +462,62 @@ public class CraftingManager {
 
     private Item parseRecipeItem(Map<String, Object> data) {
         String nbt = (String) data.get("nbt_b64");
+        boolean fuzzy = data.containsKey("fuzzy") && Boolean.parseBoolean(data.get("fuzzy").toString());
         byte[] nbtBytes = nbt != null ? Base64.getDecoder().decode(nbt) : EmptyArrays.EMPTY_BYTES;
 
-        int count = data.containsKey("count")? ((Number)data.get("count")).intValue() : 1;
-        Integer legacyId = null;
-        if (data.containsKey("legacyId")) {
-            legacyId = Utils.toInt(data.get("legacyId"));
-        }
+        int count = data.containsKey("count") ? ((Number) data.get("count")).intValue() : 1;
 
         Item item;
+        if (data.containsKey("blockState")) {
+            String blockStateId = data.get("blockState").toString();
+            // TODO Remove this when the support is added to these blocks
+            if (Stream.of(
+                    "minecraft:candle",
+                    "minecraft:cracked_deepslate_bricks",
+                    "minecraft:cracked_deepslate_tiles",
+                    "minecraft:smooth_basalt",
+                    "minecraft:moss_block",
+                    "minecraft:deepslate",
+                    "minecraft:copper",
+                    "minecraft:raw_",
+                    "minecraft:pointed_dripstone"
+            ).anyMatch(blockStateId::startsWith)) {
+                return Item.get(BlockID.AIR);
+            }
+            if (Stream.of(
+                    "copper", "deepslate", "deepslate_slab",
+                    "copper_slab", "copper_stairs"
+            ).anyMatch(blockStateId.split(";", 2)[0]::endsWith)) {
+                return Item.get(BlockID.AIR);
+            }
+            try {
+                BlockState state = BlockState.of(blockStateId);
+                item = state.asItemBlock(count);
+                item.setCompoundTag(nbtBytes);
+                if (fuzzy) {
+                    item = item.createFuzzyCraftingRecipe();
+                }
+                return item;
+            } catch (BlockPropertyNotFoundException | UnknownRuntimeIdException e) {
+                int runtimeId = BlockStateRegistry.getKnownRuntimeIdByBlockStateId(blockStateId);
+                if (runtimeId == -1) {
+                    log.warn("Unsupported block found in recipes.json: {}", blockStateId);
+                    return Item.get(BlockID.AIR);
+                }
+                int blockId = BlockStateRegistry.getBlockIdByRuntimeId(runtimeId);
+                BlockState defaultBlockState = BlockState.of(blockId);
+                if (defaultBlockState.getProperties().equals(BlockUnknown.PROPERTIES)) {
+                    log.warn("Unsupported block found in recipes.json: {}", blockStateId);
+                    return Item.get(BlockID.AIR);
+                }
+                log.error("Failed to load a recipe with {}", blockStateId, e);
+                return Item.get(BlockID.AIR);
+            } catch (Exception e) {
+                log.error("Failed to load the block state {}", blockStateId, e);
+                return Item.getBlock(BlockID.AIR);
+            }
+        }
+
         if (data.containsKey("blockRuntimeId")) {
             int blockRuntimeId = Utils.toInt(data.get("blockRuntimeId"));
             try {
@@ -463,12 +530,19 @@ public class CraftingManager {
                 }
                 item = state.asItemBlock(count);
                 item.setCompoundTag(nbtBytes);
+                if (fuzzy) {
+                    item = item.createFuzzyCraftingRecipe();
+                }
                 return item;
             } catch (BlockPropertyNotFoundException e) {
                 log.debug("Failed to load the block runtime id {}", blockRuntimeId, e);
             }
         }
 
+        Integer legacyId = null;
+        if (data.containsKey("legacyId")) {
+            legacyId = Utils.toInt(data.get("legacyId"));
+        }
         if (legacyId != null && legacyId > 255) {
             try {
                 int fullId = RuntimeItems.getRuntimeMapping().getLegacyFullId(legacyId);
@@ -478,7 +552,6 @@ public class CraftingManager {
                     meta = RuntimeItems.getData(fullId);
                 }
 
-                boolean fuzzy = false;
                 if (data.containsKey("damage")) {
                     int damage = Utils.toInt(data.get("damage"));
                     if (damage == Short.MAX_VALUE) {
@@ -504,7 +577,8 @@ public class CraftingManager {
         if (data.containsKey("damage")) {
             int meta = Utils.toInt(data.get("damage"));
             if (meta == Short.MAX_VALUE) {
-                item = Item.fromString(id).createFuzzyCraftingRecipe();
+                item = Item.fromString(id);
+                fuzzy = true;
             } else {
                 item = Item.fromString(id + ":" + meta);
             }
@@ -513,6 +587,10 @@ public class CraftingManager {
         }
         item.setCount(count);
         item.setCompoundTag(nbtBytes);
+        if (fuzzy) {
+            item = item.createFuzzyCraftingRecipe();
+        }
+
         return item;
     }
 
@@ -637,7 +715,6 @@ public class CraftingManager {
         getFurnaceRecipesMap().put(getItemHash(input), recipe);
     }
 
-
     @PowerNukkitOnly
     public void registerBlastFurnaceRecipe(BlastFurnaceRecipe recipe) {
         Item input = recipe.getInput();
@@ -698,15 +775,15 @@ public class CraftingManager {
     public void registerCartographyRecipe(CartographyRecipe recipe) {
         List<Item> list = recipe.getIngredientList();
         list.sort(recipeComparator);
-        
+
         UUID hash = getMultiItemHash(list);
-        
+
         int resultHash = getItemHash(recipe.getResult());
         Map<UUID, CartographyRecipe> map = getCartographyRecipeMap().computeIfAbsent(resultHash, k -> new HashMap<>());
         
         map.put(hash, recipe);
     }
-    
+
     public void registerShapelessRecipe(ShapelessRecipe recipe) {
         List<Item> list = recipe.getIngredientsAggregate();
 
@@ -717,7 +794,7 @@ public class CraftingManager {
 
         map.put(hash, recipe);
     }
-    
+
     @PowerNukkitOnly
     @Since("1.4.0.0-PN")
     public void registerSmithingRecipe(@Nonnull SmithingRecipe recipe) {
@@ -773,7 +850,7 @@ public class CraftingManager {
         if (!getSmithingRecipeMap().containsKey(outputHash)) {
             return null;
         }
-        
+
         inputList.sort(recipeComparator);
 
         UUID inputHash = getMultiItemHash(inputList);
@@ -863,7 +940,7 @@ public class CraftingManager {
     
         if (getCartographyRecipeMap().containsKey(outputHash)) {
             inputList.sort(recipeComparator);
-        
+
             UUID inputHash = getMultiItemHash(inputList);
         
             Map<UUID, CartographyRecipe> recipes = getCartographyRecipeMap().get(outputHash);
@@ -871,20 +948,20 @@ public class CraftingManager {
             if (recipes == null) {
                 return null;
             }
-        
+
             CartographyRecipe recipe = recipes.get(inputHash);
         
             if (recipe != null && (recipe.matchItems(inputList, extraOutputList) || matchItemsAccumulation(recipe, inputList, primaryOutput, extraOutputList))) {
                 return recipe;
             }
-        
+
             for (CartographyRecipe cartographyRecipe : recipes.values()) {
                 if (cartographyRecipe.matchItems(inputList, extraOutputList) || matchItemsAccumulation(cartographyRecipe, inputList, primaryOutput, extraOutputList)) {
                     return cartographyRecipe;
                 }
             }
         }
-        
+
         return null;
     }
 

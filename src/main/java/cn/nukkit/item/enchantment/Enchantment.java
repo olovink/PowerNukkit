@@ -369,6 +369,11 @@ public abstract class Enchantment implements Cloneable {
 
     }
 
+    @Since("1.6.0.0-PN")
+    public void doAttack(Entity attacker, Entity entity) {
+
+    }
+
     public void doPostHurt(Entity attacker, Entity entity) {
 
     }
