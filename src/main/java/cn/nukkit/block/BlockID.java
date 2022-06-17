@@ -77,7 +77,7 @@ public interface BlockID {
     @PowerNukkitOnly @Since("1.6.0.0-PN") int PISTON_ARM_COLLISION = 34;
     @Deprecated
     @DeprecationDetails(since = "1.6.0.0-PN", by = "PowerNukkit", reason = "Incorrect name", replaceWith = "PISTON_ARM_COLLISION")
-    int PISTON_HEAD = 34;
+    int PISTON_HEAD = PISTON_ARM_COLLISION;
     int WOOL = 35;
     int DANDELION = 37;
     int RED_FLOWER = 38;
@@ -94,20 +94,26 @@ public interface BlockID {
     int RED_MUSHROOM = 40;
     int GOLD_BLOCK = 41;
     int IRON_BLOCK = 42;
-    int DOUBLE_STONE_SLAB = 43;
+    @PowerNukkitOnly @Since("FUTURE") int DOUBLE_STONE_BLOCK_SLAB = 43;
+    @Deprecated
+    @DeprecationDetails(since = "FUTURE", by = "PowerNukkit", reason = "Minecraft update", replaceWith = "DOUBLE_STONE_BLOCK_SLAB")
+    int DOUBLE_STONE_SLAB = DOUBLE_STONE_BLOCK_SLAB;
     @Deprecated @DeprecationDetails(by = "PowerNukkit", since = "FUTURE",
-            replaceWith = "DOUBLE_STONE_SLAB", reason = "Wrong Minecraft block name")
-    int DOUBLE_SLAB = DOUBLE_STONE_SLAB;
+            replaceWith = "DOUBLE_STONE_BLOCK_SLAB", reason = "Wrong Minecraft block name")
+    int DOUBLE_SLAB = DOUBLE_STONE_BLOCK_SLAB;
     @Deprecated @DeprecationDetails(by = "PowerNukkit", since = "FUTURE",
-            replaceWith = "DOUBLE_STONE_SLAB", reason = "Wrong Minecraft block name")
-    int DOUBLE_SLABS = DOUBLE_STONE_SLAB;
-    int STONE_SLAB = 44;
+            replaceWith = "DOUBLE_STONE_BLOCK_SLAB", reason = "Wrong Minecraft block name")
+    int DOUBLE_SLABS = DOUBLE_STONE_BLOCK_SLAB;
+    @PowerNukkitOnly @Since("FUTURE") int STONE_BLOCK_SLAB = 44;
+    @Deprecated
+    @DeprecationDetails(since = "FUTURE", by = "PowerNukkit", reason = "Minecraft update", replaceWith = "STONE_BLOCK_SLAB")
+    int STONE_SLAB = STONE_BLOCK_SLAB;
     @Deprecated @DeprecationDetails(by = "PowerNukkit", since = "FUTURE",
-            replaceWith = "STONE_SLAB", reason = "Wrong Minecraft block name")
-    int SLAB = STONE_SLAB;
+            replaceWith = "STONE_BLOCK_SLAB", reason = "Wrong Minecraft block name")
+    int SLAB = STONE_BLOCK_SLAB;
     @Deprecated @DeprecationDetails(by = "PowerNukkit", since = "FUTURE",
-            replaceWith = "STONE_SLAB", reason = "Wrong Minecraft block name")
-    int SLABS = STONE_SLAB;
+            replaceWith = "STONE_BLOCK_SLAB", reason = "Wrong Minecraft block name")
+    int SLABS = STONE_BLOCK_SLAB;
     int BRICKS_BLOCK = 45;
     @Deprecated @DeprecationDetails(by = "PowerNukkit", since = "FUTURE",
             replaceWith = "BRICKS_BLOCK", reason = "Wrong Minecraft block name")
