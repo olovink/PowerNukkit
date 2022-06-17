@@ -45,7 +45,7 @@ public class AllResourcesDownloader {
         - Connect to the ProxyPass server with the last Minecraft Bedrock Edition client at least once
         - Adjust the path bellow if necessary for your machine
          */
-        new AllResourcesDownloader().execute("../Bedrock-ProxyPass/run/data");
+        new AllResourcesDownloader().execute("/home/lobometalurgico/Documentos/GitHub/Bedrock-ProxyPass/run/data");
         System.out.println("OK");
     }
 

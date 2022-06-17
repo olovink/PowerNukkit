@@ -154,6 +154,7 @@ public class AllResourceUpdater {
     }
 
     private Map<String, Object> updateItemEntry(Map<String, Object> itemEntry) {
+        System.out.println("Updating item entry: " + itemEntry);
         var result = updateItemEntry0(itemEntry);
         if ("minecraft:air".equals(result.get("blockState"))) {
             throw new NoSuchElementException("State not found for: "+itemEntry);
