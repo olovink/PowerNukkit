@@ -247,28 +247,6 @@ public class CraftingManager {
 
         log.info("Loaded {} recipes.", this.recipes.size());
     }
-    
-    private void registerSmithingRecipes() {
-        Item ingot = Item.get(ItemID.NETHERITE_INGOT);
-        int[][] ids = new int[][]{
-                {ItemID.DIAMOND_HELMET, ItemID.NETHERITE_HELMET},
-                {ItemID.DIAMOND_CHESTPLATE, ItemID.NETHERITE_CHESTPLATE},
-                {ItemID.DIAMOND_LEGGINGS, ItemID.NETHERITE_LEGGINGS},
-                {ItemID.DIAMOND_BOOTS, ItemID.NETHERITE_BOOTS},
-                {ItemID.DIAMOND_SWORD, ItemID.NETHERITE_SWORD},
-                {ItemID.DIAMOND_PICKAXE, ItemID.NETHERITE_PICKAXE},
-                {ItemID.DIAMOND_HOE, ItemID.NETHERITE_HOE},
-                {ItemID.DIAMOND_SHOVEL, ItemID.NETHERITE_SHOVEL},
-                {ItemID.DIAMOND_AXE, ItemID.NETHERITE_AXE}
-        };
-        for (int[] id : ids) {
-            new SmithingRecipe(
-                    Item.get(id[0]).createFuzzyCraftingRecipe(),
-                    ingot,
-                    Item.get(id[1])
-            ).registerToCraftingManager(this);
-        }
-    }
 
     @SuppressWarnings("unchecked")
     private void loadRecipes(Config config) {
