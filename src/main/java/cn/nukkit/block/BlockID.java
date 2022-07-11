@@ -74,7 +74,10 @@ public interface BlockID {
     int BUSH = 32;
     int DEAD_BUSH = 32;
     int PISTON = 33;
-    int PISTON_HEAD = 34;
+    @PowerNukkitOnly @Since("1.6.0.0-PN") int PISTON_ARM_COLLISION = 34;
+    @Deprecated
+    @DeprecationDetails(since = "1.6.0.0-PN", by = "PowerNukkit", reason = "Incorrect name", replaceWith = "PISTON_ARM_COLLISION")
+    int PISTON_HEAD = PISTON_ARM_COLLISION;
     int WOOL = 35;
     int DANDELION = 37;
     int RED_FLOWER = 38;
@@ -91,20 +94,26 @@ public interface BlockID {
     int RED_MUSHROOM = 40;
     int GOLD_BLOCK = 41;
     int IRON_BLOCK = 42;
-    int DOUBLE_STONE_SLAB = 43;
+    @PowerNukkitOnly @Since("FUTURE") int DOUBLE_STONE_BLOCK_SLAB = 43;
+    @Deprecated
+    @DeprecationDetails(since = "FUTURE", by = "PowerNukkit", reason = "Minecraft update", replaceWith = "DOUBLE_STONE_BLOCK_SLAB")
+    int DOUBLE_STONE_SLAB = DOUBLE_STONE_BLOCK_SLAB;
     @Deprecated @DeprecationDetails(by = "PowerNukkit", since = "FUTURE",
-            replaceWith = "DOUBLE_STONE_SLAB", reason = "Wrong Minecraft block name")
-    int DOUBLE_SLAB = DOUBLE_STONE_SLAB;
+            replaceWith = "DOUBLE_STONE_BLOCK_SLAB", reason = "Wrong Minecraft block name")
+    int DOUBLE_SLAB = DOUBLE_STONE_BLOCK_SLAB;
     @Deprecated @DeprecationDetails(by = "PowerNukkit", since = "FUTURE",
-            replaceWith = "DOUBLE_STONE_SLAB", reason = "Wrong Minecraft block name")
-    int DOUBLE_SLABS = DOUBLE_STONE_SLAB;
-    int STONE_SLAB = 44;
+            replaceWith = "DOUBLE_STONE_BLOCK_SLAB", reason = "Wrong Minecraft block name")
+    int DOUBLE_SLABS = DOUBLE_STONE_BLOCK_SLAB;
+    @PowerNukkitOnly @Since("FUTURE") int STONE_BLOCK_SLAB = 44;
+    @Deprecated
+    @DeprecationDetails(since = "FUTURE", by = "PowerNukkit", reason = "Minecraft update", replaceWith = "STONE_BLOCK_SLAB")
+    int STONE_SLAB = STONE_BLOCK_SLAB;
     @Deprecated @DeprecationDetails(by = "PowerNukkit", since = "FUTURE",
-            replaceWith = "STONE_SLAB", reason = "Wrong Minecraft block name")
-    int SLAB = STONE_SLAB;
+            replaceWith = "STONE_BLOCK_SLAB", reason = "Wrong Minecraft block name")
+    int SLAB = STONE_BLOCK_SLAB;
     @Deprecated @DeprecationDetails(by = "PowerNukkit", since = "FUTURE",
-            replaceWith = "STONE_SLAB", reason = "Wrong Minecraft block name")
-    int SLABS = STONE_SLAB;
+            replaceWith = "STONE_BLOCK_SLAB", reason = "Wrong Minecraft block name")
+    int SLABS = STONE_BLOCK_SLAB;
     int BRICKS_BLOCK = 45;
     @Deprecated @DeprecationDetails(by = "PowerNukkit", since = "FUTURE",
             replaceWith = "BRICKS_BLOCK", reason = "Wrong Minecraft block name")
@@ -292,6 +301,9 @@ public interface BlockID {
     int EMERALD_ORE = 129;
     int ENDER_CHEST = 130;
     int TRIPWIRE_HOOK = 131;
+    @PowerNukkitOnly @Since("1.6.0.0-PN") int TRIP_WIRE = 132;
+    @Deprecated
+    @DeprecationDetails(since = "1.6.0.0-PN", by = "Mojang", reason = "Renamed", replaceWith = "TRIP_WIRE")
     int TRIPWIRE = 132;
     int EMERALD_BLOCK = 133;
     @Since("FUTURE") @PowerNukkitOnly int SPRUCE_STAIRS = 134;
@@ -374,7 +386,13 @@ public interface BlockID {
     int DAYLIGHT_DETECTOR_INVERTED = 178;
     int RED_SANDSTONE = 179;
     int RED_SANDSTONE_STAIRS = 180;
+    @PowerNukkitOnly @Since("FUTURE") int DOUBLE_STONE_BLOCK_SLAB2 = 181;
+    @Deprecated
+    @DeprecationDetails(since = "FUTURE", by = "PowerNukkit", reason = "Minecraft update", replaceWith = "DOUBLE_STONE_BLOCK_SLAB2")
     int DOUBLE_RED_SANDSTONE_SLAB = 181;
+    @PowerNukkitOnly @Since("FUTURE") int STONE_BLOCK_SLAB2 = 182;
+    @Deprecated
+    @DeprecationDetails(since = "FUTURE", by = "PowerNukkit", reason = "Minecraft update", replaceWith = "STONE_BLOCK_SLAB2")
     int RED_SANDSTONE_SLAB = 182;
     int FENCE_GATE_SPRUCE = 183;
     int FENCE_GATE_BIRCH = 184;
@@ -427,8 +445,11 @@ public interface BlockID {
     int RED_GLAZED_TERRACOTTA = 234;
     int BLACK_GLAZED_TERRACOTTA = 235;
     int CONCRETE = 236;
-    @Since("1.4.0.0-PN") @PowerNukkitOnly int CONCRETEPOWDER = 237;
-    int CONCRETE_POWDER = CONCRETEPOWDER;
+    int CONCRETE_POWDER = 237;
+    @Since("1.4.0.0-PN")
+    @PowerNukkitOnly
+    @Deprecated @DeprecationDetails(since = "1.6.0.0-PN", by = "Mojang", replaceWith = "CONCRETE_POWDER", reason = "Renamed")
+    int CONCRETEPOWDER = CONCRETE_POWDER;
 
     int CHORUS_PLANT = 240;
     int STAINED_GLASS = 241;
@@ -499,13 +520,29 @@ public interface BlockID {
     @PowerNukkitOnly int TURTLE_EGG = 414;
     @PowerNukkitOnly int BUBBLE_COLUMN = 415;
     @PowerNukkitOnly int BARRIER = 416;
-    @PowerNukkitOnly int STONE_SLAB3 = 417;
+    @PowerNukkitOnly @Since("FUTURE") int STONE_BLOCK_SLAB3 = 417;
+    @Deprecated
+    @DeprecationDetails(since = "FUTURE", by = "PowerNukkit", reason = "Minecraft update", replaceWith = "STONE_BLOCK_SLAB3")
+    @PowerNukkitOnly
+    int STONE_SLAB3 = 417;
     @PowerNukkitOnly int BAMBOO = 418;
     @PowerNukkitOnly int BAMBOO_SAPLING = 419;
     @PowerNukkitOnly int SCAFFOLDING = 420;
-    @PowerNukkitOnly int STONE_SLAB4 = 421;
-    @PowerNukkitOnly int DOUBLE_STONE_SLAB3 = 422;
-    @PowerNukkitOnly int DOUBLE_STONE_SLAB4 = 423;
+    @PowerNukkitOnly @Since("FUTURE") int STONE_BLOCK_SLAB4 = 421;
+    @Deprecated
+    @DeprecationDetails(since = "FUTURE", by = "PowerNukkit", reason = "Minecraft update", replaceWith = "STONE_BLOCK_SLAB4")
+    @PowerNukkitOnly
+    int STONE_SLAB4 = 421;
+    @PowerNukkitOnly @Since("FUTURE") int DOUBLE_STONE_BLOCK_SLAB3 = 422;
+    @Deprecated
+    @DeprecationDetails(since = "FUTURE", by = "PowerNukkit", reason = "Minecraft update", replaceWith = "DOUBLE_STONE_BLOCK_SLAB3")
+    @PowerNukkitOnly
+    int DOUBLE_STONE_SLAB3 = 422;
+    @PowerNukkitOnly @Since("FUTURE") int DOUBLE_STONE_BLOCK_SLAB4 = 423;
+    @Deprecated
+    @DeprecationDetails(since = "FUTURE", by = "PowerNukkit", reason = "Minecraft update", replaceWith = "DOUBLE_STONE_BLOCK_SLAB4")
+    @PowerNukkitOnly
+    int DOUBLE_STONE_SLAB4 = 423;
     @PowerNukkitOnly int GRANITE_STAIRS = 424;
     @PowerNukkitOnly int DIORITE_STAIRS = 425;
     @PowerNukkitOnly int ANDESITE_STAIRS = 426;
@@ -556,8 +593,15 @@ public interface BlockID {
      @PowerNukkitOnly int LIT_BLAST_FURNACE = 469;
      @PowerNukkitOnly int LIGHT_BLOCK = 470;
      @PowerNukkitOnly int WITHER_ROSE = 471;
-     @PowerNukkitOnly int STICKYPISTONARMCOLLISION = 472;
-     @PowerNukkitOnly int PISTON_HEAD_STICKY = 472;
+     @PowerNukkitOnly @Since("1.6.0.0-PN") int STICKY_PISTON_ARM_COLLISION = 472;
+     @PowerNukkitOnly
+     @Deprecated
+     @DeprecationDetails(since = "1.6.0.0-PN", by = "Mojang", replaceWith = "STICKY_PISTON_ARM_COLLISION", reason = "Renamed")
+     int STICKYPISTONARMCOLLISION = STICKY_PISTON_ARM_COLLISION;
+     @PowerNukkitOnly
+     @Deprecated
+     @DeprecationDetails(since = "1.6.0.0-PN", by = "PowerNukkit", replaceWith = "STICKY_PISTON_ARM_COLLISION", reason = "Renamed")
+     int PISTON_HEAD_STICKY = STICKY_PISTON_ARM_COLLISION;
      @PowerNukkitOnly int BEE_NEST = 473;
      @PowerNukkitOnly int BEEHIVE = 474;
      @PowerNukkitOnly int HONEY_BLOCK = 475;
@@ -752,7 +796,24 @@ public interface BlockID {
     @Since("FUTURE") @PowerNukkitOnly int CRACKED_DEEPSLATE_TILES = 664;
     @Since("FUTURE") @PowerNukkitOnly int CRACKED_DEEPSLATE_BRICKS = 665;
     @Since("FUTURE") @PowerNukkitOnly int GLOW_LICHEN = 666;
-    // Unused 667 - 700
+    @Since("FUTURE") @PowerNukkitOnly int CANDLE = 667;
+    @Since("FUTURE") @PowerNukkitOnly int WHITE_CANDLE = 668;
+    @Since("FUTURE") @PowerNukkitOnly int ORANGE_CANDLE = 669;
+    @Since("FUTURE") @PowerNukkitOnly int MAGENTA_CANDLE = 670;
+    @Since("FUTURE") @PowerNukkitOnly int LIGHT_BLUE_CANDLE = 671;
+    @Since("FUTURE") @PowerNukkitOnly int YELLOW_CANDLE = 672;
+    @Since("FUTURE") @PowerNukkitOnly int LIME_CANDLE = 673;
+    @Since("FUTURE") @PowerNukkitOnly int PINK_CANDLE = 674;
+    @Since("FUTURE") @PowerNukkitOnly int GRAY_CANDLE = 675;
+    @Since("FUTURE") @PowerNukkitOnly int LIGHT_GRAY_CANDLE = 676;
+    @Since("FUTURE") @PowerNukkitOnly int CYAN_CANDLE = 677;
+    @Since("FUTURE") @PowerNukkitOnly int PURPLE_CANDLE = 678;
+    @Since("FUTURE") @PowerNukkitOnly int BLUE_CANDLE = 679;
+    @Since("FUTURE") @PowerNukkitOnly int BROWN_CANDLE = 680;
+    @Since("FUTURE") @PowerNukkitOnly int GREEN_CANDLE = 681;
+    @Since("FUTURE") @PowerNukkitOnly int RED_CANDLE = 682;
+    @Since("FUTURE") @PowerNukkitOnly int BLACK_CANDLE = 683;
+    // Unused 684 - 700
     @Since("FUTURE") @PowerNukkitOnly int WAXED_OXIDIZED_COPPER = 701;
     @Since("FUTURE") @PowerNukkitOnly int WAXED_OXIDIZED_CUT_COPPER = 702;
     @Since("FUTURE") @PowerNukkitOnly int WAXED_OXIDIZED_CUT_COPPER_STAIRS = 703;

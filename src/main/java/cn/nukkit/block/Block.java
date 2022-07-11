@@ -61,7 +61,7 @@ public abstract class Block extends Position implements Metadatable, Cloneable, 
     @Deprecated
     @DeprecationDetails(since = "1.4.0.0-PN", reason = "It is being replaced by an other solution that don't require a fixed size")
     @PowerNukkitOnly
-    public static final int MAX_BLOCK_ID = dynamic(750);
+    public static final int MAX_BLOCK_ID = dynamic(800);
     
     @Deprecated
     @DeprecationDetails(since = "1.4.0.0-PN", reason = "It's not a constant value, it may be changed on major updates and" +
@@ -202,7 +202,7 @@ public abstract class Block extends Position implements Metadatable, Cloneable, 
             list[TALL_GRASS] = BlockTallGrass.class; //31
             list[DEAD_BUSH] = BlockDeadBush.class; //32
             list[PISTON] = BlockPiston.class; //33
-            list[PISTON_HEAD] = BlockPistonHead.class; //34
+            list[PISTON_ARM_COLLISION] = BlockPistonHead.class; //34
             list[WOOL] = BlockWool.class; //35
             list[DANDELION] = BlockDandelion.class; //37
             list[RED_FLOWER] = BlockFlower.class; //38
@@ -210,8 +210,8 @@ public abstract class Block extends Position implements Metadatable, Cloneable, 
             list[RED_MUSHROOM] = BlockMushroomRed.class; //40
             list[GOLD_BLOCK] = BlockGold.class; //41
             list[IRON_BLOCK] = BlockIron.class; //42
-            list[DOUBLE_STONE_SLAB] = BlockDoubleSlabStone.class; //43
-            list[STONE_SLAB] = BlockSlabStone.class; //44
+            list[DOUBLE_STONE_BLOCK_SLAB] = BlockDoubleSlabStone.class; //43
+            list[STONE_BLOCK_SLAB] = BlockSlabStone.class; //44
             list[BRICKS_BLOCK] = BlockBricks.class; //45
             list[TNT] = BlockTNT.class; //46
             list[BOOKSHELF] = BlockBookshelf.class; //47
@@ -299,7 +299,7 @@ public abstract class Block extends Position implements Metadatable, Cloneable, 
             list[EMERALD_ORE] = BlockOreEmerald.class; //129
             list[ENDER_CHEST] = BlockEnderChest.class; //130
             list[TRIPWIRE_HOOK] = BlockTripWireHook.class;
-            list[TRIPWIRE] = BlockTripWire.class; //132
+            list[TRIP_WIRE] = BlockTripWire.class; //132
             list[EMERALD_BLOCK] = BlockEmerald.class; //133
             list[SPRUCE_STAIRS] = BlockStairsSpruce.class; //134
             list[BIRCH_STAIRS] = BlockStairsBirch.class; //135
@@ -349,8 +349,8 @@ public abstract class Block extends Position implements Metadatable, Cloneable, 
             list[DAYLIGHT_DETECTOR_INVERTED] = BlockDaylightDetectorInverted.class; //178
             list[RED_SANDSTONE] = BlockRedSandstone.class; //179
             list[RED_SANDSTONE_STAIRS] = BlockStairsRedSandstone.class; //180
-            list[DOUBLE_RED_SANDSTONE_SLAB] = BlockDoubleSlabRedSandstone.class; //181
-            list[RED_SANDSTONE_SLAB] = BlockSlabRedSandstone.class; //182
+            list[DOUBLE_STONE_BLOCK_SLAB2] = BlockDoubleSlabRedSandstone.class; //181
+            list[STONE_BLOCK_SLAB2] = BlockSlabRedSandstone.class; //182
             list[FENCE_GATE_SPRUCE] = BlockFenceGateSpruce.class; //183
             list[FENCE_GATE_BIRCH] = BlockFenceGateBirch.class; //184
             list[FENCE_GATE_JUNGLE] = BlockFenceGateJungle.class; //185
@@ -458,13 +458,13 @@ public abstract class Block extends Position implements Metadatable, Cloneable, 
             list[TURTLE_EGG] = BlockTurtleEgg.class; //414
             list[BUBBLE_COLUMN] = BlockBubbleColumn.class; //415
             list[BARRIER] = BlockBarrier.class; //416
-            list[STONE_SLAB3] = BlockSlabStone3.class ; //417
+            list[STONE_BLOCK_SLAB3] = BlockSlabStone3.class ; //417
             list[BAMBOO] = BlockBamboo.class; //418
             list[BAMBOO_SAPLING] = BlockBambooSapling.class; //419
             list[SCAFFOLDING] = BlockScaffolding.class; //420
-            list[STONE_SLAB4] = BlockSlabStone4.class ; //421
-            list[DOUBLE_STONE_SLAB3] = BlockDoubleSlabStone3.class; //422
-            list[DOUBLE_STONE_SLAB4] = BlockDoubleSlabStone4.class; //422
+            list[STONE_BLOCK_SLAB4] = BlockSlabStone4.class ; //421
+            list[DOUBLE_STONE_BLOCK_SLAB3] = BlockDoubleSlabStone3.class; //422
+            list[DOUBLE_STONE_BLOCK_SLAB4] = BlockDoubleSlabStone4.class; //422
 
             list[GRANITE_STAIRS] = BlockStairsGranite.class; //424
             list[DIORITE_STAIRS] = BlockStairsDiorite.class; //425
@@ -521,7 +521,7 @@ public abstract class Block extends Position implements Metadatable, Cloneable, 
             list[LIGHT_BLOCK] = BlockLight.class; //470
             list[WITHER_ROSE] = BlockWitherRose.class; //471
             
-            list[STICKYPISTONARMCOLLISION] = BlockPistonHeadSticky.class; //472
+            list[STICKY_PISTON_ARM_COLLISION] = BlockPistonHeadSticky.class; //472
             list[BEE_NEST] = BlockBeeNest.class; //473
             list[BEEHIVE] = BlockBeehive.class; //474
             list[HONEY_BLOCK] = BlockHoney.class; //475
@@ -716,7 +716,24 @@ public abstract class Block extends Position implements Metadatable, Cloneable, 
             list[CRACKED_DEEPSLATE_TILES] = BlockTilesDeepslateCracked.class; //664
             list[CRACKED_DEEPSLATE_BRICKS] = BlockBricksDeepslateCracked.class; //665
             //list[GLOW_LICHEN] = .class; //666
-            // Unused 667 - 700
+            list[CANDLE] = BlockCandle.class; //667
+            list[WHITE_CANDLE] = BlockCandleWhite.class; //668
+            list[ORANGE_CANDLE] = BlockCandleOrange.class; //669
+            list[MAGENTA_CANDLE] = BlockCandleMagenta.class; //670
+            list[LIGHT_BLUE_CANDLE] = BlockCandleLightBlue.class; //671
+            list[YELLOW_CANDLE] = BlockCandleYellow.class; //672
+            list[LIME_CANDLE] = BlockCandleLime.class; //673
+            list[PINK_CANDLE] = BlockCandlePink.class; //674
+            list[GRAY_CANDLE] = BlockCandleGray.class; //675
+            list[LIGHT_GRAY_CANDLE] = BlockCandleLightGray.class; //676
+            list[CYAN_CANDLE] = BlockCandleCyan.class; //677
+            list[PURPLE_CANDLE] = BlockCandlePurple.class; //678
+            list[BLUE_CANDLE] = BlockCandleBlue.class; //679
+            list[BROWN_CANDLE] = BlockCandleBrown.class; //680
+            list[GREEN_CANDLE] = BlockCandleGreen.class; //681
+            list[RED_CANDLE] = BlockCandleRed.class; //682
+            list[BLACK_CANDLE] = BlockCandleBlack.class; //683
+            // Unused 684 - 700
             list[WAXED_OXIDIZED_COPPER] = BlockCopperOxidizedWaxed.class; //701
             list[WAXED_OXIDIZED_CUT_COPPER] = BlockCopperCutOxidizedWaxed.class; //702
             list[WAXED_OXIDIZED_CUT_COPPER_STAIRS] = BlockStairsCopperCutOxidizedWaxed.class; //703
@@ -915,7 +932,7 @@ public abstract class Block extends Position implements Metadatable, Cloneable, 
     //</editor-fold>
 
     @PowerNukkitOnly
-    @Since("FUTURE")
+    @Since("1.6.0.0-PN")
     @SuppressWarnings("java:S1874")
     public static boolean isSolid(int blockId) {
         if (blockId < 0 || blockId >= solid.length) {
@@ -925,7 +942,7 @@ public abstract class Block extends Position implements Metadatable, Cloneable, 
     }
 
     @PowerNukkitOnly
-    @Since("FUTURE")
+    @Since("1.6.0.0-PN")
     public static boolean diffusesSkyLight(int blockId) {
         if (blockId < 0 || blockId >= diffusesSkyLight.length) {
             return false;
@@ -934,7 +951,7 @@ public abstract class Block extends Position implements Metadatable, Cloneable, 
     }
 
     @PowerNukkitOnly
-    @Since("FUTURE")
+    @Since("1.6.0.0-PN")
     @SuppressWarnings("java:S1874")
     public static double getHardness(int blockId) {
         if (blockId < 0 || blockId >= hardness.length) {
@@ -944,7 +961,7 @@ public abstract class Block extends Position implements Metadatable, Cloneable, 
     }
 
     @PowerNukkitOnly
-    @Since("FUTURE")
+    @Since("1.6.0.0-PN")
     @SuppressWarnings("java:S1874")
     public static int getLightLevel(int blockId) {
         if (blockId < 0 || blockId >= light.length) {
@@ -954,7 +971,7 @@ public abstract class Block extends Position implements Metadatable, Cloneable, 
     }
 
     @PowerNukkitOnly
-    @Since("FUTURE")
+    @Since("1.6.0.0-PN")
     @SuppressWarnings("java:S1874")
     public static int getLightFilter(int blockId) {
         if (blockId < 0 || blockId >= lightFilter.length) {
@@ -964,7 +981,7 @@ public abstract class Block extends Position implements Metadatable, Cloneable, 
     }
 
     @PowerNukkitOnly
-    @Since("FUTURE")
+    @Since("1.6.0.0-PN")
     @SuppressWarnings("java:S1874")
     public static boolean isTransparent(int blockId) {
         if (blockId < 0 || blockId >= transparent.length) {

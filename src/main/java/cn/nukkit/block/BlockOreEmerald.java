@@ -34,6 +34,7 @@ public class BlockOreEmerald extends BlockOre {
     }
 
     @Override
+    @PowerNukkitOnly
     public int getToolTier() {
         return ItemTool.TIER_IRON;
     }

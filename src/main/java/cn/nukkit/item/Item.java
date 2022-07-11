@@ -420,6 +420,8 @@ public class Item implements Cloneable, BlockID, ItemID {
 
             list[SOUL_CAMPFIRE] = ItemCampfireSoul.class; //801
 
+            list[GLOW_ITEM_FRAME] = ItemItemFrameGlow.class; //850
+
             for (int i = 0; i < 256; ++i) {
                 if (Block.list[i] != null) {
                     list[i] = Block.list[i];
@@ -440,9 +442,7 @@ public class Item implements Cloneable, BlockID, ItemID {
                 }
             }
 
-            runtimeMapping.registerNamespacedIdItem(ItemRawIron.class);
-            runtimeMapping.registerNamespacedIdItem(ItemRawGold.class);
-            runtimeMapping.registerNamespacedIdItem(ItemRawCopper.class);
+            //runtimeMapping.registerNamespacedIdItem(ItemStringHere.class);
         }
 
         initCreativeItems();
@@ -503,11 +503,23 @@ public class Item implements Cloneable, BlockID, ItemID {
             String blockStateId = data.get("blockState").toString();
             // TODO Remove this when the support is added to these blocks
             if (Stream.of(
-                    "minecraft:candle",
-                    "minecraft:deepslate",
-                    "minecraft:cracked_deepslate_bricks",
-                    "minecraft:cracked_deepslate_tiles",
-                    "minecraft:smooth_basalt"
+                    "minecraft:smooth_basalt",
+                    "minecraft:azalea_leaves",
+                    "minecraft:amethyst_cluster",
+                    "minecraft:moss_carpet",
+                    "minecraft:moss_block",
+                    "minecraft:pointed_dripstone",
+                    "minecraft:dirt_with_roots",
+                    "minecraft:small_dripleaf",
+                    "minecraft:big_dripleaf",
+                    "minecraft:spore_blossom",
+                    "minecraft:budding_amethyst",
+                    "minecraft:sculk_sensor",
+                    "minecraft:glow_lichen",
+                    "minecraft:small_amethyst_bud",
+                    "minecraft:medium_amethyst_bud",
+                    "minecraft:large_amethyst_bud",
+                    "minecraft:lightning_rod"
             ).anyMatch(blockStateId::startsWith)) {
                 return null;
             }
@@ -515,7 +527,7 @@ public class Item implements Cloneable, BlockID, ItemID {
                 // TODO Remove this when the support is added to these blocks
                 String[] stateParts = blockStateId.split(";", 2);
                 Integer blockId = BlockStateRegistry.getBlockId(stateParts[0]);
-                if (blockId != null && blockId > BlockID.QUARTZ_BRICKS) {
+                if (blockId != null && blockId > BlockID.INFESTED_DEEPSLATE) {
                     return Item.getBlock(BlockID.AIR);
                 }
 
@@ -1662,7 +1674,7 @@ public class Item implements Cloneable, BlockID, ItemID {
         }
     }
 
-    @Since("FUTURE")
+    @Since("1.6.0.0-PN")
     public final RuntimeEntry getRuntimeEntry() {
         //TODO Implement
         throw new UnsupportedOperationException();
