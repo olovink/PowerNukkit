@@ -14,6 +14,7 @@ public class BlockRootsHanging extends BlockRoots {
     @PowerNukkitOnly
     @Since("FUTURE")
     public BlockRootsHanging() {
+        // Does nothing
     }
 
     @Override

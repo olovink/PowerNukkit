@@ -13,6 +13,7 @@ import cn.nukkit.item.Item;
 public class BlockOreRedstoneGlowing extends BlockOreRedstone implements IBlockOreRedstoneGlowing {
 
     public BlockOreRedstoneGlowing() {
+        // Does nothing
     }
 
     @Override

@@ -11,6 +11,7 @@ public class BlockNetheriteBlock extends BlockSolid {
     @PowerNukkitOnly
     @Since("1.4.0.0-PN")
     public BlockNetheriteBlock() {
+        // Does nothing
     }
 
     @Override

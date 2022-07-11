@@ -14,6 +14,7 @@ public class BlockDeepslatePolished extends BlockDeepslateCobbled {
     @PowerNukkitOnly
     @Since("FUTURE")
     public BlockDeepslatePolished() {
+        // Does nothing
     }
 
     @Override

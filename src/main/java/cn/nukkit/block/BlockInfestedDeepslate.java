@@ -16,6 +16,7 @@ public class BlockInfestedDeepslate extends BlockDeepslate {
     @PowerNukkitOnly
     @Since("FUTURE")
     public BlockInfestedDeepslate() {
+        // Does nothing
     }
     
     @Override

@@ -23,6 +23,7 @@ public class BlockDripstone extends BlockSolid {
     @PowerNukkitOnly
     @Since("FUTURE")
     public BlockDripstone() {
+        // Does nothing
     }
 
     @PowerNukkitOnly

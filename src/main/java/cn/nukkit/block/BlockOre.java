@@ -21,6 +21,7 @@ public abstract class BlockOre extends BlockSolid {
     @PowerNukkitOnly
     @Since("FUTURE")
     public BlockOre() {
+        // Does nothing
     }
 
     @Override

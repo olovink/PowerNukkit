@@ -11,6 +11,7 @@ import cn.nukkit.item.ItemTool;
 public class BlockMobSpawner extends BlockSolid {
 
     public BlockMobSpawner() {
+        // Does nothing
     }
 
     @Override

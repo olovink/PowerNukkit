@@ -29,6 +29,7 @@ public class BlockDeepslate extends BlockSolid {
     @PowerNukkitOnly
     @Since("FUTURE")
     public BlockDeepslate() {
+        // Does nothing
     }
 
     @PowerNukkitOnly

@@ -23,6 +23,7 @@ public class BlockCalcite extends BlockSolid {
     @PowerNukkitOnly
     @Since("FUTURE")
     public BlockCalcite() {
+        // Does nothing
     }
 
     @PowerNukkitOnly

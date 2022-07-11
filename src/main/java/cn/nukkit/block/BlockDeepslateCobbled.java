@@ -15,6 +15,7 @@ public class BlockDeepslateCobbled extends BlockSolid {
     @PowerNukkitOnly
     @Since("FUTURE")
     public BlockDeepslateCobbled(){
+        // Does nothing
     }
 
     @Override

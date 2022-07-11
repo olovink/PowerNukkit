@@ -23,6 +23,7 @@ public class BlockAmethyst extends BlockSolid {
     @PowerNukkitOnly
     @Since("FUTURE")
     public BlockAmethyst() {
+        // Does nothing
     }
 
     @PowerNukkitOnly

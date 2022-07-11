@@ -16,7 +16,7 @@ public class BlockGlassTinted extends BlockGlass {
     @PowerNukkitOnly
     @Since("FUTURE")
     public BlockGlassTinted() {
-
+        // Does nothing
     }
 
     @Override

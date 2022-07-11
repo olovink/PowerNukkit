@@ -14,6 +14,7 @@ public class BlockAzaleaFlowering extends BlockAzalea {
     @PowerNukkitOnly
     @Since("FUTURE")
     public BlockAzaleaFlowering() {
+        // Does nothing
     }
 
     @Override

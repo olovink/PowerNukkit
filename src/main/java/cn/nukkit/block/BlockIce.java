@@ -16,6 +16,7 @@ import cn.nukkit.utils.BlockColor;
 public class BlockIce extends BlockTransparent {
 
     public BlockIce() {
+        // Does nothing
     }
 
     @Override

@@ -25,6 +25,7 @@ public class BlockAzalea extends BlockTransparent {
     @PowerNukkitOnly
     @Since("FUTURE")
     public BlockAzalea() {
+        // Does nothing
     }
 
     @PowerNukkitOnly
