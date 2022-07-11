@@ -261,6 +261,10 @@ public interface ItemID {
 
     int SHIELD = 513;
 
+    @Since("FUTURE") @PowerNukkitOnly int RAW_IRON = 520;
+    @Since("FUTURE") @PowerNukkitOnly int RAW_GOLD = 521;
+    @Since("FUTURE") @PowerNukkitOnly int RAW_COPPER = 522;
+
     @PowerNukkitOnly int CAMPFIRE = 720;
 
     int SUSPICIOUS_STEW = 734;
@@ -289,6 +293,7 @@ public interface ItemID {
     @Since("1.4.0.0-PN") @PowerNukkitOnly int CHAIN = 758;
     @Since("1.4.0.0-PN") int RECORD_PIGSTEP = 759;
     @Since("1.4.0.0-PN") @PowerNukkitOnly int NETHER_SPROUTS = 760;
+    @Since("FUTURE") @PowerNukkitOnly int GOAT_HORN = 761;
 
     @PowerNukkitOnly @Since("FUTURE") int AMETHYST_SHARD = 771;
     @Since("1.6.0.0-PN") int SPYGLASS = 772;
@@ -297,4 +302,5 @@ public interface ItemID {
 
     //@PowerNukkitOnly int DEBUG_STICK = <Possible:> 802+;
 
+    @Since("FUTURE") @PowerNukkitOnly int GLOW_ITEM_FRAME = 850;
 }

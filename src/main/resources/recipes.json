@@ -272,7 +272,7 @@
       "output": [
         {
           "count": 2,
-          "blockState": "minecraft:cobbled_deepslate_slab;top_slot_bit=0"
+          "blockState": "minecraft:cobbled_deepslate_slab"
         }
       ],
       "block": "stonecutter",
@@ -288,7 +288,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:cobbled_deepslate_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:cobbled_deepslate_stairs"
         }
       ],
       "block": "stonecutter",
@@ -304,7 +304,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:cobbled_deepslate_wall;wall_connection_type_east=none;wall_connection_type_north=none;wall_connection_type_south=none;wall_connection_type_west=none;wall_post_bit=0"
+          "blockState": "minecraft:cobbled_deepslate_wall"
         }
       ],
       "block": "stonecutter",
@@ -321,7 +321,7 @@
       "output": [
         {
           "count": 2,
-          "blockState": "minecraft:deepslate_brick_slab;top_slot_bit=0"
+          "blockState": "minecraft:deepslate_brick_slab"
         }
       ],
       "block": "stonecutter",
@@ -338,7 +338,7 @@
       "output": [
         {
           "count": 2,
-          "blockState": "minecraft:deepslate_brick_slab;top_slot_bit=0"
+          "blockState": "minecraft:deepslate_brick_slab"
         }
       ],
       "block": "stonecutter",
@@ -355,7 +355,7 @@
       "output": [
         {
           "count": 2,
-          "blockState": "minecraft:deepslate_brick_slab;top_slot_bit=0"
+          "blockState": "minecraft:deepslate_brick_slab"
         }
       ],
       "block": "stonecutter",
@@ -371,7 +371,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:deepslate_brick_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:deepslate_brick_stairs"
         }
       ],
       "block": "stonecutter",
@@ -387,7 +387,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:deepslate_brick_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:deepslate_brick_stairs"
         }
       ],
       "block": "stonecutter",
@@ -403,7 +403,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:deepslate_brick_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:deepslate_brick_stairs"
         }
       ],
       "block": "stonecutter",
@@ -419,7 +419,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:deepslate_brick_wall;wall_connection_type_east=none;wall_connection_type_north=none;wall_connection_type_south=none;wall_connection_type_west=none;wall_post_bit=0"
+          "blockState": "minecraft:deepslate_brick_wall"
         }
       ],
       "block": "stonecutter",
@@ -435,7 +435,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:deepslate_brick_wall;wall_connection_type_east=none;wall_connection_type_north=none;wall_connection_type_south=none;wall_connection_type_west=none;wall_post_bit=0"
+          "blockState": "minecraft:deepslate_brick_wall"
         }
       ],
       "block": "stonecutter",
@@ -451,7 +451,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:deepslate_brick_wall;wall_connection_type_east=none;wall_connection_type_north=none;wall_connection_type_south=none;wall_connection_type_west=none;wall_post_bit=0"
+          "blockState": "minecraft:deepslate_brick_wall"
         }
       ],
       "block": "stonecutter",
@@ -500,7 +500,7 @@
       "output": [
         {
           "count": 2,
-          "blockState": "minecraft:deepslate_tile_slab;top_slot_bit=0"
+          "blockState": "minecraft:deepslate_tile_slab"
         }
       ],
       "block": "stonecutter",
@@ -517,7 +517,7 @@
       "output": [
         {
           "count": 2,
-          "blockState": "minecraft:deepslate_tile_slab;top_slot_bit=0"
+          "blockState": "minecraft:deepslate_tile_slab"
         }
       ],
       "block": "stonecutter",
@@ -534,7 +534,7 @@
       "output": [
         {
           "count": 2,
-          "blockState": "minecraft:deepslate_tile_slab;top_slot_bit=0"
+          "blockState": "minecraft:deepslate_tile_slab"
         }
       ],
       "block": "stonecutter",
@@ -551,7 +551,7 @@
       "output": [
         {
           "count": 2,
-          "blockState": "minecraft:deepslate_tile_slab;top_slot_bit=0"
+          "blockState": "minecraft:deepslate_tile_slab"
         }
       ],
       "block": "stonecutter",
@@ -567,7 +567,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:deepslate_tile_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:deepslate_tile_stairs"
         }
       ],
       "block": "stonecutter",
@@ -583,7 +583,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:deepslate_tile_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:deepslate_tile_stairs"
         }
       ],
       "block": "stonecutter",
@@ -599,7 +599,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:deepslate_tile_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:deepslate_tile_stairs"
         }
       ],
       "block": "stonecutter",
@@ -615,7 +615,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:deepslate_tile_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:deepslate_tile_stairs"
         }
       ],
       "block": "stonecutter",
@@ -631,7 +631,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:deepslate_tile_wall;wall_connection_type_east=none;wall_connection_type_north=none;wall_connection_type_south=none;wall_connection_type_west=none;wall_post_bit=0"
+          "blockState": "minecraft:deepslate_tile_wall"
         }
       ],
       "block": "stonecutter",
@@ -647,7 +647,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:deepslate_tile_wall;wall_connection_type_east=none;wall_connection_type_north=none;wall_connection_type_south=none;wall_connection_type_west=none;wall_post_bit=0"
+          "blockState": "minecraft:deepslate_tile_wall"
         }
       ],
       "block": "stonecutter",
@@ -663,7 +663,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:deepslate_tile_wall;wall_connection_type_east=none;wall_connection_type_north=none;wall_connection_type_south=none;wall_connection_type_west=none;wall_post_bit=0"
+          "blockState": "minecraft:deepslate_tile_wall"
         }
       ],
       "block": "stonecutter",
@@ -679,7 +679,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:deepslate_tile_wall;wall_connection_type_east=none;wall_connection_type_north=none;wall_connection_type_south=none;wall_connection_type_west=none;wall_post_bit=0"
+          "blockState": "minecraft:deepslate_tile_wall"
         }
       ],
       "block": "stonecutter",
@@ -760,7 +760,7 @@
       "output": [
         {
           "count": 2,
-          "blockState": "minecraft:polished_deepslate_slab;top_slot_bit=0"
+          "blockState": "minecraft:polished_deepslate_slab"
         }
       ],
       "block": "stonecutter",
@@ -777,7 +777,7 @@
       "output": [
         {
           "count": 2,
-          "blockState": "minecraft:polished_deepslate_slab;top_slot_bit=0"
+          "blockState": "minecraft:polished_deepslate_slab"
         }
       ],
       "block": "stonecutter",
@@ -793,7 +793,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:polished_deepslate_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:polished_deepslate_stairs"
         }
       ],
       "block": "stonecutter",
@@ -809,7 +809,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:polished_deepslate_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:polished_deepslate_stairs"
         }
       ],
       "block": "stonecutter",
@@ -825,7 +825,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:polished_deepslate_wall;wall_connection_type_east=none;wall_connection_type_north=none;wall_connection_type_south=none;wall_connection_type_west=none;wall_post_bit=0"
+          "blockState": "minecraft:polished_deepslate_wall"
         }
       ],
       "block": "stonecutter",
@@ -841,7 +841,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:polished_deepslate_wall;wall_connection_type_east=none;wall_connection_type_north=none;wall_connection_type_south=none;wall_connection_type_west=none;wall_post_bit=0"
+          "blockState": "minecraft:polished_deepslate_wall"
         }
       ],
       "block": "stonecutter",
@@ -1196,7 +1196,7 @@
       "output": [
         {
           "count": 8,
-          "blockState": "minecraft:cut_copper_slab;top_slot_bit=0"
+          "blockState": "minecraft:cut_copper_slab"
         }
       ],
       "block": "stonecutter",
@@ -1214,7 +1214,7 @@
       "output": [
         {
           "count": 4,
-          "blockState": "minecraft:cut_copper_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:cut_copper_stairs"
         }
       ],
       "block": "stonecutter",
@@ -1232,7 +1232,7 @@
       "output": [
         {
           "count": 2,
-          "blockState": "minecraft:cut_copper_slab;top_slot_bit=0"
+          "blockState": "minecraft:cut_copper_slab"
         }
       ],
       "block": "stonecutter",
@@ -1249,7 +1249,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:cut_copper_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:cut_copper_stairs"
         }
       ],
       "block": "stonecutter",
@@ -1498,7 +1498,7 @@
       "output": [
         {
           "count": 4,
-          "blockState": "minecraft:exposed_cut_copper_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:exposed_cut_copper_stairs"
         }
       ],
       "block": "stonecutter",
@@ -1516,7 +1516,7 @@
       "output": [
         {
           "count": 8,
-          "blockState": "minecraft:exposed_cut_copper_slab;top_slot_bit=0"
+          "blockState": "minecraft:exposed_cut_copper_slab"
         }
       ],
       "block": "stonecutter",
@@ -1534,7 +1534,7 @@
       "output": [
         {
           "count": 2,
-          "blockState": "minecraft:exposed_cut_copper_slab;top_slot_bit=0"
+          "blockState": "minecraft:exposed_cut_copper_slab"
         }
       ],
       "block": "stonecutter",
@@ -1551,7 +1551,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:exposed_cut_copper_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:exposed_cut_copper_stairs"
         }
       ],
       "block": "stonecutter",
@@ -1835,7 +1835,7 @@
       "output": [
         {
           "count": 8,
-          "blockState": "minecraft:oxidized_cut_copper_slab;top_slot_bit=0"
+          "blockState": "minecraft:oxidized_cut_copper_slab"
         }
       ],
       "block": "stonecutter",
@@ -1853,7 +1853,7 @@
       "output": [
         {
           "count": 4,
-          "blockState": "minecraft:oxidized_cut_copper_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:oxidized_cut_copper_stairs"
         }
       ],
       "block": "stonecutter",
@@ -1871,7 +1871,7 @@
       "output": [
         {
           "count": 2,
-          "blockState": "minecraft:oxidized_cut_copper_slab;top_slot_bit=0"
+          "blockState": "minecraft:oxidized_cut_copper_slab"
         }
       ],
       "block": "stonecutter",
@@ -1888,7 +1888,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:oxidized_cut_copper_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:oxidized_cut_copper_stairs"
         }
       ],
       "block": "stonecutter",
@@ -3097,7 +3097,7 @@
       "output": [
         {
           "count": 8,
-          "blockState": "minecraft:waxed_cut_copper_slab;top_slot_bit=0"
+          "blockState": "minecraft:waxed_cut_copper_slab"
         }
       ],
       "block": "stonecutter",
@@ -3115,7 +3115,7 @@
       "output": [
         {
           "count": 4,
-          "blockState": "minecraft:waxed_cut_copper_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:waxed_cut_copper_stairs"
         }
       ],
       "block": "stonecutter",
@@ -3133,7 +3133,7 @@
       "output": [
         {
           "count": 8,
-          "blockState": "minecraft:waxed_exposed_cut_copper_slab;top_slot_bit=0"
+          "blockState": "minecraft:waxed_exposed_cut_copper_slab"
         }
       ],
       "block": "stonecutter",
@@ -3151,7 +3151,7 @@
       "output": [
         {
           "count": 2,
-          "blockState": "minecraft:waxed_cut_copper_slab;top_slot_bit=0"
+          "blockState": "minecraft:waxed_cut_copper_slab"
         }
       ],
       "block": "stonecutter",
@@ -3168,7 +3168,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:waxed_cut_copper_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:waxed_cut_copper_stairs"
         }
       ],
       "block": "stonecutter",
@@ -3204,7 +3204,7 @@
       "output": [
         {
           "count": 4,
-          "blockState": "minecraft:waxed_exposed_cut_copper_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:waxed_exposed_cut_copper_stairs"
         }
       ],
       "block": "stonecutter",
@@ -3222,7 +3222,7 @@
       "output": [
         {
           "count": 2,
-          "blockState": "minecraft:waxed_exposed_cut_copper_slab;top_slot_bit=0"
+          "blockState": "minecraft:waxed_exposed_cut_copper_slab"
         }
       ],
       "block": "stonecutter",
@@ -3239,7 +3239,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:waxed_exposed_cut_copper_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:waxed_exposed_cut_copper_stairs"
         }
       ],
       "block": "stonecutter",
@@ -3275,7 +3275,7 @@
       "output": [
         {
           "count": 8,
-          "blockState": "minecraft:waxed_oxidized_cut_copper_slab;top_slot_bit=0"
+          "blockState": "minecraft:waxed_oxidized_cut_copper_slab"
         }
       ],
       "block": "stonecutter",
@@ -3293,7 +3293,7 @@
       "output": [
         {
           "count": 4,
-          "blockState": "minecraft:waxed_oxidized_cut_copper_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:waxed_oxidized_cut_copper_stairs"
         }
       ],
       "block": "stonecutter",
@@ -3310,7 +3310,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:waxed_oxidized_cut_copper_slab;top_slot_bit=0"
+          "blockState": "minecraft:waxed_oxidized_cut_copper_slab"
         }
       ],
       "block": "stonecutter",
@@ -3327,7 +3327,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:waxed_oxidized_cut_copper_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:waxed_oxidized_cut_copper_stairs"
         }
       ],
       "block": "stonecutter",
@@ -3363,7 +3363,7 @@
       "output": [
         {
           "count": 8,
-          "blockState": "minecraft:waxed_weathered_cut_copper_slab;top_slot_bit=0"
+          "blockState": "minecraft:waxed_weathered_cut_copper_slab"
         }
       ],
       "block": "stonecutter",
@@ -3381,7 +3381,7 @@
       "output": [
         {
           "count": 4,
-          "blockState": "minecraft:waxed_weathered_cut_copper_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:waxed_weathered_cut_copper_stairs"
         }
       ],
       "block": "stonecutter",
@@ -3399,7 +3399,7 @@
       "output": [
         {
           "count": 2,
-          "blockState": "minecraft:waxed_weathered_cut_copper_slab;top_slot_bit=0"
+          "blockState": "minecraft:waxed_weathered_cut_copper_slab"
         }
       ],
       "block": "stonecutter",
@@ -3416,7 +3416,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:waxed_weathered_cut_copper_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:waxed_weathered_cut_copper_stairs"
         }
       ],
       "block": "stonecutter",
@@ -3452,7 +3452,7 @@
       "output": [
         {
           "count": 8,
-          "blockState": "minecraft:weathered_cut_copper_slab;top_slot_bit=0"
+          "blockState": "minecraft:weathered_cut_copper_slab"
         }
       ],
       "block": "stonecutter",
@@ -3470,7 +3470,7 @@
       "output": [
         {
           "count": 4,
-          "blockState": "minecraft:weathered_cut_copper_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:weathered_cut_copper_stairs"
         }
       ],
       "block": "stonecutter",
@@ -3488,7 +3488,7 @@
       "output": [
         {
           "count": 2,
-          "blockState": "minecraft:weathered_cut_copper_slab;top_slot_bit=0"
+          "blockState": "minecraft:weathered_cut_copper_slab"
         }
       ],
       "block": "stonecutter",
@@ -3505,7 +3505,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:weathered_cut_copper_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:weathered_cut_copper_stairs"
         }
       ],
       "block": "stonecutter",
@@ -13131,9 +13131,8 @@
       "type": 1,
       "input": {
         "A": {
-          "legacyId": 624,
           "id": "minecraft:amethyst_shard",
-          "damage": 32767
+          "fuzzy": true
         }
       },
       "output": [
@@ -14049,7 +14048,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:black_candle;candles=0;lit=0"
+          "blockState": "minecraft:black_candle"
         }
       ],
       "block": "crafting_table",
@@ -14069,7 +14068,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:black_candle;candles=0;lit=0"
+          "blockState": "minecraft:black_candle"
         }
       ],
       "block": "crafting_table",
@@ -15415,7 +15414,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:brown_candle;candles=0;lit=0"
+          "blockState": "minecraft:brown_candle"
         }
       ],
       "block": "crafting_table",
@@ -15436,7 +15435,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:brown_candle;candles=0;lit=0"
+          "blockState": "minecraft:brown_candle"
         }
       ],
       "block": "crafting_table",
@@ -16621,7 +16620,7 @@
       },
       "output": [
         {
-          "blockState": "minecraft:candle;candles=0;lit=0"
+          "blockState": "minecraft:candle"
         }
       ],
       "shape": [
@@ -17104,7 +17103,7 @@
       "output": [
         {
           "count": 6,
-          "blockState": "minecraft:cobbled_deepslate_slab;top_slot_bit=0"
+          "blockState": "minecraft:cobbled_deepslate_slab"
         }
       ],
       "shape": [
@@ -17125,7 +17124,7 @@
       "output": [
         {
           "count": 4,
-          "blockState": "minecraft:cobbled_deepslate_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:cobbled_deepslate_stairs"
         }
       ],
       "shape": [
@@ -17148,7 +17147,7 @@
       "output": [
         {
           "count": 6,
-          "blockState": "minecraft:cobbled_deepslate_wall;wall_connection_type_east=none;wall_connection_type_north=none;wall_connection_type_south=none;wall_connection_type_west=none;wall_post_bit=0"
+          "blockState": "minecraft:cobbled_deepslate_wall"
         }
       ],
       "shape": [
@@ -17472,7 +17471,7 @@
       "output": [
         {
           "count": 6,
-          "blockState": "minecraft:cut_copper_slab;top_slot_bit=0"
+          "blockState": "minecraft:cut_copper_slab"
         }
       ],
       "shape": [
@@ -17493,7 +17492,7 @@
       "output": [
         {
           "count": 4,
-          "blockState": "minecraft:cut_copper_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:cut_copper_stairs"
         }
       ],
       "shape": [
@@ -17538,7 +17537,7 @@
       "output": [
         {
           "count": 6,
-          "blockState": "minecraft:exposed_cut_copper_slab;top_slot_bit=0"
+          "blockState": "minecraft:exposed_cut_copper_slab"
         }
       ],
       "shape": [
@@ -17559,7 +17558,7 @@
       "output": [
         {
           "count": 4,
-          "blockState": "minecraft:exposed_cut_copper_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:exposed_cut_copper_stairs"
         }
       ],
       "shape": [
@@ -17667,7 +17666,7 @@
       "output": [
         {
           "count": 6,
-          "blockState": "minecraft:oxidized_cut_copper_slab;top_slot_bit=0"
+          "blockState": "minecraft:oxidized_cut_copper_slab"
         }
       ],
       "shape": [
@@ -17688,7 +17687,7 @@
       "output": [
         {
           "count": 4,
-          "blockState": "minecraft:oxidized_cut_copper_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:oxidized_cut_copper_stairs"
         }
       ],
       "shape": [
@@ -17733,7 +17732,7 @@
       "output": [
         {
           "count": 6,
-          "blockState": "minecraft:waxed_cut_copper_slab;top_slot_bit=0"
+          "blockState": "minecraft:waxed_cut_copper_slab"
         }
       ],
       "shape": [
@@ -17754,7 +17753,7 @@
       "output": [
         {
           "count": 4,
-          "blockState": "minecraft:waxed_cut_copper_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:waxed_cut_copper_stairs"
         }
       ],
       "shape": [
@@ -17799,7 +17798,7 @@
       "output": [
         {
           "count": 6,
-          "blockState": "minecraft:waxed_exposed_cut_copper_slab;top_slot_bit=0"
+          "blockState": "minecraft:waxed_exposed_cut_copper_slab"
         }
       ],
       "shape": [
@@ -17820,7 +17819,7 @@
       "output": [
         {
           "count": 4,
-          "blockState": "minecraft:waxed_exposed_cut_copper_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:waxed_exposed_cut_copper_stairs"
         }
       ],
       "shape": [
@@ -17865,7 +17864,7 @@
       "output": [
         {
           "count": 6,
-          "blockState": "minecraft:waxed_oxidized_cut_copper_slab;top_slot_bit=0"
+          "blockState": "minecraft:waxed_oxidized_cut_copper_slab"
         }
       ],
       "shape": [
@@ -17886,7 +17885,7 @@
       "output": [
         {
           "count": 4,
-          "blockState": "minecraft:waxed_oxidized_cut_copper_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:waxed_oxidized_cut_copper_stairs"
         }
       ],
       "shape": [
@@ -17931,7 +17930,7 @@
       "output": [
         {
           "count": 6,
-          "blockState": "minecraft:waxed_weathered_cut_copper_slab;top_slot_bit=0"
+          "blockState": "minecraft:waxed_weathered_cut_copper_slab"
         }
       ],
       "shape": [
@@ -17952,7 +17951,7 @@
       "output": [
         {
           "count": 4,
-          "blockState": "minecraft:waxed_weathered_cut_copper_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:waxed_weathered_cut_copper_stairs"
         }
       ],
       "shape": [
@@ -17997,7 +17996,7 @@
       "output": [
         {
           "count": 6,
-          "blockState": "minecraft:weathered_cut_copper_slab;top_slot_bit=0"
+          "blockState": "minecraft:weathered_cut_copper_slab"
         }
       ],
       "shape": [
@@ -18018,7 +18017,7 @@
       "output": [
         {
           "count": 4,
-          "blockState": "minecraft:weathered_cut_copper_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:weathered_cut_copper_stairs"
         }
       ],
       "shape": [
@@ -18417,7 +18416,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:cyan_candle;candles=0;lit=0"
+          "blockState": "minecraft:cyan_candle"
         }
       ],
       "block": "crafting_table",
@@ -19100,7 +19099,7 @@
       "output": [
         {
           "count": 6,
-          "blockState": "minecraft:deepslate_brick_slab;top_slot_bit=0"
+          "blockState": "minecraft:deepslate_brick_slab"
         }
       ],
       "shape": [
@@ -19121,7 +19120,7 @@
       "output": [
         {
           "count": 4,
-          "blockState": "minecraft:deepslate_brick_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:deepslate_brick_stairs"
         }
       ],
       "shape": [
@@ -19144,7 +19143,7 @@
       "output": [
         {
           "count": 6,
-          "blockState": "minecraft:deepslate_brick_wall;wall_connection_type_east=none;wall_connection_type_north=none;wall_connection_type_south=none;wall_connection_type_west=none;wall_post_bit=0"
+          "blockState": "minecraft:deepslate_brick_wall"
         }
       ],
       "shape": [
@@ -19188,7 +19187,7 @@
       "output": [
         {
           "count": 6,
-          "blockState": "minecraft:deepslate_tile_slab;top_slot_bit=0"
+          "blockState": "minecraft:deepslate_tile_slab"
         }
       ],
       "shape": [
@@ -19209,7 +19208,7 @@
       "output": [
         {
           "count": 4,
-          "blockState": "minecraft:deepslate_tile_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:deepslate_tile_stairs"
         }
       ],
       "shape": [
@@ -19232,7 +19231,7 @@
       "output": [
         {
           "count": 6,
-          "blockState": "minecraft:deepslate_tile_wall;wall_connection_type_east=none;wall_connection_type_north=none;wall_connection_type_south=none;wall_connection_type_west=none;wall_post_bit=0"
+          "blockState": "minecraft:deepslate_tile_wall"
         }
       ],
       "shape": [
@@ -20393,14 +20392,12 @@
           "fuzzy": true
         },
         {
-          "legacyId": 503,
           "id": "minecraft:glow_ink_sac",
-          "damage": 32767
+          "fuzzy": true
         }
       ],
       "output": [
         {
-          "legacyId": 623,
           "id": "minecraft:glow_frame"
         }
       ],
@@ -20917,7 +20914,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:gray_candle;candles=0;lit=0"
+          "blockState": "minecraft:gray_candle"
         }
       ],
       "block": "crafting_table",
@@ -21248,7 +21245,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:green_candle;candles=0;lit=0"
+          "blockState": "minecraft:green_candle"
         }
       ],
       "block": "crafting_table",
@@ -23236,7 +23233,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:light_blue_candle;candles=0;lit=0"
+          "blockState": "minecraft:light_blue_candle"
         }
       ],
       "block": "crafting_table",
@@ -23612,7 +23609,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:light_gray_candle;candles=0;lit=0"
+          "blockState": "minecraft:light_gray_candle"
         }
       ],
       "block": "crafting_table",
@@ -24099,7 +24096,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:lime_candle;candles=0;lit=0"
+          "blockState": "minecraft:lime_candle"
         }
       ],
       "block": "crafting_table",
@@ -24512,7 +24509,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:magenta_candle;candles=0;lit=0"
+          "blockState": "minecraft:magenta_candle"
         }
       ],
       "block": "crafting_table",
@@ -26301,7 +26298,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:orange_candle;candles=0;lit=0"
+          "blockState": "minecraft:orange_candle"
         }
       ],
       "block": "crafting_table",
@@ -26667,7 +26664,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:pink_candle;candles=0;lit=0"
+          "blockState": "minecraft:pink_candle"
         }
       ],
       "block": "crafting_table",
@@ -27365,7 +27362,7 @@
       "output": [
         {
           "count": 6,
-          "blockState": "minecraft:polished_deepslate_slab;top_slot_bit=0"
+          "blockState": "minecraft:polished_deepslate_slab"
         }
       ],
       "shape": [
@@ -27386,7 +27383,7 @@
       "output": [
         {
           "count": 4,
-          "blockState": "minecraft:polished_deepslate_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:polished_deepslate_stairs"
         }
       ],
       "shape": [
@@ -27409,7 +27406,7 @@
       "output": [
         {
           "count": 6,
-          "blockState": "minecraft:polished_deepslate_wall;wall_connection_type_east=none;wall_connection_type_north=none;wall_connection_type_south=none;wall_connection_type_west=none;wall_post_bit=0"
+          "blockState": "minecraft:polished_deepslate_wall"
         }
       ],
       "shape": [
@@ -27722,7 +27719,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:purple_candle;candles=0;lit=0"
+          "blockState": "minecraft:purple_candle"
         }
       ],
       "block": "crafting_table",
@@ -28180,7 +28177,6 @@
       },
       "output": [
         {
-          "legacyId": 507,
           "id": "minecraft:raw_copper",
           "count": 9
         }
@@ -28196,9 +28192,8 @@
       "type": 1,
       "input": {
         "A": {
-          "legacyId": 507,
           "id": "minecraft:raw_copper",
-          "damage": 32767
+          "fuzzy": true
         }
       },
       "output": [
@@ -28225,7 +28220,6 @@
       },
       "output": [
         {
-          "legacyId": 506,
           "id": "minecraft:raw_gold",
           "count": 9
         }
@@ -28241,9 +28235,8 @@
       "type": 1,
       "input": {
         "A": {
-          "legacyId": 506,
           "id": "minecraft:raw_gold",
-          "damage": 32767
+          "fuzzy": true
         }
       },
       "output": [
@@ -28270,7 +28263,6 @@
       },
       "output": [
         {
-          "legacyId": 505,
           "id": "minecraft:raw_iron",
           "count": 9
         }
@@ -28286,9 +28278,8 @@
       "type": 1,
       "input": {
         "A": {
-          "legacyId": 505,
           "id": "minecraft:raw_iron",
-          "damage": 32767
+          "fuzzy": true
         }
       },
       "output": [
@@ -28425,7 +28416,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:red_candle;candles=0;lit=0"
+          "blockState": "minecraft:red_candle"
         }
       ],
       "block": "crafting_table",
@@ -31533,9 +31524,8 @@
       "type": 1,
       "input": {
         "A": {
-          "legacyId": 624,
           "id": "minecraft:amethyst_shard",
-          "damage": 32767
+          "fuzzy": true
         },
         "B": {
           "legacyId": 504,
@@ -32702,9 +32692,8 @@
       "type": 1,
       "input": {
         "A": {
-          "legacyId": 624,
           "id": "minecraft:amethyst_shard",
-          "damage": 32767
+          "fuzzy": true
         },
         "B": {
           "fuzzy": true,
@@ -33298,7 +33287,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:waxed_cut_copper_slab;top_slot_bit=0"
+          "blockState": "minecraft:waxed_cut_copper_slab"
         }
       ],
       "block": "crafting_table",
@@ -33319,7 +33308,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:waxed_cut_copper_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:waxed_cut_copper_stairs"
         }
       ],
       "block": "crafting_table",
@@ -33382,7 +33371,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:waxed_exposed_cut_copper_slab;top_slot_bit=0"
+          "blockState": "minecraft:waxed_exposed_cut_copper_slab"
         }
       ],
       "block": "crafting_table",
@@ -33403,7 +33392,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:waxed_exposed_cut_copper_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:waxed_exposed_cut_copper_stairs"
         }
       ],
       "block": "crafting_table",
@@ -33466,7 +33455,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:waxed_oxidized_cut_copper_slab;top_slot_bit=0"
+          "blockState": "minecraft:waxed_oxidized_cut_copper_slab"
         }
       ],
       "block": "crafting_table",
@@ -33487,7 +33476,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:waxed_oxidized_cut_copper_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:waxed_oxidized_cut_copper_stairs"
         }
       ],
       "block": "crafting_table",
@@ -33550,7 +33539,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:waxed_weathered_cut_copper_slab;top_slot_bit=0"
+          "blockState": "minecraft:waxed_weathered_cut_copper_slab"
         }
       ],
       "block": "crafting_table",
@@ -33571,7 +33560,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:waxed_weathered_cut_copper_stairs;upside_down_bit=0;weirdo_direction=0"
+          "blockState": "minecraft:waxed_weathered_cut_copper_stairs"
         }
       ],
       "block": "crafting_table",
@@ -33639,7 +33628,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:white_candle;candles=0;lit=0"
+          "blockState": "minecraft:white_candle"
         }
       ],
       "block": "crafting_table",
@@ -33660,7 +33649,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:white_candle;candles=0;lit=0"
+          "blockState": "minecraft:white_candle"
         }
       ],
       "block": "crafting_table",
@@ -34446,7 +34435,7 @@
       ],
       "output": [
         {
-          "blockState": "minecraft:yellow_candle;candles=0;lit=0"
+          "blockState": "minecraft:yellow_candle"
         }
       ],
       "block": "crafting_table",
@@ -50039,7 +50028,7 @@
         "blockState": "minecraft:cobbled_deepslate"
       },
       "output": {
-        "blockState": "minecraft:deepslate;pillar_axis=y"
+        "blockState": "minecraft:deepslate"
       },
       "block": "furnace"
     },
@@ -51804,9 +51793,8 @@
     {
       "type": 3,
       "input": {
-        "legacyId": 505,
         "id": "minecraft:raw_iron",
-        "damage": -1
+        "fuzzy": true
       },
       "output": {
         "id": "minecraft:iron_ingot",
@@ -51817,9 +51805,8 @@
     {
       "type": 3,
       "input": {
-        "legacyId": 505,
         "id": "minecraft:raw_iron",
-        "damage": -1
+        "fuzzy": true
       },
       "output": {
         "id": "minecraft:iron_ingot",
@@ -51830,9 +51817,8 @@
     {
       "type": 3,
       "input": {
-        "legacyId": 506,
         "id": "minecraft:raw_gold",
-        "damage": -1
+        "fuzzy": true
       },
       "output": {
         "id": "minecraft:gold_ingot",
@@ -51843,9 +51829,8 @@
     {
       "type": 3,
       "input": {
-        "legacyId": 506,
         "id": "minecraft:raw_gold",
-        "damage": -1
+        "fuzzy": true
       },
       "output": {
         "id": "minecraft:gold_ingot",
@@ -51856,9 +51841,8 @@
     {
       "type": 3,
       "input": {
-        "legacyId": 507,
         "id": "minecraft:raw_copper",
-        "damage": -1
+        "fuzzy": true
       },
       "output": {
         "legacyId": 504,
@@ -51870,9 +51854,8 @@
     {
       "type": 3,
       "input": {
-        "legacyId": 507,
         "id": "minecraft:raw_copper",
-        "damage": -1
+        "fuzzy": true
       },
       "output": {
         "legacyId": 504,
