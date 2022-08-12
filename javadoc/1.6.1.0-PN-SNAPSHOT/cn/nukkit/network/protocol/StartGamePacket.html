@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>StartGamePacket (PowerNukkit 1.6.1.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2022-07-29">
+<meta name="date" content="2022-08-12">
 <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../../script.js"></script>
 </head>
@@ -157,6 +157,14 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#broadcastToLAN">broadcastToLAN</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>byte</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#chatRestrictionLevel">chatRestrictionLevel</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#clientSideGenerationEnabled">clientSideGenerationEnabled</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#commandsEnabled">commandsEnabled</a></span></code>&nbsp;</td>
 </tr>
@@ -177,206 +185,218 @@ extends <a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#dimension">dimension</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#disablePlayerInteractions">disablePlayerInteractions</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#eduEditionOffer">eduEditionOffer</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#enchantmentSeed">enchantmentSeed</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#entityRuntimeId">entityRuntimeId</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#entityUniqueId">entityUniqueId</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#GAME_PUBLISH_SETTING_FRIENDS_OF_FRIENDS">GAME_PUBLISH_SETTING_FRIENDS_OF_FRIENDS</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#GAME_PUBLISH_SETTING_FRIENDS_ONLY">GAME_PUBLISH_SETTING_FRIENDS_ONLY</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#GAME_PUBLISH_SETTING_INVITE_ONLY">GAME_PUBLISH_SETTING_INVITE_ONLY</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#GAME_PUBLISH_SETTING_NO_MULTI_PLAY">GAME_PUBLISH_SETTING_NO_MULTI_PLAY</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#GAME_PUBLISH_SETTING_PUBLIC">GAME_PUBLISH_SETTING_PUBLIC</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../cn/nukkit/level/GameRules.html" title="class in cn.nukkit.level">GameRules</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#gameRules">gameRules</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#generator">generator</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#hasAchievementsDisabled">hasAchievementsDisabled</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#hasConfirmedPlatformLockedContent">hasConfirmedPlatformLockedContent</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#hasEduFeaturesEnabled">hasEduFeaturesEnabled</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#hasLockedBehaviorPack">hasLockedBehaviorPack</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#hasLockedResourcePack">hasLockedResourcePack</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#hasStartWithMapEnabled">hasStartWithMapEnabled</a></span></code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#isDisablingCustomSkins">isDisablingCustomSkins</a></span></code>&nbsp;</td>
+</tr>
 <tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#isDisablingPersonas">isDisablingPersonas</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#isFromLockedWorldTemplate">isFromLockedWorldTemplate</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#isFromWorldTemplate">isFromWorldTemplate</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#isInventoryServerAuthoritative">isInventoryServerAuthoritative</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#isMovementServerAuthoritative">isMovementServerAuthoritative</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#isOnlySpawningV1Villagers">isOnlySpawningV1Villagers</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#isTexturePacksRequired">isTexturePacksRequired</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#isTrial">isTrial</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#isUsingMsaGamertagsOnly">isUsingMsaGamertagsOnly</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#isWorldTemplateOptionLocked">isWorldTemplateOptionLocked</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#levelId">levelId</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>float</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#lightningLevel">lightningLevel</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#multiplayerCorrelationId">multiplayerCorrelationId</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#multiplayerGame">multiplayerGame</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static byte</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#NETWORK_ID">NETWORK_ID</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#permissionLevel">permissionLevel</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>float</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#pitch">pitch</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#platformBroadcastIntent">platformBroadcastIntent</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#playerGamemode">playerGamemode</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#premiumWorldTemplateId">premiumWorldTemplateId</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>float</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#rainLevel">rainLevel</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#seed">seed</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#serverChunkTickRange">serverChunkTickRange</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#spawnX">spawnX</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#spawnY">spawnY</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#spawnZ">spawnZ</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#vanillaVersion">vanillaVersion</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#worldEditor">worldEditor</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#worldGamemode">worldGamemode</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#worldName">worldName</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>float</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#x">x</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#xblBroadcastIntent">xblBroadcastIntent</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>float</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#y">y</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>float</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#yaw">yaw</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>float</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/protocol/StartGamePacket.html#z">z</a></span></code>&nbsp;</td>
 </tr>
@@ -1019,10 +1039,55 @@ public&nbsp;boolean isInventoryServerAuthoritative</pre>
 <a name="multiplayerCorrelationId">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>multiplayerCorrelationId</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> multiplayerCorrelationId</pre>
+</li>
+</ul>
+<a name="isDisablingPersonas">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isDisablingPersonas</h4>
+<pre>public&nbsp;boolean isDisablingPersonas</pre>
+</li>
+</ul>
+<a name="isDisablingCustomSkins">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isDisablingCustomSkins</h4>
+<pre>public&nbsp;boolean isDisablingCustomSkins</pre>
+</li>
+</ul>
+<a name="clientSideGenerationEnabled">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>clientSideGenerationEnabled</h4>
+<pre>public&nbsp;boolean clientSideGenerationEnabled</pre>
+</li>
+</ul>
+<a name="chatRestrictionLevel">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>chatRestrictionLevel</h4>
+<pre>public&nbsp;byte chatRestrictionLevel</pre>
+</li>
+</ul>
+<a name="disablePlayerInteractions">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>disablePlayerInteractions</h4>
+<pre>public&nbsp;boolean disablePlayerInteractions</pre>
 </li>
 </ul>
 </li>
