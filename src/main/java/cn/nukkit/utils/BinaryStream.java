@@ -35,6 +35,7 @@ import java.nio.ByteOrder;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.function.Consumer;
+import java.util.function.BiConsumer;
 import java.util.function.Function;
 
 /**
@@ -685,9 +686,12 @@ public class BinaryStream {
 
     public void putRecipeIngredient(Item ingredient) {
         if (ingredient == null || ingredient.getId() == 0) {
-            this.putVarInt(0);
+            this.putBoolean(false); // isValid? - false
+            this.putVarInt(0); // item == null ? 0 : item.getCount()
             return;
         }
+
+        this.putBoolean(true); // isValid? - true
 
         int networkFullId = RuntimeItems.getRuntimeMapping().getNetworkFullId(ingredient);
         int networkId = RuntimeItems.getNetworkId(networkFullId);
@@ -696,8 +700,8 @@ public class BinaryStream {
             damage = 0;
         }
 
-        this.putVarInt(networkId);
-        this.putVarInt(damage);
+        this.putLShort(networkId);
+        this.putLShort(damage);
         this.putVarInt(ingredient.getCount());
     }
 
@@ -912,6 +916,13 @@ public class BinaryStream {
             deque.add(function.apply(this));
         }
         return deque.toArray((T[]) Array.newInstance(clazz, 0));
+    }
+
+    public <T> void putArray(Collection<T> array, BiConsumer<BinaryStream, T> biConsumer) {
+        this.putUnsignedVarInt(array.size());
+        for (T val : array) {
+            biConsumer.accept(this, val);
+        }
     }
 
     public boolean feof() {
