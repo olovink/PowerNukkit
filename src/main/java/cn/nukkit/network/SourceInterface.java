@@ -48,5 +48,8 @@ public interface SourceInterface {
     
     @PowerNukkitOnly
     @Since("1.5.2.0-PN")
-    Integer putResourcePacket(Player player, DataPacket packet);
+    @Deprecated
+    default Integer putResourcePacket(Player player, DataPacket packet) {
+        throw new UnsupportedOperationException("This method is deprecated");
+    }
 }
