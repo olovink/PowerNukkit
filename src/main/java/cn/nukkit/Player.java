@@ -1195,7 +1195,11 @@ public class Player extends EntityHuman implements CommandSender, InventoryHolde
                 log.trace("Outbound {}: {}", this.getName(), packet);
             }
 
-            this.networkSession.sendPacket(packet);
+            // To fix test NullPointerException because of network update
+            // TODO: Is this a correct way to fix this issue?
+            if (this.networkSession != null) {
+                this.networkSession.sendPacket(packet);
+            }
         }
         return true;
     }
@@ -1236,7 +1240,11 @@ public class Player extends EntityHuman implements CommandSender, InventoryHolde
 
     @Since("FUTURE")
     public void forceDataPacket(DataPacket packet, Runnable callback) {
-        this.networkSession.sendImmediatePacket(packet, (callback == null ? () -> {} : callback));
+        // To fix test NullPointerException because of network update
+        // TODO: Is this a correct way to fix this issue?
+        if (this.networkSession != null) {
+            this.networkSession.sendImmediatePacket(packet, (callback == null ? () -> {} : callback));
+        }
     }
 
     public int getPing() {
@@ -2409,8 +2417,9 @@ public class Player extends EntityHuman implements CommandSender, InventoryHolde
         }
 
         if (!verified && packet.pid() != ProtocolInfo.LOGIN_PACKET && packet.pid() != ProtocolInfo.BATCH_PACKET && packet.pid() != ProtocolInfo.REQUEST_NETWORK_SETTINGS_PACKET) {
+            this.unverifiedPackets++;
             log.warn("Ignoring {} from {} due to player not verified yet", packet.getClass().getSimpleName(), getAddress());
-            if (unverifiedPackets++ > 100) {
+            if (this.unverifiedPackets > 100) {
                 this.close("", "Too many failed login attempts");
             }
             return;

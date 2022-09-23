@@ -223,10 +223,11 @@ public class Network {
         return server;
     }
 
+    @Since("FUTURE")
     public void processBatch(BatchPacket packet, Player player) {
         List<DataPacket> packets = new ObjectArrayList<>();
         try {
-            this.processBatch(packet.payload, packets, player.getNetworkSession().getCompression());
+            this.processBatch(packet.payload, packets, player.getNetworkSession() == null ? CompressionProvider.ZLIB : player.getNetworkSession().getCompression());
         } catch (ProtocolException e) {
             player.close("", e.getMessage());
             log.error("Unable to process player packets ", e);

@@ -1,6 +1,7 @@
 package cn.nukkit.network.protocol;
 
 import cn.nukkit.Player;
+import cn.nukkit.api.DeprecationDetails;
 import lombok.ToString;
 
 /**
@@ -8,6 +9,7 @@ import lombok.ToString;
  */
 @ToString
 @Deprecated
+@DeprecationDetails(since = "FUTURE", reason = "It is no longer used since Minecraft BE 1.19.30", by = "Minecraft")
 public class AdventureSettingsPacket extends DataPacket {
 
     public static final byte NETWORK_ID = ProtocolInfo.ADVENTURE_SETTINGS_PACKET;
