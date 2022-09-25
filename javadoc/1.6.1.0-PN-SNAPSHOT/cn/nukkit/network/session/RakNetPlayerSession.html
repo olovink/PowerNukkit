@@ -1,0 +1,491 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RakNetPlayerSession (PowerNukkit 1.6.1.0-PN-SNAPSHOT API)</title>
+<meta name="date" content="2022-09-25">
+<link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
+<script type="text/javascript" src="../../../../script.js"></script>
+</head>
+<body>
+<script type="text/javascript"><!--
+    try {
+        if (location.href.indexOf('is-external=true') == -1) {
+            parent.document.title="RakNetPlayerSession (PowerNukkit 1.6.1.0-PN-SNAPSHOT API)";
+        }
+    }
+    catch(err) {
+    }
+//-->
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+var altColor = "altColor";
+var rowColor = "rowColor";
+var tableTab = "tableTab";
+var activeTableTab = "activeTableTab";
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar.top">
+<!--   -->
+</a>
+<div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.top.firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/RakNetPlayerSession.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../cn/nukkit/network/session/NetworkPlayerSession.html" title="interface in cn.nukkit.network.session"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li>Next&nbsp;Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?cn/nukkit/network/session/RakNetPlayerSession.html" target="_top">Frames</a></li>
+<li><a href="RakNetPlayerSession.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">cn.nukkit.network.session</div>
+<h2 title="Class RakNetPlayerSession" class="title">Class RakNetPlayerSession</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li>cn.nukkit.network.session.RakNetPlayerSession</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../cn/nukkit/network/session/NetworkPlayerSession.html" title="interface in cn.nukkit.network.session">NetworkPlayerSession</a>, com.nukkitx.network.raknet.RakNetSessionListener</dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="typeNameLabel">RakNetPlayerSession</span>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
+implements <a href="../../../../cn/nukkit/network/session/NetworkPlayerSession.html" title="interface in cn.nukkit.network.session">NetworkPlayerSession</a>, com.nukkitx.network.raknet.RakNetSessionListener</pre>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor.summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/session/RakNetPlayerSession.html#RakNetPlayerSession-cn.nukkit.network.RakNetInterface-com.nukkitx.network.raknet.RakNetServerSession-">RakNetPlayerSession</a></span>(<a href="../../../../cn/nukkit/network/RakNetInterface.html" title="class in cn.nukkit.network">RakNetInterface</a>&nbsp;server,
+                   com.nukkitx.network.raknet.RakNetServerSession&nbsp;session)</code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method.summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr id="i0" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/session/RakNetPlayerSession.html#disconnect-java.lang.String-">disconnect</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;reason)</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/network/CompressionProvider.html" title="interface in cn.nukkit.network">CompressionProvider</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/session/RakNetPlayerSession.html#getCompression--">getCompression</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/session/RakNetPlayerSession.html#getDisconnectReason--">getDisconnectReason</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/session/RakNetPlayerSession.html#getPlayer--">getPlayer</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>com.nukkitx.network.raknet.RakNetServerSession</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/session/RakNetPlayerSession.html#getRakNetSession--">getRakNetSession</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/session/RakNetPlayerSession.html#onDirect-io.netty.buffer.ByteBuf-">onDirect</a></span>(io.netty.buffer.ByteBuf&nbsp;byteBuf)</code>&nbsp;</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/session/RakNetPlayerSession.html#onDisconnect-com.nukkitx.network.util.DisconnectReason-">onDisconnect</a></span>(com.nukkitx.network.util.DisconnectReason&nbsp;reason)</code>&nbsp;</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/session/RakNetPlayerSession.html#onEncapsulated-com.nukkitx.network.raknet.EncapsulatedPacket-">onEncapsulated</a></span>(com.nukkitx.network.raknet.EncapsulatedPacket&nbsp;packet)</code>&nbsp;</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/session/RakNetPlayerSession.html#onSessionChangeState-com.nukkitx.network.raknet.RakNetState-">onSessionChangeState</a></span>(com.nukkitx.network.raknet.RakNetState&nbsp;rakNetState)</code>&nbsp;</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/session/RakNetPlayerSession.html#sendImmediatePacket-cn.nukkit.network.protocol.DataPacket-java.lang.Runnable-">sendImmediatePacket</a></span>(<a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet,
+                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;callback)</code>&nbsp;</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/session/RakNetPlayerSession.html#sendPacket-cn.nukkit.network.protocol.DataPacket-">sendPacket</a></span>(<a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</code>&nbsp;</td>
+</tr>
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/session/RakNetPlayerSession.html#serverTick--">serverTick</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i12" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/session/RakNetPlayerSession.html#setCompression-cn.nukkit.network.CompressionProvider-">setCompression</a></span>(<a href="../../../../cn/nukkit/network/CompressionProvider.html" title="interface in cn.nukkit.network">CompressionProvider</a>&nbsp;compression)</code>&nbsp;</td>
+</tr>
+<tr id="i13" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../cn/nukkit/network/session/RakNetPlayerSession.html#setPlayer-cn.nukkit.Player-">setPlayer</a></span>(<a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player)</code>&nbsp;</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor.detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="RakNetPlayerSession-cn.nukkit.network.RakNetInterface-com.nukkitx.network.raknet.RakNetServerSession-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>RakNetPlayerSession</h4>
+<pre>public&nbsp;RakNetPlayerSession(<a href="../../../../cn/nukkit/network/RakNetInterface.html" title="class in cn.nukkit.network">RakNetInterface</a>&nbsp;server,
+                           com.nukkitx.network.raknet.RakNetServerSession&nbsp;session)</pre>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method.detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="onEncapsulated-com.nukkitx.network.raknet.EncapsulatedPacket-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onEncapsulated</h4>
+<pre>public&nbsp;void&nbsp;onEncapsulated(com.nukkitx.network.raknet.EncapsulatedPacket&nbsp;packet)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>onEncapsulated</code>&nbsp;in interface&nbsp;<code>com.nukkitx.network.raknet.RakNetSessionListener</code></dd>
+</dl>
+</li>
+</ul>
+<a name="onDirect-io.netty.buffer.ByteBuf-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onDirect</h4>
+<pre>public&nbsp;void&nbsp;onDirect(io.netty.buffer.ByteBuf&nbsp;byteBuf)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>onDirect</code>&nbsp;in interface&nbsp;<code>com.nukkitx.network.raknet.RakNetSessionListener</code></dd>
+</dl>
+</li>
+</ul>
+<a name="onSessionChangeState-com.nukkitx.network.raknet.RakNetState-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onSessionChangeState</h4>
+<pre>public&nbsp;void&nbsp;onSessionChangeState(com.nukkitx.network.raknet.RakNetState&nbsp;rakNetState)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>onSessionChangeState</code>&nbsp;in interface&nbsp;<code>com.nukkitx.network.raknet.RakNetSessionListener</code></dd>
+</dl>
+</li>
+</ul>
+<a name="onDisconnect-com.nukkitx.network.util.DisconnectReason-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>onDisconnect</h4>
+<pre>public&nbsp;void&nbsp;onDisconnect(com.nukkitx.network.util.DisconnectReason&nbsp;reason)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code>onDisconnect</code>&nbsp;in interface&nbsp;<code>com.nukkitx.network.raknet.RakNetSessionListener</code></dd>
+</dl>
+</li>
+</ul>
+<a name="disconnect-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>disconnect</h4>
+<pre>public&nbsp;void&nbsp;disconnect(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;reason)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../cn/nukkit/network/session/NetworkPlayerSession.html#disconnect-java.lang.String-">disconnect</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../cn/nukkit/network/session/NetworkPlayerSession.html" title="interface in cn.nukkit.network.session">NetworkPlayerSession</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="sendPacket-cn.nukkit.network.protocol.DataPacket-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sendPacket</h4>
+<pre>public&nbsp;void&nbsp;sendPacket(<a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../cn/nukkit/network/session/NetworkPlayerSession.html#sendPacket-cn.nukkit.network.protocol.DataPacket-">sendPacket</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../cn/nukkit/network/session/NetworkPlayerSession.html" title="interface in cn.nukkit.network.session">NetworkPlayerSession</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="sendImmediatePacket-cn.nukkit.network.protocol.DataPacket-java.lang.Runnable-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>sendImmediatePacket</h4>
+<pre>public&nbsp;void&nbsp;sendImmediatePacket(<a href="../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet,
+                                <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;callback)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../cn/nukkit/network/session/NetworkPlayerSession.html#sendImmediatePacket-cn.nukkit.network.protocol.DataPacket-java.lang.Runnable-">sendImmediatePacket</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../cn/nukkit/network/session/NetworkPlayerSession.html" title="interface in cn.nukkit.network.session">NetworkPlayerSession</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="serverTick--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>serverTick</h4>
+<pre>public&nbsp;void&nbsp;serverTick()</pre>
+</li>
+</ul>
+<a name="setCompression-cn.nukkit.network.CompressionProvider-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setCompression</h4>
+<pre>public&nbsp;void&nbsp;setCompression(<a href="../../../../cn/nukkit/network/CompressionProvider.html" title="interface in cn.nukkit.network">CompressionProvider</a>&nbsp;compression)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../cn/nukkit/network/session/NetworkPlayerSession.html#setCompression-cn.nukkit.network.CompressionProvider-">setCompression</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../cn/nukkit/network/session/NetworkPlayerSession.html" title="interface in cn.nukkit.network.session">NetworkPlayerSession</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="getCompression--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCompression</h4>
+<pre>public&nbsp;<a href="../../../../cn/nukkit/network/CompressionProvider.html" title="interface in cn.nukkit.network">CompressionProvider</a>&nbsp;getCompression()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../cn/nukkit/network/session/NetworkPlayerSession.html#getCompression--">getCompression</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../cn/nukkit/network/session/NetworkPlayerSession.html" title="interface in cn.nukkit.network.session">NetworkPlayerSession</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="setPlayer-cn.nukkit.Player-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setPlayer</h4>
+<pre>public&nbsp;void&nbsp;setPlayer(<a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player)</pre>
+</li>
+</ul>
+<a name="getPlayer--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getPlayer</h4>
+<pre>public&nbsp;<a href="../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;getPlayer()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../cn/nukkit/network/session/NetworkPlayerSession.html#getPlayer--">getPlayer</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../cn/nukkit/network/session/NetworkPlayerSession.html" title="interface in cn.nukkit.network.session">NetworkPlayerSession</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="getRakNetSession--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRakNetSession</h4>
+<pre>public&nbsp;com.nukkitx.network.raknet.RakNetServerSession&nbsp;getRakNetSession()</pre>
+</li>
+</ul>
+<a name="getDisconnectReason--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getDisconnectReason</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getDisconnectReason()</pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar.bottom">
+<!--   -->
+</a>
+<div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.bottom.firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/RakNetPlayerSession.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li><a href="../../../../cn/nukkit/network/session/NetworkPlayerSession.html" title="interface in cn.nukkit.network.session"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li>Next&nbsp;Class</li>
+</ul>
+<ul class="navList">
+<li><a href="../../../../index.html?cn/nukkit/network/session/RakNetPlayerSession.html" target="_top">Frames</a></li>
+<li><a href="RakNetPlayerSession.html" target="_top">No&nbsp;Frames</a></li>
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2020&#x2013;2022 <a href="https://powernukkit.org">PowerNukkit</a>. All rights reserved.</small></p>
+</body>
+</html>

@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>AdventureSettings.Type (PowerNukkit 1.6.1.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2022-08-24">
+<meta name="date" content="2022-09-25">
 <link rel="stylesheet" type="text/css" href="../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../script.js"></script>
 </head>
@@ -19,7 +19,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":9,"i3":9};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":9,"i4":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -155,13 +155,21 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?i
 <td class="colOne"><code><span class="memberNameLink"><a href="../../cn/nukkit/AdventureSettings.Type.html#AUTO_JUMP">AUTO_JUMP</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../cn/nukkit/AdventureSettings.Type.html#BUILD_AND_MINE">BUILD_AND_MINE</a></span></code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../cn/nukkit/AdventureSettings.Type.html#BUILD">BUILD</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../cn/nukkit/AdventureSettings.Type.html#DOORS_AND_SWITCHED">DOORS_AND_SWITCHED</a></span></code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../cn/nukkit/AdventureSettings.Type.html#DEFAULT_LEVEL_PERMISSIONS">DEFAULT_LEVEL_PERMISSIONS</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+</td>
 </tr>
 <tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../cn/nukkit/AdventureSettings.Type.html#DOORS_AND_SWITCHED">DOORS_AND_SWITCHED</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../cn/nukkit/AdventureSettings.Type.html#FLYING">FLYING</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../cn/nukkit/AdventureSettings.Type.html#MINE">MINE</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../cn/nukkit/AdventureSettings.Type.html#MUTED">MUTED</a></span></code>&nbsp;</td>
@@ -170,18 +178,27 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?i
 <td class="colOne"><code><span class="memberNameLink"><a href="../../cn/nukkit/AdventureSettings.Type.html#NO_CLIP">NO_CLIP</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../cn/nukkit/AdventureSettings.Type.html#NO_MVP">NO_MVP</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../cn/nukkit/AdventureSettings.Type.html#NO_PVM">NO_PVM</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../cn/nukkit/AdventureSettings.Type.html#OPEN_CONTAINERS">OPEN_CONTAINERS</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../cn/nukkit/AdventureSettings.Type.html#OPERATOR">OPERATOR</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../cn/nukkit/AdventureSettings.Type.html#TELEPORT">TELEPORT</a></span></code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../cn/nukkit/AdventureSettings.Type.html#SHOW_NAME_TAGS">SHOW_NAME_TAGS</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../cn/nukkit/AdventureSettings.Type.html#WORLD_BUILDER">WORLD_BUILDER</a></span></code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../cn/nukkit/AdventureSettings.Type.html#TELEPORT">TELEPORT</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../cn/nukkit/AdventureSettings.Type.html#WORLD_BUILDER">WORLD_BUILDER</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../cn/nukkit/AdventureSettings.Type.html#WORLD_IMMUTABLE">WORLD_IMMUTABLE</a></span></code>&nbsp;</td>
 </tr>
 </table>
@@ -200,20 +217,24 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?i
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code><a href="../../cn/nukkit/network/protocol/types/PlayerAbility.html" title="enum in cn.nukkit.network.protocol.types">PlayerAbility</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../cn/nukkit/AdventureSettings.Type.html#getAbility--">getAbility</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../cn/nukkit/AdventureSettings.Type.html#getDefaultValue--">getDefaultValue</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
-<td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../cn/nukkit/AdventureSettings.Type.html#getId--">getId</a></span>()</code>&nbsp;</td>
-</tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../cn/nukkit/AdventureSettings.Type.html#isAbility--">isAbility</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>static <a href="../../cn/nukkit/AdventureSettings.Type.html" title="enum in cn.nukkit">AdventureSettings.Type</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../cn/nukkit/AdventureSettings.Type.html#valueOf-java.lang.String-">valueOf</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>static <a href="../../cn/nukkit/AdventureSettings.Type.html" title="enum in cn.nukkit">AdventureSettings.Type</a>[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../cn/nukkit/AdventureSettings.Type.html#values--">values</a></span>()</code>
 <div class="block">Returns an array containing the constants of this enum type, in
@@ -256,6 +277,33 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>WORLD_IMMUTABLE</h4>
 <pre>public static final&nbsp;<a href="../../cn/nukkit/AdventureSettings.Type.html" title="enum in cn.nukkit">AdventureSettings.Type</a> WORLD_IMMUTABLE</pre>
+</li>
+</ul>
+<a name="NO_PVM">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>NO_PVM</h4>
+<pre>public static final&nbsp;<a href="../../cn/nukkit/AdventureSettings.Type.html" title="enum in cn.nukkit">AdventureSettings.Type</a> NO_PVM</pre>
+</li>
+</ul>
+<a name="NO_MVP">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>NO_MVP</h4>
+<pre>public static final&nbsp;<a href="../../cn/nukkit/AdventureSettings.Type.html" title="enum in cn.nukkit">AdventureSettings.Type</a> NO_MVP</pre>
+</li>
+</ul>
+<a name="SHOW_NAME_TAGS">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SHOW_NAME_TAGS</h4>
+<pre>public static final&nbsp;<a href="../../cn/nukkit/AdventureSettings.Type.html" title="enum in cn.nukkit">AdventureSettings.Type</a> SHOW_NAME_TAGS</pre>
 </li>
 </ul>
 <a name="AUTO_JUMP">
@@ -312,13 +360,13 @@ the order they are declared.</div>
 <pre>public static final&nbsp;<a href="../../cn/nukkit/AdventureSettings.Type.html" title="enum in cn.nukkit">AdventureSettings.Type</a> MUTED</pre>
 </li>
 </ul>
-<a name="BUILD_AND_MINE">
+<a name="MINE">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>BUILD_AND_MINE</h4>
-<pre>public static final&nbsp;<a href="../../cn/nukkit/AdventureSettings.Type.html" title="enum in cn.nukkit">AdventureSettings.Type</a> BUILD_AND_MINE</pre>
+<h4>MINE</h4>
+<pre>public static final&nbsp;<a href="../../cn/nukkit/AdventureSettings.Type.html" title="enum in cn.nukkit">AdventureSettings.Type</a> MINE</pre>
 </li>
 </ul>
 <a name="DOORS_AND_SWITCHED">
@@ -369,10 +417,30 @@ the order they are declared.</div>
 <a name="TELEPORT">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>TELEPORT</h4>
 <pre>public static final&nbsp;<a href="../../cn/nukkit/AdventureSettings.Type.html" title="enum in cn.nukkit">AdventureSettings.Type</a> TELEPORT</pre>
+</li>
+</ul>
+<a name="BUILD">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>BUILD</h4>
+<pre>public static final&nbsp;<a href="../../cn/nukkit/AdventureSettings.Type.html" title="enum in cn.nukkit">AdventureSettings.Type</a> BUILD</pre>
+</li>
+</ul>
+<a name="DEFAULT_LEVEL_PERMISSIONS">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>DEFAULT_LEVEL_PERMISSIONS</h4>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+public static final&nbsp;<a href="../../cn/nukkit/AdventureSettings.Type.html" title="enum in cn.nukkit">AdventureSettings.Type</a> DEFAULT_LEVEL_PERMISSIONS</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </li>
 </ul>
 </li>
@@ -425,22 +493,31 @@ not permitted.)</div>
 </dl>
 </li>
 </ul>
-<a name="getId--">
+<a name="getDefaultValue--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getId</h4>
-<pre>public&nbsp;int&nbsp;getId()</pre>
+<h4>getDefaultValue</h4>
+<pre>public&nbsp;boolean&nbsp;getDefaultValue()</pre>
 </li>
 </ul>
-<a name="getDefaultValue--">
+<a name="getAbility--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getAbility</h4>
+<pre>public&nbsp;<a href="../../cn/nukkit/network/protocol/types/PlayerAbility.html" title="enum in cn.nukkit.network.protocol.types">PlayerAbility</a>&nbsp;getAbility()</pre>
+</li>
+</ul>
+<a name="isAbility--">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>getDefaultValue</h4>
-<pre>public&nbsp;boolean&nbsp;getDefaultValue()</pre>
+<h4>isAbility</h4>
+<pre>public&nbsp;boolean&nbsp;isAbility()</pre>
 </li>
 </ul>
 </li>

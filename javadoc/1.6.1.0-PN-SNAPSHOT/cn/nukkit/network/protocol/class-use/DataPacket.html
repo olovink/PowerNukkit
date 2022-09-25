@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Uses of Class cn.nukkit.network.protocol.DataPacket (PowerNukkit 1.6.1.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2022-08-24">
+<meta name="date" content="2022-09-25">
 <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../../../script.js"></script>
 </head>
@@ -120,6 +120,10 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="#cn.nukkit.network.session">cn.nukkit.network.session</a></td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="#co.aikar.timings">co.aikar.timings</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -187,11 +191,15 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><span class="typeNameLabel">Player.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/Player.html#dataPacketImmediately-cn.nukkit.network.protocol.DataPacket-">dataPacketImmediately</a></span>(<a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">Player.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/Player.html#dataPacketImmediately-cn.nukkit.network.protocol.DataPacket-">dataPacketImmediately</a></span>(<a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><span class="typeNameLabel">Player.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/Player.html#dataResourcePacket-cn.nukkit.network.protocol.DataPacket-">dataResourcePacket</a></span>(<a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">Player.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/Player.html#dataResourcePacket-cn.nukkit.network.protocol.DataPacket-">dataResourcePacket</a></span>(<a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
@@ -208,9 +216,14 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">Player.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/Player.html#handleDataPacket-cn.nukkit.network.protocol.DataPacket-">handleDataPacket</a></span>(<a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">Player.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/Player.html#forceDataPacket-cn.nukkit.network.protocol.DataPacket-java.lang.Runnable-">forceDataPacket</a></span>(<a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet,
+               <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;callback)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">Player.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/Player.html#handleDataPacket-cn.nukkit.network.protocol.DataPacket-">handleDataPacket</a></span>(<a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="typeNameLabel">Player.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/Player.html#sendChunk-int-int-cn.nukkit.network.protocol.DataPacket-">sendChunk</a></span>(int&nbsp;x,
          int&nbsp;z,
@@ -460,7 +473,9 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&gt;</code></td>
-<td class="colLast"><span class="typeNameLabel">Network.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/Network.html#unpackBatchedPackets-cn.nukkit.network.protocol.BatchPacket-">unpackBatchedPackets</a></span>(<a href="../../../../../cn/nukkit/network/protocol/BatchPacket.html" title="class in cn.nukkit.network.protocol">BatchPacket</a>&nbsp;packet)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">Network.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/Network.html#unpackBatchedPackets-cn.nukkit.network.protocol.BatchPacket-">unpackBatchedPackets</a></span>(<a href="../../../../../cn/nukkit/network/protocol/BatchPacket.html" title="class in cn.nukkit.network.protocol">BatchPacket</a>&nbsp;packet)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -472,9 +487,11 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a></code></td>
+<td class="colFirst"><code>default <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a></code></td>
 <td class="colLast"><span class="typeNameLabel">SourceInterface.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/SourceInterface.html#putPacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-">putPacket</a></span>(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
-         <a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</code>&nbsp;</td>
+         <a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a></code></td>
@@ -482,10 +499,12 @@
          <a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a></code></td>
+<td class="colFirst"><code>default <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a></code></td>
 <td class="colLast"><span class="typeNameLabel">SourceInterface.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/SourceInterface.html#putPacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-boolean-">putPacket</a></span>(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
          <a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet,
-         boolean&nbsp;needACK)</code>&nbsp;</td>
+         boolean&nbsp;needACK)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a></code></td>
@@ -494,11 +513,13 @@
          boolean&nbsp;needACK)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a></code></td>
+<td class="colFirst"><code>default <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a></code></td>
 <td class="colLast"><span class="typeNameLabel">SourceInterface.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/SourceInterface.html#putPacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-boolean-boolean-">putPacket</a></span>(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
          <a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet,
          boolean&nbsp;needACK,
-         boolean&nbsp;immediate)</code>&nbsp;</td>
+         boolean&nbsp;immediate)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a></code></td>
@@ -508,14 +529,18 @@
          boolean&nbsp;immediate)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a></code></td>
+<td class="colFirst"><code>default <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a></code></td>
 <td class="colLast"><span class="typeNameLabel">SourceInterface.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/SourceInterface.html#putResourcePacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-">putResourcePacket</a></span>(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
-                 <a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</code>&nbsp;</td>
+                 <a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a></code></td>
 <td class="colLast"><span class="typeNameLabel">RakNetInterface.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/RakNetInterface.html#putResourcePacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-">putResourcePacket</a></span>(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
-                 <a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</code>&nbsp;</td>
+                 <a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+</td>
 </tr>
 </tbody>
 </table>
@@ -528,8 +553,9 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">Network.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/Network.html#processBatch-byte:A-java.util.Collection-">processBatch</a></span>(byte[]&nbsp;payload,
-            <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&gt;&nbsp;packets)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">Network.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/Network.html#processBatch-byte:A-java.util.Collection-cn.nukkit.network.CompressionProvider-">processBatch</a></span>(byte[]&nbsp;payload,
+            <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&gt;&nbsp;packets,
+            <a href="../../../../../cn/nukkit/network/CompressionProvider.html" title="interface in cn.nukkit.network">CompressionProvider</a>&nbsp;compression)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
@@ -588,7 +614,9 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/AdventureSettingsPacket.html" title="class in cn.nukkit.network.protocol">AdventureSettingsPacket</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/AdventureSettingsPacket.html" title="class in cn.nukkit.network.protocol">AdventureSettingsPacket</a></span></code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
@@ -864,75 +892,83 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/NetworkStackLatencyPacket.html" title="class in cn.nukkit.network.protocol">NetworkStackLatencyPacket</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/NetworkSettingsPacket.html" title="class in cn.nukkit.network.protocol">NetworkSettingsPacket</a></span></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/NetworkStackLatencyPacket.html" title="class in cn.nukkit.network.protocol">NetworkStackLatencyPacket</a></span></code>&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/NPCDialoguePacket.html" title="class in cn.nukkit.network.protocol">NPCDialoguePacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/NPCRequestPacket.html" title="class in cn.nukkit.network.protocol">NPCRequestPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/OnScreenTextureAnimationPacket.html" title="class in cn.nukkit.network.protocol">OnScreenTextureAnimationPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/PacketViolationWarningPacket.html" title="class in cn.nukkit.network.protocol">PacketViolationWarningPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/PlayerActionPacket.html" title="class in cn.nukkit.network.protocol">PlayerActionPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/PlayerArmorDamagePacket.html" title="class in cn.nukkit.network.protocol">PlayerArmorDamagePacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/PlayerEnchantOptionsPacket.html" title="class in cn.nukkit.network.protocol">PlayerEnchantOptionsPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/PlayerHotbarPacket.html" title="class in cn.nukkit.network.protocol">PlayerHotbarPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/PlayerInputPacket.html" title="class in cn.nukkit.network.protocol">PlayerInputPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/PlayerListPacket.html" title="class in cn.nukkit.network.protocol">PlayerListPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/PlayerSkinPacket.html" title="class in cn.nukkit.network.protocol">PlayerSkinPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/PlaySoundPacket.html" title="class in cn.nukkit.network.protocol">PlaySoundPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/PlayStatusPacket.html" title="class in cn.nukkit.network.protocol">PlayStatusPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/PositionTrackingDBClientRequestPacket.html" title="class in cn.nukkit.network.protocol">PositionTrackingDBClientRequestPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/PositionTrackingDBServerBroadcastPacket.html" title="class in cn.nukkit.network.protocol">PositionTrackingDBServerBroadcastPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/RemoveEntityPacket.html" title="class in cn.nukkit.network.protocol">RemoveEntityPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/RemoveVolumeEntityPacket.html" title="class in cn.nukkit.network.protocol">RemoveVolumeEntityPacket</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/RequestAbilityPacket.html" title="class in cn.nukkit.network.protocol">RequestAbilityPacket</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
@@ -940,185 +976,197 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/ResourcePackChunkDataPacket.html" title="class in cn.nukkit.network.protocol">ResourcePackChunkDataPacket</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/RequestNetworkSettingsPacket.html" title="class in cn.nukkit.network.protocol">RequestNetworkSettingsPacket</a></span></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/ResourcePackChunkDataPacket.html" title="class in cn.nukkit.network.protocol">ResourcePackChunkDataPacket</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/ResourcePackChunkRequestPacket.html" title="class in cn.nukkit.network.protocol">ResourcePackChunkRequestPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/ResourcePackClientResponsePacket.html" title="class in cn.nukkit.network.protocol">ResourcePackClientResponsePacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/ResourcePackDataInfoPacket.html" title="class in cn.nukkit.network.protocol">ResourcePackDataInfoPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/ResourcePacksInfoPacket.html" title="class in cn.nukkit.network.protocol">ResourcePacksInfoPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/ResourcePackStackPacket.html" title="class in cn.nukkit.network.protocol">ResourcePackStackPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/RespawnPacket.html" title="class in cn.nukkit.network.protocol">RespawnPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/RiderJumpPacket.html" title="class in cn.nukkit.network.protocol">RiderJumpPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/ScriptCustomEventPacket.html" title="class in cn.nukkit.network.protocol">ScriptCustomEventPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/ServerSettingsRequestPacket.html" title="class in cn.nukkit.network.protocol">ServerSettingsRequestPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/ServerSettingsResponsePacket.html" title="class in cn.nukkit.network.protocol">ServerSettingsResponsePacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/ServerToClientHandshakePacket.html" title="class in cn.nukkit.network.protocol">ServerToClientHandshakePacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/SetCommandsEnabledPacket.html" title="class in cn.nukkit.network.protocol">SetCommandsEnabledPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/SetDifficultyPacket.html" title="class in cn.nukkit.network.protocol">SetDifficultyPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/SetEntityDataPacket.html" title="class in cn.nukkit.network.protocol">SetEntityDataPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/SetEntityLinkPacket.html" title="class in cn.nukkit.network.protocol">SetEntityLinkPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/SetEntityMotionPacket.html" title="class in cn.nukkit.network.protocol">SetEntityMotionPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/SetHealthPacket.html" title="class in cn.nukkit.network.protocol">SetHealthPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/SetLastHurtByPacket.html" title="class in cn.nukkit.network.protocol">SetLastHurtByPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/SetLocalPlayerAsInitializedPacket.html" title="class in cn.nukkit.network.protocol">SetLocalPlayerAsInitializedPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/SetPlayerGameTypePacket.html" title="class in cn.nukkit.network.protocol">SetPlayerGameTypePacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/SetSpawnPositionPacket.html" title="class in cn.nukkit.network.protocol">SetSpawnPositionPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/SetTimePacket.html" title="class in cn.nukkit.network.protocol">SetTimePacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/SetTitlePacket.html" title="class in cn.nukkit.network.protocol">SetTitlePacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/ShowCreditsPacket.html" title="class in cn.nukkit.network.protocol">ShowCreditsPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/ShowProfilePacket.html" title="class in cn.nukkit.network.protocol">ShowProfilePacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/SimpleEventPacket.html" title="class in cn.nukkit.network.protocol">SimpleEventPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/SimulationTypePacket.html" title="class in cn.nukkit.network.protocol">SimulationTypePacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/SpawnExperienceOrbPacket.html" title="class in cn.nukkit.network.protocol">SpawnExperienceOrbPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/SpawnParticleEffectPacket.html" title="class in cn.nukkit.network.protocol">SpawnParticleEffectPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/StartGamePacket.html" title="class in cn.nukkit.network.protocol">StartGamePacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/StopSoundPacket.html" title="class in cn.nukkit.network.protocol">StopSoundPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/StructureBlockUpdatePacket.html" title="class in cn.nukkit.network.protocol">StructureBlockUpdatePacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/SubClientLoginPacket.html" title="class in cn.nukkit.network.protocol">SubClientLoginPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/SyncEntityPropertyPacket.html" title="class in cn.nukkit.network.protocol">SyncEntityPropertyPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/TakeItemEntityPacket.html" title="class in cn.nukkit.network.protocol">TakeItemEntityPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/TextPacket.html" title="class in cn.nukkit.network.protocol">TextPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/TickSyncPacket.html" title="class in cn.nukkit.network.protocol">TickSyncPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/TransferPacket.html" title="class in cn.nukkit.network.protocol">TransferPacket</a></span></code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/UpdateAbilitiesPacket.html" title="class in cn.nukkit.network.protocol">UpdateAbilitiesPacket</a></span></code>&nbsp;</td>
+</tr>
 <tr class="altColor">
+<td class="colFirst"><code>class&nbsp;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/UpdateAdventureSettingsPacket.html" title="class in cn.nukkit.network.protocol">UpdateAdventureSettingsPacket</a></span></code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/UpdateAttributesPacket.html" title="class in cn.nukkit.network.protocol">UpdateAttributesPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/UpdateBlockPacket.html" title="class in cn.nukkit.network.protocol">UpdateBlockPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/UpdateEquipmentPacket.html" title="class in cn.nukkit.network.protocol">UpdateEquipmentPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/UpdatePlayerGameTypePacket.html" title="class in cn.nukkit.network.protocol">UpdatePlayerGameTypePacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/UpdateSoftEnumPacket.html" title="class in cn.nukkit.network.protocol">UpdateSoftEnumPacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/UpdateTradePacket.html" title="class in cn.nukkit.network.protocol">UpdateTradePacket</a></span></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/VideoStreamConnectPacket.html" title="class in cn.nukkit.network.protocol">VideoStreamConnectPacket</a></span></code>&nbsp;</td>
 </tr>
@@ -1163,6 +1211,38 @@
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a></code></td>
 <td class="colLast"><span class="typeNameLabel">DataPacket.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/DataPacket.html#reset--">reset</a></span>()</code>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li class="blockList"><a name="cn.nukkit.network.session">
+<!--   -->
+</a>
+<h3>Uses of <a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a> in <a href="../../../../../cn/nukkit/network/session/package-summary.html">cn.nukkit.network.session</a></h3>
+<table class="useSummary" border="0" cellpadding="3" cellspacing="0" summary="Use table, listing methods, and an explanation">
+<caption><span>Methods in <a href="../../../../../cn/nukkit/network/session/package-summary.html">cn.nukkit.network.session</a> with parameters of type <a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a></span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tbody>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">NetworkPlayerSession.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/session/NetworkPlayerSession.html#sendImmediatePacket-cn.nukkit.network.protocol.DataPacket-java.lang.Runnable-">sendImmediatePacket</a></span>(<a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet,
+                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;callback)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">RakNetPlayerSession.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/session/RakNetPlayerSession.html#sendImmediatePacket-cn.nukkit.network.protocol.DataPacket-java.lang.Runnable-">sendImmediatePacket</a></span>(<a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet,
+                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;callback)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">NetworkPlayerSession.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/session/NetworkPlayerSession.html#sendPacket-cn.nukkit.network.protocol.DataPacket-">sendPacket</a></span>(<a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="typeNameLabel">RakNetPlayerSession.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/session/RakNetPlayerSession.html#sendPacket-cn.nukkit.network.protocol.DataPacket-">sendPacket</a></span>(<a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>

@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Deprecated List (PowerNukkit 1.6.1.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2022-08-24">
+<meta name="date" content="2022-09-25">
 <link rel="stylesheet" type="text/css" href="stylesheet.css" title="Style">
 <script type="text/javascript" src="script.js"></script>
 </head>
@@ -95,20 +95,23 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colOne"><a href="cn/nukkit/network/protocol/AdventureSettingsPacket.html" title="class in cn.nukkit.network.protocol">cn.nukkit.network.protocol.AdventureSettingsPacket</a></td>
+</tr>
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/format/anvil/palette/BiomePalette.html" title="class in cn.nukkit.level.format.anvil.palette">cn.nukkit.level.format.anvil.palette.BiomePalette</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/block/BlockDoubleSlab.html" title="class in cn.nukkit.block">cn.nukkit.block.BlockDoubleSlab</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/block/BlockNetherBrick.html" title="class in cn.nukkit.block">cn.nukkit.block.BlockNetherBrick</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/event/block/BlockPistonChangeEvent.html" title="class in cn.nukkit.event.block">cn.nukkit.event.block.BlockPistonChangeEvent</a>
 <div class="block"><span class="deprecationComment">Use BlockPistonEvent</span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/GlobalBlockPalette.html" title="class in cn.nukkit.level">cn.nukkit.level.GlobalBlockPalette</a></td>
 </tr>
 </tbody>
@@ -773,6 +776,12 @@
 <td class="colOne"><a href="cn/nukkit/Player.html#dataPacket-cn.nukkit.network.protocol.DataPacket-boolean-">cn.nukkit.Player.dataPacket(DataPacket, boolean)</a></td>
 </tr>
 <tr class="altColor">
+<td class="colOne"><a href="cn/nukkit/Player.html#dataPacketImmediately-cn.nukkit.network.protocol.DataPacket-">cn.nukkit.Player.dataPacketImmediately(DataPacket)</a></td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><a href="cn/nukkit/Player.html#dataResourcePacket-cn.nukkit.network.protocol.DataPacket-">cn.nukkit.Player.dataResourcePacket(DataPacket)</a></td>
+</tr>
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/item/Item.html#deepEquals-cn.nukkit.item.Item-">cn.nukkit.item.Item.deepEquals(Item)</a></td>
 </tr>
 <tr class="rowColor">
@@ -1178,302 +1187,320 @@
 <td class="colOne"><a href="cn/nukkit/block/BlockDoor.html#isTop-int-">cn.nukkit.block.BlockDoor.isTop(int)</a></td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><a href="cn/nukkit/entity/data/EntityMetadata.html#putSlot-int-cn.nukkit.item.Item-">cn.nukkit.entity.data.EntityMetadata.putSlot(int, Item)</a></td>
+<td class="colOne"><a href="cn/nukkit/network/SourceInterface.html#putPacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-">cn.nukkit.network.SourceInterface.putPacket(Player, DataPacket)</a></td>
 </tr>
 <tr class="altColor">
-<td class="colOne"><a href="cn/nukkit/nbt/stream/NBTInputStream.html#readLine--">cn.nukkit.nbt.stream.NBTInputStream.readLine()</a></td>
+<td class="colOne"><a href="cn/nukkit/network/SourceInterface.html#putPacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-boolean-">cn.nukkit.network.SourceInterface.putPacket(Player, DataPacket, boolean)</a></td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><a href="cn/nukkit/scheduler/TaskHandler.html#remove--">cn.nukkit.scheduler.TaskHandler.remove()</a></td>
+<td class="colOne"><a href="cn/nukkit/network/SourceInterface.html#putPacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-boolean-boolean-">cn.nukkit.network.SourceInterface.putPacket(Player, DataPacket, boolean, boolean)</a></td>
 </tr>
 <tr class="altColor">
+<td class="colOne"><a href="cn/nukkit/network/SourceInterface.html#putResourcePacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-">cn.nukkit.network.SourceInterface.putResourcePacket(Player, DataPacket)</a></td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><a href="cn/nukkit/network/RakNetInterface.html#putResourcePacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-">cn.nukkit.network.RakNetInterface.putResourcePacket(Player, DataPacket)</a></td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><a href="cn/nukkit/entity/data/EntityMetadata.html#putSlot-int-cn.nukkit.item.Item-">cn.nukkit.entity.data.EntityMetadata.putSlot(int, Item)</a></td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><a href="cn/nukkit/nbt/stream/NBTInputStream.html#readLine--">cn.nukkit.nbt.stream.NBTInputStream.readLine()</a></td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><a href="cn/nukkit/scheduler/TaskHandler.html#remove--">cn.nukkit.scheduler.TaskHandler.remove()</a></td>
+</tr>
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/utils/Config.html#removeNested-java.lang.String-">cn.nukkit.utils.Config.removeNested(String)</a>
 <div class="block"><span class="deprecationComment">use <a href="cn/nukkit/utils/Config.html#remove-java.lang.String-"><code>Config.remove(String)</code></a> instead</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/scheduler/ServerScheduler.html#scheduleAsyncTask-cn.nukkit.scheduler.AsyncTask-">cn.nukkit.scheduler.ServerScheduler.scheduleAsyncTask(AsyncTask)</a>
 <div class="block"><span class="deprecationComment">Use <a href="cn/nukkit/scheduler/ServerScheduler.html#scheduleAsyncTask-cn.nukkit.plugin.Plugin-cn.nukkit.scheduler.AsyncTask-"><code>ServerScheduler.scheduleAsyncTask(Plugin, AsyncTask)</code></a></span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/scheduler/ServerScheduler.html#scheduleAsyncTaskToWorker-cn.nukkit.scheduler.AsyncTask-int-">cn.nukkit.scheduler.ServerScheduler.scheduleAsyncTaskToWorker(AsyncTask, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/scheduler/ServerScheduler.html#scheduleDelayedRepeatingTask-java.lang.Runnable-int-int-">cn.nukkit.scheduler.ServerScheduler.scheduleDelayedRepeatingTask(Runnable, int, int)</a>
 <div class="block"><span class="deprecationComment">Use <a href="cn/nukkit/scheduler/ServerScheduler.html#scheduleDelayedRepeatingTask-cn.nukkit.plugin.Plugin-java.lang.Runnable-int-int-"><code>ServerScheduler.scheduleDelayedRepeatingTask(Plugin, Runnable, int, int)</code></a></span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/scheduler/ServerScheduler.html#scheduleDelayedRepeatingTask-java.lang.Runnable-int-int-boolean-">cn.nukkit.scheduler.ServerScheduler.scheduleDelayedRepeatingTask(Runnable, int, int, boolean)</a>
 <div class="block"><span class="deprecationComment">Use <a href="cn/nukkit/scheduler/ServerScheduler.html#scheduleDelayedRepeatingTask-cn.nukkit.plugin.Plugin-java.lang.Runnable-int-int-boolean-"><code>ServerScheduler.scheduleDelayedRepeatingTask(Plugin, Runnable, int, int, boolean)</code></a></span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/scheduler/ServerScheduler.html#scheduleDelayedTask-java.lang.Runnable-int-">cn.nukkit.scheduler.ServerScheduler.scheduleDelayedTask(Runnable, int)</a>
 <div class="block"><span class="deprecationComment">Use <a href="cn/nukkit/scheduler/ServerScheduler.html#scheduleDelayedTask-cn.nukkit.plugin.Plugin-java.lang.Runnable-int-"><code>ServerScheduler.scheduleDelayedTask(Plugin, Runnable, int)</code></a></span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/scheduler/ServerScheduler.html#scheduleDelayedTask-java.lang.Runnable-int-boolean-">cn.nukkit.scheduler.ServerScheduler.scheduleDelayedTask(Runnable, int, boolean)</a>
 <div class="block"><span class="deprecationComment">Use <a href="cn/nukkit/scheduler/ServerScheduler.html#scheduleDelayedTask-cn.nukkit.plugin.Plugin-java.lang.Runnable-int-boolean-"><code>ServerScheduler.scheduleDelayedTask(Plugin, Runnable, int, boolean)</code></a></span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/scheduler/ServerScheduler.html#scheduleRepeatingTask-java.lang.Runnable-int-">cn.nukkit.scheduler.ServerScheduler.scheduleRepeatingTask(Runnable, int)</a>
 <div class="block"><span class="deprecationComment">Use <a href="cn/nukkit/scheduler/ServerScheduler.html#scheduleRepeatingTask-cn.nukkit.plugin.Plugin-java.lang.Runnable-int-"><code>ServerScheduler.scheduleRepeatingTask(Plugin, Runnable, int)</code></a></span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/scheduler/ServerScheduler.html#scheduleRepeatingTask-java.lang.Runnable-int-boolean-">cn.nukkit.scheduler.ServerScheduler.scheduleRepeatingTask(Runnable, int, boolean)</a>
 <div class="block"><span class="deprecationComment">Use <a href="cn/nukkit/scheduler/ServerScheduler.html#scheduleRepeatingTask-cn.nukkit.plugin.Plugin-java.lang.Runnable-int-boolean-"><code>ServerScheduler.scheduleRepeatingTask(Plugin, Runnable, int, boolean)</code></a></span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/scheduler/ServerScheduler.html#scheduleTask-java.lang.Runnable-">cn.nukkit.scheduler.ServerScheduler.scheduleTask(Runnable)</a>
 <div class="block"><span class="deprecationComment">Use <a href="cn/nukkit/scheduler/ServerScheduler.html#scheduleTask-cn.nukkit.plugin.Plugin-java.lang.Runnable-"><code>ServerScheduler.scheduleTask(Plugin, Runnable)</code></a></span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/scheduler/ServerScheduler.html#scheduleTask-java.lang.Runnable-boolean-">cn.nukkit.scheduler.ServerScheduler.scheduleTask(Runnable, boolean)</a>
 <div class="block"><span class="deprecationComment">Use <a href="cn/nukkit/scheduler/ServerScheduler.html#scheduleTask-cn.nukkit.plugin.Plugin-java.lang.Runnable-boolean-"><code>ServerScheduler.scheduleTask(Plugin, Runnable, boolean)</code></a></span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/Player.html#sendSettings--">cn.nukkit.Player.sendSettings()</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/entity/projectile/EntityProjectile.html#setAge-boolean-">cn.nukkit.entity.projectile.EntityProjectile.setAge(boolean)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/Player.html#setAllowFlight-boolean-">cn.nukkit.Player.setAllowFlight(boolean)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/block/BlockBell.html#setAttachmentType-int-">cn.nukkit.block.BlockBell.setAttachmentType(int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/Player.html#setAutoJump-boolean-">cn.nukkit.Player.setAutoJump(boolean)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/format/FullChunk.html#setBlock-int-int-int-int-int-">cn.nukkit.level.format.FullChunk.setBlock(int, int, int, int, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/level/format/anvil/ChunkSection.html#setBlock-int-int-int-int-int-">cn.nukkit.level.format.anvil.ChunkSection.setBlock(int, int, int, int, int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/format/anvil/util/BlockStorage.html#setBlock-int-int-int-int-int-">cn.nukkit.level.format.anvil.util.BlockStorage.setBlock(int, int, int, int, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/level/format/ChunkSection.html#setBlock-int-int-int-int-int-">cn.nukkit.level.format.ChunkSection.setBlock(int, int, int, int, int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/format/generic/EmptyChunkSection.html#setBlock-int-int-int-int-int-">cn.nukkit.level.format.generic.EmptyChunkSection.setBlock(int, int, int, int, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/level/format/generic/BaseChunk.html#setBlock-int-int-int-int-int-">cn.nukkit.level.format.generic.BaseChunk.setBlock(int, int, int, int, int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/Level.html#setBlockAt-int-int-int-int-int-">cn.nukkit.level.Level.setBlockAt(int, int, int, int, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/level/ChunkManager.html#setBlockAt-int-int-int-int-int-">cn.nukkit.level.ChunkManager.setBlockAt(int, int, int, int, int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/format/generic/BaseFullChunk.html#setBlockAt-int-int-int-int-int-">cn.nukkit.level.format.generic.BaseFullChunk.setBlockAt(int, int, int, int, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/level/generator/SimpleChunkManager.html#setBlockAt-int-int-int-int-int-">cn.nukkit.level.generator.SimpleChunkManager.setBlockAt(int, int, int, int, int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/Level.html#setBlockAtLayer-int-int-int-int-int-int-">cn.nukkit.level.Level.setBlockAtLayer(int, int, int, int, int, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/level/ChunkManager.html#setBlockAtLayer-int-int-int-int-int-int-">cn.nukkit.level.ChunkManager.setBlockAtLayer(int, int, int, int, int, int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/format/FullChunk.html#setBlockAtLayer-int-int-int-int-int-int-">cn.nukkit.level.format.FullChunk.setBlockAtLayer(int, int, int, int, int, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/level/format/anvil/ChunkSection.html#setBlockAtLayer-int-int-int-int-int-int-">cn.nukkit.level.format.anvil.ChunkSection.setBlockAtLayer(int, int, int, int, int, int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/format/ChunkSection.html#setBlockAtLayer-int-int-int-int-int-int-">cn.nukkit.level.format.ChunkSection.setBlockAtLayer(int, int, int, int, int, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/level/format/generic/BaseFullChunk.html#setBlockAtLayer-int-int-int-int-int-int-">cn.nukkit.level.format.generic.BaseFullChunk.setBlockAtLayer(int, int, int, int, int, int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/format/generic/EmptyChunkSection.html#setBlockAtLayer-int-int-int-int-int-int-">cn.nukkit.level.format.generic.EmptyChunkSection.setBlockAtLayer(int, int, int, int, int, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/level/format/generic/BaseChunk.html#setBlockAtLayer-int-int-int-int-int-int-">cn.nukkit.level.format.generic.BaseChunk.setBlockAtLayer(int, int, int, int, int, int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/generator/SimpleChunkManager.html#setBlockAtLayer-int-int-int-int-int-int-">cn.nukkit.level.generator.SimpleChunkManager.setBlockAtLayer(int, int, int, int, int, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/level/format/anvil/ChunkSection.html#setBlockData-int-int-int-int-">cn.nukkit.level.format.anvil.ChunkSection.setBlockData(int, int, int, int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/format/anvil/util/BlockStorage.html#setBlockData-int-int-int-int-">cn.nukkit.level.format.anvil.util.BlockStorage.setBlockData(int, int, int, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/level/format/ChunkSection.html#setBlockData-int-int-int-int-">cn.nukkit.level.format.ChunkSection.setBlockData(int, int, int, int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/format/generic/EmptyChunkSection.html#setBlockData-int-int-int-int-">cn.nukkit.level.format.generic.EmptyChunkSection.setBlockData(int, int, int, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/level/format/generic/BaseChunk.html#setBlockData-int-int-int-int-">cn.nukkit.level.format.generic.BaseChunk.setBlockData(int, int, int, int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/format/anvil/ChunkSection.html#setBlockData-int-int-int-int-int-">cn.nukkit.level.format.anvil.ChunkSection.setBlockData(int, int, int, int, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/level/format/ChunkSection.html#setBlockData-int-int-int-int-int-">cn.nukkit.level.format.ChunkSection.setBlockData(int, int, int, int, int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/format/generic/EmptyChunkSection.html#setBlockData-int-int-int-int-int-">cn.nukkit.level.format.generic.EmptyChunkSection.setBlockData(int, int, int, int, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/level/format/generic/BaseChunk.html#setBlockData-int-int-int-int-int-">cn.nukkit.level.format.generic.BaseChunk.setBlockData(int, int, int, int, int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/Level.html#setBlockDataAt-int-int-int-int-">cn.nukkit.level.Level.setBlockDataAt(int, int, int, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/level/ChunkManager.html#setBlockDataAt-int-int-int-int-">cn.nukkit.level.ChunkManager.setBlockDataAt(int, int, int, int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/format/generic/BaseFullChunk.html#setBlockDataAt-int-int-int-int-">cn.nukkit.level.format.generic.BaseFullChunk.setBlockDataAt(int, int, int, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/level/generator/SimpleChunkManager.html#setBlockDataAt-int-int-int-int-">cn.nukkit.level.generator.SimpleChunkManager.setBlockDataAt(int, int, int, int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/Level.html#setBlockDataAt-int-int-int-int-int-">cn.nukkit.level.Level.setBlockDataAt(int, int, int, int, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/level/ChunkManager.html#setBlockDataAt-int-int-int-int-int-">cn.nukkit.level.ChunkManager.setBlockDataAt(int, int, int, int, int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/format/generic/BaseFullChunk.html#setBlockDataAt-int-int-int-int-int-">cn.nukkit.level.format.generic.BaseFullChunk.setBlockDataAt(int, int, int, int, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/level/generator/SimpleChunkManager.html#setBlockDataAt-int-int-int-int-int-">cn.nukkit.level.generator.SimpleChunkManager.setBlockDataAt(int, int, int, int, int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/Level.html#setBlockFullIdAt-int-int-int-int-">cn.nukkit.level.Level.setBlockFullIdAt(int, int, int, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/level/ChunkManager.html#setBlockFullIdAt-int-int-int-int-">cn.nukkit.level.ChunkManager.setBlockFullIdAt(int, int, int, int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/format/generic/BaseFullChunk.html#setBlockFullIdAt-int-int-int-int-">cn.nukkit.level.format.generic.BaseFullChunk.setBlockFullIdAt(int, int, int, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/level/generator/SimpleChunkManager.html#setBlockFullIdAt-int-int-int-int-">cn.nukkit.level.generator.SimpleChunkManager.setBlockFullIdAt(int, int, int, int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/Level.html#setBlockFullIdAt-int-int-int-int-int-">cn.nukkit.level.Level.setBlockFullIdAt(int, int, int, int, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/level/ChunkManager.html#setBlockFullIdAt-int-int-int-int-int-">cn.nukkit.level.ChunkManager.setBlockFullIdAt(int, int, int, int, int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/format/generic/BaseFullChunk.html#setBlockFullIdAt-int-int-int-int-int-">cn.nukkit.level.format.generic.BaseFullChunk.setBlockFullIdAt(int, int, int, int, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/level/generator/SimpleChunkManager.html#setBlockFullIdAt-int-int-int-int-int-">cn.nukkit.level.generator.SimpleChunkManager.setBlockFullIdAt(int, int, int, int, int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/format/generic/BaseChunk.html#setBlockId-int-int-int-int-int-">cn.nukkit.level.format.generic.BaseChunk.setBlockId(int, int, int, int, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/item/ItemColorArmor.html#setColor-int-">cn.nukkit.item.ItemColorArmor.setColor(int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/block/BlockTurtleEgg.html#setCrackState-int-">cn.nukkit.block.BlockTurtleEgg.setCrackState(int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/entity/projectile/EntityThrownTrident.html#setCreative-boolean-">cn.nukkit.entity.projectile.EntityThrownTrident.setCreative(boolean)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/block/Block.html#setDamage-int-">cn.nukkit.block.Block.setDamage(int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/block/Block.html#setDamage-java.lang.Integer-">cn.nukkit.block.Block.setDamage(Integer)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/PlayerFood.html#setFoodLevel-int-">cn.nukkit.PlayerFood.setFoodLevel(int)</a>
 <div class="block"><span class="deprecationComment">use <a href="cn/nukkit/PlayerFood.html#setLevel-int-"><code>PlayerFood.setLevel(int)</code></a> instead</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/PlayerFood.html#setFoodLevel-int-float-">cn.nukkit.PlayerFood.setFoodLevel(int, float)</a>
 <div class="block"><span class="deprecationComment">use <a href="cn/nukkit/PlayerFood.html#setLevel-int-float-"><code>PlayerFood.setLevel(int, float)</code></a> instead</span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/format/anvil/util/BlockStorage.html#setFullBlock-int-int-int-int-">cn.nukkit.level.format.anvil.util.BlockStorage.setFullBlock(int, int, int, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/level/format/FullChunk.html#setFullBlockId-int-int-int-int-">cn.nukkit.level.format.FullChunk.setFullBlockId(int, int, int, int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/format/anvil/ChunkSection.html#setFullBlockId-int-int-int-int-">cn.nukkit.level.format.anvil.ChunkSection.setFullBlockId(int, int, int, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/level/format/ChunkSection.html#setFullBlockId-int-int-int-int-">cn.nukkit.level.format.ChunkSection.setFullBlockId(int, int, int, int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/format/generic/EmptyChunkSection.html#setFullBlockId-int-int-int-int-">cn.nukkit.level.format.generic.EmptyChunkSection.setFullBlockId(int, int, int, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/level/format/generic/BaseChunk.html#setFullBlockId-int-int-int-int-">cn.nukkit.level.format.generic.BaseChunk.setFullBlockId(int, int, int, int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/format/FullChunk.html#setFullBlockId-int-int-int-int-int-">cn.nukkit.level.format.FullChunk.setFullBlockId(int, int, int, int, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/level/format/anvil/ChunkSection.html#setFullBlockId-int-int-int-int-int-">cn.nukkit.level.format.anvil.ChunkSection.setFullBlockId(int, int, int, int, int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/format/ChunkSection.html#setFullBlockId-int-int-int-int-int-">cn.nukkit.level.format.ChunkSection.setFullBlockId(int, int, int, int, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/level/format/generic/EmptyChunkSection.html#setFullBlockId-int-int-int-int-int-">cn.nukkit.level.format.generic.EmptyChunkSection.setFullBlockId(int, int, int, int, int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/format/generic/BaseChunk.html#setFullBlockId-int-int-int-int-int-">cn.nukkit.level.format.generic.BaseChunk.setFullBlockId(int, int, int, int, int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/inventory/PlayerInventory.html#setHotbarSlotIndex-int-int-">cn.nukkit.inventory.PlayerInventory.setHotbarSlotIndex(int, int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/block/BlockBamboo.html#setLeafSize-int-">cn.nukkit.block.BlockBamboo.setLeafSize(int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/inventory/AnvilInventory.html#setLevelCost-int-">cn.nukkit.inventory.AnvilInventory.setLevelCost(int)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/event/block/AnvilDamageEvent.html#setNewDamage-int-">cn.nukkit.event.block.AnvilDamageEvent.setNewDamage(int)</a></td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/event/player/PlayerInvalidMoveEvent.html#setRevert-boolean-">cn.nukkit.event.player.PlayerInvalidMoveEvent.setRevert(boolean)</a>
 <div class="block"><span class="deprecationComment">If you just simply want to disable the movement check, please use <a href="cn/nukkit/Player.html#setCheckMovement-boolean-"><code>Player.setCheckMovement(boolean)</code></a> instead.</span></div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/blockentity/BlockEntityCauldron.html#setSplashPotion-boolean-">cn.nukkit.blockentity.BlockEntityCauldron.setSplashPotion(boolean)</a>
 <div class="block"><span class="deprecationComment">Use <a href="cn/nukkit/blockentity/BlockEntityCauldron.html#setPotionType-int-"><code>BlockEntityCauldron.setPotionType(int)</code></a> instead.</span></div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><a href="cn/nukkit/block/BlockFenceBase.html#setWoodType-cn.nukkit.blockproperty.value.WoodType-">cn.nukkit.block.BlockFenceBase.setWoodType(WoodType)</a></td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/math/Vector3.html#subtract--">cn.nukkit.math.Vector3.subtract()</a></td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><a href="cn/nukkit/network/Network.html#unpackBatchedPackets-cn.nukkit.network.protocol.BatchPacket-">cn.nukkit.network.Network.unpackBatchedPackets(BatchPacket)</a></td>
 </tr>
 <tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/Level.html#updateAroundRedstone-cn.nukkit.math.Vector3-cn.nukkit.math.BlockFace-">cn.nukkit.level.Level.updateAroundRedstone(Vector3, BlockFace)</a></td>
@@ -1614,6 +1641,9 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colOne"><a href="cn/nukkit/AdventureSettings.Type.html#DEFAULT_LEVEL_PERMISSIONS">cn.nukkit.AdventureSettings.Type.DEFAULT_LEVEL_PERMISSIONS</a></td>
+</tr>
+<tr class="rowColor">
 <td class="colOne"><a href="cn/nukkit/level/GameRule.html#SHOW_DEATH_MESSAGE">cn.nukkit.level.GameRule.SHOW_DEATH_MESSAGE</a></td>
 </tr>
 </tbody>

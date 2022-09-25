@@ -106,6 +106,7 @@ cn.nukkit.network.protocol
 cn.nukkit.network.protocol.types
 cn.nukkit.network.query
 cn.nukkit.network.rcon
+cn.nukkit.network.session
 cn.nukkit.permission
 cn.nukkit.plugin
 cn.nukkit.plugin.service
