@@ -2116,13 +2116,6 @@
             "blockRuntimeId" : 70
         },
         {
-            "id" : "minecraft:kelp"
-        },
-        {
-            "id" : "minecraft:seagrass",
-            "blockRuntimeId" : 246
-        },
-        {
             "id" : "minecraft:crimson_roots",
             "blockRuntimeId" : 7575
         },
@@ -2276,6 +2269,13 @@
         {
             "id" : "minecraft:waterlily",
             "blockRuntimeId" : 1160
+        },
+        {
+            "id" : "minecraft:seagrass",
+            "blockRuntimeId" : 246
+        },
+        {
+            "id" : "minecraft:kelp"
         },
         {
             "id" : "minecraft:deadbush",
