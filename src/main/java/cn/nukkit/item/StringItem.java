@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 @Since("FUTURE")
 public class StringItem extends Item {
 
-    private final String id;
+    private final String namespacedId;
 
     private byte[] customCompound = EmptyArrays.EMPTY_BYTES;
 
@@ -28,11 +28,11 @@ public class StringItem extends Item {
 
     @PowerNukkitOnly
     @Since("FUTURE")
-    public StringItem(@Nonnull String id, @Nullable String name) {
+    public StringItem(@Nonnull String namespacedId, @Nullable String name) {
         super(STRING_IDENTIFIED_ITEM, 0, 1, notEmpty(name));
-        Preconditions.checkNotNull(id, "id can't be null");
-        Preconditions.checkArgument(id.contains(":"), "The ID must be a namespaced ID, like minecraft:stone");
-        this.id = id;
+        Preconditions.checkNotNull(namespacedId, "The namespaced ID can't be null");
+        Preconditions.checkArgument(namespacedId.contains(":"), "The ID must be a namespaced ID, like minecraft:stone");
+        this.namespacedId = namespacedId;
         clearNamedTag();
     }
 
@@ -62,7 +62,7 @@ public class StringItem extends Item {
             return super.getNamedTag();
         }
 
-        return super.getNamedTag().putString("Name", id);
+        return super.getNamedTag().putString("Name", namespacedId);
     }
 
     @Override
@@ -79,13 +79,13 @@ public class StringItem extends Item {
         } else {
             customCompound = writeCompoundTag(tag);
         }
-        return super.setNamedTag(tag.putString("Name", id));
+        return super.setNamedTag(tag.putString("Name", namespacedId));
     }
 
     @Override
     public Item clearNamedTag() {
         customCompound = EmptyArrays.EMPTY_BYTES;
-        return super.setCompoundTag(new CompoundTag().putString("Name", id));
+        return super.setCompoundTag(new CompoundTag().putString("Name", namespacedId));
     }
 
     @Override
@@ -97,7 +97,7 @@ public class StringItem extends Item {
     @Since("FUTURE")
     @Override
     public final String getNamespaceId() {
-        return id;
+        return namespacedId;
     }
 
     @Override
