@@ -2,6 +2,7 @@ package cn.nukkit.block;
 
 import cn.nukkit.api.PowerNukkitOnly;
 import cn.nukkit.api.Since;
+import cn.nukkit.utils.BlockColor;
 
 /**
  * @author joserobjr
@@ -39,5 +40,10 @@ public class BlockDoubleSlabDeepslateCobbled extends BlockDoubleSlabBase {
     @Override
     public int getSingleSlabId() {
         return COBBLED_DEEPSLATE_SLAB;
+    }
+
+    @Override
+    public BlockColor getColor() {
+        return BlockColor.DEEPSLATE_GRAY;
     }
 }

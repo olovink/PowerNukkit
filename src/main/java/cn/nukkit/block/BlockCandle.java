@@ -45,8 +45,7 @@ public class BlockCandle extends BlockFlowable {
 
     @Override
     public boolean place(@Nonnull Item item, @Nonnull Block block, @Nonnull Block target, @Nonnull BlockFace face, double fx, double fy, double fz, @Nullable Player player) {
-
-        if (target.getId() == getId()) {
+        if ((target.getId() == getId()) || (getBlock(target.getLocation().add(0, 1, 0)).getId() == getId())) {
             if (target.getPropertyValue(CANDLES) < 3) {
                 target.setPropertyValue(CANDLES, target.getPropertyValue(CANDLES) + 1);
                 getLevel().setBlock(target, target, true, true);

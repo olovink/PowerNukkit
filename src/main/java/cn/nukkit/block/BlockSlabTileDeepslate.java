@@ -24,7 +24,7 @@ public class BlockSlabTileDeepslate extends BlockSlab {
     @PowerNukkitOnly
     @Since("FUTURE")
     public BlockSlabTileDeepslate(int meta) {
-        super(meta, DEEPSLATE_TILE_SLAB);
+        super(meta, DEEPSLATE_TILE_DOUBLE_SLAB);
     }
     
     @Override
