@@ -24,7 +24,7 @@ public class BlockSlabDeepslatePolished extends BlockSlab {
     @PowerNukkitOnly
     @Since("FUTURE")
     public BlockSlabDeepslatePolished(int meta) {
-        super(meta, POLISHED_DEEPSLATE_SLAB);
+        super(meta, POLISHED_DEEPSLATE_DOUBLE_SLAB);
     }
     
     @Override

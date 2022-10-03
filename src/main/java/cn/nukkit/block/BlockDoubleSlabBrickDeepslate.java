@@ -2,14 +2,11 @@ package cn.nukkit.block;
 
 import cn.nukkit.api.PowerNukkitOnly;
 import cn.nukkit.api.Since;
-import cn.nukkit.blockproperty.BlockProperties;
 import cn.nukkit.item.ItemTool;
 import cn.nukkit.utils.BlockColor;
 
-import javax.annotation.Nonnull;
-
 /**
- * @autor GoodLucky777
+ * @author GoodLucky777
  */
 @PowerNukkitOnly
 @Since("FUTURE")
@@ -39,13 +36,7 @@ public class BlockDoubleSlabBrickDeepslate extends BlockDoubleSlabBase {
     
     @Override
     public String getSlabName() {
-        return "Double Deepslate Brick Slab";
-    }
-    
-    @Nonnull
-    @Override
-    public BlockProperties getProperties() {
-        return BlockSlab.SIMPLE_SLAB_PROPERTIES;
+        return "Deepslate Brick";
     }
     
     @Override
