@@ -5,7 +5,7 @@ import cn.nukkit.api.Since;
 
 /**
  * @author LoboMetalurgico
- * @since 13/06/2021
+ * @since 2021-06-13
  */
 
 // TODO: This is a basic implementation just to allow for use, fixes must be made

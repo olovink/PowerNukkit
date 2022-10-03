@@ -1,5 +1,6 @@
 package cn.nukkit.block;
 
+import cn.nukkit.api.PowerNukkitOnly;
 import cn.nukkit.item.Item;
 import cn.nukkit.item.ItemQuartz;
 import cn.nukkit.item.ItemTool;
@@ -15,6 +16,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class BlockOreQuartz extends BlockSolid {
 
     public BlockOreQuartz() {
+        // Does nothing
     }
 
     @Override
@@ -43,6 +45,7 @@ public class BlockOreQuartz extends BlockSolid {
     }
 
     @Override
+    @PowerNukkitOnly
     public int getToolTier() {
         return ItemTool.TIER_WOODEN;
     }

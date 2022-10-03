@@ -12,7 +12,7 @@ import javax.annotation.Nonnull;
 
 /**
  * @author LoboMetalurgico
- * @since 13/06/2021
+ * @since 2021-06-13
  */
 
 @PowerNukkitOnly
@@ -25,6 +25,7 @@ public class BlockAzalea extends BlockTransparent {
     @PowerNukkitOnly
     @Since("FUTURE")
     public BlockAzalea() {
+        // Does nothing
     }
 
     @PowerNukkitOnly

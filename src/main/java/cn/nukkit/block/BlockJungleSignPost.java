@@ -8,6 +8,7 @@ import cn.nukkit.item.ItemJungleSign;
 public class BlockJungleSignPost extends BlockSignPost {
     @PowerNukkitOnly
     public BlockJungleSignPost() {
+        // Does nothing
     }
 
     @PowerNukkitOnly
@@ -20,6 +21,7 @@ public class BlockJungleSignPost extends BlockSignPost {
         return JUNGLE_STANDING_SIGN;
     }
 
+    @PowerNukkitOnly
     @Override
     public int getWallId() {
         return JUNGLE_WALL_SIGN;

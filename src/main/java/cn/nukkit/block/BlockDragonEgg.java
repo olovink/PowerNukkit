@@ -15,6 +15,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class BlockDragonEgg extends BlockFallable {
 
     public BlockDragonEgg() {
+        // Does nothing
     }
 
     @Override
@@ -112,12 +113,14 @@ public class BlockDragonEgg extends BlockFallable {
     }
 
     @Override
+    @PowerNukkitOnly
     public boolean breaksWhenMoved() {
         return true;
     }
 
     @Override
-    public boolean sticksToPiston() {
+    @PowerNukkitOnly
+    public  boolean sticksToPiston() {
         return false;
     }
 }

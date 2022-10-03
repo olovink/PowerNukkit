@@ -9,6 +9,7 @@ import cn.nukkit.utils.BlockColor;
 public class BlockGlass extends BlockTransparent {
 
     public BlockGlass() {
+        // Does nothing
     }
 
     @Override

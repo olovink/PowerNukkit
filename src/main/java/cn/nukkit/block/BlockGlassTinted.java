@@ -3,11 +3,10 @@ package cn.nukkit.block;
 import cn.nukkit.api.PowerNukkitOnly;
 import cn.nukkit.api.Since;
 import cn.nukkit.item.Item;
-import cn.nukkit.utils.BlockColor;
 
 /**
  * @author LoboMetalurgico
- * @since 13/06/2021
+ * @since 2021-06-13
  */
 
 @PowerNukkitOnly
@@ -16,7 +15,7 @@ public class BlockGlassTinted extends BlockGlass {
     @PowerNukkitOnly
     @Since("FUTURE")
     public BlockGlassTinted() {
-
+        // Does nothing
     }
 
     @Override

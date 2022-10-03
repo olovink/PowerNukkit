@@ -1,5 +1,6 @@
 package cn.nukkit.block;
 
+import cn.nukkit.api.PowerNukkitOnly;
 import cn.nukkit.entity.Entity;
 import cn.nukkit.entity.item.EntityFallingBlock;
 import cn.nukkit.event.block.BlockFallEvent;
@@ -13,12 +14,14 @@ import cn.nukkit.nbt.tag.*;
 public abstract class BlockFallable extends BlockSolid {
 
     protected BlockFallable() {
+        // Does nothing
     }
 
+    @Override
     public int onUpdate(int type) {
         if (type == Level.BLOCK_UPDATE_NORMAL) {
             Block down = this.down();
-            if (down.getId() == AIR || down instanceof BlockFire || down instanceof BlockLiquid || down.getLevelBlockAtLayer(1) instanceof BlockLiquid) {
+            if (down.getId() == AIR || down instanceof BlockFire || down instanceof BlockLiquid) {
                 BlockFallEvent event = new BlockFallEvent(this);
                 this.level.getServer().getPluginManager().callEvent(event);
                 if (event.isCancelled()) {
@@ -34,6 +37,7 @@ public abstract class BlockFallable extends BlockSolid {
         return type;
     }
 
+    @PowerNukkitOnly
     protected EntityFallingBlock createFallingEntity(CompoundTag customNbt) {
         CompoundTag nbt = new CompoundTag()
                 .putList(new ListTag<DoubleTag>("Pos")

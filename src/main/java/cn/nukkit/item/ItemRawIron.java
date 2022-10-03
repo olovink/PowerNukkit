@@ -10,9 +10,10 @@ import cn.nukkit.api.Since;
 @PowerNukkitOnly
 @Since("FUTURE")
 public class ItemRawIron extends ItemRawMaterial {
+
     @PowerNukkitOnly
     @Since("FUTURE")
     public ItemRawIron() {
-        super(MinecraftItemID.RAW_IRON.getNamespacedId(), "Raw Iron");
+        super(RAW_IRON, "Raw Iron");
     }
 }

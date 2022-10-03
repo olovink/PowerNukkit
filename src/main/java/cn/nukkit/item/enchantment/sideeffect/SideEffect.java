@@ -11,6 +11,7 @@ import javax.annotation.Nullable;
 @PowerNukkitOnly
 @Since("1.5.1.0-PN")
 public interface SideEffect extends Cloneable {
+    @PowerNukkitOnly
     SideEffect[] EMPTY_ARRAY = new SideEffect[0];
 
     @PowerNukkitOnly
@@ -26,7 +27,7 @@ public interface SideEffect extends Cloneable {
     }
 
     @PowerNukkitOnly
-    @Since("1.5.1.0-PN")
+    @Since("1.6.0.0-PN")
     @Nonnull
-    SideEffect clone();
+    SideEffect cloneSideEffect();
 }

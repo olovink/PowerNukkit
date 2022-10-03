@@ -5,7 +5,7 @@ import cn.nukkit.api.Since;
 
 /**
  * @author LoboMetalurgico
- * @since 08/06/2021
+ * @since 2021-06-08
  */
 
 @PowerNukkitOnly
@@ -14,6 +14,7 @@ public class BlockDeepslatePolished extends BlockDeepslateCobbled {
     @PowerNukkitOnly
     @Since("FUTURE")
     public BlockDeepslatePolished() {
+        // Does nothing
     }
 
     @Override

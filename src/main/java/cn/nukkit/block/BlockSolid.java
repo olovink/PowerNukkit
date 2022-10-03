@@ -11,6 +11,7 @@ import cn.nukkit.utils.BlockColor;
 public abstract class BlockSolid extends Block {
 
     protected BlockSolid() {
+        // Does nothing
     }
 
     @Override

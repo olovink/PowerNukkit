@@ -26,6 +26,7 @@ public class BlockChorusFlower extends BlockTransparent {
     public static final BlockProperties PROPERTIES = new BlockProperties(AGE);
 
     public BlockChorusFlower() {
+        // Does nothing
     }
 
     @Override
@@ -117,12 +118,14 @@ public class BlockChorusFlower extends BlockTransparent {
     }
 
     @Override
+    @PowerNukkitOnly
     public boolean breaksWhenMoved() {
         return true;
     }
 
     @Override
-    public boolean sticksToPiston() {
+    @PowerNukkitOnly
+    public  boolean sticksToPiston() {
         return false;
     }
 }

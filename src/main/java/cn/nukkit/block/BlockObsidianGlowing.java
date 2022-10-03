@@ -13,6 +13,7 @@ import cn.nukkit.item.ItemTool;
 public class BlockObsidianGlowing extends BlockSolid {
 
     public BlockObsidianGlowing() {
+        // Does nothing
     }
 
     @Override
@@ -74,7 +75,8 @@ public class BlockObsidianGlowing extends BlockSolid {
     }
 
     @Override
-    public boolean canBePulled() {
+    @PowerNukkitOnly
+    public  boolean canBePulled() {
         return false;
     }
 

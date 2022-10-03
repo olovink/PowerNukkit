@@ -1,6 +1,10 @@
 package cn.nukkit.item;
 
+import cn.nukkit.api.PowerNukkitOnly;
+import cn.nukkit.api.Since;
+import cn.nukkit.entity.item.EntityPotion;
 import cn.nukkit.nbt.tag.CompoundTag;
+import cn.nukkit.potion.Potion;
 
 /**
  * @author xtypr
@@ -8,12 +12,34 @@ import cn.nukkit.nbt.tag.CompoundTag;
  */
 public class ItemPotionSplash extends ProjectileItem {
 
+    @PowerNukkitOnly
+    @Since("1.6.0.0-PN")
+    public ItemPotionSplash() {
+        this(0, 1);
+    }
+
     public ItemPotionSplash(Integer meta) {
         this(meta, 1);
     }
 
     public ItemPotionSplash(Integer meta, int count) {
         super(SPLASH_POTION, meta, count, "Splash Potion");
+        updateName();
+    }
+
+    @Override
+    public void setDamage(Integer meta) {
+        super.setDamage(meta);
+        updateName();
+    }
+
+    private void updateName() {
+        int potionId = getDamage();
+        if (potionId == Potion.WATER) {
+            name = "Splash Water Bottle";
+        } else {
+            name = ItemPotion.buildName(potionId, "Splash Potion", true);
+        }
     }
 
     @Override
@@ -38,6 +64,6 @@ public class ItemPotionSplash extends ProjectileItem {
 
     @Override
     protected void correctNBT(CompoundTag nbt) {
-        nbt.putInt("PotionId", this.meta);
+        nbt.putInt(EntityPotion.NBT_POTION_ID, this.meta);
     }
 }

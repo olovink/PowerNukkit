@@ -1,5 +1,6 @@
 package cn.nukkit.block;
 
+import cn.nukkit.api.PowerNukkitOnly;
 import cn.nukkit.item.ItemTool;
 import cn.nukkit.utils.BlockColor;
 
@@ -10,6 +11,7 @@ public class BlockLapis extends BlockSolid {
 
 
     public BlockLapis() {
+        // Does nothing
     }
 
     @Override
@@ -19,7 +21,7 @@ public class BlockLapis extends BlockSolid {
 
     @Override
     public String getName() {
-        return "Lapis Lazuli Block";
+        return "Block of Lapis Lazuli";
     }
 
     @Override
@@ -38,6 +40,7 @@ public class BlockLapis extends BlockSolid {
     }
 
     @Override
+    @PowerNukkitOnly
     public int getToolTier() {
         return ItemTool.TIER_STONE;
     }

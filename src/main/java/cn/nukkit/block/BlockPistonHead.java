@@ -30,7 +30,7 @@ public class BlockPistonHead extends BlockTransparentMeta implements Faceable {
 
     @Override
     public int getId() {
-        return PISTON_HEAD;
+        return PISTON_ARM_COLLISION;
     }
 
     @Since("1.4.0.0-PN")
@@ -76,6 +76,12 @@ public class BlockPistonHead extends BlockTransparentMeta implements Faceable {
         return true;
     }
 
+    @Since("1.6.0.0-PN")
+    public BlockFace getFacing() {
+        return getBlockFace();
+    }
+
+    @PowerNukkitOnly
     @Override
     public BlockFace getBlockFace() {
         BlockFace face = BlockFace.fromIndex(this.getDamage());
@@ -89,7 +95,8 @@ public class BlockPistonHead extends BlockTransparentMeta implements Faceable {
     }
 
     @Override
-    public boolean canBePulled() {
+    @PowerNukkitOnly
+    public  boolean canBePulled() {
         return false;
     }
 

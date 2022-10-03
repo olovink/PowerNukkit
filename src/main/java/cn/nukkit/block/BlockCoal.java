@@ -1,5 +1,6 @@
 package cn.nukkit.block;
 
+import cn.nukkit.api.PowerNukkitOnly;
 import cn.nukkit.item.ItemTool;
 import cn.nukkit.utils.BlockColor;
 
@@ -9,6 +10,7 @@ import cn.nukkit.utils.BlockColor;
  */
 public class BlockCoal extends BlockSolid {
     public BlockCoal() {
+        // Does nothing
     }
 
     @Override
@@ -47,6 +49,7 @@ public class BlockCoal extends BlockSolid {
     }
 
     @Override
+    @PowerNukkitOnly
     public int getToolTier() {
         return ItemTool.TIER_WOODEN;
     }

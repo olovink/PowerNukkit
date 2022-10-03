@@ -1,6 +1,5 @@
 package cn.nukkit.entity.item;
 
-import cn.nukkit.api.PowerNukkitDifference;
 import cn.nukkit.api.PowerNukkitOnly;
 import cn.nukkit.api.Since;
 import cn.nukkit.entity.Entity;
@@ -23,6 +22,10 @@ public class EntityPotion extends EntityProjectile {
 
     public static final int DATA_POTION_ID = 37;
 
+    @PowerNukkitOnly
+    @Since("FUTURE")
+    public static final String NBT_POTION_ID = "PotionId";
+
     public int potionId;
 
     public EntityPotion(FullChunk chunk, CompoundTag nbt) {
@@ -37,7 +40,7 @@ public class EntityPotion extends EntityProjectile {
     protected void initEntity() {
         super.initEntity();
 
-        potionId = this.namedTag.getShort("PotionId");
+        potionId = this.namedTag.getShort(NBT_POTION_ID);
 
         this.dataProperties.putShort(DATA_POTION_AUX_VALUE, this.potionId);
 
@@ -91,7 +94,7 @@ public class EntityPotion extends EntityProjectile {
         this.splash(entity);
     }
 
-    @PowerNukkitDifference(info = "Using new method to play sounds", since = "1.4.0.0-PN")
+    @PowerNukkitOnly
     protected void splash(Entity collidedWith) {
         Potion potion = Potion.getPotion(this.potionId);
         PotionCollideEvent event = new PotionCollideEvent(potion, this);

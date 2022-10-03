@@ -1,19 +1,20 @@
 package cn.nukkit.utils;
 
+import cn.nukkit.Server;
 import cn.nukkit.network.protocol.LoginPacket;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
 import com.nimbusds.jose.JOSEException;
 import com.nimbusds.jose.JWSObject;
-import com.nimbusds.jose.JWSVerifier;
-import com.nimbusds.jose.crypto.factories.DefaultJWSVerifierFactory;
-import net.minidev.json.JSONObject;
+import com.nimbusds.jose.crypto.ECDSAVerifier;
 
+import java.net.URI;
 import java.nio.charset.StandardCharsets;
 import java.security.KeyFactory;
 import java.security.NoSuchAlgorithmException;
 import java.security.PublicKey;
+import java.security.interfaces.ECPublicKey;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.X509EncodedKeySpec;
 import java.util.*;
@@ -108,7 +109,11 @@ public final class ClientChainData implements LoginChainData {
 
     @Override
     public String getXUID() {
-        return xuid;
+        if (this.isWaterdog()) {
+            return waterdogXUID;
+        } else {
+            return xuid;
+        }
     }
 
     private boolean xboxAuthed;
@@ -137,8 +142,26 @@ public final class ClientChainData implements LoginChainData {
     }
 
     @Override
+    public String getWaterdogXUID() {
+        return waterdogXUID;
+    }
+
+    @Override
+    public String getWaterdogIP() {
+        return waterdogIP;
+    }
+
+    @Override
     public JsonObject getRawData() {
         return rawData;
+    }
+
+    private boolean isWaterdog() {
+        if(waterdogXUID == null | Server.getInstance() == null) {
+            return false;
+        }
+
+        return Server.getInstance().isWaterdogCapable();
     }
 
     ///////////////////////////////////////////////////////////////////////////
@@ -163,9 +186,10 @@ public final class ClientChainData implements LoginChainData {
     private UUID clientUUID;
     private String xuid;
 
-    private static PublicKey generateKey(String base64) throws NoSuchAlgorithmException, InvalidKeySpecException {
-        return KeyFactory.getInstance("EC").generatePublic(new X509EncodedKeySpec(Base64.getDecoder().decode(base64)));
+    private static ECPublicKey generateKey(String base64) throws NoSuchAlgorithmException, InvalidKeySpecException {
+        return (ECPublicKey) KeyFactory.getInstance("EC").generatePublic(new X509EncodedKeySpec(Base64.getDecoder().decode(base64)));
     }
+
     private String identityPublicKey;
 
     private long clientId;
@@ -178,6 +202,8 @@ public final class ClientChainData implements LoginChainData {
     private String languageCode;
     private int currentInputMode;
     private int defaultInputMode;
+    private String waterdogIP;
+    private String waterdogXUID;
 
     private int UIProfile;
 
@@ -213,6 +239,12 @@ public final class ClientChainData implements LoginChainData {
         if (skinToken.has("DefaultInputMode")) this.defaultInputMode = skinToken.get("DefaultInputMode").getAsInt();
         if (skinToken.has("UIProfile")) this.UIProfile = skinToken.get("UIProfile").getAsInt();
         if (skinToken.has("CapeData")) this.capeData = skinToken.get("CapeData").getAsString();
+        if (skinToken.has("Waterdog_IP")) this.waterdogIP = skinToken.get("Waterdog_IP").getAsString();
+        if (skinToken.has("Waterdog_XUID")) this.waterdogXUID = skinToken.get("Waterdog_XUID").getAsString();
+
+        if (this.isWaterdog()) {
+            xboxAuthed = true;
+        }
 
         this.rawData = skinToken;
     }
@@ -258,35 +290,48 @@ public final class ClientChainData implements LoginChainData {
     }
 
     private boolean verifyChain(List<String> chains) throws Exception {
-
-        PublicKey lastKey = null;
+        ECPublicKey lastKey = null;
         boolean mojangKeyVerified = false;
-        for (String chain: chains) {
-            JWSObject jws = JWSObject.parse(chain);
+        Iterator<String> iterator = chains.iterator();
+        while (iterator.hasNext()) {
+            JWSObject jws = JWSObject.parse(iterator.next());
 
-            if (!mojangKeyVerified) {
-                // First chain should be signed using Mojang's private key. We'd be in big trouble if it leaked...
-                mojangKeyVerified = verify(MOJANG_PUBLIC_KEY, jws);
+            URI x5u = jws.getHeader().getX509CertURL();
+            if (x5u == null) {
+                return false;
             }
 
-            if (lastKey != null) {
-                if (!verify(lastKey, jws)) {
-                    throw new JOSEException("Unable to verify key in chain.");
-                }
+            ECPublicKey expectedKey = generateKey(x5u.toString());
+            // First key is self-signed
+            if (lastKey == null) {
+                lastKey = expectedKey;
+            } else if (!lastKey.equals(expectedKey)) {
+                return false;
             }
 
-            JSONObject payload = jws.getPayload().toJSONObject();
-            String base64key = payload.getAsString("identityPublicKey");
-            if (base64key == null) {
+            if (!verify(lastKey, jws)) {
+                return false;
+            }
+
+            if (mojangKeyVerified) {
+                return !iterator.hasNext();
+            }
+
+            if (lastKey.equals(MOJANG_PUBLIC_KEY)) {
+                mojangKeyVerified = true;
+            }
+
+            Map<String, Object> payload = jws.getPayload().toJSONObject();
+            Object base64key = payload.get("identityPublicKey");
+            if (!(base64key instanceof String)) {
                 throw new RuntimeException("No key found");
             }
-            lastKey = generateKey(base64key);
+            lastKey = generateKey((String) base64key);
         }
         return mojangKeyVerified;
     }
 
-    private boolean verify(PublicKey key, JWSObject object) throws JOSEException {
-        JWSVerifier verifier = new DefaultJWSVerifierFactory().createJWSVerifier(object.getHeader(), key);
-        return object.verify(verifier);
+    private boolean verify(ECPublicKey key, JWSObject object) throws JOSEException {
+        return object.verify(new ECDSAVerifier(key));
     }
 }

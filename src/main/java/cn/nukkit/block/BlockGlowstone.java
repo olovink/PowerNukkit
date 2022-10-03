@@ -14,6 +14,7 @@ import java.util.Random;
  */
 public class BlockGlowstone extends BlockTransparent {
     public BlockGlowstone() {
+        // Does nothing
     }
 
     @Override

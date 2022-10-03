@@ -13,6 +13,7 @@ import cn.nukkit.utils.BlockColor;
 public class BlockIronBars extends BlockThin {
 
     public BlockIronBars() {
+        // Does nothing
     }
 
     @Override
@@ -52,6 +53,7 @@ public class BlockIronBars extends BlockThin {
     }
 
     @Override
+    @PowerNukkitOnly
     public int getToolTier() {
         return ItemTool.TIER_WOODEN;
     }

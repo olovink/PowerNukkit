@@ -70,7 +70,7 @@ public abstract class Food {
             .addChanceEffect(0.8F, Effect.getEffect(Effect.HUNGER).setDuration(30 * 20))
             .addRelative(Item.ROTTEN_FLESH));
     public static final Food spider_eye = registerDefaultFood(new FoodEffective(2, 3.2F)
-            .addEffect(Effect.getEffect(Effect.POISON).setDuration(4 * 20))
+            .addEffect(Effect.getEffect(Effect.POISON).setDuration(5 * 20))
             .addRelative(Item.SPIDER_EYE));
     public static final Food steak = registerDefaultFood(new FoodNormal(8, 12.8F).addRelative(Item.COOKED_BEEF));
     //different kinds of fishes
@@ -82,7 +82,7 @@ public abstract class Food {
     public static final Food pufferfish = registerDefaultFood(new FoodEffective(1, 0.2F)
             .addEffect(Effect.getEffect(Effect.HUNGER).setAmplifier(2).setDuration(15 * 20))
             .addEffect(Effect.getEffect(Effect.NAUSEA).setAmplifier(1).setDuration(15 * 20))
-            .addEffect(Effect.getEffect(Effect.POISON).setAmplifier(4).setDuration(60 * 20))
+            .addEffect(Effect.getEffect(Effect.POISON).setAmplifier(3).setDuration(60 * 20))
             .addRelative(Item.PUFFERFISH));
     public static final Food dried_kelp = registerDefaultFood(new FoodNormal(1, 0.6F).addRelative(Item.DRIED_KELP).setEatingTick(16));
     public static final Food sweet_berries = registerDefaultFood(new FoodNormal(2, 0.4F).addRelative(Item.SWEET_BERRIES));

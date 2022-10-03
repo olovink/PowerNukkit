@@ -19,6 +19,7 @@ import static cn.nukkit.math.VectorMath.calculateFace;
 public abstract class BlockThin extends BlockTransparent implements BlockConnectable {
 
     protected BlockThin() {
+        // Does nothing
     }
 
     @Override
@@ -33,6 +34,7 @@ public abstract class BlockThin extends BlockTransparent implements BlockConnect
         return false;
     }
 
+    @Override
     protected AxisAlignedBB recalculateBoundingBox() {
         final double offNW = 7.0 / 16.0;
         final double offSE = 9.0 / 16.0;

@@ -12,6 +12,7 @@ import cn.nukkit.utils.BlockColor;
 public class BlockBedrockInvisible extends BlockSolid {
 
     public BlockBedrockInvisible() {
+        // Does nothing
     }
 
     @Override
@@ -61,7 +62,8 @@ public class BlockBedrockInvisible extends BlockSolid {
     }
 
     @Override
-    public boolean canBePulled() {
+    @PowerNukkitOnly
+    public  boolean canBePulled() {
         return false;
     }
 

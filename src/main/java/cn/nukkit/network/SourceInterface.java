@@ -1,7 +1,13 @@
 package cn.nukkit.network;
 
 import cn.nukkit.Player;
+import cn.nukkit.api.PowerNukkitOnly;
+import cn.nukkit.api.Since;
 import cn.nukkit.network.protocol.DataPacket;
+import cn.nukkit.network.protocol.types.PacketCompressionAlgorithm;
+import cn.nukkit.network.session.NetworkPlayerSession;
+
+import java.net.InetSocketAddress;
 
 
 /**
@@ -9,11 +15,22 @@ import cn.nukkit.network.protocol.DataPacket;
  */
 public interface SourceInterface {
 
-    Integer putPacket(Player player, DataPacket packet);
+    @Deprecated
+    default Integer putPacket(Player player, DataPacket packet) {
+        throw new UnsupportedOperationException("This method is deprecated");
+    }
 
-    Integer putPacket(Player player, DataPacket packet, boolean needACK);
+    @Deprecated
+    default Integer putPacket(Player player, DataPacket packet, boolean needACK) {
+        throw new UnsupportedOperationException("This method is deprecated");
+    }
 
-    Integer putPacket(Player player, DataPacket packet, boolean needACK, boolean immediate);
+    @Deprecated
+    default Integer putPacket(Player player, DataPacket packet, boolean needACK, boolean immediate) {
+        throw new UnsupportedOperationException("This method is deprecated");
+    }
+
+    NetworkPlayerSession getSession(InetSocketAddress address);
 
     int getNetworkLatency(Player player);
 
@@ -28,4 +45,11 @@ public interface SourceInterface {
     void shutdown();
 
     void emergencyShutdown();
+    
+    @PowerNukkitOnly
+    @Since("1.5.2.0-PN")
+    @Deprecated
+    default Integer putResourcePacket(Player player, DataPacket packet) {
+        throw new UnsupportedOperationException("This method is deprecated");
+    }
 }

@@ -8,6 +8,7 @@ import cn.nukkit.item.ItemBirchSign;
 public class BlockBirchSignPost extends BlockSignPost {
     @PowerNukkitOnly
     public BlockBirchSignPost() {
+        // Does nothing
     }
 
     @PowerNukkitOnly
@@ -20,6 +21,7 @@ public class BlockBirchSignPost extends BlockSignPost {
         return BIRCH_STANDING_SIGN;
     }
 
+    @PowerNukkitOnly
     @Override
     public int getWallId() {
         return BIRCH_WALL_SIGN;

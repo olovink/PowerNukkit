@@ -133,6 +133,7 @@ public class AddEntityPacket extends DataPacket {
             .put(128, "minecraft:goat")
             .put(129, "minecraft:glow_squid")
             .put(130, "minecraft:axolotl")
+            .put(134, "minecraft:allay")
             .build();
 
     @Override
@@ -153,6 +154,7 @@ public class AddEntityPacket extends DataPacket {
     public float yaw;
     public float pitch;
     public float headYaw;
+    public float bodyYaw = -1;
     public EntityMetadata metadata = new EntityMetadata();
     public Attribute[] attributes = Attribute.EMPTY_ARRAY;
     public EntityLink[] links = EntityLink.EMPTY_ARRAY;
@@ -176,6 +178,7 @@ public class AddEntityPacket extends DataPacket {
         this.putLFloat(this.pitch);
         this.putLFloat(this.yaw);
         this.putLFloat(this.headYaw);
+        this.putLFloat(this.bodyYaw == -1 ? this.yaw : this.bodyYaw);
         this.putAttributeList(this.attributes);
         this.put(Binary.writeMetadata(this.metadata));
         this.putUnsignedVarInt(this.links.length);

@@ -6,7 +6,7 @@ import cn.nukkit.item.ItemTool;
 
 /**
  * @author LoboMetalurgico
- * @since 08/06/2021
+ * @since 2021-06-08
  */
 
 @PowerNukkitOnly
@@ -15,6 +15,7 @@ public class BlockDeepslateCobbled extends BlockSolid {
     @PowerNukkitOnly
     @Since("FUTURE")
     public BlockDeepslateCobbled(){
+        // Does nothing
     }
 
     @Override

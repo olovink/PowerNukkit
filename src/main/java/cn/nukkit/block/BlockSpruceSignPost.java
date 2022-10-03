@@ -8,6 +8,7 @@ import cn.nukkit.item.ItemSpruceSign;
 public class BlockSpruceSignPost extends BlockSignPost {
     @PowerNukkitOnly
     public BlockSpruceSignPost() {
+        // Does nothing
     }
 
     @PowerNukkitOnly
@@ -20,6 +21,7 @@ public class BlockSpruceSignPost extends BlockSignPost {
         return SPRUCE_STANDING_SIGN;
     }
 
+    @PowerNukkitOnly
     @Override
     public int getWallId() {
         return SPRUCE_WALL_SIGN;

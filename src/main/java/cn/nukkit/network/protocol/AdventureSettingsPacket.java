@@ -1,12 +1,15 @@
 package cn.nukkit.network.protocol;
 
 import cn.nukkit.Player;
+import cn.nukkit.api.DeprecationDetails;
 import lombok.ToString;
 
 /**
  * @author Nukkit Project Team
  */
 @ToString
+@Deprecated
+@DeprecationDetails(since = "FUTURE", reason = "It is no longer used since Minecraft BE 1.19.30", by = "Minecraft")
 public class AdventureSettingsPacket extends DataPacket {
 
     public static final byte NETWORK_ID = ProtocolInfo.ADVENTURE_SETTINGS_PACKET;
@@ -52,6 +55,7 @@ public class AdventureSettingsPacket extends DataPacket {
 
     public long entityUniqueId; //This is a little-endian long, NOT a var-long. (WTF Mojang)
 
+    @Override
     public void decode() {
         this.flags = getUnsignedVarInt();
         this.commandPermission = getUnsignedVarInt();
@@ -61,6 +65,7 @@ public class AdventureSettingsPacket extends DataPacket {
         this.entityUniqueId = getLLong();
     }
 
+    @Override
     public void encode() {
         this.reset();
         this.putUnsignedVarInt(this.flags);

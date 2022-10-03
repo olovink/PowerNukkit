@@ -35,6 +35,7 @@ public abstract class BlockVinesNether extends BlockTransparentMeta {
     @PowerNukkitOnly
     @Since("1.4.0.0-PN")
     public BlockVinesNether() {
+        // Does nothing
     }
 
     /**
@@ -428,11 +429,13 @@ public abstract class BlockVinesNether extends BlockTransparentMeta {
     }
 
     @Override
-    public boolean sticksToPiston() {
+    @PowerNukkitOnly
+    public  boolean sticksToPiston() {
         return false;
     }
 
     @Override
+    @PowerNukkitOnly
     public boolean breaksWhenMoved() {
         return true;
     }

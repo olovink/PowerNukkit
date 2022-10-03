@@ -31,9 +31,10 @@ public class BlockSlabWood extends BlockSlab {
 
     @Override
     public String getName() {
-        return (isOnTop()? "Upper " : "") + getSlabName() + " Wood Slab";
+        return (isOnTop() ? "Upper " : "") + getSlabName() + " Slab";
     }
 
+    @PowerNukkitOnly
     @Override
     public String getSlabName() {
         return getWoodType().getEnglishName();
@@ -44,6 +45,7 @@ public class BlockSlabWood extends BlockSlab {
         return WOOD_SLAB;
     }
 
+    @PowerNukkitOnly
     @Override
     public boolean isSameType(BlockSlab slab) {
         return slab.getId() == getId() && slab.getPropertyValue(WoodType.PROPERTY).equals(getWoodType());
