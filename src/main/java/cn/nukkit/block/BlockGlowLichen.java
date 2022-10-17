@@ -9,6 +9,7 @@ import cn.nukkit.blockproperty.IntBlockProperty;
 import cn.nukkit.item.Item;
 import cn.nukkit.item.ItemBlock;
 import cn.nukkit.item.ItemTool;
+import cn.nukkit.level.Level;
 import cn.nukkit.math.BlockFace;
 import cn.nukkit.math.NukkitRandom;
 import cn.nukkit.utils.BlockColor;
@@ -58,6 +59,10 @@ public class BlockGlowLichen extends BlockTransparent {
         return returns.toArray(BlockFace[]::new);
     }
 
+    public boolean hasSupportSide() {
+        return Arrays.stream(BlockFace.values()).anyMatch(side -> getSide(side).isSolid(side) && isGrowthToSide(side));
+    }
+
     public boolean isGrowthToSide(@Nonnull BlockFace side) {
         return ((getPropertyValue(MULTI_FACE_DIRECTION_BITS) >> side.getIndex()) & 0x1) > 0;
     }
@@ -99,6 +104,19 @@ public class BlockGlowLichen extends BlockTransparent {
 
         getLevel().setBlock(block, this, true, true);
         return true;
+    }
+
+    @Override
+    public int onUpdate(int type) {
+        switch (type) {
+            case Level.BLOCK_UPDATE_NORMAL:
+                if (!hasSupportSide()) {
+                    getLevel().useBreakOn(this, null, null, true);
+                }
+                return Level.BLOCK_UPDATE_NORMAL;
+            default:
+                return 0;
+        }
     }
 
     @Override
