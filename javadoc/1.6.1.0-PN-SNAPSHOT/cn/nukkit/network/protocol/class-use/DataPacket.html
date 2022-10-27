@@ -5,7 +5,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172727144-3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "UA-172727144-3"); </script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Uses of Class cn.nukkit.network.protocol.DataPacket (PowerNukkit 1.6.1.0-PN-SNAPSHOT API)</title>
-<meta name="date" content="2022-09-25">
+<meta name="date" content="2022-10-27">
 <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
 <script type="text/javascript" src="../../../../../script.js"></script>
 </head>
@@ -404,15 +404,15 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>[]</code></td>
-<td class="colLast"><span class="typeNameLabel">DestroyBlockParticle.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/level/particle/DestroyBlockParticle.html#encode--">encode</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">ItemBreakParticle.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/level/particle/ItemBreakParticle.html#encode--">encode</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>[]</code></td>
-<td class="colLast"><span class="typeNameLabel">MobSpawnParticle.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/level/particle/MobSpawnParticle.html#encode--">encode</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">GenericParticle.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/level/particle/GenericParticle.html#encode--">encode</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>[]</code></td>
-<td class="colLast"><span class="typeNameLabel">ItemBreakParticle.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/level/particle/ItemBreakParticle.html#encode--">encode</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">BoneMealParticle.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/level/particle/BoneMealParticle.html#encode--">encode</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>abstract <a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>[]</code></td>
@@ -424,19 +424,19 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>[]</code></td>
-<td class="colLast"><span class="typeNameLabel">SpellParticle.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/level/particle/SpellParticle.html#encode--">encode</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">MobSpawnParticle.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/level/particle/MobSpawnParticle.html#encode--">encode</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>[]</code></td>
-<td class="colLast"><span class="typeNameLabel">BoneMealParticle.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/level/particle/BoneMealParticle.html#encode--">encode</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">SpellParticle.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/level/particle/SpellParticle.html#encode--">encode</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>[]</code></td>
-<td class="colLast"><span class="typeNameLabel">GenericParticle.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/level/particle/GenericParticle.html#encode--">encode</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">PunchBlockParticle.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/level/particle/PunchBlockParticle.html#encode--">encode</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>[]</code></td>
-<td class="colLast"><span class="typeNameLabel">PunchBlockParticle.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/level/particle/PunchBlockParticle.html#encode--">encode</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">DestroyBlockParticle.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/level/particle/DestroyBlockParticle.html#encode--">encode</a></span>()</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -487,18 +487,24 @@
 </tr>
 <tbody>
 <tr class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a></code></td>
+<td class="colLast"><span class="typeNameLabel">RakNetInterface.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/RakNetInterface.html#putPacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-">putPacket</a></span>(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
+         <a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>default <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a></code></td>
 <td class="colLast"><span class="typeNameLabel">SourceInterface.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/SourceInterface.html#putPacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-">putPacket</a></span>(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
          <a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a></code></td>
-<td class="colLast"><span class="typeNameLabel">RakNetInterface.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/RakNetInterface.html#putPacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-">putPacket</a></span>(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
-         <a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</code>&nbsp;</td>
-</tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a></code></td>
+<td class="colLast"><span class="typeNameLabel">RakNetInterface.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/RakNetInterface.html#putPacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-boolean-">putPacket</a></span>(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
+         <a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet,
+         boolean&nbsp;needACK)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>default <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a></code></td>
 <td class="colLast"><span class="typeNameLabel">SourceInterface.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/SourceInterface.html#putPacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-boolean-">putPacket</a></span>(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
          <a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet,
@@ -506,13 +512,14 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a></code></td>
-<td class="colLast"><span class="typeNameLabel">RakNetInterface.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/RakNetInterface.html#putPacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-boolean-">putPacket</a></span>(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
-         <a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet,
-         boolean&nbsp;needACK)</code>&nbsp;</td>
-</tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a></code></td>
+<td class="colLast"><span class="typeNameLabel">RakNetInterface.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/RakNetInterface.html#putPacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-boolean-boolean-">putPacket</a></span>(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
+         <a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet,
+         boolean&nbsp;needACK,
+         boolean&nbsp;immediate)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>default <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a></code></td>
 <td class="colLast"><span class="typeNameLabel">SourceInterface.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/SourceInterface.html#putPacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-boolean-boolean-">putPacket</a></span>(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
          <a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet,
@@ -521,23 +528,16 @@
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a></code></td>
-<td class="colLast"><span class="typeNameLabel">RakNetInterface.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/RakNetInterface.html#putPacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-boolean-boolean-">putPacket</a></span>(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
-         <a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet,
-         boolean&nbsp;needACK,
-         boolean&nbsp;immediate)</code>&nbsp;</td>
-</tr>
 <tr class="altColor">
-<td class="colFirst"><code>default <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a></code></td>
-<td class="colLast"><span class="typeNameLabel">SourceInterface.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/SourceInterface.html#putResourcePacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-">putResourcePacket</a></span>(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a></code></td>
+<td class="colLast"><span class="typeNameLabel">RakNetInterface.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/RakNetInterface.html#putResourcePacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-">putResourcePacket</a></span>(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
                  <a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a></code></td>
-<td class="colLast"><span class="typeNameLabel">RakNetInterface.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/RakNetInterface.html#putResourcePacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-">putResourcePacket</a></span>(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
+<td class="colFirst"><code>default <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang">Integer</a></code></td>
+<td class="colLast"><span class="typeNameLabel">SourceInterface.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/SourceInterface.html#putResourcePacket-cn.nukkit.Player-cn.nukkit.network.protocol.DataPacket-">putResourcePacket</a></span>(<a href="../../../../../cn/nukkit/Player.html" title="class in cn.nukkit">Player</a>&nbsp;player,
                  <a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</code>
 <div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </td>
@@ -1194,15 +1194,15 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a></code></td>
-<td class="colLast"><span class="typeNameLabel">InventoryContentPacket.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/InventoryContentPacket.html#clean--">clean</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">CraftingDataPacket.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/CraftingDataPacket.html#clean--">clean</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a></code></td>
-<td class="colLast"><span class="typeNameLabel">CraftingDataPacket.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/CraftingDataPacket.html#clean--">clean</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">DataPacket.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/DataPacket.html#clean--">clean</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a></code></td>
-<td class="colLast"><span class="typeNameLabel">DataPacket.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/DataPacket.html#clean--">clean</a></span>()</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">InventoryContentPacket.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/protocol/InventoryContentPacket.html#clean--">clean</a></span>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a></code></td>
@@ -1228,21 +1228,21 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">NetworkPlayerSession.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/session/NetworkPlayerSession.html#sendImmediatePacket-cn.nukkit.network.protocol.DataPacket-java.lang.Runnable-">sendImmediatePacket</a></span>(<a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet,
+<td class="colLast"><span class="typeNameLabel">RakNetPlayerSession.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/session/RakNetPlayerSession.html#sendImmediatePacket-cn.nukkit.network.protocol.DataPacket-java.lang.Runnable-">sendImmediatePacket</a></span>(<a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet,
                    <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;callback)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">RakNetPlayerSession.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/session/RakNetPlayerSession.html#sendImmediatePacket-cn.nukkit.network.protocol.DataPacket-java.lang.Runnable-">sendImmediatePacket</a></span>(<a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet,
+<td class="colLast"><span class="typeNameLabel">NetworkPlayerSession.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/session/NetworkPlayerSession.html#sendImmediatePacket-cn.nukkit.network.protocol.DataPacket-java.lang.Runnable-">sendImmediatePacket</a></span>(<a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet,
                    <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;callback)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">NetworkPlayerSession.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/session/NetworkPlayerSession.html#sendPacket-cn.nukkit.network.protocol.DataPacket-">sendPacket</a></span>(<a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">RakNetPlayerSession.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/session/RakNetPlayerSession.html#sendPacket-cn.nukkit.network.protocol.DataPacket-">sendPacket</a></span>(<a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="typeNameLabel">RakNetPlayerSession.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/session/RakNetPlayerSession.html#sendPacket-cn.nukkit.network.protocol.DataPacket-">sendPacket</a></span>(<a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</code>&nbsp;</td>
+<td class="colLast"><span class="typeNameLabel">NetworkPlayerSession.</span><code><span class="memberNameLink"><a href="../../../../../cn/nukkit/network/session/NetworkPlayerSession.html#sendPacket-cn.nukkit.network.protocol.DataPacket-">sendPacket</a></span>(<a href="../../../../../cn/nukkit/network/protocol/DataPacket.html" title="class in cn.nukkit.network.protocol">DataPacket</a>&nbsp;packet)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
