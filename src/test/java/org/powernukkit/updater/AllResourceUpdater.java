@@ -84,6 +84,10 @@ public class AllResourceUpdater {
         var recipesIterator = newRecipes.listIterator();
         while (recipesIterator.hasNext()) {
             var recipe = new LinkedHashMap<String, Object>(recipesIterator.next());
+            if (recipe.get("block") != null && recipe.get("block").equals("deprecated")) {
+                recipesIterator.remove();
+                continue;
+            }
             var type = Utils.toInt(recipe.get("type"));
             Object inputObject = recipe.get("input");
             if (inputObject != null) {
@@ -130,7 +134,7 @@ public class AllResourceUpdater {
                 .getResourceAsStream("org/powernukkit/updater/dumps/proxypass/creativeitems.json")
         ) {
             if (recipesStream == null) {
-                throw new AssertionError("Unable to findcreativeitems.json");
+                throw new AssertionError("Unable to find creativeitems.json");
             }
             config.loadAsJson(recipesStream, GSON);
         } catch (IOException e) {
@@ -154,7 +158,7 @@ public class AllResourceUpdater {
     }
 
     private Map<String, Object> updateItemEntry(Map<String, Object> itemEntry) {
-        System.out.println("Updating item entry: " + itemEntry);
+        // System.out.println("Updating item entry: " + itemEntry);
         var result = updateItemEntry0(itemEntry);
         if ("minecraft:air".equals(result.get("blockState"))) {
             throw new NoSuchElementException("State not found for: "+itemEntry);
@@ -162,8 +166,52 @@ public class AllResourceUpdater {
         return result;
     }
 
-    private Map<String, Object> updateItemEntry0(Map<String, Object> itemEntry) {
+    private LinkedHashMap<String, Object> adapter(Map<String, Object> itemEntry) {
         itemEntry = new LinkedHashMap<>(itemEntry);
+
+        if (itemEntry.containsKey("type")) {
+            if (itemEntry.get("type").equals("item_tag")) {
+                itemEntry.put("id", itemEntry.remove("itemTag"));
+            }
+            itemEntry.remove("type");
+        }
+
+        if (!itemEntry.containsKey("id") && itemEntry.containsKey("fullName")) {
+            itemEntry.put("id", itemEntry.remove("fullName"));
+        }
+
+        if (itemEntry.containsKey("auxValue")) {
+            if (itemEntry.get("auxValue").equals("0")) {
+                itemEntry.remove("auxValue");
+            } else {
+                itemEntry.put("damage", itemEntry.remove("auxValue"));
+            }
+        }
+
+        if (itemEntry.containsKey("itemId")) {
+            itemEntry.put("legacyId", itemEntry.remove("itemId"));
+        }
+
+        if (!itemEntry.containsKey("id") && itemEntry.containsKey("legacyId")) {
+            int legacyId = Utils.toInt(itemEntry.get("legacyId"));
+            String id = null;
+            if (legacyId <= 255 && legacyId >= 0) {
+                id = BlockStateRegistry.getPersistenceName(legacyId);
+            } else if (legacyId < 0) {
+                id = BlockStateRegistry.getPersistenceName(((legacyId * -1) + 255));
+            }
+            if (id != null && id.contains("blockid:")) {
+                System.out.println("Unknown block " + itemEntry + " Is the block-id-dump-from-items.properties and block_ids.csv update?");
+                id = String.valueOf(legacyId);
+            }
+            itemEntry.put("id", id);
+        }
+
+        return (LinkedHashMap<String, Object>) itemEntry;
+    }
+
+    private Map<String, Object> updateItemEntry0(Map<String, Object> itemEntry) {
+        itemEntry = adapter(itemEntry);
         Integer damage = itemEntry.containsKey("damage")? Utils.toInt(itemEntry.get("damage")) : null;
         boolean fuzzy = damage != null && (damage.equals((int)Short.MAX_VALUE) || damage.equals(-1));
         if (itemEntry.containsKey("blockState")) {
@@ -267,6 +315,11 @@ public class AllResourceUpdater {
         }
 
         String id = itemEntry.get("id").toString();
+
+        if (id == null) {
+            throw new NoSuchElementException("No id found for: " + itemEntry);
+        }
+
         Item item = Item.fromString(id);
         if (item.getId() > 255) {
             if (damage != null && !fuzzy && damage != 0) {
