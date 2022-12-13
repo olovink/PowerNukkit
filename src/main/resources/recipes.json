@@ -12832,7 +12832,6 @@
       ],
       "output": [
         {
-          "legacyId": 645,
           "id": "minecraft:acacia_chest_boat"
         }
       ],
@@ -13129,8 +13128,8 @@
       "input": {
         "A": {
           "count": 1,
-          "damage": 32767,
-          "legacyId": 624
+          "id": "minecraft:amethyst_shard",
+          "fuzzy": true
         }
       },
       "output": [
@@ -13843,7 +13842,6 @@
       ],
       "output": [
         {
-          "legacyId": 642,
           "id": "minecraft:birch_chest_boat"
         }
       ],
@@ -17269,7 +17267,6 @@
       ],
       "output": [
         {
-          "legacyId": 641,
           "id": "minecraft:oak_chest_boat"
         }
       ],
@@ -19262,7 +19259,6 @@
       ],
       "output": [
         {
-          "legacyId": 646,
           "id": "minecraft:dark_oak_chest_boat"
         }
       ],
@@ -21068,7 +21064,6 @@
       ],
       "output": [
         {
-          "legacyId": 623,
           "id": "minecraft:glow_frame"
         }
       ],
@@ -23412,7 +23407,6 @@
       ],
       "output": [
         {
-          "legacyId": 643,
           "id": "minecraft:jungle_chest_boat"
         }
       ],
@@ -26072,8 +26066,8 @@
       },
       "output": [
         {
-          "legacyId": 636,
-          "id": "minecraft:mangrove_boat"
+          "id": "minecraft:mangrove_boat",
+          "damage": 6
         }
       ],
       "shape": [
@@ -26115,13 +26109,12 @@
         },
         {
           "count": 1,
-          "damage": 0,
-          "legacyId": 636
+          "id": "minecraft:mangrove_boat",
+          "damage": 6
         }
       ],
       "output": [
         {
-          "legacyId": 647,
           "id": "minecraft:mangrove_chest_boat"
         }
       ],
@@ -26140,7 +26133,6 @@
       },
       "output": [
         {
-          "legacyId": 634,
           "id": "minecraft:mangrove_door",
           "count": 3
         }
@@ -26334,7 +26326,6 @@
       },
       "output": [
         {
-          "legacyId": 635,
           "id": "minecraft:mangrove_sign",
           "count": 3
         }
@@ -29698,13 +29689,12 @@
       "input": {
         "A": {
           "count": 1,
-          "damage": 32767,
-          "legacyId": 640
+          "id": "minecraft:disc_fragment_5",
+          "fuzzy": true
         }
       },
       "output": [
         {
-          "legacyId": 639,
           "id": "minecraft:music_disc_5"
         }
       ],
@@ -29722,8 +29712,8 @@
       "input": {
         "A": {
           "count": 1,
-          "damage": 32767,
-          "legacyId": 651
+          "id": "minecraft:echo_shard",
+          "fuzzy": true
         },
         "B": {
           "count": 1,
@@ -29751,8 +29741,8 @@
       "input": {
         "A": {
           "count": 1,
-          "damage": 32767,
-          "legacyId": 651
+          "id": "minecraft:echo_shard",
+          "fuzzy": true
         },
         "B": {
           "count": 1,
@@ -32974,7 +32964,6 @@
       ],
       "output": [
         {
-          "legacyId": 644,
           "id": "minecraft:spruce_chest_boat"
         }
       ],
@@ -33237,8 +33226,8 @@
       "input": {
         "A": {
           "count": 1,
-          "damage": 32767,
-          "legacyId": 624
+          "id": "minecraft:amethyst_shard",
+          "fuzzy": true
         },
         "B": {
           "count": 1,
@@ -34502,8 +34491,8 @@
       "input": {
         "A": {
           "count": 1,
-          "damage": 32767,
-          "legacyId": 624
+          "id": "minecraft:amethyst_shard",
+          "fuzzy": true
         },
         "B": {
           "count": 1,
